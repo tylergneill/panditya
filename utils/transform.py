@@ -1,6 +1,10 @@
+from collections import defaultdict
 import csv
 import json
 import os
+import re
+
+import pandas as pd
 
 from data_models import Work, Author
 from utils.utils import time_execution
@@ -72,5 +76,84 @@ def create_entities():
 
     return entities_by_id
 
+
+@time_execution
+def create_etext_links():
+    """
+    Transform SETI CSV data to work-id -> link mapping stored in JSON.
+    """
+
+    input_filename = "2025-03-18-seti.csv"
+    input_csv_path = os.path.join(current_file_dir, relative_data_dir, input_filename)
+    df = pd.read_csv(input_csv_path)
+
+    link_types = {
+        'main': 'Link 1 (main)',
+        'underlying': 'Link 2 (underlying)',
+        'extract': 'Link 3 (extract)',
+    }
+
+    work_id_mapping = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
+
+    collection_subtype_labels = {
+        # 'GRETIL': ('web'),
+        # 'Pramāṇa NLP': ('GitHub'),
+        # 'MB KSTS': ('web'),
+        'SARIT': ('web HTML', 'GitHub XML'),
+        'DCS': ('web HTML', 'GitHub (1) CoNLL-U', 'GitHub (2) TXT'),
+        'Sanskrit Library / TITUS': ('Skt Lib web HTML', 'TITUS web HTML'),
+    }
+
+    for row in df.to_dict(orient="records"):
+        collection_name = row['Collection']
+
+        if pd.isna(row['Work ID']) or row['Work ID'] == "":
+            continue
+
+        work_ids = [wid.strip() for wid in re.split(r'[,\r\n]+', str(row['Work ID']))]
+
+        mapped_labels = collection_subtype_labels.get(collection_name, list(link_types.keys()))
+
+        for link_type, col_name in link_types.items():
+            if col_name in row and pd.notna(row[col_name]) and row[col_name].strip():
+                link = row[col_name].strip()
+                subtype = mapped_labels[
+                    list(link_types.keys()).index(link_type)] if collection_name in collection_subtype_labels else link_type
+
+                for work_id in work_ids:
+                    work_id_mapping[work_id][collection_name][subtype].add(link)
+
+    for work_id, collections in work_id_mapping.items():
+        for collection_name, subtypes in list(collections.items()):  # Convert to list to allow modification
+            # Convert all sets to sorted lists
+            for subtype, links in subtypes.items():
+                work_id_mapping[work_id][collection_name][subtype] = sorted(links)
+
+            # If only one subtype exists, move directly under collection_name
+            if len(subtypes) == 1:
+                work_id_mapping[work_id][collection_name] = next(iter(subtypes.values()))  # Extract the only list
+
+    # Convert defaultdict structure to a regular dictionary for JSON serialization
+    def convert_to_serializable(d):
+        result = {}
+        for work_id, collections in d.items():
+            result[work_id] = {}
+            for collection_name, links in collections.items():
+                if isinstance(links, list):  # Direct mapping (single link type, no subtypes)
+                    result[work_id][collection_name] = links
+                elif isinstance(links, dict):  # Collection has subtypes
+                    result[work_id][collection_name] = {k: v for k, v in links.items()}
+                else:
+                    result[work_id][collection_name] = links  # Fallback
+        return result
+
+    # Save to JSON for human-readability
+    output_filename = "2025-03-18-etext-link-data.json"
+    output_json_path = os.path.join(current_file_dir, relative_data_dir, output_filename)
+    with open(output_json_path, 'w') as jsonfile:
+        json.dump(convert_to_serializable(work_id_mapping), jsonfile, indent=4, ensure_ascii=False)
+
+
 if __name__ == "__main__":
     create_entities()
+    create_etext_links()
