@@ -102,6 +102,10 @@ function renderGraph(graph) {
 
   svg.call(zoom);
 
+  // --- Apply an initial trivial transform to avoid weird disappearance and/or shift problems ---
+  const initialTransform = d3.zoomIdentity.translate(1, 1).scale(1);
+  svg.call(zoom.transform, initialTransform);
+
   // Fetch initial slider values dynamically
   const initialLinkDistance = +document.getElementById('linkDistance').value;
   const initialChargeStrength = -document.getElementById('chargeStrength').value; // Negative for repulsion
