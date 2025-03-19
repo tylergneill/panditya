@@ -201,7 +201,6 @@ function renderGraph(graph) {
 
 
     if (d.etext_links) {
-        console.log("LINKS", d.etext_links)
         Object.entries(d.etext_links).forEach(([collection, links]) => {
             let collectionLinks = '';
 

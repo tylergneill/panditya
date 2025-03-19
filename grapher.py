@@ -117,7 +117,7 @@ def assign_node_labels_and_colors(subgraph):
 
 def annotate_graph(graph: nx.DiGraph, selected_entities, exclude_list) -> nx.DiGraph:
     """
-    Annotate graph nodes with `isCentral` and `isExcluded` flags.
+    Annotate graph nodes with `isCentral` and `isExcluded` flags, and also e-text link data.
 
     Args:
         graph (dict): Graph data containing nodes and edges.
