@@ -11,19 +11,27 @@
     <h1>SETI</h1>
     <p>
       SETI is the Sanskrit E-Text Inventory, or "Search for E-Textual Intelligence."
-      Because GRETIL will not continue to track or hold all the most useful academic Sanskrit e-texts online,
-      SETI is now taking the lead.
+      It harkens back to the original "register" function of GRETIL,
+      to simply indicate in an organized fashion where exactly online searchable Sanskrit e-texts exist.
     </p>
     <p>
-      The project uses Pandit's unique IDs for works
-      to collate the various e-text resources in GRETIL, SARIT, and so on,
-      thereby making it possible to map from these IDs, on which Pāṇḍitya's graphs are based,
-      directly out to these resources in their respective corners of the internet.
+      The basis of the project is a simple spreadsheet: the <a href="https://docs.google.com/spreadsheets/d/1MpHlU-wnWbTsC-2eWZ-gowsM8oiBeGapcifeFFeaitI/edit?usp=sharing">SETI master document</a>.
+      For more details, see <a>this blog post</a>.
     </p>
     <p>
-      This diagram shows how Pandit, Pāṇḍitya, and SETI interact to provide interfaces to this information.
+      Pāṇḍitya is the primary intended use case for SETI's e-text link information.
+      Pāṇḍitya serves this info through its API (see Swagger for `/seti` routes)
+      and provides easy-to-use hyperlinks in its interactive graphs.
+      Look for Work nodes highlighted in gold,
+      and explore available e-text options under the "View on" node submenu.
     </p>
-
+    <p>
+      The following are the e-text collections considered (current as of {{ seti_data_version }}).
+      Click on the links for interactive visualizations of each.
+      <ul>
+        <li><a>SARIT</a></li>
+      </ul>
+    </p>
     <div class="footer">
       <p>Back to <a href="/about">About</a></p>
       <p>Back to <a href="/">Home</a></p>
