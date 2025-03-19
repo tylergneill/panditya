@@ -184,27 +184,54 @@ function renderGraph(graph) {
 
     let etextMenuHtml = '';
 
+    function extractShortText(link) {
+        if (typeof link !== 'string') return ''; // Ensure link is a string to prevent errors
+
+        // Split on both '/' and '=' and take the last segment
+        let parts = link.split(/[/=]/);
+        let shortText = parts[parts.length - 1];
+
+        // Strip off any extensions (e.g., '.html', '.php')
+        return shortText.replace(/\.[^.]+$/, '');
+    }
+
+
     if (d.etext_links) {
+        console.log("LINKS", d.etext_links)
         Object.entries(d.etext_links).forEach(([collection, links]) => {
-            // Create individual list items for each link
-            let collectionLinks = links.map(link => {
-              // 1) Get everything after the final slash
-              let shortText = link.substring(link.lastIndexOf('/') + 1);
+            let collectionLinks = '';
 
-              // 2) Strip off .htm, .html, etc. if present
-              shortText = shortText.replace(/\.[^.]+$/, '');
-              // ^ This removes the last "dot + extension", e.g. '.htm', '.html', '.php', etc.
+            // Check if links is an object with categories like 'GitHub' and 'web'
+            if (typeof links === 'object' && !Array.isArray(links)) {
+                Object.entries(links).forEach(([category, linkList]) => {
+                    // Ensure linkList is an array
+                    let safeLinks = Array.isArray(linkList) ? linkList : [linkList];
 
-              // 3) Return the list item with shortened text
-              return `<li><a href="${link}" target="_blank">${shortText}</a></li>`;
-            }).join('');
+                    let linkItems = safeLinks.map(link => {
+                        return `<li><a href="${link}" target="_blank">${extractShortText(link)}</a></li>`;
+                    }).join('');
+
+                    // Group by category (e.g., "GitHub", "web")
+                    collectionLinks += `
+                        <li class="has-submenu">
+                            <span>${category}</span>
+                            <ul class="submenu">${linkItems}</ul>
+                        </li>`;
+                });
+            } else {
+                // If it's a simple list of links, handle normally
+                let safeLinks = Array.isArray(links) ? links : [links];
+
+                collectionLinks = safeLinks.map(link => {
+                    return `<li><a href="${link}" target="_blank">${extractShortText(link)}</a></li>`;
+                }).join('');
+            }
 
             etextMenuHtml += `
               <li class="has-submenu">
                 <span>${collection}</span>
                 <ul class="submenu">${collectionLinks}</ul>
-              </li>
-            `;
+              </li>`;
         });
     }
 
