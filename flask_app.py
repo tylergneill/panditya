@@ -480,8 +480,11 @@ class ByWork(Resource):
 
 def get_author_ids_for_work_ids(work_ids: List[str]):
     author_ids = set()
-    for work_id in work_ids:
-        author_ids = author_ids | set(ENTITIES_BY_ID[work_id].author_ids)
+    try:
+        for work_id in work_ids:
+            author_ids = author_ids | set(ENTITIES_BY_ID[work_id].author_ids)
+    except AttributeError as e:
+        raise Exception(f"for {work_id=}: {e}")
     return list(author_ids)
 
 

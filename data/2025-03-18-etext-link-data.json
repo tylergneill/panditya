@@ -37,11 +37,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kumārasaṃbhava.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/kumara.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/kalidasa/kumara/kumar.htm"
             ]
         }
@@ -119,11 +119,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aṣṭāṅgahṛdayasaṃhitā.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/vagbhahs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/vagbhata/vagbhahs/vagbh.htm"
             ]
         }
@@ -168,7 +168,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aṣṭādhyāyī.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "https://sanskritlibrary.org/catalogsText/azwADyAyI.html"
         ]
     },
@@ -176,7 +176,7 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/1_gram/pmbhasuu.htm"
         ],
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "https://sanskritlibrary.org/catalogsText/mahABAzya.html"
         ]
     },
@@ -195,7 +195,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kāśikāvṛtti.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "https://sanskritlibrary.org/catalogsText/kASikA.html"
         ]
     },
@@ -456,11 +456,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Śatapathabrāhmaṇa.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/sbm.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/sbm/sbm.htm"
             ]
         }
@@ -497,11 +497,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Gautamadharmasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/gautdhs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/dhs/gautdhs/gautd.htm"
             ]
         }
@@ -522,16 +522,16 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Śvetāśvataropaniṣad.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/svetup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/svetup/svetu.htm"
             ]
         }
     },
-    "85232": {
+    "88750": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/bhbhg_cu.htm"
         ]
@@ -574,11 +574,11 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/brsvbh3u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/brsvbh4u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/brahms.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/brahms/brahm.htm"
             ]
         }
@@ -865,7 +865,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Laṅkāvatārasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/lankavat/lanka.htm"
         ]
     },
@@ -1293,6 +1293,7 @@
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=360",
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=361",
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=375",
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=386",
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=391",
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=392",
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=395",
@@ -1389,6 +1390,7 @@
                 "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Mānavagṛhyasūtra",
                 "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Mātṛkābhedatantra",
                 "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Mṛgendratantra",
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Nighaṇṭuśeṣa",
                 "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Nāradasmṛti",
                 "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Nāṭyaśāstravivṛti",
                 "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Paramānandīyanāmamālā",
@@ -1485,6 +1487,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Mānavagṛhyasūtra.txt",
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Mātṛkābhedatantra.txt",
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Mṛgendratantra.txt",
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nighaṇṭuśeṣa.txt",
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nāradasmṛti.txt",
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nāṭyaśāstravivṛti.txt",
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Paramānandīyanāmamālā.txt",
@@ -1540,8 +1543,8 @@
             "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmaliniivijayottaraHK.txt&miri_catalog_number=M00160",
             "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FparaatrisikaataatparyadiipikaaHK.txt&miri_catalog_number=M00043"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/niGaRwu.html",
                 "https://sanskritlibrary.org/catalogsText/rAmopAKyAna.html",
                 "https://sanskritlibrary.org/catalogsText/taittriya_prAtiSAKya.html",
@@ -1610,7 +1613,7 @@
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/visnudhs.html",
                 "https://sanskritlibrary.org/catalogsText/vajasaneyi_prAtiSAKya.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/ajitasen/ajita.htm",
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/ekadasa/ekada.htm",
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/hayagriv/hayag.htm",
@@ -2794,11 +2797,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Bṛhadāraṇyakopaniṣad.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/bau.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/upanisad/bau/bau.htm"
             ]
         }
@@ -3069,11 +3072,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Yājñavalkyasmṛti.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/ys.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/dhs/ys/ys.htm"
             ]
         }
@@ -3101,11 +3104,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Manusmṛti.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/manu.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/dhs/manu/manu.htm"
             ]
         }
@@ -3130,11 +3133,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/brhajj_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/varbrjat.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/varahami/varbrjat/varbr.htm"
             ]
         }
@@ -3143,11 +3146,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/brhats_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/brhats.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/varahami/brhats/brhat.htm"
             ]
         }
@@ -3156,11 +3159,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/bijaganu.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/bhaskbij.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/mathemat/bhaskbij/bhask.htm"
             ]
         }
@@ -3185,11 +3188,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/lilavatu.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/bhasklil.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/mathemat/bhasklil/bhask.htm"
             ]
         }
@@ -3199,11 +3202,11 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/yogay1_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/yogay2_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/varyogay.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/varahami/varyogay/varyo.htm"
             ]
         }
@@ -3212,11 +3215,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/vivahapu.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/varvivpt.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/varahami/varvivpt/varvi.htm"
             ]
         }
@@ -3226,11 +3229,11 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/aryabh_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/aryabhcu.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/aryabhat.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/mathemat/aryabhat/aryab.htm"
             ]
         }
@@ -3252,11 +3255,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Meghadūta.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/meghadut.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/kalidasa/meghadut/megha.htm"
             ]
         }
@@ -3328,7 +3331,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Buddhacarita.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/bcar/bcar.htm"
         ]
     },
@@ -3439,11 +3442,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kāmasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/kamasutr.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/kamasutr/kamas.htm"
             ]
         }
@@ -3531,8 +3534,8 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Ṛgveda.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv1.html",
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv10.html",
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv2.html",
@@ -3544,7 +3547,7 @@
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv8.html",
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv9.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/mt/rv.htm"
             ]
         }
@@ -3588,11 +3591,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Arthaśāstra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/jskt/kautarth.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/jskt/kautarth/kauta.htm"
             ]
         }
@@ -3644,7 +3647,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Divyāvadāna.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/divyavad/divya.htm"
         ]
     },
@@ -3652,11 +3655,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/saulahpu.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/saundlah.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/sankara/saundlah/saund.htm"
             ]
         }
@@ -3676,11 +3679,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Hitopadeśa.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/hitopad.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/hitopad/hitop.htm"
             ]
         }
@@ -3699,11 +3702,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/4_narr/vispancu.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/pancatt.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/pancatt/panca.htm"
             ]
         }
@@ -3756,11 +3759,22 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/5_vedang/2_grhya/sankhgsu.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=353"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Śāṅkhāyanagṛhyasūtra"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Śāṅkhāyanagṛhyasūtra.txt"
+            ]
+        },
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/sankhgs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/sankhgs/sankh.htm"
             ]
         }
@@ -3834,7 +3848,18 @@
     "114114": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/5_vedang/1_srauta/sankhssu.htm"
-        ]
+        ],
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=547"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Śāṅkhāyanaśrautasūtra"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Śāṅkhāyanaśrautasūtra.txt"
+            ]
+        }
     },
     "114145": {
         "GRETIL": [
@@ -3886,8 +3911,8 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Mahābhārata.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh01.html",
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh02.html",
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh03.html",
@@ -3907,7 +3932,7 @@
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh17.html",
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh18.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/mbh/mbh.htm"
             ]
         }
@@ -3927,11 +3952,11 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_02_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_02su.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram02.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -3959,8 +3984,8 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rāmāyaṇa.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram01.html",
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram02.html",
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram03.html",
@@ -3969,7 +3994,7 @@
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram06.html",
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram07.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -3978,11 +4003,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_01_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram01.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -3991,11 +4016,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_07_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram07.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4004,11 +4029,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_05_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram05.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4017,11 +4042,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_06_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram06.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4030,11 +4055,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_04_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram04.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4044,11 +4069,11 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_03_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_03pu.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram03.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4083,7 +4108,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Atharvavedapariśiṣṭa.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/avparis/avpar.htm"
         ]
     },
@@ -4124,11 +4149,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Āpastambadharmasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/apdhs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/dhs/apdhs/apdhs.htm"
             ]
         }
@@ -4148,11 +4173,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Āpastambagṛhyasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/apgs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/apgs/apgs.htm"
             ]
         }
@@ -4161,11 +4186,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/5_vedang/1_srauta/apsulb_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/apsbs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/apsbs/apsbs.htm"
             ]
         }
@@ -4173,7 +4198,18 @@
     "113070": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/5_vedang/1_srauta/asvss_u.htm"
-        ]
+        ],
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=508"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Āśvālāyanaśrautasūtra"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Āśvālāyanaśrautasūtra.txt"
+            ]
+        }
     },
     "113532": {
         "GRETIL": [
@@ -4338,12 +4374,12 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aitareyopaniṣad.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/aitup.html",
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/aitupjz.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/upanisad/aitup/aitup.htm",
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/upanisad/aitupjz/aitup.htm"
             ]
@@ -4374,11 +4410,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Chāndogyopaniṣad.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/chup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/chup/chup.htm"
             ]
         }
@@ -4387,11 +4423,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/kaivup_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kaivalup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
@@ -4411,11 +4447,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kauśikasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kauss.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/kauss/kauss.htm"
             ]
         }
@@ -4425,11 +4461,11 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/mand_upu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/mandup_u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/mandukya.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/upanisad/mandukya/mandu.htm"
             ]
         }
@@ -4739,11 +4775,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Atharvaveda (Śaunaka).txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/avs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/avs/avs.htm"
             ]
         }
@@ -4913,11 +4949,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kaṭhopaniṣad.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kathup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/kathup/kathu.htm"
             ]
         }
@@ -4953,11 +4989,11 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/isup___u.htm"
         ],
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/isaup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/upanisad/isaup/isaup.htm"
             ]
         }
@@ -5659,7 +5695,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nirukta.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "https://sanskritlibrary.org/catalogsText/nirukta.html"
         ]
     },
@@ -5957,11 +5993,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kauṣītakyupaniṣad.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kausup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/upanisad/kausup/kausu.htm"
             ]
         }
@@ -5978,11 +6014,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Muṇḍakopaniṣad.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/mundaka.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/upanisad/mundaka/munda.htm"
             ]
         }
@@ -5999,11 +6035,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Taittirīyopaniṣad.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/taittup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/taittup/taitt.htm"
             ]
         }
@@ -6033,11 +6069,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kāṭhakagṛhyasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kathgs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/kathgs/kathg.htm"
             ]
         }
@@ -6067,7 +6103,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kātyāyanaśrautasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/katyss/katys.htm"
         ]
     },
@@ -6083,11 +6119,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aitareyabrāhmaṇa.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/ab.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab.htm"
             ]
         }
@@ -6104,7 +6140,7 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aitareya-Āraṇyaka.txt"
             ]
         },
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/aa/aa.htm"
         ]
     },
@@ -6133,16 +6169,16 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Amṛtabindūpaniṣat.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/amrtabup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
-    "13073": {
+    "113073": {
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=504"
@@ -6153,18 +6189,13 @@
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Āpastambaśrautasūtra.txt"
             ]
-        }
-    },
-    "13070": {
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=508"
+        },
+        "Sanskrit Library and TITUS": {
+            "main": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/apss.html"
             ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Āśvālāyanaśrautasūtra"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Āśvālāyanaśrautasūtra.txt"
+            "underlying": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/apss/apss.htm"
             ]
         }
     },
@@ -6180,16 +6211,16 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Baudhāyanaśrautasūtra.txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/baudhss.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/baudhss/baudh.htm"
             ]
         }
     },
-    "11236": {
+    "111236": {
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=306"
@@ -6202,7 +6233,7 @@
             ]
         }
     },
-    "11512": {
+    "111512": {
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=312"
@@ -6213,35 +6244,17 @@
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Pāraskaragṛhyasūtra.txt"
             ]
-        }
-    },
-    "13085": {
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=353"
+        },
+        "Sanskrit Library and TITUS": {
+            "main": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/pargs.html"
             ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Śāṅkhāyanagṛhyasūtra"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Śāṅkhāyanagṛhyasūtra.txt"
+            "underlying": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/pargs/pargs.htm"
             ]
         }
     },
-    "14114": {
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=547"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Śāṅkhāyanaśrautasūtra"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Śāṅkhāyanaśrautasūtra.txt"
-            ]
-        }
-    },
-    "11468": {
+    "111468": {
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=523"
@@ -6253,11 +6266,11 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Vājasaneyisaṃhitā (Mādhyandina).txt"
             ]
         },
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/vs.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/vs/vs.htm"
             ]
         }
@@ -6272,19 +6285,6 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rasendrasārasaṃgraha.txt"
-            ]
-        }
-    },
-    "85489": {
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=386"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Nighaṇṭuśeṣa"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nighaṇṭuśeṣa.txt"
             ]
         }
     },
@@ -6435,121 +6435,101 @@
         ]
     },
     "41542": {
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "https://sanskritlibrary.org/catalogsText/vArttika.html"
         ]
     },
     "41680": {
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "https://sanskritlibrary.org/catalogsText/fgveda_prAtiSAKya.html"
         ]
     },
     "88181": {
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/bhaisajy/bhais.htm"
         ]
     },
     "88308": {
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/jskt/tattvs/tattv.htm"
         ]
     },
     "95832": {
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/cps/cps.htm"
         ]
     },
     "99161": {
-        "Sanskrit Library / TITUS": [
+        "Sanskrit Library and TITUS": [
             "https://sanskritlibrary.org/catalogsText/paYcatantra.html"
         ]
     },
-    "113073": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/apss.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/apss/apss.htm"
-            ]
-        }
-    },
-    "111512": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/pargs.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/pargs/pargs.htm"
-            ]
-        }
-    },
     "96080": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/paramaup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "95964": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/brahmaup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "95943": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/atmaup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "96024": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kenup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/kenup/kenup.htm"
             ]
         }
     },
     "96158": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/tejabup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "95932": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/aruneyup.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "112891": {
-        "Sanskrit Library / TITUS": {
-            "Skt Lib web HTML": [
+        "Sanskrit Library and TITUS": {
+            "main": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/svk.html"
             ],
-            "TITUS web HTML": [
+            "underlying": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/svk/svk.htm"
             ]
         }
