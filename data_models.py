@@ -1,83 +1,105 @@
-# data models
-
-from typing import List, Dict
-
+from typing import List, Dict, Optional
 
 class Entity:
+    ATTRIBUTES: List[str] = ["id", "type", "name", "aka", "highest_year", "lowest_year"]
+
     def __init__(self, entity_id: str):
         self.id: str = entity_id
-        self.type: str = ''  # "work" or "author"
-        self.name: str = ''  # work title or author name
+        self.type: str = ""
+        self.name: str = ""
+        self.aka: str = ""
+        self.highest_year: Optional[int] = None
+        self.lowest_year: Optional[int] = None
 
     def __str__(self) -> str:
-        """String representation of the entity with newline-separated fields."""
-        fields = vars(self)  # Get all fields as a dictionary
+        fields = vars(self)
         return "\n".join(f"{key}: {value}" for key, value in fields.items())
 
+    @classmethod
+    def from_dict(cls, data: Dict) -> "Entity":
+        # This generic method only works if you're instantiating the exact class.
+        instance = cls(data["id"])
+        for attr in cls.ATTRIBUTES:
+            if attr in data:
+                setattr(instance, attr, data[attr])
+        return instance
+
     @staticmethod
-    def from_dict(data: Dict):
-        """Create an Entity instance (or subclass) from a dictionary."""
-        entity_type = data.get("type", "entity")
-        if entity_type == "work":
+    def create_from_dict(data: Dict) -> "Entity":
+        t = data.get("type", "").lower()
+        if t == "work":
             return Work.from_dict(data)
-        elif entity_type == "author":
+        elif t == "author":
             return Author.from_dict(data)
         else:
-            raise ValueError(f"Unknown entity type: {entity_type}")
+            raise ValueError(f"Unknown entity type: {t}")
 
     def to_dict(self) -> Dict:
-        """Convert an Entity instance to a dictionary."""
-        return {
-            "id": self.id,
-            "name": self.name
-        }
+        return {attr: getattr(self, attr) for attr in self.ATTRIBUTES if getattr(self, attr) is not None}
 
 
 class Work(Entity):
+    ATTRIBUTES: List[str] = Entity.ATTRIBUTES + [
+        "author_ids", "base_text_ids", "commentary_ids",
+        "discipline", "author_highest_year", "author_lowest_year"
+    ]
+
     def __init__(self, entity_id: str):
         super().__init__(entity_id)
         self.type: str = "work"
         self.author_ids: List[str] = []
         self.base_text_ids: List[str] = []
         self.commentary_ids: List[str] = []
+        self.discipline: Optional[str] = None
+        self.author_highest_year: Optional[int] = None
+        self.author_lowest_year: Optional[int] = None
 
-    @staticmethod
-    def from_dict(data: Dict) -> "Work":
-        work = Work(data["id"])
-        work.name = data.get("name", "")
-        work.author_ids = data.get("author_ids", [])
-        work.base_text_ids = data.get("base_text_ids", [])
-        work.commentary_ids = data.get("commentary_ids", [])
+    @classmethod
+    def from_dict(cls, data: Dict) -> "Work":
+        work = cls(data["id"])
+        for attr in cls.ATTRIBUTES:
+            if attr in data:
+                setattr(work, attr, data[attr])
         return work
 
     def to_dict(self) -> Dict:
-        """Convert a Work instance to a dictionary."""
-        return {
+        attrs = {
             **super().to_dict(),
-            "type": self.type,
             "author_ids": self.author_ids,
             "base_text_ids": self.base_text_ids,
             "commentary_ids": self.commentary_ids,
+            "discipline": self.discipline,
+            "author_highest_year": self.author_highest_year,
+            "author_lowest_year": self.author_lowest_year,
         }
+        return {k: v for k, v in attrs.items() if v is not None}
 
 
 class Author(Entity):
+    ATTRIBUTES: List[str] = Entity.ATTRIBUTES + [
+        "social_identifiers", "work_ids", "disciplines"
+    ]
+
     def __init__(self, entity_id: str):
         super().__init__(entity_id)
         self.type: str = "author"
+        self.social_identifiers: Optional[str] = None
         self.work_ids: List[str] = []
+        self.disciplines: Optional[str] = None
 
-    @staticmethod
-    def from_dict(data: Dict) -> "Author":
-        author = Author(data["id"])
-        author.name = data.get("name", "")
-        author.work_ids = data.get("work_ids", [])
+    @classmethod
+    def from_dict(cls, data: Dict) -> "Author":
+        author = cls(data["id"])
+        for attr in cls.ATTRIBUTES:
+            if attr in data:
+                setattr(author, attr, data[attr])
         return author
 
     def to_dict(self) -> Dict:
-        """Convert an Author instance to a dictionary."""
-        return {
+        attrs = {
             **super().to_dict(),
-            "type": self.type,
+            "social_identifiers": self.social_identifiers,
             "work_ids": self.work_ids,
+            "disciplines": self.disciplines,
         }
+        return {k: v for k, v in attrs.items() if v is not None}
