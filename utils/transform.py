@@ -7,10 +7,14 @@ import re
 import pandas as pd
 
 from data_models import Work, Author
-from utils.utils import time_execution
+from utils.utils import time_execution, find_pandit_data_version, find_etext_data_version
 
 current_file_dir = os.path.dirname(os.path.abspath(__file__))
 relative_data_dir = "../data"
+
+PANDIT_DATA_VERSION = find_pandit_data_version()
+ETEXT_DATA_VERSION = find_etext_data_version()
+
 
 @time_execution
 def create_entities():
@@ -18,7 +22,7 @@ def create_entities():
     Transform reduced CSV data to data.models.Entity objects stored in JSON.
     """
 
-    input_filename = "2024-12-23-works-cleaned.csv"
+    input_filename = f"{PANDIT_DATA_VERSION}-works-cleaned.csv"
     input_csv_path = os.path.join(current_file_dir, relative_data_dir, input_filename)
 
     entities_by_id = {}
@@ -69,7 +73,7 @@ def create_entities():
                     W.base_text_ids.append(BT.id)
 
     # Save to JSON for human-readability
-    output_filename = "2024-12-23-entities.json"
+    output_filename = f"{PANDIT_DATA_VERSION}-entities.json"
     output_json_path = os.path.join(current_file_dir, relative_data_dir, output_filename)
     with open(output_json_path, 'w') as jsonfile:
         json.dump({eid: e.to_dict() for eid, e in entities_by_id.items()}, jsonfile, indent=4, ensure_ascii=False)
@@ -83,7 +87,7 @@ def create_etext_links():
     Transform SETI CSV data to work-id -> link mapping stored in JSON.
     """
 
-    input_filename = "2025-03-18-seti.csv"
+    input_filename = f"{ETEXT_DATA_VERSION}-seti.csv"
     input_csv_path = os.path.join(current_file_dir, relative_data_dir, input_filename)
     df = pd.read_csv(input_csv_path)
 
@@ -97,11 +101,11 @@ def create_etext_links():
 
     collection_subtype_labels = {
         # 'GRETIL': ('web'),
-        # 'Pramāṇa NLP': ('GitHub'),
-        # 'MB KSTS': ('web'),
         'SARIT': ('web HTML', 'GitHub XML'),
         'DCS': ('web HTML', 'GitHub (1) CoNLL-U', 'GitHub (2) TXT'),
-        'Sanskrit Library / TITUS': ('Skt Lib web HTML', 'TITUS web HTML'),
+        # 'MB KSTS': ('web'),
+        'Vātāyana and Pramāṇa NLP': ('web HTML', 'GitHub'),
+        'Sanskrit Library and TITUS': ('Skt Lib web HTML', 'TITUS web HTML'),
     }
 
     for row in df.to_dict(orient="records"):
@@ -148,7 +152,7 @@ def create_etext_links():
         return result
 
     # Save to JSON for human-readability
-    output_filename = "2025-03-18-etext-link-data.json"
+    output_filename = f"{ETEXT_DATA_VERSION}-etext-link-data.json"
     output_json_path = os.path.join(current_file_dir, relative_data_dir, output_filename)
     with open(output_json_path, 'w') as jsonfile:
         json.dump(convert_to_serializable(work_id_mapping), jsonfile, indent=4, ensure_ascii=False)
