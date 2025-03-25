@@ -43,12 +43,27 @@ entities_ns = api.namespace('entities', description='Entity operations')
 graph_ns = api.namespace('graph', description='Graph operations')
 seti_ns = api.namespace('seti', description='SETI operations')
 
-# --- entities namespace routes ---
+
+def get_date_info(entity: Entity):
+    lowest_year, highest_year = entity.lowest_year, entity.highest_year
+    caveat_str = ""
+    if entity.type == 'work' and not entity.lowest_year and entity.author_lowest_year:
+        lowest_year, highest_year = entity.author_lowest_year, entity.author_highest_year
+        caveat_str = " (author)"
+    if not lowest_year:
+        return ""
+    date_str = f"{lowest_year}" if lowest_year == highest_year else f"{lowest_year}–{highest_year}"
+    return date_str + caveat_str
 
 # --- Preprocess dropdown data ---
 entity_dropdown_options = defaultdict(list)
 for entity in ENTITIES_BY_ID.values():
-    entity_label = f"{entity.name} ({entity.id}) [{entity.aka}]" if entity.aka else f"{entity.name} ({entity.id})"
+    entity_label = f"{entity.name} ({entity.id})"
+    date_info = get_date_info(entity)
+    if date_info:
+        entity_label += f" [{date_info}]"
+    if entity.aka:
+        entity_label += f" [{entity.aka}]"
     option = {"id": entity.id, "label": entity_label}
     entity_dropdown_options['all'].append(option)
     entity_dropdown_options[entity.type+'s'].append(option)
@@ -56,6 +71,8 @@ for entity in ENTITIES_BY_ID.values():
 for key in ['works', 'authors', 'all']:
     entity_dropdown_options[key] = sorted(entity_dropdown_options[key], key=lambda x: custom_sort_key(x['label']))
 
+
+# --- entities namespace routes ---
 
 def validate_comma_separated_list_input(string_input):
     if string_input[0] == '[':
