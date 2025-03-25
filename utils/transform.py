@@ -103,7 +103,7 @@ def create_etext_links():
         # 'GRETIL': ('web'),
         'SARIT': ('web HTML', 'GitHub XML'),
         'DCS': ('web HTML', 'GitHub (1) CoNLL-U', 'GitHub (2) TXT'),
-        # 'MB KSTS': ('web'),
+        # 'Muktabodha KSTS': ('web'),
         'Vātāyana and Pramāṇa NLP': ('web HTML', 'GitHub'),
         'Sanskrit Library and TITUS': ('Skt Lib web HTML', 'TITUS web HTML'),
     }
