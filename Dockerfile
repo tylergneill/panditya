@@ -3,7 +3,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN groupadd appgroup && \
-    useradd -r -M -G appgroup sanskrit && \
+    useradd -r -m -d /home/sanskrit -G appgroup sanskrit && \
     mkdir -p /app && \
     chown -R sanskrit:appgroup /app
 COPY --chown=sanskrit:appgroup data /app/data
