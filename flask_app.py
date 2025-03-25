@@ -91,7 +91,6 @@ class Labels(Resource):
         """
         try:
             ids_param = request.args.get('ids')  # Get all IDs as a list
-            print(f"{ids_param=}")
 
             err = validate_comma_separated_list_input(ids_param)
             if err is not None:
@@ -110,51 +109,6 @@ class Labels(Resource):
         except Exception as e:
             app.logger.error('Error: %s', str(e))
             return {"error": str(e)}, 500
-
-
-@entities_ns.route("/etexts/by_collection/<string:collection>")
-class EtextsByCollection(Resource):
-    def get(self, collection: str, exclude_other_collections: bool = False):
-        """
-        Fetch etext data for all works associated with a given collection.
-        Example: /api/entities/etexts_by_collection/GRETIL
-        Example: /api/entities/etexts_by_collection/all
-        """
-        if collection.lower() == "all":
-            return jsonify(ETEXT_LINKS)
-        if exclude_other_collections:
-            etext_link_data = {work_id: data[collection] for work_id, data in ETEXT_LINKS.items() if collection in data}
-        else:
-            etext_link_data = {work_id: data for work_id, data in ETEXT_LINKS.items() if collection in data}
-        return jsonify(etext_link_data)
-
-
-@entities_ns.route("/etexts/by_work")
-class EtextsByWork(Resource):
-    @api.doc(
-        params={
-            'ids': 'Comma-separated list of work IDs to fetch e-text links for (e.g., 41541,12345)'
-        },
-        responses={
-            200: 'E-Text link data returned successfully',
-            400: 'No IDs provided or other error',
-            500: 'Internal server error'
-        },
-    )
-    def get(self):
-        """
-        Fetch etext data for a list of work IDs.
-        Example: /api/entities/etexts/by_work?ids=111493,42078
-        """
-        ids_param = request.args.get('ids')  # Get all IDs as a list
-
-        err = validate_comma_separated_list_input(ids_param)
-        if err is not None:
-            return err, 400
-
-        work_ids = [wid.strip() for wid in ids_param.split(",")]
-        etext_link_data = {wid: ETEXT_LINKS[wid] for wid in work_ids if wid in ETEXT_LINKS}
-        return jsonify(etext_link_data)
 
 
 # register entities namespace
@@ -261,6 +215,7 @@ class Subgraph(Resource):
 # register graph namespace
 api.add_namespace(graph_ns)
 
+
 # --- SETI namespace routes ---
 
 def get_works_by_collection(collection: str, include_other_collections: bool = False):
@@ -313,9 +268,9 @@ class ByCollection(Resource):
             500: "Internal server error"
         }
     )
-    def post(self):
+    def get(self):
             """ Fetch all works associated with a given collection. """
-            data = request.get_json(silent=True) or request.form.to_dict() or request.args.to_dict()
+            data = request.args.to_dict()
             collection = data.get("collection")
             include_other_collections = data.get("include_other_collections", "false").lower() == "true"
 
@@ -327,9 +282,9 @@ class ByCollection(Resource):
             works_data, error_response, status_code = get_works_by_collection(collection, include_other_collections)
 
             if error_response:
-                return jsonify(error_response), status_code
+                return error_response, status_code
 
-            return jsonify(works_data), status_code
+            return jsonify(works_data)
 
 
 
@@ -346,9 +301,9 @@ class UniqueToCollection(Resource):
             500: "Internal server error"
         }
     )
-    def post(self):
+    def get(self):
         """ Get works that belong only to the specified collection. """
-        data = request.get_json(silent=True) or request.form.to_dict() or request.args.to_dict()
+        data = request.args.to_dict()
         collection = data.get("collection")
 
         if not collection:
@@ -363,7 +318,7 @@ class UniqueToCollection(Resource):
             if collection in data and len(data) == 1  # Only this collection is present
         }
 
-        return jsonify(unique_works), 200
+        return jsonify(unique_works)
 
 
 @seti_ns.route("/by_collection/overlap")
@@ -380,24 +335,24 @@ class OverlapBetweenCollections(Resource):
             500: "Internal server error"
         }
     )
-    def post(self):
+    def get(self):
         """
         Determine overlap and unique works between two collections.
         Example: /api/seti/by_collection/overlap
         """
-        data = request.get_json(silent=True) or request.form.to_dict() or request.args.to_dict()
+        data = request.args.to_dict()
         collection1 = data.get("collection1")
         collection2 = data.get("collection2")
 
         # Ensure both collections are provided
         if not collection1 or not collection2:
-            return jsonify({"error": "Both collection1 and collection2 are required"}), 400
+            return {"error": "Both collection1 and collection2 are required"}, 400
 
         # Validate collections
         elif collection1 not in VALID_COLLECTIONS or collection2 not in VALID_COLLECTIONS:
-            return jsonify({
+            return {
                 "error": f"Invalid collection(s): {collection1}, {collection2}. Valid options: {sorted(VALID_COLLECTIONS)}"
-            }), 400
+            }, 400
 
         overlap = {}
         only_in_collection1 = {}
@@ -426,7 +381,7 @@ class ByWork(Resource):
     @api.doc(
         description="Fetch e-text data for a list of work IDs.",
         params={
-            "ids": "Comma-separated list of work IDs (e.g., 111493,42078) [GET request only]"
+            "ids": "Comma-separated list of work IDs (e.g., 111493,42078)"
         },
         responses={
             200: "E-Text link data returned successfully",
@@ -439,40 +394,16 @@ class ByWork(Resource):
         Fetch data for a list of work IDs via GET request.
         Example: /api/seti/by_work?ids=111493,42078
         """
-        ids_param = request.args.get("ids")
+        ids_param = request.args.get('ids')  # Get all IDs as a list
 
-        if not ids_param:
-            return jsonify({"error": "No IDs provided"}), 400
+        err = validate_comma_separated_list_input(ids_param)
+        if err is not None:
+            return err, 400
 
-        work_ids = [wid.strip() for wid in ids_param.split(",")]
-        etext_link_data = {wid: ETEXT_LINKS[wid] for wid in work_ids if wid in ETEXT_LINKS}
+        work_ids = [id.strip() for id in ids_param.split(',')] if ids_param else []
+        if not work_ids:
+            return {"error": "No IDs provided"}, 400
 
-        return jsonify(etext_link_data)
-
-    @api.doc(
-        description="Fetch e-text data for a list of work IDs via POST request.",
-        params={
-            "ids": "List of work IDs (e.g., ['111493', '42078']) [POST request only]"
-        },
-        responses={
-            200: "E-Text link data returned successfully",
-            400: "No IDs provided or other error",
-            500: "Internal server error"
-        }
-    )
-    def post(self):
-        """
-        Fetch data for a list of work IDs via POST request.
-        Example: /api/seti/by_work
-        Body: {"ids": ["111493", "42078"]}
-        """
-        data = request.get_json(silent=True) or request.form.to_dict() or request.args.to_dict()
-        work_ids = data.get("ids")
-
-        if not work_ids or not isinstance(work_ids, list):
-            return jsonify({"error": "No valid IDs provided. Expected JSON with 'ids': [list of IDs]"}), 400
-
-        work_ids = [str(wid).strip() for wid in work_ids]
         etext_link_data = {wid: ETEXT_LINKS[wid] for wid in work_ids if wid in ETEXT_LINKS}
 
         return jsonify(etext_link_data)
@@ -498,7 +429,7 @@ def visualize_collection(collection: str):
     works_data, error_response, status_code = get_works_by_collection(collection)
 
     if error_response:
-        return jsonify(error_response), status_code
+        return error_response, status_code
 
     works = list(works_data.keys())
     authors = get_author_ids_for_work_ids(works)
@@ -507,19 +438,12 @@ def visualize_collection(collection: str):
 
     return render_template("index.html", initial_params=initial_params)
 
-"""
 
-Texts unique to each source
-Overlap between sources
+# TODO: Also include file size info!
 
-Whole collection(s)
-
-File size info part of link
-"""
 
 # register SETI namespace
 api.add_namespace(seti_ns)
-
 
 
 # --- frontend routes ---
