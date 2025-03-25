@@ -173,13 +173,6 @@ function renderGraph(graph) {
     if (menu.empty()) {
         menu = d3.select('body').append('div')
             .attr('class', 'custom-context-menu')
-            .style('position', 'absolute')
-            .style('background', '#fff')
-            .style('padding', '8px')
-            .style('border', '1px solid #ccc')
-            .style('border-radius', '4px')
-            .style('box-shadow', '0 4px 8px rgba(0, 0, 0, 0.1)')
-            .style('display', 'none');
     }
 
     // Type-to-path mapping for Open Link
@@ -242,6 +235,14 @@ function renderGraph(graph) {
     menu.html(`
       <ul class="nested-menu">
         <li><strong>${d.type.charAt(0).toUpperCase() + d.type.slice(1)} ID:</strong> ${d.id}</li>
+        <li class="has-submenu">
+          <span>More info</span>
+          <ul class="submenu">
+            ${d.aka ? `<li><strong>Aka:</strong> ${d.aka}</li>` : ''}
+            ${d.dates ? `<li><strong>Date:</strong> ${d.dates}</li>` : ''}
+            ${d.discipline ? `<li><strong>Discipline:</strong> ${d.discipline}</li>` : ''}
+          </ul>
+        </li>
         <li class="has-submenu">
           <span>View on</span>
           <ul class="submenu">
