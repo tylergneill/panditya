@@ -1,9 +1,10 @@
 from collections import defaultdict
-from typing import List
+from typing import Dict, List
 
 from flask import Flask, render_template, Blueprint, jsonify, request, send_from_directory
 from flask_restx import Api, Resource, fields
 
+from data_models import Entity
 from grapher import construct_subgraph, annotate_graph
 from utils.utils import (
     custom_sort_key,
@@ -13,7 +14,7 @@ from utils.utils import (
 )
 from utils.load import load_entities, load_link_data
 
-ENTITIES_BY_ID = load_entities()
+ENTITIES_BY_ID: Dict[str, Entity] = load_entities()
 ETEXT_LINKS = load_link_data()
 VALID_COLLECTIONS = set()
 for work_data in ETEXT_LINKS.values():
