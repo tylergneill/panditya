@@ -5,8 +5,12 @@ from flask import Flask, render_template, Blueprint, jsonify, request, send_from
 from flask_restx import Api, Resource, fields
 
 from grapher import construct_subgraph, annotate_graph
-from utils.utils import find_app_version, find_pandit_data_version, find_etext_data_version, \
-    load_config_dict_from_json_file, summarize_etext_links
+from utils.utils import (
+    custom_sort_key,
+    find_app_version, find_pandit_data_version, find_etext_data_version,
+    load_config_dict_from_json_file,
+    summarize_etext_links,
+)
 from utils.load import load_entities, load_link_data
 
 ENTITIES_BY_ID = load_entities()
@@ -40,12 +44,16 @@ seti_ns = api.namespace('seti', description='SETI operations')
 
 # --- entities namespace routes ---
 
-# --- Preprocess EntitiesByType data ---
+# --- Preprocess dropdown data ---
 entity_dropdown_options = defaultdict(list)
 for entity in ENTITIES_BY_ID.values():
-    option = {"id": entity.id, "label": f"{entity.name} ({entity.id})"}
+    entity_label = f"{entity.name} ({entity.id}) [{entity.aka}]" if entity.aka else f"{entity.name} ({entity.id})"
+    option = {"id": entity.id, "label": entity_label}
     entity_dropdown_options['all'].append(option)
     entity_dropdown_options[entity.type+'s'].append(option)
+
+for key in ['works', 'authors', 'all']:
+    entity_dropdown_options[key] = sorted(entity_dropdown_options[key], key=lambda x: custom_sort_key(x['label']))
 
 
 def validate_comma_separated_list_input(string_input):
