@@ -38,10 +38,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/kumara.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/kalidasa/kumara/kumar.htm"
             ]
         }
@@ -120,10 +120,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/vagbhahs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/vagbhata/vagbhahs/vagbh.htm"
             ]
         }
@@ -457,10 +457,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/sbm.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/sbm/sbm.htm"
             ]
         }
@@ -498,10 +498,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/gautdhs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/dhs/gautdhs/gautd.htm"
             ]
         }
@@ -523,10 +523,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/svetup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/svetup/svetu.htm"
             ]
         }
@@ -546,9 +546,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/mimamsa/jaimsutu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/mimamsa/msbh1-7u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jaimini_mimamsasutra.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=MīmS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jaimini_mimamsasutra.txt"
+            ]
+        }
     },
     "88037": {
         "GRETIL": [
@@ -575,10 +580,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/brsvbh4u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/brahms.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/brahms/brahm.htm"
             ]
         }
@@ -604,9 +609,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vaisesik/vaisessu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vaisesik/vaissu1u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kanada_vaisesikasutra.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kanada_vaisesikasutra.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=369"
@@ -640,9 +650,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa027_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/nagmmk_u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_mulamadhyamakakarika.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=MMK"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_mulamadhyamakakarika.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=263"
@@ -689,9 +704,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/nagvigvu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/nagvvy_u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_vigrahavyavartani.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=ViVy"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_vigrahavyavartani.txt"
+            ]
+        }
     },
     "88089": {
         "GRETIL": [
@@ -706,9 +726,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/nysu51pu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/nysvbh_u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gautama_nyayasutra.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gautama_nyayasutra.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=382"
@@ -835,9 +860,14 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/patanjalayogasastra.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=YSBh"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=52"
@@ -895,10 +925,16 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/isvskaru.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/jaymangu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt",
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkarasvamin_nyayapravesakasutra.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=SK",
+                "https://www.vatayana.info/textView?text_abbrv=YD"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt",
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkarasvamin_nyayapravesakasutra.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=359"
@@ -977,9 +1013,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa022_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa023_u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=ViṃśV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=304",
@@ -1012,9 +1053,14 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/vatsyayana-nyayabhasya.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vatsyayana_nyayabhasya.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NBh"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vatsyayana_nyayabhasya.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=384"
@@ -1544,7 +1590,7 @@
             "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FparaatrisikaataatparyadiipikaaHK.txt&miri_catalog_number=M00043"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/niGaRwu.html",
                 "https://sanskritlibrary.org/catalogsText/rAmopAKyAna.html",
                 "https://sanskritlibrary.org/catalogsText/taittriya_prAtiSAKya.html",
@@ -1613,7 +1659,7 @@
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/visnudhs.html",
                 "https://sanskritlibrary.org/catalogsText/vajasaneyi_prAtiSAKya.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/ajitasen/ajita.htm",
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/ekadasa/ekada.htm",
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/hayagriv/hayag.htm",
@@ -1702,9 +1748,14 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/patanjalayogasastra.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=YSBh"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=381"
@@ -1722,9 +1773,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa001_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa002_u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_alambanapariksavrtti.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=ĀP"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_alambanapariksavrtti.txt"
+            ]
+        }
     },
     "88422": {
         "GRETIL": [
@@ -1748,17 +1804,27 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/prasastapada-padarthadharmasangraha.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prasastapada_padarthadharmasamgraha.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PDhS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prasastapada_padarthadharmasamgraha.txt"
+            ]
+        }
     },
     "88515": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/sthtvbhu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sthiramati_trimsikabhasya.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=TriṃśBh"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sthiramati_trimsikabhasya.txt"
+            ]
+        }
     },
     "88531": {
         "GRETIL": [
@@ -1792,9 +1858,14 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/canprasu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrakirti_prasannapada.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PPad"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrakirti_prasannapada.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=299"
@@ -1829,9 +1900,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhknyayu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhnyabpu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_nyayabindu.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NB"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_nyayabindu.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=424"
@@ -1850,10 +1926,16 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhkpvsvu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/pramanvu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartika.txt",
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartikasvavrtti.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PV",
+                "https://www.vatayana.info/textView?text_abbrv=PVSV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartika.txt",
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartikasvavrtti.txt"
+            ]
+        }
     },
     "88578": {
         "GRETIL": [
@@ -1865,26 +1947,41 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa063_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhksparu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_sambandhapariksa.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=SP"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_sambandhapariksa.txt"
+            ]
+        }
     },
     "88580": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa059_u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_samtanantarasiddhi.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=SAS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_samtanantarasiddhi.txt"
+            ]
+        }
     },
     "88581": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa064_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhkvadnu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_vadanyaya.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VN"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_vadanyaya.txt"
+            ]
+        }
     },
     "88583": {
         "GRETIL": [
@@ -1896,17 +1993,27 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/jaytuppu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayarasi_tattvopaplavasimha.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=TUS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayarasi_tattvopaplavasimha.txt"
+            ]
+        }
     },
     "88597": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/mimamsa/mimslovu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kumarila_slokavartika.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=ŚV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kumarila_slokavartika.txt"
+            ]
+        }
     },
     "88604": {
         "GRETIL": [
@@ -1970,17 +2077,27 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/mbrahsiu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_brahmasiddhi.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=BrS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_brahmasiddhi.txt"
+            ]
+        }
     },
     "88614": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/mndvivpu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vibhramaviveka.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VibhrV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vibhramaviveka.txt"
+            ]
+        }
     },
     "88620": {
         "GRETIL": [
@@ -2022,9 +2139,14 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/arhebt2u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/arhebt_u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/arcata_hetubindutika.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=HBṬ"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/arcata_hetubindutika.txt"
+            ]
+        }
     },
     "88749": {
         "GRETIL": [
@@ -2179,9 +2301,14 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/avayavinirakarana.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/asoka_avayavinirakarana.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=AvNir"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/asoka_avayavinirakarana.txt"
+            ]
+        }
     },
     "89143": {
         "GRETIL": [
@@ -2291,9 +2418,14 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhebta_u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/durvekamisra_hetubindutikaloka.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=HBṬĀ"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/durvekamisra_hetubindutikaloka.txt"
+            ]
+        }
     },
     "89186": {
         "GRETIL": [
@@ -2517,9 +2649,14 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/gangtciu.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gangesa_tattvacintamani.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=TCM"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gangesa_tattvacintamani.txt"
+            ]
+        }
     },
     "90184": {
         "GRETIL": [
@@ -2798,10 +2935,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/bau.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/upanisad/bau/bau.htm"
             ]
         }
@@ -3073,10 +3210,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/ys.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/dhs/ys/ys.htm"
             ]
         }
@@ -3105,10 +3242,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/manu.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/dhs/manu/manu.htm"
             ]
         }
@@ -3134,10 +3271,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/brhajj_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/varbrjat.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/varahami/varbrjat/varbr.htm"
             ]
         }
@@ -3147,10 +3284,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/brhats_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/brhats.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/varahami/brhats/brhat.htm"
             ]
         }
@@ -3160,10 +3297,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/bijaganu.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/bhaskbij.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/mathemat/bhaskbij/bhask.htm"
             ]
         }
@@ -3189,10 +3326,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/lilavatu.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/bhasklil.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/mathemat/bhasklil/bhask.htm"
             ]
         }
@@ -3203,10 +3340,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/yogay2_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/varyogay.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/varahami/varyogay/varyo.htm"
             ]
         }
@@ -3216,10 +3353,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/vivahapu.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/varvivpt.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/varahami/varvivpt/varvi.htm"
             ]
         }
@@ -3230,10 +3367,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/aryabhcu.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/aryabhat.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/mathemat/aryabhat/aryab.htm"
             ]
         }
@@ -3256,10 +3393,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/meghadut.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/kalidasa/meghadut/megha.htm"
             ]
         }
@@ -3443,10 +3580,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/kamasutr.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/kamasutr/kamas.htm"
             ]
         }
@@ -3535,7 +3672,7 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv1.html",
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv10.html",
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv2.html",
@@ -3547,7 +3684,7 @@
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv8.html",
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/rv9.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/mt/rv.htm"
             ]
         }
@@ -3592,10 +3729,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/jskt/kautarth.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/jskt/kautarth/kauta.htm"
             ]
         }
@@ -3656,10 +3793,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/saulahpu.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/saundlah.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/sankara/saundlah/saund.htm"
             ]
         }
@@ -3680,10 +3817,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/hitopad.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/hitopad/hitop.htm"
             ]
         }
@@ -3703,10 +3840,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/4_narr/vispancu.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/class/pancatt.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/klskt/pancatt/panca.htm"
             ]
         }
@@ -3771,10 +3908,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/sankhgs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/sankhgs/sankh.htm"
             ]
         }
@@ -3912,7 +4049,7 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh01.html",
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh02.html",
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh03.html",
@@ -3932,7 +4069,7 @@
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh17.html",
                 "https://sanskritlibrary.org/catalogsText/titus/mbh/mbh18.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/mbh/mbh.htm"
             ]
         }
@@ -3953,10 +4090,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_02su.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram02.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -3985,7 +4122,7 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram01.html",
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram02.html",
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram03.html",
@@ -3994,7 +4131,7 @@
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram06.html",
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram07.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4004,10 +4141,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_01_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram01.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4017,10 +4154,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_07_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram07.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4030,10 +4167,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_05_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram05.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4043,10 +4180,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_06_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram06.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4056,10 +4193,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_04_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram04.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4070,10 +4207,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/ramayana/ram_03pu.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/ram/ram03.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ram/ram.htm"
             ]
         }
@@ -4150,10 +4287,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/apdhs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/dhs/apdhs/apdhs.htm"
             ]
         }
@@ -4174,10 +4311,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/apgs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/apgs/apgs.htm"
             ]
         }
@@ -4187,10 +4324,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/5_vedang/1_srauta/apsulb_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/apsbs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/apsbs/apsbs.htm"
             ]
         }
@@ -4375,11 +4512,11 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/aitup.html",
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/aitupjz.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/upanisad/aitup/aitup.htm",
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/upanisad/aitupjz/aitup.htm"
             ]
@@ -4411,10 +4548,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/chup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/chup/chup.htm"
             ]
         }
@@ -4424,10 +4561,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/kaivup_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kaivalup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
@@ -4448,10 +4585,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kauss.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/kauss/kauss.htm"
             ]
         }
@@ -4462,10 +4599,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/mandup_u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/mandukya.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/upanisad/mandukya/mandu.htm"
             ]
         }
@@ -4616,9 +4753,14 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/mimamsa/sabbha1u.htm"
         ],
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sabara_mimamsabhasya.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=MīmBh"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sabara_mimamsabhasya.txt"
+            ]
+        }
     },
     "110297": {
         "GRETIL": [
@@ -4776,10 +4918,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/avs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/avs/avs.htm"
             ]
         }
@@ -4950,10 +5092,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kathup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/kathup/kathu.htm"
             ]
         }
@@ -4990,10 +5132,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/isup___u.htm"
         ],
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/isaup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/upanisad/isaup/isaup.htm"
             ]
         }
@@ -5316,9 +5458,14 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/nyayamanjari.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayamanjari.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NM"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayamanjari.txt"
+            ]
+        }
     },
     "89879": {
         "SARIT": [
@@ -5354,9 +5501,14 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikalankarabhasya.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prajnakaragupta_pramanavartikalamkara.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PVA"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prajnakaragupta_pramanavartikalamkara.txt"
+            ]
+        }
     },
     "89013": {
         "SARIT": {
@@ -5367,9 +5519,14 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikavrtti.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/manorathanandin_pramanavartikavrtti.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PVV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/manorathanandin_pramanavartikavrtti.txt"
+            ]
+        }
     },
     "109557": {
         "SARIT": {
@@ -5554,9 +5711,14 @@
                 "https://github.com/sarit/SARIT-corpus/blob/master/vidhiviveka-and-nyayakanika.xml"
             ]
         },
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vidhiviveka.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VidhV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vidhiviveka.txt"
+            ]
+        }
     },
     "89041": {
         "SARIT": {
@@ -5574,14 +5736,24 @@
         ]
     },
     "89001": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/bhasarvajna_nyayabhusana.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NBhū"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/bhasarvajna_nyayabhusana.txt"
+            ]
+        }
     },
     "88920": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrananda_vaisesikasutratika.txt"
-        ],
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VSṬ"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrananda_vaisesikasutratika.txt"
+            ]
+        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=371"
@@ -5595,54 +5767,104 @@
         }
     },
     "88852": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmottara_nyayabindutika.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NBṬ"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmottara_nyayabindutika.txt"
+            ]
+        }
     },
     "88423": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_pramanasamuccayavrtti.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PSV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_pramanasamuccayavrtti.txt"
+            ]
+        }
     },
     "92255": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gadadhara_muktivada.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=MukV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gadadhara_muktivada.txt"
+            ]
+        }
     },
     "88925": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayakalika.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NyKal"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayakalika.txt"
+            ]
+        }
     },
     "88610": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_bhavanaviveka.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=BhāV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_bhavanaviveka.txt"
+            ]
+        }
     },
     "88497": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkhya_yuktidipika.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NPS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkhya_yuktidipika.txt"
+            ]
+        }
     },
     "89119": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sridhara_nyayakandali.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NyKand"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sridhara_nyayakandali.txt"
+            ]
+        }
     },
     "89500": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sucaritamisra_slokavartikakasika.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=ŚVK"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sucaritamisra_slokavartikakasika.txt"
+            ]
+        }
     },
     "88990": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vidyanandin_satyasasanapariksa.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=SŚP"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vidyanandin_satyasasanapariksa.txt"
+            ]
+        }
     },
     "89021": {
-        "Pramāṇa NLP": [
-            "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vyomasiva_vyomavati.txt"
-        ]
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VyV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vyomasiva_vyomavati.txt"
+            ]
+        }
     },
     "41434": {
         "DCS": {
@@ -5994,10 +6216,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kausup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/upanisad/kausup/kausu.htm"
             ]
         }
@@ -6015,10 +6237,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/mundaka.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/upanisad/mundaka/munda.htm"
             ]
         }
@@ -6036,10 +6258,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/taittup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/taittup/taitt.htm"
             ]
         }
@@ -6070,10 +6292,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kathgs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/kathgs/kathg.htm"
             ]
         }
@@ -6120,10 +6342,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/ab.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/ab/ab.htm"
             ]
         }
@@ -6170,10 +6392,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/amrtabup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
@@ -6191,10 +6413,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/apss.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/apss/apss.htm"
             ]
         }
@@ -6212,10 +6434,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/baudhss.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/baudhss/baudh.htm"
             ]
         }
@@ -6246,10 +6468,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/pargs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/pargs/pargs.htm"
             ]
         }
@@ -6267,10 +6489,10 @@
             ]
         },
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/vs.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/vs/vs.htm"
             ]
         }
@@ -6466,70 +6688,70 @@
     },
     "96080": {
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/paramaup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "95964": {
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/brahmaup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "95943": {
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/atmaup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "96024": {
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/kenup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/kenup/kenup.htm"
             ]
         }
     },
     "96158": {
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/tejabup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "95932": {
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/aruneyup.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
             ]
         }
     },
     "112891": {
         "Sanskrit Library and TITUS": {
-            "main": [
+            "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/titus/vedic/svk.html"
             ],
-            "underlying": [
+            "TITUS web HTML": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/svk/svk.htm"
             ]
         }

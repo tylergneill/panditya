@@ -1146,54 +1146,55 @@ SARIT,Nyāyabhāṣya,,Vātsyāyana,,565.6,https://sarit.indology.info/vatsyayan
 SARIT,"Vidhiviveka, Nyāyakaṇikā",,"Maṇḍana Miśra, Vācaspati Miśra",,2130.8,https://sarit.indology.info/vidhiviveka-and-nyayakanika.xml,https://github.com/sarit/SARIT-corpus/blob/master/vidhiviveka-and-nyayakanika.xml,,"88615, 89041","85210, 85319"
 SARIT,Mitākṣarā,,Vijñāneśvara,,1801.9,,https://github.com/sarit/SARIT-corpus/blob/master/vijnanesvara-mitaksara.xml,,95746,110025
 SARIT,Yogapradīpa,,,,49.1,,https://github.com/sarit/SARIT-corpus/blob/master/yogapradipa.xml,,...,—
-Pramāṇa NLP,Hetubinduṭīkā,,Arcaṭa,,447.8,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/arcata_hetubindutika.txt,,,88733,85228
-Pramāṇa NLP,Avayavinirākaraṇa,,Aśoka,,19.9,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/asoka_avayavinirakarana.txt,,,89131,85342
-Pramāṇa NLP,Nyāyabhūṣaṇa,,Bhāsarvajña,,1261,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/bhasarvajna_nyayabhusana.txt,,,89001,85303
-Pramāṇa NLP,Prasannapadā,,Candrakīrti,,622.2,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrakirti_prasannapada.txt,,,88550,85193
-Pramāṇa NLP,Vaiśeṣikasūtravṛtti,Vaiśeṣikasūtraṭīkā,Candrānanda,,119.3,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrananda_vaisesikasutratika.txt,,,88920,85272
-Pramāṇa NLP,Hetubindu,,Dharmakirti,,52,,,,88574,85198
-Pramāṇa NLP,Nyāyabindu,,Dharmakīrti,,20.6,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_nyayabindu.txt,,,88576,85198
-Pramāṇa NLP,Pramāṇavārtika,,Dharmakīrti,,151.1,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartika.txt,,,88577,85198
-Pramāṇa NLP,Pramāṇavārtikasvavṛtti,,Dharmakīrti,,301.1,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartikasvavrtti.txt,,,88577,85198
-Pramāṇa NLP,Pramāṇaviniścaya,,Dharmakīrti,,221.4,,,,88578,85198
-Pramāṇa NLP,Saṃbandhaparīkṣā,,Dharmakīrti,,2.9,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_sambandhapariksa.txt,,,88579,85198
-Pramāṇa NLP,Saṃtānāntarasiddhi,,Dharmakīrti,,12,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_samtanantarasiddhi.txt,,,88580,85198
-Pramāṇa NLP,Vādanyāya,,Dharmakīrti,,80.2,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_vadanyaya.txt,,,88581,85198
-Pramāṇa NLP,Nyāyabinduṭīkā,,Dharmottara,,201.1,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmottara_nyayabindutika.txt,,,88852,85248
-Pramāṇa NLP,Ālambanaparīkṣāvṛtti,,Dignāga,,4.3,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_alambanapariksavrtti.txt,,,88418,85154
-Pramāṇa NLP,Pramāṇasamuccayavṛtti,,Dignāga,,38.6,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_pramanasamuccayavrtti.txt,,,88423,85154
-Pramāṇa NLP,Hetubinduṭīkāloka,,Durvekamiśra,,444.7,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/durvekamisra_hetubindutikaloka.txt,,,89185,85355
-Pramāṇa NLP,Muktivāda,,Gadādhara,,40.6,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gadadhara_muktivada.txt,,,92255,86189
-Pramāṇa NLP,Tattvacintāmaṇi,,Gaṅgeśa,,1047.2,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gangesa_tattvacintamani.txt,,,90147,85607
-Pramāṇa NLP,Nyāyasūtra,,Gautama,,33.3,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gautama_nyayasutra.txt,,,88091,85098
-Pramāṇa NLP,Sāṃkhyakārikā,,Īśvarakṛṣṇa,,9.8,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt,,,88213,85119
-Pramāṇa NLP,Mīmāṃsāsūtra,,Jaimini,,148.3,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jaimini_mimamsasutra.txt,,,88036,85087
-Pramāṇa NLP,Nyāyakalikā,,Jayantabhaṭṭa,,26.2,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayakalika.txt,,,88925,85277
-Pramāṇa NLP,Nyāyamañjarī,,Jayantabhaṭṭa,,1736.1,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayamanjari.txt,,,88926,85277
-Pramāṇa NLP,Tattvopaplavasiṃha,,Jayarāśi,,222.5,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayarasi_tattvopaplavasimha.txt,,,88590,85201
-Pramāṇa NLP,Pramāṇasamuccayaṭīkā,Viśālāmavatī,Jinendrabuddhi,,388.7,,,,88848,85247
-Pramāṇa NLP,Vaiśeṣikasūtra,,Kaṇāda,,20.5,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kanada_vaisesikasutra.txt,,,88043,85092
-Pramāṇa NLP,Ślokavārtika,,Kumārilabhaṭṭa,,445.8,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kumarila_slokavartika.txt,,,88597,85206
-Pramāṇa NLP,Bhāvanāviveka,,Maṇḍanamiśra,,50.6,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_bhavanaviveka.txt,,,88610,85210
-Pramāṇa NLP,Brahmasiddhi,,Maṇḍanamiśra,,303.3,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_brahmasiddhi.txt,,,88611,85210
-Pramāṇa NLP,Vibhramaviveka,,Maṇḍanamiśra,,20.1,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vibhramaviveka.txt,,,88614,85210
-Pramāṇa NLP,Vidhiviveka,,Maṇḍanamiśra,,127.3,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vidhiviveka.txt,,,88615,85210
-Pramāṇa NLP,Pramāṇavārtikavṛtti,,Manorathanandin,,981.9,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/manorathanandin_pramanavartikavrtti.txt,,,89013,85305
-Pramāṇa NLP,Mūlamadhyamakakārikā,,Nāgārjuna,,53,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_mulamadhyamakakarika.txt,,,88078,85097
-Pramāṇa NLP,Vigrahavyāvartanī,,Nāgārjuna,,51.9,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_vigrahavyavartani.txt,,,88087,85097
-Pramāṇa NLP,Yogasūtrabhāṣya,,"Patañjali, Vyāsa",,146.7,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt,,,"88183, 88376","85108, 85147"
-Pramāṇa NLP,Pramāṇavārtikālaṅkāra,Alaṅkāra,Prajñākaragupta,,1946.3,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prajnakaragupta_pramanavartikalamkara.txt,,,88859,85251
-Pramāṇa NLP,Padārthadharmasaṃgraha,Praśastapādabhāṣya,Praśastapāda,,92.9,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prasastapada_padarthadharmasamgraha.txt,,,88455,85164
-Pramāṇa NLP,Mīmāṃsābhāṣya,Śabarabhāṣya,Śabara,,1238.3,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sabara_mimamsabhasya.txt,,,88312,85131
-Pramāṇa NLP,Yuktidīpikā,,Sāṃkhya,,456.2,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkarasvamin_nyayapravesakasutra.txt,,,88213,—
-Pramāṇa NLP,Nyāyapraveśakasūtra,,Śaṅkarasvāmin,,12.8,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkhya_yuktidipika.txt,,,88497,85173
-Pramāṇa NLP,Nyāyakandalī,,Śrīdhara,,666.8,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sridhara_nyayakandali.txt,,,89119,85336
-Pramāṇa NLP,Triṃśikābhāṣya,,Sthiramati,,77,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sthiramati_trimsikabhasya.txt,,,88515,85177
-Pramāṇa NLP,Ślokavārtikakāśikā,,Sucaritamiśra,,1289.4,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sucaritamisra_slokavartikakasika.txt,,,89500,85423
-Pramāṇa NLP,Viṃśatikāvṛtti,Viṃśikāvṛtti,Vasubandhu,,19.8,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt,,,88262,85127
-Pramāṇa NLP,Nyāyabhāṣya,,Vātsyāyana,,407.9,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vatsyayana_nyayabhasya.txt,,,88353,85140
-Pramāṇa NLP,Satyaśāsanaparīkṣā,,Vidyānandin,,114.4,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vidyanandin_satyasasanapariksa.txt,,,88990,85299
-Pramāṇa NLP,Vyomavatī,,Vyomaśiva,,1050.6,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vyomasiva_vyomavati.txt,,,89021,85311
+Vātāyana and Pramāṇa NLP,Hetubinduṭīkā,,Arcaṭa,,447.8,https://www.vatayana.info/textView?text_abbrv=HBṬ,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/arcata_hetubindutika.txt,,88733,85228
+Vātāyana and Pramāṇa NLP,Avayavinirākaraṇa,,Aśoka,,19.9,https://www.vatayana.info/textView?text_abbrv=AvNir,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/asoka_avayavinirakarana.txt,,89131,85342
+Vātāyana and Pramāṇa NLP,Nyāyabhūṣaṇa,,Bhāsarvajña,,1261,https://www.vatayana.info/textView?text_abbrv=NBhū,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/bhasarvajna_nyayabhusana.txt,,89001,85303
+Vātāyana and Pramāṇa NLP,Prasannapadā,,Candrakīrti,,622.2,https://www.vatayana.info/textView?text_abbrv=PPad,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrakirti_prasannapada.txt,,88550,85193
+Vātāyana and Pramāṇa NLP,Vaiśeṣikasūtravṛtti,Vaiśeṣikasūtraṭīkā,Candrānanda,,119.3,https://www.vatayana.info/textView?text_abbrv=VSṬ,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrananda_vaisesikasutratika.txt,,88920,85272
+Vātāyana and Pramāṇa NLP,Hetubindu,,Dharmakirti,,52,,,,88574,85198
+Vātāyana and Pramāṇa NLP,Nyāyabindu,,Dharmakīrti,,20.6,https://www.vatayana.info/textView?text_abbrv=NB,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_nyayabindu.txt,,88576,85198
+Vātāyana and Pramāṇa NLP,Pramāṇavārtika,,Dharmakīrti,,151.1,https://www.vatayana.info/textView?text_abbrv=PV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartika.txt,,88577,85198
+Vātāyana and Pramāṇa NLP,Pramāṇavārtikasvavṛtti,,Dharmakīrti,,301.1,https://www.vatayana.info/textView?text_abbrv=PVSV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartikasvavrtti.txt,,88577,85198
+Vātāyana and Pramāṇa NLP,Pramāṇaviniścaya,,Dharmakīrti,,221.4,,,,88578,85198
+Vātāyana and Pramāṇa NLP,Saṃbandhaparīkṣā,,Dharmakīrti,,2.9,https://www.vatayana.info/textView?text_abbrv=SP,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_sambandhapariksa.txt,,88579,85198
+Vātāyana and Pramāṇa NLP,Saṃtānāntarasiddhi,,Dharmakīrti,,12,https://www.vatayana.info/textView?text_abbrv=SAS,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_samtanantarasiddhi.txt,,88580,85198
+Vātāyana and Pramāṇa NLP,Vādanyāya,,Dharmakīrti,,80.2,https://www.vatayana.info/textView?text_abbrv=VN,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_vadanyaya.txt,,88581,85198
+Vātāyana and Pramāṇa NLP,Nyāyabinduṭīkā,,Dharmottara,,201.1,https://www.vatayana.info/textView?text_abbrv=NBṬ,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmottara_nyayabindutika.txt,,88852,85248
+Vātāyana and Pramāṇa NLP,Ālambanaparīkṣāvṛtti,,Dignāga,,4.3,https://www.vatayana.info/textView?text_abbrv=ĀP,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_alambanapariksavrtti.txt,,88418,85154
+Vātāyana and Pramāṇa NLP,Pramāṇasamuccayavṛtti,,Dignāga,,38.6,https://www.vatayana.info/textView?text_abbrv=PSV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_pramanasamuccayavrtti.txt,,88423,85154
+Vātāyana and Pramāṇa NLP,Hetubinduṭīkāloka,,Durvekamiśra,,444.7,https://www.vatayana.info/textView?text_abbrv=HBṬĀ,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/durvekamisra_hetubindutikaloka.txt,,89185,85355
+Vātāyana and Pramāṇa NLP,Muktivāda,,Gadādhara,,40.6,https://www.vatayana.info/textView?text_abbrv=MukV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gadadhara_muktivada.txt,,92255,86189
+Vātāyana and Pramāṇa NLP,Tattvacintāmaṇi,,Gaṅgeśa,,1047.2,https://www.vatayana.info/textView?text_abbrv=TCM,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gangesa_tattvacintamani.txt,,90147,85607
+Vātāyana and Pramāṇa NLP,Nyāyasūtra,,Gautama,,33.3,https://www.vatayana.info/textView?text_abbrv=NS,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gautama_nyayasutra.txt,,88091,85098
+Vātāyana and Pramāṇa NLP,Sāṃkhyakārikā,,Īśvarakṛṣṇa,,9.8,https://www.vatayana.info/textView?text_abbrv=SK,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt,,88213,85119
+Vātāyana and Pramāṇa NLP,Mīmāṃsāsūtra,,Jaimini,,148.3,https://www.vatayana.info/textView?text_abbrv=MīmS,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jaimini_mimamsasutra.txt,,88036,85087
+Vātāyana and Pramāṇa NLP,Nyāyakalikā,,Jayantabhaṭṭa,,26.2,https://www.vatayana.info/textView?text_abbrv=NyKal,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayakalika.txt,,88925,85277
+Vātāyana and Pramāṇa NLP,Nyāyamañjarī,,Jayantabhaṭṭa,,1736.1,https://www.vatayana.info/textView?text_abbrv=NM,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayamanjari.txt,,88926,85277
+Vātāyana and Pramāṇa NLP,Tattvopaplavasiṃha,,Jayarāśi,,222.5,https://www.vatayana.info/textView?text_abbrv=TUS,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayarasi_tattvopaplavasimha.txt,,88590,85201
+Vātāyana and Pramāṇa NLP,Pramāṇasamuccayaṭīkā,Viśālāmavatī,Jinendrabuddhi,,388.7,,,,88848,85247
+Vātāyana and Pramāṇa NLP,Vaiśeṣikasūtra,,Kaṇāda,,20.5,https://www.vatayana.info/textView?text_abbrv=VS,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kanada_vaisesikasutra.txt,,88043,85092
+Vātāyana and Pramāṇa NLP,Ślokavārtika,,Kumārilabhaṭṭa,,445.8,https://www.vatayana.info/textView?text_abbrv=ŚV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kumarila_slokavartika.txt,,88597,85206
+Vātāyana and Pramāṇa NLP,Bhāvanāviveka,,Maṇḍanamiśra,,50.6,https://www.vatayana.info/textView?text_abbrv=BhāV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_bhavanaviveka.txt,,88610,85210
+Vātāyana and Pramāṇa NLP,Brahmasiddhi,,Maṇḍanamiśra,,303.3,https://www.vatayana.info/textView?text_abbrv=BrS,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_brahmasiddhi.txt,,88611,85210
+Vātāyana and Pramāṇa NLP,Vibhramaviveka,,Maṇḍanamiśra,,20.1,https://www.vatayana.info/textView?text_abbrv=VibhrV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vibhramaviveka.txt,,88614,85210
+Vātāyana and Pramāṇa NLP,Vidhiviveka,,Maṇḍanamiśra,,127.3,https://www.vatayana.info/textView?text_abbrv=VidhV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vidhiviveka.txt,,88615,85210
+Vātāyana and Pramāṇa NLP,Pramāṇavārtikavṛtti,,Manorathanandin,,981.9,https://www.vatayana.info/textView?text_abbrv=PVV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/manorathanandin_pramanavartikavrtti.txt,,89013,85305
+Vātāyana and Pramāṇa NLP,Mūlamadhyamakakārikā,,Nāgārjuna,,53,https://www.vatayana.info/textView?text_abbrv=MMK,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_mulamadhyamakakarika.txt,,88078,85097
+Vātāyana and Pramāṇa NLP,Vigrahavyāvartanī,,Nāgārjuna,,51.9,https://www.vatayana.info/textView?text_abbrv=ViVy,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_vigrahavyavartani.txt,,88087,85097
+Vātāyana and Pramāṇa NLP,Yogasūtrabhāṣya,,"Patañjali, Vyāsa",,146.7,https://www.vatayana.info/textView?text_abbrv=YSBh,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt,,"88183, 88376","85108, 85147"
+Vātāyana and Pramāṇa NLP,Pramāṇavārtikālaṅkāra,Alaṅkāra,Prajñākaragupta,,1946.3,https://www.vatayana.info/textView?text_abbrv=PVA,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prajnakaragupta_pramanavartikalamkara.txt,,88859,85251
+Vātāyana and Pramāṇa NLP,Padārthadharmasaṃgraha,Praśastapādabhāṣya,Praśastapāda,,92.9,https://www.vatayana.info/textView?text_abbrv=PDhS,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prasastapada_padarthadharmasamgraha.txt,,88455,85164
+Vātāyana and Pramāṇa NLP,Mīmāṃsābhāṣya,Śabarabhāṣya,Śabara,,1238.3,https://www.vatayana.info/textView?text_abbrv=MīmBh,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sabara_mimamsabhasya.txt,,88312,85131
+Vātāyana and Pramāṇa NLP,Yuktidīpikā,,Sāṃkhya,,456.2,https://www.vatayana.info/textView?text_abbrv=YD,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkarasvamin_nyayapravesakasutra.txt,,88213,—
+Vātāyana and Pramāṇa NLP,Nyāyapraveśakasūtra,,Śaṅkarasvāmin,,12.8,https://www.vatayana.info/textView?text_abbrv=NPS,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkhya_yuktidipika.txt,,88497,85173
+Vātāyana and Pramāṇa NLP,Nyāyakandalī,,Śrīdhara,,666.8,https://www.vatayana.info/textView?text_abbrv=NyKand,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sridhara_nyayakandali.txt,,89119,85336
+Vātāyana and Pramāṇa NLP,Triṃśikābhāṣya,,Sthiramati,,77,https://www.vatayana.info/textView?text_abbrv=TriṃśBh,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sthiramati_trimsikabhasya.txt,,88515,85177
+Vātāyana and Pramāṇa NLP,Ślokavārtikakāśikā,,Sucaritamiśra,,1289.4,https://www.vatayana.info/textView?text_abbrv=ŚVK,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sucaritamisra_slokavartikakasika.txt,,89500,85423
+Vātāyana and Pramāṇa NLP,Nyāyavārtika,,Uddyotakara,,19.8,,,,88569,85196
+Vātāyana and Pramāṇa NLP,Viṃśatikāvṛtti,Viṃśikāvṛtti,Vasubandhu,,407.9,https://www.vatayana.info/textView?text_abbrv=ViṃśV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt,,88262,85127
+Vātāyana and Pramāṇa NLP,Nyāyabhāṣya,,Vātsyāyana,,114.4,https://www.vatayana.info/textView?text_abbrv=NBh,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vatsyayana_nyayabhasya.txt,,88353,85140
+Vātāyana and Pramāṇa NLP,Satyaśāsanaparīkṣā,,Vidyānandin,,1050.6,https://www.vatayana.info/textView?text_abbrv=SŚP,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vidyanandin_satyasasanapariksa.txt,,88990,85299
+Vātāyana and Pramāṇa NLP,Vyomavatī,,Vyomaśiva,,990.2,https://www.vatayana.info/textView?text_abbrv=VyV,https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vyomasiva_vyomavati.txt,,89021,85311
 DCS,Bhāvaprakāśa,,Bhāvamiśra,,147.2,http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=165,https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Bhāvaprakāśa,https://github.com/tylergneill/dcs_extract/tree/main/extracted/Bhāvaprakāśa.txt,41312,40352
 DCS,Kumārasaṃbhava,,Kālidāsa,,107.3,http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=390,https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Kumārasaṃbhava,https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kumārasaṃbhava.txt,41324,40377
 DCS,Meghadūta,,Kālidāsa,,34.8,http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=250,https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Meghadūta,https://github.com/tylergneill/dcs_extract/tree/main/extracted/Meghadūta.txt,108721,40377
