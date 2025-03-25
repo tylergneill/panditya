@@ -31,6 +31,26 @@
       (as of {{ etext_data_version }}).
       Click a link to see an interactive visualization of each.
     </p>
+    <table id="fancy-table">
+      <thead>
+        <tr>
+          <th>Collection</th>
+          <th># Works</th>
+          <th># E-Texts</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for collection, stats in etext_data_summary.items() %}
+        <tr>
+          <td>
+            <a href="seti/by_collection/{{ collection }}/visualize">{{ collection }}</a>
+          </td>
+          <td>{{ stats.works }}</td>
+          <td>{{ stats.etexts }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
     <div class="footer">
       <p>Back to <a href="/about">About</a></p>
       <p>Back to <a href="/">Home</a></p>

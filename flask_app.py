@@ -5,7 +5,8 @@ from flask import Flask, render_template, Blueprint, jsonify, request, send_from
 from flask_restx import Api, Resource, fields
 
 from grapher import construct_subgraph, annotate_graph
-from utils.utils import find_app_version, find_pandit_data_version, find_etext_data_version, load_config_dict_from_json_file
+from utils.utils import find_app_version, find_pandit_data_version, find_etext_data_version, \
+    load_config_dict_from_json_file, summarize_etext_links
 from utils.load import load_entities, load_link_data
 
 ENTITIES_BY_ID = load_entities()
@@ -13,6 +14,8 @@ ETEXT_LINKS = load_link_data()
 VALID_COLLECTIONS = set()
 for work_data in ETEXT_LINKS.values():
     VALID_COLLECTIONS.update(work_data.keys())
+
+ETEXT_DATA_SUMMARY = summarize_etext_links(ETEXT_LINKS)
 
 APP_VERSION = find_app_version()
 PANDIT_DATA_VERSION = find_pandit_data_version()
@@ -509,7 +512,7 @@ def update_notes():
 
 @app.route('/seti')
 def seti():
-    return render_template('seti.html')
+    return render_template('seti.html', etext_data_version=ETEXT_DATA_VERSION, etext_data_summary=ETEXT_DATA_SUMMARY)
 
 
 # --- data serving route ---
