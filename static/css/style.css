@@ -490,7 +490,7 @@ button:hover { background: #a93226; }
   text-align: left; /* Left alignment for Data Notes page */
 }
 
-#community-table {
+#fancy-table {
   width: 100%;
   max-width: 800px;
   margin: 20px auto;
@@ -500,29 +500,29 @@ button:hover { background: #a93226; }
   font-size: 1.2rem; /* Match font size with the rest of the page */
 }
 
-#community-table th,
-#community-table td {
+#fancy-table th,
+#fancy-table td {
   padding: 10px 15px;
   text-align: left;
   border: 1px solid #5a0b73;
   color: #ffffff; /* White text for consistency */
 }
 
-#community-table th {
+#fancy-table th {
   background-color: #5a0b73;
   font-weight: bold;
   text-align: center;
 }
 
-#community-table tbody tr:nth-child(even) {
+#fancy-table tbody tr:nth-child(even) {
   background-color: #4a175c; /* Alternating row color for readability */
 }
 
-#community-table td {
+#fancy-table td {
   text-align: center; /* Center numbers in Count and Total Entities */
 }
 
-#community-table tbody tr:last-child {
+#fancy-table tbody tr:last-child {
   font-weight: bold;
   background-color: #6c2a7b; /* Highlight the total row */
 }
