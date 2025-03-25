@@ -17,7 +17,7 @@ def load_entities():
     input_json_path = os.path.join(current_file_dir, relative_data_dir, input_filename)
     with open(input_json_path, "r") as jsonfile:
         data = json.load(jsonfile)
-    entities_by_id = {eid: Entity.from_dict(edict) for eid, edict in data.items()}
+    entities_by_id = {eid: Entity.create_from_dict(edict) for eid, edict in data.items()}
     return entities_by_id
 
 @time_execution
