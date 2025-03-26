@@ -13,6 +13,10 @@ body {
   align-items: center;
 }
 
+body, html {
+  overflow: visible;
+}
+
 /* =============================
    Top Panel Styles
 ============================= */
@@ -186,7 +190,7 @@ svg {
 /* Submenu styles */
 .submenu {
   list-style: none;
-  padding: 5px 10px; /* Adjust padding */
+  padding: 5px 10px;
   margin: 0;
   background: #f8f8f8;
   border: 1px solid #ccc;
@@ -195,14 +199,33 @@ svg {
   left: 100%; /* Pops out to the right */
   top: 0;
   display: none; /* Hidden by default */
-  width: 100px;
+  min-width: 160px; /* Ensure links don't get cut off */
+  max-width: 300px; /* Limit width to prevent excessive stretching */
+  overflow: visible; /* <-- Let child submenus extend beyond the parent box */
+  white-space: nowrap;
   z-index: 1000; /* Ensure it appears on top */
   box-sizing: border-box; /* Include padding in width */
 }
 
-/* Show submenu on hover */
-.has-submenu:hover > .submenu {
-  display: block; /* Show submenu */
+/* Show submenu when hovering over parent item */
+.has-submenu:hover > .submenu,
+.has-submenu:focus-within > .submenu {
+  display: block;
+}
+
+/* Ensure submenu stays open when hovering */
+.has-submenu > .submenu:hover {
+  display: block;
+}
+
+/* Sub-submenu styles (to prevent accidental closing) */
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu .submenu {
+  top: 0;
+  left: 100%; /* Ensures submenu expands to the right */
 }
 
 /* Menu items */
@@ -218,15 +241,15 @@ svg {
 
 /* Add consistent simple underline on hover */
 .nested-menu a:hover, .nested-menu button:hover {
-  text-decoration: underline; /* Simple underline */
-  background: none; /* Ensure no background color */
+  text-decoration: underline;
+  background: none;
 }
 
 /* Disabled buttons */
 .nested-menu button:disabled {
   color: #999;
   cursor: not-allowed;
-  text-decoration: none; /* Ensure no underline for disabled buttons */
+  text-decoration: none;
 }
 
 /* =============================
@@ -467,7 +490,7 @@ button:hover { background: #a93226; }
   text-align: left; /* Left alignment for Data Notes page */
 }
 
-#community-table {
+#fancy-table {
   width: 100%;
   max-width: 800px;
   margin: 20px auto;
@@ -477,29 +500,41 @@ button:hover { background: #a93226; }
   font-size: 1.2rem; /* Match font size with the rest of the page */
 }
 
-#community-table th,
-#community-table td {
+#fancy-table th,
+#fancy-table td {
   padding: 10px 15px;
-  text-align: left;
   border: 1px solid #5a0b73;
-  color: #ffffff; /* White text for consistency */
+  color: #ffffff;
 }
 
-#community-table th {
+/* Header row */
+#fancy-table th {
   background-color: #5a0b73;
   font-weight: bold;
   text-align: center;
 }
 
-#community-table tbody tr:nth-child(even) {
-  background-color: #4a175c; /* Alternating row color for readability */
+/* Body rows */
+#fancy-table tbody td {
+  text-align: center;
 }
 
-#community-table td {
-  text-align: center; /* Center numbers in Count and Total Entities */
+#fancy-table tbody tr:nth-child(even) {
+  background-color: #4a175c;
 }
 
-#community-table tbody tr:last-child {
+/* Footer row using <tfoot> */
+#fancy-table tfoot {
+  background-color: #6c2a7b;
   font-weight: bold;
-  background-color: #6c2a7b; /* Highlight the total row */
+}
+
+#fancy-table tfoot td {
+  text-align: center;
+}
+
+/* Optional: fallback if using tbody .summary-row instead of <tfoot> */
+#fancy-table tbody .summary-row {
+  font-weight: bold;
+  background-color: #6c2a7b;
 }

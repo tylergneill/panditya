@@ -1,3 +1,4 @@
+from collections import defaultdict
 from datetime import datetime
 from functools import wraps
 import json
@@ -35,8 +36,47 @@ def find_app_version():
         return file.readline().strip().split('=')[1].strip().replace("'", "").replace('"', '')
 
 
-def find_data_version():
+def find_pandit_data_version():
     data_version_filepath = './VERSION'
     with open(data_version_filepath, 'r', encoding='utf8') as file:
-        # Assuming the __data_version__ line is the second line
+        # Assuming the __pandit_data_version__ line is the second line
         return file.readlines()[1].strip().split('=')[1].strip().replace("'", "").replace('"', '')
+
+
+def find_etext_data_version():
+    data_version_filepath = './VERSION'
+    with open(data_version_filepath, 'r', encoding='utf8') as file:
+        # Assuming the __etext_data_version__ line is the third line
+        return file.readlines()[2].strip().split('=')[1].strip().replace("'", "").replace('"', '')
+
+
+def summarize_etext_links(etext_links):
+    works_per_collection = defaultdict(set)
+    links_per_collection = defaultdict(int)
+
+    for work_id, sources in etext_links.items():
+        for collection, links in sources.items():
+            if isinstance(links, dict):
+                for subcat, sublinks in links.items():
+                    works_per_collection[collection].add(work_id)
+                    links_per_collection[collection] += len(sublinks)
+            elif isinstance(links, list):
+                works_per_collection[collection].add(work_id)
+                links_per_collection[collection] += len(links)
+            else:
+                print(f"Unexpected type for {collection}: {type(links)}")
+
+    # Combine and sort by number of works (descending)
+    combined_summary = {
+        collection: {
+            "works": len(works_per_collection[collection]),
+            "etexts": links_per_collection[collection]
+        }
+        for collection in works_per_collection
+    }
+
+    sorted_summary = dict(
+        sorted(combined_summary.items(), key=lambda item: item[1]["works"], reverse=True)
+    )
+
+    return sorted_summary

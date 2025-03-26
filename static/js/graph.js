@@ -102,6 +102,10 @@ function renderGraph(graph) {
 
   svg.call(zoom);
 
+  // --- Apply an initial trivial transform to avoid weird disappearance and/or shift problems ---
+  const initialTransform = d3.zoomIdentity.translate(1, 1).scale(1);
+  svg.call(zoom.transform, initialTransform);
+
   // Fetch initial slider values dynamically
   const initialLinkDistance = +document.getElementById('linkDistance').value;
   const initialChargeStrength = -document.getElementById('chargeStrength').value; // Negative for repulsion
@@ -132,6 +136,18 @@ function renderGraph(graph) {
       if (d.is_central) return 17;
       if (d.is_excluded) return 15;
       return 10;
+    })
+    .style('stroke', d => {
+      if (d.type === 'work' && d.etext_links) {
+        return 'gold';
+      }
+      return null; // or 'none'
+    })
+    .style('stroke-width', d => {
+      if (d.type === 'work' && d.etext_links) {
+        return 4;
+      }
+      return 1; // or default
     })
     .call(d3.drag()
       .on('start', event => {
@@ -170,6 +186,58 @@ function renderGraph(graph) {
     const typeMapping = { author: "person", work: "work" };
     const entityPath = typeMapping[d.type] || d.type;
 
+    let etextMenuHtml = '';
+
+    function extractShortText(link) {
+        if (typeof link !== 'string') return ''; // Ensure link is a string to prevent errors
+
+        // Split on both '/' and '=' and take the last segment
+        let parts = link.split(/[/=]/);
+        let shortText = parts[parts.length - 1];
+
+        // Strip off any extensions (e.g., '.html', '.php')
+        return shortText.replace(/\.[^.]+$/, '');
+    }
+
+
+    if (d.etext_links) {
+        Object.entries(d.etext_links).forEach(([collection, links]) => {
+            let collectionLinks = '';
+
+            // Check if links is an object with categories like 'GitHub' and 'web'
+            if (typeof links === 'object' && !Array.isArray(links)) {
+                Object.entries(links).forEach(([category, linkList]) => {
+                    // Ensure linkList is an array
+                    let safeLinks = Array.isArray(linkList) ? linkList : [linkList];
+
+                    let linkItems = safeLinks.map(link => {
+                        return `<li><a href="${link}" target="_blank">${extractShortText(link)}</a></li>`;
+                    }).join('');
+
+                    // Group by category (e.g., "GitHub", "web")
+                    collectionLinks += `
+                        <li class="has-submenu">
+                            <span>${category}</span>
+                            <ul class="submenu">${linkItems}</ul>
+                        </li>`;
+                });
+            } else {
+                // If it's a simple list of links, handle normally
+                let safeLinks = Array.isArray(links) ? links : [links];
+
+                collectionLinks = safeLinks.map(link => {
+                    return `<li><a href="${link}" target="_blank">${extractShortText(link)}</a></li>`;
+                }).join('');
+            }
+
+            etextMenuHtml += `
+              <li class="has-submenu">
+                <span>${collection}</span>
+                <ul class="submenu">${collectionLinks}</ul>
+              </li>`;
+        });
+    }
+
     // Populate the menu
     menu.html(`
       <ul class="nested-menu">
@@ -178,7 +246,7 @@ function renderGraph(graph) {
           <span>View on</span>
           <ul class="submenu">
             <li><a href="https://www.panditproject.org/entity/${d.id}/${entityPath}" target="_blank">Pandit</a></li>
-            <!-- Add more items here later -->
+            ${etextMenuHtml}
           </ul>
         </li>
         <li class="has-submenu">

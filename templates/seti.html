@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SETI - Pāṇḍitya</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div id="data-notes-container" class="shared-container">
+    <h1>SETI</h1>
+    <p>
+      The Sanskrit E-Text Inventory (SETI)—or "Search for E-Textual Intelligence"—
+      harkens back to the original "register" function of GRETIL,
+      to simply indicate where searchable Sanskrit e-texts are available online.
+    </p>
+    <p>
+      The foundation of SETI is a simple spreadsheet:
+      the <a href="https://docs.google.com/spreadsheets/d/1MpHlU-wnWbTsC-2eWZ-gowsM8oiBeGapcifeFFeaitI/edit?gid=0#gid=0">SETI master document</a>.
+      For more context, see <a>my blog post (forthcoming)</a>.
+    </p>
+    <p>
+      SETI's link data is integrated into <b>Pāṇḍitya</b>,
+      which presents it as clickable links within its interactive graph.
+      Look for work nodes highlighted in gold,
+      and browse available e-texts under the “View on” submenu.
+    </p>
+    <p>
+      Below is a list of e-text collections currently included
+      (as of {{ etext_data_version }})
+      and how much can be correlated with Pandit Project entities
+      (as of the {{ pandit_data_version }} export).
+      Click a link to see an interactive visualization of each.
+    </p>
+    <table id="fancy-table">
+      <thead>
+        <tr>
+          <th>Collection</th>
+          <th># Works</th>
+          <th># E-Texts</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for collection, stats in etext_data_summary.items() %}
+        <tr>
+          <td>
+            <a href="seti/by_collection/{{ collection }}/visualize">{{ collection }}</a>
+          </td>
+          <td>{{ stats.works }}</td>
+          <td>{{ stats.etexts }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p>
+      For fine-grained data,
+      including insights into overlap/uniqueness of each collection,
+      see the API <code>/seti</code> routes
+      (<a href="/api/docs" target="_blank">Swagger doc</a>).
+    </p>
+    <div class="footer">
+      <p>Back to <a href="/about">About</a></p>
+      <p>Back to <a href="/">Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

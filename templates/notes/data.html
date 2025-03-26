@@ -10,7 +10,7 @@
   <div id="data-notes-container" class="shared-container">
     <h1>Data Notes</h1>
     <p>
-      Pāṇḍitya uses a static snapshot of the Pandit database from 2024-12-13.
+      Pāṇḍitya uses a static snapshot of the Pandit database from {{ pandit_data_version }}.
       This export had 67,500 rows (= entities) and 163 columns (= fields).
       Only a subset of this is used:
       <ul>
@@ -30,7 +30,7 @@
       <li><strong>Total entities:</strong> 16,498 (12,701 works, 3,797 authors)</li>
       <li><strong>Total relationships:</strong> 13,685 (9,287 author → work, 4,398 work → work)</li>
     </ul>
-    <table id="community-table">
+    <table id="fancy-table">
       <thead>
         <tr>
           <th>Community Type</th>
@@ -69,13 +69,19 @@
           <td>1</td>
           <td>8,906</td>
         </tr>
+      </tbody>
+      <tfoot>
         <tr>
           <th>Total</th>
           <th>4,729</th>
           <th>16,498</th>
         </tr>
-      </tbody>
+      </tfoot>
     </table>
+    <p>
+      In addition, e-text links were sourced in a manual collation process, last updated {{ etext_data_version }}.
+      (See the <a href="/seti">SETI page</a> for more info.)
+    </p>
     <div class="footer">
       <p>Back to <a href="/about">About</a></p>
       <p>Back to <a href="/">Home</a></p>

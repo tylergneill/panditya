@@ -94,7 +94,7 @@
       if (ids.length === 0) return;
 
       try {
-          const query = ids.map(id => `ids=${id}`).join("&");
+          const query = `ids=${encodeURIComponent(ids.join(","))}`
           const response = await fetch(`/api/entities/labels?${query}`); // Adjusted endpoint
           const data = await response.json();
 
