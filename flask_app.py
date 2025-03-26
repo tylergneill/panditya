@@ -512,7 +512,7 @@ def update_notes():
 
 @app.route('/seti')
 def seti():
-    return render_template('seti.html', etext_data_version=ETEXT_DATA_VERSION, etext_data_summary=ETEXT_DATA_SUMMARY)
+    return render_template('seti.html', pandit_data_version=PANDIT_DATA_VERSION, etext_data_version=ETEXT_DATA_VERSION, etext_data_summary=ETEXT_DATA_SUMMARY)
 
 
 # --- data serving route ---
