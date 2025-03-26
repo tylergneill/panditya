@@ -76,14 +76,6 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/7_ayur/caraka_u.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/carakasamhita.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/carakasamhita.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=58"
@@ -94,20 +86,20 @@
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Carakasaṃhitā.txt"
             ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/carakasamhita.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/carakasamhita.xml"
+            ]
         }
     },
     "41478": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/7_ayur/vagaah_u.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/astangahrdayasamhita.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/astangahrdayasamhita.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=14"
@@ -117,6 +109,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aṣṭāṅgahṛdayasaṃhitā.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/astangahrdayasamhita.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/astangahrdayasamhita.xml"
             ]
         },
         "Sanskrit Library and TITUS": {
@@ -214,14 +214,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/7_ayur/vrasrs_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/7_ayur/vrasrscu.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/vagbhata-rasaratnasamuccaya-comms.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/vagbhata-rasaratnasamuccaya-comms.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=149"
@@ -231,6 +223,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rasaratnasamuccaya.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/vagbhata-rasaratnasamuccaya-comms.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/vagbhata-rasaratnasamuccaya-comms.xml"
             ]
         }
     },
@@ -289,14 +289,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/3_purana/skp031pu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/3_purana/skprevku.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/skandapurana.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/skandapurana.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=140",
@@ -310,20 +302,20 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Skandapurāṇa (Revākhaṇḍa).txt",
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Skandapurāṇa.txt"
             ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/skandapurana.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/skandapurana.xml"
+            ]
         }
     },
     "42030": {
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/7_ayur/nitrrk_u.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/nityanatha-rasaratnakara-rasayanakhanda.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/nityanatha-rasaratnakara-rasayanakhanda.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=57"
@@ -333,6 +325,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rasaratnākara.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/nityanatha-rasaratnakara-rasayanakhanda.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/nityanatha-rasaratnakara-rasayanakhanda.xml"
             ]
         }
     },
@@ -609,14 +609,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vaisesik/vaisessu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vaisesik/vaissu1u.htm"
         ],
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=VS"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kanada_vaisesikasutra.txt"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=369"
@@ -626,6 +618,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Vaiśeṣikasūtra.txt"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kanada_vaisesikasutra.txt"
             ]
         }
     },
@@ -650,14 +650,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa027_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/nagmmk_u.htm"
         ],
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=MMK"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_mulamadhyamakakarika.txt"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=263"
@@ -667,6 +659,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Mūlamadhyamakārikāḥ.txt"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=MMK"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_mulamadhyamakakarika.txt"
             ]
         }
     },
@@ -726,14 +726,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/nysu51pu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/nysvbh_u.htm"
         ],
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=NS"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gautama_nyayasutra.txt"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=382"
@@ -743,6 +735,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nyāyasūtra.txt"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gautama_nyayasutra.txt"
             ]
         }
     },
@@ -852,6 +852,17 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/yogasutu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/yogsubhu.htm"
         ],
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=52"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Yogasūtra"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Yogasūtra.txt"
+            ]
+        },
         "SARIT": {
             "web HTML": [
                 "https://sarit.indology.info/patanjalayogasastra.xml"
@@ -866,17 +877,6 @@
             ],
             "GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
-            ]
-        },
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=52"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Yogasūtra"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Yogasūtra.txt"
             ]
         }
     },
@@ -925,16 +925,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/isvskaru.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/jaymangu.htm"
         ],
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=SK",
-                "https://www.vatayana.info/textView?text_abbrv=YD"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt",
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkarasvamin_nyayapravesakasutra.txt"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=359"
@@ -944,6 +934,16 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Sāṃkhyakārikā.txt"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=SK",
+                "https://www.vatayana.info/textView?text_abbrv=YD"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt",
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkarasvamin_nyayapravesakasutra.txt"
             ]
         }
     },
@@ -1013,14 +1013,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa022_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa023_u.htm"
         ],
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=ViṃśV"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=304",
@@ -1034,6 +1026,14 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Viṃśatikākārikā.txt",
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Viṃśatikāvṛtti.txt"
             ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=ViṃśV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt"
+            ]
         }
     },
     "88341": {
@@ -1045,6 +1045,17 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/nysvbh1u.htm"
         ],
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=384"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Nyāyabhāṣya"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nyāyabhāṣya.txt"
+            ]
+        },
         "SARIT": {
             "web HTML": [
                 "https://sarit.indology.info/vatsyayana-nyayabhasya.xml"
@@ -1059,17 +1070,6 @@
             ],
             "GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vatsyayana_nyayabhasya.txt"
-            ]
-        },
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=384"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Nyāyabhāṣya"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nyāyabhāṣya.txt"
             ]
         }
     },
@@ -1265,30 +1265,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/7_ayur/yrasprpu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/brsphutu.htm"
         ],
-        "SARIT": {
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/bandimocana.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/cakradatta.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/caryamelapakapradipa.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/govindabhagavatpada-rasahrdayatantra.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/naradasmrti.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/pramanantarbhava.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikaparisista-1.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikasvavrttitika.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/sridharadasa-saduktikarnamrta.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/trivikrama-nalacampu.xml",
-                "https://github.com/sarit/SARIT-corpus/blob/master/yogapradipa.xml"
-            ],
-            "web HTML": [
-                "https://sarit.indology.info/cakradatta.xml",
-                "https://sarit.indology.info/caryamelapakapradipa.xml",
-                "https://sarit.indology.info/govindabhagavatpada-rasahrdayatantra.xml",
-                "https://sarit.indology.info/naradasmrti.xml",
-                "https://sarit.indology.info/pramanantarbhava.xml",
-                "https://sarit.indology.info/pramanavarttikaparisista-1.xml",
-                "https://sarit.indology.info/pramanavarttikasvavrttitika.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=11",
@@ -1582,13 +1558,30 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Ṭikanikayātrā.txt"
             ]
         },
-        "Muktabodha KSTS": [
-            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FLallesvarivakyaniHK.txt&miri_catalog_number=M00032",
-            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FPRASADAMANDANAM+-HK.txt&miri_catalog_number=M00170",
-            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FcarcastavaHK.txt&miri_catalog_number=M00307",
-            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmaliniivijayottaraHK.txt&miri_catalog_number=M00160",
-            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FparaatrisikaataatparyadiipikaaHK.txt&miri_catalog_number=M00043"
-        ],
+        "SARIT": {
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/bandimocana.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/cakradatta.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/caryamelapakapradipa.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/govindabhagavatpada-rasahrdayatantra.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/naradasmrti.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/pramanantarbhava.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikaparisista-1.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikasvavrttitika.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/sridharadasa-saduktikarnamrta.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/trivikrama-nalacampu.xml",
+                "https://github.com/sarit/SARIT-corpus/blob/master/yogapradipa.xml"
+            ],
+            "web HTML": [
+                "https://sarit.indology.info/cakradatta.xml",
+                "https://sarit.indology.info/caryamelapakapradipa.xml",
+                "https://sarit.indology.info/govindabhagavatpada-rasahrdayatantra.xml",
+                "https://sarit.indology.info/naradasmrti.xml",
+                "https://sarit.indology.info/pramanantarbhava.xml",
+                "https://sarit.indology.info/pramanavarttikaparisista-1.xml",
+                "https://sarit.indology.info/pramanavarttikasvavrttitika.xml"
+            ]
+        },
         "Sanskrit Library and TITUS": {
             "Skt Lib web HTML": [
                 "https://sanskritlibrary.org/catalogsText/niGaRwu.html",
@@ -1724,7 +1717,14 @@
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/dhs/katys/katys.htm",
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/katysbs/katys.htm"
             ]
-        }
+        },
+        "Muktabodha KSTS": [
+            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FLallesvarivakyaniHK.txt&miri_catalog_number=M00032",
+            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FPRASADAMANDANAM+-HK.txt&miri_catalog_number=M00170",
+            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FcarcastavaHK.txt&miri_catalog_number=M00307",
+            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmaliniivijayottaraHK.txt&miri_catalog_number=M00160",
+            "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FparaatrisikaataatparyadiipikaaHK.txt&miri_catalog_number=M00043"
+        ]
     },
     "88371": {
         "GRETIL": [
@@ -1740,6 +1740,17 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/patyogbu.htm"
         ],
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=381"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Yogasūtrabhāṣya"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Yogasūtrabhāṣya.txt"
+            ]
+        },
         "SARIT": {
             "web HTML": [
                 "https://sarit.indology.info/patanjalayogasastra.xml"
@@ -1754,17 +1765,6 @@
             ],
             "GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
-            ]
-        },
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=381"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Yogasūtrabhāṣya"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Yogasūtrabhāṣya.txt"
             ]
         }
     },
@@ -1858,14 +1858,6 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/canprasu.htm"
         ],
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=PPad"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrakirti_prasannapada.txt"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=299"
@@ -1875,6 +1867,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Prasannapadā.txt"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PPad"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrakirti_prasannapada.txt"
             ]
         }
     },
@@ -1900,14 +1900,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhknyayu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhnyabpu.htm"
         ],
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=NB"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_nyayabindu.txt"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=424"
@@ -1917,6 +1909,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nyāyabindu.txt"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NB"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_nyayabindu.txt"
             ]
         }
     },
@@ -3089,14 +3089,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/1_alam/dkavy2pu.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/1_alam/dkavy3_u.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/ratnasritika-dn.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/ratnasritika-dn.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=191"
@@ -3106,6 +3098,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Kāvyādarśa.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/ratnasritika-dn.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/ratnasritika-dn.xml"
             ]
         }
     },
@@ -3222,14 +3222,6 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/4_dharma/smrti/manu2p_u.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/manusmrti.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/manusmrti.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=91"
@@ -3239,6 +3231,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Manusmṛti.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/manusmrti.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/manusmrti.xml"
             ]
         },
         "Sanskrit Library and TITUS": {
@@ -3449,14 +3449,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/asvbc_1u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/asvbuc2u.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/asvaghosa-buddhacarita.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/asvaghosa-buddhacarita.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=376"
@@ -3466,6 +3458,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Buddhacarita.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/asvaghosa-buddhacarita.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/asvaghosa-buddhacarita.xml"
             ]
         },
         "Sanskrit Library and TITUS": [
@@ -3709,14 +3709,6 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/5_artha/kautil_u.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/kautalyarthasastra.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/kautalyarthasastra.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=354"
@@ -3726,6 +3718,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Arthaśāstra.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/kautalyarthasastra.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/kautalyarthasastra.xml"
             ]
         },
         "Sanskrit Library and TITUS": {
@@ -4029,14 +4029,6 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_17_u.htm",
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_18_u.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/mahabharata-devanagari.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/mahabharata-devanagari.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=154"
@@ -4046,6 +4038,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Mahābhārata.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/mahabharata-devanagari.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/mahabharata-devanagari.xml"
             ]
         },
         "Sanskrit Library and TITUS": {
@@ -4719,14 +4719,6 @@
         "GRETIL": [
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/vaisn/astavgpu.htm"
         ],
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/astavakragita.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/astavakragita.xml"
-            ]
-        },
         "DCS": {
             "web HTML": [
                 "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=420"
@@ -4736,6 +4728,14 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aṣṭāvakragīta.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/astavakragita.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/astavakragita.xml"
             ]
         }
     },
@@ -5156,716 +5156,6 @@
             ]
         }
     },
-    "41850": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/arunadatta-sarvangasundara.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/arunadatta-sarvangasundara.xml"
-            ]
-        }
-    },
-    "41945": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/astangasangraha.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/astangasangraha.xml"
-            ]
-        },
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=275"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Aṣṭāṅgasaṃgraha"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aṣṭāṅgasaṃgraha.txt"
-            ]
-        }
-    },
-    "42369": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/ayurvedasutram.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/ayurvedasutram.xml"
-            ]
-        }
-    },
-    "42434": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/bhattojidiksita-siddhantakaumudi.xml"
-        ]
-    },
-    "41807": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/bhelasamhita.xml"
-        ]
-    },
-    "42086": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/bhoja-rajamartanda.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/bhoja-rajamartanda.xml"
-            ]
-        },
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=184"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Rājamārtaṇḍa"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rājamārtaṇḍa.txt"
-            ]
-        }
-    },
-    "99168": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/cakrapanidatta-ayurvedadipika.xml"
-        ],
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=148"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Āyurvedadīpikā"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Āyurvedadīpikā.txt"
-            ]
-        }
-    },
-    "88895": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/dharmottaratippanaka.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/dharmottaratippanaka.xml"
-            ]
-        }
-    },
-    "88546": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/dvadasara_nayacakra.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/dvadasara_nayacakra.xml"
-            ]
-        }
-    },
-    "89116": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jitari-isvaravadimatapariksa.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-isvaravadimatapariksa.xml"
-            ]
-        }
-    },
-    "89106": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jitari-jatinirakrti.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-jatinirakrti.xml"
-            ]
-        }
-    },
-    "89107": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jitari-nairatmyasiddhi.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-nairatmyasiddhi.xml"
-            ]
-        }
-    },
-    "89114": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jitari-sarvajnasiddhi.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-sarvajnasiddhi.xml"
-            ]
-        }
-    },
-    "89113": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jitari-vedapramanyasiddhi.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-vedapramanyasiddhi.xml"
-            ]
-        }
-    },
-    "89200": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89208": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89197": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89195": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89206": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89196": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89198": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89199": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89209": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89193": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89203": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "89204": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
-            ]
-        }
-    },
-    "97710": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/madhusudanasarasvati-atmabodhaprakarana.xml"
-        ]
-    },
-    "89272": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/nyayakumudacandra.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/nyayakumudacandra.xml"
-            ]
-        }
-    },
-    "88926": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/nyayamanjari.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/nyayamanjari.xml"
-            ]
-        },
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=NM"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayamanjari.txt"
-            ]
-        }
-    },
-    "89879": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/nyayasudha.xml"
-        ]
-    },
-    "89038": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/nyayavarttikatatparyatika.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/nyayavarttikatatparyatika.xml"
-            ]
-        }
-    },
-    "89734": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/pramanamimamsa-and-vrtti.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/pramanamimamsa-and-vrtti.xml"
-            ]
-        }
-    },
-    "88859": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/pramanavarttikalankarabhasya.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikalankarabhasya.xml"
-            ]
-        },
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=PVA"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prajnakaragupta_pramanavartikalamkara.txt"
-            ]
-        }
-    },
-    "89013": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/pramanavarttikavrtti.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikavrtti.xml"
-            ]
-        },
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=PVV"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/manorathanandin_pramanavartikavrtti.txt"
-            ]
-        }
-    },
-    "109557": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/pravarasena-setubandha.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/pravarasena-setubandha.xml"
-            ]
-        }
-    },
-    "88407": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/pujyapada-sarvarthasiddhi.xml"
-        ]
-    },
-    "41946": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/rasarnava.xml"
-        ],
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=142"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Rasārṇava"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rasārṇava.txt"
-            ]
-        }
-    },
-    "96506": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/sarasvatikanthabharana-dn.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/sarasvatikanthabharana-dn.xml"
-            ]
-        }
-    },
-    "96500": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/sarasvatikanthabharana-dn.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/sarasvatikanthabharana-dn.xml"
-            ]
-        }
-    },
-    "103579": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/sarvadarsanasangraha.xml"
-        ],
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=145"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Sarvadarśanasaṃgraha"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Sarvadarśanasaṃgraha.txt"
-            ]
-        }
-    },
-    "41786": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/siddhayoga.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/siddhayoga.xml"
-            ]
-        }
-    },
-    "88827": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/siddhiviniscayatika.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/siddhiviniscayatika.xml"
-            ]
-        }
-    },
-    "42004": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/susrutasamhita.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/susrutasamhita.xml"
-            ]
-        },
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=5"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Suśrutasaṃhitā"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Suśrutasaṃhitā.txt"
-            ]
-        }
-    },
-    "88846": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/tattvasangrahapanjika.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/tattvasangrahapanjika.xml"
-            ]
-        }
-    },
-    "111006": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/trisuli-piyusalahari.xml"
-        ]
-    },
-    "41930": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/ugraditya-kalyanakaraka.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/ugraditya-kalyanakaraka.xml"
-            ]
-        }
-    },
-    "89042": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/vacaspati-tattvavaisaradi.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/vacaspati-tattvavaisaradi.xml"
-            ]
-        },
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=403"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Tattvavaiśāradī"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Tattvavaiśāradī.txt"
-            ]
-        }
-    },
-    "88739": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/vadanyayatika.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/vadanyayatika.xml"
-            ]
-        }
-    },
-    "89110": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/vadasthana.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/vadasthana.xml"
-            ]
-        }
-    },
-    "88615": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/vidhiviveka-and-nyayakanika.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/vidhiviveka-and-nyayakanika.xml"
-            ]
-        },
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=VidhV"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vidhiviveka.txt"
-            ]
-        }
-    },
-    "89041": {
-        "SARIT": {
-            "web HTML": [
-                "https://sarit.indology.info/vidhiviveka-and-nyayakanika.xml"
-            ],
-            "GitHub XML": [
-                "https://github.com/sarit/SARIT-corpus/blob/master/vidhiviveka-and-nyayakanika.xml"
-            ]
-        }
-    },
-    "95746": {
-        "SARIT": [
-            "https://github.com/sarit/SARIT-corpus/blob/master/vijnanesvara-mitaksara.xml"
-        ]
-    },
-    "89001": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=NBhū"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/bhasarvajna_nyayabhusana.txt"
-            ]
-        }
-    },
-    "88920": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=VSṬ"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrananda_vaisesikasutratika.txt"
-            ]
-        },
-        "DCS": {
-            "web HTML": [
-                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=371"
-            ],
-            "GitHub (1) CoNLL-U": [
-                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Vaiśeṣikasūtravṛtti"
-            ],
-            "GitHub (2) TXT": [
-                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Vaiśeṣikasūtravṛtti.txt"
-            ]
-        }
-    },
-    "88852": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=NBṬ"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmottara_nyayabindutika.txt"
-            ]
-        }
-    },
-    "88423": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=PSV"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_pramanasamuccayavrtti.txt"
-            ]
-        }
-    },
-    "92255": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=MukV"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gadadhara_muktivada.txt"
-            ]
-        }
-    },
-    "88925": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=NyKal"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayakalika.txt"
-            ]
-        }
-    },
-    "88610": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=BhāV"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_bhavanaviveka.txt"
-            ]
-        }
-    },
-    "88497": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=NPS"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkhya_yuktidipika.txt"
-            ]
-        }
-    },
-    "89119": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=NyKand"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sridhara_nyayakandali.txt"
-            ]
-        }
-    },
-    "89500": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=ŚVK"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sucaritamisra_slokavartikakasika.txt"
-            ]
-        }
-    },
-    "88990": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=SŚP"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vidyanandin_satyasasanapariksa.txt"
-            ]
-        }
-    },
-    "89021": {
-        "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
-                "https://www.vatayana.info/textView?text_abbrv=VyV"
-            ],
-            "GitHub": [
-                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vyomasiva_vyomavati.txt"
-            ]
-        }
-    },
     "41434": {
         "DCS": {
             "web HTML": [
@@ -5889,6 +5179,27 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Trikāṇḍaśeṣa.txt"
+            ]
+        }
+    },
+    "42086": {
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=184"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Rājamārtaṇḍa"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rājamārtaṇḍa.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/bhoja-rajamartanda.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/bhoja-rajamartanda.xml"
             ]
         }
     },
@@ -5921,6 +5232,22 @@
             "https://sanskritlibrary.org/catalogsText/nirukta.html"
         ]
     },
+    "99168": {
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=148"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Āyurvedadīpikā"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Āyurvedadīpikā.txt"
+            ]
+        },
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/cakrapanidatta-ayurvedadipika.xml"
+        ]
+    },
     "42384": {
         "DCS": {
             "web HTML": [
@@ -5934,6 +5261,27 @@
             ]
         }
     },
+    "41945": {
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=275"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Aṣṭāṅgasaṃgraha"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Aṣṭāṅgasaṃgraha.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/astangasangraha.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/astangasangraha.xml"
+            ]
+        }
+    },
     "88555": {
         "DCS": {
             "web HTML": [
@@ -5944,6 +5292,27 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Sāṃkhyakārikābhāṣya.txt"
+            ]
+        }
+    },
+    "88920": {
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=371"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Vaiśeṣikasūtravṛtti"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Vaiśeṣikasūtravṛtti.txt"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VSṬ"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrananda_vaisesikasutratika.txt"
             ]
         }
     },
@@ -5970,6 +5339,27 @@
             ],
             "GitHub (2) TXT": [
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Sāṃkhyatattvakaumudī.txt"
+            ]
+        }
+    },
+    "89042": {
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=403"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Tattvavaiśāradī"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Tattvavaiśāradī.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/vacaspati-tattvavaisaradi.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/vacaspati-tattvavaisaradi.xml"
             ]
         }
     },
@@ -6086,6 +5476,43 @@
             "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FvatulanathasutraHK.txt&miri_catalog_number=M00099"
         ]
     },
+    "42004": {
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=5"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Suśrutasaṃhitā"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Suśrutasaṃhitā.txt"
+            ]
+        },
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/susrutasamhita.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/susrutasamhita.xml"
+            ]
+        }
+    },
+    "103579": {
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=145"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Sarvadarśanasaṃgraha"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Sarvadarśanasaṃgraha.txt"
+            ]
+        },
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/sarvadarsanasangraha.xml"
+        ]
+    },
     "108791": {
         "DCS": {
             "web HTML": [
@@ -6189,6 +5616,22 @@
                 "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rasataraṅgiṇī.txt"
             ]
         }
+    },
+    "41946": {
+        "DCS": {
+            "web HTML": [
+                "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=142"
+            ],
+            "GitHub (1) CoNLL-U": [
+                "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Rasārṇava"
+            ],
+            "GitHub (2) TXT": [
+                "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Rasārṇava.txt"
+            ]
+        },
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/rasarnava.xml"
+        ]
     },
     "42257": {
         "DCS": {
@@ -6523,6 +5966,663 @@
             ]
         }
     },
+    "41850": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/arunadatta-sarvangasundara.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/arunadatta-sarvangasundara.xml"
+            ]
+        }
+    },
+    "42369": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/ayurvedasutram.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/ayurvedasutram.xml"
+            ]
+        }
+    },
+    "42434": {
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/bhattojidiksita-siddhantakaumudi.xml"
+        ]
+    },
+    "41807": {
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/bhelasamhita.xml"
+        ]
+    },
+    "88895": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/dharmottaratippanaka.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/dharmottaratippanaka.xml"
+            ]
+        }
+    },
+    "88546": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/dvadasara_nayacakra.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/dvadasara_nayacakra.xml"
+            ]
+        }
+    },
+    "89116": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jitari-isvaravadimatapariksa.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-isvaravadimatapariksa.xml"
+            ]
+        }
+    },
+    "89106": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jitari-jatinirakrti.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-jatinirakrti.xml"
+            ]
+        }
+    },
+    "89107": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jitari-nairatmyasiddhi.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-nairatmyasiddhi.xml"
+            ]
+        }
+    },
+    "89114": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jitari-sarvajnasiddhi.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-sarvajnasiddhi.xml"
+            ]
+        }
+    },
+    "89113": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jitari-vedapramanyasiddhi.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jitari-vedapramanyasiddhi.xml"
+            ]
+        }
+    },
+    "89200": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89208": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89197": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89195": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89206": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89196": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89198": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89199": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89209": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89193": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89203": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "89204": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/jnanasrimitra-nibandhavali.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/jnanasrimitra-nibandhavali.xml"
+            ]
+        }
+    },
+    "97710": {
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/madhusudanasarasvati-atmabodhaprakarana.xml"
+        ]
+    },
+    "89272": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/nyayakumudacandra.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/nyayakumudacandra.xml"
+            ]
+        }
+    },
+    "88926": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/nyayamanjari.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/nyayamanjari.xml"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NM"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayamanjari.txt"
+            ]
+        }
+    },
+    "89879": {
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/nyayasudha.xml"
+        ]
+    },
+    "89038": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/nyayavarttikatatparyatika.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/nyayavarttikatatparyatika.xml"
+            ]
+        }
+    },
+    "89734": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/pramanamimamsa-and-vrtti.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/pramanamimamsa-and-vrtti.xml"
+            ]
+        }
+    },
+    "88859": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/pramanavarttikalankarabhasya.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikalankarabhasya.xml"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PVA"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prajnakaragupta_pramanavartikalamkara.txt"
+            ]
+        }
+    },
+    "89013": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/pramanavarttikavrtti.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/pramanavarttikavrtti.xml"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PVV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/manorathanandin_pramanavartikavrtti.txt"
+            ]
+        }
+    },
+    "109557": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/pravarasena-setubandha.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/pravarasena-setubandha.xml"
+            ]
+        }
+    },
+    "88407": {
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/pujyapada-sarvarthasiddhi.xml"
+        ]
+    },
+    "96506": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/sarasvatikanthabharana-dn.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/sarasvatikanthabharana-dn.xml"
+            ]
+        }
+    },
+    "96500": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/sarasvatikanthabharana-dn.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/sarasvatikanthabharana-dn.xml"
+            ]
+        }
+    },
+    "41786": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/siddhayoga.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/siddhayoga.xml"
+            ]
+        }
+    },
+    "88827": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/siddhiviniscayatika.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/siddhiviniscayatika.xml"
+            ]
+        }
+    },
+    "88846": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/tattvasangrahapanjika.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/tattvasangrahapanjika.xml"
+            ]
+        }
+    },
+    "111006": {
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/trisuli-piyusalahari.xml"
+        ]
+    },
+    "41930": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/ugraditya-kalyanakaraka.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/ugraditya-kalyanakaraka.xml"
+            ]
+        }
+    },
+    "88739": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/vadanyayatika.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/vadanyayatika.xml"
+            ]
+        }
+    },
+    "89110": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/vadasthana.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/vadasthana.xml"
+            ]
+        }
+    },
+    "88615": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/vidhiviveka-and-nyayakanika.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/vidhiviveka-and-nyayakanika.xml"
+            ]
+        },
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VidhV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vidhiviveka.txt"
+            ]
+        }
+    },
+    "89041": {
+        "SARIT": {
+            "web HTML": [
+                "https://sarit.indology.info/vidhiviveka-and-nyayakanika.xml"
+            ],
+            "GitHub XML": [
+                "https://github.com/sarit/SARIT-corpus/blob/master/vidhiviveka-and-nyayakanika.xml"
+            ]
+        }
+    },
+    "95746": {
+        "SARIT": [
+            "https://github.com/sarit/SARIT-corpus/blob/master/vijnanesvara-mitaksara.xml"
+        ]
+    },
+    "41542": {
+        "Sanskrit Library and TITUS": [
+            "https://sanskritlibrary.org/catalogsText/vArttika.html"
+        ]
+    },
+    "41680": {
+        "Sanskrit Library and TITUS": [
+            "https://sanskritlibrary.org/catalogsText/fgveda_prAtiSAKya.html"
+        ]
+    },
+    "88181": {
+        "Sanskrit Library and TITUS": [
+            "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/bhaisajy/bhais.htm"
+        ]
+    },
+    "88308": {
+        "Sanskrit Library and TITUS": [
+            "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/jskt/tattvs/tattv.htm"
+        ]
+    },
+    "95832": {
+        "Sanskrit Library and TITUS": [
+            "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/cps/cps.htm"
+        ]
+    },
+    "99161": {
+        "Sanskrit Library and TITUS": [
+            "https://sanskritlibrary.org/catalogsText/paYcatantra.html"
+        ]
+    },
+    "96080": {
+        "Sanskrit Library and TITUS": {
+            "Skt Lib web HTML": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/paramaup.html"
+            ],
+            "TITUS web HTML": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
+            ]
+        }
+    },
+    "95964": {
+        "Sanskrit Library and TITUS": {
+            "Skt Lib web HTML": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/brahmaup.html"
+            ],
+            "TITUS web HTML": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
+            ]
+        }
+    },
+    "95943": {
+        "Sanskrit Library and TITUS": {
+            "Skt Lib web HTML": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/atmaup.html"
+            ],
+            "TITUS web HTML": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
+            ]
+        }
+    },
+    "96024": {
+        "Sanskrit Library and TITUS": {
+            "Skt Lib web HTML": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/kenup.html"
+            ],
+            "TITUS web HTML": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/kenup/kenup.htm"
+            ]
+        }
+    },
+    "96158": {
+        "Sanskrit Library and TITUS": {
+            "Skt Lib web HTML": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/tejabup.html"
+            ],
+            "TITUS web HTML": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
+            ]
+        }
+    },
+    "95932": {
+        "Sanskrit Library and TITUS": {
+            "Skt Lib web HTML": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/aruneyup.html"
+            ],
+            "TITUS web HTML": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
+            ]
+        }
+    },
+    "112891": {
+        "Sanskrit Library and TITUS": {
+            "Skt Lib web HTML": [
+                "https://sanskritlibrary.org/catalogsText/titus/vedic/svk.html"
+            ],
+            "TITUS web HTML": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/svk/svk.htm"
+            ]
+        }
+    },
+    "89001": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NBhū"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/bhasarvajna_nyayabhusana.txt"
+            ]
+        }
+    },
+    "88852": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NBṬ"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmottara_nyayabindutika.txt"
+            ]
+        }
+    },
+    "88423": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=PSV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_pramanasamuccayavrtti.txt"
+            ]
+        }
+    },
+    "92255": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=MukV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gadadhara_muktivada.txt"
+            ]
+        }
+    },
+    "88925": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NyKal"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayakalika.txt"
+            ]
+        }
+    },
+    "88610": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=BhāV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_bhavanaviveka.txt"
+            ]
+        }
+    },
+    "88497": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NPS"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkhya_yuktidipika.txt"
+            ]
+        }
+    },
+    "89119": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=NyKand"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sridhara_nyayakandali.txt"
+            ]
+        }
+    },
+    "89500": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=ŚVK"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sucaritamisra_slokavartikakasika.txt"
+            ]
+        }
+    },
+    "88990": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=SŚP"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vidyanandin_satyasasanapariksa.txt"
+            ]
+        }
+    },
+    "89021": {
+        "Vātāyana and Pramāṇa NLP": {
+            "web HTML": [
+                "https://www.vatayana.info/textView?text_abbrv=VyV"
+            ],
+            "GitHub": [
+                "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vyomasiva_vyomavati.txt"
+            ]
+        }
+    },
     "89256": {
         "Muktabodha KSTS": [
             "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FsivasuutravimarsiniiHK.txt&miri_catalog_number=M00349"
@@ -6655,105 +6755,5 @@
         "Muktabodha KSTS": [
             "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2Fnetratantra_HK.txt&miri_catalog_number=M00038"
         ]
-    },
-    "41542": {
-        "Sanskrit Library and TITUS": [
-            "https://sanskritlibrary.org/catalogsText/vArttika.html"
-        ]
-    },
-    "41680": {
-        "Sanskrit Library and TITUS": [
-            "https://sanskritlibrary.org/catalogsText/fgveda_prAtiSAKya.html"
-        ]
-    },
-    "88181": {
-        "Sanskrit Library and TITUS": [
-            "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/bhaisajy/bhais.htm"
-        ]
-    },
-    "88308": {
-        "Sanskrit Library and TITUS": [
-            "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/jskt/tattvs/tattv.htm"
-        ]
-    },
-    "95832": {
-        "Sanskrit Library and TITUS": [
-            "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/cps/cps.htm"
-        ]
-    },
-    "99161": {
-        "Sanskrit Library and TITUS": [
-            "https://sanskritlibrary.org/catalogsText/paYcatantra.html"
-        ]
-    },
-    "96080": {
-        "Sanskrit Library and TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/paramaup.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
-            ]
-        }
-    },
-    "95964": {
-        "Sanskrit Library and TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/brahmaup.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
-            ]
-        }
-    },
-    "95943": {
-        "Sanskrit Library and TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/atmaup.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
-            ]
-        }
-    },
-    "96024": {
-        "Sanskrit Library and TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/kenup.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/kenup/kenup.htm"
-            ]
-        }
-    },
-    "96158": {
-        "Sanskrit Library and TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/tejabup.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
-            ]
-        }
-    },
-    "95932": {
-        "Sanskrit Library and TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/aruneyup.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/postved/upanisad/upanisad/upani.htm"
-            ]
-        }
-    },
-    "112891": {
-        "Sanskrit Library and TITUS": {
-            "Skt Lib web HTML": [
-                "https://sanskritlibrary.org/catalogsText/titus/vedic/svk.html"
-            ],
-            "TITUS web HTML": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/svk/svk.htm"
-            ]
-        }
     }
 }

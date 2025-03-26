@@ -66,10 +66,17 @@ def summarize_etext_links(etext_links):
             else:
                 print(f"Unexpected type for {collection}: {type(links)}")
 
-    return {
+    # Combine and sort by number of works (descending)
+    combined_summary = {
         collection: {
             "works": len(works_per_collection[collection]),
             "etexts": links_per_collection[collection]
         }
         for collection in works_per_collection
     }
+
+    sorted_summary = dict(
+        sorted(combined_summary.items(), key=lambda item: item[1]["works"], reverse=True)
+    )
+
+    return sorted_summary
