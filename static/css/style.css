@@ -503,26 +503,38 @@ button:hover { background: #a93226; }
 #fancy-table th,
 #fancy-table td {
   padding: 10px 15px;
-  text-align: left;
   border: 1px solid #5a0b73;
-  color: #ffffff; /* White text for consistency */
+  color: #ffffff;
 }
 
+/* Header row */
 #fancy-table th {
   background-color: #5a0b73;
   font-weight: bold;
   text-align: center;
 }
 
+/* Body rows */
+#fancy-table tbody td {
+  text-align: center;
+}
+
 #fancy-table tbody tr:nth-child(even) {
-  background-color: #4a175c; /* Alternating row color for readability */
+  background-color: #4a175c;
 }
 
-#fancy-table td {
-  text-align: center; /* Center numbers in Count and Total Entities */
-}
-
-#fancy-table tbody tr:last-child {
+/* Footer row using <tfoot> */
+#fancy-table tfoot {
+  background-color: #6c2a7b;
   font-weight: bold;
-  background-color: #6c2a7b; /* Highlight the total row */
+}
+
+#fancy-table tfoot td {
+  text-align: center;
+}
+
+/* Optional: fallback if using tbody .summary-row instead of <tfoot> */
+#fancy-table tbody .summary-row {
+  font-weight: bold;
+  background-color: #6c2a7b;
 }
