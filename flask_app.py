@@ -1,3 +1,4 @@
+import re
 from collections import defaultdict
 from typing import Dict, List
 
@@ -15,6 +16,8 @@ from utils.utils import (
 from utils.load import load_entities, load_link_data
 
 ENTITIES_BY_ID: Dict[str, Entity] = load_entities()
+VALID_WORK_IDS: List[str] = [k for k in ENTITIES_BY_ID if ENTITIES_BY_ID[k].type == 'work']
+VALID_AUTHOR_IDS: List[str] = [k for k in ENTITIES_BY_ID if ENTITIES_BY_ID[k].type == 'author']
 ETEXT_LINKS = load_link_data()
 
 ETEXT_DATA_SUMMARY = summarize_etext_links(ETEXT_LINKS)
@@ -73,13 +76,14 @@ for key in ['works', 'authors', 'all']:
 # --- entities namespace routes ---
 
 def validate_comma_separated_list_input(string_input):
-    if string_input[0] == '[':
+    if not string_input or not (stripped_string_input := string_input.strip()):
         return {
-            "error": "List input should be comma-separated string. Do not use square brackets."
+            "error": "List input must be non-empty."
         }
-    elif ' ' in string_input:
+    if not bool(re.fullmatch(r'[\d,]*', stripped_string_input)):
         return {
-            "error": "Input should not contain whitespace."
+            "error": "List input should not contain any characters besides numbers and comma "
+                     "(no whitespace, quotation marks, etc.)"
         }
     else:
         return None
@@ -116,26 +120,27 @@ class Labels(Resource):
         Fetch labels for a list of node IDs.
         Example: /api/entities/labels?ids=89000,12345
         """
-        try:
-            ids_param = request.args.get('ids')  # Get all IDs as a list
+        ids_param = request.args.get('ids')  # Get all IDs as a list
 
-            err = validate_comma_separated_list_input(ids_param)
-            if err is not None:
-                return err, 400
+        # check that input is non-empty and contains correct characters
+        err = validate_comma_separated_list_input(ids_param)
+        if err is not None:
+            return err, 400
 
-            ids = [id.strip() for id in ids_param.split(',')] if ids_param else []
-            if not ids:
-                return {"error": "No IDs provided"}, 400
+        ids = ids_param.strip().split(',')
+        if not ids:
+            return {"error": "No IDs provided"}, 400
 
-            label_data = [
-                {"id": node_id, "label": ENTITIES_BY_ID[node_id].name}
-                for node_id in ids if node_id in ENTITIES_BY_ID
-            ]
+        valid_entity_ids = [id for id in ids if id in ENTITIES_BY_ID]
+        if not valid_entity_ids:
+            return {"error": "No valid entity IDs provided"}, 400
 
-            return jsonify(label_data)
-        except Exception as e:
-            app.logger.error('Error: %s', str(e))
-            return {"error": str(e)}, 500
+        label_data = [
+            {"id": node_id, "label": ENTITIES_BY_ID[node_id].name}
+            for node_id in ids
+        ]
+
+        return jsonify(label_data)
 
 
 # register entities namespace
@@ -426,15 +431,20 @@ class ByWork(Resource):
         """
         ids_param = request.args.get('ids')  # Get all IDs as a list
 
+        # check that input is non-empty and contains correct characters
         err = validate_comma_separated_list_input(ids_param)
         if err is not None:
             return err, 400
 
-        work_ids = [id.strip() for id in ids_param.split(',')] if ids_param else []
-        if not work_ids:
+        ids = ids_param.strip().split(',')
+        if not ids:
             return {"error": "No IDs provided"}, 400
 
-        etext_link_data = {wid: ETEXT_LINKS[wid] for wid in work_ids if wid in ETEXT_LINKS}
+        valid_work_ids = [id for id in ids if id in VALID_WORK_IDS]
+        if not valid_work_ids:
+            return {"error": "No valid work IDs provided"}, 400
+
+        etext_link_data = {wid: ETEXT_LINKS[wid] for wid in valid_work_ids if wid in ETEXT_LINKS}
 
         return jsonify(etext_link_data)
 
