@@ -14,21 +14,21 @@
       This export had 67,500 rows (= entities) and 163 columns (= fields).
       Only a subset of this is used:
       <ul>
-        <li>9 fields (columns): Content type, ID, Title, Author (person IDs), Authors (person), Attributed author (person ID), Attributed author (person), Commentary on (work ID), Commentary on (work)</li>
+        <li>14 fields (columns): Content type, ID, Title, Aka, Social identifiers, Author (person IDs), Authors (person), Attributed author (person ID), Attributed author (person), Discipline, Commentary on (work ID), Commentary on (work), Highest Year, Lowest Year</li>
         <li>
-          1 out of 9 Content types (= row types): Work
+          2 out of 9 Content types (= row types): Person, Work
           <ul>
-            <li>This reduces the number of rows to 12,713</li>
-            <li>Some minor cleaning reduced this number further to 12,701</li>
-            <li>Persons were then derived from Works (i.e., no isolated Authors without Works were used)</li>
+            <li>This reduces the number of rows to 17,740</li>
+            <li>Some minor cleaning reduced this number further to 17,721</li>
+            <li>Persons without associated Works were then removed</li>
           </ul>
         </li>
       </ul>
     </p>
     <p>Below are some summary statistics on community sizes for more context:</p>
     <ul>
-      <li><strong>Total entities:</strong> 16,498 (12,701 works, 3,797 authors)</li>
-      <li><strong>Total relationships:</strong> 13,685 (9,287 author → work, 4,398 work → work)</li>
+      <li><strong>Total entities:</strong> 16,497 (12,700 works, 3,797 authors)</li>
+      <li><strong>Total relationships:</strong> 13,685 (9,286 author → work, 4,398 work → work)</li>
     </ul>
     <table id="fancy-table">
       <thead>
@@ -67,14 +67,14 @@
         <tr>
           <td><a href="{{ url_for('data', filepath='analysis_results/component_info/extra_large_components.txt') }}" target="_blank">Central community</a></td>
           <td>1</td>
-          <td>8,906</td>
+          <td>8,905</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <th>Total</th>
           <th>4,729</th>
-          <th>16,498</th>
+          <th>16,497</th>
         </tr>
       </tfoot>
     </table>
