@@ -16,11 +16,9 @@ from utils.load import load_entities, load_link_data
 
 ENTITIES_BY_ID: Dict[str, Entity] = load_entities()
 ETEXT_LINKS = load_link_data()
-VALID_COLLECTIONS = set()
-for work_data in ETEXT_LINKS.values():
-    VALID_COLLECTIONS.update(work_data.keys())
 
 ETEXT_DATA_SUMMARY = summarize_etext_links(ETEXT_LINKS)
+VALID_COLLECTIONS = list(ETEXT_DATA_SUMMARY.keys())
 
 APP_VERSION = find_app_version()
 PANDIT_DATA_VERSION = find_pandit_data_version()
@@ -291,7 +289,7 @@ class ByCollection(Resource):
     @api.doc(
         description="Fetch data for all works associated with a given collection.",
         params={
-            "collection": "The name of the collection (e.g., GRETIL, SARIT)",
+            "collection": f"The name of the collection ({VALID_COLLECTIONS})",
             "include_other_collections": "If true, also returns information about other collections (default: false)"
         },
         responses={
@@ -325,7 +323,7 @@ class UniqueToCollection(Resource):
     @api.doc(
         description="Fetch works that belong exclusively to a specified collection.",
         params={
-            "collection": "The name of the collection (e.g., GRETIL, SARIT)"
+            "collection": f"The name of the collection ({VALID_COLLECTIONS})",
         },
         responses={
             200: "Unique works returned successfully",
@@ -356,7 +354,7 @@ class UniqueToCollection(Resource):
 @seti_ns.route("/by_collection/overlap")
 class OverlapBetweenCollections(Resource):
     @api.doc(
-        description="Determine overlap and unique works between two collections.",
+        description=f"Determine overlap and unique works between any two collections ({VALID_COLLECTIONS}).",
         params={
             "collection1": "The first collection name (e.g., GRETIL)",
             "collection2": "The second collection name (e.g., SARIT)"
