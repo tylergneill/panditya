@@ -1,15 +1,20 @@
 from collections import defaultdict
-from typing import List
+from typing import Dict, List
 
 from flask import Flask, render_template, Blueprint, jsonify, request, send_from_directory
 from flask_restx import Api, Resource, fields
 
+from data_models import Entity
 from grapher import construct_subgraph, annotate_graph
-from utils.utils import find_app_version, find_pandit_data_version, find_etext_data_version, \
-    load_config_dict_from_json_file, summarize_etext_links
+from utils.utils import (
+    custom_sort_key,
+    find_app_version, find_pandit_data_version, find_etext_data_version,
+    load_config_dict_from_json_file,
+    summarize_etext_links,
+)
 from utils.load import load_entities, load_link_data
 
-ENTITIES_BY_ID = load_entities()
+ENTITIES_BY_ID: Dict[str, Entity] = load_entities()
 ETEXT_LINKS = load_link_data()
 VALID_COLLECTIONS = set()
 for work_data in ETEXT_LINKS.values():
@@ -38,15 +43,36 @@ entities_ns = api.namespace('entities', description='Entity operations')
 graph_ns = api.namespace('graph', description='Graph operations')
 seti_ns = api.namespace('seti', description='SETI operations')
 
-# --- entities namespace routes ---
 
-# --- Preprocess EntitiesByType data ---
+def get_date_info(entity: Entity):
+    lowest_year, highest_year = entity.lowest_year, entity.highest_year
+    caveat_str = ""
+    if entity.type == 'work' and not entity.lowest_year and entity.author_lowest_year:
+        lowest_year, highest_year = entity.author_lowest_year, entity.author_highest_year
+        caveat_str = " (author)"
+    if not lowest_year:
+        return ""
+    date_str = f"{lowest_year}" if lowest_year == highest_year else f"{lowest_year}–{highest_year}"
+    return date_str + caveat_str
+
+# --- Preprocess dropdown data ---
 entity_dropdown_options = defaultdict(list)
 for entity in ENTITIES_BY_ID.values():
-    option = {"id": entity.id, "label": f"{entity.name} ({entity.id})"}
+    entity_label = f"{entity.name} ({entity.id})"
+    date_info = get_date_info(entity)
+    if date_info:
+        entity_label += f" [{date_info}]"
+    if entity.aka:
+        entity_label += f" [{entity.aka}]"
+    option = {"id": entity.id, "label": entity_label}
     entity_dropdown_options['all'].append(option)
     entity_dropdown_options[entity.type+'s'].append(option)
 
+for key in ['works', 'authors', 'all']:
+    entity_dropdown_options[key] = sorted(entity_dropdown_options[key], key=lambda x: custom_sort_key(x['label']))
+
+
+# --- entities namespace routes ---
 
 def validate_comma_separated_list_input(string_input):
     if string_input[0] == '[':
@@ -181,6 +207,9 @@ class Subgraph(Resource):
                     "id": node,
                     "label": ENTITIES_BY_ID[node].name,
                     "type": ENTITIES_BY_ID[node].type,
+                    "aka": ENTITIES_BY_ID[node].aka,
+                    "dates": get_date_info(ENTITIES_BY_ID[node]),
+                    "discipline": ENTITIES_BY_ID[node].discipline if ENTITIES_BY_ID[node].type == 'work' else None,
                     "is_central": annotated_subgraph.nodes[node].get('is_central', False),
                     "is_excluded": annotated_subgraph.nodes[node].get('is_excluded', False),
                     "etext_links": annotated_subgraph.nodes[node].get('etext_links', False),

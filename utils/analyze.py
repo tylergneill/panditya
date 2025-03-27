@@ -18,7 +18,7 @@ SIZE_CATEGORIES = {
     "small": (5, 9),
     "medium": (10, 25),
     "large": (25, 100),
-    "extra_large": (101, 10,000),
+    "extra_large": (101, 10_000),
 }
 
 DATA_ANALYSIS_RESULTS_DIR = "data/analysis_results"
@@ -488,7 +488,11 @@ if __name__ == "__main__":
     entities_by_id = load_entities()
 
     # Create full graph (center on all entities, use large number of hops)
-    G = construct_subgraph(entities_by_id, list(entities_by_id.keys()), hops=25)
+    G = construct_subgraph(
+        subgraph_center=list(entities_by_id.keys()),
+        entities_by_id=entities_by_id,
+        hops=25,
+    )
 
     # Compute component metrics
     metrics = {}

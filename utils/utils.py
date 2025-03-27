@@ -80,3 +80,25 @@ def summarize_etext_links(etext_links):
     )
 
     return sorted_summary
+
+
+sanskrit_alphabet = [
+    'a', 'ā', 'i', 'ī', 'u', 'ū', 'ṛ', 'ṝ', 'ḷ', 'ḹ', 'e', 'ai', 'o', 'au',
+    'k', 'kh', 'g', 'gh', 'ṅ',
+    'c', 'ch', 'j', 'jh', 'ñ',
+    'ṭ', 'ṭh', 'ḍ', 'ḍh', 'ṇ',
+    't', 'th', 'd', 'dh', 'n',
+    'p', 'ph', 'b', 'bh', 'm',
+    'y', 'r', 'l', 'v',
+    'ś', 'ṣ', 's',
+    'h',
+    'ṃ', 'ḥ'
+]
+
+# Create a mapping of each symbol to its position
+custom_order = {char: idx for idx, char in enumerate(sanskrit_alphabet)}
+
+def custom_sort_key(word):
+    word = word.lower()  # Normalize case to lowercase
+    return [custom_order.get(word[i:i+2], custom_order.get(word[i], len(sanskrit_alphabet)))
+            for i in range(len(word))]

@@ -2777,7 +2777,7 @@ Component 694:
   ----
 
 Component 695:
-  Dharmadhātugarbhavivaraṇa (95837) (work)
+  -Dharmadhātugarbhavivaraṇa (95837) (work)
   ----
 
 Component 696:
@@ -10569,7 +10569,7 @@ Component 2642:
   ----
 
 Component 2643:
-  "The Spitzer Manuscript" (88179) (work)
+  The Spitzer Manuscript (88179) (work)
   ----
 
 Component 2644:

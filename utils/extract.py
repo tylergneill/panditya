@@ -18,21 +18,27 @@ columns_to_keep = [
     "Content type",
     "ID",
     "Title",
+    "Aka",
+    "Social identifiers",
     "Author (person IDs)",
     "Authors (person)",
     "Attributed author (person ID)",
     "Attributed author (person)",
+    "Discipline",
     "Commentary on (work ID)",
-    "Commentary on (work)"
+    "Commentary on (work)",
+    "Highest Year",
+    "Lowest Year",
 ]
 
 # Filter the DataFrame to keep only the specified columns
 df_filtered = df[columns_to_keep]
 
-# Further filter: Only keep rows where "Content type" is "Work"
-df_filtered = df_filtered[df_filtered["Content type"] == "Work"]
+# Further filter: Only keep rows where "Content type" is "Work" or "Person"
+df_filtered = df_filtered[df_filtered["Content type"].isin(["Work", "Person"])]
 
 # Combine "Attributed author (person ID)" into "Author (person IDs)"
+# TODO: eventually maintain this distinction
 df_filtered["Author (person IDs)"] = df_filtered["Author (person IDs)"].fillna("").astype(str) + "; " + df_filtered["Attributed author (person ID)"].fillna("").astype(str)
 df_filtered["Authors (person)"] = df_filtered["Authors (person)"].fillna("").astype(str) + "; " + df_filtered["Attributed author (person)"].fillna("").astype(str)
 
@@ -40,11 +46,12 @@ df_filtered["Authors (person)"] = df_filtered["Authors (person)"].fillna("").ast
 df_filtered["Author (person IDs)"] = df_filtered["Author (person IDs)"].str.replace(r";\s*;", ";", regex=True).str.strip("; ")
 df_filtered["Authors (person)"] = df_filtered["Authors (person)"].str.replace(r";\s*;", ";", regex=True).str.strip("; ")
 
-# Drop the "Content type" and two "Attributed author" columns
-df_filtered = df_filtered.drop(columns=["Content type", "Attributed author (person ID)", "Attributed author (person)"], errors="ignore")
+# Drop the two "Attributed author" columns
+df_filtered = df_filtered.drop(columns=["Attributed author (person ID)", "Attributed author (person)"], errors="ignore")
 
 # Rename columns
 df_filtered.rename(columns={
+    "Title": "Name",
     "Author (person IDs)": "Authors (IDs)",
     "Authors (person)": "Authors (names)",
     "Commentary on (work ID)": "Base texts (IDs)",

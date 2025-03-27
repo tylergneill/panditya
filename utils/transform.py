@@ -2,7 +2,9 @@ from collections import defaultdict
 import csv
 import json
 import os
+from collections import Counter
 import re
+from typing import Optional
 
 import pandas as pd
 
@@ -19,7 +21,26 @@ ETEXT_DATA_VERSION = find_etext_data_version()
 @time_execution
 def create_entities():
     """
-    Transform reduced CSV data to data.models.Entity objects stored in JSON.
+    Transform CSV data (containing both Works and Persons) into data_models Entity objects,
+    stored in JSON.
+
+    Expected CSV columns include:
+      - "Content type"                ("Work" or "Person", drop after use)
+      - "ID"
+      - "Name"
+      - "Aka"
+      - "Social identifiers"          (Persons only)
+      - "Authors (IDs)"               (Works only)
+      - "Authors (names)"             (Works only)
+      - "Discipline"                  (Works only)
+      - "Base texts (work ID)"        (Works only)
+      - "Base texts (work)"           (Works only)
+      - "Highest Year"
+      - "Lowest Year"
+
+    For Persons (Authors), we later compute a "Disciplines" attribute that aggregates,
+    by relative frequency (including counts), the disciplines of their associated works.
+    Only Persons with at least one associated work are kept.
     """
 
     input_filename = f"{PANDIT_DATA_VERSION}-works-cleaned.csv"
@@ -27,50 +48,121 @@ def create_entities():
 
     entities_by_id = {}
 
+    def split_field(field):
+        return [item.strip() for item in field.split(",") if item.strip()]
+
     with open(input_csv_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
-            work_id = row["ID"]
-            work_name = row["Title"]
-            author_ids = [id.strip() for id in (row["Authors (IDs)"] or "").split(",") if id.strip()]
-            author_names = [name.strip() for name in (row["Authors (names)"] or "").split(",") if name.strip()]
-            base_text_ids = [id.strip() for id in (row["Base texts (IDs)"] or "").split(",") if id.strip()]
-            base_text_names = [name.strip() for name in (row["Base texts (names)"] or "").split(",") if name.strip()]
+            # Get common fields
+            content_type = row.get("Content type", "").strip().lower()
+            entity_id = row["ID"].strip()
+            name = row["Name"].strip()
+            aka = row.get("Aka", "").strip()
+            highest_year_str = row.get("Highest Year", None).strip()
+            lowest_year_str = row.get("Lowest Year", None).strip()
+            highest_year, lowest_year = (int(highest_year_str), int(lowest_year_str)) if highest_year_str else (None, None)
 
-            # Handle Work entity
-            if work_id in entities_by_id:
-                W = entities_by_id[work_id]
+            if content_type == "work":
+                discipline = row.get("Discipline", "").strip()
+
+                # Update or create
+                if entity_id in entities_by_id:
+                    W = entities_by_id[entity_id]
+                else:
+                    W = Work(entity_id)
+                    entities_by_id[entity_id] = W
+
+                W.name = name
+                W.aka = aka
+                W.discipline = discipline
+                W.highest_year: Optional[int] = highest_year
+                W.lowest_year: Optional[int] = lowest_year
+
+                # Process author information from work row.
+                author_ids = split_field(row.get("Authors (IDs)", ""))
+                author_names = split_field(row.get("Authors (names)", ""))
+
+                for aid, aname in zip(author_ids, author_names):
+
+                    # Update or create
+                    if aid in entities_by_id:
+                        A = entities_by_id[aid]
+                    else:
+                        A = Author(aid)
+                        entities_by_id[aid] = A
+
+                    # Associate work with author and vice versa
+                    A.name = aname
+                    if W.id not in A.work_ids:
+                        A.work_ids.append(W.id)
+                    if A.id not in W.author_ids:
+                        W.author_ids.append(A.id)
+
+                # Process base-text and commentary relations
+                base_text_ids = split_field(row.get("Base texts (IDs)", ""))
+                base_text_names = split_field(row.get("Base texts (names)", ""))
+                for base_text_id, base_text_name in zip(base_text_ids, base_text_names):
+
+                    # Update or create
+                    if base_text_id in entities_by_id:
+                        BT = entities_by_id[base_text_id]
+                    else:
+                        BT = Work(base_text_id)
+                        entities_by_id[base_text_id] = BT
+
+                    # Associate base text with commentary and vice versa
+                    BT.name = base_text_name
+                    if W.id not in BT.commentary_ids:
+                        BT.commentary_ids.append(W.id)
+                    if BT.id not in W.base_text_ids:
+                        W.base_text_ids.append(BT.id)
+
+            elif content_type == "person":
+                social_identifiers = row.get("Social identifiers", None).strip()
+
+                # Update or create
+                if entity_id in entities_by_id:
+                    A = entities_by_id[entity_id]
+                else:
+                    A = Author(entity_id)
+                    entities_by_id[entity_id] = A
+
+                A.name = name
+                A.aka = aka
+                A.social_identifiers = social_identifiers
+                A.highest_year: Optional[int] = highest_year
+                A.lowest_year: Optional[int] = lowest_year
+            # If content type is unrecognized, skip the row.
+
+    # Combined post-processing pass
+    for eid, entity in list(entities_by_id.items()):
+        if entity.type == "author":
+            # Remove authors with no associated works.
+            if not entity.work_ids:
+                del entities_by_id[eid]
             else:
-                W = Work(work_id)
-                entities_by_id[work_id] = W
-            W.name = work_name
-
-            # Handle Author entities
-            for author_id, author_name in zip(author_ids, author_names):
-                if author_id in entities_by_id:
-                    A = entities_by_id[author_id]
-                else:
-                    A = Author(author_id)
-                    entities_by_id[author_id] = A
-                A.name = author_name
-                if W.id not in A.work_ids:
-                    A.work_ids.append(W.id)
-                if A.id not in W.author_ids:
-                    W.author_ids.append(A.id)
-
-            # Handle Base Text entities
-            for base_text_id, base_text_name in zip(base_text_ids, base_text_names):
-                if base_text_id in entities_by_id:
-                    BT = entities_by_id[base_text_id]
-                else:
-                    BT = Work(base_text_id)
-                    entities_by_id[base_text_id] = BT
-                BT.name = base_text_name
-                if W.id not in BT.commentary_ids:
-                    BT.commentary_ids.append(W.id)
-                if BT.id not in W.base_text_ids:
-                    W.base_text_ids.append(BT.id)
+                # Aggregate disciplines from each associated work.
+                discipline_counter = Counter()
+                for wid in entity.work_ids:
+                    work = entities_by_id.get(wid)
+                    if work and getattr(work, "discipline", ""):
+                        discipline_counter[work.discipline] += 1
+                if discipline_counter:
+                    # Order by descending frequency and then alphabetically.
+                    sorted_disciplines = sorted(discipline_counter.items(), key=lambda x: (-x[1], x[0]))
+                    # Build string like "Nyāya (3), Yoga (1)"
+                    entity.disciplines = ", ".join([f"{disc} ({count})" for disc, count in sorted_disciplines])
+        elif entity.type == "work":
+            # If the work's own year information is missing, try to supplement it from its authors.
+            if entity.highest_year is None:
+                for aid in entity.author_ids:
+                    author = entities_by_id.get(aid)
+                    if author and getattr(author, "highest_year", None) is not None:
+                        entity.author_highest_year = author.highest_year
+                        entity.author_lowest_year = author.lowest_year
+                        break  # Use the first available author date
 
     # Save to JSON for human-readability
     output_filename = f"{PANDIT_DATA_VERSION}-entities.json"
