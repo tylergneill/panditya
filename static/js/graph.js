@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Set hops value
         document.getElementById('hops').value = initialParams.hops;
 
+        // Set initial repulsion if passed
+        if (initialParams.repulsion !== undefined) {
+            const repulsionSlider = document.getElementById('chargeStrength');
+            repulsionSlider.value = initialParams.repulsion;
+        }
+
         // Fetch and render the graph immediately
         const payload = {
           authors: initialParams.authors,
