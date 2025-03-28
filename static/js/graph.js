@@ -97,7 +97,7 @@ function renderGraph(graph) {
 
   // Define zoom behavior
   const zoom = d3.zoom()
-    .scaleExtent([0.5, 3])
+    .scaleExtent([0.1, 3])
     .on('zoom', (event) => graphGroup.attr('transform', event.transform));
 
   svg.call(zoom);
