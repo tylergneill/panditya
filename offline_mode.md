@@ -4,7 +4,6 @@ These instructions for "offline mode" preserve Pāṇḍitya v1 ("Pandit Grapher
 
 By cloning and importing the code, you can use it locally to produce graph data for use with e.g. [Gephi](https://gephi.org/).
 Resulting graphs are created in memory, (optionally) drawn to the screen with `networkx`, and also (optionally) output for Gephi.
-More details on this are available <a href="https://github.com/tylergneill/pandit_grapher/tree/main/offline_mode.md">here</a>.
 
 # Requirements
 
