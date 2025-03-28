@@ -474,7 +474,13 @@ def visualize_collection(collection: str):
     works = list(works_data.keys())
     authors = get_author_ids_for_work_ids(works)
 
-    initial_params = {"works": works, "authors": authors, "hops": 0, "exclude_list": []}
+    initial_params = {
+        "works": works,
+        "authors": authors,
+        "hops": 0,
+        "exclude_list": [],
+        "repulsion": 50,
+    }
 
     return render_template("index.html", initial_params=initial_params)
 
