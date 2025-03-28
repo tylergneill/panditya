@@ -196,7 +196,7 @@ def create_etext_links():
         'SARIT': ('web HTML', 'GitHub XML'),
         'DCS': ('web HTML', 'GitHub (1) CoNLL-U', 'GitHub (2) TXT'),
         # 'Muktabodha KSTS': ('web'),
-        'Vātāyana and Pramāṇa NLP': ('web HTML', 'GitHub'),
+        'Vātāyana and Pramāṇa NLP': ('Vātāyana web HTML', 'Pramāṇa NLP GitHub'),
         'Sanskrit Library and TITUS': ('Skt Lib web HTML', 'TITUS web HTML'),
     }
 
