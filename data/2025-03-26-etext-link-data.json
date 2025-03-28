@@ -547,10 +547,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/mimamsa/msbh1-7u.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=MīmS"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jaimini_mimamsasutra.txt"
             ]
         }
@@ -621,10 +621,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=VS"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kanada_vaisesikasutra.txt"
             ]
         }
@@ -662,10 +662,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=MMK"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_mulamadhyamakakarika.txt"
             ]
         }
@@ -705,10 +705,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/nagvvy_u.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=ViVy"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/nagarjuna_vigrahavyavartani.txt"
             ]
         }
@@ -738,10 +738,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NS"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gautama_nyayasutra.txt"
             ]
         }
@@ -872,10 +872,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=YSBh"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
             ]
         }
@@ -937,11 +937,11 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=SK",
                 "https://www.vatayana.info/textView?text_abbrv=YD"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt",
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkarasvamin_nyayapravesakasutra.txt"
             ]
@@ -1028,10 +1028,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=ViṃśV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt"
             ]
         }
@@ -1065,10 +1065,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NBh"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vatsyayana_nyayabhasya.txt"
             ]
         }
@@ -1760,10 +1760,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=YSBh"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
             ]
         }
@@ -1774,10 +1774,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa002_u.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=ĀP"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_alambanapariksavrtti.txt"
             ]
         }
@@ -1805,10 +1805,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=PDhS"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prasastapada_padarthadharmasamgraha.txt"
             ]
         }
@@ -1818,10 +1818,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/sthtvbhu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=TriṃśBh"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sthiramati_trimsikabhasya.txt"
             ]
         }
@@ -1870,10 +1870,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=PPad"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrakirti_prasannapada.txt"
             ]
         }
@@ -1912,10 +1912,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NB"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_nyayabindu.txt"
             ]
         }
@@ -1927,11 +1927,11 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/pramanvu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=PV",
                 "https://www.vatayana.info/textView?text_abbrv=PVSV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartika.txt",
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_pramanavartikasvavrtti.txt"
             ]
@@ -1948,10 +1948,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhksparu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=SP"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_sambandhapariksa.txt"
             ]
         }
@@ -1961,10 +1961,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa059_u.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=SAS"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_samtanantarasiddhi.txt"
             ]
         }
@@ -1975,10 +1975,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhkvadnu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=VN"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmakirti_vadanyaya.txt"
             ]
         }
@@ -1994,10 +1994,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/jaytuppu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=TUS"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayarasi_tattvopaplavasimha.txt"
             ]
         }
@@ -2007,10 +2007,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/mimamsa/mimslovu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=ŚV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/kumarila_slokavartika.txt"
             ]
         }
@@ -2078,10 +2078,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/mbrahsiu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=BrS"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_brahmasiddhi.txt"
             ]
         }
@@ -2091,10 +2091,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/mndvivpu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=VibhrV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vibhramaviveka.txt"
             ]
         }
@@ -2140,10 +2140,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/arhebt_u.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=HBṬ"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/arcata_hetubindutika.txt"
             ]
         }
@@ -2302,10 +2302,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=AvNir"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/asoka_avayavinirakarana.txt"
             ]
         }
@@ -2419,10 +2419,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/dhebta_u.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=HBṬĀ"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/durvekamisra_hetubindutikaloka.txt"
             ]
         }
@@ -2650,10 +2650,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/gangtciu.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=TCM"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gangesa_tattvacintamani.txt"
             ]
         }
@@ -4754,10 +4754,10 @@
             "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/mimamsa/sabbha1u.htm"
         ],
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=MīmBh"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sabara_mimamsabhasya.txt"
             ]
         }
@@ -5308,10 +5308,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=VSṬ"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/candrananda_vaisesikasutratika.txt"
             ]
         }
@@ -6211,10 +6211,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NM"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayamanjari.txt"
             ]
         }
@@ -6254,10 +6254,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=PVA"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/prajnakaragupta_pramanavartikalamkara.txt"
             ]
         }
@@ -6272,10 +6272,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=PVV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/manorathanandin_pramanavartikavrtti.txt"
             ]
         }
@@ -6390,10 +6390,10 @@
             ]
         },
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=VidhV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_vidhiviveka.txt"
             ]
         }
@@ -6515,110 +6515,110 @@
     },
     "89001": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NBhū"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/bhasarvajna_nyayabhusana.txt"
             ]
         }
     },
     "88852": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NBṬ"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dharmottara_nyayabindutika.txt"
             ]
         }
     },
     "88423": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=PSV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/dignaga_pramanasamuccayavrtti.txt"
             ]
         }
     },
     "92255": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=MukV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/gadadhara_muktivada.txt"
             ]
         }
     },
     "88925": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NyKal"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/jayantabhatta_nyayakalika.txt"
             ]
         }
     },
     "88610": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=BhāV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/mandana_bhavanaviveka.txt"
             ]
         }
     },
     "88497": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NPS"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/samkhya_yuktidipika.txt"
             ]
         }
     },
     "89119": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=NyKand"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sridhara_nyayakandali.txt"
             ]
         }
     },
     "89500": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=ŚVK"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/sucaritamisra_slokavartikakasika.txt"
             ]
         }
     },
     "88990": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=SŚP"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vidyanandin_satyasasanapariksa.txt"
             ]
         }
     },
     "89021": {
         "Vātāyana and Pramāṇa NLP": {
-            "web HTML": [
+            "Vātāyana web HTML": [
                 "https://www.vatayana.info/textView?text_abbrv=VyV"
             ],
-            "GitHub": [
+            "Pramāṇa NLP GitHub": [
                 "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vyomasiva_vyomavati.txt"
             ]
         }

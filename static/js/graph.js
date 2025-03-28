@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Set hops value
         document.getElementById('hops').value = initialParams.hops;
 
+        // Set initial repulsion if passed
+        if (initialParams.repulsion !== undefined) {
+            const repulsionSlider = document.getElementById('chargeStrength');
+            repulsionSlider.value = initialParams.repulsion;
+        }
+
         // Fetch and render the graph immediately
         const payload = {
           authors: initialParams.authors,
@@ -97,7 +103,7 @@ function renderGraph(graph) {
 
   // Define zoom behavior
   const zoom = d3.zoom()
-    .scaleExtent([0.5, 3])
+    .scaleExtent([0.1, 3])
     .on('zoom', (event) => graphGroup.attr('transform', event.transform));
 
   svg.call(zoom);
