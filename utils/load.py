@@ -27,4 +27,6 @@ def load_link_data():
     with open(input_json_path, "r") as jsonfile:
         data = json.load(jsonfile)
 
-    return data
+    (count_data := data.copy()).pop('work_id_to_link_mapping')
+
+    return data["work_id_to_link_mapping"], count_data

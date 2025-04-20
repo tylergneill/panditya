@@ -18,7 +18,7 @@ networkx_figure_size = config_dict["networkx_figure_size"]
 output_gephi_file = config_dict["output_gephi_file"]
 
 ENTITIES_BY_ID = load_entities()
-ETEXT_LINKS = load_link_data()
+ETEXT_LINKS, _ = load_link_data()
 
 
 @time_execution
