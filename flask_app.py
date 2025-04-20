@@ -20,7 +20,7 @@ VALID_WORK_IDS: List[str] = [k for k in ENTITIES_BY_ID if ENTITIES_BY_ID[k].type
 VALID_AUTHOR_IDS: List[str] = [k for k in ENTITIES_BY_ID if ENTITIES_BY_ID[k].type == 'author']
 ETEXT_LINKS, ADDITIONAL_COLLECTION_COUNT_DATA = load_link_data()
 
-ETEXT_DATA_SUMMARY = summarize_etext_links(ETEXT_LINKS)
+ETEXT_DATA_SUMMARY = summarize_etext_links(ETEXT_LINKS, ADDITIONAL_COLLECTION_COUNT_DATA)
 VALID_COLLECTIONS = list(ETEXT_DATA_SUMMARY.keys())
 
 APP_VERSION = find_app_version()

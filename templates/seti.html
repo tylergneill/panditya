@@ -20,9 +20,9 @@
       For more information, see <a>this blog post (forthcoming)</a>.
     </p>
     <p>
-      SETI's link data is integrated into <b>Pāṇḍitya</b>,
+      SETI's data is integrated into <b>Pāṇḍitya</b>,
       which presents it as clickable links within its interactive graph.
-      Look for work nodes highlighted in gold,
+      Look for work nodes highlighted in gold, right-click,
       and browse available e-texts under the “View on” submenu.
     </p>
     <p>
@@ -30,15 +30,16 @@
       (as of {{ etext_data_version }})
       and numbers on how much of each can be correlated with Pandit Project entities
       (as of the {{ pandit_data_version }} export)
-      for display here in Pāṇḍitya.
-      Click on links to see an interactive visualization of each.
+      and displayed here via Pāṇḍitya's work nodes.
+      Click on the below links to see an interactive visualization of each.
     </p>
     <table id="fancy-table">
       <thead>
         <tr>
           <th>Collection</th>
-          <th># Works</th>
-          <th># E-Texts</th>
+          <th>E-Texts, Total<span title="Sanskrit and Prakrit items only">*</span></th>
+          <th>Matched to Pandit Work ID(s)</th>
+          <th>Pāṇḍitya Work Nodes</th>
         </tr>
       </thead>
       <tbody>
@@ -47,8 +48,9 @@
           <td>
             <a href="seti/by_collection/{{ collection }}/visualize">{{ collection }}</a>
           </td>
-          <td>{{ stats.works }}</td>
           <td>{{ stats.etexts }}</td>
+          <td>{{ stats.etexts - stats.etexts_missing_works }} ({{ stats.etext_coverage }}%)</td>
+          <td>{{ stats.works }}</td>
         </tr>
         {% endfor %}
       </tbody>
