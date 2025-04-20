@@ -18,9 +18,9 @@ from utils.load import load_entities, load_link_data
 ENTITIES_BY_ID: Dict[str, Entity] = load_entities()
 VALID_WORK_IDS: List[str] = [k for k in ENTITIES_BY_ID if ENTITIES_BY_ID[k].type == 'work']
 VALID_AUTHOR_IDS: List[str] = [k for k in ENTITIES_BY_ID if ENTITIES_BY_ID[k].type == 'author']
-ETEXT_LINKS = load_link_data()
+ETEXT_LINKS, ADDITIONAL_COLLECTION_COUNT_DATA = load_link_data()
 
-ETEXT_DATA_SUMMARY = summarize_etext_links(ETEXT_LINKS)
+ETEXT_DATA_SUMMARY = summarize_etext_links(ETEXT_LINKS, ADDITIONAL_COLLECTION_COUNT_DATA)
 VALID_COLLECTIONS = list(ETEXT_DATA_SUMMARY.keys())
 
 APP_VERSION = find_app_version()

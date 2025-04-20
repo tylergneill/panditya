@@ -50,27 +50,26 @@ def find_etext_data_version():
         return file.readlines()[2].strip().split('=')[1].strip().replace("'", "").replace('"', '')
 
 
-def summarize_etext_links(etext_links):
+def summarize_etext_links(etext_links, additional_collection_count_data):
+    collection_total_link_counts = additional_collection_count_data['collection_total_link_counts']
+    collection_missing_work_id_counts = additional_collection_count_data['collection_missing_work_id_counts']
     works_per_collection = defaultdict(set)
-    links_per_collection = defaultdict(int)
 
     for work_id, sources in etext_links.items():
-        for collection, links in sources.items():
-            if isinstance(links, dict):
-                for subcat, sublinks in links.items():
-                    works_per_collection[collection].add(work_id)
-                    links_per_collection[collection] += len(sublinks)
-            elif isinstance(links, list):
+        for collection in sources:
+            if work_id != '...':
                 works_per_collection[collection].add(work_id)
-                links_per_collection[collection] += len(links)
-            else:
-                print(f"Unexpected type for {collection}: {type(links)}")
 
-    # Combine and sort by number of works (descending)
     combined_summary = {
         collection: {
+            "etexts": collection_total_link_counts[collection],
+            "etexts_missing_works": collection_missing_work_id_counts[collection],
+            "etext_coverage": int(
+                (
+                    collection_total_link_counts[collection] - collection_missing_work_id_counts[collection]
+                ) / collection_total_link_counts[collection] * 1000
+            ) / 10,
             "works": len(works_per_collection[collection]),
-            "etexts": links_per_collection[collection]
         }
         for collection in works_per_collection
     }

@@ -192,19 +192,30 @@ def create_etext_links():
     work_id_mapping = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
 
     collection_subtype_labels = {
-        # 'GRETIL': ('web'),
-        'SARIT': ('web HTML', 'GitHub XML'),
         'DCS': ('web HTML', 'GitHub (1) CoNLL-U', 'GitHub (2) TXT'),
-        # 'Muktabodha KSTS': ('web'),
-        'Vātāyana and Pramāṇa NLP': ('Vātāyana web HTML', 'Pramāṇa NLP GitHub'),
+        'GRETIL': ('web HTML'),
+        'Muktabodha KSTS': ('web HTML'),
+        'SARIT': ('web HTML', 'GitHub XML'),
         'Sanskrit Library and TITUS': ('Skt Lib web HTML', 'TITUS web HTML'),
+        'Vātāyana and Pramāṇa NLP': ('Vātāyana web HTML', 'Pramāṇa NLP GitHub'),
     }
+    collection_keys = list(collection_subtype_labels.keys())
+
+    collection_total_link_counts = defaultdict(int, dict.fromkeys(collection_keys, 0))
+    collection_missing_work_id_counts = defaultdict(int, dict.fromkeys(collection_keys, 0))
 
     for row in df.to_dict(orient="records"):
         collection_name = row['Collection']
 
         if pd.isna(row['Work ID']) or row['Work ID'] == "":
             continue
+
+        if any(pd.notna(row[k]) for k in ('Link 1 (main)',
+                                          'Link 2 (underlying)',
+                                          'Link 3 (extract)')):
+            collection_total_link_counts[collection_name] += 1
+            if row['Work ID'] == "...":
+                collection_missing_work_id_counts[collection_name] += 1
 
         work_ids = [wid.strip() for wid in re.split(r'[,\r\n]+', str(row['Work ID']))]
 
@@ -243,11 +254,17 @@ def create_etext_links():
                     result[work_id][collection_name] = links  # Fallback
         return result
 
+    final_result = {
+        "work_id_to_link_mapping": convert_to_serializable(work_id_mapping),
+        "collection_total_link_counts": collection_total_link_counts,
+        "collection_missing_work_id_counts": collection_missing_work_id_counts,
+    }
+
     # Save to JSON for human-readability
     output_filename = f"{ETEXT_DATA_VERSION}-etext-link-data.json"
     output_json_path = os.path.join(current_file_dir, relative_data_dir, output_filename)
     with open(output_json_path, 'w') as jsonfile:
-        json.dump(convert_to_serializable(work_id_mapping), jsonfile, indent=4, ensure_ascii=False)
+        json.dump(convert_to_serializable(final_result), jsonfile, indent=4, ensure_ascii=False)
 
 
 if __name__ == "__main__":
