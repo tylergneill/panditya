@@ -9,13 +9,13 @@ from typing import Optional
 import pandas as pd
 
 from data_models import Work, Author
-from utils.utils import time_execution, find_pandit_data_version, find_etext_data_version
+from utils.utils import time_execution, get_pandit_data_version, get_seti_data_version
 
 current_file_dir = os.path.dirname(os.path.abspath(__file__))
 relative_data_dir = "../data"
 
-PANDIT_DATA_VERSION = find_pandit_data_version()
-ETEXT_DATA_VERSION = find_etext_data_version()
+PANDIT_DATA_VERSION = get_pandit_data_version()
+SETI_DATA_VERSION = get_seti_data_version()
 
 
 @time_execution
@@ -179,7 +179,7 @@ def create_etext_links():
     Transform SETI CSV data to work-id -> link mapping stored in JSON.
     """
 
-    input_filename = f"{seti_data_version}-seti-master.csv"
+    input_filename = f"{SETI_DATA_VERSION}-seti-master.csv"
     input_csv_path = os.path.join(current_file_dir, relative_data_dir, input_filename)
     df = pd.read_csv(input_csv_path)
 
@@ -261,7 +261,7 @@ def create_etext_links():
     }
 
     # Save to JSON for human-readability
-    output_filename = f"{ETEXT_DATA_VERSION}-etext-link-data.json"
+    output_filename = f"{SETI_DATA_VERSION}-etext-link-data.json"
     output_json_path = os.path.join(current_file_dir, relative_data_dir, output_filename)
     with open(output_json_path, 'w') as jsonfile:
         json.dump(convert_to_serializable(final_result), jsonfile, indent=4, ensure_ascii=False)
