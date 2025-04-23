@@ -179,7 +179,7 @@ def create_etext_links():
     Transform SETI CSV data to work-id -> link mapping stored in JSON.
     """
 
-    input_filename = f"{ETEXT_DATA_VERSION}-seti.csv"
+    input_filename = f"{seti_data_version}-seti-master.csv"
     input_csv_path = os.path.join(current_file_dir, relative_data_dir, input_filename)
     df = pd.read_csv(input_csv_path)
 
