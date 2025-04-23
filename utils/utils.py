@@ -29,24 +29,24 @@ def time_execution(func):
     return wrapper
 
 
-def find_app_version():
+def get_app_version():
     app_version_filepath = './VERSION'
     with open(app_version_filepath, 'r', encoding='utf8') as file:
         # Assuming the __app_version__ line is the first line
         return file.readline().strip().split('=')[1].strip().replace("'", "").replace('"', '')
 
 
-def find_pandit_data_version():
+def get_pandit_data_version():
     data_version_filepath = './VERSION'
     with open(data_version_filepath, 'r', encoding='utf8') as file:
         # Assuming the __pandit_data_version__ line is the second line
         return file.readlines()[1].strip().split('=')[1].strip().replace("'", "").replace('"', '')
 
 
-def find_etext_data_version():
+def get_seti_data_version():
     data_version_filepath = './VERSION'
     with open(data_version_filepath, 'r', encoding='utf8') as file:
-        # Assuming the __etext_data_version__ line is the third line
+        # Assuming the __seti_data_version__ line is the third line
         return file.readlines()[2].strip().split('=')[1].strip().replace("'", "").replace('"', '')
 
 
