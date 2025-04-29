@@ -6969,19 +6969,19 @@
         }
     },
     "collection_total_link_counts": {
-        "GRETIL": 1037,
-        "SARIT": 75,
         "DCS": 257,
+        "GRETIL": 1037,
         "Muktabodha KSTS": 52,
-        "Vātāyana and Pramāṇa NLP": 45,
-        "Sanskrit Library and TITUS": 171
+        "SARIT": 75,
+        "Sanskrit Library and TITUS": 171,
+        "Vātāyana and Pramāṇa NLP": 45
     },
     "collection_missing_work_id_counts": {
-        "GRETIL": 266,
-        "SARIT": 11,
         "DCS": 95,
+        "GRETIL": 266,
         "Muktabodha KSTS": 5,
-        "Vātāyana and Pramāṇa NLP": 0,
-        "Sanskrit Library and TITUS": 68
+        "SARIT": 11,
+        "Sanskrit Library and TITUS": 68,
+        "Vātāyana and Pramāṇa NLP": 0
     }
 }
