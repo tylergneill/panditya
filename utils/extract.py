@@ -37,10 +37,15 @@ df_filtered = df[columns_to_keep]
 # Further filter: Only keep rows where "Content type" is "Work" or "Person"
 df_filtered = df_filtered[df_filtered["Content type"].isin(["Work", "Person"])]
 
-# Combine "Attributed author (person ID)" into "Author (person IDs)"
+# Merge "Attributed author" into "Author"
+# If "Author" is empty, fill it with "Attributed author"
+# In rare cases where work has both, discard Attributed Author
 # TODO: eventually maintain this distinction
-df_filtered["Author (person IDs)"] = df_filtered["Author (person IDs)"].fillna("").astype(str) + "; " + df_filtered["Attributed author (person ID)"].fillna("").astype(str)
-df_filtered["Authors (person)"] = df_filtered["Authors (person)"].fillna("").astype(str) + "; " + df_filtered["Attributed author (person)"].fillna("").astype(str)
+
+df_filtered["Author (person IDs)"] = df_filtered["Author (person IDs)"].fillna("").astype(str)
+df_filtered.loc[df_filtered["Author (person IDs)"].str.strip() == "", "Author (person IDs)"] = df_filtered["Attributed author (person ID)"]
+df_filtered["Authors (person)"] = df_filtered["Authors (person)"].fillna("").astype(str)
+df_filtered.loc[df_filtered["Authors (person)"].str.strip() == "", "Authors (person)"] = df_filtered["Attributed author (person)"]
 
 # Clean up double separators and trailing separators
 df_filtered["Author (person IDs)"] = df_filtered["Author (person IDs)"].str.replace(r";\s*;", ";", regex=True).str.strip("; ")

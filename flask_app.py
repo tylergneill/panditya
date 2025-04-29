@@ -75,11 +75,14 @@ for key in ['works', 'authors', 'all']:
 
 # --- entities namespace routes ---
 
-def validate_comma_separated_list_input(string_input):
+def validate_comma_separated_list_input(string_input, allow_empty=False):
     if not string_input or not (stripped_string_input := string_input.strip()):
-        return {
-            "error": "List input must be non-empty."
-        }
+        if allow_empty:
+            return None
+        else:
+            return {
+                "error": "List input must be non-empty."
+            }
     if not bool(re.fullmatch(r'[\d,]*', stripped_string_input)):
         return {
             "error": "List input should not contain any characters besides numbers and comma "
@@ -508,12 +511,25 @@ def render_graph_from_URL_params():
     Serve the main graph interface, initializing inputs based on URL parameters.
     """
     try:
+        authors_str = request.args.get('authors', None)
+        works_str = request.args.get('works', None)
+        exclude_list_str = request.args.get('exclude_list', None)
+
+        for var in [authors_str, works_str, exclude_list_str]:
+            err = validate_comma_separated_list_input(var, allow_empty=True)
+            if err is not None:
+                return err, 400
+
+        authors = authors_str.strip().split(',') if authors_str else []
+        works = works_str.strip().split(',') if works_str else []
+        exclude_list = exclude_list_str.strip().split(',') if exclude_list_str else []
+
         # Parse URL parameters
         initial_params = {
-            "authors": request.args.getlist('authors'),
-            "works": request.args.getlist('works'),
+            "authors": authors,
+            "works": works,
             "hops": request.args.get('hops', default=DEFAULT_HOPS),
-            "exclude_list": request.args.getlist('exclude_list')
+            "exclude_list": exclude_list,
         }
 
         # Serve the template with initialization variables
