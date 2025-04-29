@@ -75,11 +75,14 @@ for key in ['works', 'authors', 'all']:
 
 # --- entities namespace routes ---
 
-def validate_comma_separated_list_input(string_input):
+def validate_comma_separated_list_input(string_input, allow_empty=False):
     if not string_input or not (stripped_string_input := string_input.strip()):
-        return {
-            "error": "List input must be non-empty."
-        }
+        if allow_empty:
+            return None
+        else:
+            return {
+                "error": "List input must be non-empty."
+            }
     if not bool(re.fullmatch(r'[\d,]*', stripped_string_input)):
         return {
             "error": "List input should not contain any characters besides numbers and comma "
