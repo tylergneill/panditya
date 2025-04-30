@@ -245,8 +245,10 @@ function renderGraph(graph) {
           <span>More info</span>
           <ul class="submenu">
             ${d.aka ? `<li><strong>Aka:</strong> ${d.aka}</li>` : ''}
+            ${d.social_ids ? `<li><strong>Social Identifiers:</strong> ${d.social_ids}</li>` : ''}
             ${d.dates ? `<li><strong>Date:</strong> ${d.dates}</li>` : ''}
             ${d.discipline ? `<li><strong>Discipline:</strong> ${d.discipline}</li>` : ''}
+            ${d.disciplines ? `<li><strong>Disciplines:</strong> ${d.disciplines}</li>` : ''}
           </ul>
         </li>
         <li class="has-submenu">
