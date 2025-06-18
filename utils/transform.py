@@ -198,6 +198,8 @@ def create_etext_links():
         'SARIT': ('web HTML', 'GitHub XML'),
         'Sanskrit Library and TITUS': ('Skt Lib web HTML', 'TITUS web HTML'),
         'Vātāyana and Pramāṇa NLP': ('Vātāyana web HTML', 'Pramāṇa NLP GitHub'),
+        'UTA Dharmaśāstra': ('Google Doc'),
+        'DiPAL DCV': ('web HTML'),
     }
     collection_keys = list(collection_subtype_labels.keys())
 
