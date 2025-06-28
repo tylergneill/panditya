@@ -11,7 +11,7 @@ PANDIT_DATA_VERSION = get_pandit_data_version()
 
 current_file_dir = os.path.dirname(os.path.abspath(__file__))
 relative_data_dir = "../data"
-input_filename = f"{PANDIT_DATA_VERSION}-pandit-works-and-persons-export.csv"
+input_filename = f"{PANDIT_DATA_VERSION}-pandit-entities-export.csv"
 df = pd.read_csv(
     os.path.join(current_file_dir, relative_data_dir, input_filename),
     dtype=str,
@@ -71,7 +71,7 @@ df_filtered.rename(columns={
 df_filtered.fillna("", inplace=True)
 
 # Save the output to a new CSV file
-output_filename = f"{PANDIT_DATA_VERSION}-extracted-works-and-persons-raw.csv"
+output_filename = f"{PANDIT_DATA_VERSION}-extracted-entities-raw.csv"
 df_filtered.to_csv(os.path.join(current_file_dir, relative_data_dir, output_filename), index=False)
 
 print(f"Filtered CSV saved as {output_filename}")
