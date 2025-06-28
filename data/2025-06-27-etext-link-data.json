@@ -506,11 +506,17 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/dhs/gautdhs/gautd.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/10yJQKBcAuNipLfrmZtRQHBk0nmkIcdWKAzD9aLljppI",
-                "https://docs.google.com/document/d/11kJPxwezlTtGNLKXix-Yc4ZKLaKYPaMp5hE6CSh0uaA",
-                "https://docs.google.com/document/d/1CJYU8Rzq2g4mmST3wowQTvA4hj4OTQ98szZvp6gbvhM"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/dharmasutras/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/10yJQKBcAuNipLfrmZtRQHBk0nmkIcdWKAzD9aLljppI",
+                    "https://docs.google.com/document/d/11kJPxwezlTtGNLKXix-Yc4ZKLaKYPaMp5hE6CSh0uaA",
+                    "https://docs.google.com/document/d/1CJYU8Rzq2g4mmST3wowQTvA4hj4OTQ98szZvp6gbvhM"
+                ]
+            }
         },
         "44744": {
             "GRETIL": [
@@ -536,10 +542,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/svetup/svetu.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1WwFZ4oYDB4iyUJQ6xlEX3k7hai2gvYsJwg-erx5nsKA"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1WwFZ4oYDB4iyUJQ6xlEX3k7hai2gvYsJwg-erx5nsKA"
+                ]
+            }
         },
         "88750": {
             "GRETIL": [
@@ -1512,54 +1523,82 @@
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmaliniivijayottaraHK.txt&miri_catalog_number=M00160",
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FparaatrisikaataatparyadiipikaaHK.txt&miri_catalog_number=M00043"
             ],
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1-Gce11g0C0ip3-C9qk7uzSj4FgvFJx-_0Gh5VQRerjo",
-                "https://docs.google.com/document/d/10pzQhaza5D0XzVLcTVmhyx6gR2Y8T3mhoJIhWnFbb5o",
-                "https://docs.google.com/document/d/10yJQKBcAuNipLfrmZtRQHBk0nmkIcdWKAzD9aLljppI",
-                "https://docs.google.com/document/d/11TBhCt7hwOC8TEuoVfzEOPH7EjIyt3Bre1hPnNNtCxE",
-                "https://docs.google.com/document/d/11kJPxwezlTtGNLKXix-Yc4ZKLaKYPaMp5hE6CSh0uaA",
-                "https://docs.google.com/document/d/11l3Jzr86YMFNGFuDWL-MC3YbTpnz4sKDHW9ihWthfeA",
-                "https://docs.google.com/document/d/14n-BqYQDcoVz967qoE-UTSKsKY_nivlajJAkpKvEEyI",
-                "https://docs.google.com/document/d/16Ro4Qlq6i39KVnHAuAs7gzNiEflUY2aTBzIvr0e4t_E",
-                "https://docs.google.com/document/d/16n0S4N3KzakeiqfSjLZtx2zWumf6y2JyTlHiqThtodk",
-                "https://docs.google.com/document/d/18UY_o0jd25A_GejleX6wF1-riHWjNbd8velN4ht_jqA",
-                "https://docs.google.com/document/d/19PYQkxevYBce2s9cnC8BcaCm1feZMp9Gp6cD6anjjtY",
-                "https://docs.google.com/document/d/1BkJh8WNZXvOm4dDLcjawVqEO_vBVLptWmAekouhKpiE",
-                "https://docs.google.com/document/d/1Dy-F7QY_gnTMHeqUsGgr75jp7UZOrD6JaDB6kHWcDaY",
-                "https://docs.google.com/document/d/1F-GVOFDcUDWQ9FwBWCkfWPquqg9vmbuwq2BAPc_42iI",
-                "https://docs.google.com/document/d/1HDifkSf2jWFC6VNFp0UJANNt4ad572FlnEz7Ps4LIAI",
-                "https://docs.google.com/document/d/1I75AqSQ6Wav1fpZIa1YvpilAePS4QNXdiSyyieTk-PU",
-                "https://docs.google.com/document/d/1JVu0vygrgn4SrQ3h42U0FdjDVuJ8371H22uGjaLx6PY",
-                "https://docs.google.com/document/d/1LkBBYC4JBlHma97bHYpPhq-_SDMJ7DlJsRuIVNle_qM",
-                "https://docs.google.com/document/d/1O9Yq-mTpXx0rrmFQNELXMOw5HrFauoyQAcxaGa9dE-Q",
-                "https://docs.google.com/document/d/1QCYOiXk6qWizbQfbrzE_QcKh0QREftGmhyZOVuIypzo",
-                "https://docs.google.com/document/d/1S4WQEMtJb9-_In_FtH_5mWzn749vUmPgX3oJD8s-6YA",
-                "https://docs.google.com/document/d/1SQsXUXHO2JsrhD0rm28esIMDxHU05vSCvqn5yKD6TKA",
-                "https://docs.google.com/document/d/1UTkpLRoHwyYLz8KBh86LaXKNkD_POY1Vgm7DVQK2Exg",
-                "https://docs.google.com/document/d/1UXFhJcniqDCTbQc820Gdl97MHoZUNXPSg16-j65kw2k",
-                "https://docs.google.com/document/d/1Vq4b8elUARcjscnbTKX90czk-0CUQoGmcE4QbjOuhd4",
-                "https://docs.google.com/document/d/1XI75UgiUUqG2_DJ4pFMX-VbDXN_5CuVXujH2fS7wJN8",
-                "https://docs.google.com/document/d/1YJJ6knQKd4KLRpBnTW4syCVzGQC7Mn9k_rgUdmsP_xA",
-                "https://docs.google.com/document/d/1ZAg_Zl4fDpc8VB9vVWaKTckNbzTkFDzmcaB3_aTfD-A",
-                "https://docs.google.com/document/d/1aQO6Qr41FwEKMqJoXsqlnT2oN1rxiYh_MG2A0965dDk",
-                "https://docs.google.com/document/d/1aSTatFtFg3aqI-7pgfN4RWymC9Ky5LulG6b8KaTPGLc",
-                "https://docs.google.com/document/d/1eIGu1ACLqDwZm29oGUwNjg3fhFfG6yB5MUmj8uXdBXs",
-                "https://docs.google.com/document/d/1eekxMHRFBDO7u5lX-4m9TcyEPFFiVo4hPScfSEOpXxI",
-                "https://docs.google.com/document/d/1lPiClnp-Gei-cplb1N-HVhIFk76K7Etfl9XPL2ArFa4",
-                "https://docs.google.com/document/d/1oMky1-IN2vuLa8LixOYeKeXqxHWFyCqJ32OU0ObdTr8",
-                "https://docs.google.com/document/d/1pbDnABNQ-j9aODuNqfYNFYK9jP8VGuUO6aRcT40gTVQ",
-                "https://docs.google.com/document/d/1pm1UjraMz8O4gkP3hmFv9-ltw1Kx2TvCOtkGGAlNa9o",
-                "https://docs.google.com/document/d/1ptjmpQ0QtuyqSbZ_xKdfh_-LQc0yOEtxfMptNw9QJz0",
-                "https://docs.google.com/document/d/1tISoqVRqJu2ourFaHKu_pQztP6aWSJdES1h0kAYs-Zo",
-                "https://docs.google.com/document/d/1uJHXfNfMEfky06ZBPe1GBVVQKB1RZZeGfoCTc_DeiuQ",
-                "https://docs.google.com/document/d/1uUt0M3Fcc24Pl0zJ8OmvKGGEBpRVxRHHQpw0AyXKc7Y",
-                "https://docs.google.com/document/d/1vMZitB7VWdk8E9jMtgd32tgnNFb2j3hkLAnx0NtSM0U",
-                "https://docs.google.com/document/d/1xlGRoYkWNI7NVRrpiWLz4Zq2XnovpwpohDmwsPbasAY"
-            ],
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=1&wat_id=24&ter_id=3&tra_id=81&show_file_content=1",
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=2&wat_id=2&ter_id=1&tra_id=68&show_file_content=1"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/apararka/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/balakri%e1%b8%8da/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/daksasmrti/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/dharmasutras/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/haradatta-apastamba-grhyasutra/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/haradatta-apastamba/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/krtyakalpataru/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/krtyakalpataru/danakanda-krtyakalpataru/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/madanaratnapradipa/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/maskarin-gautamadharmasutra/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/parasara-madhaviya/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/sarasvativilasa/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/sm%e1%b9%9bticandrika/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/smrtyarthasara-sridhara/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/tirthacintamani-of-vacaspati-misra/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/vyavaharacintamani/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/vyavaharanirnaya/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1-Gce11g0C0ip3-C9qk7uzSj4FgvFJx-_0Gh5VQRerjo",
+                    "https://docs.google.com/document/d/10pzQhaza5D0XzVLcTVmhyx6gR2Y8T3mhoJIhWnFbb5o",
+                    "https://docs.google.com/document/d/10yJQKBcAuNipLfrmZtRQHBk0nmkIcdWKAzD9aLljppI",
+                    "https://docs.google.com/document/d/11TBhCt7hwOC8TEuoVfzEOPH7EjIyt3Bre1hPnNNtCxE",
+                    "https://docs.google.com/document/d/11kJPxwezlTtGNLKXix-Yc4ZKLaKYPaMp5hE6CSh0uaA",
+                    "https://docs.google.com/document/d/11l3Jzr86YMFNGFuDWL-MC3YbTpnz4sKDHW9ihWthfeA",
+                    "https://docs.google.com/document/d/14n-BqYQDcoVz967qoE-UTSKsKY_nivlajJAkpKvEEyI",
+                    "https://docs.google.com/document/d/16Ro4Qlq6i39KVnHAuAs7gzNiEflUY2aTBzIvr0e4t_E",
+                    "https://docs.google.com/document/d/16n0S4N3KzakeiqfSjLZtx2zWumf6y2JyTlHiqThtodk",
+                    "https://docs.google.com/document/d/18UY_o0jd25A_GejleX6wF1-riHWjNbd8velN4ht_jqA",
+                    "https://docs.google.com/document/d/19PYQkxevYBce2s9cnC8BcaCm1feZMp9Gp6cD6anjjtY",
+                    "https://docs.google.com/document/d/1BkJh8WNZXvOm4dDLcjawVqEO_vBVLptWmAekouhKpiE",
+                    "https://docs.google.com/document/d/1Dy-F7QY_gnTMHeqUsGgr75jp7UZOrD6JaDB6kHWcDaY",
+                    "https://docs.google.com/document/d/1F-GVOFDcUDWQ9FwBWCkfWPquqg9vmbuwq2BAPc_42iI",
+                    "https://docs.google.com/document/d/1HDifkSf2jWFC6VNFp0UJANNt4ad572FlnEz7Ps4LIAI",
+                    "https://docs.google.com/document/d/1I75AqSQ6Wav1fpZIa1YvpilAePS4QNXdiSyyieTk-PU",
+                    "https://docs.google.com/document/d/1JVu0vygrgn4SrQ3h42U0FdjDVuJ8371H22uGjaLx6PY",
+                    "https://docs.google.com/document/d/1LkBBYC4JBlHma97bHYpPhq-_SDMJ7DlJsRuIVNle_qM",
+                    "https://docs.google.com/document/d/1O9Yq-mTpXx0rrmFQNELXMOw5HrFauoyQAcxaGa9dE-Q",
+                    "https://docs.google.com/document/d/1QCYOiXk6qWizbQfbrzE_QcKh0QREftGmhyZOVuIypzo",
+                    "https://docs.google.com/document/d/1S4WQEMtJb9-_In_FtH_5mWzn749vUmPgX3oJD8s-6YA",
+                    "https://docs.google.com/document/d/1SQsXUXHO2JsrhD0rm28esIMDxHU05vSCvqn5yKD6TKA",
+                    "https://docs.google.com/document/d/1UTkpLRoHwyYLz8KBh86LaXKNkD_POY1Vgm7DVQK2Exg",
+                    "https://docs.google.com/document/d/1UXFhJcniqDCTbQc820Gdl97MHoZUNXPSg16-j65kw2k",
+                    "https://docs.google.com/document/d/1Vq4b8elUARcjscnbTKX90czk-0CUQoGmcE4QbjOuhd4",
+                    "https://docs.google.com/document/d/1XI75UgiUUqG2_DJ4pFMX-VbDXN_5CuVXujH2fS7wJN8",
+                    "https://docs.google.com/document/d/1YJJ6knQKd4KLRpBnTW4syCVzGQC7Mn9k_rgUdmsP_xA",
+                    "https://docs.google.com/document/d/1ZAg_Zl4fDpc8VB9vVWaKTckNbzTkFDzmcaB3_aTfD-A",
+                    "https://docs.google.com/document/d/1aQO6Qr41FwEKMqJoXsqlnT2oN1rxiYh_MG2A0965dDk",
+                    "https://docs.google.com/document/d/1aSTatFtFg3aqI-7pgfN4RWymC9Ky5LulG6b8KaTPGLc",
+                    "https://docs.google.com/document/d/1eIGu1ACLqDwZm29oGUwNjg3fhFfG6yB5MUmj8uXdBXs",
+                    "https://docs.google.com/document/d/1eekxMHRFBDO7u5lX-4m9TcyEPFFiVo4hPScfSEOpXxI",
+                    "https://docs.google.com/document/d/1lPiClnp-Gei-cplb1N-HVhIFk76K7Etfl9XPL2ArFa4",
+                    "https://docs.google.com/document/d/1oMky1-IN2vuLa8LixOYeKeXqxHWFyCqJ32OU0ObdTr8",
+                    "https://docs.google.com/document/d/1pbDnABNQ-j9aODuNqfYNFYK9jP8VGuUO6aRcT40gTVQ",
+                    "https://docs.google.com/document/d/1pm1UjraMz8O4gkP3hmFv9-ltw1Kx2TvCOtkGGAlNa9o",
+                    "https://docs.google.com/document/d/1ptjmpQ0QtuyqSbZ_xKdfh_-LQc0yOEtxfMptNw9QJz0",
+                    "https://docs.google.com/document/d/1tISoqVRqJu2ourFaHKu_pQztP6aWSJdES1h0kAYs-Zo",
+                    "https://docs.google.com/document/d/1uJHXfNfMEfky06ZBPe1GBVVQKB1RZZeGfoCTc_DeiuQ",
+                    "https://docs.google.com/document/d/1uUt0M3Fcc24Pl0zJ8OmvKGGEBpRVxRHHQpw0AyXKc7Y",
+                    "https://docs.google.com/document/d/1vMZitB7VWdk8E9jMtgd32tgnNFb2j3hkLAnx0NtSM0U",
+                    "https://docs.google.com/document/d/1xlGRoYkWNI7NVRrpiWLz4Zq2XnovpwpohDmwsPbasAY"
+                ]
+            },
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=1",
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=2"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=1&wat_id=24&ter_id=3&tra_id=81&show_file_content=1",
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=2&wat_id=2&ter_id=1&tra_id=68&show_file_content=1"
+                ]
+            }
         },
         "88096": {
             "GRETIL": [
@@ -3117,10 +3156,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/upanisad/bau/bau.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1P_aiUTYTuXtrKjAzwLpSDWPf2G7DxJwV0kwUcDzEav0"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1P_aiUTYTuXtrKjAzwLpSDWPf2G7DxJwV0kwUcDzEav0"
+                ]
+            }
         },
         "96032": {
             "GRETIL": [
@@ -3372,9 +3416,14 @@
                     "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Viṣṇusmṛti.txt"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1H4J2CzMiTG16BGU9XUn1YMAVhWqs4jz4mbz2UABZSTA"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/vai%e1%b9%a3%e1%b9%87avadharmasastra/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1H4J2CzMiTG16BGU9XUn1YMAVhWqs4jz4mbz2UABZSTA"
+                ]
+            }
         },
         "102265": {
             "GRETIL": [
@@ -3399,9 +3448,14 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/dhs/ys/ys.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1QElS6pMveF5O_7TkHZ54XSRBkqR8AFoXJ2Oq1kC9FoI"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1QElS6pMveF5O_7TkHZ54XSRBkqR8AFoXJ2Oq1kC9FoI"
+                ]
+            }
         },
         "102278": {
             "GRETIL": [
@@ -4480,10 +4534,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/dhs/apdhs/apdhs.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/10yJQKBcAuNipLfrmZtRQHBk0nmkIcdWKAzD9aLljppI",
-                "https://docs.google.com/document/d/1e-olSpyN0Yl3dkv75kWKmyvfm_7hgQT_9FJKLOt_u9M"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/dharmasutras/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/10yJQKBcAuNipLfrmZtRQHBk0nmkIcdWKAzD9aLljppI",
+                    "https://docs.google.com/document/d/1e-olSpyN0Yl3dkv75kWKmyvfm_7hgQT_9FJKLOt_u9M"
+                ]
+            }
         },
         "42521": {
             "GRETIL": [
@@ -4711,10 +4770,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/upanisad/aitupjz/aitup.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1H_LyqwFxEzN3TUFV0V_cbpMdv9iNYXMW8u-dzYxG494"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1H_LyqwFxEzN3TUFV0V_cbpMdv9iNYXMW8u-dzYxG494"
+                ]
+            }
         },
         "105766": {
             "GRETIL": [
@@ -4749,10 +4813,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/chup/chup.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1mHAD82uH12wBTB18_oiigod_3rC59vP6-BZVmuu96ek"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1mHAD82uH12wBTB18_oiigod_3rC59vP6-BZVmuu96ek"
+                ]
+            }
         },
         "96008": {
             "GRETIL": [
@@ -4804,10 +4873,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/upanisad/mandukya/mandu.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1EClyDgDoPpFnaZ0eYWJyGxHeA8UKlTpr3U3xJEuE340",
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1EClyDgDoPpFnaZ0eYWJyGxHeA8UKlTpr3U3xJEuE340",
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8"
+                ]
+            }
         },
         "96057": {
             "GRETIL": [
@@ -4901,10 +4975,15 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/prasup_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/prasupbu.htm"
             ],
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1Sa8n8vVt-v6y4VjC5X0-QrCy744iI7ST-fXDvWhFBss"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1Sa8n8vVt-v6y4VjC5X0-QrCy744iI7ST-fXDvWhFBss"
+                ]
+            }
         },
         "88809": {
             "GRETIL": [
@@ -5310,10 +5389,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/kathup/kathu.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1XWkvalzAA55iTXmzXCaG0Qq_I5pnVD9C--7ja8bAodg"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1XWkvalzAA55iTXmzXCaG0Qq_I5pnVD9C--7ja8bAodg"
+                ]
+            }
         },
         "88116": {
             "GRETIL": [
@@ -5371,10 +5455,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/upanisad/isaup/isaup.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1HQvSoksGTfEaB_2dLm-uRRhqWC-93zxFFkpZFGpS5I0"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1HQvSoksGTfEaB_2dLm-uRRhqWC-93zxFFkpZFGpS5I0"
+                ]
+            }
         },
         "88094": {
             "GRETIL": [
@@ -5992,10 +6081,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/upanisad/kausup/kausu.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1AlthFGsUwgSViCQ6X-1iydS34wiWi9TmjrgnUaAVDbU",
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1AlthFGsUwgSViCQ6X-1iydS34wiWi9TmjrgnUaAVDbU",
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8"
+                ]
+            }
         },
         "96056": {
             "DCS": {
@@ -6017,10 +6111,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/av/upanisad/mundaka/munda.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1R7yGx8zh3lfrGglEEkLREuHjTEZPdgJM37s0k_sqZTA"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1R7yGx8zh3lfrGglEEkLREuHjTEZPdgJM37s0k_sqZTA"
+                ]
+            }
         },
         "96149": {
             "DCS": {
@@ -6042,10 +6141,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvs/upanisad/taittup/taitt.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1bwKYMf6ougFHESHyOmx4H6ws6LYnlwRD6kzDvf6vGu8"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1bwKYMf6ougFHESHyOmx4H6ws6LYnlwRD6kzDvf6vGu8"
+                ]
+            }
         },
         "104153": {
             "DCS": {
@@ -6632,9 +6736,14 @@
             "SARIT": [
                 "https://github.com/sarit/SARIT-corpus/blob/master/pujyapada-sarvarthasiddhi.xml"
             ],
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=12&wat_id=14&ter_id=8&tra_id=88&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=12"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=12&wat_id=14&ter_id=8&tra_id=88&show_file_content=1"
+                ]
+            }
         },
         "96506": {
             "SARIT": {
@@ -6753,9 +6862,14 @@
             "SARIT": [
                 "https://github.com/sarit/SARIT-corpus/blob/master/vijnanesvara-mitaksara.xml"
             ],
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/19ny7Y82T16VVIn1pRs2sZPa7Q50LZG0NJw2ISA48ycM"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/mitak%e1%b9%a3ara/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/19ny7Y82T16VVIn1pRs2sZPa7Q50LZG0NJw2ISA48ycM"
+                ]
+            }
         },
         "41542": {
             "Sanskrit Library and TITUS": [
@@ -6776,10 +6890,15 @@
             "Sanskrit Library and TITUS": [
                 "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/jskt/tattvs/tattv.htm"
             ],
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=15&wat_id=26&ter_id=3&tra_id=82&show_file_content=1",
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=15&wat_id=27&ter_id=8&tra_id=93&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=15"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=15&wat_id=26&ter_id=3&tra_id=82&show_file_content=1",
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=15&wat_id=27&ter_id=8&tra_id=93&show_file_content=1"
+                ]
+            }
         },
         "95832": {
             "Sanskrit Library and TITUS": [
@@ -6830,10 +6949,15 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/kenup/kenup.htm"
                 ]
             },
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
-                "https://docs.google.com/document/d/1dJ8kuPUc30imIQ0Pa7-BowWr72BwWV8L86jOxtm0AqQ"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/early-upanisads-olivelle-edition/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1FvxjNba6i2Y5YAD7mwBoUh22W5Nk1PkNW4x7NYbo9s8",
+                    "https://docs.google.com/document/d/1dJ8kuPUc30imIQ0Pa7-BowWr72BwWV8L86jOxtm0AqQ"
+                ]
+            }
         },
         "96158": {
             "Sanskrit Library and TITUS": {
@@ -6864,9 +6988,14 @@
                     "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/bhasarvajna_nyayabhusana.txt"
                 ]
             },
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=13&wat_id=22&ter_id=9&tra_id=89&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=13"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=13&wat_id=22&ter_id=9&tra_id=89&show_file_content=1"
+                ]
+            }
         },
         "88852": {
             "Vātāyana and Pramāṇa NLP": {
@@ -6947,9 +7076,14 @@
                     "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vidyanandin_satyasasanapariksa.txt"
                 ]
             },
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=8&wat_id=13&ter_id=6&tra_id=86&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=8"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=8&wat_id=13&ter_id=6&tra_id=86&show_file_content=1"
+                ]
+            }
         },
         "89021": {
             "Vātāyana and Pramāṇa NLP": {
@@ -7095,128 +7229,234 @@
             ]
         },
         "109918": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1OFWLyjXMqqiHTBg3WqvFJsWuDhlEQgE62k_7Ik2BTYQ"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/nitisara-kamandaki/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1OFWLyjXMqqiHTBg3WqvFJsWuDhlEQgE62k_7Ik2BTYQ"
+                ]
+            }
         },
         "110530": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/11kJPxwezlTtGNLKXix-Yc4ZKLaKYPaMp5hE6CSh0uaA",
-                "https://docs.google.com/document/d/13DvCYLGtO7f-2e6aBF7Nl57SknqC2l6Cww_TbOrqitg"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/",
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/haradatta-gautama/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/11kJPxwezlTtGNLKXix-Yc4ZKLaKYPaMp5hE6CSh0uaA",
+                    "https://docs.google.com/document/d/13DvCYLGtO7f-2e6aBF7Nl57SknqC2l6Cww_TbOrqitg"
+                ]
+            }
         },
         "102280": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1d1r_3UnotveeZBoLf3bhKVG215uisiJjHdH8hz7ym0s",
-                "https://docs.google.com/document/d/1fZBB-Ll0ZEs1nqzgDRuIk0BXob55Vkz_08bCBP59_C4",
-                "https://docs.google.com/document/d/1zsSAzSAVMdY_5uBY8a90_GZV5XI7CWmqQm3k5GcgJ4w"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/bharuci/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1d1r_3UnotveeZBoLf3bhKVG215uisiJjHdH8hz7ym0s",
+                    "https://docs.google.com/document/d/1fZBB-Ll0ZEs1nqzgDRuIk0BXob55Vkz_08bCBP59_C4",
+                    "https://docs.google.com/document/d/1zsSAzSAVMdY_5uBY8a90_GZV5XI7CWmqQm3k5GcgJ4w"
+                ]
+            }
         },
         "102283": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/14bUt2Ib6DBGoK1n7uylt4C9p9Z7WZh3yXu_ki0fPOcU"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/govindaraja-manu/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/14bUt2Ib6DBGoK1n7uylt4C9p9Z7WZh3yXu_ki0fPOcU"
+                ]
+            }
         },
         "102284": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1xc63uuBVyutIuB4TZQyQj1-8fXcoaX9o4PNt-ZCJ0Bk"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/kulluka/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1xc63uuBVyutIuB4TZQyQj1-8fXcoaX9o4PNt-ZCJ0Bk"
+                ]
+            }
         },
         "88922": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/11qPyu50Neikx_4_AtDfKnog8jmrEU_D643KB8_jl5DU",
-                "https://docs.google.com/document/d/14uGnZRxAdw0ESrK8w9WUApL2MLCthg126dXOUALid_M",
-                "https://docs.google.com/document/d/1FviRxlBQ75omCWmOsmpPiZlnzlmt1QI3ac2GhDUq1Ik",
-                "https://docs.google.com/document/d/1HcyWmuwNHQ0PyYa6TEqY96Xcs8zSKoep8Ln1yMu89iA",
-                "https://docs.google.com/document/d/1InpV9Eh1FFNcnTGReNjJ305nX-snhoBMJFJgR-hAO4g",
-                "https://docs.google.com/document/d/1KNOIyjXIRSNqWRYmkGXrnF6ac6n8w3awVeqWwpZqCxU",
-                "https://docs.google.com/document/d/1Kn8oAXFeOXVPiG660vmrT3ltKamn5FbvEZ7vh7UjdfE",
-                "https://docs.google.com/document/d/1O13pFkOSOq-3c_GBD7v9gvdLPXCA9rBHH1JeyBsp87Y",
-                "https://docs.google.com/document/d/1SyaTwJSs33_DbA3Du3_rKsvP_VVm8dHP-h_CZ71UPKo",
-                "https://docs.google.com/document/d/1XPSCZCFd42oEujTCebnx3kKVdmFh5sK_ctI84LRXsq4",
-                "https://docs.google.com/document/d/1YnBwxkaUkrPTfNApRxVJFtAervV4IC5b82C264Q758c",
-                "https://docs.google.com/document/d/1cbXW7dmA2FqB95sLvKcgmDDLkoo-fXQA0wsFMlrl7tE",
-                "https://docs.google.com/document/d/1erdqGi42zjY45F9oxHFqF_i18-EmNVV3GjqZ23nc4nU",
-                "https://docs.google.com/document/d/1qFu58N3Bz1_96QBz2xnU0QslDCX-QnwpnClNymNAIO8",
-                "https://docs.google.com/document/d/1zd2Y78Sn4uH-07LuhS-t4kjd4epF7j8gj3cblQpeNuk"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/medhatithi/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/11qPyu50Neikx_4_AtDfKnog8jmrEU_D643KB8_jl5DU",
+                    "https://docs.google.com/document/d/14uGnZRxAdw0ESrK8w9WUApL2MLCthg126dXOUALid_M",
+                    "https://docs.google.com/document/d/1FviRxlBQ75omCWmOsmpPiZlnzlmt1QI3ac2GhDUq1Ik",
+                    "https://docs.google.com/document/d/1HcyWmuwNHQ0PyYa6TEqY96Xcs8zSKoep8Ln1yMu89iA",
+                    "https://docs.google.com/document/d/1InpV9Eh1FFNcnTGReNjJ305nX-snhoBMJFJgR-hAO4g",
+                    "https://docs.google.com/document/d/1KNOIyjXIRSNqWRYmkGXrnF6ac6n8w3awVeqWwpZqCxU",
+                    "https://docs.google.com/document/d/1Kn8oAXFeOXVPiG660vmrT3ltKamn5FbvEZ7vh7UjdfE",
+                    "https://docs.google.com/document/d/1O13pFkOSOq-3c_GBD7v9gvdLPXCA9rBHH1JeyBsp87Y",
+                    "https://docs.google.com/document/d/1SyaTwJSs33_DbA3Du3_rKsvP_VVm8dHP-h_CZ71UPKo",
+                    "https://docs.google.com/document/d/1XPSCZCFd42oEujTCebnx3kKVdmFh5sK_ctI84LRXsq4",
+                    "https://docs.google.com/document/d/1YnBwxkaUkrPTfNApRxVJFtAervV4IC5b82C264Q758c",
+                    "https://docs.google.com/document/d/1cbXW7dmA2FqB95sLvKcgmDDLkoo-fXQA0wsFMlrl7tE",
+                    "https://docs.google.com/document/d/1erdqGi42zjY45F9oxHFqF_i18-EmNVV3GjqZ23nc4nU",
+                    "https://docs.google.com/document/d/1qFu58N3Bz1_96QBz2xnU0QslDCX-QnwpnClNymNAIO8",
+                    "https://docs.google.com/document/d/1zd2Y78Sn4uH-07LuhS-t4kjd4epF7j8gj3cblQpeNuk"
+                ]
+            }
         },
         "112538": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1Gzy39TfUhVQeATcAK2u_1SRbE5P56GEI3gJGQENOBw4",
-                "https://docs.google.com/document/d/1bbOZp7PjoIFTmbYo142wDqXp4LAlSLxEnXniHzwP4Io"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/caturvargacintamani/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1Gzy39TfUhVQeATcAK2u_1SRbE5P56GEI3gJGQENOBw4",
+                    "https://docs.google.com/document/d/1bbOZp7PjoIFTmbYo142wDqXp4LAlSLxEnXniHzwP4Io"
+                ]
+            }
         },
         "110200": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1-208O-oJYj6MyyBmsq1TckbJ6PtTUAajY5x5A8muDCY"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/dayabhaga/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1-208O-oJYj6MyyBmsq1TckbJ6PtTUAajY5x5A8muDCY"
+                ]
+            }
         },
         "110675": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1XIOxiedvLfl1C8x6O0UirznKzajarQWJewG6f0W8HaM"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/divyatattva/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1XIOxiedvLfl1C8x6O0UirznKzajarQWJewG6f0W8HaM"
+                ]
+            }
         },
         "42486": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/12KiNnl75x1t-NZqX1BMd4pkM-dC0uLti5rlYZVCP8PI"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/samanya-praghattaka-tristhalisetu/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/12KiNnl75x1t-NZqX1BMd4pkM-dC0uLti5rlYZVCP8PI"
+                ]
+            }
         },
         "41616": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1BHS5GfDkgD3ezXvhEEUUHdVZ9d1UuhLFCTJur-v6si0"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/sudradharmatattvaprakasa/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1BHS5GfDkgD3ezXvhEEUUHdVZ9d1UuhLFCTJur-v6si0"
+                ]
+            }
         },
         "89381": {
-            "UTA Dharmaśāstra": [
-                "https://docs.google.com/document/d/1Zqq4EACuDzbEittYgmgDKYHm0_4aMtgPuUmGcQdkpT8"
-            ]
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/yatidharmasamuccaya/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1Zqq4EACuDzbEittYgmgDKYHm0_4aMtgPuUmGcQdkpT8"
+                ]
+            }
         },
         "88987": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=6&wat_id=7&ter_id=4&tra_id=77&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=6"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=6&wat_id=7&ter_id=4&tra_id=77&show_file_content=1"
+                ]
+            }
         },
         "88986": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=3&wat_id=5&ter_id=1&tra_id=70&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=3"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=3&wat_id=5&ter_id=1&tra_id=70&show_file_content=1"
+                ]
+            }
         },
         "88991": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=10&wat_id=23&ter_id=3&tra_id=83&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=10"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=10&wat_id=23&ter_id=3&tra_id=83&show_file_content=1"
+                ]
+            }
         },
         "88988": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=5&wat_id=12&ter_id=2&tra_id=107&show_file_content=1",
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=5&wat_id=6&ter_id=2&tra_id=95&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=5"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=5&wat_id=12&ter_id=2&tra_id=107&show_file_content=1",
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=5&wat_id=6&ter_id=2&tra_id=95&show_file_content=1"
+                ]
+            }
         },
         "88989": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=7&wat_id=8&ter_id=5&tra_id=103&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=7"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=7&wat_id=8&ter_id=5&tra_id=103&show_file_content=1"
+                ]
+            }
         },
         "88994": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=9&wat_id=10&ter_id=7&tra_id=72&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=9"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=9&wat_id=10&ter_id=7&tra_id=72&show_file_content=1"
+                ]
+            }
         },
         "88820": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=17&wat_id=29&ter_id=4&tra_id=79&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=17"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=17&wat_id=29&ter_id=4&tra_id=79&show_file_content=1"
+                ]
+            }
         },
         "88345": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=16&wat_id=28&ter_id=4&tra_id=78&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=16"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=16&wat_id=28&ter_id=4&tra_id=78&show_file_content=1"
+                ]
+            }
         },
         "88346": {
-            "DiPAL DCV": [
-                "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=14&wat_id=25&ter_id=7&tra_id=73&show_file_content=1"
-            ]
+            "DiPAL DCV": {
+                "web HTML work page": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=14"
+                ],
+                "web HTML text": [
+                    "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=14&wat_id=25&ter_id=7&tra_id=73&show_file_content=1"
+                ]
+            }
         }
     },
     "collection_total_link_counts": {

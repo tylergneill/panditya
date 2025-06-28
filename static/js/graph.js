@@ -226,15 +226,38 @@ function renderGraph(graph) {
         return m ? m[1] : basename(link);
       },
 
-      // ---- UTA Dharmaśāstra (Google Docs) ----------------------------------
-      'UTA Dharmaśāstra': (_link, _col, idx, total) =>
-      total > 1 ? `Google Doc ${idx + 1}` : 'Google Doc',
+      // ---- UTA Dharmaśāstra -----------------------------------------------
+      'UTA Dharmaśāstra': (link, _col, idx, total) => {
+
+        /* 1.  Google-Docs links → "Google Doc", enumerated if multiple */
+        if (link.includes('docs.google.com/document')) {
+          return total > 1 ? `Google Doc ${idx + 1}` : 'Google Doc';
+        }
+
+        /* 2.  UT Austin “sites” links → everything after ".../resources/", no trailing slash */
+        const m = link.match(/\/resources\/([^?#]+?)(\/)?$/);   // captures path after /resources/
+        if (m) {
+          const label = decodeURIComponent(m[1]);               // un-escape things like %e1%b9%a3
+          return label;
+        }
+
+        /* 3.  Fallback (shouldn’t hit, but keeps menu usable) */
+        return basename(link);
+      },
 
       // ---- DiPAL DCV --------------------------------------------------------
       'DiPAL DCV': link => {
-        const m = link.match(/tra_id=(\d+)/); // 77
-        return m ? m[1] : basename(link);
-      }
+        /* Prefer tra_id when it exists (translated text). */
+        let m = link.match(/tra_id=(\d+)/);
+        if (m) return m[1];          // e.g. 77
+
+        /* Otherwise use wor_id (work-level page). */
+        m = link.match(/wor_id=(\d+)/);
+        if (m) return m[1];          // e.g. 6
+
+        /* Fallback: last path segment / basename */
+        return basename(link);
+      },
     };
 
     // helper for the common “take last path segment, no ext”
