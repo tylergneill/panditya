@@ -81,6 +81,14 @@ Component 10:
   ----
 
 Component 11:
+  Amṛta anubhava (114445) (work)
+  Jñāneśvara (85577) (author)
+  Raghunātha Mādhava Bhagare (86977) (author)
+  Bhavārthadīpikā (89992) (work)
+  Tīkā on Jñāneśvara's Bhāvārthadīpikā (94589) (work)
+  ----
+
+Component 12:
   Ananta Bhaṭṭa (85926) (author)
   Jātiśaktivāda (91124) (work)
   Padamañjarī (91125) (work)
@@ -88,7 +96,7 @@ Component 11:
   Tarkāmṛtataraṅginī (91127) (work)
   ----
 
-Component 12:
+Component 13:
   Ananta Śambhu (87102) (author)
   Trilocana Śivācārya (87861) (author)
   Vyākhyā on Trilocana Śivācārya's Siddhāntasārāvalī (94747) (work)
@@ -96,7 +104,7 @@ Component 12:
   Siddhāntasārāvalī (95629) (work)
   ----
 
-Component 13:
+Component 14:
   Narahari (86453) (author)
   Divākara (86479) (author)
   Bodhasāra (93372) (work)
@@ -104,7 +112,7 @@ Component 13:
   Arthadīpa on Narahari's Bodhasāra (93440) (work)
   ----
 
-Component 14:
+Component 15:
   Āryaśūra (85195) (author)
   Parāmitāsāra (88557) (work)
   Bodhisattvakarmaphalasaṃkṣiptanirdeśasūtra (88558) (work)
@@ -112,7 +120,7 @@ Component 14:
   Praṇidhānasaptati (88560) (work)
   ----
 
-Component 15:
+Component 16:
   Cinnappayya (86180) (author)
   Atideśalakṣaṇavicāra (92223) (work)
   Durūhaśīkṣā (92224) (work)
@@ -120,7 +128,7 @@ Component 15:
   Viṣayasaṅgraha (92226) (work)
   ----
 
-Component 16:
+Component 17:
   Bālacandra (87129) (author)
   Kamalakīrti (87388) (author)
   Dīpikā on a Tattvasāra (94777) (work)
@@ -128,7 +136,7 @@ Component 16:
   Tattvasāra (96157) (work)
   ----
 
-Component 17:
+Component 18:
   Karpūramañjarī (108129) (work)
   Viddhaśālabhañjikā (109690) (work)
   Rājaśekhara (96322) (author)
@@ -136,7 +144,7 @@ Component 17:
   Bālarāmāyaṇa (97239) (work)
   ----
 
-Component 18:
+Component 19:
   Raghunātha Dāsa (86310) (author)
   Baṅgeśvara Bidyābhūṣaṇa (87141) (author)
   Śriśrīstavāvalī (92924) (work)
@@ -144,7 +152,7 @@ Component 18:
   Ṭīkā on Raghunaṭha Dāsa's Śrīśrīstavāvali (94790) (work)
   ----
 
-Component 19:
+Component 20:
   Ṣaḍākṣaradeva (86016) (author)
   Bhāktādhikāyaśataka (91467) (work)
   Śivādhikāyaratnāvalī (91468) (work)
@@ -152,7 +160,23 @@ Component 19:
   Kavikarṇarasāyanam (99353) (work)
   ----
 
-Component 20:
+Component 21:
+  Gaṅgālaharī (111006) (work)
+  Bhāminīvilāsa (112109) (work)
+  Gaṅgālarī (113159) (work)
+  Bhāminīvilāsaṭīkā (114853) (work)
+  Paṇḍita Jagannātha (40709) (author)
+  ----
+
+Component 22:
+  Gaṇeśadaivajña (113616) (author)
+  Jātakālaṅkāra (113617) (work)
+  Haribhānu (113618) (author)
+  Jātakālaṁkāraṭīkā (113619) (work)
+  Bhāvādhyāya (114849) (work)
+  ----
+
+Component 23:
   Bodhicaryāvatāra (113821) (work)
   Prajñāpāramitā Parichchheda (113822) (work)
   Prajñākaramati (113823) (author)
@@ -160,7 +184,7 @@ Component 20:
   Bodhicaryā Bhāṣāṭīkāmanoramā (113825) (work)
   ----
 
-Component 21:
+Component 24:
   Vibhramaḍambara (108894) (work)
   Varṇanighaṇṭa (108895) (work)
   Cāmuṇḍa Kāyastha (40946) (author)
@@ -168,7 +192,7 @@ Component 21:
   Rasasaṅketakalikā (42401) (work)
   ----
 
-Component 22:
+Component 25:
   Svāminārāyaṇa (86365) (author)
   Sahajananda (86495) (author)
   Śikṣāpatra (93078) (work)
@@ -176,7 +200,7 @@ Component 22:
   Commentary on Svaminarayana's Siksapatra (93502) (work)
   ----
 
-Component 23:
+Component 26:
   Saramati (85142) (author)
   Vairocanarakṣita (87895) (author)
   Ratnagotravibhāga Uttaratantra (88356) (work)
@@ -184,7 +208,7 @@ Component 23:
   Commentary on the Ratnagotravibhāga-Uttaratantra (95667) (work)
   ----
 
-Component 24:
+Component 27:
   Dāmodara Mahāpātra (86976) (author)
   Sāṃkhyatattvadīpikā (94585) (work)
   Sarvadarśanakaumudī (94586) (work)
@@ -192,7 +216,7 @@ Component 24:
   Nyāyadarśaḥ navīnarityanusāri sugamananam nyāyaprakaraṇam (94588) (work)
   ----
 
-Component 25:
+Component 28:
   Nārāyaṇa Guru (86753) (author)
   G.Bālakṛṣṇa Nayar (86754) (author)
   Darśanamālā (94152) (work)
@@ -200,7 +224,7 @@ Component 25:
   Śivāravindam on Nārāyaṇa Guru's Darśanamālā (94154) (work)
   ----
 
-Component 26:
+Component 29:
   Nighaṇṭumālā (104195) (work)
   Dhanvantari (40824) (author)
   Vaidyasāra (41817) (work)
@@ -208,7 +232,7 @@ Component 26:
   Vaidyabhāskarodaya (41904) (work)
   ----
 
-Component 27:
+Component 30:
   Śivānanda Sarasvatī (86215) (author)
   Durgādāsa Vidyāvāgīśa (86248) (author)
   Gītānididhyāsanī (92478) (work)
@@ -216,7 +240,7 @@ Component 27:
   Yogacintāmaṇiṭīkā (92596) (work)
   ----
 
-Component 28:
+Component 31:
   Vādibhā Siṃha (85234) (author)
   Gadyacintāmaṇi (88753) (work)
   Navapadārthaniścaya (88754) (work)
@@ -224,7 +248,7 @@ Component 28:
   Vādanyāya (88756) (work)
   ----
 
-Component 29:
+Component 32:
   Maṇirāmamiśra (40448) (author)
   Kālikāprasāda (40581) (author)
   Vṛttaratnāvalī (41385) (work)
@@ -232,7 +256,7 @@ Component 29:
   Vṛttaratnāvalīcandrikā (41535) (work)
   ----
 
-Component 30:
+Component 33:
   Rāmabhadra Dīkṣita (96709) (author)
   Śṛṅgāratilakabhāṇa (96710) (work)
   Patāñjalicaritam (96711) (work)
@@ -240,7 +264,7 @@ Component 30:
   Paribhāṣavṛttivyākhyāna (99350) (work)
   ----
 
-Component 31:
+Component 34:
   Somadeva Sūri (85834) (author)
   Jayacandra Gaṇi (85837) (author)
   Saṃyuktakaumudī (90792) (work)
@@ -248,7 +272,7 @@ Component 31:
   Vṛtti on Jinaharṣa Gaṇi’s Saṃyaktvakaumudī (90797) (work)
   ----
 
-Component 32:
+Component 35:
   Nañjarāja (86344) (author)
   Tallayārya (86346) (author)
   Vivaraṇa on a Kaṇādasaṃgraha (93037) (work)
@@ -256,7 +280,7 @@ Component 32:
   Kaṇādasaṃgraha (96015) (work)
   ----
 
-Component 33:
+Component 36:
   Maheśvara (106581) (author)
   Karaṇaśekhara (106582) (work)
   Pratiṣṭhāvidhidīpaka (106584) (work)
@@ -264,7 +288,7 @@ Component 33:
   Laghujātakaṭīkā (106586) (work)
   ----
 
-Component 34:
+Component 37:
   Puruṣottama (102632) (author)
   Viṣṇubhaktikalpalatā (102633) (work)
   Mahīdhara (102640) (author)
@@ -272,7 +296,7 @@ Component 34:
   Viṣṇubhaktiprabandha (102703) (work)
   ----
 
-Component 35:
+Component 38:
   Veṅkaṭādhvarin (86098) (author)
   Mīmāṃsāmakaranda (91736) (work)
   Nyāyapadma (91737) (work)
@@ -280,7 +304,7 @@ Component 35:
   Vidhitrayaparitrāṇa (91739) (work)
   ----
 
-Component 36:
+Component 39:
   Nīlakaṇṭhadīkṣita (41081) (author)
   Saubhāgyacandrātapa (96336) (work)
   Śivalīlārṇava (96348) (work)
@@ -288,7 +312,7 @@ Component 36:
   Nalacaritram (96714) (work)
   ----
 
-Component 37:
+Component 40:
   Somadeva Sūri (102252) (author)
   Nītivākyāmṛta (102253) (work)
   Nēminātha (108753) (author)
@@ -296,7 +320,7 @@ Component 37:
   Yaśastilaka (96682) (work)
   ----
 
-Component 38:
+Component 41:
   Vaidyarāja (40484) (author)
   Rasarasārṇava (41425) (work)
   Sukhabodha (41426) (work)
@@ -304,7 +328,7 @@ Component 38:
   Vaidyamahodadhi (41488) (work)
   ----
 
-Component 39:
+Component 42:
   Śivajñāna Svāmi (86364) (author)
   Siddhāntamarabukhaṇḍanakhaṇḍana (93074) (work)
   Śivasaṃvādavuraimaruppu (93075) (work)
@@ -312,7 +336,16 @@ Component 39:
   Vairakuppayam (93077) (work)
   ----
 
-Component 40:
+Component 43:
+  Adbhutaśānti (114335) (work)
+  Baudhāyana (114370) (author)
+  Baudhāyanadarśapūrṇamāsaprayoga (114811) (work)
+  Baudhāyanayajñatantrapaśuprayoga (114839) (work)
+  Bodhāyanacayanaprayoga (114869) (work)
+  Āśvalāyanopayogī baudhāyana darśapaurṇamāsa prayoga (114872) (work)
+  ----
+
+Component 44:
   Mātṛceṭa (85100) (author)
   Mahārājakaniṣkalekha (88113) (work)
   Varṇārhavaraṇa (88114) (work)
@@ -321,16 +354,7 @@ Component 40:
   Praṇidhanasaptati (88117) (work)
   ----
 
-Component 41:
-  Mahidāsa (112790) (author)
-  Aitareya Brāhmaṇa (112791) (work)
-  Vedārthaprakāśa Aitareyabrāhmaṇabhāṣya (112792) (work)
-  Aitareya Āraṇyaka (113068) (work)
-  Sāyaṇa (40774) (author)
-  Introduction to the Rgveda (90398) (work)
-  ----
-
-Component 42:
+Component 45:
   Amaru (109143) (author)
   Amaruśataka (109144) (work)
   Arjunavarmadeva (109253) (author)
@@ -339,7 +363,7 @@ Component 42:
   Śṛṅgāradīpikā (114185) (work)
   ----
 
-Component 43:
+Component 46:
   Amṛtānanda Tīrtha (85945) (author)
   Paramapadanirṇāyakaprakaraṇa (91215) (work)
   Tātparyadīpikā (91216) (work)
@@ -348,7 +372,7 @@ Component 43:
   Śivatattvaviveka (91219) (work)
   ----
 
-Component 44:
+Component 47:
   Padmanābhācārya (86356) (author)
   Ananta Sūri (87103) (author)
   Padārthasaṃgraha and Madhvasiddhāntasāra thereon (93061) (work)
@@ -357,7 +381,7 @@ Component 44:
   Commentary on Padmanābha's Padārthasaṃgraha (94748) (work)
   ----
 
-Component 45:
+Component 48:
   Murāri Miśra (85521) (author)
   Ekādaśādyadhikaraṇa (89803) (work)
   Tripādīnītinayana (89804) (work)
@@ -366,7 +390,7 @@ Component 45:
   Smrtyadhikaraṇa (89807) (work)
   ----
 
-Component 46:
+Component 49:
   Āryadevapada (85241) (author)
   Cittaviśuddhiprakaraṇa (88799) (work)
   Jñānasārasamuccaya (88800) (work)
@@ -375,7 +399,7 @@ Component 46:
   Svadisthanaprabodha (88803) (work)
   ----
 
-Component 47:
+Component 50:
   Basava (40490) (author)
   Subhāṣitasuradruma (41537) (work)
   Sūktisudhākara (41538) (work)
@@ -384,7 +408,7 @@ Component 47:
   Śivatattvaratnākara (92632) (work)
   ----
 
-Component 48:
+Component 51:
   Svātmārāma (85680) (author)
   Brahmānanda (86602) (author)
   Umāpati (87880) (author)
@@ -393,7 +417,7 @@ Component 48:
   Ṭippaṇī (95650) (work)
   ----
 
-Component 49:
+Component 52:
   Kṛṣṇa Caitanya Deva (85805) (author)
   Viṭṭalanātha (87995) (author)
   Śikṣāśataka (90719) (work)
@@ -402,7 +426,7 @@ Component 49:
   Commentary on Kṛṣṇa Caitanya Deva's Premāmṛtarasāyanastotra (95787) (work)
   ----
 
-Component 50:
+Component 53:
   Maṅkha (109054) (author)
   Śrīkaṇṭhacarita (109055) (work)
   Śrīkaṇṭhacaritaṭīkā (109057) (work)
@@ -411,7 +435,7 @@ Component 50:
   Jonarāja (99828) (author)
   ----
 
-Component 51:
+Component 54:
   Garga (96408) (author)
   Vṛddhagargasaṃhitā (96410) (work)
   Gargasaṃhitā (37 adhyāyas) (96411) (work)
@@ -420,7 +444,7 @@ Component 51:
   Uttaragārgyasaṃhitā (96420) (work)
   ----
 
-Component 52:
+Component 55:
   Jayadeva (109800) (author)
   Gītagovinda (109801) (work)
   Śrīkāntamiśra (112073) (author)
@@ -429,7 +453,7 @@ Component 52:
   Rasamañjarī (112282) (work)
   ----
 
-Component 53:
+Component 56:
   Nānā Rahasya Prayoga (111238) (work)
   Nāgārjuna Siddha (40856) (author)
   Yogaratnamālā (41968) (work)
@@ -438,7 +462,7 @@ Component 53:
   Govindacandra (99326) (author)
   ----
 
-Component 54:
+Component 57:
   Nārāyaṇa Bhiṣaj (40511) (author)
   Karmaprakāśa (41461) (work)
   Vaidyacintāmaṇi (41462) (work)
@@ -447,7 +471,7 @@ Component 54:
   Vātaghnatvādinirṇaya (41465) (work)
   ----
 
-Component 55:
+Component 58:
   Vidyāraṇya (102422) (author)
   Rāmakṛṣṇa (102423) (author)
   Vidyānanda (102424) (work)
@@ -456,7 +480,7 @@ Component 55:
   Viṣyānanda (with commentary) (102580) (work)
   ----
 
-Component 56:
+Component 59:
   Śaṅkara (40343) (author)
   Rāmanātha (40576) (author)
   Vaidyavinoda (41298) (work)
@@ -465,7 +489,7 @@ Component 56:
   Vaidyavinoda - commentary (41533) (work)
   ----
 
-Component 57:
+Component 60:
   Aṇṇaya (40235) (author)
   Abhinavakarṇāmṛta (41226) (work)
   Ācāryaviṃśatistotra (41227) (work)
@@ -475,7 +499,7 @@ Component 57:
   Vyāvahārikatsatyavakhaṇḍanasāra (41231) (work)
   ----
 
-Component 58:
+Component 61:
   Āḍhamalla (111142) (author)
   Śārṅgadharasaṃhitāpradīpikā (111143) (work)
   Gūḍhārthadīpikā (111144) (work)
@@ -485,7 +509,7 @@ Component 58:
   Vaidyakaśāstra (42183) (work)
   ----
 
-Component 59:
+Component 62:
   Dharmasūri (86681) (author)
   Nyāyavijaya (86733) (author)
   Pramāṇaparibhāṣā (94036) (work)
@@ -495,7 +519,7 @@ Component 59:
   Nyāyālaṃkāra on Dharmasūri's Pramāṇaparibhāṣā (94124) (work)
   ----
 
-Component 60:
+Component 63:
   Viṣṇu Sahasranāma Stotra (111137) (work)
   Varāhapurāṇa (111298) (work)
   Mānasasnānastotra (112322) (work)
@@ -505,7 +529,7 @@ Component 60:
   Rasaratnasindhu (42364) (work)
   ----
 
-Component 61:
+Component 64:
   Maitrīpa (85393) (author)
   Amanskārādhāra (89373) (work)
   Apratiṣṭhānaprakāśikā (89374) (work)
@@ -515,7 +539,7 @@ Component 61:
   Tattvadeśikā (89378) (work)
   ----
 
-Component 62:
+Component 65:
   Vyāsa (108876) (author)
   Aṣṭādaśaślokīgītā (112320) (work)
   Paravastu Vedāntācārya (114166) (author)
@@ -525,7 +549,7 @@ Component 62:
   Mahābhārata (42078) (work)
   ----
 
-Component 63:
+Component 66:
   Jinacandra (85288) (author)
   Jñānabhūṣaṇa (85823) (author)
   Siddhāntasāra (88948) (work)
@@ -535,7 +559,7 @@ Component 63:
   Commentary on Jinacandra's Siddhāntasāra (90754) (work)
   ----
 
-Component 64:
+Component 67:
   Hāla (96665) (author)
   Gāthāsaptaśatī (96666) (work)
   Vrajarāja Dīkṣita (97063) (author)
@@ -545,7 +569,7 @@ Component 64:
   Bhāvaleśaprakāśikā (97070) (work)
   ----
 
-Component 65:
+Component 68:
   Veṇīdatta (86324) (author)
   Bhedajayaśrī (92982) (work)
   Padārthamaṇḍana (92983) (work)
@@ -555,7 +579,7 @@ Component 65:
   Vakyārtharatnaprabhā (92987) (work)
   ----
 
-Component 66:
+Component 69:
   Citradhara (86321) (author)
   Duḥkhamocana Jhā (87249) (author)
   Pramāṇapramoda (92949) (work)
@@ -565,7 +589,7 @@ Component 66:
   Commentary of Citradhara's Pramāṇapramoda (94915) (work)
   ----
 
-Component 67:
+Component 70:
   Sāhib Rām (109485) (author)
   Dāmodara Śāstrin (109486) (author)
   Pañcamī Rājataraṅgiṇī (109492) (work)
@@ -575,7 +599,7 @@ Component 67:
   Rājataraṅgiṇīsaṅgraha 2 (109504) (work)
   ----
 
-Component 68:
+Component 71:
   Vāsudeva (86488) (author)
   Narasiṃha (87539) (author)
   Raghunāthendra (87639) (author)
@@ -585,7 +609,7 @@ Component 68:
   Grantha on Vāsudeva's Vāsudevamanana (95386) (work)
   ----
 
-Component 69:
+Component 72:
   Reṇuka (85491) (author)
   Maritoṃdārya (86380) (author)
   Pañcarātravyākhyā (89743) (work)
@@ -595,7 +619,7 @@ Component 69:
   Vīraśaivānandacandrikā (93112) (work)
   ----
 
-Component 70:
+Component 73:
   Niścala Dāsa Svāmin (86435) (author)
   Pītāmbarajī (86510) (author)
   Vṛttiprabhākara (93282) (work)
@@ -605,7 +629,7 @@ Component 70:
   Vṛttiratnavali on Niścala Dāsa's Vṛttiprabhakara (93563) (work)
   ----
 
-Component 71:
+Component 74:
   Godāvaramiśra (40307) (author)
   Yogacintāmaṇi (41256) (work)
   Hariharacaturaṅga (41257) (work)
@@ -616,7 +640,7 @@ Component 71:
   Tantracintāmaṇi (41262) (work)
   ----
 
-Component 72:
+Component 75:
   Khecarīvidyā (108579) (work)
   Mahākālayogaśāstra (108581) (work)
   Rāmāyaṇvidhi (112106) (work)
@@ -627,7 +651,7 @@ Component 72:
   Yogabīja (94700) (work)
   ----
 
-Component 73:
+Component 76:
   Veṅkatācārya (86329) (author)
   Advaitavidyāvicāra (92998) (work)
   Ānandatāratamyakhaṇḍana (92999) (work)
@@ -638,18 +662,7 @@ Component 73:
   Vedāntakarikāvalī (93004) (work)
   ----
 
-Component 74:
-  Kāśīnātha (40431) (author)
-  Rājānaka bhagavanta (40432) (author)
-  Rāmanātha vaidya (40433) (author)
-  Bāladeva (40434) (author)
-  Ajīrṇamañjarī (41369) (work)
-  Ajīrṇamañjarī - commentary (41370) (work)
-  Ajīrṇamañjarī - commentary (41371) (work)
-  Ajīrṇamañjarī- commentary (41372) (work)
-  ----
-
-Component 75:
+Component 77:
   Aṣṭāvakrasaṃkhyākrama (112865) (work)
   Aṣṭāvakra (97354) (author)
   Aṣṭāvakra (97355) (work)
@@ -660,7 +673,7 @@ Component 75:
   Aṣṭāvakrabhāṣāṭīkayuta (97428) (work)
   ----
 
-Component 76:
+Component 78:
   Nandarāma Tarkavāgīśa (86246) (author)
   Kāśīrāma (86283) (author)
   Ātma(tattva)prakāśikā (92591) (work)
@@ -671,7 +684,7 @@ Component 76:
   Ṣaḍcakrakrama (Pūrṇānanda) (96109) (work)
   ----
 
-Component 77:
+Component 79:
   Nārāyaṇadāsa Kavirāja (40512) (author)
   Śārṅgadhara (40513) (author)
   Āyurvedaparibhāṣā (41466) (work)
@@ -682,7 +695,7 @@ Component 77:
   Vyādhiśaṃkara (41471) (work)
   ----
 
-Component 78:
+Component 80:
   Dānamayūkha (111058) (work)
   Nīlakaṇṭha (40656) (author)
   Vyavahāramayūkha (41632) (work)
@@ -693,7 +706,7 @@ Component 78:
   Śāntikaustubha (41642) (work)
   ----
 
-Component 79:
+Component 81:
   Tulsidās (112334) (author)
   Rāmacaritamānasa (112336) (work)
   Rāmacaritamānasa -  Bālakāṇḍa (112337) (work)
@@ -704,7 +717,7 @@ Component 79:
   Hanumāna Bāhuka (112346) (work)
   ----
 
-Component 80:
+Component 82:
   Yaśasvatsāgara (86279) (author)
   Pramāṇapadārtha (92705) (work)
   Syadvadamuktavali (92706) (work)
@@ -715,7 +728,19 @@ Component 80:
   Śabdārthasambandha (92711) (work)
   ----
 
-Component 81:
+Component 83:
+  Ajīrṇamañjarī (114434) (work)
+  Kāśīnātha (40431) (author)
+  Rājānaka bhagavanta (40432) (author)
+  Rāmanātha vaidya (40433) (author)
+  Bāladeva (40434) (author)
+  Ajīrṇamañjarī (41369) (work)
+  Ajīrṇamañjarī - commentary (41370) (work)
+  Ajīrṇamañjarī - commentary (41371) (work)
+  Ajīrṇamañjarī- commentary (41372) (work)
+  ----
+
+Component 84:
   Dharmasāgara (85936) (author)
   Amṛtasāgara (86238) (author)
   Nayacakra (91185) (work)
@@ -727,7 +752,7 @@ Component 81:
   Bālāvabodha on Dharmasāgara Gaṇi's Sarvajñaśataka (92575) (work)
   ----
 
-Component 82:
+Component 85:
   Nijaguṇa Śivayogin (85801) (author)
   Śāntaliṅga Śivayogin (86069) (author)
   Śivaputra Svāmī (86941) (author)
@@ -739,7 +764,7 @@ Component 82:
   Commentary on Nijaguṇa Śivayogin's Anubhavasāra (94532) (work)
   ----
 
-Component 83:
+Component 86:
   Śubhagupta (85224) (author)
   Anyāpohasiddhi (88713) (work)
   Bāhyārthasiddhikārikā (88714) (work)
@@ -751,7 +776,7 @@ Component 83:
   Paralokasiddhi and commentary (88720) (work)
   ----
 
-Component 84:
+Component 87:
   Āpastamba Śulbasūtra (105224) (work)
   Āpastamba (113071) (author)
   Āpastambasūtra (113072) (work)
@@ -763,7 +788,7 @@ Component 84:
   Āpastamba Gṛhyasūtra (42521) (work)
   ----
 
-Component 85:
+Component 88:
   Bhāvamiśra (40352) (author)
   Jayadeva (40355) (author)
   Bhāvaprakāśa (41312) (work)
@@ -775,7 +800,7 @@ Component 85:
   Ratimañjarī (42282) (work)
   ----
 
-Component 86:
+Component 89:
   Pratijñāyaugandharāyaṇa (108783) (work)
   Bhāsa (97249) (author)
   Dūtaghaṭotkaca (97250) (work)
@@ -787,7 +812,7 @@ Component 86:
   Pañcarātra (97348) (work)
   ----
 
-Component 87:
+Component 90:
   Siddhāntamuktāvalī (with commentary) (103746) (work)
   Prakāśānanda (85817) (author)
   Nānā Dīkṣita (85967) (author)
@@ -799,7 +824,7 @@ Component 87:
   Bhasanuvada on Prakasananda's Vedantasiddhantamuktavali (94409) (work)
   ----
 
-Component 88:
+Component 91:
   Vaiṣṇavadayāladāsa (100890) (author)
   Bhagavadbhaktiratnāvali (100891) (work)
   Bhagavadbhaktiratnāvalī (101220) (work)
@@ -811,7 +836,7 @@ Component 88:
   Bhaktiratnāvalī and Kāntimālā thereon (90669) (work)
   ----
 
-Component 89:
+Component 92:
   Manusmṛti (102278) (work)
   Bhāruci (102279) (author)
   Manuśāstravivaraṇa (102280) (work)
@@ -823,7 +848,7 @@ Component 89:
   Manubhāṣya (88922) (work)
   ----
 
-Component 90:
+Component 93:
   Jyotiṣaratnamālā (105395) (work)
   Jātakakarmapaddhati (105562) (work)
   Daivajñavallabhā (105986) (work)

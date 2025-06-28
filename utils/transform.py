@@ -43,7 +43,7 @@ def create_entities():
     Only Persons with at least one associated work are kept.
     """
 
-    input_filename = f"{PANDIT_DATA_VERSION}-works-cleaned.csv"
+    input_filename = f"{PANDIT_DATA_VERSION}-extracted-entities-cleaned.csv"
     input_csv_path = os.path.join(current_file_dir, relative_data_dir, input_filename)
 
     entities_by_id = {}
