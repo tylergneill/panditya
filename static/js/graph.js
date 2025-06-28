@@ -181,10 +181,6 @@ function renderGraph(graph) {
             .attr('class', 'custom-context-menu')
     }
 
-    // Type-to-path mapping for Open Link
-    const typeMapping = { author: "person", work: "work" };
-    const entityPath = typeMapping[d.type] || d.type;
-
     let etextMenuHtml = '';
 
     // One entry per “collection”.  Each entry is a function that
@@ -335,7 +331,7 @@ function renderGraph(graph) {
         <li class="has-submenu">
           <span>View on</span>
           <ul class="submenu">
-            <li><a href="https://www.panditproject.org/entity/${d.id}/${entityPath}" target="_blank">Pandit</a></li>
+            <li><a href="https://www.panditproject.org/node/${d.id}" target="_blank">Pandit</a></li>
             ${etextMenuHtml}
           </ul>
         </li>
