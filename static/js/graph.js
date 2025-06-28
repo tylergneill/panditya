@@ -187,17 +187,96 @@ function renderGraph(graph) {
 
     let etextMenuHtml = '';
 
-    function extractShortText(link) {
-        if (typeof link !== 'string') return ''; // Ensure link is a string to prevent errors
+    // One entry per “collection”.  Each entry is a function that
+    // receives (link, collection) and returns a label string.
+    //
+    // If you don’t supply a rule, the generic fallback is used.
 
-        // Split on both '/' and '=' and take the last segment
-        let parts = link.split(/[/=]/);
-        let shortText = parts[parts.length - 1];
+    const LABEL_EXTRACTORS = {
+      // ---- GRETIL -----------------------------------------------------------
+      GRETIL: link => basename(link),
 
-        // Strip off any extensions (e.g., '.html', '.php')
-        return shortText.replace(/\.[^.]+$/, '');
+      // ---- DCS --------------------------------------------------------------
+      // DCS has three link shapes, but all yield a short ID or title we can grab.
+      DCS: link => {
+        // • “index.php?…IDTextDisplay=165”   -> 165
+        const m = link.match(/IDTextDisplay=(\d+)/);
+        if (m) return m[1];
+
+        // • GitHub raw/tree path “…/files/SomeTitle”        -> SomeTitle
+        // • My own extractor tree “…/extracted/SomeTitle.txt” -> SomeTitle
+        return basename(link);
+      },
+
+      // ---- SARIT ------------------------------------------------------------
+      SARIT: link => basename(link),
+
+      // ---- Sanskrit Library / TITUS ----------------------------------------
+      'Sanskrit Library and TITUS': link => basename(link),
+
+      // ---- Vātāyana / Pramāṇa NLP ------------------------------------------
+      'Vātāyana and Pramāṇa NLP': link => {
+        const m = link.match(/text_abbrv=([^&]+)/); // HBṬ
+        return m ? decodeURIComponent(m[1]) : basename(link);
+      },
+
+      // ---- Muktabodha KSTS --------------------------------------------------
+      'Muktabodha KSTS': link => {
+        const m = link.match(/miri_catalog_number=([^&]+)/); // M00349
+        return m ? m[1] : basename(link);
+      },
+
+      // ---- UTA Dharmaśāstra -----------------------------------------------
+      'UTA Dharmaśāstra': (link, _col, idx, total) => {
+
+        /* 1.  Google-Docs links → "Google Doc", enumerated if multiple */
+        if (link.includes('docs.google.com/document')) {
+          return total > 1 ? `Google Doc ${idx + 1}` : 'Google Doc';
+        }
+
+        /* 2.  UT Austin “sites” links → everything after ".../resources/", no trailing slash */
+        const m = link.match(/\/resources\/([^?#]+?)(\/)?$/);   // captures path after /resources/
+        if (m) {
+          const label = decodeURIComponent(m[1]);               // un-escape things like %e1%b9%a3
+          return label;
+        }
+
+        /* 3.  Fallback (shouldn’t hit, but keeps menu usable) */
+        return basename(link);
+      },
+
+      // ---- DiPAL DCV --------------------------------------------------------
+      'DiPAL DCV': link => {
+        /* Prefer tra_id when it exists (translated text). */
+        let m = link.match(/tra_id=(\d+)/);
+        if (m) return m[1];          // e.g. 77
+
+        /* Otherwise use wor_id (work-level page). */
+        m = link.match(/wor_id=(\d+)/);
+        if (m) return m[1];          // e.g. 6
+
+        /* Fallback: last path segment / basename */
+        return basename(link);
+      },
+    };
+
+    // helper for the common “take last path segment, no ext”
+    function basename(url) {
+      if (typeof url !== 'string') return '';
+      return url.split(/[/=]/).pop().replace(/\.[^.]+$/, '');
     }
 
+    function getDisplayLabel(collection, link, idx = 0, total = 1) {
+      // Prefer explicit rule for this collection
+      const extractor = LABEL_EXTRACTORS[collection];
+      if (extractor) {
+          // pass link, collection, idx, total  → works for UTA Dharmaśāstra rule
+          return extractor(link, collection, idx, total);
+      }
+
+      // Fallback: same old “basename” heuristic
+      return basename(link);
+    }
 
     if (d.etext_links) {
         Object.entries(d.etext_links).forEach(([collection, links]) => {
@@ -209,8 +288,9 @@ function renderGraph(graph) {
                     // Ensure linkList is an array
                     let safeLinks = Array.isArray(linkList) ? linkList : [linkList];
 
-                    let linkItems = safeLinks.map(link => {
-                        return `<li><a href="${link}" target="_blank">${extractShortText(link)}</a></li>`;
+                    let linkItems = safeLinks.map((link, idx) => {
+                        const label = getDisplayLabel(collection, link, idx, safeLinks.length);
+                        return `<li><a href="${link}" target="_blank">${label}</a></li>`;
                     }).join('');
 
                     // Group by category (e.g., "GitHub", "web")
@@ -224,8 +304,9 @@ function renderGraph(graph) {
                 // If it's a simple list of links, handle normally
                 let safeLinks = Array.isArray(links) ? links : [links];
 
-                collectionLinks = safeLinks.map(link => {
-                    return `<li><a href="${link}" target="_blank">${extractShortText(link)}</a></li>`;
+                collectionLinks = safeLinks.map((link, idx) => {
+                    const label = getDisplayLabel(collection, link, idx, safeLinks.length);
+                    return `<li><a href="${link}" target="_blank">${label}</a></li>`;
                 }).join('');
             }
 
@@ -439,8 +520,6 @@ function renderGraph(graph) {
         .restart(); // Restart the simulation
     }
   });
-
-
 
   simulation.on('tick', () => {
     link
