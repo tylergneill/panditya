@@ -1,7 +1,7 @@
-Total nodes: 16943
-Isolated nodes: 3234 in 3234 components
-Extra small components (2-4 nodes): 3669 nodes in 1638 components
+Total nodes: 16939
+Isolated nodes: 3233 in 3233 components
+Extra small components (2-4 nodes): 3667 nodes in 1638 components
 Small components (5-9 nodes): 581 nodes in 93 components
 Medium components (10-25 nodes): 336 nodes in 23 components
 Large components (25-100 nodes): 73 nodes in 1 components
-Extra large components (101-10000 nodes): 9050 nodes in 1 components
+Extra large components (101-10000 nodes): 9049 nodes in 1 components
