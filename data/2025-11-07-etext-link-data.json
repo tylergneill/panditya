@@ -2217,7 +2217,7 @@
                     "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/kumArilabhaTTa_zlokavArtika.xml"
                 ],
                 "web HTML": [
-                    "https://hansel-library.info/static/data/texts/transforms/html/rich/kumArilabhaTTa_zlokavArtika.html"
+                    "https://hansel-library.info/texts/transforms/html/rich/kumArilabhaTTa_zlokavArtika.html"
                 ]
             }
         },
@@ -3849,7 +3849,7 @@
                     "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/bANa_kAdambarI.xml"
                 ],
                 "web HTML": [
-                    "https://hansel-library.info/static/data/texts/transforms/html/rich/bANa_kAdambarI.html"
+                    "https://hansel-library.info/texts/transforms/html/rich/bANa_kAdambarI.html"
                 ]
             }
         },
@@ -7523,7 +7523,7 @@
                     "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/zukasaptati_o.xml"
                 ],
                 "web HTML": [
-                    "https://hansel-library.info/static/data/texts/transforms/html/rich/zukasaptati_o.html"
+                    "https://hansel-library.info/texts/transforms/html/rich/zukasaptati_o.html"
                 ]
             }
         },
@@ -7536,7 +7536,7 @@
                     "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/zukasaptati_s.xml"
                 ],
                 "web HTML": [
-                    "https://hansel-library.info/static/data/texts/transforms/html/rich/zukasaptati_s.html"
+                    "https://hansel-library.info/texts/transforms/html/rich/zukasaptati_s.html"
                 ]
             }
         }
