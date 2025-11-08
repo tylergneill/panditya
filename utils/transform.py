@@ -200,6 +200,7 @@ def create_etext_links():
         'Vātāyana and Pramāṇa NLP': ('Vātāyana web HTML', 'Pramāṇa NLP GitHub'),
         'UTA Dharmaśāstra': ('web HTML', 'Google Doc'),
         'DiPAL DCV': ('web HTML work page', 'web HTML text'),
+        'HANSEL': ('GitHub TXT', 'GitHub XML', 'web HTML'),
     }
     collection_keys = list(collection_subtype_labels.keys())
 

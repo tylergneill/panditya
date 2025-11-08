@@ -14,6 +14,5 @@ COPY --chown=sanskrit:appgroup ./*.py /app/
 COPY --chown=sanskrit:appgroup ./*.json /app/
 COPY --chown=sanskrit:appgroup ./VERSION /app/
 USER sanskrit
-ENV PORT=5090
-CMD gunicorn --workers 4 --bind 0.0.0.0:$PORT --log-level info --error-logfile - flask_app:app
+CMD ["gunicorn", "--workers", "4", "--bind", "0.0.0.0:5090", "--log-level", "info", "--error-logfile", "-", "flask_app:app"]
 EXPOSE 5090
