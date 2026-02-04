@@ -84,6 +84,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       const data = await response.json();
 
       renderGraph(data.graph); // Render the graph from POST response
+
+      // On mobile, close the sidebar to reveal the graph
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar) sidebar.classList.remove('open');
     } catch (error) {
       console.error('Error generating graph:', error);
     }
@@ -128,8 +132,13 @@ function renderGraph(graph) {
   const initialCollisionRadius = +document.getElementById('collisionRadius').value;
   const initialCenterStrength = 1;
 
+  // Faster decay for small graphs so they settle quickly
+  const nodeCount = graph.nodes.length;
+  const alphaDecay = nodeCount <= 5 ? 0.08 : nodeCount <= 20 ? 0.05 : 0.0228;
+
   // Initialize the simulation based on slider values
   const simulation = d3.forceSimulation(graph.nodes)
+    .alphaDecay(alphaDecay)
     .force('link', d3.forceLink(graph.edges).id(d => d.id).distance(initialLinkDistance))
     .force('charge', d3.forceManyBody().strength(initialChargeStrength))
     .force('center', d3.forceCenter(width / 2, height / 2).strength(initialCenterStrength))
@@ -165,25 +174,67 @@ function renderGraph(graph) {
       }
       return 1; // or default
     })
-    .call(d3.drag()
-      .on('start', event => {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
-        event.subject.fx = event.subject.x;
-        event.subject.fy = event.subject.y;
-      })
-      .on('drag', event => {
-        event.subject.fx = event.x;
-        event.subject.fy = event.y;
-      })
-      .on('end', event => {
-        if (!event.active) simulation.alphaTarget(0);
-        event.subject.fx = null;
-        event.subject.fy = null;
-      }))
-    .on('contextmenu', (event, d) => {
-    // Prevent default browser context menu
-    event.preventDefault();
+    .call((() => {
+      // Long-press state, scoped for the drag callbacks
+      let longPressTimer = null;
+      let longPressFired = false;
+      let dragMoved = false;
 
+      return d3.drag()
+        .on('start', event => {
+          dragMoved = false;
+          longPressFired = false;
+
+          // Start long-press timer (fires context menu if no drag movement)
+          const src = event.sourceEvent;
+          const isTouchEvent = src && src.touches;
+          if (isTouchEvent) {
+            const touch = src.touches[0];
+            longPressTimer = setTimeout(() => {
+              longPressFired = true;
+              simulation.alphaTarget(0);
+              showNodeContextMenu(
+                { pageX: touch.pageX, pageY: touch.pageY, preventDefault: () => {} },
+                event.subject
+              );
+            }, 500);
+          }
+
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          event.subject.fx = event.subject.x;
+          event.subject.fy = event.subject.y;
+        })
+        .on('drag', event => {
+          // Any movement cancels the long-press
+          if (!dragMoved) {
+            const dx = event.x - event.subject.fx;
+            const dy = event.y - event.subject.fy;
+            if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
+              dragMoved = true;
+              clearTimeout(longPressTimer);
+            }
+          }
+          if (!longPressFired) {
+            event.subject.fx = event.x;
+            event.subject.fy = event.y;
+          }
+        })
+        .on('end', event => {
+          clearTimeout(longPressTimer);
+          if (!event.active) simulation.alphaTarget(0);
+          if (!longPressFired) {
+            event.subject.fx = null;
+            event.subject.fy = null;
+          }
+          longPressFired = false;
+        });
+    })())
+    .on('contextmenu', (event, d) => {
+      event.preventDefault();
+      showNodeContextMenu(event, d);
+    });
+
+  function showNodeContextMenu(event, d) {
     // Create or show a custom context menu
     let menu = d3.select('.custom-context-menu');
     if (menu.empty()) {
@@ -458,11 +509,13 @@ function renderGraph(graph) {
         menu.style('display', 'none');
       }
     });
-  });
+  }
 
-  // Hide menu on outside click
-  d3.select('body').on('click', (event) => {
-    d3.select('.custom-context-menu').style('display', 'none');
+  // Hide menu on outside click/tap
+  d3.select('body').on('click touchstart', (event) => {
+    if (!event.target.closest('.custom-context-menu')) {
+      d3.select('.custom-context-menu').style('display', 'none');
+    }
   });
 
   const labels = graphGroup.append('g')
