@@ -95,12 +95,17 @@ body.app-page {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  padding: 6px;
+  box-sizing: border-box;
 }
 
 #app-layout {
   display: flex;
   flex: 1;
   min-height: 0;
+  border: 5px solid var(--sidebar-border);
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 /* --- Graph Area --- */
@@ -140,8 +145,8 @@ body.app-page {
 
 /* --- Sidebar --- */
 #sidebar {
-  width: 300px;
-  min-width: 300px;
+  width: 340px;
+  min-width: 340px;
   background: var(--sidebar-bg);
   color: var(--sidebar-text);
   border-left: 2px solid var(--sidebar-border);
@@ -218,7 +223,7 @@ body.app-page {
 .sidebar-field input[type="number"] {
   width: 100%;
   padding: 8px 10px;
-  font-size: 14px;
+  font-size: 16px; /* 16px prevents iOS zoom on focus */
   border: 1px solid var(--input-border);
   border-radius: 5px;
   background-color: var(--input-bg);
@@ -496,9 +501,10 @@ button:hover { background: var(--red-hover); }
 .select2-initial {
   box-sizing: border-box;
   width: 100%;
-  height: 40px; /* Fixed height */
+  min-height: 40px;
+  height: auto;
   padding: 5px 12px; /* Match Select2 padding exactly */
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2; /* Add consistent line-height */
   border: 1px solid var(--input-border);
   border-radius: 5px;
@@ -511,16 +517,15 @@ button:hover { background: var(--red-hover); }
 ============================= */
 .select2-container .select2-selection--multiple {
   box-sizing: border-box;
-  height: 40px; /* Allow dynamic height if needed */
+  min-height: 40px;
+  height: auto;
   padding: 5px 12px; /* Consistent padding */
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2; /* Ensures text alignment matches */
   border: 1px solid var(--input-border);
   border-radius: 5px;
   background-color: var(--input-bg);
   color: var(--input-text);
-  overflow-y: auto; /* Add scrolling for many selected items */
-  scrollbar-width: thin; /* Thin scrollbar for modern browsers */
 }
 
 /* Selected Items (Chips) in Dropdown Input */
@@ -529,9 +534,9 @@ button:hover { background: var(--red-hover); }
   color: #ffffff !important; /* White text */
   border: none;
   border-radius: 4px;
-  padding: 5px 10px;
-  font-size: 14px;
-  margin: 2px 3px 0 0;
+  padding: 4px 8px;
+  font-size: 13px;
+  margin: 2px 3px 2px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   max-width: calc(100% - 20px); /* Prevent chips from overflowing */
   overflow: hidden;
@@ -582,6 +587,12 @@ button:hover { background: var(--red-hover); }
   border-radius: 5px;
   padding: 5px;
   margin: 5px; /* Add spacing around the search bar */
+  font-size: 16px; /* Prevent iOS zoom on focus */
+}
+
+/* Inline search inside multi-select */
+.select2-container--default .select2-search--inline .select2-search__field {
+  font-size: 16px; /* Prevent iOS zoom on focus */
 }
 
 /* =============================
@@ -738,6 +749,24 @@ button:hover { background: var(--red-hover); }
     margin: 0;
   }
 
+  #mobile-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #mobile-header-actions a {
+    color: var(--yellow-link);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+  }
+
+  #mobile-header-actions a:hover {
+    text-decoration: underline;
+    color: var(--yellow-link-hover);
+  }
+
   #sidebar-toggle {
     background: none;
     border: 1px solid rgba(255,255,255,0.3);
@@ -758,8 +787,8 @@ button:hover { background: var(--red-hover); }
   }
 
   #sidebar {
-    width: 100%;
-    min-width: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
     border-left: none;
     border-bottom: 2px solid var(--sidebar-border);
     max-height: 0;

@@ -17,7 +17,11 @@
   <!-- Mobile header (hidden on desktop, shown < 768px) -->
   <header id="mobile-header">
     <h1>Pāṇḍitya</h1>
-    <button id="sidebar-toggle">&#9776;</button>
+    <div id="mobile-header-actions">
+      <a href="/about">About</a>
+      <button class="dark-toggle" id="dark-toggle-mobile" title="Toggle dark mode">&#9790;</button>
+      <button id="sidebar-toggle">&#9776;</button>
+    </div>
   </header>
 
   <div id="app-layout">
@@ -137,7 +141,7 @@
       document.documentElement.setAttribute('data-theme', 'dark');
     }
 
-    document.getElementById('dark-toggle').addEventListener('click', function() {
+    function toggleDarkMode() {
       const current = document.documentElement.getAttribute('data-theme');
       if (current === 'dark') {
         document.documentElement.removeAttribute('data-theme');
@@ -146,7 +150,10 @@
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('panditya-theme', 'dark');
       }
-    });
+    }
+
+    document.getElementById('dark-toggle').addEventListener('click', toggleDarkMode);
+    document.getElementById('dark-toggle-mobile').addEventListener('click', toggleDarkMode);
 
     // Mobile sidebar toggle
     var toggleBtn = document.getElementById('sidebar-toggle');
