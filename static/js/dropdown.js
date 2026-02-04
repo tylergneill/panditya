@@ -56,8 +56,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     initializeSelect2('#works-dropdown', 'Works to include');
     initializeSelect2('#exclude-list-dropdown', 'Entities to not expand');
 
-    // Remove pre-initialization class
+    // Remove pre-initialization class and reveal sidebar content
     document.querySelectorAll('.select2-initial').forEach(el => el.classList.remove('select2-initial'));
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) sidebar.classList.remove('loading');
 
   } catch (error) {
     console.error('Error during initialization:', error);

@@ -502,18 +502,22 @@ button:hover { background: var(--red-hover); }
    Select2 Dropdown Styles
 ============================= */
 
-/* Pre-initialization: match Select2's final size to prevent layout shift */
+/* Pre-initialization: hide raw selects entirely */
 .select2-initial {
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  padding: 5px 12px;
-  font-size: 16px;
-  line-height: 1.2;
-  border: 1px solid var(--input-border);
-  border-radius: 5px;
-  background-color: var(--input-bg);
-  color: transparent; /* hide "0 items" */
+  display: none;
+}
+
+/* Hide sidebar content until Select2 is ready, then fade in */
+#sidebar.loading #input-controls,
+#sidebar.loading #tweak-controls,
+#sidebar.loading .sidebar-divider {
+  opacity: 0;
+}
+
+#sidebar #input-controls,
+#sidebar #tweak-controls,
+#sidebar .sidebar-divider {
+  transition: opacity 0.15s ease;
 }
 
 /* =============================
