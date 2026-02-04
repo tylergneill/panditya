@@ -1,12 +1,80 @@
 /* =============================
+   CSS Custom Properties (Theming)
+============================= */
+:root {
+  --purple-deep: #2f1746;
+  --purple-medium: #5a0b73;
+  --purple-light: #3a1249;
+  --purple-lighter: #4a175c;
+  --purple-accent: #6c2a7b;
+  --purple-node: #8e44ad;
+  --lavender: #e0afff;
+  --red-primary: #c0392b;
+  --red-hover: #a93226;
+  --red-node: #c0392b;
+  --orange-node: #e67e22;
+  --yellow-link: #ffcf77;
+  --yellow-link-hover: #ffc040;
+
+  /* Page-level colors */
+  --body-bg: var(--purple-deep);
+  --body-text: #ffffff;
+  --graph-bg: #f5f2ee;
+  --sidebar-bg: var(--purple-deep);
+  --sidebar-text: #ffffff;
+  --sidebar-border: var(--purple-medium);
+
+  /* Form / input colors */
+  --label-color: #ffffff;
+  --input-bg: #ffffff;
+  --input-text: #333333;
+  --input-border: var(--purple-medium);
+  --input-shadow: rgba(0, 0, 0, 0.2);
+
+  /* Graph elements */
+  --link-color: #a0a0a0;
+  --label-fill: var(--purple-medium);
+  --node-stroke: #ffffff;
+
+  /* Menus */
+  --menu-bg: #f8f8f8;
+  --menu-border: #ccc;
+  --menu-text: #333;
+  --menu-link: #007aff;
+
+  /* Tooltip */
+  --tooltip-bg: var(--purple-deep);
+  --tooltip-text: #ffffff;
+
+  /* Hint text */
+  --hint-color: rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] {
+  --graph-bg: #1a1a2e;
+  --label-fill: #c8a2e8;
+  --link-color: #555577;
+  --node-stroke: #2a2a4a;
+  --hint-color: rgba(255, 255, 255, 0.35);
+
+  --menu-bg: #2a2a3e;
+  --menu-border: #444466;
+  --menu-text: #ddd;
+  --menu-link: #7eb8ff;
+
+  --tooltip-bg: #1a1a2e;
+  --tooltip-text: #ddd;
+}
+
+/* =============================
    Global Styles
 ============================= */
 body {
   font-family: "Georgia", serif;
   margin: 0;
   padding: 0;
-  background-color: #2f1746;
-  color: #ffffff;
+  background-color: var(--body-bg);
+  color: var(--body-text);
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -18,10 +86,207 @@ body, html {
 }
 
 /* =============================
+   App Page Layout (index.html only)
+============================= */
+body.app-page {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#app-layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* --- Graph Area --- */
+#graph-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--graph-bg);
+  min-width: 0;
+}
+
+#graph-container {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+#graph-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--graph-bg);
+}
+
+#hint-text {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0;
+  font-size: 13px;
+  color: var(--hint-color);
+  pointer-events: none;
+}
+
+/* --- Sidebar --- */
+#sidebar {
+  width: 300px;
+  min-width: 300px;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  border-left: 2px solid var(--sidebar-border);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+#sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#sidebar-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#sidebar-header-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#sidebar-header-links a {
+  color: var(--yellow-link);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+}
+
+#sidebar-header-links a:hover {
+  text-decoration: underline;
+  color: var(--yellow-link-hover);
+}
+
+/* Dark mode toggle */
+.dark-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--sidebar-text);
+  border-radius: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  line-height: 1;
+}
+
+.dark-toggle:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* --- Sidebar fields --- */
+.sidebar-field {
+  margin-bottom: 14px;
+}
+
+.sidebar-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--label-color);
+  margin-bottom: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar-field input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px var(--input-shadow);
+}
+
+.sidebar-field select {
+  width: 100%;
+}
+
+#sidebar #fetch-button {
+  width: 100%;
+  margin: 6px 0 0 0;
+}
+
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin: 16px 0;
+}
+
+/* --- Slider fields --- */
+.slider-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.slider-field label {
+  flex: 0 0 75px;
+  font-size: 13px;
+  color: var(--label-color);
+}
+
+.slider-field input[type="range"] {
+  flex: 1;
+  min-width: 0;
+}
+
+.freeze-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.freeze-field label {
+  font-size: 13px;
+  color: var(--label-color);
+}
+
+/* --- Mobile header (hidden on desktop) --- */
+#mobile-header {
+  display: none;
+}
+
+/* =============================
    Top Panel Styles
 ============================= */
 #top-panel {
-  background-color: #5a0b73;
+  background-color: var(--purple-medium);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -42,78 +307,17 @@ body, html {
 }
 
 /* =============================
-   Form Layout: Labels to the Left
-============================= */
-#form-container {
-  max-width: 1000px; /* Match the graph-container width */
-  width: 66%;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.form-row {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-}
-
-form label {
-  font-size: 14px;
-  font-weight: bold;
-  color: #ffffff;
-  flex: 0 0 150px;
-  text-align: right;
-}
-
-form input,
-form select {
-  flex: 1;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #5a0b73;
-  border-radius: 5px;
-  background-color: #ffffff;
-  color: #333333;
-  width: 100%;
-  max-width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* =============================
-   SVG Canvas (Graph Container)
-============================= */
-svg {
-  display: block;
-  margin: 20px auto;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border: 3px solid #5a0b73;
-  max-width: 100%;
-}
-
-/* =============================
    Graph Node Styles
 ============================= */
 .node {
-  stroke: #ffffff;
+  stroke: var(--node-stroke);
   stroke-width: 1.5px;
   transition: fill 0.3s ease, stroke-width 0.3s ease;
 }
 
-.node.work { fill: #c0392b; }
-.node.author { fill: #8e44ad; }
-.node.commentary { fill: #e67e22; }
+.node.work { fill: var(--red-node); }
+.node.author { fill: var(--purple-node); }
+.node.commentary { fill: var(--orange-node); }
 
 .node:hover {
   stroke-width: 2px;
@@ -130,7 +334,7 @@ svg {
    Graph Links
 ============================= */
 .link {
-  stroke: #a0a0a0;
+  stroke: var(--link-color);
   stroke-opacity: 0.8;
   stroke-width: 1.5px;
   transition: stroke 0.3s ease;
@@ -143,7 +347,7 @@ svg {
 ============================= */
 .label {
   font-size: 12px;
-  fill: #5a0b73;
+  fill: var(--label-fill);
   font-weight: bold;
   pointer-events: none;
 }
@@ -153,8 +357,8 @@ svg {
 ============================= */
 .tooltip {
   position: absolute;
-  background: #2f1746;
-  color: #ffffff;
+  background: var(--tooltip-bg);
+  color: var(--tooltip-text);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
@@ -169,13 +373,13 @@ svg {
   list-style: none;
   padding: 10px;
   margin: 0;
-  background: #f8f8f8;
-  border: 1px solid #ccc;
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: sans-serif;
   font-size: 14px;
-  color: #333;
+  color: var(--menu-text);
   max-width: 300px;
   position: relative;
   white-space: normal;
@@ -194,8 +398,8 @@ svg {
   list-style: none;
   padding: 5px 10px;
   margin: 0;
-  background: #f8f8f8;
-  border: 1px solid #ccc;
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
   border-radius: 5px;
   position: absolute;
   left: 100%; /* Pops out to the right */
@@ -234,7 +438,7 @@ svg {
 /* Menu items */
 .nested-menu a, .nested-menu button, .nested-menu span {
   text-decoration: none;
-  color: #007aff;
+  color: var(--menu-link);
   background: none;
   border: none;
   padding: 5px 0;
@@ -257,9 +461,9 @@ svg {
 
 .custom-context-menu {
   position: absolute;
-  background: #fff;
+  background: var(--menu-bg);
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--menu-border);
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: none;
@@ -275,28 +479,18 @@ button {
   font-family: inherit;
   padding: 10px 20px;
   border: none;
-  background: #c0392b;
+  background: var(--red-primary);
   color: #ffffff;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
-button:hover { background: #a93226; }
-
-#fetch-button {
-  width: 50%; /* Adjust this percentage as needed */
-  margin: 0 auto; /* Center the button horizontally */
-}
+button:hover { background: var(--red-hover); }
 
 /* =============================
    Select2 Dropdown Styles
 ============================= */
-.dropdown-wrapper {
-  width: 100%; /* Ensures the wrapper is full-width */
-  height: 40px; /* Matches Select2's selection box height */
-  position: relative; /* Allows for proper alignment */
-}
 
 /* Pre-initialization styling */
 .select2-initial {
@@ -306,10 +500,10 @@ button:hover { background: #a93226; }
   padding: 5px 12px; /* Match Select2 padding exactly */
   font-size: 14px;
   line-height: 1.2; /* Add consistent line-height */
-  border: 1px solid #5a0b73;
+  border: 1px solid var(--input-border);
   border-radius: 5px;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: var(--input-bg);
+  color: var(--input-text);
 }
 
 /* =============================
@@ -321,17 +515,17 @@ button:hover { background: #a93226; }
   padding: 5px 12px; /* Consistent padding */
   font-size: 14px;
   line-height: 1.2; /* Ensures text alignment matches */
-  border: 1px solid #5a0b73;
+  border: 1px solid var(--input-border);
   border-radius: 5px;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: var(--input-bg);
+  color: var(--input-text);
   overflow-y: auto; /* Add scrolling for many selected items */
   scrollbar-width: thin; /* Thin scrollbar for modern browsers */
 }
 
 /* Selected Items (Chips) in Dropdown Input */
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #8e44ad !important; /* Purple background */
+  background-color: var(--purple-node) !important; /* Purple background */
   color: #ffffff !important; /* White text */
   border: none;
   border-radius: 4px;
@@ -359,16 +553,16 @@ button:hover { background: #a93226; }
 .select2-container .select2-dropdown {
   max-height: 200px; /* Limit dropdown height */
   overflow-y: auto; /* Enable scrolling */
-  background-color: #ffffff;
-  border: 1px solid #5a0b73;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Dropdown Options */
 .select2-results__option {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: var(--input-bg);
+  color: var(--input-text);
   padding: 8px 12px;
   overflow: hidden;
   text-overflow: ellipsis; /* Prevent long text from overflowing */
@@ -376,15 +570,15 @@ button:hover { background: #a93226; }
 }
 
 .select2-results__option--highlighted {
-  background-color: #e67e22 !important; /* Orange highlight */
+  background-color: var(--orange-node) !important; /* Orange highlight */
   color: #ffffff !important;
 }
 
 /* Search Input in Dropdown */
 .select2-search--dropdown .select2-search__field {
-  background-color: #ffffff;
-  color: #333333;
-  border: 1px solid #5a0b73;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
   border-radius: 5px;
   padding: 5px;
   margin: 5px; /* Add spacing around the search bar */
@@ -398,35 +592,10 @@ button:hover { background: #a93226; }
 }
 
 /* =============================
-   Special Link Styles
+   Sidebar Select2 width fix
 ============================= */
-
-#controls {
-  top: 10px;
-  left: 10px;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-#controls label {
-  margin-bottom: 10px;
-  font-family: Arial, sans-serif;
-}
-
-#top-right-link {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
-}
-
-#top-right-link:hover {
-  background-color: darkgray;
+#sidebar .select2-container {
+  width: 100% !important;
 }
 
 /* =============================
@@ -436,7 +605,7 @@ button:hover { background: #a93226; }
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #3a1249; /* Slightly lighter purple for contrast */
+  background-color: var(--purple-light); /* Slightly lighter purple for contrast */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -444,7 +613,8 @@ button:hover { background: #a93226; }
 .shared-container h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #e0afff; /* Highlighted lavender */
+  color: var(--lavender); /* Highlighted lavender */
+  text-align: center; /* Keep h1 always centered */
 }
 
 .shared-container p {
@@ -466,21 +636,18 @@ button:hover { background: #a93226; }
 }
 
 .shared-container a {
-  color: #ffcf77; /* Soft yellow for contrast */
+  color: var(--yellow-link); /* Soft yellow for contrast */
   text-decoration: none;
 }
 
 .shared-container a:hover {
   text-decoration: underline;
-  color: #ffc040;
+  color: var(--yellow-link-hover);
 }
 
 .shared-container .footer {
   margin-top: 30px;
   font-size: 1rem;
-}
-
-.shared-container .footer {
   text-align: center; /* Center-align the footer content */
 }
 
@@ -489,13 +656,6 @@ button:hover { background: #a93226; }
 ============================= */
 #about-container {
   text-align: center; /* Center alignment for About page */
-}
-
-.shared-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #e0afff; /* Highlighted lavender */
-  text-align: center; /* Keep h1 always centered */
 }
 
 #about-container ul {
@@ -511,21 +671,21 @@ button:hover { background: #a93226; }
   max-width: 800px;
   margin: 20px auto;
   border-collapse: collapse;
-  background-color: #3a1249; /* Slightly lighter purple */
-  border: 1px solid #5a0b73;
+  background-color: var(--purple-light); /* Slightly lighter purple */
+  border: 1px solid var(--purple-medium);
   font-size: 1.2rem; /* Match font size with the rest of the page */
 }
 
 #fancy-table th,
 #fancy-table td {
   padding: 10px 15px;
-  border: 1px solid #5a0b73;
+  border: 1px solid var(--purple-medium);
   color: #ffffff;
 }
 
 /* Header row */
 #fancy-table th {
-  background-color: #5a0b73;
+  background-color: var(--purple-medium);
   font-weight: bold;
   text-align: center;
 }
@@ -536,12 +696,12 @@ button:hover { background: #a93226; }
 }
 
 #fancy-table tbody tr:nth-child(even) {
-  background-color: #4a175c;
+  background-color: var(--purple-lighter);
 }
 
 /* Footer row using <tfoot> */
 #fancy-table tfoot {
-  background-color: #6c2a7b;
+  background-color: var(--purple-accent);
   font-weight: bold;
 }
 
@@ -552,5 +712,74 @@ button:hover { background: #a93226; }
 /* Optional: fallback if using tbody .summary-row instead of <tfoot> */
 #fancy-table tbody .summary-row {
   font-weight: bold;
-  background-color: #6c2a7b;
+  background-color: var(--purple-accent);
+}
+
+/* =============================
+   Responsive: Mobile (< 768px)
+============================= */
+@media (max-width: 768px) {
+  body.app-page {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  #mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--sidebar-bg);
+    padding: 10px 16px;
+    border-bottom: 2px solid var(--sidebar-border);
+  }
+
+  #mobile-header h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  #sidebar-toggle {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--sidebar-text);
+    font-size: 20px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  #sidebar-toggle:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  #app-layout {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    min-width: 100%;
+    border-left: none;
+    border-bottom: 2px solid var(--sidebar-border);
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  #sidebar.open {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  #sidebar-header {
+    display: none;
+  }
+
+  #graph-area {
+    flex: 1;
+    min-height: 0;
+  }
 }

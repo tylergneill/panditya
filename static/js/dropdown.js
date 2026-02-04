@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const authorsDropdown = document.getElementById('authors-dropdown');
     const worksDropdown = document.getElementById('works-dropdown');
     const excludeDropdown = document.getElementById('exclude-list-dropdown');
-    const hopsInput = document.getElementById('hops');
 
     // Populate dropdowns
     populateDropdown(authorsDropdown, optionsAuthors);
@@ -59,12 +58,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Remove pre-initialization class
     document.querySelectorAll('.select2-initial').forEach(el => el.classList.remove('select2-initial'));
-
-    // Initial width adjustment
-    adjustWidths();
-
-    // Handle window resizing
-    window.addEventListener('resize', adjustWidths);
 
   } catch (error) {
     console.error('Error during initialization:', error);
@@ -85,29 +78,6 @@ function initializeSelect2(selector, placeholder) {
     placeholder: placeholder,
     allowClear: true,
     tags: false,
-    width: 'resolve' // Ensure the dropdown width is dynamic
+    width: '100%'
   });
-}
-
-// Adjust both Select2 and Hops widths
-function adjustWidths() {
-  try {
-    // Update Select2 widths
-    $('#authors-dropdown').select2('destroy').select2({ placeholder: 'Authors to include', allowClear: true, width: 'resolve' });
-    $('#works-dropdown').select2('destroy').select2({ placeholder: 'Works to include', allowClear: true, width: 'resolve' });
-    $('#exclude-list-dropdown').select2('destroy').select2({ placeholder: 'Entities to not expand', allowClear: true, width: 'resolve' });
-
-    // Match Hops width to Works dropdown
-    const worksContainer = document.querySelector('#works-dropdown + .select2-container');
-    const hopsInput = document.getElementById('hops');
-
-    if (worksContainer) {
-      const worksWidth = worksContainer.offsetWidth;
-      hopsInput.style.width = `${worksWidth}px`;
-    } else {
-      console.warn('Works container not found.');
-    }
-  } catch (error) {
-    console.error('Error adjusting widths:', error);
-  }
 }

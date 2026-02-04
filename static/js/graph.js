@@ -93,11 +93,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Core function to render a graph using D3.js
 function renderGraph(graph) {
-  const svg = d3.select('svg');
+  const svg = d3.select('#graph-svg');
   svg.selectAll('*').remove(); // Clear previous graph
 
-  const width = +svg.attr('width');
-  const height = +svg.attr('height');
+  // Clean up previous ResizeObserver
+  if (window._panditya_resizeObserver) {
+    window._panditya_resizeObserver.disconnect();
+    window._panditya_resizeObserver = null;
+  }
+
+  const container = document.getElementById('graph-container');
+  let width = container.clientWidth;
+  let height = container.clientHeight;
+
+  // Set viewBox so SVG scales properly
+  svg.attr('viewBox', `0 0 ${width} ${height}`);
 
   const graphGroup = svg.append('g'); // Group for all elements
 
@@ -183,10 +193,10 @@ function renderGraph(graph) {
 
     let etextMenuHtml = '';
 
-    // One entry per “collection”.  Each entry is a function that
+    // One entry per "collection".  Each entry is a function that
     // receives (link, collection) and returns a label string.
     //
-    // If you don’t supply a rule, the generic fallback is used.
+    // If you don't supply a rule, the generic fallback is used.
 
     const LABEL_EXTRACTORS = {
       // ---- GRETIL -----------------------------------------------------------
@@ -195,12 +205,12 @@ function renderGraph(graph) {
       // ---- DCS --------------------------------------------------------------
       // DCS has three link shapes, but all yield a short ID or title we can grab.
       DCS: link => {
-        // • “index.php?…IDTextDisplay=165”   -> 165
+        // • "index.php?…IDTextDisplay=165"   -> 165
         const m = link.match(/IDTextDisplay=(\d+)/);
         if (m) return m[1];
 
-        // • GitHub raw/tree path “…/files/SomeTitle”        -> SomeTitle
-        // • My own extractor tree “…/extracted/SomeTitle.txt” -> SomeTitle
+        // • GitHub raw/tree path "…/files/SomeTitle"        -> SomeTitle
+        // • My own extractor tree "…/extracted/SomeTitle.txt" -> SomeTitle
         return basename(link);
       },
 
@@ -230,14 +240,14 @@ function renderGraph(graph) {
           return total > 1 ? `Google Doc ${idx + 1}` : 'Google Doc';
         }
 
-        /* 2.  UT Austin “sites” links → everything after ".../resources/", no trailing slash */
+        /* 2.  UT Austin "sites" links → everything after ".../resources/", no trailing slash */
         const m = link.match(/\/resources\/([^?#]+?)(\/)?$/);   // captures path after /resources/
         if (m) {
           const label = decodeURIComponent(m[1]);               // un-escape things like %e1%b9%a3
           return label;
         }
 
-        /* 3.  Fallback (shouldn’t hit, but keeps menu usable) */
+        /* 3.  Fallback (shouldn't hit, but keeps menu usable) */
         return basename(link);
       },
 
@@ -256,7 +266,7 @@ function renderGraph(graph) {
       },
     };
 
-    // helper for the common “take last path segment, no ext”
+    // helper for the common "take last path segment, no ext"
     function basename(url) {
       if (typeof url !== 'string') return '';
       return url.split(/[/=]/).pop().replace(/\.[^.]+$/, '');
@@ -270,7 +280,7 @@ function renderGraph(graph) {
           return extractor(link, collection, idx, total);
       }
 
-      // Fallback: same old “basename” heuristic
+      // Fallback: same old "basename" heuristic
       return basename(link);
     }
 
@@ -532,19 +542,19 @@ function renderGraph(graph) {
       .attr('x', d => d.x)
       .attr('y', d => d.y);
   });
-}
 
-//  // Add zoom controls
-//  const zoomControls = d3.select('body').append('div')
-//    .style('position', 'fixed')
-//    .style('bottom', '10px')
-//    .style('right', '10px')
-//    .html(`
-//      <button id="zoomIn">Zoom In</button>
-//      <button id="zoomOut">Zoom Out</button>
-//    `);
-//
-//  // Attach zoom functions to buttons
-//  d3.select('#zoomIn').on('click', () => svg.transition().call(zoom.scaleBy, 1.2));
-//  d3.select('#zoomOut').on('click', () => svg.transition().call(zoom.scaleBy, 0.8));
-//}
+  // ResizeObserver: update dimensions and re-center on resize
+  const resizeObserver = new ResizeObserver(entries => {
+    for (const entry of entries) {
+      width = entry.contentRect.width;
+      height = entry.contentRect.height;
+      svg.attr('viewBox', `0 0 ${width} ${height}`);
+      simulation.force('center', d3.forceCenter(width / 2, height / 2).strength(
+        +document.getElementById('centerStrength').value
+      ));
+      simulation.alpha(0.3).restart();
+    }
+  });
+  resizeObserver.observe(container);
+  window._panditya_resizeObserver = resizeObserver;
+}
