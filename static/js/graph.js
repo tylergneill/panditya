@@ -239,8 +239,11 @@ function renderGraph(graph) {
     let menu = d3.select('.custom-context-menu');
     if (menu.empty()) {
         menu = d3.select('body').append('div')
-            .attr('class', 'custom-context-menu')
+            .attr('class', 'custom-context-menu');
     }
+
+    // Close any open submenus from previous interactions
+    menu.selectAll('.submenu-open').classed('submenu-open', false);
 
     let etextMenuHtml = '';
 
@@ -415,13 +418,128 @@ function renderGraph(graph) {
       </ul>
     `);
 
-    // Position and show the menu
-    menu.style('left', `${event.pageX}px`)
-        .style('top', `${event.pageY}px`)
-        .style('display', 'block');
+    // Position and show the menu with viewport awareness
+    menu.style('display', 'block')
+        .style('left', '0px')
+        .style('top', '0px');
+
+    // Get actual dimensions after rendering
+    const menuNode = menu.node();
+    const menuRect = menuNode.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+
+    // Calculate position, flipping if needed
+    let left = event.pageX;
+    let top = event.pageY;
+
+    // Flip horizontally if menu would overflow right edge
+    if (left + menuRect.width > scrollX + viewportWidth - 10) {
+      left = Math.max(scrollX + 10, left - menuRect.width);
+    }
+
+    // Flip vertically if menu would overflow bottom edge
+    if (top + menuRect.height > scrollY + viewportHeight - 10) {
+      top = Math.max(scrollY + 10, top - menuRect.height);
+    }
+
+    menu.style('left', `${left}px`)
+        .style('top', `${top}px`);
+
+    // Mark menu position for CSS submenu flip logic
+    const menuCenterX = left + menuRect.width / 2;
+    const isRightHalf = menuCenterX > scrollX + viewportWidth / 2;
+    menu.classed('flip-submenus', isRightHalf);
+
+    // All submenu visibility is now controlled via .submenu-open class (no CSS hover)
+    menuNode.querySelectorAll('.has-submenu').forEach(item => {
+      const span = item.querySelector(':scope > span');
+      const submenu = item.querySelector(':scope > .submenu');
+      if (!span || !submenu) return;
+
+      // Mouseenter: open this submenu, close sibling branches
+      item.addEventListener('mouseenter', () => {
+        // Close sibling submenus and their descendants
+        const siblings = item.parentElement.querySelectorAll(':scope > .has-submenu');
+        siblings.forEach(sib => {
+          if (sib !== item) {
+            sib.classList.remove('submenu-open');
+            sib.querySelectorAll('.submenu-open').forEach(n => n.classList.remove('submenu-open'));
+          }
+        });
+        // Open this one
+        item.classList.add('submenu-open');
+        positionSubmenu(submenu, item);
+      });
+
+      // Click/tap: toggle (useful for touch devices)
+      span.addEventListener('click', (e) => {
+        e.stopPropagation();
+        item.classList.toggle('submenu-open');
+        if (item.classList.contains('submenu-open')) {
+          positionSubmenu(submenu, item);
+        }
+      });
+    });
+
+    // Close all submenus when mouse leaves the entire menu (desktop only)
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    if (!isTouch) {
+      menuNode.addEventListener('mouseleave', () => {
+        menuNode.querySelectorAll('.submenu-open').forEach(n => n.classList.remove('submenu-open'));
+      });
+    }
+
+    // Position a submenu to avoid viewport overflow (desktop only - mobile uses accordion CSS)
+    function positionSubmenu(submenu, parentLi) {
+      // Skip positioning on mobile/touch - CSS handles accordion layout
+      const isMobile = window.matchMedia('(max-width: 768px), (hover: none)').matches;
+      if (isMobile) return;
+
+      // Reset positioning
+      submenu.style.left = '';
+      submenu.style.right = '';
+      submenu.style.top = '';
+      submenu.style.bottom = '';
+
+      const subRect = submenu.getBoundingClientRect();
+      const parentRect = parentLi.getBoundingClientRect();
+
+      // Check horizontal overflow
+      if (parentRect.right + subRect.width > viewportWidth - 10) {
+        // Open to the left instead
+        submenu.style.left = 'auto';
+        submenu.style.right = '100%';
+      }
+
+      // Check vertical overflow
+      if (subRect.bottom > viewportHeight - 10) {
+        // Align to bottom of parent instead of top
+        submenu.style.top = 'auto';
+        submenu.style.bottom = '0';
+      }
+    }
 
     menu.on('click', async (e) => {
       const target = e.target;
+
+      // Handle link clicks - allow cmd/ctrl-click to open multiple links without closing menu
+      if (target.tagName === 'A' && target.href) {
+        // If modifier key held, open in background and keep menu open
+        if (e.metaKey || e.ctrlKey) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.open(target.href, '_blank');
+          // Brief visual feedback that link was opened
+          target.style.opacity = '0.5';
+          setTimeout(() => { target.style.opacity = ''; }, 200);
+          return;
+        }
+        // Normal click - let it navigate and menu will close naturally
+        return;
+      }
 
       if (target.classList.contains('recenter-btn')) {
         e.stopPropagation(); // Prevent the button click from closing the menu
@@ -511,10 +629,14 @@ function renderGraph(graph) {
     });
   }
 
-  // Hide menu on outside click/tap
+  // Hide menu on outside click/tap (but not on modifier-key clicks inside menu)
   d3.select('body').on('click touchstart', (event) => {
-    if (!event.target.closest('.custom-context-menu')) {
-      d3.select('.custom-context-menu').style('display', 'none');
+    const menu = d3.select('.custom-context-menu');
+    const isInsideMenu = event.target.closest('.custom-context-menu');
+
+    if (!isInsideMenu) {
+      menu.style('display', 'none');
+      menu.selectAll('.submenu-open').classed('submenu-open', false);
     }
   });
 

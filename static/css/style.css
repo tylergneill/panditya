@@ -424,15 +424,18 @@ body.app-page {
   box-sizing: border-box; /* Include padding in width */
 }
 
-/* Show submenu when hovering over parent item */
-.has-submenu:hover > .submenu,
-.has-submenu:focus-within > .submenu {
-  display: block;
+/* Submenus shown via JavaScript .submenu-open class only - no CSS hover */
+
+/* Arrow indicator for items with submenus */
+.has-submenu > span::after {
+  content: " \25B8"; /* right-pointing triangle */
+  font-size: 0.8em;
+  opacity: 0.6;
 }
 
-/* Ensure submenu stays open when hovering */
-.has-submenu > .submenu:hover {
-  display: block;
+/* Flip arrow when submenus open to the left */
+.custom-context-menu.flip-submenus .has-submenu > span::after {
+  content: " \25C2"; /* left-pointing triangle */
 }
 
 /* Sub-submenu styles (to prevent accidental closing) */
@@ -480,6 +483,18 @@ body.app-page {
   max-width: 300px; /* Optional: control overflow */
   overflow-wrap: break-word;
   white-space: normal;
+  z-index: 10000; /* Ensure menu appears above everything */
+}
+
+/* Touch-friendly submenu toggle (works alongside hover on desktop) */
+.has-submenu.submenu-open > .submenu {
+  display: block;
+}
+
+/* Flip submenus to open left when menu is in right half of viewport */
+.custom-context-menu.flip-submenus .submenu {
+  left: auto;
+  right: 100%;
 }
 
 /* =============================
@@ -870,6 +885,60 @@ button:hover { background: var(--red-hover); }
 
   #fancy-table th {
     font-size: 0.75rem;
+  }
+}
+
+/* =============================
+   Mobile Context Menu Improvements
+============================= */
+@media (max-width: 768px), (hover: none) {
+  /* Larger tap targets on touch devices */
+  .nested-menu > li {
+    padding: 10px 12px;
+  }
+
+  .nested-menu a, .nested-menu button, .nested-menu span {
+    padding: 8px 0;
+    min-height: 44px; /* Apple's recommended minimum tap target */
+    display: flex;
+    align-items: center;
+  }
+
+  .submenu li {
+    padding: 6px 10px;
+  }
+
+  /* Prevent menu from being too wide on mobile */
+  .custom-context-menu {
+    max-width: calc(100vw - 20px);
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  /* Accordion-style submenus: expand vertically instead of horizontally */
+  .submenu {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    max-width: 100%;
+    margin-left: 12px;
+    margin-top: 4px;
+    border: none;
+    border-left: 2px solid var(--menu-border);
+    box-shadow: none;
+    background: transparent;
+  }
+
+  /* Visual feedback for active submenu parent */
+  .has-submenu.submenu-open > span {
+    font-weight: bold;
+  }
+
+  /* Rotate arrow to indicate expanded state */
+  .has-submenu.submenu-open > span::after {
+    content: " \25BE"; /* down-pointing triangle */
   }
 }
 
