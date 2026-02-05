@@ -216,7 +216,7 @@ body.app-page {
 
 .sidebar-field label {
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   color: var(--label-color);
   margin-bottom: 4px;
@@ -257,12 +257,12 @@ body.app-page {
   gap: 8px;
   margin-bottom: 8px;
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .slider-field label {
-  flex: 0 0 75px;
-  font-size: 13px;
+  flex: 0 0 85px;
+  font-size: 15px;
   color: var(--label-color);
 }
 
@@ -277,11 +277,11 @@ body.app-page {
   gap: 8px;
   margin-top: 4px;
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .freeze-field label {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--label-color);
 }
 
@@ -356,7 +356,7 @@ body.app-page {
    Node Labels
 ============================= */
 .label {
-  font-size: 12px;
+  font-size: 15px;
   fill: var(--label-fill);
   font-weight: bold;
   pointer-events: none;
@@ -388,7 +388,7 @@ body.app-page {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--menu-text);
   max-width: 300px;
   position: relative;
@@ -422,6 +422,7 @@ body.app-page {
   overflow-wrap: break-word;
   z-index: 1000; /* Ensure it appears on top */
   box-sizing: border-box; /* Include padding in width */
+  font-size: 16px;
 }
 
 /* Submenus shown via JavaScript .submenu-open class only - no CSS hover */
@@ -457,6 +458,7 @@ body.app-page {
   padding: 5px 0;
   display: block;
   cursor: pointer;
+  font-size: inherit;
 }
 
 /* Add consistent simple underline on hover */
