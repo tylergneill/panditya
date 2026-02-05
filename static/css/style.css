@@ -524,6 +524,19 @@ button:hover { background: var(--red-hover); }
   display: none;
 }
 
+/* Loading message shown while controls initialize */
+#sidebar-loading-msg {
+  display: none;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-secondary, #666);
+  font-size: 0.95rem;
+}
+
+#sidebar.loading #sidebar-loading-msg {
+  display: block;
+}
+
 /* Hide sidebar content until Select2 is ready, then fade in */
 #sidebar.loading #input-controls,
 #sidebar.loading #tweak-controls,
