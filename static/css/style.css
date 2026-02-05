@@ -911,15 +911,34 @@ button:hover { background: var(--red-hover); }
   /* Prevent menu from being too wide on mobile */
   .custom-context-menu {
     max-width: calc(100vw - 20px);
+    max-height: 80vh;
+    overflow-y: auto;
   }
 
+  /* Accordion-style submenus: expand vertically instead of horizontally */
   .submenu {
-    max-width: calc(100vw - 40px);
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    max-width: 100%;
+    margin-left: 12px;
+    margin-top: 4px;
+    border: none;
+    border-left: 2px solid var(--menu-border);
+    box-shadow: none;
+    background: transparent;
   }
 
   /* Visual feedback for active submenu parent */
   .has-submenu.submenu-open > span {
     font-weight: bold;
+  }
+
+  /* Rotate arrow to indicate expanded state */
+  .has-submenu.submenu-open > span::after {
+    content: " \25BE"; /* down-pointing triangle */
   }
 }
 

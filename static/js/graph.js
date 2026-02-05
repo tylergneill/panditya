@@ -492,8 +492,12 @@ function renderGraph(graph) {
       });
     }
 
-    // Position a submenu to avoid viewport overflow
+    // Position a submenu to avoid viewport overflow (desktop only - mobile uses accordion CSS)
     function positionSubmenu(submenu, parentLi) {
+      // Skip positioning on mobile/touch - CSS handles accordion layout
+      const isMobile = window.matchMedia('(max-width: 768px), (hover: none)').matches;
+      if (isMobile) return;
+
       // Reset positioning
       submenu.style.left = '';
       submenu.style.right = '';
