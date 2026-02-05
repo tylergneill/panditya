@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Notes - Pāṇḍitya</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -31,6 +32,7 @@
       <li><strong>Total entities:</strong> 16,939 (13,094 works, 3,845 authors)</li>
       <li><strong>Total relationships:</strong> 13,890 (9,421 author → work, 4,469 work → work)</li>
     </ul>
+    <div class="table-scroll-wrapper">
     <table id="fancy-table">
       <thead>
         <tr>
@@ -79,6 +81,7 @@
         </tr>
       </tfoot>
     </table>
+    </div>
     <p>
       In addition, e-text links were sourced in a mostly manual collation process, last updated {{ seti_data_version }}.
       See the <a href="/seti">SETI page</a> for more info.

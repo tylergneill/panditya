@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pāṇḍitya</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -12,71 +13,91 @@
     window.initialParams = {{ initial_params|tojson }};
   </script>
 </head>
-<body>
-  <h1>Pāṇḍitya</h1>
-  <a href="/about" id="top-right-link">About</a>
-  <div id="form-container">
-    <form id="parameter-form">
-      <div class="form-row">
-        <label for="authors-dropdown">Authors:</label>
-        <div class="dropdown-wrapper">
-          <select id="authors-dropdown" class="select2-initial" multiple></select>
+<body class="app-page">
+
+  <!-- Mobile header (hidden on desktop, shown < 768px) -->
+  <header id="mobile-header">
+    <h1>Pāṇḍitya</h1>
+    <div id="mobile-header-actions">
+      <a href="/about">About</a>
+      <button class="dark-toggle" id="dark-toggle-mobile" title="Toggle dark mode">&#9790;</button>
+      <button id="sidebar-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <div id="app-layout">
+
+    <!-- Graph fills remaining viewport -->
+    <main id="graph-area">
+      <div id="graph-container">
+        <svg id="graph-svg"></svg>
+      </div>
+      <p id="hint-text">(Right-click on nodes for more options)</p>
+    </main>
+
+    <!-- Right sidebar with all controls -->
+    <aside id="sidebar" class="loading">
+
+      <div id="sidebar-header">
+        <h1>Pāṇḍitya</h1>
+        <div id="sidebar-header-links">
+          <a href="/about">About</a>
+          <button class="dark-toggle" id="dark-toggle" title="Toggle dark mode">&#9790;</button>
         </div>
       </div>
 
-      <div class="form-row">
-        <label for="works-dropdown">Works:</label>
-        <div class="dropdown-wrapper">
-          <select id="works-dropdown" class="select2-initial" multiple></select>
+      <p id="sidebar-loading-msg">Loading controls...</p>
+
+      <!-- Input controls: what to generate -->
+      <section id="input-controls">
+        <form id="parameter-form">
+          <div class="sidebar-field">
+            <label for="authors-dropdown">Authors</label>
+            <select id="authors-dropdown" class="select2-initial" multiple></select>
+          </div>
+
+          <div class="sidebar-field">
+            <label for="works-dropdown">Works</label>
+            <select id="works-dropdown" class="select2-initial" multiple></select>
+          </div>
+
+          <div class="sidebar-field">
+            <label for="hops">Hops</label>
+            <input type="number" id="hops" name="hops" value="1" min="0" />
+          </div>
+
+          <div class="sidebar-field">
+            <label for="exclude-list-dropdown">Don't Expand</label>
+            <select id="exclude-list-dropdown" class="select2-initial" multiple></select>
+          </div>
+
+          <button type="button" id="fetch-button">Generate Graph</button>
+        </form>
+      </section>
+
+      <hr class="sidebar-divider">
+
+      <!-- Post-generation tweaks -->
+      <section id="tweak-controls">
+        <div class="slider-field">
+          <label for="chargeStrength" title="Controls how nodes repel each other globally. Higher values increase repulsion.">Repulsion</label>
+          <input type="range" id="chargeStrength" min="0" max="750" step="10" value="250">
         </div>
-      </div>
-
-      <div class="form-row">
-        <label for="hops">Hops:</label>
-        <input type="number" id="hops" name="hops" value="1" min="0" />
-      </div>
-
-      <div class="form-row">
-        <label for="exclude-list-dropdown">Don't Expand:</label>
-        <div class="dropdown-wrapper">
-          <select id="exclude-list-dropdown" class="select2-initial" multiple></select>
+        <div class="slider-field">
+          <label for="linkDistance" title="Controls how far apart connected nodes can spread. Higher values increase distance.">Distance</label>
+          <input type="range" id="linkDistance" min="10" max="600" step="20" value="100">
         </div>
-      </div>
+        <div class="slider-field">
+          <label for="collisionRadius" title="Controls how strongly nodes refuse to overlap with local neighbors. Higher values increase virtual size.">Radius</label>
+          <input type="range" id="collisionRadius" min="0" max="50" step="5" value="15">
+        </div>
+        <div class="freeze-field">
+          <label for="freezeSwitch" title="Temporarily disables all forces.">Freeze</label>
+          <input type="checkbox" id="freezeSwitch">
+        </div>
+      </section>
 
-      <button type="button" id="fetch-button">Generate Graph</button>
-
-    </form>
-  </div>
-
-  <p style="margin-top: 0px; margin-bottom: 0px;">(Right-click on nodes for more options)</p>
-
-  <div id="graph-container">
-    <svg width="800" height="600"></svg>
-  </div>
-
-  <div id="controls">
-    <label title="Controls how nodes repel each other globally. Higher values increase repulsion.">
-      Repulsion
-      <input type="range" id="chargeStrength" min="0" max="750" step="10" value="250">
-    </label>
-    <label title="Controls how far apart connected nodes can spread. Higher values increase distance.">
-      Distance
-      <input type="range" id="linkDistance" min="10" max="600" step="20" value="100">
-    </label>
-    <label title="Controls how strongly nodes refuse to overlap with local neighbors. Higher values increase virtual size.">
-      Radius
-      <input type="range" id="collisionRadius" min="0" max="50" step="5" value="15">
-    </label>
-    <label title="Controls how strongly nodes try to return to center of graph. Higher values increase centralization.">
-      Center
-      <input type="range" id="centerStrength" min="0" max=".1" step="0.01" value="0.005">
-    </label>
-    <label title="Temporarily disables all forces.">
-      Freeze
-      <input type="checkbox" id="freezeSwitch">
-    </label>
-  </div>
-
+    </aside>
   </div>
 
   <!-- Dropdown Logic -->
@@ -108,6 +129,39 @@
           console.error("Error fetching labels:", error);
       }
   }
+  </script>
+
+  <!-- Dark mode toggle + mobile sidebar toggle -->
+  <script>
+  (function() {
+    // Dark mode: persist via localStorage
+    const saved = localStorage.getItem('panditya-theme');
+    if (saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    function toggleDarkMode() {
+      const current = document.documentElement.getAttribute('data-theme');
+      if (current === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.removeItem('panditya-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('panditya-theme', 'dark');
+      }
+    }
+
+    document.getElementById('dark-toggle').addEventListener('click', toggleDarkMode);
+    document.getElementById('dark-toggle-mobile').addEventListener('click', toggleDarkMode);
+
+    // Mobile sidebar toggle
+    var toggleBtn = document.getElementById('sidebar-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        document.getElementById('sidebar').classList.toggle('open');
+      });
+    }
+  })();
   </script>
 
 </body>

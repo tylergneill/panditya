@@ -84,6 +84,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       const data = await response.json();
 
       renderGraph(data.graph); // Render the graph from POST response
+
+      // On mobile, close the sidebar to reveal the graph
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar) sidebar.classList.remove('open');
     } catch (error) {
       console.error('Error generating graph:', error);
     }
@@ -93,11 +97,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Core function to render a graph using D3.js
 function renderGraph(graph) {
-  const svg = d3.select('svg');
+  const svg = d3.select('#graph-svg');
   svg.selectAll('*').remove(); // Clear previous graph
 
-  const width = +svg.attr('width');
-  const height = +svg.attr('height');
+  // Clean up previous ResizeObserver
+  if (window._panditya_resizeObserver) {
+    window._panditya_resizeObserver.disconnect();
+    window._panditya_resizeObserver = null;
+  }
+
+  const container = document.getElementById('graph-container');
+  let width = container.clientWidth;
+  let height = container.clientHeight;
+
+  // Set viewBox so SVG scales properly
+  svg.attr('viewBox', `0 0 ${width} ${height}`);
 
   const graphGroup = svg.append('g'); // Group for all elements
 
@@ -116,13 +130,17 @@ function renderGraph(graph) {
   const initialLinkDistance = +document.getElementById('linkDistance').value;
   const initialChargeStrength = -document.getElementById('chargeStrength').value; // Negative for repulsion
   const initialCollisionRadius = +document.getElementById('collisionRadius').value;
-  const initialCenterStrength = 1;
+
+  // Faster decay for small graphs so they settle quickly
+  const nodeCount = graph.nodes.length;
+  const alphaDecay = nodeCount <= 5 ? 0.08 : nodeCount <= 20 ? 0.05 : 0.0228;
 
   // Initialize the simulation based on slider values
   const simulation = d3.forceSimulation(graph.nodes)
+    .alphaDecay(alphaDecay)
     .force('link', d3.forceLink(graph.edges).id(d => d.id).distance(initialLinkDistance))
     .force('charge', d3.forceManyBody().strength(initialChargeStrength))
-    .force('center', d3.forceCenter(width / 2, height / 2).strength(initialCenterStrength))
+    .force('center', d3.forceCenter(width / 2, height / 2))
     .force('collide', d3.forceCollide(initialCollisionRadius));
 
   const link = graphGroup.append('g')
@@ -155,38 +173,83 @@ function renderGraph(graph) {
       }
       return 1; // or default
     })
-    .call(d3.drag()
-      .on('start', event => {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
-        event.subject.fx = event.subject.x;
-        event.subject.fy = event.subject.y;
-      })
-      .on('drag', event => {
-        event.subject.fx = event.x;
-        event.subject.fy = event.y;
-      })
-      .on('end', event => {
-        if (!event.active) simulation.alphaTarget(0);
-        event.subject.fx = null;
-        event.subject.fy = null;
-      }))
-    .on('contextmenu', (event, d) => {
-    // Prevent default browser context menu
-    event.preventDefault();
+    .call((() => {
+      // Long-press state, scoped for the drag callbacks
+      let longPressTimer = null;
+      let longPressFired = false;
+      let dragMoved = false;
 
+      return d3.drag()
+        .on('start', event => {
+          dragMoved = false;
+          longPressFired = false;
+
+          // Start long-press timer (fires context menu if no drag movement)
+          const src = event.sourceEvent;
+          const isTouchEvent = src && src.touches;
+          if (isTouchEvent) {
+            const touch = src.touches[0];
+            longPressTimer = setTimeout(() => {
+              longPressFired = true;
+              simulation.alphaTarget(0);
+              showNodeContextMenu(
+                { pageX: touch.pageX, pageY: touch.pageY, preventDefault: () => {} },
+                event.subject
+              );
+            }, 500);
+          }
+
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          event.subject.fx = event.subject.x;
+          event.subject.fy = event.subject.y;
+        })
+        .on('drag', event => {
+          // Any movement cancels the long-press
+          if (!dragMoved) {
+            const dx = event.x - event.subject.fx;
+            const dy = event.y - event.subject.fy;
+            if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
+              dragMoved = true;
+              clearTimeout(longPressTimer);
+            }
+          }
+          if (!longPressFired) {
+            event.subject.fx = event.x;
+            event.subject.fy = event.y;
+          }
+        })
+        .on('end', event => {
+          clearTimeout(longPressTimer);
+          if (!event.active) simulation.alphaTarget(0);
+          if (!longPressFired) {
+            event.subject.fx = null;
+            event.subject.fy = null;
+          }
+          longPressFired = false;
+        });
+    })())
+    .on('contextmenu', (event, d) => {
+      event.preventDefault();
+      showNodeContextMenu(event, d);
+    });
+
+  function showNodeContextMenu(event, d) {
     // Create or show a custom context menu
     let menu = d3.select('.custom-context-menu');
     if (menu.empty()) {
         menu = d3.select('body').append('div')
-            .attr('class', 'custom-context-menu')
+            .attr('class', 'custom-context-menu');
     }
+
+    // Close any open submenus from previous interactions
+    menu.selectAll('.submenu-open').classed('submenu-open', false);
 
     let etextMenuHtml = '';
 
-    // One entry per “collection”.  Each entry is a function that
+    // One entry per "collection".  Each entry is a function that
     // receives (link, collection) and returns a label string.
     //
-    // If you don’t supply a rule, the generic fallback is used.
+    // If you don't supply a rule, the generic fallback is used.
 
     const LABEL_EXTRACTORS = {
       // ---- GRETIL -----------------------------------------------------------
@@ -195,12 +258,12 @@ function renderGraph(graph) {
       // ---- DCS --------------------------------------------------------------
       // DCS has three link shapes, but all yield a short ID or title we can grab.
       DCS: link => {
-        // • “index.php?…IDTextDisplay=165”   -> 165
+        // • "index.php?…IDTextDisplay=165"   -> 165
         const m = link.match(/IDTextDisplay=(\d+)/);
         if (m) return m[1];
 
-        // • GitHub raw/tree path “…/files/SomeTitle”        -> SomeTitle
-        // • My own extractor tree “…/extracted/SomeTitle.txt” -> SomeTitle
+        // • GitHub raw/tree path "…/files/SomeTitle"        -> SomeTitle
+        // • My own extractor tree "…/extracted/SomeTitle.txt" -> SomeTitle
         return basename(link);
       },
 
@@ -230,14 +293,14 @@ function renderGraph(graph) {
           return total > 1 ? `Google Doc ${idx + 1}` : 'Google Doc';
         }
 
-        /* 2.  UT Austin “sites” links → everything after ".../resources/", no trailing slash */
+        /* 2.  UT Austin "sites" links → everything after ".../resources/", no trailing slash */
         const m = link.match(/\/resources\/([^?#]+?)(\/)?$/);   // captures path after /resources/
         if (m) {
           const label = decodeURIComponent(m[1]);               // un-escape things like %e1%b9%a3
           return label;
         }
 
-        /* 3.  Fallback (shouldn’t hit, but keeps menu usable) */
+        /* 3.  Fallback (shouldn't hit, but keeps menu usable) */
         return basename(link);
       },
 
@@ -256,7 +319,7 @@ function renderGraph(graph) {
       },
     };
 
-    // helper for the common “take last path segment, no ext”
+    // helper for the common "take last path segment, no ext"
     function basename(url) {
       if (typeof url !== 'string') return '';
       return url.split(/[/=]/).pop().replace(/\.[^.]+$/, '');
@@ -270,7 +333,7 @@ function renderGraph(graph) {
           return extractor(link, collection, idx, total);
       }
 
-      // Fallback: same old “basename” heuristic
+      // Fallback: same old "basename" heuristic
       return basename(link);
     }
 
@@ -354,13 +417,128 @@ function renderGraph(graph) {
       </ul>
     `);
 
-    // Position and show the menu
-    menu.style('left', `${event.pageX}px`)
-        .style('top', `${event.pageY}px`)
-        .style('display', 'block');
+    // Position and show the menu with viewport awareness
+    menu.style('display', 'block')
+        .style('left', '0px')
+        .style('top', '0px');
+
+    // Get actual dimensions after rendering
+    const menuNode = menu.node();
+    const menuRect = menuNode.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+
+    // Calculate position, flipping if needed
+    let left = event.pageX;
+    let top = event.pageY;
+
+    // Flip horizontally if menu would overflow right edge
+    if (left + menuRect.width > scrollX + viewportWidth - 10) {
+      left = Math.max(scrollX + 10, left - menuRect.width);
+    }
+
+    // Flip vertically if menu would overflow bottom edge
+    if (top + menuRect.height > scrollY + viewportHeight - 10) {
+      top = Math.max(scrollY + 10, top - menuRect.height);
+    }
+
+    menu.style('left', `${left}px`)
+        .style('top', `${top}px`);
+
+    // Mark menu position for CSS submenu flip logic
+    const menuCenterX = left + menuRect.width / 2;
+    const isRightHalf = menuCenterX > scrollX + viewportWidth / 2;
+    menu.classed('flip-submenus', isRightHalf);
+
+    // All submenu visibility is now controlled via .submenu-open class (no CSS hover)
+    menuNode.querySelectorAll('.has-submenu').forEach(item => {
+      const span = item.querySelector(':scope > span');
+      const submenu = item.querySelector(':scope > .submenu');
+      if (!span || !submenu) return;
+
+      // Mouseenter: open this submenu, close sibling branches
+      item.addEventListener('mouseenter', () => {
+        // Close sibling submenus and their descendants
+        const siblings = item.parentElement.querySelectorAll(':scope > .has-submenu');
+        siblings.forEach(sib => {
+          if (sib !== item) {
+            sib.classList.remove('submenu-open');
+            sib.querySelectorAll('.submenu-open').forEach(n => n.classList.remove('submenu-open'));
+          }
+        });
+        // Open this one
+        item.classList.add('submenu-open');
+        positionSubmenu(submenu, item);
+      });
+
+      // Click/tap: toggle (useful for touch devices)
+      span.addEventListener('click', (e) => {
+        e.stopPropagation();
+        item.classList.toggle('submenu-open');
+        if (item.classList.contains('submenu-open')) {
+          positionSubmenu(submenu, item);
+        }
+      });
+    });
+
+    // Close all submenus when mouse leaves the entire menu (desktop only)
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    if (!isTouch) {
+      menuNode.addEventListener('mouseleave', () => {
+        menuNode.querySelectorAll('.submenu-open').forEach(n => n.classList.remove('submenu-open'));
+      });
+    }
+
+    // Position a submenu to avoid viewport overflow (desktop only - mobile uses accordion CSS)
+    function positionSubmenu(submenu, parentLi) {
+      // Skip positioning on mobile/touch - CSS handles accordion layout
+      const isMobile = window.matchMedia('(max-width: 768px), (hover: none)').matches;
+      if (isMobile) return;
+
+      // Reset positioning
+      submenu.style.left = '';
+      submenu.style.right = '';
+      submenu.style.top = '';
+      submenu.style.bottom = '';
+
+      const subRect = submenu.getBoundingClientRect();
+      const parentRect = parentLi.getBoundingClientRect();
+
+      // Check horizontal overflow
+      if (parentRect.right + subRect.width > viewportWidth - 10) {
+        // Open to the left instead
+        submenu.style.left = 'auto';
+        submenu.style.right = '100%';
+      }
+
+      // Check vertical overflow
+      if (subRect.bottom > viewportHeight - 10) {
+        // Align to bottom of parent instead of top
+        submenu.style.top = 'auto';
+        submenu.style.bottom = '0';
+      }
+    }
 
     menu.on('click', async (e) => {
       const target = e.target;
+
+      // Handle link clicks - allow cmd/ctrl-click to open multiple links without closing menu
+      if (target.tagName === 'A' && target.href) {
+        // If modifier key held, open in background and keep menu open
+        if (e.metaKey || e.ctrlKey) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.open(target.href, '_blank');
+          // Brief visual feedback that link was opened
+          target.style.opacity = '0.5';
+          setTimeout(() => { target.style.opacity = ''; }, 200);
+          return;
+        }
+        // Normal click - let it navigate and menu will close naturally
+        return;
+      }
 
       if (target.classList.contains('recenter-btn')) {
         e.stopPropagation(); // Prevent the button click from closing the menu
@@ -448,11 +626,17 @@ function renderGraph(graph) {
         menu.style('display', 'none');
       }
     });
-  });
+  }
 
-  // Hide menu on outside click
-  d3.select('body').on('click', (event) => {
-    d3.select('.custom-context-menu').style('display', 'none');
+  // Hide menu on outside click/tap (but not on modifier-key clicks inside menu)
+  d3.select('body').on('click touchstart', (event) => {
+    const menu = d3.select('.custom-context-menu');
+    const isInsideMenu = event.target.closest('.custom-context-menu');
+
+    if (!isInsideMenu) {
+      menu.style('display', 'none');
+      menu.selectAll('.submenu-open').classed('submenu-open', false);
+    }
   });
 
   const labels = graphGroup.append('g')
@@ -483,11 +667,6 @@ function renderGraph(graph) {
       simulation.alpha(0.3).restart();
   });
 
-  document.getElementById('centerStrength').addEventListener('input', function () {
-      const centerStrength = +this.value;
-      simulation.force('center', d3.forceCenter(width / 2, height / 2).strength(centerStrength));
-      simulation.alpha(0.3).restart(); // Restart with some energy
-  });
 
   document.getElementById('freezeSwitch').addEventListener('change', function () {
   if (this.checked) {
@@ -503,13 +682,12 @@ function renderGraph(graph) {
       // Unfreeze: Reapply forces with current slider values
       const linkDistance = +document.getElementById('linkDistance').value;
       const chargeStrength = -document.getElementById('chargeStrength').value; // Negative for repulsion
-      const centerStrength = +document.getElementById('centerStrength').value;
       const collisionRadius = +document.getElementById('collisionRadius').value;
 
       simulation
         .force('link', d3.forceLink(graph.edges).id(d => d.id).distance(linkDistance))
         .force('charge', d3.forceManyBody().strength(chargeStrength))
-        .force('center', d3.forceCenter(width / 2, height / 2).strength(centerStrength))
+        .force('center', d3.forceCenter(width / 2, height / 2))
         .force('collide', d3.forceCollide(collisionRadius))
         .alpha(1) // Reset the simulation's energy
         .alphaDecay(0.0228) // Restore default decay
@@ -532,19 +710,17 @@ function renderGraph(graph) {
       .attr('x', d => d.x)
       .attr('y', d => d.y);
   });
-}
 
-//  // Add zoom controls
-//  const zoomControls = d3.select('body').append('div')
-//    .style('position', 'fixed')
-//    .style('bottom', '10px')
-//    .style('right', '10px')
-//    .html(`
-//      <button id="zoomIn">Zoom In</button>
-//      <button id="zoomOut">Zoom Out</button>
-//    `);
-//
-//  // Attach zoom functions to buttons
-//  d3.select('#zoomIn').on('click', () => svg.transition().call(zoom.scaleBy, 1.2));
-//  d3.select('#zoomOut').on('click', () => svg.transition().call(zoom.scaleBy, 0.8));
-//}
+  // ResizeObserver: update dimensions and re-center on resize
+  const resizeObserver = new ResizeObserver(entries => {
+    for (const entry of entries) {
+      width = entry.contentRect.width;
+      height = entry.contentRect.height;
+      svg.attr('viewBox', `0 0 ${width} ${height}`);
+      simulation.force('center', d3.forceCenter(width / 2, height / 2));
+      simulation.alpha(0.3).restart();
+    }
+  });
+  resizeObserver.observe(container);
+  window._panditya_resizeObserver = resizeObserver;
+}

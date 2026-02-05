@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SETI - Pāṇḍitya</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -33,6 +34,7 @@
       and displayed here via Pāṇḍitya's work nodes.
       Click on the below links to see an interactive visualization of each.
     </p>
+    <div class="table-scroll-wrapper">
     <table id="fancy-table">
       <thead>
         <tr>
@@ -55,6 +57,7 @@
         {% endfor %}
       </tbody>
     </table>
+    </div>
     <p>
       For fine-grained data,
       including insights into overlap/uniqueness of each collection,
