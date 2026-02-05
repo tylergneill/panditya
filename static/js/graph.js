@@ -130,7 +130,6 @@ function renderGraph(graph) {
   const initialLinkDistance = +document.getElementById('linkDistance').value;
   const initialChargeStrength = -document.getElementById('chargeStrength').value; // Negative for repulsion
   const initialCollisionRadius = +document.getElementById('collisionRadius').value;
-  const initialCenterStrength = 1;
 
   // Faster decay for small graphs so they settle quickly
   const nodeCount = graph.nodes.length;
@@ -141,7 +140,7 @@ function renderGraph(graph) {
     .alphaDecay(alphaDecay)
     .force('link', d3.forceLink(graph.edges).id(d => d.id).distance(initialLinkDistance))
     .force('charge', d3.forceManyBody().strength(initialChargeStrength))
-    .force('center', d3.forceCenter(width / 2, height / 2).strength(initialCenterStrength))
+    .force('center', d3.forceCenter(width / 2, height / 2))
     .force('collide', d3.forceCollide(initialCollisionRadius));
 
   const link = graphGroup.append('g')
@@ -668,11 +667,6 @@ function renderGraph(graph) {
       simulation.alpha(0.3).restart();
   });
 
-  document.getElementById('centerStrength').addEventListener('input', function () {
-      const centerStrength = +this.value;
-      simulation.force('center', d3.forceCenter(width / 2, height / 2).strength(centerStrength));
-      simulation.alpha(0.3).restart(); // Restart with some energy
-  });
 
   document.getElementById('freezeSwitch').addEventListener('change', function () {
   if (this.checked) {
@@ -688,13 +682,12 @@ function renderGraph(graph) {
       // Unfreeze: Reapply forces with current slider values
       const linkDistance = +document.getElementById('linkDistance').value;
       const chargeStrength = -document.getElementById('chargeStrength').value; // Negative for repulsion
-      const centerStrength = +document.getElementById('centerStrength').value;
       const collisionRadius = +document.getElementById('collisionRadius').value;
 
       simulation
         .force('link', d3.forceLink(graph.edges).id(d => d.id).distance(linkDistance))
         .force('charge', d3.forceManyBody().strength(chargeStrength))
-        .force('center', d3.forceCenter(width / 2, height / 2).strength(centerStrength))
+        .force('center', d3.forceCenter(width / 2, height / 2))
         .force('collide', d3.forceCollide(collisionRadius))
         .alpha(1) // Reset the simulation's energy
         .alphaDecay(0.0228) // Restore default decay
@@ -724,9 +717,7 @@ function renderGraph(graph) {
       width = entry.contentRect.width;
       height = entry.contentRect.height;
       svg.attr('viewBox', `0 0 ${width} ${height}`);
-      simulation.force('center', d3.forceCenter(width / 2, height / 2).strength(
-        +document.getElementById('centerStrength').value
-      ));
+      simulation.force('center', d3.forceCenter(width / 2, height / 2));
       simulation.alpha(0.3).restart();
     }
   });
