@@ -1,3 +1,4 @@
+{% from 'macros.html' import ext_link_icon %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
   <div id="data-notes-container" class="shared-container">
     <h1>Data Notes</h1>
     <p>
-      Pāṇḍitya uses a <a href="https://github.com/tylergneill/panditya/blob/main/data/{{ pandit_data_version }}-pandit-entities-export.csv">static snapshot of the Pandit database from {{ pandit_data_version }}</a>.
+      Pāṇḍitya uses a <a href="https://github.com/tylergneill/panditya/blob/main/data/{{ pandit_data_version }}-pandit-entities-export.csv" target="_blank">static snapshot of the Pandit database from {{ pandit_data_version }}{{ ext_link_icon() }}</a>.
       This export had 69,779 rows (= entities) and 163 columns (= fields).
       Only a subset of this is used:
       <ul>
