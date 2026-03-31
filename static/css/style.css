@@ -1043,3 +1043,12 @@ button:hover { background: var(--red-hover); }
     min-height: 0;
   }
 }
+
+.ext-link-icon {
+  width: 0.65em;
+  height: 0.65em;
+  margin-left: 0.15em;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.1em;
+}

@@ -1,3 +1,4 @@
+{% from 'macros.html' import ext_link_icon %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +15,10 @@
 
     <p>
       <ul>
-        <li><a href="https://www.tylerneill.info" target="_blank">Personal website</a></li>
-        <li><a href="https://uni-leipzig1.academia.edu/TylerNeill" target="_blank">On Academia.edu</a></li>
-        <li><a href="https://www.linkedin.com/in/tyler-g-neill/" target="_blank">On LinkedIn</a></li>
-        <li><a href="https://github.com/tylergneill" target="_blank">On GitHub</a></li>
+        <li><a href="https://www.tylerneill.info" target="_blank">Personal website{{ ext_link_icon() }}</a></li>
+        <li><a href="https://uni-leipzig1.academia.edu/TylerNeill" target="_blank">On Academia.edu{{ ext_link_icon() }}</a></li>
+        <li><a href="https://www.linkedin.com/in/tyler-g-neill/" target="_blank">On LinkedIn{{ ext_link_icon() }}</a></li>
+        <li><a href="https://github.com/tylergneill" target="_blank">On GitHub{{ ext_link_icon() }}</a></li>
       </ul>
     </p>
 
