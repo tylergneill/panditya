@@ -14,5 +14,5 @@ COPY --chown=sanskrit:appgroup ./*.py /app/
 COPY --chown=sanskrit:appgroup ./*.json /app/
 COPY --chown=sanskrit:appgroup ./VERSION /app/
 USER sanskrit
-CMD ["gunicorn", "--workers", "1", "--bind", "0.0.0.0:5091", "--log-level", "info", "--error-logfile", "-", "flask_app:app"]
-EXPOSE 5091
+CMD ["gunicorn", "--workers", "1", "--bind", "0.0.0.0:5041", "--log-level", "info", "--error-logfile", "-", "flask_app:app"]
+EXPOSE 5041
