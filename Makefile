@@ -6,6 +6,9 @@ extract:
 transform:
 	python -m utils.transform
 
+validate:
+	python -m utils.validate
+
 analyze:
 	python -m utils.analyze
 
