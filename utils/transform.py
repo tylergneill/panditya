@@ -10,6 +10,7 @@ import pandas as pd
 
 from data_models import Work, Author
 from utils.utils import time_execution, get_pandit_data_version, get_seti_data_version
+from utils.validate import validate_data
 
 current_file_dir = os.path.dirname(os.path.abspath(__file__))
 relative_data_dir = "../data"
@@ -269,7 +270,11 @@ def create_etext_links():
     with open(output_json_path, 'w') as jsonfile:
         json.dump(convert_to_serializable(final_result), jsonfile, indent=4, ensure_ascii=False)
 
+    return final_result["work_id_to_link_mapping"]
+
 
 if __name__ == "__main__":
-    create_entities()
-    create_etext_links()
+    entities_by_id = create_entities()
+    work_id_to_link_mapping = create_etext_links()
+    # Fail the pipeline, rather than the app, if the two datasets disagree.
+    validate_data(entities_by_id, work_id_to_link_mapping)
