@@ -34,8 +34,22 @@ SETI reads the cleaned extract directly: its scripts take the newest
 `data/*-extracted-entities-cleaned.csv` in this directory (not in
 `archive/`), so step 1 matters there too.
 
-The SETI layer (`<date>-seti-master.csv` and `<date>-etext-link-data.json`)
-has its own date, `__seti_data_version__`, and is updated separately.
+## Updating the SETI data
+
+The SETI master lives in the [seti](https://github.com/tylergneill/seti)
+repository, as `data/seti-master.csv`, and is edited only there. Pāṇḍitya
+uses a dated copy of it. To bring in a new one:
+
+1. Delete the current `<date>-seti-master.csv` and
+   `<date>-etext-link-data.json` here. The seti repository keeps earlier
+   masters in its own `data/archive/`.
+2. Copy `../seti/data/seti-master.csv` here as `<date>-seti-master.csv`,
+   dated by the day of the copy.
+3. Put that date in `__seti_data_version__` in `../VERSION`.
+4. `make transform` writes `<date>-etext-link-data.json`, which fills the
+   e-text links in the graph and the table on the SETI page.
+
+Never edit the copy here: correct the master in seti and copy it again.
 
 ## Manual cleaning to get from raw to clean
 
