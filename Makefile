@@ -1,4 +1,5 @@
-PYTHONPATH=$(shell pwd) python -m utils.transform
+# To update the Pandit data: see data/manual_cleaning.md.
+# extract: export -> raw extract. Clean by hand. transform: cleaned extract -> entities.json.
 
 extract:
 	python -m utils.extract
