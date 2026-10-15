@@ -1,4 +1,5 @@
 {% from 'macros.html' import ext_link_icon %}
+{% set n = "{:,}".format %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +14,15 @@
     <h1>Data Notes</h1>
     <p>
       Pāṇḍitya uses a <a href="https://github.com/tylergneill/panditya/blob/main/data/{{ pandit_data_version }}-pandit-entities-export.csv" target="_blank">static snapshot of the Pandit database from {{ pandit_data_version }}{{ ext_link_icon() }}</a>.
-      This export had 69,779 rows (= entities) and 163 columns (= fields).
+      This export had {{ n(summary.export.rows) }} rows (= entities) and {{ summary.export.columns }} columns (= fields).
       Only a subset of this is used:
       <ul>
         <li>14 fields (columns): Content type, ID, Title, Aka, Social identifiers, Author (person IDs), Authors (person), Attributed author (person ID), Attributed author (person), Discipline, Commentary on (work ID), Commentary on (work), Highest Year, Lowest Year</li>
         <li>
-          2 out of 9 Content types (= row types): Person, Work
+          2 out of {{ summary.export.content_types }} Content types (= row types): Person, Work
           <ul>
-            <li>This reduces the number of rows to 18,539</li>
-            <li>Some minor cleaning reduced this number further to 18,285</li>
+            <li>This reduces the number of rows to {{ n(summary.extract.rows) }}</li>
+            <li>Some minor cleaning reduced this number further to {{ n(summary.extract.cleaned_rows) }}</li>
             <li>Persons without associated Works were then removed</li>
           </ul>
         </li>
@@ -30,8 +31,8 @@
     <p>
       Below are some summary statistics on the overall network and on sub-communities:</p>
     <ul>
-      <li><strong>Total entities:</strong> 16,939 (13,094 works, 3,845 authors)</li>
-      <li><strong>Total relationships:</strong> 13,890 (9,421 author → work, 4,469 work → work)</li>
+      <li><strong>Total entities:</strong> {{ n(summary.entities.total) }} ({{ n(summary.entities.works) }} works, {{ n(summary.entities.authors) }} authors)</li>
+      <li><strong>Total relationships:</strong> {{ n(summary.relationships.total) }} ({{ n(summary.relationships.author_work) }} author → work, {{ n(summary.relationships.work_work) }} work → work)</li>
     </ul>
     <div class="table-scroll-wrapper">
     <table id="fancy-table">
@@ -43,42 +44,19 @@
         </tr>
       </thead>
       <tbody>
+        {% for category in ['isolated', 'extra_small', 'small', 'medium', 'large', 'extra_large'] %}
         <tr>
-          <td><a href="{{ url_for('data', filepath='analysis_results/component_info/isolated_components.txt') }}" target="_blank">Isolated nodes (no connections)</a></td>
-          <td>3,233</td>
-          <td>3,233</td>
+          <td><a href="{{ url_for('data', filepath='analysis_results/component_info/' ~ category ~ '_components.txt') }}" target="_blank">{{ summary.components[category].label }}</a></td>
+          <td>{{ n(summary.components[category].components) }}</td>
+          <td>{{ n(summary.components[category].entities) }}</td>
         </tr>
-        <tr>
-          <td><a href="{{ url_for('data', filepath='analysis_results/component_info/extra_small_components.txt') }}" target="_blank">Extra-small communities (2–4 entities)</a></td>
-          <td>1,638</td>
-          <td>3,667</td>
-        </tr>
-        <tr>
-          <td><a href="{{ url_for('data', filepath='analysis_results/component_info/small_components.txt') }}" target="_blank">Small communities (5–9 entities)</a></td>
-          <td>93</td>
-          <td>581</td>
-        </tr>
-        <tr>
-          <td><a href="{{ url_for('data', filepath='analysis_results/component_info/medium_components.txt') }}" target="_blank">Medium communities (10–25 entities)</a></td>
-          <td>23</td>
-          <td>336</td>
-        </tr>
-        <tr>
-          <td><a href="{{ url_for('data', filepath='analysis_results/component_info/large_components.txt') }}" target="_blank">Second-largest community</a></td>
-          <td>1</td>
-          <td>73</td>
-        </tr>
-        <tr>
-          <td><a href="{{ url_for('data', filepath='analysis_results/component_info/extra_large_components.txt') }}" target="_blank">Central community</a></td>
-          <td>1</td>
-          <td>9,049</td>
-        </tr>
+        {% endfor %}
       </tbody>
       <tfoot>
         <tr>
           <th>Total</th>
-          <th>4,989</th>
-          <th>16,939</th>
+          <th>{{ n(summary.components.total) }}</th>
+          <th>{{ n(summary.entities.total) }}</th>
         </tr>
       </tfoot>
     </table>

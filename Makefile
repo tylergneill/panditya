@@ -1,5 +1,6 @@
 # To update the Pandit data: see data/manual_cleaning.md.
 # extract: export -> raw extract. Clean by hand. transform: cleaned extract -> entities.json.
+# analyze: entities.json -> analysis_results/, including the Data Notes figures.
 
 extract:
 	python -m utils.extract

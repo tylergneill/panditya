@@ -1,0 +1,55 @@
+{
+    "pandit_data_version": "2026-10-08",
+    "export": {
+        "rows": 70335,
+        "columns": 163,
+        "content_types": 9
+    },
+    "extract": {
+        "rows": 19274,
+        "cleaned_rows": 19255
+    },
+    "entities": {
+        "total": 17714,
+        "works": 13800,
+        "authors": 3914
+    },
+    "relationships": {
+        "total": 14064,
+        "author_work": 9551,
+        "work_work": 4513
+    },
+    "components": {
+        "total": 5603,
+        "isolated": {
+            "label": "Isolated nodes (no connections)",
+            "components": 3798,
+            "entities": 3798
+        },
+        "extra_small": {
+            "label": "Extra-small communities (2\u20134 entities)",
+            "components": 1683,
+            "entities": 3781
+        },
+        "small": {
+            "label": "Small communities (5\u20139 entities)",
+            "components": 95,
+            "entities": 596
+        },
+        "medium": {
+            "label": "Medium communities (10\u201325 entities)",
+            "components": 25,
+            "entities": 364
+        },
+        "large": {
+            "label": "Second-largest community",
+            "components": 1,
+            "entities": 74
+        },
+        "extra_large": {
+            "label": "Central community",
+            "components": 1,
+            "entities": 9101
+        }
+    }
+}

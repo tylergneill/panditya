@@ -18,7 +18,14 @@ bring in a new export:
 5. **Clean** the raw extract as below, into
    `<date>-extracted-entities-cleaned.csv`.
 6. **Transform.** `make transform` (or `python -m utils.transform`)
-   writes `<date>-entities.json`, which the web app loads.
+   writes `<date>-entities.json`, which the web app loads, and rebuilds
+   `<seti date>-etext-link-data.json` from the SETI master, which fills the
+   table on the SETI page.
+7. **Analyze.** `make analyze` (or `python -m utils.analyze`) recomputes the
+   network's components into `analysis_results/`, including
+   `analysis_results/summary.json`, from which the Data Notes page takes all
+   its figures. The app warns at startup if that summary is for an older
+   date than `VERSION`.
 
 The scripts need `pandas` (see `../requirements_etl.in`), e.g. in a local
 `venv/`.
