@@ -103,8 +103,8 @@
             "92287",
             "92262",
             "92279",
-            "92258",
             "92281",
+            "92258",
             "92280",
             "92278",
             "92274",
@@ -114,12 +114,14 @@
             "92283",
             "92284",
             "92266",
+            "116543",
             "92275",
             "92270",
             "92295",
             "92263",
             "92257",
             "92296",
+            "116552",
             "92297",
             "92268",
             "92294",
@@ -139,7 +141,7 @@
             "92293",
             "92261"
         ],
-        "disciplines": "Nyāya (2), Alaṃkāraśāstra (1), Navya Nyāya (1), Nyāya + Vyākaraṇa (1), Vyākaraṇa (1)"
+        "disciplines": "Navya Nyāya (4), Nyāya (3), Alaṃkāraśāstra (1), Nyāya + Vyākaraṇa (1), Vyākaraṇa (1)"
     },
     "93781": {
         "id": "93781",
@@ -3646,6 +3648,39 @@
         "author_highest_year": 1660,
         "author_lowest_year": 1660
     },
+    "116839": {
+        "id": "116839",
+        "type": "work",
+        "name": "Adbhuta Rāmāyaṇa",
+        "aka": "",
+        "author_ids": [
+            "108861"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
+    "108861": {
+        "id": "108861",
+        "type": "author",
+        "name": "Vālmīki",
+        "aka": "Prācetasa",
+        "social_identifiers": "",
+        "work_ids": [
+            "116839",
+            "114361",
+            "112291",
+            "112319",
+            "111272",
+            "111356",
+            "111286",
+            "111271",
+            "111295",
+            "111293",
+            "111275"
+        ],
+        "disciplines": "Kāvya (8), Hinduism (general) (2), Advaita Vedānta (1)"
+    },
     "105288": {
         "id": "105288",
         "type": "work",
@@ -3773,9 +3808,10 @@
             "114872",
             "114811",
             "114839",
-            "114869"
+            "114869",
+            "116769"
         ],
-        "disciplines": "Dharmaśāstra (3), Veda (2)"
+        "disciplines": "Dharmaśāstra (4), Veda (2)"
     },
     "105311": {
         "id": "105311",
@@ -3898,6 +3934,30 @@
         "commentary_ids": [],
         "discipline": "Veda"
     },
+    "114358": {
+        "id": "114358",
+        "type": "work",
+        "name": "Adhānapaddhati prayoga",
+        "aka": "Hiraṇyakeśīdarśa pūrṇamāsa prayoga, Satyāṣāḍha, Ādhānaprayoga",
+        "author_ids": [
+            "114337"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general), Veda"
+    },
+    "114337": {
+        "id": "114337",
+        "type": "author",
+        "name": "Satyāṣāḍha",
+        "aka": "Hiraṇyakeśī",
+        "social_identifiers": "",
+        "work_ids": [
+            "114358",
+            "114340"
+        ],
+        "disciplines": "Hinduism (general) (1), Hinduism (general), Veda (1)"
+    },
     "114340": {
         "id": "114340",
         "type": "work",
@@ -3909,18 +3969,6 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Hinduism (general)"
-    },
-    "114337": {
-        "id": "114337",
-        "type": "author",
-        "name": "Satyāṣāḍha",
-        "aka": "Hiraṇyakeśī",
-        "social_identifiers": "",
-        "work_ids": [
-            "114340",
-            "114358"
-        ],
-        "disciplines": "Hinduism (general) (2)"
     },
     "41756": {
         "id": "41756",
@@ -4057,7 +4105,7 @@
         "id": "88036",
         "type": "work",
         "name": "Mīmāṃsāsūtras",
-        "aka": "Pūrvamīmāṃsāsūtra, Karmamīmāṃsāsūtra",
+        "aka": "Pūrvamīmāṃsāsūtra, Karmamīmāṃsāsūtra, Jaiminisūtra",
         "author_ids": [
             "85087"
         ],
@@ -4077,6 +4125,7 @@
             "91798",
             "94056",
             "91030",
+            "90298",
             "89303",
             "94631",
             "88312",
@@ -4711,34 +4760,6 @@
             "90165"
         ],
         "disciplines": "Advaita Vedānta (1)"
-    },
-    "114346": {
-        "id": "114346",
-        "type": "work",
-        "name": "Ādhikaraṇaratnamālā. Adhyāya 10",
-        "aka": "Jaiminīyanyāyamālāvistara",
-        "author_ids": [
-            "40773"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Mīmāṃsā",
-        "author_highest_year": 1300,
-        "author_lowest_year": 1300
-    },
-    "40773": {
-        "id": "40773",
-        "type": "author",
-        "name": "Mādhava",
-        "aka": "",
-        "highest_year": 1300,
-        "lowest_year": 1300,
-        "social_identifiers": "Baudhāyana, Bhāradvāja, Kṛṣṇa yajurveda, Vidyāraṇya",
-        "work_ids": [
-            "114346",
-            "112783"
-        ],
-        "disciplines": "Dharmaśāstra, Jyotiḥśāstra (1), Mīmāṃsā (1)"
     },
     "90149": {
         "id": "90149",
@@ -6111,6 +6132,7 @@
             "88652",
             "112240",
             "88653",
+            "116679",
             "112170",
             "88655",
             "88657",
@@ -6189,7 +6211,7 @@
             "88697",
             "88699"
         ],
-        "disciplines": "Advaita Vedānta (89), Vedānta (general) (8), Advaita Vedānta, Vedānta (general) (6), Hinduism (general) (5), Tantra (2), Dharmaśāstra (1), Purāṇa (1), Śaivism (general) (1)"
+        "disciplines": "Advaita Vedānta (91), Vedānta (general) (8), Advaita Vedānta, Vedānta (general) (6), Hinduism (general) (5), Tantra (2), Dharmaśāstra (1), Purāṇa (1), Śaivism (general) (1)"
     },
     "89845": {
         "id": "89845",
@@ -6233,7 +6255,9 @@
         "aka": "",
         "author_ids": [],
         "base_text_ids": [],
-        "commentary_ids": [],
+        "commentary_ids": [
+            "97299"
+        ],
         "discipline": "Vedānta (general)"
     },
     "114349": {
@@ -6339,11 +6363,13 @@
         "id": "97299",
         "type": "work",
         "name": "Adhyātmarāmāyaṇaṭīkā",
-        "aka": "Adhyātmarāmāyaṇa saṭīka, Adhyātmarāmāyaṇa with commentary",
+        "aka": "Adhyātmarāmāyaṇa saṭīka, Adhyātmarāmāyaṇa with commentary, Adhyātmarāmāyaṇasetu",
         "author_ids": [
             "97298"
         ],
-        "base_text_ids": [],
+        "base_text_ids": [
+            "97266"
+        ],
         "commentary_ids": [],
         "discipline": "Vedānta (general)"
     },
@@ -7114,26 +7140,6 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Advaita Vedānta"
-    },
-    "108861": {
-        "id": "108861",
-        "type": "author",
-        "name": "Vālmīki",
-        "aka": "Prācetasa",
-        "social_identifiers": "",
-        "work_ids": [
-            "114361",
-            "112291",
-            "112319",
-            "111272",
-            "111356",
-            "111286",
-            "111271",
-            "111295",
-            "111293",
-            "111275"
-        ],
-        "disciplines": "Kāvya (8), Advaita Vedānta (1), Hinduism (general) (1)"
     },
     "114364": {
         "id": "114364",
@@ -8544,6 +8550,7 @@
             "114862",
             "91355",
             "112935",
+            "116790",
             "91347",
             "111306",
             "42451",
@@ -8556,7 +8563,7 @@
             "91352",
             "91353"
         ],
-        "disciplines": "Vyākaraṇa (5), Advaita Vedānta (3), Dharmaśāstra (3), Pāṇinīya, Vyākaraṇa (1)"
+        "disciplines": "Vyākaraṇa (6), Advaita Vedānta (3), Dharmaśāstra (3), Pāṇinīya, Vyākaraṇa (1)"
     },
     "91485": {
         "id": "91485",
@@ -11488,9 +11495,10 @@
         "social_identifiers": "",
         "work_ids": [
             "93215",
-            "114210"
+            "114210",
+            "116899"
         ],
-        "disciplines": "Advaita Vedānta (1), Alaṃkāraśāstra (1)"
+        "disciplines": "Alaṃkāraśāstra (2), Advaita Vedānta (1)"
     },
     "90378": {
         "id": "90378",
@@ -12139,16 +12147,6 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
-    },
-    "114396": {
-        "id": "114396",
-        "type": "work",
-        "name": "Agastipurāṇa rāmanavamī vrata",
-        "aka": "",
-        "author_ids": [],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Hinduism (general)"
     },
     "41693": {
         "id": "41693",
@@ -14309,16 +14307,6 @@
             "92318"
         ]
     },
-    "114437": {
-        "id": "114437",
-        "type": "work",
-        "name": "Akhaṇḍaprakaraṇa Dvādaśavarṇaka",
-        "aka": "",
-        "author_ids": [],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": ""
-    },
     "93193": {
         "id": "93193",
         "type": "work",
@@ -15363,6 +15351,7 @@
             "114252",
             "110253",
             "114244",
+            "116895",
             "114260",
             "114249",
             "114246",
@@ -15372,7 +15361,6 @@
             "97056",
             "114245",
             "114206",
-            "114257",
             "114251",
             "114258"
         ],
@@ -15431,7 +15419,7 @@
         "id": "86116",
         "type": "author",
         "name": "Viśvanātha Nyāyasiddhānta Pañcānana",
-        "aka": "",
+        "aka": "Viśvanātha Nyāya pañcānana Bhaṭṭācārya",
         "highest_year": 1640,
         "lowest_year": 1640,
         "social_identifiers": "",
@@ -18017,28 +18005,6 @@
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
     },
-    "114726": {
-        "id": "114726",
-        "type": "work",
-        "name": "Amṛt sāgar granth",
-        "aka": "",
-        "author_ids": [
-            "114725"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": ""
-    },
-    "114725": {
-        "id": "114725",
-        "type": "author",
-        "name": "Vaidyadevīcandra",
-        "aka": "",
-        "social_identifiers": "",
-        "work_ids": [
-            "114726"
-        ]
-    },
     "114445": {
         "id": "114445",
         "type": "work",
@@ -18066,6 +18032,28 @@
             "89992"
         ],
         "disciplines": "Advaita Vedānta (1)"
+    },
+    "114726": {
+        "id": "114726",
+        "type": "work",
+        "name": "Amṛta sāgara grantha",
+        "aka": "",
+        "author_ids": [
+            "114725"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
+    "114725": {
+        "id": "114725",
+        "type": "author",
+        "name": "Vaidyadevīcandra",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "114726"
+        ]
     },
     "95648": {
         "id": "95648",
@@ -18457,6 +18445,7 @@
             "95738",
             "99896",
             "92858",
+            "116592",
             "90813",
             "96719"
         ],
@@ -19028,7 +19017,7 @@
         "id": "85588",
         "type": "author",
         "name": "Ānandagiri",
-        "aka": "Ānandajñāna, Janārdana",
+        "aka": "Ānandajñāna, Janārdana, Ānandajñānagiri ,  Ānandaśaila",
         "highest_year": 1300,
         "lowest_year": 1300,
         "social_identifiers": "",
@@ -19079,7 +19068,7 @@
             "90056",
             "90065"
         ],
-        "disciplines": "Advaita Vedānta (4), Vedānta (general) (3), Vedānta (general), Advaita Vedānta (1)"
+        "disciplines": "Advaita Vedānta (5), Vedānta (general) (3), Vedānta (general), Advaita Vedānta (1)"
     },
     "102352": {
         "id": "102352",
@@ -19558,7 +19547,7 @@
         "id": "91900",
         "type": "work",
         "name": "Bhāṣāpariccheda",
-        "aka": "",
+        "aka": "Kārikāvalī , Paribhāṣāpariccheda",
         "author_ids": [
             "86116"
         ],
@@ -21646,6 +21635,17 @@
         ],
         "disciplines": "Mīmāṃsā (1)"
     },
+    "116801": {
+        "id": "116801",
+        "type": "author",
+        "name": "Aṅgiras",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116803"
+        ],
+        "disciplines": "Dharmaśāstra (1)"
+    },
     "88123": {
         "id": "88123",
         "type": "work",
@@ -22003,6 +22003,16 @@
             "93620"
         ],
         "disciplines": "Dvaita Vedānta (1)"
+    },
+    "116894": {
+        "id": "116894",
+        "type": "author",
+        "name": "anonymous",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116895"
+        ]
     },
     "40249": {
         "id": "40249",
@@ -22420,33 +22430,6 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Dharmaśāstra"
-    },
-    "114482": {
-        "id": "114482",
-        "type": "work",
-        "name": "Antyeṣṭipaddhati",
-        "aka": "Antyeṣṭi , Aurdhvadaihikapaddhati",
-        "author_ids": [
-            "114481"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Dharmaśāstra",
-        "author_highest_year": 1513,
-        "author_lowest_year": 1513
-    },
-    "114481": {
-        "id": "114481",
-        "type": "author",
-        "name": "Nārāyaṇa Bhaṭṭa",
-        "aka": "",
-        "highest_year": 1513,
-        "lowest_year": 1513,
-        "social_identifiers": "",
-        "work_ids": [
-            "114482"
-        ],
-        "disciplines": "Dharmaśāstra (1)"
     },
     "41646": {
         "id": "41646",
@@ -23444,49 +23427,6 @@
             "94967"
         ]
     },
-    "114488": {
-        "id": "114488",
-        "type": "work",
-        "name": "Anumāna",
-        "aka": "Tattvacitāmaṇidīdhitiprakāśa  Bhavānandī",
-        "author_ids": [
-            "85998"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Nyāya",
-        "author_highest_year": 1600,
-        "author_lowest_year": 1600
-    },
-    "85998": {
-        "id": "85998",
-        "type": "author",
-        "name": "Bhavānanda Siddhāntavāgīśa",
-        "aka": "",
-        "highest_year": 1600,
-        "lowest_year": 1600,
-        "social_identifiers": "Siddhāntavāgīśa",
-        "work_ids": [
-            "114488",
-            "91406",
-            "91417",
-            "91404",
-            "91405",
-            "91409",
-            "91411",
-            "91413",
-            "91415",
-            "91420",
-            "91407",
-            "91410",
-            "91412",
-            "91416",
-            "91414",
-            "91418",
-            "91419"
-        ],
-        "disciplines": "Nyāya + Vyākaraṇa (2), Nyāya (1)"
-    },
     "114507": {
         "id": "114507",
         "type": "work",
@@ -23789,19 +23729,21 @@
             "114518",
             "114799",
             "114797",
-            "114798",
+            "116598",
             "91632",
             "91631",
             "91633",
             "91624",
             "91627",
+            "116596",
+            "114798",
             "91626",
             "91628",
             "91629",
             "91630",
             "91625"
         ],
-        "disciplines": "Nyāya (6), Navya Nyāya (1), Nyāya + Vyākaraṇa (1)"
+        "disciplines": "Nyāya (6), Navya Nyāya (3), Nyāya + Vyākaraṇa (1)"
     },
     "92264": {
         "id": "92264",
@@ -23918,6 +23860,82 @@
         "discipline": "Nyāya",
         "author_highest_year": 1620,
         "author_lowest_year": 1620
+    },
+    "117004": {
+        "id": "117004",
+        "type": "work",
+        "name": "Anunyāsa",
+        "aka": "",
+        "author_ids": [
+            "117003"
+        ],
+        "base_text_ids": [
+            "109741"
+        ],
+        "commentary_ids": [
+            "117006"
+        ],
+        "discipline": "Vyākaraṇa, Pāṇinīya"
+    },
+    "117003": {
+        "id": "117003",
+        "type": "author",
+        "name": "Indumitra",
+        "aka": "Indu",
+        "social_identifiers": "",
+        "work_ids": [
+            "117004"
+        ],
+        "disciplines": "Vyākaraṇa, Pāṇinīya (1)"
+    },
+    "109741": {
+        "id": "109741",
+        "type": "work",
+        "name": "Kāśikāvivaraṇapañjikā",
+        "aka": "Nyāsa, Kāśikānyāsa, Jinendranyāsa",
+        "author_ids": [
+            "85247"
+        ],
+        "base_text_ids": [
+            "41544"
+        ],
+        "commentary_ids": [
+            "117004",
+            "41548"
+        ],
+        "discipline": "Vyākaraṇa",
+        "author_highest_year": 830,
+        "author_lowest_year": 830
+    },
+    "117006": {
+        "id": "117006",
+        "type": "work",
+        "name": "Anunyāsa Commentary",
+        "aka": "",
+        "highest_year": 1450,
+        "lowest_year": 1450,
+        "author_ids": [
+            "117005"
+        ],
+        "base_text_ids": [
+            "117004"
+        ],
+        "commentary_ids": [],
+        "discipline": "Vyākaraṇa, Pāṇinīya"
+    },
+    "117005": {
+        "id": "117005",
+        "type": "author",
+        "name": "Śrīmāna Śarman",
+        "aka": "",
+        "highest_year": 1500,
+        "lowest_year": 1400,
+        "social_identifiers": "Śarman",
+        "work_ids": [
+            "117006",
+            "117007"
+        ],
+        "disciplines": "Vyākaraṇa, Pāṇinīya (2)"
     },
     "41690": {
         "id": "41690",
@@ -25402,28 +25420,6 @@
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
     },
-    "114522": {
-        "id": "114522",
-        "type": "work",
-        "name": "Apāmārjanastotra",
-        "aka": "",
-        "author_ids": [
-            "114521"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": ""
-    },
-    "114521": {
-        "id": "114521",
-        "type": "author",
-        "name": "Nandikeśvara",
-        "aka": "",
-        "social_identifiers": "",
-        "work_ids": [
-            "114522"
-        ]
-    },
     "112178": {
         "id": "112178",
         "type": "work",
@@ -25881,7 +25877,7 @@
             "105224",
             "113072"
         ],
-        "disciplines": "Other discipline (5)"
+        "disciplines": "Other discipline (4), Dharmaśāstra (1)"
     },
     "42520": {
         "id": "42520",
@@ -25916,7 +25912,9 @@
             "113071"
         ],
         "base_text_ids": [],
-        "commentary_ids": [],
+        "commentary_ids": [
+            "116779"
+        ],
         "discipline": "Other discipline"
     },
     "105224": {
@@ -25954,7 +25952,7 @@
             "113075",
             "113077"
         ],
-        "discipline": "Other discipline"
+        "discipline": "Dharmaśāstra"
     },
     "113075": {
         "id": "113075",
@@ -25977,9 +25975,10 @@
         "aka": "",
         "social_identifiers": "",
         "work_ids": [
-            "113075"
+            "113075",
+            "116779"
         ],
-        "disciplines": "Other discipline (1)"
+        "disciplines": "Dharmaśāstra (1), Other discipline (1)"
     },
     "89459": {
         "id": "89459",
@@ -26972,16 +26971,6 @@
         "commentary_ids": [
             "93217"
         ],
-        "discipline": "Advaita Vedānta"
-    },
-    "114542": {
-        "id": "114542",
-        "type": "work",
-        "name": "Ārṣarāmāyaṇa Bālakāṇḍa",
-        "aka": "",
-        "author_ids": [],
-        "base_text_ids": [],
-        "commentary_ids": [],
         "discipline": "Advaita Vedānta"
     },
     "114549": {
@@ -28019,6 +28008,35 @@
         "discipline": "",
         "author_highest_year": 1600,
         "author_lowest_year": 1600
+    },
+    "85998": {
+        "id": "85998",
+        "type": "author",
+        "name": "Bhavānanda Siddhāntavāgīśa",
+        "aka": "",
+        "highest_year": 1600,
+        "lowest_year": 1600,
+        "social_identifiers": "Siddhāntavāgīśa",
+        "work_ids": [
+            "91406",
+            "114488",
+            "91417",
+            "91404",
+            "91405",
+            "91409",
+            "91411",
+            "91413",
+            "91415",
+            "91420",
+            "91407",
+            "91410",
+            "91412",
+            "91416",
+            "91414",
+            "91418",
+            "91419"
+        ],
+        "disciplines": "Nyāya + Vyākaraṇa (2), Nyāya (1)"
     },
     "90762": {
         "id": "90762",
@@ -30919,9 +30937,11 @@
         "social_identifiers": "",
         "work_ids": [
             "112320",
-            "42078"
+            "114598",
+            "42078",
+            "44743"
         ],
-        "disciplines": "Hinduism (general) (1)"
+        "disciplines": "Dharmaśāstra, Hinduism (general) (1), Hinduism (general) (1)"
     },
     "114574": {
         "id": "114574",
@@ -31018,9 +31038,9 @@
         "social_identifiers": "",
         "work_ids": [
             "41541",
-            "42448",
             "42499",
             "42515",
+            "42448",
             "42516",
             "112083",
             "112122",
@@ -31229,7 +31249,7 @@
     "114578": {
         "id": "114578",
         "type": "work",
-        "name": "Aṣṭamaskandhacaturthādhyāya",
+        "name": "Aṣṭamaskandha",
         "aka": "",
         "author_ids": [],
         "base_text_ids": [],
@@ -31572,9 +31592,10 @@
         "aka": "",
         "social_identifiers": "",
         "work_ids": [
-            "95478"
+            "95478",
+            "116730"
         ],
-        "disciplines": "Yoga (1)"
+        "disciplines": "Advaita Vedānta (1), Yoga (1)"
     },
     "95482": {
         "id": "95482",
@@ -31832,7 +31853,7 @@
         "id": "97355",
         "type": "work",
         "name": "Aṣṭāvakra",
-        "aka": "Aṣṭāvakragītā",
+        "aka": "Aṣṭāvakragītā, Aṣṭāvakra Saṃhitā",
         "author_ids": [
             "97354"
         ],
@@ -33043,6 +33064,16 @@
         ],
         "discipline": ""
     },
+    "112906": {
+        "id": "112906",
+        "type": "work",
+        "name": "Atharvaśira Upaniṣad",
+        "aka": "Atharvaśiropaniṣad, Śīrṣopaniṣad, Śivātharvaśirṣa",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "95939": {
         "id": "95939",
         "type": "work",
@@ -33055,16 +33086,6 @@
             "92764"
         ],
         "discipline": ""
-    },
-    "112906": {
-        "id": "112906",
-        "type": "work",
-        "name": "Atharva-Śiropaniṣad",
-        "aka": "Atharvaśiropaniṣad, Śīrṣopaniṣad",
-        "author_ids": [],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Hinduism (general)"
     },
     "113224": {
         "id": "113224",
@@ -34587,7 +34608,7 @@
         "id": "114619",
         "type": "work",
         "name": "Ātmārpaṇastuti",
-        "aka": "Śivapañcāśikā",
+        "aka": "",
         "author_ids": [
             "85954"
         ],
@@ -35623,6 +35644,33 @@
         "commentary_ids": [],
         "discipline": "Dharmaśāstra"
     },
+    "114482": {
+        "id": "114482",
+        "type": "work",
+        "name": "Aurdhvadehikapaddhati",
+        "aka": "Antyeṣṭapaddhati",
+        "author_ids": [
+            "114481"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra",
+        "author_highest_year": 1513,
+        "author_lowest_year": 1513
+    },
+    "114481": {
+        "id": "114481",
+        "type": "author",
+        "name": "Nārāyaṇa Bhaṭṭa",
+        "aka": "",
+        "highest_year": 1513,
+        "lowest_year": 1513,
+        "social_identifiers": "",
+        "work_ids": [
+            "114482"
+        ],
+        "disciplines": "Dharmaśāstra (1)"
+    },
     "104424": {
         "id": "104424",
         "type": "work",
@@ -36169,22 +36217,6 @@
         "discipline": "Nyāya",
         "author_highest_year": 1871,
         "author_lowest_year": 1871
-    },
-    "114798": {
-        "id": "114798",
-        "type": "work",
-        "name": "Avacchedakatva ṭippaṇī",
-        "aka": "",
-        "author_ids": [
-            "86065"
-        ],
-        "base_text_ids": [
-            "114796"
-        ],
-        "commentary_ids": [],
-        "discipline": "Nyāya",
-        "author_highest_year": 1620,
-        "author_lowest_year": 1620
     },
     "91779": {
         "id": "91779",
@@ -38137,6 +38169,34 @@
         "author_highest_year": 1670,
         "author_lowest_year": 1670
     },
+    "114860": {
+        "id": "114860",
+        "type": "work",
+        "name": "Avayava nirūpaṇa",
+        "aka": "",
+        "author_ids": [
+            "85826"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Navya Nyāya",
+        "author_highest_year": 1510,
+        "author_lowest_year": 1510
+    },
+    "114861": {
+        "id": "114861",
+        "type": "work",
+        "name": "Avayava vyākhyā",
+        "aka": "",
+        "author_ids": [
+            "86189"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Navya Nyāya",
+        "author_highest_year": 1660,
+        "author_lowest_year": 1660
+    },
     "114859": {
         "id": "114859",
         "type": "work",
@@ -38207,34 +38267,6 @@
             "93800"
         ],
         "disciplines": "Nyāya (2)"
-    },
-    "114860": {
-        "id": "114860",
-        "type": "work",
-        "name": "Avayavanirūpaṇa",
-        "aka": "",
-        "author_ids": [
-            "85826"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Navya Nyāya",
-        "author_highest_year": 1510,
-        "author_lowest_year": 1510
-    },
-    "114861": {
-        "id": "114861",
-        "type": "work",
-        "name": "Avayavavyākhyā",
-        "aka": "",
-        "author_ids": [
-            "86189"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Navya Nyāya",
-        "author_highest_year": 1660,
-        "author_lowest_year": 1660
     },
     "89131": {
         "id": "89131",
@@ -39595,7 +39627,7 @@
         "id": "112312",
         "type": "work",
         "name": "Bahulopākhyāna",
-        "aka": "",
+        "aka": "bahulāvyāghrasaṃvāda",
         "author_ids": [],
         "base_text_ids": [],
         "commentary_ids": [],
@@ -39764,6 +39796,17 @@
         "discipline": "Bhāṭṭa Mīmāṃsā + Mīmāṃsā",
         "author_highest_year": 1678,
         "author_lowest_year": 1638
+    },
+    "116537": {
+        "id": "116537",
+        "type": "author",
+        "name": "Balabhadra",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116539"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
     },
     "40573": {
         "id": "40573",
@@ -39993,7 +40036,7 @@
         "id": "105251",
         "type": "work",
         "name": "Bālabodha",
-        "aka": "",
+        "aka": "Sārasaṅgraha, Sāroddhāra, Jyotiṣasārasaṅgraha",
         "author_ids": [
             "108624"
         ],
@@ -40077,7 +40120,8 @@
         "aka": "",
         "social_identifiers": "",
         "work_ids": [
-            "112862"
+            "112862",
+            "116684"
         ],
         "disciplines": "Jyotiḥśāstra (1)"
     },
@@ -42998,6 +43042,17 @@
         "commentary_ids": [],
         "discipline": "Tantra"
     },
+    "116736": {
+        "id": "116736",
+        "type": "author",
+        "name": "Bāpirājā",
+        "aka": "Bābūrāya",
+        "social_identifiers": "",
+        "work_ids": [
+            "116738"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
+    },
     "40490": {
         "id": "40490",
         "type": "author",
@@ -45138,7 +45193,7 @@
             "94681",
             "94682"
         ],
-        "discipline": "",
+        "discipline": "Advaita Vedānta",
         "author_highest_year": 710,
         "author_lowest_year": 710
     },
@@ -46971,6 +47026,18 @@
         "discipline": "Vedalakṣaṇa",
         "author_highest_year": -250,
         "author_lowest_year": -250
+    },
+    "116958": {
+        "id": "116958",
+        "type": "author",
+        "name": "Bhāskara",
+        "aka": "Bhāskara Bhaṭṭa",
+        "highest_year": 1350,
+        "lowest_year": 1350,
+        "social_identifiers": "Bhaṭṭa",
+        "work_ids": [
+            "116956"
+        ]
     },
     "85232": {
         "id": "85232",
@@ -51288,7 +51355,7 @@
         "id": "86210",
         "type": "author",
         "name": "Gāgā Bhaṭṭa",
-        "aka": "Viśveśvara",
+        "aka": "Viśveśvara, Gāgābhaṭṭa",
         "highest_year": 1674,
         "lowest_year": 1674,
         "social_identifiers": "Bhaṭṭa",
@@ -52013,6 +52080,7 @@
             "91145",
             "91112",
             "92326",
+            "116552",
             "92476",
             "91052",
             "93295",
@@ -52024,6 +52092,7 @@
             "92026",
             "93599",
             "91160",
+            "92293",
             "95094",
             "95660",
             "95674"
@@ -52948,6 +53017,20 @@
         "discipline": "",
         "author_highest_year": 720,
         "author_lowest_year": 720
+    },
+    "114488": {
+        "id": "114488",
+        "type": "work",
+        "name": "Bhavānandī",
+        "aka": "Tattvacitāmaṇidīdhitiprakāśa, Gūḍhārthaprakāśa, Gūḍhārtharahasya",
+        "author_ids": [
+            "85998"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Nyāya",
+        "author_highest_year": 1600,
+        "author_lowest_year": 1600
     },
     "89698": {
         "id": "89698",
@@ -56105,8 +56188,10 @@
         "id": "114598",
         "type": "work",
         "name": "Bhīṣmastavarāja",
-        "aka": "Bhīṣmastavarājaprārambhaḥ",
-        "author_ids": [],
+        "aka": "Bhīṣmastavarājaprārambhaḥ  , Rājadharma anuśāsanaparva, Bhīṣmastuti",
+        "author_ids": [
+            "108876"
+        ],
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Dharmaśāstra, Hinduism (general)"
@@ -56405,7 +56490,7 @@
     "114687": {
         "id": "114687",
         "type": "author",
-        "name": "Jñānāmṛtayati",
+        "name": "Jñānamṛtayati",
         "aka": "",
         "social_identifiers": "",
         "work_ids": [
@@ -57241,10 +57326,36 @@
         "lowest_year": 1076,
         "social_identifiers": "",
         "work_ids": [
+            "116368",
             "115237",
             "41546"
         ],
         "disciplines": "Kāvya (1)"
+    },
+    "116368": {
+        "id": "116368",
+        "type": "work",
+        "name": "Bilhaṇacarita",
+        "aka": "Bilhaṇacaritam",
+        "author_ids": [
+            "116367",
+            "40617"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "",
+        "author_highest_year": 1127,
+        "author_lowest_year": 1076
+    },
+    "116367": {
+        "id": "116367",
+        "type": "author",
+        "name": "Cōrakavi",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116368"
+        ]
     },
     "114805": {
         "id": "114805",
@@ -60794,6 +60905,31 @@
         ],
         "disciplines": "Jyotiḥśāstra (1)"
     },
+    "42449": {
+        "id": "42449",
+        "type": "work",
+        "name": "Bṛhatparibhāṣāvṛtti",
+        "aka": "",
+        "author_ids": [
+            "41031"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "117007"
+        ],
+        "discipline": "Vyākaraṇa"
+    },
+    "41031": {
+        "id": "41031",
+        "type": "author",
+        "name": "Sīradeva",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "42449"
+        ],
+        "disciplines": "Vyākaraṇa (1)"
+    },
     "88874": {
         "id": "88874",
         "type": "work",
@@ -61082,7 +61218,7 @@
     "92258": {
         "id": "92258",
         "type": "work",
-        "name": "Gādādharī",
+        "name": "Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti)",
         "aka": "Prakāśikā on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti",
         "author_ids": [
             "86189"
@@ -61578,6 +61714,7 @@
             "114261",
             "111797",
             "114174",
+            "114257",
             "114236",
             "114263"
         ],
@@ -62285,6 +62422,16 @@
         "work_ids": [
             "94824"
         ]
+    },
+    "116962": {
+        "id": "116962",
+        "type": "work",
+        "name": "Caṇḍakiraṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Kośaśāstra"
     },
     "116260": {
         "id": "116260",
@@ -64913,6 +65060,20 @@
         "commentary_ids": [],
         "discipline": ""
     },
+    "116598": {
+        "id": "116598",
+        "type": "work",
+        "name": "Caturdaśalakṣaṇī",
+        "aka": "",
+        "author_ids": [
+            "86065"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Navya Nyāya",
+        "author_highest_year": 1620,
+        "author_lowest_year": 1620
+    },
     "93426": {
         "id": "93426",
         "type": "work",
@@ -65050,6 +65211,16 @@
         "commentary_ids": [],
         "discipline": "Veda"
     },
+    "116413": {
+        "id": "116413",
+        "type": "work",
+        "name": "Cāturmāsyamāhātmya",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Purāṇa"
+    },
     "41278": {
         "id": "41278",
         "type": "work",
@@ -65078,6 +65249,30 @@
         "commentary_ids": [],
         "discipline": ""
     },
+    "116430": {
+        "id": "116430",
+        "type": "work",
+        "name": "Cāturmāsyavratanirṇaya",
+        "aka": "",
+        "author_ids": [
+            "116427"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
+    "116427": {
+        "id": "116427",
+        "type": "author",
+        "name": "Pṛthvīcandra",
+        "aka": "",
+        "social_identifiers": "Mahārāja",
+        "work_ids": [
+            "116430",
+            "116429"
+        ],
+        "disciplines": "Dharmaśāstra (2)"
+    },
     "115300": {
         "id": "115300",
         "type": "work",
@@ -65087,6 +65282,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
+    },
+    "116446": {
+        "id": "116446",
+        "type": "work",
+        "name": "Caturthaparyāya",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "109503": {
         "id": "109503",
@@ -65262,6 +65467,16 @@
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
     },
+    "116353": {
+        "id": "116353",
+        "type": "work",
+        "name": "Cāṭuślōkas",
+        "aka": "Cāṭuślokāḥ",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "95832": {
         "id": "95832",
         "type": "work",
@@ -65286,21 +65501,44 @@
         "author_highest_year": 1010,
         "author_lowest_year": 1010
     },
+    "116451": {
+        "id": "116451",
+        "type": "work",
+        "name": "Caulaprayoga and Upanayanaprayoga",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
     "115237": {
         "id": "115237",
         "type": "work",
-        "name": "Caurapañcāśikā and Ṭīkā",
-        "aka": "",
+        "name": "Caurapañcāśikā",
+        "aka": "Caurīsuratapañcāśikā, Bilhaṇapañcāśikā",
         "author_ids": [
             "40617"
         ],
         "base_text_ids": [],
         "commentary_ids": [
+            "116455",
             "115236"
         ],
         "discipline": "Kāvya",
         "author_highest_year": 1127,
         "author_lowest_year": 1076
+    },
+    "116455": {
+        "id": "116455",
+        "type": "work",
+        "name": "Caurapañcāśikā Ṭīkā",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [
+            "115237"
+        ],
+        "commentary_ids": [],
+        "discipline": "Kāvya"
     },
     "105740": {
         "id": "105740",
@@ -65349,6 +65587,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Hinduism (general)"
+    },
+    "116479": {
+        "id": "116479",
+        "type": "work",
+        "name": "Chāgalakṣaṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Veda"
     },
     "105793": {
         "id": "105793",
@@ -65416,6 +65664,16 @@
         ],
         "disciplines": "Dvaita Vedānta (1)"
     },
+    "116466": {
+        "id": "116466",
+        "type": "work",
+        "name": "Chanda",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Chandas"
+    },
     "96450": {
         "id": "96450",
         "type": "work",
@@ -65459,6 +65717,16 @@
         "discipline": "Dharmaśāstra",
         "author_highest_year": 1310,
         "author_lowest_year": 1250
+    },
+    "116482": {
+        "id": "116482",
+        "type": "work",
+        "name": "Chāndogya Upaniṣad (Adhyāya 6)",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Veda"
     },
     "95776": {
         "id": "95776",
@@ -67092,7 +67360,9 @@
             "85954"
         ],
         "base_text_ids": [],
-        "commentary_ids": [],
+        "commentary_ids": [
+            "116534"
+        ],
         "discipline": "Alaṃkāraśāstra",
         "author_highest_year": 1593,
         "author_lowest_year": 1520
@@ -67764,7 +68034,7 @@
         "commentary_ids": [
             "92958"
         ],
-        "discipline": ""
+        "discipline": "Hinduism (general), Śaivādvaita Vedānta"
     },
     "96000": {
         "id": "96000",
@@ -67936,7 +68206,7 @@
         "id": "95987",
         "type": "work",
         "name": "Garbhopaniṣad",
-        "aka": "",
+        "aka": "Garbha Upaniṣad",
         "author_ids": [],
         "base_text_ids": [],
         "commentary_ids": [
@@ -67944,7 +68214,7 @@
             "90010",
             "92774"
         ],
-        "discipline": ""
+        "discipline": "Vedānta (general), Hinduism (general)"
     },
     "96022": {
         "id": "96022",
@@ -71938,15 +72208,16 @@
         "id": "90059",
         "type": "work",
         "name": "Commentary on Hastāmalakastotra",
-        "aka": "",
+        "aka": "Hastāmalaka , Hastāmalakabhāṣya",
         "author_ids": [
             "85588"
         ],
         "base_text_ids": [
-            "95995"
+            "95995",
+            "112913"
         ],
         "commentary_ids": [],
-        "discipline": "",
+        "discipline": "Advaita Vedānta",
         "author_highest_year": 1300,
         "author_lowest_year": 1300
     },
@@ -71965,6 +72236,23 @@
             "91889"
         ],
         "discipline": ""
+    },
+    "112913": {
+        "id": "112913",
+        "type": "work",
+        "name": "Hastāmalaka",
+        "aka": "",
+        "author_ids": [
+            "85218"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "90059",
+            "116516"
+        ],
+        "discipline": "Advaita Vedānta",
+        "author_highest_year": 710,
+        "author_lowest_year": 710
     },
     "94968": {
         "id": "94968",
@@ -84663,11 +84951,13 @@
         "id": "90298",
         "type": "work",
         "name": "Nyāyamālāvistara",
-        "aka": "(Jaiminīya)Nyāyamālāvistara, Bhāṭṭasāra and Vistara thereon",
+        "aka": "(Jaiminīya)Nyāyamālāvistara, Bhāṭṭasāra and Vistara thereon, Adhikaraṇamālā, Jaiminīyanyāyaratnamālā",
         "author_ids": [
             "85636"
         ],
-        "base_text_ids": [],
+        "base_text_ids": [
+            "88036"
+        ],
         "commentary_ids": [
             "94576",
             "94671"
@@ -89402,6 +89692,18 @@
         "author_highest_year": 710,
         "author_lowest_year": 710
     },
+    "116730": {
+        "id": "116730",
+        "type": "work",
+        "name": "Dhanyāṣṭakastotra",
+        "aka": "Dhanyāṣṭaka",
+        "author_ids": [
+            "87725"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Advaita Vedānta"
+    },
     "115878": {
         "id": "115878",
         "type": "work",
@@ -89411,6 +89713,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
+    },
+    "116533": {
+        "id": "116533",
+        "type": "author",
+        "name": "Dharānanda",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116534"
+        ]
     },
     "87230": {
         "id": "87230",
@@ -90183,9 +90495,10 @@
         "social_identifiers": "Karhāḍā brāhmaṇa, Pādhye",
         "work_ids": [
             "41674",
-            "111727"
+            "111727",
+            "116592"
         ],
-        "disciplines": "Dharmaśāstra (2)"
+        "disciplines": "Dharmaśāstra (2), Purāṇa (1)"
     },
     "88015": {
         "id": "88015",
@@ -90306,6 +90619,18 @@
         "author_highest_year": 1640,
         "author_lowest_year": 1610
     },
+    "116429": {
+        "id": "116429",
+        "type": "work",
+        "name": "Dharmatattvakalānidhi",
+        "aka": "Pṛthvīcandrodaya",
+        "author_ids": [
+            "116427"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
     "94317": {
         "id": "94317",
         "type": "work",
@@ -90388,6 +90713,18 @@
         "author_highest_year": 1640,
         "author_lowest_year": 1640
     },
+    "116803": {
+        "id": "116803",
+        "type": "work",
+        "name": "Dharmmaśāstrasmṛti",
+        "aka": "Dharmaśāstrasmṛti",
+        "author_ids": [
+            "116801"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
     "89701": {
         "id": "89701",
         "type": "work",
@@ -90437,6 +90774,16 @@
         "discipline": "",
         "author_highest_year": 770,
         "author_lowest_year": 770
+    },
+    "116788": {
+        "id": "116788",
+        "type": "work",
+        "name": "Dhātrīpūjana",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "42048": {
         "id": "42048",
@@ -90541,7 +90888,7 @@
     "42448": {
         "id": "42448",
         "type": "work",
-        "name": "Dhātupāṭha",
+        "name": "Pāṇinīya Dhātupāṭha",
         "aka": "",
         "author_ids": [
             "40604"
@@ -90670,6 +91017,16 @@
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
     },
+    "116785": {
+        "id": "116785",
+        "type": "work",
+        "name": "Dhaumyakṛtastotra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "107031": {
         "id": "107031",
         "type": "work",
@@ -90771,6 +91128,16 @@
             "94251"
         ]
     },
+    "116798": {
+        "id": "116798",
+        "type": "work",
+        "name": "Dhuṇḍirāja",
+        "aka": "Dhuṇḍhirāja bhujaṅgaprayāta stotra, Dhuṇḍhirāja",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "96568": {
         "id": "96568",
         "type": "author",
@@ -90783,6 +91150,47 @@
             "96570"
         ],
         "disciplines": "Dharmaśāstra, Vyākaraṇa (1)"
+    },
+    "116779": {
+        "id": "116779",
+        "type": "work",
+        "name": "Dhūrtasvāmibhāṣya",
+        "aka": "",
+        "author_ids": [
+            "113074"
+        ],
+        "base_text_ids": [
+            "113073"
+        ],
+        "commentary_ids": [
+            "116781"
+        ],
+        "discipline": "Dharmaśāstra"
+    },
+    "116781": {
+        "id": "116781",
+        "type": "work",
+        "name": "Dhūrtasvāmibhāṣyaṭīkā",
+        "aka": "Somerāmāṃḍārabhāṣya",
+        "author_ids": [
+            "116780"
+        ],
+        "base_text_ids": [
+            "116779"
+        ],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
+    "116780": {
+        "id": "116780",
+        "type": "author",
+        "name": "Kauśikarāma",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116781"
+        ],
+        "disciplines": "Dharmaśāstra (1)"
     },
     "116071": {
         "id": "116071",
@@ -90833,6 +91241,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
+    },
+    "116805": {
+        "id": "116805",
+        "type": "work",
+        "name": "Dhvajāropaṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "91754": {
         "id": "91754",
@@ -91288,6 +91706,29 @@
         "work_ids": [
             "94908"
         ]
+    },
+    "116844": {
+        "id": "116844",
+        "type": "author",
+        "name": "Dinakarabhaṭṭa",
+        "aka": "Divākarabhaṭṭa",
+        "social_identifiers": "",
+        "work_ids": [
+            "116845"
+        ],
+        "disciplines": "Dharmaśāstra (1)"
+    },
+    "116845": {
+        "id": "116845",
+        "type": "work",
+        "name": "Dinakaradyota",
+        "aka": "Dinakaroddyota, Prāyaścittadinakarodyota",
+        "author_ids": [
+            "116844"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "91734": {
         "id": "91734",
@@ -97449,6 +97890,16 @@
         "commentary_ids": [],
         "discipline": "Kośaśāstra, Tantra"
     },
+    "116478": {
+        "id": "116478",
+        "type": "work",
+        "name": "Ekākṣaramahāgaṇapati mantravidhi",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Purāṇa, Tantra"
+    },
     "94487": {
         "id": "94487",
         "type": "work",
@@ -97763,6 +98214,19 @@
         "commentary_ids": [],
         "discipline": "Tantra"
     },
+    "116515": {
+        "id": "116515",
+        "type": "author",
+        "name": "Eknātha",
+        "aka": "",
+        "highest_year": 1600,
+        "lowest_year": 1532,
+        "social_identifiers": "",
+        "work_ids": [
+            "116516"
+        ],
+        "disciplines": "Advaita Vedānta (1)"
+    },
     "112955": {
         "id": "112955",
         "type": "work",
@@ -98027,6 +98491,17 @@
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
     },
+    "116673": {
+        "id": "116673",
+        "type": "author",
+        "name": "Gadādhara",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116674"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
+    },
     "111352": {
         "id": "111352",
         "type": "author",
@@ -98258,6 +98733,16 @@
         "author_highest_year": 550,
         "author_lowest_year": 480
     },
+    "116374": {
+        "id": "116374",
+        "type": "work",
+        "name": "Gajagaurīvrata",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Purāṇa, Dharmaśāstra"
+    },
     "93050": {
         "id": "93050",
         "type": "work",
@@ -98344,6 +98829,31 @@
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
     },
+    "116376": {
+        "id": "116376",
+        "type": "work",
+        "name": "Gajendramokṣa",
+        "aka": "",
+        "author_ids": [
+            "102598"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Kāvya"
+    },
+    "102598": {
+        "id": "102598",
+        "type": "author",
+        "name": "Vedavyāsa",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116376",
+            "116375",
+            "42408"
+        ],
+        "disciplines": "Kāvya (2), Purāṇa (1)"
+    },
     "41295": {
         "id": "41295",
         "type": "work",
@@ -98357,6 +98867,16 @@
         "discipline": "Kāvya",
         "author_highest_year": 1720,
         "author_lowest_year": 1640
+    },
+    "116440": {
+        "id": "116440",
+        "type": "work",
+        "name": "Gakārādigaṇapati sahasranāmastotra",
+        "aka": "Gakārādi sahasranāmastotra, Gaṇapatīgakārādi sahasranāmastotra, Gakārādigaṇeśa sahasranāma",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Tantra"
     },
     "107878": {
         "id": "107878",
@@ -98916,6 +99436,26 @@
         "commentary_ids": [],
         "discipline": ""
     },
+    "116388": {
+        "id": "116388",
+        "type": "work",
+        "name": "Gaṇeśapurāṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Purāṇa"
+    },
+    "116470": {
+        "id": "116470",
+        "type": "work",
+        "name": "Gaṇeśasahasranāma",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Purāṇa"
+    },
     "111562": {
         "id": "111562",
         "type": "work",
@@ -99332,6 +99872,29 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Jyotiḥśāstra"
+    },
+    "116438": {
+        "id": "116438",
+        "type": "work",
+        "name": "Gaṇitanāmamālā",
+        "aka": "",
+        "author_ids": [
+            "116437"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
+    "116437": {
+        "id": "116437",
+        "type": "author",
+        "name": "Haridatta",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116438"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
     },
     "105684": {
         "id": "105684",
@@ -100337,7 +100900,9 @@
         ],
         "base_text_ids": [],
         "commentary_ids": [
-            "96400"
+            "96400",
+            "116419",
+            "41512"
         ],
         "discipline": "Kāvya"
     },
@@ -100353,6 +100918,17 @@
             "92617"
         ],
         "disciplines": "Nyāya (1)"
+    },
+    "116395": {
+        "id": "116395",
+        "type": "author",
+        "name": "Ghaṭakarpara",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "108950"
+        ],
+        "disciplines": "Kāvya (1)"
     },
     "111799": {
         "id": "111799",
@@ -100395,9 +100971,10 @@
         "id": "108950",
         "type": "work",
         "name": "Ghaṭakarparakāvya",
-        "aka": "Ghaṭakarpara",
+        "aka": "Ghaṭakharparakāvya",
         "author_ids": [
-            "40377"
+            "40377",
+            "116395"
         ],
         "base_text_ids": [],
         "commentary_ids": [
@@ -100762,7 +101339,7 @@
         "aka": "",
         "highest_year": 1100,
         "lowest_year": 1100,
-        "social_identifiers": "",
+        "social_identifiers": "Miśra",
         "work_ids": [
             "109801"
         ],
@@ -102049,12 +102626,23 @@
         "id": "40984",
         "type": "author",
         "name": "Govinda Bhikṣu",
-        "aka": "Govinda",
+        "aka": "Govinda, Bhikṣugovinda, Govindabhikṣu, Govindabhagavatpāda",
         "social_identifiers": "",
         "work_ids": [
             "42387"
         ],
         "disciplines": "Vaidyaśāstra (1)"
+    },
+    "116755": {
+        "id": "116755",
+        "type": "author",
+        "name": "Govinda Dīkṣita",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116756"
+        ],
+        "disciplines": "Dharmaśāstra (1)"
     },
     "86297": {
         "id": "86297",
@@ -106059,6 +106647,16 @@
         "author_highest_year": 1525,
         "author_lowest_year": 1400
     },
+    "116436": {
+        "id": "116436",
+        "type": "work",
+        "name": "Hariharastotra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "86862": {
         "id": "86862",
         "type": "author",
@@ -106136,9 +106734,10 @@
         "aka": "",
         "social_identifiers": "",
         "work_ids": [
+            "116460",
             "113180"
         ],
-        "disciplines": "Dharmaśāstra (1)"
+        "disciplines": "Dharmaśāstra (2)"
     },
     "104617": {
         "id": "104617",
@@ -106160,6 +106759,36 @@
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
     },
+    "116443": {
+        "id": "116443",
+        "type": "work",
+        "name": "Haritālikākathā",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
+    "116449": {
+        "id": "116449",
+        "type": "work",
+        "name": "Haritālikāpūjā",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
+    "116454": {
+        "id": "116454",
+        "type": "work",
+        "name": "Haritālikāpūjākathāvratodyāpana",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "104607": {
         "id": "104607",
         "type": "work",
@@ -106169,6 +106798,18 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
+    },
+    "116460": {
+        "id": "116460",
+        "type": "work",
+        "name": "Hārītasmṛti",
+        "aka": "",
+        "author_ids": [
+            "113179"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "93532": {
         "id": "93532",
@@ -106193,7 +106834,9 @@
         "aka": "",
         "author_ids": [],
         "base_text_ids": [],
-        "commentary_ids": [],
+        "commentary_ids": [
+            "116507"
+        ],
         "discipline": "Purāṇa"
     },
     "112280": {
@@ -106229,6 +106872,18 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": ""
+    },
+    "116507": {
+        "id": "116507",
+        "type": "work",
+        "name": "Harivaṃśoddyota",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [
+            "112278"
+        ],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
     },
     "42174": {
         "id": "42174",
@@ -106436,6 +107091,26 @@
             "88585"
         ]
     },
+    "116510": {
+        "id": "116510",
+        "type": "work",
+        "name": "Hastagaurīvrata",
+        "aka": "Gajagaurīvrata",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
+    "116513": {
+        "id": "116513",
+        "type": "work",
+        "name": "Hastagaurīvratakathā",
+        "aka": "Gajagaurīvrata",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "41939": {
         "id": "41939",
         "type": "work",
@@ -106456,19 +107131,21 @@
         "commentary_ids": [],
         "discipline": "Vedānta (general)"
     },
-    "112913": {
-        "id": "112913",
+    "116516": {
+        "id": "116516",
         "type": "work",
-        "name": "Hastāmalaka",
-        "aka": "",
+        "name": "Hastāmalakagranthaṭīkā",
+        "aka": "Hastāmalakaṭīkā",
         "author_ids": [
-            "85218"
+            "116515"
         ],
-        "base_text_ids": [],
+        "base_text_ids": [
+            "112913"
+        ],
         "commentary_ids": [],
         "discipline": "Advaita Vedānta",
-        "author_highest_year": 710,
-        "author_lowest_year": 710
+        "author_highest_year": 1600,
+        "author_lowest_year": 1532
     },
     "88651": {
         "id": "88651",
@@ -106507,6 +107184,26 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
+    },
+    "116521": {
+        "id": "116521",
+        "type": "work",
+        "name": "Hastarekhā",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
+    "116524": {
+        "id": "116524",
+        "type": "work",
+        "name": "Hastarekhāvicāraṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
     },
     "105636": {
         "id": "105636",
@@ -106756,6 +107453,18 @@
         "discipline": "",
         "author_highest_year": 1370,
         "author_lowest_year": 1269
+    },
+    "116539": {
+        "id": "116539",
+        "type": "work",
+        "name": "Hāyanaratna",
+        "aka": "Ṣoḍaśayoga",
+        "author_ids": [
+            "116537"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
     },
     "105638": {
         "id": "105638",
@@ -107228,6 +107937,16 @@
         "commentary_ids": [],
         "discipline": "Purāṇa"
     },
+    "116545": {
+        "id": "116545",
+        "type": "work",
+        "name": "Hiṅgulanāmalakṣaṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "104609": {
         "id": "104609",
         "type": "work",
@@ -107237,18 +107956,6 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
-    },
-    "114358": {
-        "id": "114358",
-        "type": "work",
-        "name": "Hiraṇyakeśīdarśpurṇamāsaprayoga",
-        "aka": "",
-        "author_ids": [
-            "114337"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Hinduism (general)"
     },
     "86104": {
         "id": "86104",
@@ -107320,6 +108027,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Tantra"
+    },
+    "116547": {
+        "id": "116547",
+        "type": "work",
+        "name": "Homapaddhati",
+        "aka": "Mallārī Mahātmya Homapaddhati",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
     },
     "105672": {
         "id": "105672",
@@ -107401,6 +108118,16 @@
             "113140"
         ],
         "disciplines": "Vyākaraṇa (1)"
+    },
+    "116555": {
+        "id": "116555",
+        "type": "work",
+        "name": "Hotṛ rites",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Veda, Dharmaśāstra, Hinduism (general)"
     },
     "111030": {
         "id": "111030",
@@ -107678,6 +108405,16 @@
             "90572"
         ]
     },
+    "116557": {
+        "id": "116557",
+        "type": "work",
+        "name": "Indiraikādaśī",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "115793": {
         "id": "115793",
         "type": "author",
@@ -107709,6 +108446,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Jyotiḥśāstra"
+    },
+    "116560": {
+        "id": "116560",
+        "type": "work",
+        "name": "Indrākṣīstotra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
     },
     "41901": {
         "id": "41901",
@@ -107773,6 +108520,16 @@
             "95026"
         ],
         "disciplines": "Jainism (general) (1)"
+    },
+    "116562": {
+        "id": "116562",
+        "type": "work",
+        "name": "Indrāya Dvādaśanṛmedha",
+        "aka": "Indra Sūkta",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Veda"
     },
     "114950": {
         "id": "114950",
@@ -108716,6 +109473,29 @@
         "author_highest_year": 1745,
         "author_lowest_year": 1745
     },
+    "116601": {
+        "id": "116601",
+        "type": "work",
+        "name": "Jaganmohana",
+        "aka": "",
+        "author_ids": [
+            "116600"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
+    "116600": {
+        "id": "116600",
+        "type": "author",
+        "name": "Lakṣmaṇācārya Bhaṭṭa",
+        "aka": "Bhaṭṭalakṣmaṇācārya, Sāraṅgasādhuvacanāmṛta",
+        "social_identifiers": "",
+        "work_ids": [
+            "116601"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
+    },
     "105501": {
         "id": "105501",
         "type": "work",
@@ -108738,6 +109518,17 @@
             "41366"
         ],
         "disciplines": "Vaidyaśāstra (1)"
+    },
+    "40757": {
+        "id": "40757",
+        "type": "author",
+        "name": "Jagannātha",
+        "aka": "Jagannātha Paṇḍitarāja",
+        "social_identifiers": "",
+        "work_ids": [
+            "41668"
+        ],
+        "disciplines": "Alaṃkāraśāstra (1)"
     },
     "86126": {
         "id": "86126",
@@ -109048,10 +109839,11 @@
         "lowest_year": 25,
         "social_identifiers": "",
         "work_ids": [
+            "116825",
             "114610",
             "88036"
         ],
-        "disciplines": "Hinduism (general) (1)"
+        "disciplines": "Hinduism (general) (1), Jyotiḥśāstra (1)"
     },
     "99349": {
         "id": "99349",
@@ -109079,6 +109871,20 @@
             "99349"
         ]
     },
+    "116825": {
+        "id": "116825",
+        "type": "work",
+        "name": "Jaimini Sūtra",
+        "aka": "Jaiminīyopadeśasūtra",
+        "author_ids": [
+            "85087"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra",
+        "author_highest_year": 25,
+        "author_lowest_year": 25
+    },
     "86937": {
         "id": "86937",
         "type": "author",
@@ -109094,8 +109900,8 @@
     "114610": {
         "id": "114610",
         "type": "work",
-        "name": "Jaiminīkṛta aśvamedhaprārambhaḥ",
-        "aka": "Jaiminīya aśvamedha",
+        "name": "Jaiminīkṛta aśvamedha",
+        "aka": "",
         "author_ids": [
             "85087"
         ],
@@ -109583,6 +110389,16 @@
         "author_highest_year": 1580,
         "author_lowest_year": 1510
     },
+    "116619": {
+        "id": "116619",
+        "type": "work",
+        "name": "Jalāśayotsargaprayoga",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "110004": {
         "id": "110004",
         "type": "work",
@@ -109729,6 +110545,16 @@
         ],
         "disciplines": "Kāvya (1)"
     },
+    "116621": {
+        "id": "116621",
+        "type": "work",
+        "name": "Jānakīkavaca",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "87347": {
         "id": "87347",
         "type": "author",
@@ -109738,6 +110564,16 @@
         "work_ids": [
             "95042"
         ]
+    },
+    "116623": {
+        "id": "116623",
+        "type": "work",
+        "name": "Jānakīpariṇaya",
+        "aka": "Jānakīpariṇaya Nāṭakam",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
     },
     "99345": {
         "id": "99345",
@@ -109781,6 +110617,26 @@
         "id": "113239",
         "type": "work",
         "name": "Jānakīramaṇastotra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
+    "116625": {
+        "id": "116625",
+        "type": "work",
+        "name": "Jānakīsahasranāmastotra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
+    "116627": {
+        "id": "116627",
+        "type": "work",
+        "name": "Jānakīstavarājavarṇanāma",
         "aka": "",
         "author_ids": [],
         "base_text_ids": [],
@@ -110055,6 +110911,16 @@
         "commentary_ids": [],
         "discipline": "Purāṇa"
     },
+    "116631": {
+        "id": "116631",
+        "type": "work",
+        "name": "Janmāṣṭamīvratodyāpana",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "110287": {
         "id": "110287",
         "type": "work",
@@ -110108,6 +110974,29 @@
         "discipline": "",
         "author_highest_year": 1645,
         "author_lowest_year": 1645
+    },
+    "116634": {
+        "id": "116634",
+        "type": "work",
+        "name": "Japaśaṃkarapārvatīpate",
+        "aka": "Śiva stotra",
+        "author_ids": [
+            "116633"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Kāmaśāstra"
+    },
+    "116633": {
+        "id": "116633",
+        "type": "author",
+        "name": "Upamanyu",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116634"
+        ],
+        "disciplines": "Kāmaśāstra (1)"
     },
     "96001": {
         "id": "96001",
@@ -110253,6 +111142,29 @@
         "discipline": "Jyotiḥśāstra",
         "author_highest_year": 1056,
         "author_lowest_year": 1039
+    },
+    "116641": {
+        "id": "116641",
+        "type": "work",
+        "name": "Jātakālaṃkārakarma",
+        "aka": "Jātakālaṃkārakarman",
+        "author_ids": [
+            "116640"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
+    "116640": {
+        "id": "116640",
+        "type": "author",
+        "name": "Śukamahāmunikavi",
+        "aka": "Śrīśuka",
+        "social_identifiers": "",
+        "work_ids": [
+            "116641"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
     },
     "113619": {
         "id": "113619",
@@ -110830,6 +111742,47 @@
         "work_ids": [
             "93602"
         ]
+    },
+    "116654": {
+        "id": "116654",
+        "type": "work",
+        "name": "Jayalakṣmīṭīkā",
+        "aka": "",
+        "author_ids": [
+            "116653"
+        ],
+        "base_text_ids": [
+            "106597"
+        ],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
+    "116653": {
+        "id": "116653",
+        "type": "author",
+        "name": "Mahādeva",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116654"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
+    },
+    "106597": {
+        "id": "106597",
+        "type": "work",
+        "name": "Narapatijayacaryā",
+        "aka": "Narapatijayacaryāsvarodaya, Svarodaya",
+        "author_ids": [
+            "110131"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "116654"
+        ],
+        "discipline": "Jyotiḥśāstra",
+        "author_highest_year": 1177,
+        "author_lowest_year": 1177
     },
     "110151": {
         "id": "110151",
@@ -111952,6 +112905,16 @@
         "commentary_ids": [],
         "discipline": "Advaita Vedānta"
     },
+    "116656": {
+        "id": "116656",
+        "type": "work",
+        "name": "Jīvanmuktisādhana",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Advaita Vedānta"
+    },
     "93894": {
         "id": "93894",
         "type": "work",
@@ -112285,6 +113248,16 @@
         "author_ids": [
             "87828"
         ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Advaita Vedānta"
+    },
+    "116668": {
+        "id": "116668",
+        "type": "work",
+        "name": "Jñānabodhaprakaraṇa",
+        "aka": "",
+        "author_ids": [],
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Advaita Vedānta"
@@ -112645,6 +113618,41 @@
             "95242"
         ]
     },
+    "116671": {
+        "id": "116671",
+        "type": "work",
+        "name": "Jñānamañjarī",
+        "aka": "",
+        "author_ids": [
+            "116670"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
+    "116670": {
+        "id": "116670",
+        "type": "author",
+        "name": "Ṛṣiśarman",
+        "aka": "",
+        "social_identifiers": "Ācārya",
+        "work_ids": [
+            "116671"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
+    },
+    "116674": {
+        "id": "116674",
+        "type": "work",
+        "name": "Jñānamañjarī",
+        "aka": "",
+        "author_ids": [
+            "116673"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
     "105590": {
         "id": "105590",
         "type": "work",
@@ -112758,6 +113766,16 @@
         "commentary_ids": [],
         "discipline": ""
     },
+    "116676": {
+        "id": "116676",
+        "type": "work",
+        "name": "Jñānāmṛtaśrāvaṇīmantra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "87370": {
         "id": "87370",
         "type": "author",
@@ -112780,6 +113798,20 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Vedānta (general)"
+    },
+    "116679": {
+        "id": "116679",
+        "type": "work",
+        "name": "Jñānanaukā",
+        "aka": "",
+        "author_ids": [
+            "85218"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Advaita Vedānta",
+        "author_highest_year": 710,
+        "author_lowest_year": 710
     },
     "95176": {
         "id": "95176",
@@ -113737,6 +114769,16 @@
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
     },
+    "116686": {
+        "id": "116686",
+        "type": "work",
+        "name": "Jvarahara Stotra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "41498": {
         "id": "41498",
         "type": "work",
@@ -113820,6 +114862,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
+    },
+    "116690": {
+        "id": "116690",
+        "type": "work",
+        "name": "Jvaraśānti",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "41932": {
         "id": "41932",
@@ -113959,6 +115011,16 @@
         "commentary_ids": [],
         "discipline": "Jyotiḥśāstra"
     },
+    "116696": {
+        "id": "116696",
+        "type": "work",
+        "name": "Jyotimsāgagrantha",
+        "aka": "Jyotisāgara",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "105375": {
         "id": "105375",
         "type": "work",
@@ -114030,6 +115092,18 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Jyotiḥśāstra"
+    },
+    "116684": {
+        "id": "116684",
+        "type": "work",
+        "name": "Jyotiṣabālabodha",
+        "aka": "",
+        "author_ids": [
+            "112861"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
     },
     "105480": {
         "id": "105480",
@@ -114368,6 +115442,16 @@
         "commentary_ids": [],
         "discipline": "Jyotiḥśāstra"
     },
+    "116692": {
+        "id": "116692",
+        "type": "work",
+        "name": "Jyotiṣaviṣayakagrantha",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
     "106499": {
         "id": "106499",
         "type": "work",
@@ -114411,6 +115495,31 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
+    },
+    "116706": {
+        "id": "116706",
+        "type": "work",
+        "name": "Jyotiṣkedāra",
+        "aka": "Jyotiṣakedāra",
+        "highest_year": 1763,
+        "lowest_year": 1763,
+        "author_ids": [
+            "116705"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
+    "116705": {
+        "id": "116705",
+        "type": "author",
+        "name": "Kṛpāśaṅkara",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116706"
+        ],
+        "disciplines": "Jyotiḥśāstra (1)"
     },
     "94665": {
         "id": "94665",
@@ -114473,6 +115582,16 @@
         "discipline": "Dharmaśāstra",
         "author_highest_year": 1580,
         "author_lowest_year": 1510
+    },
+    "116709": {
+        "id": "116709",
+        "type": "work",
+        "name": "Jyotiṣṭoma",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "42489": {
         "id": "42489",
@@ -114551,6 +115670,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
+    },
+    "116711": {
+        "id": "116711",
+        "type": "work",
+        "name": "Kadalīvratakathā",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "109562": {
         "id": "109562",
@@ -115055,16 +116184,6 @@
         "author_highest_year": 710,
         "author_lowest_year": 710
     },
-    "112219": {
-        "id": "112219",
-        "type": "work",
-        "name": "Kālabhairavāṣṭaka",
-        "aka": "",
-        "author_ids": [],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Hinduism (general)"
-    },
     "108490": {
         "id": "108490",
         "type": "work",
@@ -115163,6 +116282,26 @@
             "114033"
         ],
         "disciplines": "Kashmir Śaivism (1)"
+    },
+    "116723": {
+        "id": "116723",
+        "type": "work",
+        "name": "Kālāgnirudropaniṣad",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
+    "116733": {
+        "id": "116733",
+        "type": "work",
+        "name": "Kālajātaka",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
     },
     "41502": {
         "id": "41502",
@@ -115289,6 +116428,32 @@
         "author_highest_year": 1300,
         "author_lowest_year": 1300
     },
+    "116737": {
+        "id": "116737",
+        "type": "work",
+        "name": "Kālāmṛta",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "116738"
+        ],
+        "discipline": "Jyotiḥśāstra, Dharmaśāstra"
+    },
+    "116738": {
+        "id": "116738",
+        "type": "work",
+        "name": "Kālāmṛtivivṛti",
+        "aka": "",
+        "author_ids": [
+            "116736"
+        ],
+        "base_text_ids": [
+            "116737"
+        ],
+        "commentary_ids": [],
+        "discipline": "Jyotiḥśāstra"
+    },
     "106228": {
         "id": "106228",
         "type": "work",
@@ -115298,6 +116463,19 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Jyotiḥśāstra"
+    },
+    "40773": {
+        "id": "40773",
+        "type": "author",
+        "name": "Mādhava",
+        "aka": "",
+        "highest_year": 1300,
+        "lowest_year": 1300,
+        "social_identifiers": "Baudhāyana, Bhāradvāja, Kṛṣṇa yajurveda, Vidyāraṇya",
+        "work_ids": [
+            "112783"
+        ],
+        "disciplines": "Dharmaśāstra, Jyotiḥśāstra (1)"
     },
     "41749": {
         "id": "41749",
@@ -115454,6 +116632,18 @@
         ],
         "disciplines": "Dhātupāṭha, Kātantra, Vyākaraṇa (1), Kātantra, Vyākaraṇa (1), Vyākaraṇa (1)"
     },
+    "116756": {
+        "id": "116756",
+        "type": "work",
+        "name": "Kālaprabodha",
+        "aka": "",
+        "author_ids": [
+            "116755"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
     "90126": {
         "id": "90126",
         "type": "work",
@@ -115556,6 +116746,30 @@
         "discipline": "Kāvya",
         "author_highest_year": 1070,
         "author_lowest_year": 990
+    },
+    "116759": {
+        "id": "116759",
+        "type": "work",
+        "name": "Kaleriti",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [
+            "116760"
+        ],
+        "commentary_ids": [],
+        "discipline": ""
+    },
+    "116760": {
+        "id": "116760",
+        "type": "work",
+        "name": "Kalibhaviṣya",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "116759"
+        ],
+        "discipline": ""
     },
     "40913": {
         "id": "40913",
@@ -115815,6 +117029,28 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": ""
+    },
+    "116765": {
+        "id": "116765",
+        "type": "work",
+        "name": "Kalpalatā",
+        "aka": "Saṃvatsarādiphalakalpalatā",
+        "author_ids": [
+            "116762"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
+    },
+    "116762": {
+        "id": "116762",
+        "type": "author",
+        "name": "Soma Gaṇaka",
+        "aka": "Somadaivajña",
+        "social_identifiers": "",
+        "work_ids": [
+            "116765"
+        ]
     },
     "91163": {
         "id": "91163",
@@ -116749,6 +117985,18 @@
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
     },
+    "116769": {
+        "id": "116769",
+        "type": "work",
+        "name": "Kāmyeṣṭi",
+        "aka": "Baudhāyaniyakāmyeṣṭi",
+        "author_ids": [
+            "114370"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
     "92864": {
         "id": "92864",
         "type": "work",
@@ -117309,6 +118557,16 @@
         ],
         "disciplines": "Bhāṭṭa Mīmāṃsā + Mīmāṃsā (1)"
     },
+    "116771": {
+        "id": "116771",
+        "type": "work",
+        "name": "Kanyasthakṛṣṇaveṇītirthavīdhīmahatmya",
+        "aka": "Kṛṣṇayātrāni",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
     "110648": {
         "id": "110648",
         "type": "work",
@@ -117387,10 +118645,44 @@
         "lowest_year": 1375,
         "social_identifiers": "",
         "work_ids": [
+            "116773",
             "90384",
             "112932"
         ],
         "disciplines": "Sāṅkhya (2)"
+    },
+    "116773": {
+        "id": "116773",
+        "type": "work",
+        "name": "Kapilācāryasūtrāṇi",
+        "aka": "Sāṅkhyasūtravivaraṇa",
+        "author_ids": [
+            "85657"
+        ],
+        "base_text_ids": [
+            "112932"
+        ],
+        "commentary_ids": [],
+        "discipline": "",
+        "author_highest_year": 1375,
+        "author_lowest_year": 1375
+    },
+    "112932": {
+        "id": "112932",
+        "type": "work",
+        "name": "Sāṅkhyasūtravṛtti",
+        "aka": "Tattvasamāsa",
+        "author_ids": [
+            "85657"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "116773",
+            "112933"
+        ],
+        "discipline": "Sāṅkhya",
+        "author_highest_year": 1375,
+        "author_lowest_year": 1375
     },
     "115087": {
         "id": "115087",
@@ -117401,6 +118693,26 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
+    },
+    "116775": {
+        "id": "116775",
+        "type": "work",
+        "name": "Kapilāṣaṣṭhīvidhāna",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
+    "116777": {
+        "id": "116777",
+        "type": "work",
+        "name": "Kapilaṣaṣṭhīvrata",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
     },
     "95190": {
         "id": "95190",
@@ -117497,6 +118809,20 @@
         "author_highest_year": 1100,
         "author_lowest_year": 1100
     },
+    "116790": {
+        "id": "116790",
+        "type": "work",
+        "name": "Kārakaprakaraṇa",
+        "aka": "",
+        "author_ids": [
+            "85980"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Vyākaraṇa",
+        "author_highest_year": 1633,
+        "author_lowest_year": 1547
+    },
     "109994": {
         "id": "109994",
         "type": "work",
@@ -117539,6 +118865,16 @@
             "109994"
         ],
         "discipline": "Kātantra, Vyākaraṇa"
+    },
+    "116966": {
+        "id": "116966",
+        "type": "work",
+        "name": "Kārakasaṅgraha",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Vyākaraṇa, Kātantra"
     },
     "42474": {
         "id": "42474",
@@ -117622,6 +118958,16 @@
         "discipline": "Vyākaraṇa",
         "author_highest_year": 1660,
         "author_lowest_year": 1660
+    },
+    "116792": {
+        "id": "116792",
+        "type": "work",
+        "name": "Kārakavibhakti",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Vyākaraṇa"
     },
     "41581": {
         "id": "41581",
@@ -117888,6 +119234,16 @@
         "author_highest_year": 550,
         "author_lowest_year": 550
     },
+    "116795": {
+        "id": "116795",
+        "type": "work",
+        "name": "Karavīramāhātmya",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "94162": {
         "id": "94162",
         "type": "work",
@@ -117981,6 +119337,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Dharmaśāstra"
+    },
+    "116807": {
+        "id": "116807",
+        "type": "work",
+        "name": "Karkaṭīvrata",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
     },
     "89413": {
         "id": "89413",
@@ -118132,6 +119498,44 @@
             "41465"
         ],
         "disciplines": "Vaidyaśāstra (5)"
+    },
+    "116814": {
+        "id": "116814",
+        "type": "work",
+        "name": "Karmaprakāśikāvṛtti",
+        "aka": "",
+        "author_ids": [
+            "116813"
+        ],
+        "base_text_ids": [
+            "116812"
+        ],
+        "commentary_ids": [],
+        "discipline": ""
+    },
+    "116813": {
+        "id": "116813",
+        "type": "author",
+        "name": "Nārāyaṇa Sāmudrikā",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116814"
+        ]
+    },
+    "116812": {
+        "id": "116812",
+        "type": "work",
+        "name": "Manuṣyajātaka",
+        "aka": "Karmaprakāśikā , Tājikatantra",
+        "author_ids": [
+            "116809"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "116814"
+        ],
+        "discipline": ""
     },
     "89061": {
         "id": "89061",
@@ -119197,24 +120601,6 @@
         "discipline": "",
         "author_highest_year": 1100,
         "author_lowest_year": 1100
-    },
-    "109741": {
-        "id": "109741",
-        "type": "work",
-        "name": "Kāśikāvivaraṇapañjikā",
-        "aka": "Nyāsa",
-        "author_ids": [
-            "85247"
-        ],
-        "base_text_ids": [
-            "41544"
-        ],
-        "commentary_ids": [
-            "41548"
-        ],
-        "discipline": "Vyākaraṇa",
-        "author_highest_year": 830,
-        "author_lowest_year": 830
     },
     "41544": {
         "id": "41544",
@@ -124020,6 +125406,16 @@
         ],
         "disciplines": "Nyāya (1)"
     },
+    "116568": {
+        "id": "116568",
+        "type": "work",
+        "name": "Kṛṣṇa Yajurveda (Taittirīya Saṃhitā)",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Veda"
+    },
     "86350": {
         "id": "86350",
         "type": "author",
@@ -125343,9 +126739,10 @@
             "109611",
             "108720",
             "96592",
+            "116419",
             "108725"
         ],
-        "disciplines": "Kāvya (3), Kashmir Śaivism, Kāvya (1)"
+        "disciplines": "Kāvya (4), Kashmir Śaivism, Kāvya (1)"
     },
     "87451": {
         "id": "87451",
@@ -125720,6 +127117,16 @@
         ],
         "disciplines": "Advaita Vedānta (1), Sāṅkhya (1)"
     },
+    "116476": {
+        "id": "116476",
+        "type": "work",
+        "name": "Kūrmalakṣaṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Veda"
+    },
     "113066": {
         "id": "113066",
         "type": "work",
@@ -126042,6 +127449,20 @@
         ],
         "commentary_ids": [],
         "discipline": "Alaṃkāraśāstra"
+    },
+    "116895": {
+        "id": "116895",
+        "type": "work",
+        "name": "Kuvalayānandālaṅkāranāni",
+        "aka": "",
+        "author_ids": [
+            "116894"
+        ],
+        "base_text_ids": [
+            "41631"
+        ],
+        "commentary_ids": [],
+        "discipline": ""
     },
     "93761": {
         "id": "93761",
@@ -130676,6 +132097,18 @@
         "commentary_ids": [],
         "discipline": ""
     },
+    "116375": {
+        "id": "116375",
+        "type": "work",
+        "name": "Mahābhārata Śāntiparva",
+        "aka": "",
+        "author_ids": [
+            "102598"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Kāvya"
+    },
     "111602": {
         "id": "111602",
         "type": "work",
@@ -133420,6 +134853,16 @@
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
     },
+    "116687": {
+        "id": "116687",
+        "type": "work",
+        "name": "Mālā Mantra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Tantra"
+    },
     "92396": {
         "id": "92396",
         "type": "work",
@@ -135684,6 +137127,16 @@
         "discipline": "Dharmaśāstra",
         "author_highest_year": 7,
         "author_lowest_year": 7
+    },
+    "116809": {
+        "id": "116809",
+        "type": "author",
+        "name": "Samara siṃha",
+        "aka": "",
+        "social_identifiers": "",
+        "work_ids": [
+            "116812"
+        ]
     },
     "106101": {
         "id": "106101",
@@ -137988,8 +139441,10 @@
         "id": "44743",
         "type": "work",
         "name": "Mokṣadharma section of Mahābhārata",
-        "aka": "",
-        "author_ids": [],
+        "aka": "Mokṣadharmaparva",
+        "author_ids": [
+            "108876"
+        ],
         "base_text_ids": [],
         "commentary_ids": [
             "93250",
@@ -141545,6 +143000,16 @@
             "41806"
         ]
     },
+    "116722": {
+        "id": "116722",
+        "type": "work",
+        "name": "Nandikeśvarapurāṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Purāṇa"
+    },
     "88566": {
         "id": "88566",
         "type": "work",
@@ -141849,20 +143314,6 @@
             "106597"
         ],
         "disciplines": "Jyotiḥśāstra (1)"
-    },
-    "106597": {
-        "id": "106597",
-        "type": "work",
-        "name": "Narapatijayacaryā",
-        "aka": "Narapatijayacaryāsvarodaya, Svarodaya",
-        "author_ids": [
-            "110131"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Jyotiḥśāstra",
-        "author_highest_year": 1177,
-        "author_lowest_year": 1177
     },
     "41139": {
         "id": "41139",
@@ -151192,10 +152643,12 @@
         "type": "work",
         "name": "Padmapurāṇa",
         "aka": "",
-        "author_ids": [],
+        "author_ids": [
+            "102598"
+        ],
         "base_text_ids": [],
         "commentary_ids": [],
-        "discipline": ""
+        "discipline": "Purāṇa"
     },
     "111840": {
         "id": "111840",
@@ -155726,29 +157179,6 @@
         "author_highest_year": 1548,
         "author_lowest_year": 1523
     },
-    "42449": {
-        "id": "42449",
-        "type": "work",
-        "name": "Paribhāṣāvṛtti",
-        "aka": "",
-        "author_ids": [
-            "41031"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Vyākaraṇa"
-    },
-    "41031": {
-        "id": "41031",
-        "type": "author",
-        "name": "Sīradeva",
-        "aka": "",
-        "social_identifiers": "",
-        "work_ids": [
-            "42449"
-        ],
-        "disciplines": "Vyākaraṇa (1)"
-    },
     "99350": {
         "id": "99350",
         "type": "work",
@@ -156618,6 +158048,7 @@
         "lowest_year": 300,
         "social_identifiers": "",
         "work_ids": [
+            "116352",
             "88183"
         ]
     },
@@ -156632,6 +158063,20 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": ""
+    },
+    "116352": {
+        "id": "116352",
+        "type": "work",
+        "name": "Patañjalistotra",
+        "aka": "Śivapañcacāmarastotra, Sadāśivāṣṭaka",
+        "author_ids": [
+            "85108"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "",
+        "author_highest_year": 300,
+        "author_lowest_year": 300
     },
     "106646": {
         "id": "106646",
@@ -157384,6 +158829,16 @@
         "discipline": "",
         "author_highest_year": 890,
         "author_lowest_year": 890
+    },
+    "116846": {
+        "id": "116846",
+        "type": "work",
+        "name": "Piṅgalāmata",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Tantra"
     },
     "108584": {
         "id": "108584",
@@ -159255,6 +160710,16 @@
         "discipline": "Sarvāstivāda and Vaibhāṣika",
         "author_highest_year": -260,
         "author_lowest_year": -260
+    },
+    "116677": {
+        "id": "116677",
+        "type": "work",
+        "name": "Prajñāvardhanastotra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
     },
     "115546": {
         "id": "115546",
@@ -162184,9 +163649,27 @@
         "author_ids": [
             "86189"
         ],
-        "base_text_ids": [],
+        "base_text_ids": [
+            "116543"
+        ],
         "commentary_ids": [],
-        "discipline": "",
+        "discipline": "Navya Nyāya",
+        "author_highest_year": 1660,
+        "author_lowest_year": 1660
+    },
+    "116543": {
+        "id": "116543",
+        "type": "work",
+        "name": "Pratyakṣakhaṇḍa",
+        "aka": "",
+        "author_ids": [
+            "86189"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "92284"
+        ],
+        "discipline": "Navya Nyāya",
         "author_highest_year": 1660,
         "author_lowest_year": 1660
     },
@@ -168775,6 +170258,16 @@
         ],
         "disciplines": "Vedānta (general) (1)"
     },
+    "114396": {
+        "id": "114396",
+        "type": "work",
+        "name": "Rāmanavamī vrata",
+        "aka": "Agastipurāṇa rāmanavamī vrata",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "111683": {
         "id": "111683",
         "type": "work",
@@ -169246,10 +170739,25 @@
             "114540"
         ],
         "base_text_ids": [
-            "111356"
+            "111356",
+            "111295"
         ],
         "commentary_ids": [],
         "discipline": "Advaita Vedānta"
+    },
+    "111295": {
+        "id": "111295",
+        "type": "work",
+        "name": "Vālmīki Rāmāyaṇa Kiṣkindhākāṇḍa",
+        "aka": "",
+        "author_ids": [
+            "108861"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [
+            "114541"
+        ],
+        "discipline": "Kāvya"
     },
     "112086": {
         "id": "112086",
@@ -169614,7 +171122,9 @@
         "aka": "",
         "highest_year": 1600,
         "lowest_year": 1600,
-        "author_ids": [],
+        "author_ids": [
+            "40757"
+        ],
         "base_text_ids": [],
         "commentary_ids": [
             "41667"
@@ -170669,6 +172179,18 @@
         "discipline": "",
         "author_highest_year": 1575,
         "author_lowest_year": 1575
+    },
+    "116899": {
+        "id": "116899",
+        "type": "work",
+        "name": "Rasikānanda",
+        "aka": "",
+        "author_ids": [
+            "96829"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Alaṃkāraśāstra"
     },
     "93788": {
         "id": "93788",
@@ -172238,6 +173760,16 @@
         "commentary_ids": [],
         "discipline": "Veda"
     },
+    "116584": {
+        "id": "116584",
+        "type": "work",
+        "name": "Ṛgveda Śākala Saṁhitā",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Veda"
+    },
     "113082": {
         "id": "113082",
         "type": "work",
@@ -172666,7 +174198,7 @@
         "author_ids": [],
         "base_text_ids": [],
         "commentary_ids": [],
-        "discipline": "Tantra"
+        "discipline": "Tantra, Śuddhādvaita Vedānta, Śaiva Advaita"
     },
     "115966": {
         "id": "115966",
@@ -175366,6 +176898,20 @@
         "author_highest_year": 1150,
         "author_lowest_year": 1150
     },
+    "116596": {
+        "id": "116596",
+        "type": "work",
+        "name": "Sāmāṇyabhāvagrantha",
+        "aka": "",
+        "author_ids": [
+            "86065"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Navya Nyāya",
+        "author_highest_year": 1620,
+        "author_lowest_year": 1620
+    },
     "89132": {
         "id": "89132",
         "type": "work",
@@ -175421,6 +176967,22 @@
         "discipline": "",
         "author_highest_year": 1906,
         "author_lowest_year": 1906
+    },
+    "116552": {
+        "id": "116552",
+        "type": "work",
+        "name": "Sāmānyanirukti-prakaraṇa on Hetvābhāsa",
+        "aka": "",
+        "author_ids": [
+            "86189"
+        ],
+        "base_text_ids": [
+            "90767"
+        ],
+        "commentary_ids": [],
+        "discipline": "Nyāya",
+        "author_highest_year": 1660,
+        "author_lowest_year": 1660
     },
     "94011": {
         "id": "94011",
@@ -176638,22 +178200,6 @@
         ],
         "commentary_ids": [],
         "discipline": "Sāṅkhya"
-    },
-    "112932": {
-        "id": "112932",
-        "type": "work",
-        "name": "Sāṅkhyasūtravṛtti",
-        "aka": "Tattvasamāsa",
-        "author_ids": [
-            "85657"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [
-            "112933"
-        ],
-        "discipline": "Sāṅkhya",
-        "author_highest_year": 1375,
-        "author_lowest_year": 1375
     },
     "93796": {
         "id": "93796",
@@ -177880,6 +179426,22 @@
         "discipline": "Jainism (general)",
         "author_highest_year": 1491,
         "author_lowest_year": 1491
+    },
+    "116419": {
+        "id": "116419",
+        "type": "work",
+        "name": "Sandehaviṣauṣadhi",
+        "aka": "Māghakāvyasāraṭīkā",
+        "author_ids": [
+            "96590"
+        ],
+        "base_text_ids": [
+            "96133"
+        ],
+        "commentary_ids": [],
+        "discipline": "Kāvya",
+        "author_highest_year": 1000,
+        "author_lowest_year": 900
     },
     "41849": {
         "id": "41849",
@@ -179599,7 +181161,7 @@
             "114256"
         ],
         "base_text_ids": [
-            "41631"
+            "114173"
         ],
         "commentary_ids": [],
         "discipline": "Alaṃkāraśāstra"
@@ -185001,6 +186563,22 @@
         "author_highest_year": 1755,
         "author_lowest_year": 1755
     },
+    "114798": {
+        "id": "114798",
+        "type": "work",
+        "name": "Siddhānta-lakṣaṇa and Avacchedakatva ṭippaṇī",
+        "aka": "",
+        "author_ids": [
+            "86065"
+        ],
+        "base_text_ids": [
+            "114796"
+        ],
+        "commentary_ids": [],
+        "discipline": "Nyāya",
+        "author_highest_year": 1620,
+        "author_lowest_year": 1620
+    },
     "103821": {
         "id": "103821",
         "type": "work",
@@ -186879,7 +188457,9 @@
         "author_ids": [
             "40418"
         ],
-        "base_text_ids": [],
+        "base_text_ids": [
+            "96133"
+        ],
         "commentary_ids": [],
         "discipline": "",
         "author_highest_year": 1680,
@@ -186954,7 +188534,7 @@
         "id": "110033",
         "type": "work",
         "name": "Śiṣyahitā",
-        "aka": "Śiṣyahitā Vṛtti, Śiṣyāloka Nyāsa",
+        "aka": "Śiṣyahitā Vṛtti",
         "highest_year": 1005,
         "lowest_year": 1005,
         "author_ids": [
@@ -186963,7 +188543,9 @@
         "base_text_ids": [
             "108985"
         ],
-        "commentary_ids": [],
+        "commentary_ids": [
+            "116876"
+        ],
         "discipline": "Kātantra, Vyākaraṇa"
     },
     "110030": {
@@ -186975,9 +188557,10 @@
         "lowest_year": 1000,
         "social_identifiers": "",
         "work_ids": [
-            "110033"
+            "110033",
+            "116876"
         ],
-        "disciplines": "Kātantra, Vyākaraṇa (1)"
+        "disciplines": "Kātantra, Vyākaraṇa (1), Vyākaraṇa, Kātantra (1)"
     },
     "112081": {
         "id": "112081",
@@ -187070,6 +188653,22 @@
             "89066"
         ],
         "discipline": ""
+    },
+    "116876": {
+        "id": "116876",
+        "type": "work",
+        "name": "Śiṣyāloka",
+        "aka": "Śiṣyahitānyāsa",
+        "highest_year": 1005,
+        "lowest_year": 1005,
+        "author_ids": [
+            "110030"
+        ],
+        "base_text_ids": [
+            "110033"
+        ],
+        "commentary_ids": [],
+        "discipline": "Vyākaraṇa, Kātantra"
     },
     "103383": {
         "id": "103383",
@@ -187423,6 +189022,16 @@
         "discipline": "",
         "author_highest_year": 1600,
         "author_lowest_year": 1600
+    },
+    "116549": {
+        "id": "116549",
+        "type": "work",
+        "name": "Śivahṛdayastotra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
     },
     "93064": {
         "id": "93064",
@@ -188041,6 +189650,16 @@
         "discipline": "Vīraśaiva",
         "author_highest_year": 1470,
         "author_lowest_year": 1470
+    },
+    "116351": {
+        "id": "116351",
+        "type": "work",
+        "name": "Śivaśaṅkarāṣṭaka",
+        "aka": "Śaṅkarāṣṭaka",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
     },
     "90531": {
         "id": "90531",
@@ -189819,6 +191438,22 @@
             "95545"
         ]
     },
+    "116592": {
+        "id": "116592",
+        "type": "work",
+        "name": "Śrīdharīyaṭīkāvyākhyā",
+        "aka": "",
+        "author_ids": [
+            "40680"
+        ],
+        "base_text_ids": [
+            "42357"
+        ],
+        "commentary_ids": [],
+        "discipline": "Purāṇa",
+        "author_highest_year": 1805,
+        "author_lowest_year": 1800
+    },
     "115875": {
         "id": "115875",
         "type": "work",
@@ -190911,7 +192546,7 @@
         "id": "111635",
         "type": "work",
         "name": "Śrutabodha",
-        "aka": "",
+        "aka": "Chandograntha",
         "author_ids": [
             "40377"
         ],
@@ -192991,6 +194626,20 @@
         "author_highest_year": 1674,
         "author_lowest_year": 1674
     },
+    "116534": {
+        "id": "116534",
+        "type": "work",
+        "name": "Sudhā",
+        "aka": "",
+        "author_ids": [
+            "116533"
+        ],
+        "base_text_ids": [
+            "96200"
+        ],
+        "commentary_ids": [],
+        "discipline": ""
+    },
     "90034": {
         "id": "90034",
         "type": "work",
@@ -194732,6 +196381,16 @@
         "commentary_ids": [],
         "discipline": ""
     },
+    "114616": {
+        "id": "114616",
+        "type": "work",
+        "name": "Sūtra uttaraṣaṭka",
+        "aka": "Āśvalāyanaśrautasūtra Uttaraṣaṭka",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Hinduism (general)"
+    },
     "116189": {
         "id": "116189",
         "type": "work",
@@ -195911,6 +197570,16 @@
         "commentary_ids": [],
         "discipline": "Vedalakṣaṇa"
     },
+    "116964": {
+        "id": "116964",
+        "type": "work",
+        "name": "Svaravyañjana",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Śikṣā, Vyākaraṇa"
+    },
     "92298": {
         "id": "92298",
         "type": "work",
@@ -196962,6 +198631,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Vaidyaśāstra"
+    },
+    "116587": {
+        "id": "116587",
+        "type": "work",
+        "name": "Taittirīya Brāhmaṇa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": ""
     },
     "107852": {
         "id": "107852",
@@ -212841,6 +214520,46 @@
         "author_highest_year": 1312,
         "author_lowest_year": 1312
     },
+    "116956": {
+        "id": "116956",
+        "type": "work",
+        "name": "Unmattarāghava",
+        "aka": "",
+        "author_ids": [
+            "116958"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "",
+        "author_highest_year": 1350,
+        "author_lowest_year": 1350
+    },
+    "116957": {
+        "id": "116957",
+        "type": "work",
+        "name": "Unmattarāghava",
+        "aka": "",
+        "author_ids": [
+            "116959"
+        ],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "",
+        "author_highest_year": 1405,
+        "author_lowest_year": 1404
+    },
+    "116959": {
+        "id": "116959",
+        "type": "author",
+        "name": "Virūpākṣa",
+        "aka": "Virūpākṣa Rāya, Virūpākṣa Rāya I, Virūpākṣadeva",
+        "highest_year": 1405,
+        "lowest_year": 1404,
+        "social_identifiers": "Deva, Rāya",
+        "work_ids": [
+            "116957"
+        ]
+    },
     "104072": {
         "id": "104072",
         "type": "work",
@@ -214647,16 +216366,6 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Viśiṣṭādvaita Vedānta"
-    },
-    "114616": {
-        "id": "114616",
-        "type": "work",
-        "name": "Uttaraṣaṭka",
-        "aka": "Sūtra uttaraṣaṭkaprāraṃbhaḥ",
-        "author_ids": [],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Hinduism (general)"
     },
     "42007": {
         "id": "42007",
@@ -218265,18 +219974,6 @@
         "commentary_ids": [],
         "discipline": "Kāvya"
     },
-    "111295": {
-        "id": "111295",
-        "type": "work",
-        "name": "Vālmīki Rāmāyaṇa Kiṣkindhākāṇḍa",
-        "aka": "",
-        "author_ids": [
-            "108861"
-        ],
-        "base_text_ids": [],
-        "commentary_ids": [],
-        "discipline": "Kāvya"
-    },
     "111293": {
         "id": "111293",
         "type": "work",
@@ -219852,7 +221549,7 @@
         "id": "90938",
         "type": "work",
         "name": "Vedadīpa",
-        "aka": "Prakāśa on Īśāvāsyopaniṣad",
+        "aka": "Prakāśa on Īśāvāsyopaniṣad,  Īśāvāsyopaniṣadbhāṣya ,  Īśopaniṣadbhāṣya.",
         "author_ids": [
             "85881"
         ],
@@ -222231,6 +223928,16 @@
         "commentary_ids": [],
         "discipline": "Dharmaśāstra"
     },
+    "116725": {
+        "id": "116725",
+        "type": "work",
+        "name": "Vibhūtidhāraṇamantra",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Dharmaśāstra"
+    },
     "96677": {
         "id": "96677",
         "type": "work",
@@ -223436,6 +225143,22 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Hinduism (general)"
+    },
+    "117007": {
+        "id": "117007",
+        "type": "work",
+        "name": "Vijayā",
+        "aka": "",
+        "highest_year": 1450,
+        "lowest_year": 1450,
+        "author_ids": [
+            "117005"
+        ],
+        "base_text_ids": [
+            "42449"
+        ],
+        "commentary_ids": [],
+        "discipline": "Vyākaraṇa, Pāṇinīya"
     },
     "90459": {
         "id": "90459",
@@ -232485,13 +234208,15 @@
         "id": "92293",
         "type": "work",
         "name": "Vyadhikaraṇa",
-        "aka": "",
+        "aka": "Vyadhikaraṇa-dharmāvacchinna-abhāva-prakaraṇa",
         "author_ids": [
             "86189"
         ],
-        "base_text_ids": [],
+        "base_text_ids": [
+            "90767"
+        ],
         "commentary_ids": [],
-        "discipline": "",
+        "discipline": "Navya Nyāya",
         "author_highest_year": 1660,
         "author_lowest_year": 1660
     },
@@ -235278,6 +237003,16 @@
         "base_text_ids": [],
         "commentary_ids": [],
         "discipline": "Buddhism (general)"
+    },
+    "116475": {
+        "id": "116475",
+        "type": "work",
+        "name": "Yajñapārśvapariśiṣṭa",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [],
+        "commentary_ids": [],
+        "discipline": "Veda"
     },
     "113567": {
         "id": "113567",

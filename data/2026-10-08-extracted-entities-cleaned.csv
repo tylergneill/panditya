@@ -1,8 +1,5 @@
 Content type,ID,Name,Aka,Social identifiers,Authors (IDs),Authors (names),Discipline,Base texts (IDs),Base texts (names),Highest Year,Lowest Year
-Work,94687,1 Edited e441.1.20,,,87051,Suddhānanda Pathak,,,,,
-Work,94401,1.2 Edited Ajmer 2008,,,86875,Bhagīratha Maithili Jhā,,,,,
-Work,89073,"3 Edited and translated in Raffaele Torella, ""The Svabodhodayamañjarī, orhow to suppress the mind with no effort"", Haranandalahari 387-410",,,,,,,,,
-Work,92233,73.2 Mānameyodaya,,,86182,Nārāyaṇa,,,,,
+Work,92233,Mānameyodaya,,,86182,Nārāyaṇa,,,,,
 Work,113790,Aaryatārā Śatanāmṣṭasataka,,,,,,,,,
 Work,95433,Ābdamālikā,,,87684,Raṅgācārya of Kauśikagotra,Viśiṣṭādvaita Vedānta,,,,
 Work,105236,Abdaprabodha,Bhojadevasaṅgraha,,,,Jyotiḥśāstra,,,,
@@ -141,6 +138,7 @@ Work,114333,Acyutāṣṭaka,,,,,Hinduism (general),,,,
 Work,93627,Ādarśa on Vādideva's Pramāṇapaddhati,,,86539,Hulugi Narasiṃhācārya,,90354,Pramāṇapaddhati,,
 Work,94023,Ādarśita on Gadādhara's Śaktivāda,,,86673,Sudarśanācārya Pañjabi,,92257,Śaktivādavicāra,,
 Work,94026,Ādarśita on Gadādhara's Vyutpattivāda,,,86673,Sudarśanācārya Pañjabi,,92261,Vyutpattivāda,,
+Work,116839,Adbhuta Rāmāyaṇa,,,108861,Vālmīki,Hinduism (general),,,,
 Work,105288,Adbhutadarpaṇa,,,,,Jyotiḥśāstra,,,,
 Work,105298,Adbhutadarpaṇa,,,,,Jyotiḥśāstra,,,,
 Work,105285,Adbhutārṇava,,,,,Jyotiḥśāstra,,,,
@@ -156,6 +154,7 @@ Work,105207,Ādeśapraśna,,,108649,Dāmodara,Jyotiḥśāstra,,,,
 Person,111142,Āḍhamalla,,,,,,,,1400,1300
 Work,114336,Ādhānahautra,,,,,Hinduism (general),,,,
 Work,112988,Ādhānapaddhati,,,,,Veda,,,,
+Work,114358,Adhānapaddhati prayoga,"Hiraṇyakeśīdarśa pūrṇamāsa prayoga, Satyāṣāḍha, Ādhānaprayoga",,114337,Satyāṣāḍha,"Hinduism (general), Veda",,,,
 Work,114340,Ādhānaprayoga,"Ādhānapaddhati prayoga, Agnyādhānapaddhati prayoga",,114337,Satyāṣāḍha,Hinduism (general),,,,
 Work,41756,Ādhānaprayoga,,,40338,Anantadeva II,,,,,
 Work,95409,Adhidīdhitibhāvārtha,,,87660,Rāmakṛṣṇa Paṇḍita,Nyāya,,,,
@@ -181,7 +180,6 @@ Work,92460,Adhikaraṇānukramaṇikā on Bādarāyaṇa's Brahmasūtras,,,86207
 Work,92916,Adhikaraṇanyāyamālā,,,86309,Vaidyanātha Tatsat,,,,,
 Work,93523,Adhikaraṇanyāyamālā on Puruṣottama Pītāmbara's Vedāntamālā,,,86499,Gopeśvara,,92427,Vedānta(adhikaraṇa)mālā,,
 Work,90163,Adhikaraṇaratnamālā,,,85611,Sukhaprakāśamuni,Advaita Vedānta,,,,
-Work,114346,Ādhikaraṇaratnamālā. Adhyāya 10,Jaiminīyanyāyamālāvistara,,40773,Mādhava,Mīmāṃsā,,,,
 Work,90149,Adhikaraṇārthasaṃgraha,,,85609,Padmanābha Tīrtha,Dvaita Vedānta,,,,
 Work,91322,Adhikaraṇārthasaṃgraha,,,85975,Mahācārya,,,,,
 Work,94958,Adhikaraṇārthasaṃgraha on Bādarāyaṇa's Brahmasūtras,,,87273,Gopāla Kṛṣṇācārya,,88037,Brahmasūtra,,
@@ -236,7 +234,7 @@ Work,114355,Adhyātmarāmāyaṇa sundarakāṇḍa,,,,,Kāvya,,,,
 Work,114356,Adhyātmarāmāyaṇa uttarakāṇḍa,,,,,Kāvya,,,,
 Work,114357,Adhyātmarāmāyaṇa yuddhakāṇḍa,,,,,Kāvya,,,,
 Work,41358,Adhyātmarāmāyaṇaprakāśa,,,40416,Bhāskara,,,,,
-Work,97299,Adhyātmarāmāyaṇaṭīkā,"Adhyātmarāmāyaṇa saṭīka, Adhyātmarāmāyaṇa with commentary",,97298,Rāmavarman,Vedānta (general),,,,
+Work,97299,Adhyātmarāmāyaṇaṭīkā,"Adhyātmarāmāyaṇa saṭīka, Adhyātmarāmāyaṇa with commentary, Adhyātmarāmāyaṇasetu",,97298,Rāmavarman,Vedānta (general),97266,Adhyātmarāmāyaṇa,,
 Work,88758,Adhyātmasandoha,,,85236,Yogīndudeva,Jainism (general),,,,
 Work,92488,Adhyātmasāra,,,86219,Yaśovijaya,Jainism (general),,,,
 Work,95345,Adhyātmasāraśataka,,,87608,Prabhākaragupta,,,,,
@@ -464,7 +462,6 @@ Work,88880,Āgamasiddhikārikā and commentary,,,85255,Śaṃkaranandana,,,,,
 Work,89311,Āgamāṣṭottarī,,,85384,Abhayadeva Sūri,Jainism (general),,,,
 Work,89408,Āgamikavastuvicārasāraprakaraṇa,Sadaśati,,85402,Jinavallabha Sūri,Jainism (general),,,,
 Work,104463,Agaruvarṇana,,,,,Vaidyaśāstra,,,,
-Work,114396,Agastipurāṇa rāmanavamī vrata,,,,,Hinduism (general),,,,
 Work,41693,Agastya,Agastisaṃhitā,,,,"Dharmaśāstra, Purāṇa",,,,
 Person,87067,Agastya,,,,,,,,,
 Person,112290,Agastya,,Muni,,,,,,,
@@ -542,6 +539,7 @@ Person,85956,Ahomatha,,,,,,,,1585,1585
 Work,113388,Ahorātra Jajña kriyā,Ahorātra yajña kriyā,,,,,,,,
 Work,114942,Ahorātravratacaityasēvānuśaṃsāvadāna,,,,,Buddhism (general),,,,
 Work,104480,Aijheruvarṇana,,,,,Vaidyaśāstra,,,,
+Person,116386,Aināpurakara Rāmabhaṭa,,,,,,,,,
 Work,113068,Aitareya Āraṇyaka,,,112790,Mahidāsa,"Veda, Other discipline",,,,
 Work,112791,Aitareya Brāhmaṇa,,,112790,Mahidāsa,Veda,,,,
 Work,114426,Aitareyabhāṣya,,,,,Advaita Vedānta,112791,Aitareya Brāhmaṇa,,
@@ -609,7 +607,6 @@ Person,85622,Akhaṇḍadhāman,Akhaṇḍātman,,,,,,,1340,1340
 Person,85608,Akhaṇḍānanda,Akhaṇḍānandamuni,,,,,,,1320,1320
 Person,86195,Akhaṇḍānanda Sarasvatī,Raṅganātha,Sarasvatī,,,,,,1670,1670
 Person,102503,Akhaṇḍānubhūti,,,,,,,,,
-Work,114437,Akhaṇḍaprakaraṇa Dvādaśavarṇaka,,,,,,,,,
 Work,93193,Akhaṇḍārthabhaṅga,,,86406,Dharmapurīśa,Viśiṣṭādvaita Vedānta,,,,
 Work,95728,Akhaṇḍārthatvalakṣaṇakhaṇḍana,,,87946,Veṅkaṭeśa Nṛsiṃhācārya,Dvaita Vedānta,,,,
 Work,94163,Akhaṇḍasvarūpavāda,,,86763,Ālaga Śiṅgarācārya,,,,,
@@ -682,6 +679,8 @@ Work,108943,Alaṅkāravimarśinī,,,85501,Jayaratha,Alaṃkāraśāstra,108906,
 Work,112339,Alaṅkārodāharaṇa,,,112338,Jayadratha,Alaṃkāraśāstra,,,1200,1200
 Work,90435,Ālāpaka,"Vicārāmṛtasaṃgraha, Vicārasaṃgraha",,85671,Kulamaṇḍana Sūri,Jainism (general),,,,
 Work,93381,Ālāpapaddhati,,,86455,Kṣamākalyāṇagaṇi,,,,,
+Person,116360,Albert Grünwedel,,,,,,,,1935,1856
+Person,116359,Albert von Le Coq,Le Coq,,,,,,,1930,1860
 Person,85372,Al-Bīrūnī,"Abu Rayhan al-Biruni, Al-Biruni",,,,,,,1050,973
 Person,109478,'Aḷiya' Rāmarāya,Rāmarāja,Aravīḍu,,,,,,1565,1542
 Person,85589,Allalasūri,,,,,,,,1300,1300
@@ -785,8 +784,8 @@ Work,115581,Amoghaviddhi dhāraṇī,,,,,Buddhism (general),,,,
 Work,110176,Amoghavṛtti,,,41189,Śākatāyana,Vyākaraṇa,42519,Śabdānuśāsana,,
 Person,86876,Amolaka Rāma Śāstrin,,,,,,,,1936,1890
 Work,104478,Āṃpako varṇana,,,,,Vaidyaśāstra,,,,
-Work,114726,Amṛt sāgar granth,,,114725,Vaidyadevīcandra,,,,,
 Work,114445,Amṛta anubhava,,,85577,Jñāneśvara,Advaita Vedānta,,,,
+Work,114726,Amṛta sāgara grantha,,,114725,Vaidyadevīcandra,,,,,
 Work,95648,Amṛta on the Bhagavadgītā,,,87878,Umāmaheśvara Prabhākara,,42214,Bhagavadgītā,,
 Work,115632,Amṛtabhakṣā dhāraṇī,,,,,Buddhism (general),,,,
 Person,41044,Āmṛtabhāratī,,,,,,,,,
@@ -856,7 +855,7 @@ Work,95927,Ānandadīpa (Śivānandayati),,,,,,,,,
 Work,92743,Ānandadīpikā on Bodhendra Yati's Advaitabhūṣaṇa,,,86286,Vāsudevendra Yogin,,90992,Advaitabhuṣaṇa,,
 Work,105774,Ānandādiyogasār[a]ṇī,,,,,Jyotiḥśāstra,,,,
 Person,40818,Ānandagiri,,,,,,,,,
-Person,85588,Ānandagiri,"Ānandajñāna, Janārdana",,,,,,,1300,1300
+Person,85588,Ānandagiri,"Ānandajñāna, Janārdana, Ānandajñānagiri ,  Ānandaśaila",,,,,,,1300,1300
 Person,102352,Ānandagiri,,,,,,,,,
 Person,97590,Ānandajñāna,Anantagiri,Vedānta,,,,,,,
 Work,41789,Ānandakanda,,,,,,,,,
@@ -943,6 +942,7 @@ Person,87091,Anantācārya,,Tatsat,,,,,,,
 Person,87092,Anantācārya alias Nigamantācārya,Pitāmahācārya of Śrivatsa gotra,,,,,,,,
 Person,87093,Anantadāsa,,,,,,,,,
 Person,109255,Anantadāsa,,,,,,,,1400,1400
+Person,116748,Anantadeva,,,,,,,,,
 Person,40338,Anantadeva II,,,,,,,,1678,1638
 Person,85948,Anantadeva,,,,,,,,1580,1580
 Person,86155,Anantadeva I,,,,,,,,1575,1575
@@ -1019,6 +1019,7 @@ Work,107331,Aṅgasphuraṇavicāra,,,,,Jyotiḥśāstra,,,,
 Work,105212,Aṅgasphūrti,,,,,Jyotiḥśāstra,,,,
 Work,111606,Aṅgasphurtī Lakṣaṇam,,,,,Jyotiḥśāstra,,,,
 Work,93107,Aṅgatvanirukti,,,86378,Murāri Miśra,Mīmāṃsā,,,,
+Person,116801,Aṅgiras,,,,,,,,,
 Work,88123,Aṅgulimālikāsūtra,,,,,,,,250,250
 Person,40638,Aniruddha,,,,,,,,,
 Person,85332,Aniruddha,,,,,,,,980,980
@@ -1057,6 +1058,7 @@ Person,40241,Aṇṇaya,,Ārya,,,,,,,
 Person,86679,Annayācārya,,,,,,,,1904,1904
 Person,86334,Aṇṇeya Paṇḍita,Ayyanna Vidvān (Dīkṣita) (Sūri),"Paṇḍita, Dīkṣita, Sūri",,,,,,1750,1750
 Person,86534,Anneyācārya,,,,,,,,1850,1850
+Person,116894,anonymous,,,,,,,,,
 Person,40249,Anonymous,,,,,,,,,
 Person,40396,Anonymous,,,,,,,,,
 Work,95858,Anonymous Sanskrit commentary on Nemicandra's Labdhisāra,,,,,,89078,Labdhisāra,,
@@ -1074,7 +1076,6 @@ Work,95451,Antastripuṭī,,,87699,Sadānanda,,,,,
 Work,95467,Antimopāyaniṣṭhā,,,87714,Samādhivajra,Viśiṣṭādvaita Vedānta,,,,
 Work,113472,Antyaśānti kriyāvidhi,Pañcakaśānti,,113471,Vidyādharavarmma,"Buddhism (general), Dharmaśāstra",,,,
 Work,113680,Antyeṣṭikriyāvidhi (Utkrāntiyogavidhi),,,,,Dharmaśāstra,,,,
-Work,114482,Antyeṣṭipaddhati,"Antyeṣṭi , Aurdhvadaihikapaddhati",,114481,Nārāyaṇa Bhaṭṭa,Dharmaśāstra,,,,
 Work,41646,Antyeṣṭīpaddhati,,,40338,Anantadeva II,,,,1600,1600
 Work,93023,Anubandhadarśana,,,86339,Hariyaśomiśra,Advaita Vedānta,,,,
 Work,90816,Anubhāṣya on Bādarāyaṇa's Brahmasūtras,Brahmasūtrānubhāṣya,,85845,Vallabha,Śuddhādvaita Vedānta,88037,Brahmasūtra,,
@@ -1121,7 +1122,6 @@ Work,94543,Anugrahabhūmi on Vyāsatīrtha's Tātprakāśikā-Tātparyacandrikā
 Work,110749,Anukramaṇikā,,,,,Dharmaśāstra,,,,
 Work,94016,Anukramaṇikā on Madhva's Brahmasūtrabhāṣya,,,86668,Gopālakṛṣṇācārya,,89940,Brahmasūtrabhāṣya,,
 Work,94967,Anulabdhivāda,,,87280,Gopāla Tarkācārya,,,,,
-Work,114488,Anumāna,Tattvacitāmaṇidīdhitiprakāśa  Bhavānandī,,85998,Bhavānanda Siddhāntavāgīśa,Nyāya,,,,
 Work,114507,Anumāna,Anumānagrantha,,85607,Gaṅgeśa,Nyāya,,,,
 Work,111594,Anumāna Prakaraṇa - Siṁha Vyāghra Dvaya Lakṣaṇam,,,,,Nyāya,,,,
 Work,114513,Anumānakhaṇḍa,,,85607,Gaṅgeśa,Navya Nyāya,,,,
@@ -1143,6 +1143,8 @@ Work,91751,Anumitiparāmarśabādhabuddhi,,,86103,Harirāma Tarkavāgīśa,Nyāy
 Work,92191,Anumitiparāmarśavicāra,,,86177,Raghudeva Nyāyālaṃkāra Bhaṭṭācārya,Nyāya,,,,
 Work,114517,Anumitiparāmarśaya kāryakāraṇabhāvavicāra,Anumitiparāmarśavicāra,,86103,Harirāma Tarkavāgīśa,Navya Nyāya,,,,
 Work,114518,Anumitistu dvividhā,,,86065,Jagadīśa Tarkālaṃkāra,Nyāya,,,,
+Work,117004,Anunyāsa,,,117003,Indumitra,"Vyākaraṇa, Pāṇinīya",109741,Kāśikāvivaraṇapañjikā,,
+Work,117006,Anunyāsa Commentary,,,117005,Śrīmāna Śarman,"Vyākaraṇa, Pāṇinīya",117004,Anunyāsa,1450,1450
 Work,41690,Anupadā,,,40715,Tirumala yajvā,,41543,Mahābhāṣya,,
 Work,89195,Anupalabdhirahasya,,,85358,Jñānaśrīmitra,Yogācāra / Vijñānavāda,,,,
 Work,93743,Anupalabdhivādārtha,,,86586,Kṛṣṇa Tātācārya,Nyāya,,,,
@@ -1202,7 +1204,6 @@ Work,112150,(Āpaduddhāra) Vaṭukabhairavastotra,,,,,Tantra,,,,
 Work,93657,Apahatapāpmatvavicāra,,,86561,Anantācārya,Viśiṣṭādvaita Vedānta,,,,
 Person,40422,Āpājibhaṭṭa,,,,,,,,,
 Work,104373,Apāmārgavarṇana,,,,,Vaidyaśāstra,,,,
-Work,114522,Apāmārjanastotra,,,114521,Nandikeśvara,,,,,
 Work,112178,Apāmārjanastotra,"Apāmārjanaprayoga, Apāmārjanavidhi, Apāmārjanastotra",,,,Purāṇa,,,,
 Work,114523,Apamṛtyuharastotra,,,,,Hinduism (general),,,,
 Work,110990,Aparādhabhañjanastotra,,,85218,Śaṃkara,Śaivism (general),,,,
@@ -1240,7 +1241,7 @@ Work,42521,Āpastamba Gṛhyasūtra,,,113071,Āpastamba,Other discipline,,,,
 Work,113073,Āpastamba Śrautasūtra,,,113071,Āpastamba,Other discipline,,,,
 Work,105224,Āpastamba Śulbasūtra,,,113071,Āpastamba,Other discipline,,,,
 Work,105254,Āpastambabrahmatvasamāsaprayoga,,,,,Jyotiḥśāstra,,,,
-Work,113072,Āpastambasūtra,,,113071,Āpastamba,Other discipline,,,,
+Work,113072,Āpastambasūtra,,,113071,Āpastamba,Dharmaśāstra,,,,
 Work,113075,Āpastambasūtrabhāṣya,,,113074,Dhūrtasvāmin,Other discipline,113072,Āpastambasūtra,,
 Work,89459,Apauruṣeyadevanirākaraṇa,,,85417,Yaśodeva Sūri,Jainism (general),,,,
 Work,90112,Apavarganāmamālā,Pañcavargaparihāranāmamālā,,85598,Jinaprabhā Sūri,Jainism (general),,,,
@@ -1312,7 +1313,6 @@ Work,114536,Ārṣamahārāmāyaṇa Sthitiprakaraṇa,Bṛhadyogavāsiṣṭhas
 Work,95820,Ārṣamatasaṃgraha,,,,,,,,,
 Work,114537,Ārṣaparacitmahārāmāyaṇa Utpattiprakaraṇa,Utpattiprakaraṇa,,,,Advaita Vedānta,,,,
 Work,114538,Ārṣarāmāyaṇa,Yogavāsiṣṭhamumukṣaprakaraṇa,,,,Advaita Vedānta,,,,
-Work,114542,Ārṣarāmāyaṇa Bālakāṇḍa,,,,,Advaita Vedānta,,,,
 Work,114549,Ārṣeyarāmāyaṇa Yuddhakāṇḍa Sarga 160,,,,,Advaita Vedānta,,,,
 Work,112287,Artha,,,40678,Bālambhaṭṭa Pāyaguṇḍa,Kāvya,108791,Sūryaśataka,,
 Work,93309,Artha on Vedānta Deśika's Rahasyatrayasāra,,,86442,Appagoṇḍācārya,,90198,Rahasyatrayasāra,,
@@ -1457,6 +1457,7 @@ Person,85533,Āśādhara,,,,,,,,1231,1231
 Person,96829,Āśādharakavi,"Āśādharabhaṭṭa, Āśādhara",,,,,,,,
 Person,108890,Asaga,"Rajaka, Asaṅga",Kavi,,,,,,900,830
 Work,42016,Asanabilvādiyogāḥ,,,,,Vaidyaśāstra,,,,
+Person,116936,Āśananda,,,,,,,,,
 Work,114560,Āsanavidhi,,,,,Hinduism (general),,,,
 Person,85125,Asaṅga,Asaṅga (or Maitreya),,,,,,,360,360
 Work,95475,Asaṅgātmaprakaraṇa and autocommentary,,,87722,Śaṃkara Bhāratī Tīrtha,Advaita Vedānta,,,,
@@ -1519,7 +1520,7 @@ Work,91970,Aṣṭākṣaramantrartha,,,86120,Harirāja,,,,,
 Work,91971,Aṣṭākṣaraśaraṇamantrapūrvapakṣanirāsa,,,86120,Harirāja,,,,,
 Work,91914,Aṣṭalakṣārthī,,,86117,Samayasundara,,,,,
 Work,105234,Aṣṭamalagnadoṣa,,,,,Jyotiḥśāstra,,,,
-Work,114578,Aṣṭamaskandhacaturthādhyāya,,,,,Purāṇa,,,,
+Work,114578,Aṣṭamaskandha,,,,,Purāṇa,,,,
 Work,115981,Aṣṭamātrikānavagrahaṇeśamahākālamahābhaivīstotra,,,,,,,,,
 Work,113435,Aṣṭamātṛkā Yajña Bali Vidhi,,,,,,,,,
 Work,115203,Aṣṭamātṛkāpūjāvidhi,,,,,Buddhism (general),,,,
@@ -1555,7 +1556,7 @@ Work,113774,Aṣṭaśmaśāna stuti,,,,,Tantra,,,,
 Work,42025,Aṣṭasthānaparīkṣā,,,,,Vaidyaśāstra,,,,
 Person,87113,Aṣṭāvakra,,,,,,,,,
 Person,97354,Aṣṭāvakra,Aṣṭāvakra Muni,Vedānta,,,,,,,
-Work,97355,Aṣṭāvakra,Aṣṭāvakragītā,,97354,Aṣṭāvakra,Vedānta (general),,,,
+Work,97355,Aṣṭāvakra,"Aṣṭāvakragītā, Aṣṭāvakra Saṃhitā",,97354,Aṣṭāvakra,Vedānta (general),,,,
 Work,97428,Aṣṭāvakrabhāṣāṭīkayuta,Aṣṭāvakra Bhāṣāṭīkayuta,,97427,Chaturddāsa,Vedānta (general),97355,Aṣṭāvakra,,
 Work,112865,Aṣṭāvakrasaṃkhyākrama,,,97354,Aṣṭāvakra,Advaita Vedānta,,,,
 Work,97363,Aṣṭavakraṭīkā,"Aṣṭāvakra Saṭīkā , Adhyātmapradīpikā, Ātmānubhavaprakaraṇa",,97362,Viśveśvara,Vedānta (general),97355,Aṣṭāvakra,,
@@ -1646,8 +1647,8 @@ Work,111034,Atharvaṇarahasya,,,,,Purāṇa,,,,
 Work,95935,Atharvaṇopaniṣad,,,,,,,,,
 Work,95937,Atharvasaṃhitā,,,,,,,,,
 Work,95938,Atharvaśikhopaniṣad,,,,,,,,,
+Work,112906,Atharvaśira Upaniṣad,"Atharvaśiropaniṣad, Śīrṣopaniṣad, Śivātharvaśirṣa",,,,Hinduism (general),,,,
 Work,95939,Atharvaśiras Upaniṣad,,,,,,,,,
-Work,112906,Atharva-Śiropaniṣad,"Atharvaśiropaniṣad, Śīrṣopaniṣad",,,,Hinduism (general),,,,
 Work,113224,Atharvavedapariśiṣṭa,,,,,Vedalakṣaṇa,,,,
 Work,114937,Ati-Ahorātravratakathā,,,,,Buddhism (general),,,,
 Work,104450,Atibalāvarṇana,,,,,Vaidyaśāstra,,,,
@@ -1727,9 +1728,10 @@ Work,90379,Ātmapurāṇasatprasava,,,85655,Rāmakṛṣṇa,,90003,Ātmapurā�
 Person,112332,Atmaram Dubey,,,,,,,,,
 Person,87117,Ātmārāma,,,,,,,,,
 Person,87118,Ātmārāma Ānanda,,Ānanda,,,,,,,
+Person,116866,Ātmārāma Harabhaṭa Khaṭāvarake,Ātmārāmabovo Harabhaṭa Khaṭāvarake,,,,,,,,
 Person,87119,Ātmārāma Śarman,,Śarman,,,,,,,
 Work,92081,Ātmārkabodha and autocommentary,,,86142,Govinda Bhaṭṭa Kāle,,,,,
-Work,114619,Ātmārpaṇastuti,Śivapañcāśikā,,85954,Appayya Dīkṣita,Hinduism (general),,,,
+Work,114619,Ātmārpaṇastuti,,,85954,Appayya Dīkṣita,Hinduism (general),,,,
 Work,90751,Ātmasambodhana,,,85823,Jñānabhūṣaṇa,Jainism (general),,,,
 Work,97904,Ātmasāmrājyasiddhi,Svārājyasiddhi,,,,Vedānta (general),,,,
 Work,114620,Ātmaṣaṭka,"Ātmaṣaṭkopaniṣad, Ātmopaniṣad",,,,Advaita Vedānta,,,,
@@ -1788,6 +1790,7 @@ Work,90936,Auktika,Vākyaprakāśa,,85879,Udayadharma Gaṇi,Jainism (general),,
 Work,95946,Aupapātikasūtra,,,,,,,,,
 Work,114627,Aupāsanahoma,,,,,Dharmaśāstra,,,,
 Person,108982,Aurangzeb,Avaraṅga,,,,,,,1707,1618
+Work,114482,Aurdhvadehikapaddhati,Antyeṣṭapaddhati,,114481,Nārāyaṇa Bhaṭṭa,Dharmaśāstra,,,,
 Work,104424,Auṣadhabhāga,[Auṣadhabhāga(saṅgrahabhāṣā)],,,,Vaidyaśāstra,,,,
 Work,104418,Auṣadhabhāganāmasaṅgraha,Auṣadhabhāga(nāmasaṅgraha),,,,Vaidyaśāstra,,,,
 Work,104570,Auṣadhabhāgasaṃgraha,,,,,Vaidyaśāstra,,,,
@@ -1840,7 +1843,6 @@ Work,114799,Avacchedaka prakārakanirṇaya,,,86065,Jagadīśa Tarkālaṃkāra,
 Work,114796,Avacchedakalakṣaṇa,,,,,Nyāya,,,,
 Work,114797,Avacchedakalakṣaṇa ṭippaṇī,,,86065,Jagadīśa Tarkālaṃkāra,Nyāya,114796,Avacchedakalakṣaṇa,,
 Work,93745,Avacchedakatāsāra,,,86586,Kṛṣṇa Tātācārya,Nyāya,,,,
-Work,114798,Avacchedakatva ṭippaṇī,,,86065,Jagadīśa Tarkālaṃkāra,Nyāya,114796,Avacchedakalakṣaṇa,,
 Work,91779,Avacchedakāvacchedana anumitivicāra,,,86103,Harirāma Tarkavāgīśa,Nyāya,,,,
 Work,90113,Avacūri,,,85598,Jinaprabhā Sūri,,88488,Āvaśyakasūtraniryukti,,
 Work,90407,Avacūri,,,85667,Jñānasāgara,,88488,Āvaśyakasūtraniryukti,,
@@ -1895,7 +1897,7 @@ Work,98730,Avadhūtadattatrayāṣṭāvakrasaṃvāda,,,,,Vedānta (general),,,
 Work,98713,Avadhūtagītā,,,98711,Dattātreya,Advaita Vedānta,,,,
 Person,108966,Avadhūtasiddha,,Śaiva,,,,,,900,900
 Work,114801,Avadhūtāṣṭaka,,,114800,Dattātreya,"Hinduism (general), Advaita Vedānta",,,,
-Work,95824,.Avadhutayoga-nāmādibuddhasādhana,,,,,,,,,
+Work,95824,Avadhutayoga-nāmādibuddhasādhana,,,,,,,,,
 Work,95947,Avadhūtopaniṣad,,,,,,,,,
 Work,107584,Avadyapāśākeralipraśna,,,,,Jyotiḥśāstra,,,,
 Work,41810,Avagāhanavidhi,,,40821,Kāśyapa,,,,,
@@ -1922,11 +1924,11 @@ Work,88488,Āvaśyakasūtraniryukti,,,85169,Bhadrabāhu,Jainism (general),,,,
 Person,114039,Avatāra,Avatāraka,,,,,,,1360,1360
 Person,109073,Avatārakaṇṭha,,,,,,,,1675,1675
 Work,92377,Avatāravādāvalī with Vivṛti thereon,,,86205,Puruṣottama Pītāmbara,,,,,
+Work,114860,Avayava nirūpaṇa,,,85826,Raghunātha Śiromaṇi,Navya Nyāya,,,,
+Work,114861,Avayava vyākhyā,,,86189,Gadādhara Bhaṭṭācārya,Navya Nyāya,,,,
 Work,114859,Avayavagrantha,Cintāmaṇi,,85607,Gaṅgeśa,Navya Nyāya,,,,
 Work,93405,Avayavakroḍapatra,,,86461,Śaṃkara Bhaṭṭa Miśra,,,,,
 Work,93801,Avayavakroḍapatra,,,86603,Śrīnivāsa,,,,,
-Work,114860,Avayavanirūpaṇa,,,85826,Raghunātha Śiromaṇi,Navya Nyāya,,,,
-Work,114861,Avayavavyākhyā,,,86189,Gadādhara Bhaṭṭācārya,Navya Nyāya,,,,
 Work,89131,Avayavinirākaraṇa,,,85342,Aśoka,,,,,
 Work,89340,Avayavinirākaraṇa,,,85386,Ratnakīrti,Yogācāra / Vijñānavāda,,,,
 Person,85212,Aviddhakarṇa,,,,,,,,700,700
@@ -2018,7 +2020,7 @@ Work,113494,Bu Bahā Ācārya Vidhi Guthī,,,,,,,,,
 Work,92061,Bahirmukhamukhadhvaṃsa,,,86134,Jayagopāla Bhaṭṭa,Śuddhādvaita Vedānta,,,,
 Work,91997,Bahirmukhatvanirvṛtti,,,86120,Harirāja,,,,,
 Work,113111,Bāhukasarvaṅgapīrmocana,,,113062,Tulsidāsa,,,,,
-Work,112312,Bahulopākhyāna,,,,,Purāṇa,,,,
+Work,112312,Bahulopākhyāna,bahulāvyāghrasaṃvāda,,,,Purāṇa,,,,
 Work,41942,Bahumūtrādicikitsā,,,,,Vaidyaśāstra,,,,
 Person,96513,Bahurūpamiśra,,,,,,,,,
 Person,97825,Bahutulopāhvalakṣmaṇa,,,,,,,,,
@@ -2035,6 +2037,7 @@ Person,110831,Bālā,,,,,,,,,
 Person,87128,Bāla Brahmānanda,,,,,,,,,
 Person,86227,Bāla Gopāla,"Gopālabāla Yati, Bālagopālendrayogin",Yati,,,,,,1680,1680
 Work,92678,Bālābālakṣepaparihāra,,,40338,Anantadeva II,Bhāṭṭa Mīmāṃsā + Mīmāṃsā,,,,
+Person,116537,Balabhadra,,,,,,,,,
 Person,40573,Balabhadra,,,,,,,,,
 Person,86033,Balabhadra,,,,,,,,1610,1610
 Person,87126,Balabhadra,,,,,,,,,
@@ -2050,7 +2053,7 @@ Work,41573,Bālabhūṣā,,,40628,Nanda,,,,1500,1500
 Work,90811,Bālabodha,,,85845,Vallabha,Śuddhādvaita Vedānta,,,,
 Work,92505,Bālabodha,Vivaraṇa on Umāsvāti's Tattvārthasūtra,,86219,Yaśovijaya,,88308,Tattvārthādhigamasūtra and Bhāṣya,,
 Work,97407,Bālabodha,"Upadeśamālāprakaraṇabālabodha, Upadeśamālābālabodha",,85233,Dharmadāsa Gaṇi,,88752,Upadeśamālā,,
-Work,105251,Bālabodha,,,108624,Mañjāditya,Jyotiḥśāstra,,,,
+Work,105251,Bālabodha,"Sārasaṅgraha, Sāroddhāra, Jyotiṣasārasaṅgraha",,108624,Mañjāditya,Jyotiḥśāstra,,,,
 Work,92523,Bālabodha on Dharmaghoṣa Sūri’s Lokanālikā,,,86219,Yaśovijaya,,90088,Lokanālikasūtra,,
 Work,89745,Bālabodha on a Nyāya work by Śāṇḍilya,,,85492,Govinda,,,,,
 Work,112862,Bālabodha(ka),"Sārasaṅgraha, Sāroddhāra, Jyotiṣasārasaṅgraha",,112861,Muñjāditya,Jyotiḥśāstra,,,,
@@ -2095,6 +2098,7 @@ Person,86853,Baladeva Miśra,,,,,,,,1930,1930
 Person,86422,Baladeva Vidyābhūṣaṇa,Govindamuni,Vaiṣṇava,,,,,,1780,1780
 Person,114583,Bāladīkṣīta,,,,,,,,,
 Person,112887,Bāladīkṣita,,,,,,,,,
+Person,116746,Bāladīkṣitadeva,,,,,,,,,
 Person,102942,Bālagopālatīrtha,,,,,,,,,
 Work,113787,Bālagraha Śāntīpujā,Kalaśābhiṣeka (?),,,,,,,,
 Work,111361,Bālagraha Stotra,,,,,Purāṇa,,,,
@@ -2106,10 +2110,12 @@ Person,110832,Bālakṛṣṇa,Bālakṛṣṇa Bhāradvāja,,,,,,,,
 Person,114673,Bālakṛṣṇa Āḍibrekara,,,,,,,,,
 Person,114729,Bālakṛṣṇa bhaṭṭa,,,,,,,,,
 Person,87136,Bālakṛṣṇa Brahmānanda Yogin,,,,,,,,,
+Person,116754,Bālakṛṣṇa Dīkṣita,,,,,,,,,
 Person,87138,Bālakṛṣṇa Draviḍārya,,,,,,,,,
 Person,86768,Bālakṛṣṇa Miśra,,,,,,,,1919,1919
 Person,112529,Bālakṛṣṇa Śarman,,Śarman,,,,,,,
 Person,86916,Bālakṛṣṇa Śāstrī,,,,,,,,1950,1950
+Person,116457,Bālakṛṣṇabhaṭṭa,,,,,,,,,
 Person,87137,Bālakṛṣṇadāsa,,,,,,,,,
 Person,86200,Bālakṛṣṇānanda Sarasvatī,,Sarasvatī,,,,,,1670,1670
 Person,87139,Bālakṛṣṇānanda Tīrtha,,,,,,,,,
@@ -2203,6 +2209,7 @@ Person,113592,Bandhudatta Vajrācārya,,Vajrācārya,,,,,,,
 Person,87140,Bandhuprabhā,,,,,,,,,
 Person,87141,Baṅgeśvara Bidyābhūṣaṇa,,,,,,,,,
 Work,110841,Bāṅglā Pañcāṅgam,"Sāṅkhyāyana Tantra, Bāṅglāpañcāṅgam, Sāṅkhyāyanatantra, Bagala Panchanga",,,,Tantra,,,,
+Person,116736,Bāpirājā,Bābūrāya,,,,,,,,
 Person,40490,Basava,"Basavarāja, Basavappa Nāyaka","Bhūpāla, Nāyaka, Vīraśaiva",,,,,,1714,1696
 Person,86466,Basavaliṅga,,,,,,,,1800,1800
 Person,87142,Basavarūpa,,,,,,,,,
@@ -2362,7 +2369,7 @@ Work,88181,Bhaiṣajyaguruvaidūryaprabhāṣāpūrvapraṇidhānaviśeṣavista
 Work,41439,Bhaiṣajyaratnāvalī,,,40497,Govindadāsa,Vaidyaśāstra,,,1700,1700
 Person,110017,Bhaiyāśāstrī Jośī,,,,,,,,1675,1675
 Person,114525,Bhaiyyaṃ Bhaṭṭa,,,,,,,,,
-Work,88638,Bhajagovinda,,,85218,Śaṃkara,,,,,
+Work,88638,Bhajagovinda,,,85218,Śaṃkara,Advaita Vedānta,,,,
 Work,94310,Bhājaṃ Saptaśatī on the Bhagavadgītā,,,86832,Kṛṣṇalāla,,42214,Bhagavadgītā,,
 Work,94200,Bhajanadarpa on Manaḥśikṣā,,,86780,Bhaktivinoda Ṭhakkura,,,,,
 Person,113005,Bhajanaśarman,,Śarman,,,,,,,
@@ -2474,7 +2481,7 @@ Person,97249,Bhāsa,,,,,,,,350,250
 Work,93174,Bhāṣā Vacanikā on Nemicandra Saiddhāntika's Trilokasāra,,,86397,Ṭoḍaramala,,89081,Trilokasāra,,
 Work,112063,Bhāṣānuśāsana,Ṣaḍbhāṣāvyākhyāna,,,,Vyākaraṇa,,,,
 Work,94409,Bhasanuvada on Prakasananda's Vedantasiddhantamuktavali,,,86878,Premavallabha Sastri Sukla,,90740,Vedāntasiddhāntamuktāvalī,,
-Work,91900,Bhāṣāpariccheda,,,86116,Viśvanātha Nyāyasiddhānta Pañcānana,Nyāya,,,,
+Work,91900,Bhāṣāpariccheda,"Kārikāvalī , Paribhāṣāpariccheda",,86116,Viśvanātha Nyāyasiddhānta Pañcānana,Nyāya,,,,
 Work,91143,Bhāṣāpariccheda and Siddhāntamuktāvalī thereon?,,,85929,Kṛṣṇadāsa Sārvabhauma Bhaṭṭācārya,,,,,
 Work,91056,Bhāṣāratna,,,85914,Kaṇāda Tarkavāgīśa,Nyāya,,,,
 Person,85303,Bhāsarvajña,,,,,,,,950,950
@@ -2485,6 +2492,7 @@ Work,41554,Bhāṣāvṛtti,,,40621,Puruṣottamadeva,Vyākaraṇa,41541,Aṣṭ
 Work,89642,Bhāṣāvṛtti on Dharmaghoṣa Sūri’s Lokanālikā,,,85470,Dhanavijaya Gaṇi,,90088,Lokanālikasūtra,,
 Work,110149,Bhāṣāvyākhyāna,,,,,,,,,
 Work,113986,Bhāṣikasūtra,,,40605,Kātyāyana,Vedalakṣaṇa,,,,
+Person,116958,Bhāskara,Bhāskara Bhaṭṭa,Bhaṭṭa,,,,,,1350,1350
 Person,40416,Bhāskara,,,,,,,,1678,1678
 Person,85232,Bhāskara,,,,,,,,750,750
 Person,85309,Bhāskara,Bhāskara(ācārya),,,,,,,950,950
@@ -2496,7 +2504,7 @@ Person,87151,Bhāskara Bhānu Śarman,,Śarman,,,,,,,
 Person,87152,Bhāskara Bhaṭṭa,,Bhaṭṭa,,,,,,,
 Person,106601,Bhāskara Bhaṭṭa,,Vidyāpati,,,,,,1014,1014
 Person,87153,Bhāskara Bhaṭṭa Śarman,,"Bhaṭṭa, Śarman",,,,,,,
-Person,114334,Bhāskara Dāḍekara,,,,,,,,,
+Person,114334,Bhāskara Dāḍekara,Bhāskarbhaṭṭa Dāḍekara,,,,,,,,
 Person,85959,Bhāskara Dīkṣita,,Dīkṣita,,,,,,1585,1585
 Person,86415,Bhāskara Kaṇṭha,,,,,,,,1775,1775
 Work,95041,Bhāskara on Nabhadāsa's Bhaktimālā,,,87346,Janakīdeva,,91283,Bhaktimala,,
@@ -2683,6 +2691,7 @@ Person,85264,Bhatṭa Nārāyaṇa,,Bhaṭṭa,,,,,,840,840
 Person,97242,Bhaṭṭa Nārāyaṇa,,,,,,,,,
 Person,96509,Bhaṭṭa Nṛsiṃha,"Bhaṭṭa Nṛsimha, Bhaṭṭa Narasimḥa",Bhaṭṭa,,,,,,,
 Person,85539,Bhaṭṭa Rāghava,,Bhaṭṭa,,,,,,1240,1240
+Person,116498,Bhaṭṭa Rahaka,Rahaka Bhaṭṭa,Bhaṭṭa,,,,,,1696,1696
 Person,85314,Bhatta Rāmakāṇṭha,,,,,,,,950,950
 Person,96724,Bhaṭṭa Ratnākara,,,,,,,,,
 Person,113856,Bhaṭṭa Sadāśiva,,Bhaṭṭa,,,,,,,
@@ -2778,6 +2787,7 @@ Person,40640,Bhavānanda,,Siddhāntavāgīśa,,,,,,,
 Person,110318,Bhavānanda,,,,,,,,1400,1400
 Person,110351,Bhavānanda Rāya,,,,,,,,1450,1450
 Person,85998,Bhavānanda Siddhāntavāgīśa,,Siddhāntavāgīśa,,,,,,1600,1600
+Work,114488,Bhavānandī,"Tattvacitāmaṇidīdhitiprakāśa, Gūḍhārthaprakāśa, Gūḍhārtharahasya",,85998,Bhavānanda Siddhāntavāgīśa,Nyāya,,,,
 Work,89698,Bhāvanāpaddhati,,,85486,Padmanandin,,,,,
 Work,89697,Bhāvanāpañcaka,,,85486,Padmanandin,,,,,
 Work,92221,Bhavānāsārasaṃgraha,,,86178,Mudgala Bhaṭṭa,,,,,
@@ -2945,7 +2955,7 @@ Work,41412,Bhiṣakcakracittotsava,Haṃsarājanidāna,,40474,Haṃsarāja,Vaidy
 Person,86412,Bhīṣma Miśra,,,,,,,,1775,1775
 Person,112090,Bhīṣma Miśra,Maithilaśrībhāṣya,Maithila,,,,,,,
 Person,40976,Bhīṣmaputra,,,,,,,,,
-Work,114598,Bhīṣmastavarāja,Bhīṣmastavarājaprārambhaḥ,,,,"Dharmaśāstra, Hinduism (general)",,,,
+Work,114598,Bhīṣmastavarāja,"Bhīṣmastavarājaprārambhaḥ  , Rājadharma anuśāsanaparva, Bhīṣmastuti",,108876,Vyāsa,"Dharmaśāstra, Hinduism (general)",,,,
 Person,87165,Bhoga Malleṣa,,,,,,,,,
 Work,88934,Bhogakārikā,,,85284,Sadyojyotis,Śaiva Siddhānta,,,,
 Person,40780,Bhoganātha,,,,,,,,,
@@ -2970,7 +2980,7 @@ Work,92385,Bhrahmaragītavivṛtiprakāśa,,,86205,Puruṣottama Pītāmbara,Śu
 Work,94242,Bhramabhañjanī,,,86805,Mallādi Rāmakṛṣṇa,Advaita Vedānta,,,,
 Person,112182,Bhṛgu,,,,,,,,,
 Work,105770,Bhṛgumuhūrta,,,,,Jyotiḥśāstra,,,,
-Work,114685,Bhṛgūpaniṣadbhāṣyaṭippaṇa,,,114687,Jñānāmṛtayati,Advaita Vedānta,88690,Bhāṣya on Taittirīya Upaniṣad,,
+Work,114685,Bhṛgūpaniṣadbhāṣyaṭippaṇa,,,114687,Jñānamṛtayati,Advaita Vedānta,88690,Bhāṣya on Taittirīya Upaniṣad,,
 Work,105766,Bhṛgusaṃhitā,,,,,Jyotiḥśāstra,,,1500,1500
 Work,105763,Bhṛgusiddhānta,,,,,Jyotiḥśāstra,,,,
 Work,114688,Bhṛguvallī,,,,,Anubhavādvaita,,,,
@@ -3028,6 +3038,7 @@ Work,104340,Bījasarvasvapaṭala,,,,,Vaidyaśāstra,,,1853,1853
 Work,90854,Bījika on the Bhagavatīsūtra,,,85849,Harṣakūlagaṇi,,95956,Bhagavatīsūtra,,
 Work,105878,Bījodāharaṇa,,,,,Jyotiḥśāstra,,,,
 Person,40617,Bilhaṇa,,,,,,,,1127,1076
+Work,116368,Bilhaṇacarita,Bilhaṇacaritam,,"116367, 40617","Cōrakavi, Bilhaṇa",,,,,
 Work,114805,Bilvapatrapraśaṃsā,Bilvapatrastotra,,,,Hinduism (general),,,,
 Work,114804,Bilvaṣoḍaśakastotra,Bilvaṣoḍaśastotra,,,,Purāṇa,,,,
 Work,114691,Bilvopaniṣad,,,,,Buddhism (general),,,,
@@ -3141,6 +3152,7 @@ Person,86775,Brahmānanda Svāmi,,Svāmi,,,,,,1920,1920
 Person,85880,Brahmānanda Tīrtha,,,,,,,,1550,1550
 Person,86637,Brahmānanda Tīrtha,,,,,,,,1892,1892
 Work,100798,Brahmānanda (with commentary),,,85655,Rāmakṛṣṇa,Vedānta (general),,,,
+Person,116663,Brahmānandābhidheyabhikṣu,,,,,,,,,
 Work,90219,Brahmānandagiri,,,85613,Vedāntadeśika,,,,,
 Work,95722,Brahmānandagiri on the Bhagavadgītā,,,87942,Veṅkaṭanātha,,42214,Bhagavadgītā,,
 Work,93644,Brahmānandaprakāśikā on Bādarāyaṇa's Brahmasūtras,,,86553,Jagajjīvana,Advaita Vedānta,88037,Brahmasūtra,,
@@ -3269,6 +3281,7 @@ Work,88617,Bṛhatī on Śabara's Mīmāṃsāsūtrabhāṣya,,,85213,Prabhākar
 Work,113399,Bṛhat-jātaka,"Mahajjātakamālā, Mahājātakamālā",,,,"Buddhism (general), Kāvya",,,,
 Work,95967,Bṛhatkathā,,,,,,,,,
 Work,114973,Bṛhatpārāśarahorāśāstra,,,114972,Parāśara,Jyotiḥśāstra,,,,
+Work,42449,Bṛhatparibhāṣāvṛtti,,,41031,Sīradeva,Vyākaraṇa,,,,
 Work,88874,Bṛhatpramanyakarika,,,85255,Śaṃkaranandana,,,,,
 Work,88534,Bṛhatsaṃgrāhaṇī,Bṛhatkṣetrasamāsa,,85185,Jinabhadra Gaṇi Kṣamāramaṇa,Jainism (general),,,,
 Work,89409,Bṛhatsaṃgrāhaṇī and Vṛtti thereon,,,85402,Jinavallabha Sūri,Jainism (general),,,,
@@ -3279,7 +3292,7 @@ Work,93108,Bṛhaṭṭīkā on Gaṅgeśa's Tattvacintāmaṇi,,,86379,Kṛṣ�
 Work,89555,Brhattika on Jinavallabha's Samghapattakaprakarana,,,85449,Jinadatta,,,,,
 Work,89835,Bṛhatṭīkā on Jinavallabha’s Saṃghapaṭṭakaprakaraṇa,,,85526,Jinapati Sūri,,89421,Saṃghapaṭṭakaprakaraṇa,,
 Work,88600,Bṛhaṭṭīkā on Śabara's Mīmāṃsaśāśtrabhāṣya,,,85206,Kumārila,,88312,Śābarabhāṣya,,
-Work,94973,Bṛhaṭṭippaṇī on Gadādhara's Gādādharī,,,87285,Gosvāmin,,92258,Gādādharī,,
+Work,94973,Bṛhaṭṭippaṇī on Gadādhara's Gādādharī,,,87285,Gosvāmin,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,93522,Bubhutsubodhikā on Chapter 10 of Vallabha's Subodhinī,,,86499,Gopeśvara,,90813,Subodhinī on the Bhāgavata Purāṇa,,
 Person,86482,Bucci Veṅkaṭācārya,,,,,,,,1820,1820
 Work,113458,Buddha Gīta,,,,,,,,,
@@ -3378,6 +3391,7 @@ Person,108840,Cāmuṇḍarāya,"Cāmuṇḍayya, Cāvuṇḍarāya, Rāya, Cāv
 Work,113482,Cāṇakyasārasaṅgraha,,,,,Nītiśāstra,,,,
 Work,110152,Cāṇakyaṭīkā,,,110150,Bhikṣu Prabhāmati,Arthaśāstra,109693,Arthaśāstra,,
 Person,87174,Cañcarīkendra,,,,,,,,,
+Work,116962,Caṇḍakiraṇa,,,,,Kośaśāstra,,,,
 Work,116260,Caṇḍamahāroṣana dhāraṇi,,,,,Buddhism (general),,,,
 Work,113551,Caṇḍamahāroṣaṇa pūjā vidhi,,,,,Buddhism (general),,,,
 Work,113407,Caṇḍamahāroṣaṇa Samādhī,,,,,Tantra,,,,
@@ -3403,6 +3417,7 @@ Person,85890,Candīśvara,,,,,,,,1550,1550
 Work,114750,Caṇḍobhimānī,Caṇḍāmantrasādhana,,,,Hinduism (general),,,,
 Person,85295,Candra,Candra(maha)rṣi Mahāttara,,,,,,,930,930
 Person,85378,Candra,,,,,,,,820,820
+Person,116811,Candra Siṃha,,,,,,,,,
 Work,93604,Candra on Vātsyāyana's Nyāyabhāṣya,,,86525,Raghūttama,,88353,Nyāyabhāṣya,,
 Work,109799,Cāndra Vyākaraṇa,,,109798,Candragomin,Vyākaraṇa,,,,
 Person,40568,Candrabhānu mahādeva,,,,,,,,,
@@ -3442,7 +3457,7 @@ Person,85272,Candrānanda,,,,,,,,850,850
 Person,87179,Candrānanda,,,,,,,,,
 Person,40806,Candranandana,,,,,,,,750,750
 Person,86430,Candranārāyaṇa Bhaṭṭa,,Bhaṭṭa,,,,,,1790,1790
-Work,93265,Candranārāyaṇī on Gadādhara's Gādādharī,,,86430,Candranārāyaṇa Bhaṭṭa,,92258,Gādādharī,,
+Work,93265,Candranārāyaṇī on Gadādhara's Gādādharī,,,86430,Candranārāyaṇa Bhaṭṭa,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,114108,Candranighaṇṭu,,,,,Vaidyaśāstra,,,1905,1905
 Work,108162,Candraparvānayana,,,,,Jyotiḥśāstra,,,,
 Person,115935,Candrapati,,,,,,,,,
@@ -3553,6 +3568,7 @@ Person,86176,Caturbhuja,Caturbhuja (Upādhyāya) Paṇḍita,"Paṇḍita, Upād
 Work,91981,Caturbhujasvarūpavicāra,,,86120,Harirāja,,,,,
 Work,113198,Caturdaṇḍīprakāśikā,,,41134,Veṅkateśvarādhvarin,Nāṭyaśāstra,,,,
 Work,88131,Caturdārakasamādhisūtra,,,,,,,,250,250
+Work,116598,Caturdaśalakṣaṇī,,,86065,Jagadīśa Tarkālaṃkāra,Navya Nyāya,,,,
 Work,93426,Caturdaśī,,,86471,Jayatīrthācārya,Dvaita Vedānta,,,,
 Work,110610,Caturdaśīyātrā,,,,,Dharmaśāstra,,,,
 Work,91644,Caturdaśīyaupāśikanirṇaya,,,86076,Śrutasāgara,,,,,
@@ -3562,9 +3578,12 @@ Work,88571,Caturdharmanirdeśasūtra,,,,,,,,625,625
 Work,94452,Caturgranthī on Madhusūdana Sarasvatī's Advaitasiddhi,,,86902,N.S.Anantakṛṣṇa Śāstrin,,91131,Advaitasiddhi,,
 Work,114810,Cāturmāsprāyaścitta,"Prāyaścittapradīpa , Darśapūrṇamāsaprāyaścitta",,,,Dharmaśāstra,,,,
 Work,110632,Cāturmāsyahautraprayoga,,,,,Veda,,,,
+Work,116413,Cāturmāsyamāhātmya,,,,,Purāṇa,,,,
 Work,41278,Cāturmāsyaprayoga,,,40334,Raghunātha,,,,,
 Work,41647,Cāturmāsyaprayoga,,,40338,Anantadeva II,,,,1600,1600
+Work,116430,Cāturmāsyavratanirṇaya,,,116427,Pṛthvīcandra,Dharmaśāstra,,,,
 Work,115300,Caturmudrā,,,,,Buddhism (general),,,,
+Work,116446,Caturthaparyāya,,,,,Dharmaśāstra,,,,
 Work,109503,Caturthī Rājataraṅgiṇī,Śuka-rājataraṅgiṇī,,,,,,,,
 Work,112945,Caturthīvratakathā,,,,,Dharmaśāstra,,,,
 Work,94944,Caturvargacintāmaṇi,,,87262,Gaṅgeśa Miśra,Vedānta (general),,,,
@@ -3577,22 +3596,29 @@ Work,98192,Caturvedatātparyasaṃgraha,,,40787,Haradatta,Vedānta (general),,,,
 Person,86866,Caturvijaya Muni,,Muni,,,,,,1934,1934
 Work,90124,Caturviṃśatikā,,,85598,Jinaprabhā Sūri,,,,,
 Work,115202,Caturviṃśatipīṭhapūjāvidhi,,,,,Buddhism (general),,,,
+Work,116353,Cāṭuślōkas,Cāṭuślokāḥ,,,,,,,,
 Work,95832,Catuṣpariṣatsūtra,,,,,,,,,
 Work,114420,Catuśślokī,Catuḥślokī,,85349,Yāmuna,Advaita Vedānta,,,,
+Work,116451,Caulaprayoga and Upanayanaprayoga,,,,,Dharmaśāstra,,,,
 Person,41113,Cauṇḍabālājī,,Mauna bhārgava,,,,,,,
-Work,115237,Caurapañcāśikā and Ṭīkā,,,40617,Bilhaṇa,Kāvya,,,,
+Work,115237,Caurapañcāśikā,"Caurīsuratapañcāśikā, Bilhaṇapañcāśikā",,40617,Bilhaṇa,Kāvya,,,,
+Work,116455,Caurapañcāśikā Ṭīkā,,,,,Kāvya,115237,Caurapañcāśikā,,
 Work,105740,Cauraparīkṣā,,,,,Jyotiḥśāstra,,,,
 Work,92168,Caurāsī Bol,,,86165,Hemarāja Pāṇḍe,,,,,
 Work,108858,Cāvuṁḍarāyapurāṇa,Triṣaṣṭhi-mahāpuruṣa-lakṣaṇa-purāṇam,,108840,Cāmuṇḍarāya,"Digambara, Jainism (general)",,,978,978
 Work,114693,Cayanaprayoga,,,,,Hinduism (general),,,,
 Person,97887,Cetanadāsa,,,,,,,,,
+Work,116479,Chāgalakṣaṇa,,,,,Veda,,,,
+Person,116704,Chājurāma,Chājū(bū)rāma,,,,,,,,
 Work,105793,Chalākṣarasaṅketānusarī,,,,,Jyotiḥśāstra,,,,
 Work,108300,Chalākṣarasaṅketānusārilekha,,,,,Jyotiḥśāstra,,,,
 Person,40751,Chalārī Narasiṃhācārya,,,,,,,,1600,1600
 Person,86201,Chalāri Nṛsiṃhācārya,,,,,,,,1670,1670
 Person,86261,Chalāri Śeṣācārya,,,,,,,,1700,1700
+Work,116466,Chanda,,,,,Chandas,,,,
 Work,96450,Chandaḥsūtra,"Chandaḥśāstra, Piṅgalachandassūtram, Paiṅgalam, Paiṅgalatantram",,96449,Piṅgala,Chandas,,,100,100
 Work,109962,Chandogāhnika,,,109961,Śrīdatta,Dharmaśāstra,,,,
+Work,116482,Chāndogya Upaniṣad (Adhyāya 6),,,,,Veda,,,,
 Work,44742,Chāndogyopaniṣad,Chāndogya upaniṣad,,,,Hinduism (general),,,,
 Work,95776,Chāndogyopaniṣad 'Tattvamasi' arthasiddhānta,,,87988,Viśvanātha Siṃhadeva,Advaita Vedānta,,,,
 Work,99308,Chandombudhi,Chandōmbudhi,,99306,Nāgavarman,Chandas,,,990,990
@@ -3684,6 +3710,7 @@ Person,41079,Cinnabommabhūpāla,,,,,,,,1682,1659
 Person,85666,Cinnam Bhaṭṭa,Cennu Bhaṭṭa,"Bhaṭṭa, Bhaṭṭa",,,,,,1390,1390
 Person,86180,Cinnappayya,"Cinnappayya (Dīkṣita), Appayya Dīkṣita",Dīkṣita,,,,,,1660,1660
 Person,86703,A. Cinnasvāmi Śāstrin,,,,,,,,1910,1910
+Person,116472,Cintāmaṇa,,,,,,,,,
 Person,114344,Cintāmaṇa bhaṭṭa Guṇe,,,,,,,,,
 Person,40752,Cintāmaṇi,,,,,,,,1498,1448
 Work,41619,Cintāmani,,,40646,Paṇdita dhaneśvara,,41543,Mahābhāṣya,,
@@ -3749,7 +3776,7 @@ Work,95694,Commentary on Abhinanda Tarkavāgīśa's Yogavaṣisṭhasāra,,,8791
 Work,94236,Commentary on Abhinavagupta's Bodhapañcadaśikā,,,86800,Hara Bhaṭṭa Śāstrin,,89158,Bodhapañcadaśikā,,
 Work,89253,Commentary on Abhinavagupta's Paramārthasāra,,,85365,Kṣemarāja,,89168,Paramārthasāra,,
 Work,95779,Commentary on Abhinavagupta's Paramārthasāra,Paramārthasāraṭīkā,,87991,Vitastapurin,,89168,Paramārthasāra,,
-Work,94642,. Commentary on Abhinavagupta's Parsamārthasāra,,,87013,Dvārikānātha Śāstrī,,89168,Paramārthasāra,,
+Work,94642,Commentary on Abhinavagupta's Parsamārthasāra,,,87013,Dvārikānātha Śāstrī,,89168,Paramārthasāra,,
 Work,92718,Commentary on Aitareya Upaniṣad,,,86285,Bhāskara Rāya Dīkṣita,,95920,Aitareyopaniṣad,,
 Work,93790,Commentary on Aitareya Upaniṣad,,,86600,Mudumba Narasiṃhācārya,,95920,Aitareyopaniṣad,,
 Work,94480,Commentary on Akalaṅka's Laghīyastraya,,,86910,Mahendra Kumāra,,88821,Laghīyastraya,,
@@ -3816,14 +3843,14 @@ Work,95231,Commentary on Cūlikā Upaniṣad,,,87507,Mukunda,,95973,Cūlikopani�
 Work,89223,Commentary on Dharmapāla's Vijñaptimātratāsiddhi,,,85363,Ratnākara Śānti,,88521,Mūlaṭīkā on Kathāvatthu,,
 Work,93777,Commentary on Dharmarāja's Vedāntaparibhāṣā,,,86592,Jīvānanda Vidyāsāgara,,91549,Vedāntaparibhāṣā,,
 Work,88499,Commentary on Dignāga's Ālambanaparīkśā,,,85175,Dharmapāla,,88418,Ālambanaparīkṣā and Vṛtti thereon,,
-Work,92548,Commentary on Gadādhara's Gādādharī,,,86229,Nīlakaṇṭha,,92258,Gādādharī,,
-Work,93277,Commentary on Gadādhara's Gādādharī,,,86433,Haranārāyaṇa,,92258,Gādādharī,,
-Work,93553,Commentary on Gadādhara's Gādādharī,,,86505,Rāmeśvara,,92258,Gādādharī,,
-Work,93856,Commentary on Gadādhara's Gādādharī,,,86625,Sokattur Vijayarāghavācārya,,92258,Gādādharī,,
-Work,93930,Commentary on Gadādhara's Gādādharī,,,86635,Kasturi Raṅgācārya,,92258,Gādādharī,,
-Work,95038,Commentary on Gadādhara's Gādādharī,,,87344,Jagannātha Śāstrin,,92258,Gādādharī,,
-Work,95305,Commentary on Gadādhara's Gādādharī,,,87580,Nṛsiṃha Mūrti,,92258,Gādādharī,,
-Work,95370,Commentary on Gadādhara's Gādādharī,,,87625,Puruṣottama Śāstrin,,92258,Gādādharī,,
+Work,92548,Commentary on Gadādhara's Gādādharī,,,86229,Nīlakaṇṭha,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,93277,Commentary on Gadādhara's Gādādharī,,,86433,Haranārāyaṇa,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,93553,Commentary on Gadādhara's Gādādharī,,,86505,Rāmeśvara,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,93856,Commentary on Gadādhara's Gādādharī,,,86625,Sokattur Vijayarāghavācārya,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,93930,Commentary on Gadādhara's Gādādharī,,,86635,Kasturi Raṅgācārya,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,95038,Commentary on Gadādhara's Gādādharī,,,87344,Jagannātha Śāstrin,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,95305,Commentary on Gadādhara's Gādādharī,,,87580,Nṛsiṃha Mūrti,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,95370,Commentary on Gadādhara's Gādādharī,,,87625,Puruṣottama Śāstrin,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,94259,Commentary on Gadādhara's Muktivāda,,,86814,Kālipada Tarkācārya,,92255,Muktivāda,,
 Work,92578,Commentary on Gadādhara's Śaktivāda,,,86240,Jayarāma Tarkālaṃkāra,,92257,Śaktivādavicāra,,
 Work,93642,Commentary on Gadādhara's Śaktivāda,,,86551,Mādhavacandra Tarkasiddhānta,,92257,Śaktivādavicāra,,
@@ -3871,7 +3898,7 @@ Work,94947,Commentary on Hariraya's Siksapatra,,,87265,Ghanasyama Dasa,,91937,Ś
 Work,91106,Commentary on Harṣakula's Bandhahetūdayatrībhaṅgī,,,85921,Vānararṣi,,90851,Bandhahetūdayatribhaṅgī,,
 Work,91181,Commentary on Harṣakula’s Bandhahetūdayatribhaṅgī,,,85935,Vinaya Vimala Gaṇi,,,,,
 Work,93019,Commentary on Harṣavardhana's Adhyātmabindu,,,86338,Haṃsarāja,,90676,Adhyātmabindu and autocommentary thereon,,
-Work,90059,Commentary on Hastāmalakastotra,,,85588,Ānandagiri,,95995,Hastāmalakastotra,,
+Work,90059,Commentary on Hastāmalakastotra,"Hastāmalaka , Hastāmalakabhāṣya",,85588,Ānandagiri,Advaita Vedānta,"95995, 112913","Hastāmalakastotra, Hastāmalaka",,
 Work,94968,Commentary on Hastāmalakastotra,,,87281,Gopīnātha,,95995,Hastāmalakastotra,,
 Work,89688,Commentary on Īśā Upaniṣad,,,85484,Gauḍeśvara Jñānottama,Advaita Vedānta,95999,Īśā(vāsya)upaniṣad,,
 Work,92725,Commentary on Īśā Upaniṣad,,,86285,Bhāskara Rāya Dīkṣita,,95999,Īśā(vāsya)upaniṣad,,
@@ -4076,7 +4103,7 @@ Work,95516,Commentary on Prabhākaragupta's Ardhyātmasāraśataka,,,87758,Śiro
 Work,89014,Commentary on Prajñākaragupta's Pramāṇavārttikālaṃkāra,,,85305,Manorathanandin,,88859,Alaṃkāra,,
 Work,89210,Commentary on a Prajñāpāramitāhṛdayasūtra,,,85358,Jñānaśrīmitra,,88211,Hṛdayasūtra,,
 Work,92526,Commentary on Prāmāṇya section of Raghunātha Śiromaṇi's  Tattvacintāmaṇidīdhiti,,,86220,Govinda Bhaṭṭa,,90767,Tattvacintāmaṇidīdhiti,,
-Work,94184,Commentary on Prāmāṇyavāda section of Gadādhara's Gādādharī,,,86776,Koṭi Liṅgapuragoda Varmarāja,,92258,Gādādharī,,
+Work,94184,Commentary on Prāmāṇyavāda section of Gadādhara's Gādādharī,,,86776,Koṭi Liṅgapuragoda Varmarāja,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,95465,Commentary on Praśastapāda's Padārthadharmasaṃgraha,,,85261,Śālikanātha Miśra,,88455,Padārthadharmasaṃgraha,,
 Work,92355,Commentary on Praśna Upaniṣad,,,86201,Chalāri Nṛsiṃhācārya,Dvaita Vedānta,96094,Praśnopaniṣad,,
 Work,92734,Commentary on Praśna Upaniṣad,,,86285,Bhāskara Rāya Dīkṣita,,96094,Praśnopaniṣad,,
@@ -4406,6 +4433,7 @@ Work,89978,Completion of Haribhadra's Laghuvṛtti on Umāsvāti's Tattvārthas�
 Work,89314,Completion of Jineśvara's Vyākhyā on Haribhadra's Ṣoḍaśakaprakaraṇa,,,85384,Abhayadeva Sūri,,88781,Ṣoḍaśakaprakaraṇa,,
 Work,95772,Completion of Yallayārya's Tattvacintāmaṇiprakāśanyāyapārijāta,,,87985,Viśvanātha,,90746,Prakāśa on Gaṅgeśa's Tattvacintāmaṇi,,
 Work,113938,Composite Manuscript on Stotra,,,,,Hinduism (general),,,,
+Person,116367,Cōrakavi,,,,,,,,,
 Work,105948,Coraparīkṣā,,,,,Jyotiḥśāstra,,,,
 Person,114571,Cove Aṇandarāma Gujarāti,,,,,,,,,
 Work,115337,Crapratipā stotra,,,115332,Āryāvalokiteśvarabhaṭṭāraka,Buddhism (general),,,,
@@ -4485,6 +4513,7 @@ Person,109747,Damayantī,,,,,,,,1400,1400
 Work,41294,Damayantīsvayaṃvara,,,40340,Raghunātha paṇḍita,Kāvya,,,,
 Work,41494,Ḍambhakriyā,,,40532,Dharmavardhana,Vaidyaśāstra,,,,
 Person,114846,Dāmodara,,,,,,,,,
+Person,116536,Dāmodara,,,,,,,,,
 Person,40384,Dāmodara,Jñānadeva,,,,,,,1612,1612
 Person,40816,Dāmodara,,,,,,,,,
 Person,40977,Dāmodara,,,,,,,,,
@@ -4788,8 +4817,10 @@ Work,41895,Dhanvantarīya,,,40840,Hantari,,,,,
 Work,42190,Dhanvantarīyauṣadhanighaṇṭu,,,,,Vaidyaśāstra,,,,
 Work,92441,Dhānyādiśuddhivicāra,,,86205,Puruṣottama Pītāmbara,,,,,
 Work,88646,Dhanyāṣṭaka,,,85218,Śaṃkara,Advaita Vedānta,,,,
+Work,116730,Dhanyāṣṭakastotra,Dhanyāṣṭaka,,87725,Śaṃkarācārya,Advaita Vedānta,,,,
 Person,41009,Dhāra,,Mārkaṇḍeya,,,,,,,
 Work,115878,Dhāralakṣiyāyajusoḥ,,,,,Buddhism (general),,,,
+Person,116533,Dharānanda,,,,,,,,,
 Person,114149,Dharaṇidāsa,Dharaṇi,,,,,,,1100,1100
 Person,114209,Dharaṇīdhara,,,,,,,,,
 Person,87230,Dharaṇīdhara,,,,,,,,,
@@ -4878,6 +4909,7 @@ Work,110528,Dharmasūtra,Gautama dharmasūtra,,110527,Gautama,Dharmaśāstra,,,,
 Person,113563,Dharmasvāmī (?),,,,,,,,,
 Work,88226,Dharmatārādhyāyanasūtra,,,,,,,,360,360
 Work,113708,Dharmatattva,,,40645,Kamalākara,Dharmaśāstra,,,,
+Work,116429,Dharmatattvakalānidhi,Pṛthvīcandrodaya,,116427,Pṛthvīcandra,Dharmaśāstra,,,,
 Work,94317,Dharmatattvanirṇaya,,,86837,Vāsudeva Śāstrin Abhyaṅkar,,,,,
 Person,85109,Dharmatrāta,,,,,,,,300,300
 Person,40532,Dharmavardhana,,Kharataragaccha,,,,,,1600,1600
@@ -4886,9 +4918,11 @@ Person,86101,Dharmayya Dīkṣita,,Dīkṣita,,,,,,1640,1640
 Person,85273,Dharmendra,,,,,,,,850,850
 Work,92215,Dharmitāvacchedakapartyāsattinirūpaṇa,,,86177,Raghudeva Nyāyālaṃkāra Bhaṭṭācārya,,,,,
 Work,91753,Dharmitāvacchedakarahasya,,,86103,Harirāma Tarkavāgīśa,Nyāya,,,,
+Work,116803,Dharmmaśāstrasmṛti,Dharmaśāstrasmṛti,,116801,Aṅgiras,Dharmaśāstra,,,,
 Work,89701,Dharmopadeśamṛta,,,85486,Padmanandin,,,,,
 Person,85248,Dharmottara,Dharmatrāta,,,,,,,770,770
 Work,89186,Dharmottarapradīpa on Dharmottara's Nyāyabinduṭīkā,,,85355,Durveka Miśra,,88852,Ṭīkā on Dharmakīrti's Nyāyabindu,,
+Work,116788,Dhātrīpūjana,,,,,Dharmaśāstra,,,,
 Work,42048,Dhātubhasmaprakriyā,,,,,,,,,
 Work,41871,Dhātukalpa,,,,,Vaidyaśāstra,,,,
 Work,88026,Dhātukathā,,,,,,,,-180,-180
@@ -4896,9 +4930,8 @@ Work,88330,Dhātukathā Aṭṭhakathā,,,85135,Buddhaghoṣa,,88026,Dhātukath�
 Work,88027,Dhātukāya,,,85082,Vasumitra,,,,,
 Work,42473,Dhātukośa,,,41110,Ghanaśyāma,,,,,
 Work,42530,Dhātumañjarī,,,,,Vaidyaśāstra,,,,
-Work,109913,Dhātupārāyaṇa,,,109912,Bhīmasena,Vyākaraṇa,42448,Dhātupāṭha,,
-Work,42448,Dhātupāṭha,,,40604,Pāṇini,Vyākaraṇa,,,,
-Work,41547,Dhātupradīpa,,,40620,Maitreya Rakṣita,,42448,Dhātupāṭha,,
+Work,109913,Dhātupārāyaṇa,,,109912,Bhīmasena,Vyākaraṇa,42448,Pāṇinīya Dhātupāṭha,,
+Work,41547,Dhātupradīpa,,,40620,Maitreya Rakṣita,,42448,Pāṇinīya Dhātupāṭha,,
 Work,104161,Dhāturasāyanavidhi,,,,,Vaidyaśāstra,,,1879,1879
 Work,42235,Dhāturatnamālā,,,,,Vaidyaśāstra,,,,
 Work,42193,Dhāturūpamañjarī,,,,,,,,,
@@ -4907,6 +4940,7 @@ Work,42270,Dhātuśuddhiprakāra,,,,,Vaidyaśāstra,,,,
 Work,115822,Dhātvāropaṇakathā,,,,,Buddhism (general),,,,
 Work,113142,Dhātvārthanipātārthanirṇaya,,,,,Vyākaraṇa,,,,
 Work,114896,Dhātvavaropanakathāparivarta,Dhātvāvalopanakathāparivarta,,,,Buddhism (general),,,,
+Work,116785,Dhaumyakṛtastotra,,,,,,,,,
 Person,41130,Dhaurandharīkacinnamāmbā,,,,,,,,,
 Work,107031,Dhīkoṭidha,,,107023,Śrīpati,Jyotiḥśāstra,,,1039,1039
 Person,111739,Dhīrakṛṣṇagiri,,,,,,,,,
@@ -4921,13 +4955,17 @@ Work,113530,Dhūmāṅgārī Sādhana Ratnakalpa Tantra,Dhūmāṅgārī Sādhan
 Person,108234,Ḍhuṇḍhirāja,,,,,,,,1600,1500
 Person,114618,Ḍhuṇḍhirāja Gāḍagīla,,,,,,,,,
 Person,86812,Dhundhirāja Śāstrin,,,,,,,,1925,1925
+Work,116798,Dhuṇḍirāja,"Dhuṇḍhirāja bhujaṅgaprayāta stotra, Dhuṇḍhirāja",,,,Hinduism (general),,,,
 Person,96568,Dhuṇḍirāja,,Mādhva,,,,,,1710,1690
+Work,116779,Dhūrtasvāmibhāṣya,,,113074,Dhūrtasvāmin,Dharmaśāstra,113073,Āpastamba Śrautasūtra,,
+Work,116781,Dhūrtasvāmibhāṣyaṭīkā,Somerāmāṃḍārabhāṣya,,116780,Kauśikarāma,Dharmaśāstra,116779,Dhūrtasvāmibhāṣya,,
 Person,113074,Dhūrtasvāmin,,,,,,,,,
 Work,116071,Dhvajāgrakeyurādhāraṇī,,,,,Buddhism (general),,,,
 Work,115490,Dhvajāgrakeyūrādhāraṇī and a dhāraṇī,,,,,Buddhism (general),,,,
 Work,116108,Dhvajāgrakeyurīdhāraṇī,,,,,Buddhism (general),,,,
 Work,115564,Dhvajāṅga-keyūranāma-dhāraṇī,,,,,Buddhism (general),,,,
 Work,115512,Dhvajāṅga-keyūrīnāma-dhāraṇī,,,,,Buddhism (general),,,,
+Work,116805,Dhvajāropaṇa,,,,,Dharmaśāstra,,,,
 Work,91754,Dhvaṃsajanyābhāvayoḥ kāryakāraṇabhāvarahasya,,,86103,Harirāma Tarkavāgīśa,Nyāya,,,,
 Work,96406,Dhvanyāloka,Sahṛdayāloka,,85268,Ānandavardhana,Alaṃkāraśāstra,,,,
 Work,92877,Dhyāna on Śaṃkara's Dakṣiṇāmūrtistotra,,,86300,Sadāśiva Brahmendra,,88644,Dakṣiṇāmūrtistotra,,
@@ -4965,6 +5003,9 @@ Person,86071,Dinakara,Dīvākara Bhaṭṭa,Bhaṭṭa,,,,,,1625,1625
 Person,86097,Dinakara,,,,,,,,1635,1635
 Person,87241,Dinakara,,,,,,,,,
 Person,87242,Dinakara Bhaṭṭa,,Bhaṭṭa,,,,,,,
+Person,116844,Dinakarabhaṭṭa,Divākarabhaṭṭa,,,,,,,,
+Person,116879,Dinakarabhaṭṭa Sapre,,,,,,,,,
+Work,116845,Dinakaradyota,"Dinakaroddyota, Prāyaścittadinakarodyota",,116844,Dinakarabhaṭṭa,Dharmaśāstra,,,,
 Work,91734,Dinakārī,Prakāśa on Viśvanātha's  Siddhāntamuktāvalī,,86097,Dinakara,,91900,Bhāṣāpariccheda,,
 Work,109195,Dīnākrandana Stotra,,,108974,Jagaddhara,Kāvya,,,1350,1350
 Person,87243,Dinanātha,,,,,,,,,
@@ -5160,6 +5201,7 @@ Work,115859,Dohakoṣa,,,115860,Kṛṣṇācārya,Buddhism (general),,,,
 Work,115861,Dohākoṣa with Mekhalāṭīkā,,,,,Buddhism (general),115859,Dohakoṣa,,
 Work,89034,Dohapāhuda,,,85317,Rāmasiṃha,Jainism (general),,,,
 Work,113109,Dohāvali,,,113062,Tulsidāsa,,,,,
+Person,116854,Dolattarāma Trivāḍī,,,,,,,,,
 Person,113134,Dominik Wujastyk,,,,,,,,,
 Work,88060,Dousha jing,,,,,,,,125,125
 Person,85162,Dramiḍācārya,,,,,,,,525,525
@@ -5215,19 +5257,6 @@ Work,91994,Duḥsaṅgavijñānaprakāranirūpaṇam,,,86120,Harirāja,,,,,
 Person,86431,Dulāra Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1790,1790
 Person,87250,Dulīcandra Śrāvaka,,,,,,,,,
 Person,109293,Dullabharāmavaidya,,Vaidya,,,,,,1890,1890
-Person,96355,Dummy 858,,,,,,,,,
-Work,110179,Dummy Kitab,,,110178,Dummy Yusuf,,,,,
-Person,110050,Dummy person 02,,,,,,,,,
-Person,99398,Dummy person 134,,,,,,,,1000,1000
-Person,44763,"Dummy person attributed to ""Around Veṅkaṭanātha """,,,,,,,,,
-Person,103390,"Dummy person attributed to ""Premodern Kannada""",,,,,,,,,
-Work,96350,Dummy work 3 - Amir,,,96355,Dummy 858,,96352,Dummy work - Outer,,
-Work,99382,Dummy work - Exodus,,,40240,Śrīnivāsa,,,,944,942
-Work,96738,Dummy Work - Genesis,,,,,,,,1983,1743
-Work,96729,Dummy Work Omer,,,44763,"Dummy person attributed to ""Around Veṅkaṭanātha """,,,,,
-Work,96352,Dummy work - Outer,,,,,,,,,
-Work,44714,Dummy work - The Bible,,,,,,,,,
-Person,110178,Dummy Yusuf,,,,,,,,,
 Work,93749,Durarthadūrīkaraṇa,,,86586,Kṛṣṇa Tātācārya,Viśiṣṭādvaita Vedānta,,,,
 Work,88931,Durbodhāloka on Asaṅga's Abhisamayālaṃkāra,,,85282,Dharmakīrti Śrī,,88231,Abhisamayālaṃkāra,,
 Person,115108,Durga,,,,,,,,,
@@ -5356,6 +5385,7 @@ Work,114951,Ekajaṭā-dhāraṇī,,,,,,,,,
 Work,115562,Ekajaṭī ugratārā dhāraṇī,,,,,Buddhism (general),,,,
 Work,115698,Ekajātibhaṭṭarikasya nāmastotra,,,,,Buddhism (general),,,,
 Work,112100,Ekākṣarakośa,,,,,"Kośaśāstra, Tantra",,,,
+Work,116478,Ekākṣaramahāgaṇapati mantravidhi,,,,,"Purāṇa, Tantra",,,,
 Work,94487,Ekākṣarīkośa,,,86913,Śambhu Nath Tripathi,,,,,
 Work,95842,Ekākṣarīsūtra,,,,,,,,,
 Work,95984,Ekākṣaropaniṣad,,,,,,,,,
@@ -5380,6 +5410,7 @@ Work,41521,Ekavarṇārthasaṅgraha,,,40418,Bharatamallika,,,,,
 Work,106261,Ekaviṃśatipraśna,,,,,Jyotiḥśāstra,,,,
 Work,89429,Ekaviṃśatisthānaprakaraṇa,,,85405,Siddhasena Sādhāraṇī,,,,,
 Work,114856,Ekavīrātantra,,,,,Tantra,,,,
+Person,116515,Eknātha,,,,,,,,1600,1532
 Work,112955,Ekoddiṣṭaprayoga,,,,,Dharmaśāstra,,,,
 Work,110714,Ekoddiṣṭaśrāddha,,,,,Dharmaśāstra,,,,
 Person,40496,Ekojī,,,,,,,,1683,1676
@@ -5405,17 +5436,17 @@ Work,95985,Gacchācāraprakīrṇaka,,,,,,,,,
 Work,42437,Gadā,Kāśikā,,40677,Vaidyanātha Pāyaguṇḍe,,41663,Paribhāṣenduśekhara,,
 Person,103624,Gadācārya,,,,,,,,,
 Work,104157,Gadadarpaṇa,,,,,Vaidyaśāstra,,,944,944
+Person,116673,Gadādhara,,,,,,,,,
 Person,101440,Gadādhara,,,,,,,,,
 Person,111352,Gadādhara,,Dīkṣita,,,,,,,
 Person,87253,Gadādhara Bhaṭṭa,,Bhaṭṭa,,,,,,,
 Person,86189,Gadādhara Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1660,1660
 Person,85828,Gadādhara Miśra,,,,,,,,1510,1510
 Work,93862,Gadādharanyūnatvavāda,,,86627,Rākhaladāsa Nyāyaratna Bhaṭṭācārya,Nyāya,,,,
-Work,92258,Gādādharī,Prakāśikā on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti,,86189,Gadādhara Bhaṭṭācārya,,90767,Tattvacintāmaṇidīdhiti,,
 Work,92281,Gādādharī avaccheda,"Avacchedanirukti, Niruktirahasya",,86189,Gadādhara Bhaṭṭācārya,,,,,
+Work,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),Prakāśikā on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti,,86189,Gadādhara Bhaṭṭācārya,,90767,Tattvacintāmaṇidīdhiti,,
 Work,92280,Gādādharīkroḍapātra,Kroḍapatrasaṃgraha,,86189,Gadādhara Bhaṭṭācārya,,,,,
-Work,93289,Gādādharīmañjūṣā,,,86438,Kṛṣṇa Bhaṭṭa Ārḍe,,92258,Gādādharī,,
-Person,114332,Gāḍagīla,,,,,,,,,
+Work,93289,Gādādharīmañjūṣā,,,86438,Kṛṣṇa Bhaṭṭa Ārḍe,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,104746,Gadāmṛta,,,,,Vaidyaśāstra,,,,
 Work,104244,Gadāṅkuśa,,,,,Vaidyaśāstra,,,1893,1893
 Person,41105,Gāḍapalli ve.nkatarāma,,,,,,,,,
@@ -5426,51 +5457,21 @@ Work,88753,Gadyacintāmaṇi,,,85234,Vādibhā Siṃha,Jainism (general),,,,
 Work,91969,Gadyārtha,,,86120,Harirāja,,,,,
 Work,89483,Gadyatraya,,,85420,Rāmānuja,Viśiṣṭādvaita Vedānta,,,,
 Work,91136,Gadyatrayīvyākhyā,,,85928,Madhusūdana Sarasvatī,,,,,
-Person,86210,Gāgā Bhaṭṭa,Viśveśvara,Bhaṭṭa,,,,,,1674,1674
+Person,86210,Gāgā Bhaṭṭa,"Viśveśvara, Gāgābhaṭṭa",Bhaṭṭa,,,,,,1674,1674
 Work,88281,Gaganagañjasūtra,,,,,,,,380,380
 Work,116239,Gaganākṣepavajrayogini dhāraṇī,,,,,Buddhism (general),,,,
 Work,88496,Gajagandhahastimahābhāṣya on Umāsvāti's Tattvārthasūtra,,,85172,Siddhasena Divākara,,88308,Tattvārthādhigamasūtra and Bhāṣya,,
+Work,116374,Gajagaurīvrata,,,,,"Purāṇa, Dharmaśāstra",,,,
+Person,116408,Gajaṃbhaṭa Abhyaṅkara,,,,,,,,,
 Work,93050,Gajapañcānana,,,86349,Varkhedi Timmanācārya,Dvaita Vedānta,,,,
 Work,104753,Gajapraśaṃsā,,,,,Vaidyaśāstra,,,,
 Person,85841,Gajasāra,,,,,,,,1522,1522
 Work,42443,Gajasūtra commentary,,,41012,Śivarāmendrayati,,,,1780,1780
 Work,42525,Gajasūtra (=P.1.3.67),,,,,,,,,
 Work,104346,Gajāyurveda,,,,,Vaidyaśāstra,,,1862,1862
+Work,116376,Gajendramokṣa,,,102598,Vedavyāsa,Kāvya,,,,
 Work,41295,Gajendramokṣa,,,40340,Raghunātha paṇḍita,Kāvya,,,,
-Work,107878,Gamāgamādhyāya,,,,,Jyotiḥśāstra,,,,
-Work,89868,Gamanikāsūtravṛtti,,,85538,Tilakācārya,,,,,
-Person,101440,Gadādhara,,,,,,,,,
-Person,111352,Gadādhara,,Dīkṣita,,,,,,,
-Person,87253,Gadādhara Bhaṭṭa,,Bhaṭṭa,,,,,,,
-Person,86189,Gadādhara Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1660,1660
-Person,85828,Gadādhara Miśra,,,,,,,,1510,1510
-Work,93862,Gadādharanyūnatvavāda,,,86627,Rākhaladāsa Nyāyaratna Bhaṭṭācārya,Nyāya,,,,
-Work,92258,Gādādharī,Prakāśikā on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti,,86189,Gadādhara Bhaṭṭācārya,,90767,Tattvacintāmaṇidīdhiti,,
-Work,92281,Gādādharī avaccheda,"Avacchedanirukti, Niruktirahasya",,86189,Gadādhara Bhaṭṭācārya,,,,,
-Work,92280,Gādādharīkroḍapātra,Kroḍapatrasaṃgraha,,86189,Gadādhara Bhaṭṭācārya,,,,,
-Work,93289,Gādādharīmañjūṣā,,,86438,Kṛṣṇa Bhaṭṭa Ārḍe,,92258,Gādādharī,,
-Person,114332,Gāḍagīla,,,,,,,,,
-Work,104746,Gadāmṛta,,,,,Vaidyaśāstra,,,,
-Work,104244,Gadāṅkuśa,,,,,Vaidyaśāstra,,,1893,1893
-Person,41105,Gāḍapalli ve.nkatarāma,,,,,,,,,
-Work,107307,Gadāyuddhaṃ,Sāhasabhīmavijayaṃ,,107328,Ranna,Kāvya,,,1000,1000
-Person,110305,Gaḍura,,,,,,,,1325,1325
-Work,97454,Gadyabandha,"Upadeśasāhasrīgadyabandha, Gadyabandha section of Upadeśasāhasrī",,85218,Śaṃkara,Advaita Vedānta,,,,
-Work,88753,Gadyacintāmaṇi,,,85234,Vādibhā Siṃha,Jainism (general),,,,
-Work,91969,Gadyārtha,,,86120,Harirāja,,,,,
-Work,89483,Gadyatraya,,,85420,Rāmānuja,Viśiṣṭādvaita Vedānta,,,,
-Work,91136,Gadyatrayīvyākhyā,,,85928,Madhusūdana Sarasvatī,,,,,
-Person,86210,Gāgā Bhaṭṭa,Viśveśvara,Bhaṭṭa,,,,,,1674,1674
-Work,88281,Gaganagañjasūtra,,,,,,,,380,380
-Work,116239,Gaganākṣepavajrayogini dhāraṇī,,,,,Buddhism (general),,,,
-Work,88496,Gajagandhahastimahābhāṣya on Umāsvāti's Tattvārthasūtra,,,85172,Siddhasena Divākara,,88308,Tattvārthādhigamasūtra and Bhāṣya,,
-Work,93050,Gajapañcānana,,,86349,Varkhedi Timmanācārya,Dvaita Vedānta,,,,
-Work,104753,Gajapraśaṃsā,,,,,Vaidyaśāstra,,,,
-Person,85841,Gajasāra,,,,,,,,1522,1522
-Work,42443,Gajasūtra commentary,,,41012,Śivarāmendrayati,,,,1780,1780
-Work,42525,Gajasūtra (=P.1.3.67),,,,,,,,,
-Work,104346,Gajāyurveda,,,,,Vaidyaśāstra,,,1862,1862
-Work,41295,Gajendramokṣa,,,40340,Raghunātha paṇḍita,Kāvya,,,,
+Work,116440,Gakārādigaṇapati sahasranāmastotra,"Gakārādi sahasranāmastotra, Gaṇapatīgakārādi sahasranāmastotra, Gakārādigaṇeśa sahasranāma",,,,Tantra,,,,
 Work,107878,Gamāgamādhyāya,,,,,Jyotiḥśāstra,,,,
 Work,89868,Gamanikāsūtravṛtti,,,85538,Tilakācārya,,,,,
 Person,86650,Gambhiravijaya Gaṇi,,Gaṇi,,,,,,1896,1896
@@ -5491,7 +5492,7 @@ Work,116066,Gaṇapatihṛdaya,,,,,Buddhism (general),,,,
 Work,115448,Gaṇapati-hṛdaya-mūla-dhāraṇī,,,,,Buddhism (general),,,,
 Work,112300,Gaṇapatipañcaratna,"Saccidānandastotra, Gaṇeśapañcaratna",,,,Tantra,,,,
 Work,115514,Gaṇapati-stotra,,,,,Buddhism (general),,,,
-Work,95986,Gaṇapatyupaniṣad,"Gaṇeśopaniṣad, Vighneśvaropaniṣad, Gaṇapatyatharvaśīrṣa, Gaṇeśātharvaśīrṣa",,,,,,,,
+Work,95986,Gaṇapatyupaniṣad,"Gaṇeśopaniṣad, Vighneśvaropaniṣad, Gaṇapatyatharvaśīrṣa, Gaṇeśātharvaśīrṣa",,,,"Hinduism (general), Śaivādvaita Vedānta",,,,
 Work,109851,Gaṇaratnamahodadhi,,,109850,Vardhamāna,"Gaṇapāṭha, Pāṇinīya, Vyākaraṇa",42499,Gaṇapāṭha,1140,1140
 Person,86660,Gandasiṃha,"Govindasiṃha, Nirmala Paṇḍita",Paṇḍita,,,,,,1900,1900
 Work,88074,Gaṇḍavyūha,,,,,Prajñāpāramitā,,,150,150
@@ -5510,6 +5511,7 @@ Person,108636,Gaṇeśa,,Bhāradvāja,,,,,,1650,1585
 Person,113772,Gaṇeśa,,,,,,,,,
 Person,112232,Gaṇeśa Bhāratī,,,,,,,,,
 Person,114369,Gaṇeśa bhaṭṭa,,,,,,,,,
+Person,116818,Gaṇeśa Bhaṭṭa,,,,,,,,,
 Person,87255,Gaṇeśa Bhaṭṭa,,Bhaṭṭa,,,,,,,
 Person,86005,Gaṇeśa Dīkṣita,(Bhāva) Gaṇeśa Dīkṣita,"Bhāva, Dīkṣita",,,,,,1600,1600
 Person,86149,Gaṇeśa Dīkṣita,(Bhāva) Gaṇeśa Dīkṣita,"Bhāva, Dīkṣita",,,,,,1650,1650
@@ -5523,7 +5525,9 @@ Work,97998,Gaṇeśagītā,,,,,Vedānta (general),,,,
 Work,98009,Gaṇeśagītāṭīkā,,,98008,Nīlakaṇṭha,Vedānta (general),,,,
 Person,99987,Gaṇeśālāl,,,,,,,,,
 Work,41984,Gaṇeśapūjāvidhi,Vighneśapūjā,,,,,,,,
+Work,116388,Gaṇeśapurāṇa,,,,,Purāṇa,,,,
 Person,113414,Ganeśarāja,,Vajrācārya,,,,,,,
+Work,116470,Gaṇeśasahasranāma,,,,,Purāṇa,,,,
 Work,111562,Gaṇeśāṣṭaka,,,,,Hinduism (general),,,,
 Person,40300,Gaṅgā,,,,,,,,,
 Person,87260,Gaṅgā Dvivedin,,Dvivedin,,,,,,,
@@ -5581,6 +5585,7 @@ Work,107131,Gaṇitajñāna,,,,,Jyotiḥśāstra,,,,
 Work,106213,Gaṇitajyautiṣapattrakāṇi,[Gaṇitajyautiṣapattrakāṇi],,,,Jyotiḥśāstra,,,,
 Work,105678,Gaṇitakaumudī,,,,,Jyotiḥśāstra,,,,
 Work,105682,Gaṇitamañjarī,,,108233,Gaṇeśa,Jyotiḥśāstra,,,1525,1525
+Work,116438,Gaṇitanāmamālā,,,116437,Haridatta,Jyotiḥśāstra,,,,
 Work,105684,Gaṇitanāmamālā,,,,,Jyotiḥśāstra,,,,
 Work,105680,Gaṇitaprabhākara,,,,,Jyotiḥśāstra,,,,
 Work,113038,Gaṇitasārasaṅgraha,,,113039,Mahāvīrācārya,Jyotiḥśāstra,,,850,850
@@ -5595,7 +5600,7 @@ Work,42099,Garbharakṣāvidhi,,,,,Vaidyaśāstra,,,,
 Work,89242,Garbhasamgraha,,,85364,Atīśa,,,,,
 Work,88134,Garbhāvakrāntinirdeśasūtra,Garbhasthitisūtra,,,,,,,250,250
 Work,41928,Garbhavedanaka,,,,,Vaidyaśāstra,,,,
-Work,95987,Garbhopaniṣad,,,,,,,,,
+Work,95987,Garbhopaniṣad,Garbha Upaniṣad,,,,"Vedānta (general), Hinduism (general)",,,,
 Person,96408,Garga,,,,,,,,100,100
 Person,108547,Garga,,,,,,,,900,900
 Work,105686,Gargamanoramāpraśnavyākhyā,,,,,Jyotiḥśāstra,,,,
@@ -5677,10 +5682,11 @@ Work,88572,Ghanavyūhasūtra,,,,,,,,625,625
 Work,96400,Ghaṇṭāpatha,,,96393,Mallinātha,Kāvya,96133,Śiśupālavadha,1400,1400
 Person,86975,Ghasilala Mahārāja,,Mahārāja,,,,,,1970,1970
 Person,86257,Ghāsīrāma,,,,,,,,1696,1696
+Person,116395,Ghaṭakarpara,,,,,,,,,
 Person,111799,Ghaṭakarpara,,,,,,,,,
 Work,111802,Ghaṭakarpara,Yamaka Kāvya,,111799,Ghaṭakarpara,Kāvya,,,,
 Work,41516,Ghaṭakarpara - commentary,,,40418,Bharatamallika,,,,,
-Work,108950,Ghaṭakarparakāvya,Ghaṭakarpara,,40377,Kālidāsa,Kāvya,,,,
+Work,108950,Ghaṭakarparakāvya,Ghaṭakharparakāvya,,"40377, 116395","Kālidāsa, Ghaṭakarpara",Kāvya,,,,
 Work,108951,Ghaṭakarparavivṛti,Ghaṭakarparakulakavivṛti,,85352,Abhinavagupta,Alaṃkāraśāstra,108950,Ghaṭakarparakāvya,,
 Work,106229,Ghaṭikālagna,,,,,Jyotiḥśāstra,,,,
 Work,111786,Ghaṭotsarga,,,,,Dharmaśāstra,,,,
@@ -5866,11 +5872,13 @@ Person,86220,Govinda Bhaṭṭa,,Bhaṭṭa,,,,,,1680,1680
 Person,86142,Govinda Bhaṭṭa Kāle,,"Bhaṭṭa, Kāle",,,,,,1650,1650
 Person,86077,Govinda Bhaṭṭācārya Cakravartin,,Bhaṭṭācārya,,,,,,1629,1629
 Person,87292,Govinda Bhatṭṭācārya,,,,,,,,,
-Person,40984,Govinda Bhikṣu,Govinda,,,,,,,,
+Person,40984,Govinda Bhikṣu,"Govinda, Bhikṣugovinda, Govindabhikṣu, Govindabhagavatpāda",,,,,,,,
 Person,114844,Govinda Brahma,,,,,,,,,
 Person,114410,Govinda Daivajña Garuḍa,,,,,,,,,
 Person,114527,Govinda Devadhara,,,,,,,,,
+Person,116755,Govinda Dīkṣita,,,,,,,,,
 Person,86297,Govinda Guru,,,,,,,,1720,1720
+Person,116398,Govinda Jośī,,,,,,,,,
 Person,114503,Govinda Kaula,"Govind Kaul, Paṇḍit Govind Kaul",Paṇḍita,,,,,,1899,1846
 Person,87296,Govinda Kavi,"(Paṇḍita) Govinda Kavi, Rāma",Paṇḍita,,,,,,,
 Person,87298,Govinda Muni,,Muni,,,,,,,
@@ -6217,6 +6225,7 @@ Person,86433,Haranārāyaṇa,,,,,,,,1790,1790
 Person,86597,Harasundara Tarkaratna,,,,,,,,1876,1876
 Work,41561,Hārāvalī-koṣa,,,40621,Puruṣottamadeva,,,,,
 Work,114314,Haravijaya,,,96684,Ratnākara,Kāvya,,,,
+Person,116833,Hari,,,,,,,,,
 Person,87315,Hari Bhānu Śukla,,Śukla,,,,,,,
 Person,86445,Hari Bhaṭṭa,,Bhaṭṭa,,,,,,1800,1800
 Person,85647,Hari Brahman,Hari Brahman (Salakṣamantrin),Salakṣamantrin,,,,,,1365,1365
@@ -6240,6 +6249,7 @@ Person,97538,Haridāsa,Śrīharidāsa,,,,,,,,
 Person,101485,Haridāsa,,,,,,,,,
 Person,102325,Haridāsa,,,,,,,,,
 Person,85852,Haridāsa Nyāyālaṃkāra Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1530,1530
+Person,116437,Haridatta,,,,,,,,,
 Person,86670,Haridatta Miśra,,,,,,,,1901,1901
 Person,86830,Haridatta Śarman Trivedin,,Śarman,,,,,,1928,1928
 Person,87316,Haridhanācaraṇa,,,,,,,,,
@@ -6258,6 +6268,7 @@ Work,93125,Hariharabhuṣaṇa,,,86384,Gaṅgādharasarasvatī,,,,,
 Work,41257,Hariharacaturaṅga,,,40307,Godāvaramiśra,Dhanurveda,,,,
 Person,86813,Hariharānanda Āraṇya,,,,,,,,1925,1925
 Person,86868,Hariharānanda Sarasvatī,Karapātrasvāmin,Sarasvatī,,,,,,1935,1935
+Work,116436,Hariharastotra,,,,,Hinduism (general),,,,
 Person,86862,Harijīvanadāsa Śāstrin,,,,,,,,1933,1933
 Person,97712,Harikṛṣṇa,,,,,,,,,
 Person,113948,Harikṛṣṇa Cakravartti,,,,,,,,,
@@ -6268,6 +6279,7 @@ Person,113735,Harināthācārya,,Ācārya,,,,,,,
 Work,114148,Hariprabodha,,,,,Kāvya,,,,
 Person,87320,Hariprasāda Sūri,,Sūri,,,,,,,
 Person,86120,Harirāja,"Haridāsa, Harirāya",,,,,,,1645,1645
+Person,116535,Harirāma,,,,,,,,,
 Person,40602,Harirāma,,,,,,,,,
 Person,87321,Harirāma,,,,,,,,,
 Person,87322,Harirāma,,,,,,,,,
@@ -6286,12 +6298,18 @@ Person,96613,Harisvāmin,,,,,,,,638,638
 Person,113179,Hārita R̥ṣi,,,,,,,,,
 Work,104617,Harītakīvarṇana,,,,,Vaidyaśāstra,,,,
 Work,104615,Haritālaśodhanavidhi,,,,,Vaidyaśāstra,,,,
+Work,116443,Haritālikākathā,,,,,Hinduism (general),,,,
+Work,116449,Haritālikāpūjā,,,,,Hinduism (general),,,,
+Work,116454,Haritālikāpūjākathāvratodyāpana,,,,,Hinduism (general),,,,
 Work,104607,Hārītasaṃhitā,,,,,Vaidyaśāstra,,,,
+Work,116460,Hārītasmṛti,,,113179,Hārita R̥ṣi,Dharmaśāstra,,,,
 Work,93532,Haritoṣiṇī on Viṭṭhalanātha's Vidvanmaṇḍana,,,86500,Giridhara Prapanna,,91095,Vidvanmaṇḍana,,
 Work,112278,Harivaṃśa,,,,,Purāṇa,,,,
+Person,116652,Harivaṃśa pāṭhaka,,,,,,,,,
 Work,112280,Harivaṃśamāhātmya,,,,,,,,,
 Person,40871,Hariva.mśātmaja,,,,,,,,,
 Work,41579,Harivaṃśavilāsa,,,40628,Nanda,,,,1500,1500
+Work,116507,Harivaṃśoddyota,,,,,Hinduism (general),112278,Harivaṃśa,,
 Work,42174,Harivandanasaṅgraha,,,40916,Dāmodara miśra,,,,,
 Person,40630,Harivañśavarman,,Māhendra,,,,,,,
 Person,85106,Harivarman,,,,,,,,253,253
@@ -6322,14 +6340,19 @@ Person,85784,Harṣavardhana Gaṇi,,Gaṇi,,,,,,1490,1490
 Person,100839,Harṣyarāya,,,,,,,,,
 Person,109746,Hassan Shah,"Sultan Hassan Shah, Hassana Śāha",Sultān,,,,,,1484,1472
 Work,88585,Hastadaṇḍaśāstra,,,85199,Śākyayaśas,,,,,
+Work,116510,Hastagaurīvrata,Gajagaurīvrata,,,,Hinduism (general),,,,
+Work,116513,Hastagaurīvratakathā,Gajagaurīvrata,,,,Hinduism (general),,,,
 Work,41939,Hastalepanamaṅgalāṣṭaka,,,,,,,,,
 Work,104065,Hastāmala,,,,,Vedānta (general),,,,
 Person,85225,Hastāmalaka,,,,,,,,740,740
 Work,112913,Hastāmalaka,,,85218,Śaṃkara,Advaita Vedānta,,,,
+Work,116516,Hastāmalakagranthaṭīkā,Hastāmalakaṭīkā,,116515,Eknātha,Advaita Vedānta,112913,Hastāmalaka,,
 Work,95995,Hastāmalakastotra,,,,,,,,,
 Work,88651,Hastāmalakīya Bhāṣya,Vedāntasiddhāntadīpikā,,85218,Śaṃkara,,95995,Hastāmalakastotra,,
 Work,115557,Hastapūjā vidhāna,,,,,Buddhism (general),,,,
 Work,116250,Hastapūjāvidhāna,,,,,Buddhism (general),,,,
+Work,116521,Hastarekhā,,,,,Jyotiḥśāstra,,,,
+Work,116524,Hastarekhāvicāraṇa,,,,,Jyotiḥśāstra,,,,
 Work,105636,Hastasañjīvana,,,,,Jyotiḥśāstra,,,,
 Work,108413,Hastasañjīvanasiddhajñāna,,,,,Jyotiḥśāstra,,,,
 Work,88419,Hastavāla(prakaraṇa),,,85154,Dignāga,Yogācāra / Vijñānavāda,,,,
@@ -6348,6 +6371,7 @@ Work,116253,Hayagrīvadhāraṇī,,,,,Buddhism (general),,,,
 Work,112076,Hayagrīvastora,,,87396,Kavitārkikasiṃhācārya,Tantra,,,,
 Work,109508,Hayagrīvastotra,,,85613,Vedāntadeśika,,,,,
 Work,95996,Hayagrīvopaniṣad,,,,,,,,,
+Work,116539,Hāyanaratna,Ṣoḍaśayoga,,116537,Balabhadra,Jyotiḥśāstra,,,,
 Work,105638,Hāya[na]ratna,,,,,Jyotiḥśāstra,,,,
 Work,105640,Hāyanaratna,,,,,Jyotiḥśāstra,,,,
 Work,105642,Hayatagrantha,,,,,Jyotiḥśāstra,,,,
@@ -6390,18 +6414,19 @@ Work,105665,Hillājāyurudāhṛti,,,,,Jyotiḥśāstra,,,,
 Person,116152,Himakara Hemākara,,,,,,,,,
 Work,41447,Himatprakāśa,Himatpradīpa,,40505,Mahādevadeva,,,,1773,1773
 Work,111280,Himavat Khaṇḍa- Nepāla Mahatmya,,,,,Purāṇa,,,,
+Work,116545,Hiṅgulanāmalakṣaṇa,,,,,,,,,
 Work,104609,Hiṅguvarṇana,,,,,Vaidyaśāstra,,,,
 Person,97297,Hinmativarman,Himanivarman,,,,,,,,
 Person,86955,Hiralāla Jain,,,,,,,,1964,1964
 Person,101920,Hīrāmana,,,,,,,,,
 Person,110316,Hiraṇyā,,,,,,,,1375,1375
-Work,114358,Hiraṇyakeśīdarśpurṇamāsaprayoga,,,114337,Satyāṣāḍha,Hinduism (general),,,,
 Person,86104,Hitarūci,,,,,,,,1640,1640
 Person,40429,Hitarucigaṇi,,,,,,,,,
 Work,111762,Hitopadeśa,,,111761,Nārāyaṇa Paṇḍita,Kāvya,,,,
 Work,105654,Hoḍācakra,,,,,Jyotiḥśāstra,,,,
 Work,112748,Holikākathā,,,,,Purāṇa,,,,
 Work,111303,Homa Ratna,Ratnāvalīsāra,,111302,Gaurīdatta,Tantra,,,,
+Work,116547,Homapaddhati,Mallārī Mahātmya Homapaddhati,,,,Hinduism (general),,,,
 Work,105672,Horādhyāya,,,,,Jyotiḥśāstra,,,,
 Work,105675,Horāprakāśa,,,,,Jyotiḥśāstra,,,,
 Work,107401,Horāpraśna,,,,,Jyotiḥśāstra,,,,
@@ -6410,6 +6435,7 @@ Work,105648,Horāsaṅkhyā,,,,,Jyotiḥśāstra,,,,
 Work,105646,Horāśāstra,,,,,Jyotiḥśāstra,,,,
 Work,105652,Horāṣṭaka,,,,,Jyotiḥśāstra,,,,
 Person,113139,Horila śarman,,,,,,,,,
+Work,116555,Hotṛ rites,,,,,"Veda, Dharmaśāstra, Hinduism (general)",,,,
 Work,111030,Hotraprayoga,,,113856,Bhaṭṭa Sadāśiva,Veda,,,,
 Person,110322,Hoysala Narasiṃha III,Narasiṃha III,,,,,,,1250,1250
 Person,40371,Hrādani,,,,,,,,,
@@ -6439,11 +6465,13 @@ Person,86698,Iṃguva Vīrarāghava Yajvan,,,,,,,,1907,1907
 Person,96562,Immaḍi Dēvarāya,"Mallikārjuna, Prauḍha Dēvarāya",,,,,,,1465,1446
 Person,85723,Immāḍi Devarāya Prauḍhadevarāya,,,,,,,,1440,1440
 Person,96565,Immaḍi Narasimha,,,,,,,,1506,1490
+Work,116557,Indiraikādaśī,,,,,Hinduism (general),,,,
 Person,40411,Indra,,Bhaṭṭa,,,,,,,
 Person,115793,Indrabhūti,,,,,,,,,
 Person,87331,Indrācārya,,,,,,,,,
 Work,105659,Indradhvajotsavanirṇaya,,,,,Jyotiḥśāstra,,,,
 Person,85794,Indrahaṃsagaṇi,,,,,,,,1492,1492
+Work,116560,Indrākṣīstotra,,,,,Hinduism (general),,,,
 Work,41901,Indrākṣīstotra,,,,,Kāvya,,,,
 Person,85830,Indranandin,,,,,,,,1514,1514
 Person,85740,Indrapati,,,,,,,,1450,1450
@@ -6451,8 +6479,10 @@ Person,87332,Indrasaubhāgya Gaṇi,,Gaṇi,,,,,,,
 Work,42388,Indravalairaṇḍatailacikitsāṭīkā,,,,,Vaidyaśāstra,,,,
 Work,42293,Indravalyairaṇḍatailacikitsā,,,,,Vaidyaśāstra,,,,
 Person,87333,Indravāmadeva,,,,,,,,,
+Work,116562,Indrāya Dvādaśanṛmedha,Indra Sūkta,,,,Veda,,,,
 Work,114950,Indronāmabrāhmaṇāvadāna,,,,,Buddhism (general),,,,
 Person,40853,Indu,,,,,,,,1150,1000
+Person,117003,Indumitra,Indu,,,,,,,,
 Work,42492,Induprakāśa,,,41160,Gaṅgadhara,,42487,Bṛhaccabdenduśekhara,,
 Work,92833,Induśekhara on Bāḍarāyaṇa’s Brahmasūtras,,,40667,Nāgeśabhaṭṭa,,,,,
 Work,41910,Iṅgalīkabhasmanirmāṇakrama,,,,,,,,,
@@ -6540,9 +6570,11 @@ Person,86553,Jagajjīvana,,,,,,,,1855,1855
 Person,115076,Jagalakṣmī,,,,,,,,,
 Work,95425,Jaganmithyātvadīpikā,,,87676,Rāmendra Yogin,Advaita Vedānta,,,,
 Work,93001,Jaganmithyātvakhaṇḍana,,,86329,Veṅkatācārya,Viśiṣṭādvaita Vedānta,,,,
+Work,116601,Jaganmohana,,,116600,Lakṣmaṇācārya Bhaṭṭa,Jyotiḥśāstra,,,,
 Work,105501,Jaganmohana,,,,,Jyotiḥśāstra,,,,
 Person,114747,Jagaṅnāth Bhaṭa,,,,,,,,,
 Person,40426,Jagannātha,,,,,,,,1616,1616
+Person,40757,Jagannātha,Jagannātha Paṇḍitarāja,,,,,,,,
 Person,86126,Jagannātha,,,,,,,,1646,1646
 Person,87339,Jagannātha,,,,,,,,,
 Person,87340,Jagannātha,,,,,,,,,
@@ -6550,6 +6582,7 @@ Person,87341,Jagannātha,(Mahopādhyāya) Jagannātha,Mahopādhyāya,,,,,,,
 Person,87342,Jagannātha,,,,,,,,,
 Person,102964,Jagannātha,,,,,,,,,
 Person,111675,Jagannātha,,,,,,,,,
+Person,116786,Jagannātha Bhaṭa Pāṭhaka,,,,,,,,,
 Person,114837,Jagannātha Dīkṣita,,,,,,,,,
 Person,86585,Jagannātha Dīkṣita,,Dīkṣita,,,,,,1870,1870
 Person,86464,Jagannātha Miśra,,,,,,,,1800,1800
@@ -6577,8 +6610,9 @@ Work,41427,Jagatsundarīprayogamālā,,,40485,Yaśaḥkīrti,,,,,
 Work,93643,Jagatsyatvānumānakhaṇḍana,,,86552,Rāma Sūri,Advaita Vedānta,,,,
 Person,85087,Jaimini,,,,,,,,25,25
 Work,99349,Jaimini Bhārata,,,99347,Lakṣmīśa,,,,1650,1650
+Work,116825,Jaimini Sūtra,Jaiminīyopadeśasūtra,,85087,Jaimini,Jyotiḥśāstra,,,,
 Person,86937,Jaiminikaṇṭha Tarkatīrtha,,,,,,,,1960,1960
-Work,114610,Jaiminīkṛta aśvamedhaprārambhaḥ,Jaiminīya aśvamedha,,85087,Jaimini,Hinduism (general),,,,
+Work,114610,Jaiminīkṛta aśvamedha,,,85087,Jaimini,Hinduism (general),,,,
 Work,90286,Jaimininyāyamālāvistara,,,85636,Vidyāraṇya,,,,,
 Work,105464,Jaiminisūtra,,,,,Jyotiḥśāstra,,,,
 Work,90935,Jaiminīyasūtrārthasaṃgraha on Sucarita Miśra's Kāśikā,,,85878,Parameśvara,,89499,Kāśikā on Kumārila's Tantravārttika,,
@@ -6611,6 +6645,7 @@ Work,98300,Jalabhedabhāvārthabodhinī,,,,,Vedānta (general),90819,Jalabheda,,
 Work,98275,Jalabhedaṭikā,,,86052,Kalyāṇarāya Bhaṭṭa,Vedānta (general),90819,Jalabheda,,
 Work,92440,Jalāśayaśuddhivicāra,,,86205,Puruṣottama Pītāmbara,,,,,
 Work,110053,Jalāśayotsargapramāṇatattva,,,109998,Raghunandana,Dharmaśāstra,,,,
+Work,116619,Jalāśayotsargaprayoga,,,,,,,,,
 Work,110004,Jalāśayotsargatattva,"Jalāśayotsargaprayogatattva, Taḍāgabhavanotsargatattva, Jalāśayotsargapramāṇatattva",,109998,Raghunandana,Dharmaśāstra,,,,
 Person,85825,Jaleśara,Janeśvara Vāhinīpati,,,,,,,1510,1510
 Person,86945,Jalihāla Śrīnivāsācārya,,,,,,,,1961,1961
@@ -6624,11 +6659,15 @@ Person,41020,Jānakī,,,,,,,,,
 Person,87348,Jānakī Prasāda,,,,,,,,,
 Person,87346,Janakīdeva,,,,,,,,,
 Work,109916,Jānakīharaṇa,,,109915,Kumāradāsa,Kāvya,,,,
+Work,116621,Jānakīkavaca,,,,,,,,,
 Person,87347,Jānakīnātha Bhakta,,,,,,,,,
 Person,85863,Jānakīnātha Bhaṭṭācārya Cūḍāmaṇi,,Bhaṭṭācārya,,,,,,1540,1540
+Work,116623,Jānakīpariṇaya,Jānakīpariṇaya Nāṭakam,,,,,,,,
 Work,99345,Jānakīpariṇaya,,,99339,Cakrakavi,,,,,
 Work,96712,Jānakīpariṇaya Nāṭaka,,,96709,Rāmabhadra Dīkṣita,Nāṭya,,,,
 Work,113239,Jānakīramaṇastotra,,,,,,,,,
+Work,116625,Jānakīsahasranāmastotra,,,,,,,,,
+Work,116627,Jānakīstavarājavarṇanāma,,,,,,,,,
 Person,115598,Janārdana,,,,,,,,,
 Person,40297,Janārdana,,"Brāhmaṇa, Parāśara",,,,,,,
 Person,41075,Janārdana,,,,,,,,,
@@ -6661,12 +6700,14 @@ Work,115239,Janmarājāmāhātmyadhāraṇī,,,,,Buddhism (general),,,,
 Work,91098,Janmāṣṭamīnirṇaya,,,85920,Viṭṭhala Nātha Dīkṣita,,,,,
 Work,110475,Janmāṣṭamīvrata,,,,,Dharmaśāstra,,,,
 Work,110476,Janmāṣṭamīvratakathā,,,,,Purāṇa,,,,
+Work,116631,Janmāṣṭamīvratodyāpana,,,,,,,,,
 Work,110287,Janmatithikṛtya,Janmatitheḥ kṛtyam,,,,Dharmaśāstra,,,,
 Work,106677,Janmatithiphala,,,,,Jyotiḥśāstra,,,,
 Work,108423,Janmavilagnanirṇaya,,,,,Jyotiḥśāstra,,,,
 Person,96364,Janna,,Jaina,,,,,,1209,1150
 Work,113571,Jantara Naksā Vidhi,,,,,,,,,
 Work,91991,Japasamaye svarūpadhyāna,,,86120,Harirāja,,,,,
+Work,116634,Japaśaṃkarapārvatīpate,Śiva stotra,,116633,Upamanyu,Kāmaśāstra,,,,
 Work,96001,Jaradgava,,,,,,,,,
 Work,104530,Jarārogaharakalpa,,,,,Vaidyaśāstra,,,,
 Work,115522,Jarmmarājā (Yamarājā?) stotra,,,,,Buddhism (general),,,,
@@ -6681,6 +6722,7 @@ Work,105558,Jātakadīpaka,,,,,Jyotiḥśāstra,,,,
 Work,105565,Jātakādisaṃgraha,,,,,Jyotiḥśāstra,,,,
 Work,105560,Jātakādivivāhāntavidhi,,,,,Jyotiḥśāstra,,,,
 Work,105562,Jātakakarmapaddhati,,,107023,Śrīpati,Jyotiḥśāstra,,,,
+Work,116641,Jātakālaṃkārakarma,Jātakālaṃkārakarman,,116640,Śukamahāmunikavi,Jyotiḥśāstra,,,,
 Work,113619,Jātakālaṁkāraṭīkā,,,113618,Haribhānu,Jyotiḥśāstra,113617,Jātakālaṅkāra,,
 Work,105546,Jātakālaṅkāra,,,108636,Gaṇeśa,Jyotiḥśāstra,,,,
 Work,108431,Jātākālaṅkāra,Jātakālaṃkāraṭīkā,,,,Jyotiḥśāstra,,,,
@@ -6726,7 +6768,7 @@ Person,40355,Jayadeva,,,,,,,,1850,1850
 Person,87352,Jayadeva,,,,,,,,,
 Person,96475,Jayadeva,Śvetapaṭa,"Jaina, Jaina monk, Śvetāmbara",,,,,,800,800
 Person,100096,Jayadeva,,,,,,,,,
-Person,109800,Jayadeva,,,,,,,,1100,1100
+Person,109800,Jayadeva,,Miśra,,,,,,1100,1100
 Person,86774,Jayadeva Miśra,,,,,,,,1920,1920
 Person,85769,Jayadeva Pakṣadhara Miśra,,Miśra,,,,,,1470,1470
 Person,114172,Jayadeva Piyūṣavarṣa,,,,,,,,1250,1200
@@ -6745,6 +6787,7 @@ Person,87354,Jayakṛṣṇa Brahmatīrtha,,,,,,,,,
 Person,40880,Jayakṛṣṇa maunī,,Mauni,,,,,,,
 Person,86342,Jayakṛṣṇa Maunin,,,,,,,,1750,1750
 Person,86523,Jayakṛṣṇa Tarkācārya,,,,,,,,1850,1850
+Work,116654,Jayalakṣmīṭīkā,,,116653,Mahādeva,Jyotiḥśāstra,106597,Narapatijayacaryā,,
 Work,110151,Jayamaṅgalā,,,110150,Bhikṣu Prabhāmati,,109693,Arthaśāstra,,
 Work,89018,Jayamaṅgalā on Īśvarakṛṣṇa's Sāṃkhyakārikās,,,85308,Śaṃkara,,88213,Sāṅkhyakārikā,,
 Person,85307,Jayamiśra,(Bhaṭṭaputra) Jayamiśra,Bhaṭṭaputra,,,,,,690,690
@@ -6890,6 +6933,7 @@ Person,87365,Jīvanmukta Bhikṣu,,Bhikṣu,,,,,,,
 Work,88653,Jīvanmuktānandalaharī,,,85218,Śaṃkara,,,,,
 Work,111608,Jīvanmuktaniścayayoga,,,,,"Advaita Vedānta, Yoga",,,,
 Work,98305,Jīvanmuktigītā,,,87213,Dattātreya,Advaita Vedānta,,,,
+Work,116656,Jīvanmuktisādhana,,,,,Advaita Vedānta,,,,
 Work,93894,Jīvanmuktivicāra,,,86631,Appaya,Anubhavādvaita,,,,
 Work,90293,Jīvanmuktiviveka,,,85636,Vidyāraṇya,Advaita Vedānta,,,,
 Work,94208,Jīvanmuktivivekasāra,,,86785,Viṣṇu Vāmana Bāpat,,90293,Jīvanmuktiviveka,,
@@ -6922,6 +6966,7 @@ Person,86674,J.M.Nallasvāmi Pillai,,,,,,,,1902,1902
 Person,85823,Jñānabhūṣaṇa,,,,,,,,1506,1506
 Work,92494,Jñānabindu,,,86219,Yaśovijaya,Jainism (general),,,,
 Work,95590,Jñānabodha,,,87828,Śuka,Advaita Vedānta,,,,
+Work,116668,Jñānabodhaprakaraṇa,,,,,Advaita Vedānta,,,,
 Work,112993,Jñānabrahma upaniṣad,,,,,,,,,
 Person,85649,Jñānacandra,,,,,,,,1370,1370
 Work,90953,Jñānacandrodayanāṭaka,,,85892,Padmasundara Gaṇi,,,,,
@@ -6947,6 +6992,8 @@ Work,92192,Jñānalakṣaṇavicāra,,,86177,Raghudeva Nyāyālaṃkāra Bhaṭ�
 Work,91758,Jñānalakṣaṇavicārarahasya,,,86103,Harirāma Tarkavāgīśa,Nyāya,,,,
 Work,88365,Jñānālokālaṃkārasūtra,(Sarvabuddhaviṣayāvatāra)Jñānālokālaṃkārasūtra,,,,,,,457,457
 Work,95242,Jñānamālā on Kauṣītakī Upaniṣad,,,87518,Nāgara Nārāyaṇa,,96023,Kauṣītakyupaniṣad,,
+Work,116671,Jñānamañjarī,,,116670,Ṛṣiśarman,Jyotiḥśāstra,,,,
+Work,116674,Jñānamañjarī,,,116673,Gadādhara,Jyotiḥśāstra,,,,
 Work,105590,Jñānamañjarī,,,,,Jyotiḥśāstra,,,,
 Work,92928,Jñānamañjariṭīkā on Yaśovijaya's Jñānasāra,,,86313,Devacandra Yatipati,,92493,Jñānasāra,,
 Work,94678,Jñānamīmāṃsā,,,87043,Virendrakumara,,,,,
@@ -6955,11 +7002,13 @@ Work,89578,Jñānāmṛta,,,85454,Gorakṣanātha,,,,,
 Work,94788,Jñānāmṛta,,,87139,Bālakṛṣṇānanda Tīrtha,Dvaita Vedānta,,,,
 Work,95661,Jñānāmṛta,,,87889,Vāgīśa Munivar,,,,,
 Work,95851,Jñānāmṛtakattalai,,,,,,,,,
-Person,114687,Jñānāmṛtayati,,,,,,,,,
+Work,116676,Jñānāmṛtaśrāvaṇīmantra,,,,,,,,,
+Person,114687,Jñānamṛtayati,,,,,,,,,
 Person,86872,Jñānānanda,,,,,,,,1950,1845
 Person,87369,Jñānānanda,,,,,,,,,
 Person,87370,Jñānānanda,,,,,,,,,
 Work,95021,Jñānānandataraṅgiṇī,,,87328,Hemakara Maithila,Vedānta (general),,,,
+Work,116679,Jñānanaukā,,,85218,Śaṃkara,Advaita Vedānta,,,,
 Work,95176,Jñānanaukā,,,87456,Lakṣmaṇa Bhaṭṭa,Vedānta (general),,,,
 Person,41199,Jñānanetra,,,,,,,,900,850
 Work,104532,Jñānanidāna,,,,,Vaidyaśāstra,,,,
@@ -7042,12 +7091,14 @@ Work,42264,Jvaracikitsā,,,,,Vaidyaśāstra,,,,
 Work,41866,Jvaracikitsādi,,,,,Vaidyaśāstra,,,,
 Work,41822,Jvarādicikitsā,,,,,Vaidyaśāstra,,,,
 Work,42395,Jvarādicikitsāyogaḥ,,,,,Vaidyaśāstra,,,,
+Work,116686,Jvarahara Stotra,,,,,,,,,
 Work,41498,Jvaranirṇaya,,,40403,Nārāyaṇa (paṇḍita),Vaidyaśāstra,,,,
 Work,104509,Jvaranirṇayavivaraṇa,,,,,Vaidyaśāstra,,,,
 Work,41368,Jvaraparājaya,,,40430,Jayaratnamaṇi,Vaidyaśāstra,,,1605,1605
 Work,41872,Jvarapīḍavidhi,,,,,Vaidyaśāstra,,,,
 Work,104089,Jvarasamuccaya,,,,,Vaidyaśāstra,,,924,924
 Work,41794,Jvarasamuccayadarpaṇa,,,,,Vaidyaśāstra,,,,
+Work,116690,Jvaraśānti,,,,,Dharmaśāstra,,,,
 Work,41932,Jvarasāroddhūrasaptadhājvarasvarāpa,,,,,Vaidyaśāstra,,,,
 Work,104515,Jvaratarpaṇa,,,,,Vaidyaśāstra,,,,
 Work,42266,Jvaratimirabhāskara,,,40946,Cāmuṇḍa Kāyastha,Vaidyaśāstra,,,,
@@ -7064,6 +7115,7 @@ Work,108455,Jyeṣṭhāśleṣāmūlaśāntividhi,,,,,Jyotiḥśāstra,,,,
 Work,113017,Jyotaṣicakra,,,,,"Jyotiḥśāstra, Tantra",,,,
 Work,41577,Jyotiḥśāstrasamuccaya,,,40628,Nanda,Jyotiḥśāstra,,,1500,1500
 Person,40538,Jyotiḥsvarūpa,,,,,,,,1500,1500
+Work,116696,Jyotimsāgagrantha,Jyotisāgara,,,,,,,,
 Work,105375,Jyotīrājakaraṇa,,,,,Jyotiḥśāstra,,,,
 Work,105383,Jyotirnirbandha,,,,,Jyotiḥśāstra,,,,
 Work,105365,Jyotirvidābharaṇa,,,,,Jyotiḥśāstra,,,,
@@ -7071,6 +7123,7 @@ Person,86429,Jyotirvijaya,,,,,,,,1788,1788
 Work,105331,Jyotiṣa,[Jyotiṣa],,,,Jyotiḥśāstra,,,,
 Work,106121,Jyotiṣa,[Jyotiṣa],,,,Jyotiḥśāstra,,,,
 Work,113372,Jyotiṣa Varṇakapiṇa,,,,,Jyotiḥśāstra,,,,
+Work,116684,Jyotiṣabālabodha,,,112861,Muñjāditya,,,,,
 Work,105480,Jyotiṣacakra,,,,,Jyotiḥśāstra,,,,
 Work,105367,Jyotiṣacandrikā,,,,,Jyotiḥśāstra,,,,
 Work,105373,Jyotiṣagrahabhāvaphala,,,,,Jyotiḥśāstra,,,,
@@ -7100,20 +7153,24 @@ Work,105448,Jyotiṣavaidyaka,,,,,Jyotiḥśāstra,,,,
 Work,105412,Jyotiṣavedāṅga,,,,,Jyotiḥśāstra,,,,
 Work,105492,Jyotiṣavedāṅga - Yajurvedīya,Yajurvedīyajyotiṣavedāṅga,,108823,Lagadha,Jyotiḥśāstra,,,,
 Work,105453,Jyotiṣaviṣayaka,,,,,Jyotiḥśāstra,,,,
+Work,116692,Jyotiṣaviṣayakagrantha,,,,,Jyotiḥśāstra,,,,
 Work,106499,Jyotiṣaviṣayakagrantha,[Jyotiṣaviṣayakagrantha],,,,Jyotiḥśāstra,,,,
 Work,88294,Jyotiṣkasūtra,,,,,,,,390,390
 Work,88323,Jyotiṣkasūtra,,,,,,,,410,410
 Work,115962,Jyotiṣkāvadāna,,,,,Buddhism (general),,,,
+Work,116706,Jyotiṣkedāra,Jyotiṣakedāra,,116705,Kṛpāśaṅkara,Jyotiḥśāstra,,,1763,1763
 Work,94665,Jyotismati on Kapila's Samkhyasutras,,,87031,Rama Samkara Bhattacarya,,90384,Sāṃkhya(pravacana)sūtras,,
 Work,104524,Jyotiṣmatīkalpa,,,,,Vaidyaśāstra,,,,
 Work,104526,Jyotiṣmatīrasāyana,,,,,Vaidyaśāstra,,,,
 Work,110393,Jyotistattva,,,109998,Raghunandana,Dharmaśāstra,,,,
+Work,116709,Jyotiṣṭoma,,,,,Dharmaśāstra,,,,
 Work,42489,Jyotsnā,,,41157,Udayaṅkara,,42433,Laghuśabdenduśekhara,,
 Work,93798,Jyotsnā,,,86602,Brahmānanda,Haṭhayoga,90461,Haṭhapradīpikā,,
 Work,94547,Jyotsna on Nagesa Bhatta's Vaiyakaranasiddhantamañjūṣā,,,86948,Kalika Prasada Sukla,,92830,Vaiyākaraṇa(laghu)siddhāntamañjūṣā,,
 Person,113119,Kabira sāhaba,,,,,,,,,
 Person,99395,Kāci Rāmaiyar,"Kāci Rāmaiyaṉ, Kācirāmaiyan, Kācirāmaiyar, Kacci Rāmaiyaṉ, Kacci Rāmaiyar, Kaccirāmaiyaṉ, Kaccirāmaiyar",,,,,,,1550,1550
 Work,104535,Kadalīvarṇana,,,,,Vaidyaśāstra,,,,
+Work,116711,Kadalīvratakathā,,,,,Dharmaśāstra,,,,
 Work,109562,Kādambarī,,,"108814, 109559","Bāṇa, Bhūṣaṇabhaṭṭa",Kāvya,,,650,650
 Work,109729,Kādambarīkathāsāra,,,109728,Abhinanda,Kāvya,,,870,870
 Work,104578,Kadambavarṇana,,,,,Vaidyaśāstra,,,,
@@ -7158,7 +7215,6 @@ Work,115256,Kakṣapuṭa,Siddhanāgārjunīya,,115255,Siddha Nāgārjuna,Buddhi
 Person,85322,Kakuda,Kakaya Sūṛi,,,,,,,970,970
 Work,92834,Kalā,Vaiyākaraṇasiddhāntamañjūṣākalā,,40678,Bālambhaṭṭa Pāyaguṇḍa,Vyākaraṇa,92830,Vaiyākaraṇa(laghu)siddhāntamañjūṣā,,
 Work,112170,Kālabhairavāṣṭaka,"Bhairavāṣṭaka, Kṣretrapālāṣṭaka, Kṣetrapālamantra, Tīkṣṇadaṃṣṭṛakālabhairavāṣṭaka, Bījabhairavāṣṭāstava",,85218,Śaṃkara,Tantra,,,,
-Work,112219,Kālabhairavāṣṭaka,,,,,Hinduism (general),,,,
 Work,108490,Kālacakra,,,,,Jyotiḥśāstra,,,,
 Work,115555,Kālacakra nibaddha dhāraṇī,,,,,Buddhism (general),,,,
 Work,115148,Kālacakrabhagavatsādhanavidhi,,,115143,Dharmakaraśāntipāda,Buddhism (general),,,,
@@ -7167,8 +7223,10 @@ Work,116244,Kālacakranivadhha dhāraṇī,,,,,Buddhism (general),,,,
 Work,115144,Kālacakrapūjāvidhi,,,,,Buddhism (general),,,,
 Work,115141,Kālacakratantra,,,,,Buddhism (general),,,,
 Work,114033,Kalādīkṣāpaddhati,,,114032,Manoda,Kashmir Śaivism,,,1335,1335
+Work,116723,Kālāgnirudropaniṣad,,,,,,,,,
 Work,96009,Kālāgnirudropaniṣad,,,,,,,,,
 Person,85965,Kālahastīśvara Yajvan,,,,,,,,1590,1590
+Work,116733,Kālajātaka,,,,,Jyotiḥśāstra,,,,
 Work,41502,Kālajñāna,,,40383,Lokanātha,,,,,
 Work,105715,Kālajñāna,,,,,Jyotiḥśāstra,,,,
 Work,105703,Kālajñānacakra,,,,,Jyotiḥśāstra,,,,
@@ -7177,6 +7235,8 @@ Work,105144,Kālajñānavaidyaka,,,,,Vaidyaśāstra,,,,
 Work,96010,Kālakaramasūtra,,,,,,,,,
 Work,93271,Kālakhaṇḍanavicāra,,,86430,Candranārāyaṇa Bhaṭṭa,Nyāya,,,,
 Work,112930,Kālamādhavakārikāvyākhyā,Kālanirṇayakārikāvyākhyā,,86309,Vaidyanātha Tatsat,Dharmaśāstra,112783,Kālanirṇaya,,
+Work,116737,Kālāmṛta,,,,,"Jyotiḥśāstra, Dharmaśāstra",,,,
+Work,116738,Kālāmṛtivivṛti,,,116736,Bāpirājā,Jyotiḥśāstra,116737,Kālāmṛta,,
 Work,106228,Kālānalacakra,,,,,Jyotiḥśāstra,,,,
 Work,112783,Kālanirṇaya,"Kālamādhava, Kālamādhavīya, Mādhavīyakālanirṇaya, Kālamādhavakārikā, Kālanirṇayakārikā, Mādhavīya-kāla-nirṇaya-śloka-vikaraṇa",,40773,Mādhava,"Dharmaśāstra, Jyotiḥśāstra",,,,
 Work,41749,Kālanirṇayadīpikā,,,40789,Rāmacandra,,,,,
@@ -7185,6 +7245,7 @@ Work,112771,Kālanirṇayaprakāśa,Kālanirṇayadīpikā,,87650,Rāmacandra,Dh
 Work,105705,Kālanirūpaṇa,,,,,Jyotiḥśāstra,,,,
 Work,109827,Kalāpacandra,Kavirāja,,109812,Suṣeṇa,"Kātantra, Vyākaraṇa",109805,Kātantravṛttipañjikā,,
 Work,109909,Kalāpadhātusūtra,"Kātantradhātupāṭha, Kātantragaṇamālā, Kātantrīyadhātupāṭha",,"109625, 109738","Śarvavarman, Durgasiṃha","Dhātupāṭha, Kātantra, Vyākaraṇa",,,,
+Work,116756,Kālaprabodha,,,116755,Govinda Dīkṣita,Dharmaśāstra,,,,
 Person,110736,Kālarāma,,,,,,,,,
 Work,90126,Kālasaptatikā,"Kālasaptatikāvicāra, Kālasattarī, Kālasatterī",,85599,Dharmaghoṣa,Jainism (general),,,,
 Work,110683,Kalaśasthāpana,,,,,Dharmaśāstra,,,,
@@ -7196,10 +7257,12 @@ Work,89559,Kālasvarūpakulaka,,,85449,Jinadatta,,,,,
 Person,113196,Kalāvati,,,,,,,,,
 Work,109006,Kalāvilāsa,,,85469,Kṣemendra,Kāvya,,,,
 Person,97759,Kālaviṭha Soyaropanta,,,,,,,,,
+Work,116759,Kaleriti,,,,,,116760,Kalibhaviṣya,,
 Person,40913,Kalhaṇa,Kalyāṇa,,,,,,,1150,1100
 Person,86740,Kāli Kumāra Miśra,,,,,,,,1915,1915
 Person,87382,Kāli Mohan Śarman,,Śarman,,,,,,,
 Person,86470,Kāli Śaṃkara,Kāli Śaṃkara (Siddhāntavāgīśa) (Bhaṭṭācārya),"Bhaṭṭācārya, Siddhāntavāgīśa",,,,,,1810,1810
+Work,116760,Kalibhaviṣya,,,,,,,,,
 Person,87381,Kāḷīcaraṇa,,,,,,,,,
 Person,40377,Kālidāsa,,,,,,,,,
 Person,112242,Kālidāsa,Śiśu Kālidāsa,,,,,,,,
@@ -7225,6 +7288,7 @@ Work,42127,Kalpacintāmaṇi,,,,,Vaidyaśāstra,,,,
 Work,111186,Kalpadruma Tantra,,,,,Tantra,,,,
 Work,115098,Kalpadrumāvadāna,,,,,Buddhism (general),,,,
 Work,88885,Kalpadrumāvadānamālāsūtra,,,,,,,,800,800
+Work,116765,Kalpalatā,Saṃvatsarādiphalakalpalatā,,116762,Soma Gaṇaka,,,,,
 Work,91163,Kalpalatā,(Haribhakti)Kalpalatā,,85933,Vādirāja Tīrtha,Dvaita Vedānta,,,,
 Work,104636,Kalpalatā,,,,,Vaidyaśāstra,,,,
 Work,90539,Kalpalatā on Udayana's Ātmatattvaviveka,,,85715,Śaṃkara Miśra,,89090,Ātmatattvaviveka,,
@@ -7318,6 +7382,7 @@ Work,113898,Kammavāca,,,,,Buddhism (general),,,,
 Person,96339,Kampana,,,,,,,,1400,1400
 Work,41526,Kaṃsavadhamahākāvya,,,40564,Mohana bhaṭṭa,,,,,
 Work,104286,Kāmyauṣadhiprayoga,,,,,Vaidyaśāstra,,,1446,1446
+Work,116769,Kāmyeṣṭi,Baudhāyaniyakāmyeṣṭi,,114370,Baudhāyana,Dharmaśāstra,,,,
 Work,92864,Kaṇa on Sanātana Gosvāmin's Bhāgavatāmṛta,,,86299,Viśvanātha Cakravartin,,90800,Bhāgavatāmṛta and Digdarśinī thereon,,
 Person,85092,Kaṇāda,Ulūka,,,,,,,100,100
 Person,85914,Kaṇāda Tarkavāgīśa,,,,,,,,1560,1560
@@ -7341,6 +7406,7 @@ Work,115082,Kaṅkirṇahṛdayadhāraṇī,,,,,Buddhism (general),,,,
 Work,114270,Kannaḍakuvalayānanda,,,114269,Jāyagauḍa,Alaṃkāraśāstra,,,1760,1760
 Work,114271,Kannaḍarasamañjarī,Śṛṅgāratilaka,,114269,Jāyagauḍa,Alaṃkāraśāstra,,,,
 Person,103250,Kānnājī Miśra,,Dhādīca,,,,,,,
+Person,116741,Kānorī,,,,,,,,,
 Work,90923,Kaṇṭakoddhāra on Anumāna section of Jayadeva Pakṣadhara Miśra's Tattvacintāmaṇyāloka,,,85870,Madhusūdana Ṭhakkura,,90652,Tattvacintāmaṇyāloka,,
 Work,92361,Kaṇṭakoddhāra on Madhva's Mahābhāratatātparyanirṇaya,,,86202,Kundalagiri Sūri,,89951,Mahābhāratatātparyanirṇaya,,
 Work,91275,Kaṇṭakoddhāra on Vyāsatīrtha's Nyāyāmṛta,,,85957,Ānandabhaṭṭāraka,,90890,Nyāyāmṛta,,
@@ -7359,6 +7425,7 @@ Work,41536,Kāntimatīpariṇaya,,,40591,Cokkanātha,,,,,
 Work,93897,Kāntimatyekaślokī and autocommentary,,,86631,Appaya,Anubhavādvaita,,,,
 Person,87392,Kāṇva Tryambaka,,Tryambaka,,,,,,,
 Person,108189,Kānyakubja Kedārajī Vaidya,,,,,,,,1744,1744
+Work,116771,Kanyasthakṛṣṇaveṇītirthavīdhīmahatmya,Kṛṣṇayātrāni,,,,Dharmaśāstra,,,,
 Work,110648,Kanyāyāḥ phalam,,,,,Jyotiḥśāstra,,,,
 Person,40501,Kāpālika,,,,,,,,1700,1700
 Work,41443,Kāpālikagrantha,Netraroganidāna,,40501,Kāpālika,Vaidyaśāstra,,,1684,1684
@@ -7368,8 +7435,11 @@ Work,113077,Kapardinbhāṣya,Kapardisvāmibhāṣya,,,,Other discipline,113072,
 Work,42375,Kaphacikitsā,,,,,Vaidyaśāstra,,,,
 Person,85657,Kapila,,,,,,,,1375,1375
 Person,108546,Kapilabala,,,,,,,,,
+Work,116773,Kapilācāryasūtrāṇi,Sāṅkhyasūtravivaraṇa,,85657,Kapila,,112932,Sāṅkhyasūtravṛtti,,
 Person,86995,Kapiladeva Śāstri,,,,,,,,1975,1975
 Work,115087,Kapilapātrāvadāna,,,,,Buddhism (general),,,,
+Work,116775,Kapilāṣaṣṭhīvidhāna,,,,,Dharmaśāstra,,,,
+Work,116777,Kapilaṣaṣṭhīvrata,,,,,Dharmaśāstra,,,,
 Work,95190,Kapilasūtravivaraṇa,Vṛtti on the Tattvasamāsa,,87470,Mādhava Parivrājaka,,90105,Tattvasamāsa,,
 Person,40304,Kapilendradeva Gajapati,Kapilendra,"Deva, Gajapati",,,,,,1466,1466
 Work,115092,Kapiśāvadāna,,,,,Buddhism (general),,,,
@@ -7379,12 +7449,15 @@ Work,104649,Kapitthavarṇana,,,,,Vaidyaśāstra,,,,
 Work,91411,Kārakacakra,,,85998,Bhavānanda Siddhāntavāgīśa,,,,,
 Work,91906,Kārakacakra,,,86116,Viśvanātha Nyāyasiddhānta Pañcānana,Nyāya + Vyākaraṇa,,,,
 Work,41559,Kārakacikra,,,40621,Puruṣottamadeva,,,,,
+Work,116790,Kārakaprakaraṇa,,,85980,Bhaṭṭoji Dīkṣita,Vyākaraṇa,,,,
 Work,109994,Kārakasambandhoddyota,"Sambandhoddyota, Ṣaṭkāraka, Ṣaṭkārakavyavahāra",,109813,Rabhasanandin,"Kātantra, Vyākaraṇa",109811,Ṣaṭkārakakārikā,,
+Work,116966,Kārakasaṅgraha,,,,,"Vyākaraṇa, Kātantra",,,,
 Work,42474,Kārakatattva,,,41121,Cakrapāṇi Śeṣa,,,,,
 Work,42479,Kārakavāda,,,41019,Śrīkṛṣṇa Mauni,,,,,
 Work,91612,Karakavāda,,,86059,Jayarāma Nyāyapañcānana,,,,,
 Work,91781,Kārakavāda,,,86103,Harirāma Tarkavāgīśa,Nyāya,,,,
 Work,92278,Kārakavāda,,,86189,Gadādhara Bhaṭṭācārya,Vyākaraṇa,,,,
+Work,116792,Kārakavibhakti,,,,,Vyākaraṇa,,,,
 Work,41581,Kāraka-viveka,,,,,,,,,
 Work,41525,Kārakollāsa,,,40418,Bharatamallika,Vyākaraṇa,,,,
 Work,105709,Karaṇakutūhala,,,106561,Bhāskara  II,Jyotiḥśāstra,,,1183,1183
@@ -7405,6 +7478,7 @@ Work,42126,Karañjakalpādi,,,,,Vaidyaśāstra,,,,
 Person,110377,Karansingh of Bikaner,"Karṇa Singh of Bikaner, Karan Singh of Bikaner",,,,,,,1650,1650
 Work,105713,Karapañcāṅga,,,,,Jyotiḥśāstra,,,,
 Work,88482,Karatalaratna,,,85168,Bhavya,Madhyamaka,,,,
+Work,116795,Karavīramāhātmya,,,,,Hinduism (general),,,,
 Work,94162,Kārikādarpaṇa on Vedānta Deśika's Rahasyatrayasāra,,,86762,Varadācārya,,90198,Rahasyatrayasāra,,
 Work,91939,Kārikāpañcaka and autocommentary,,,86120,Harirāja,Śuddhādvaita Vedānta,,,,
 Work,93138,Kārikārtha on Vallabha's Subodhinī,,,86388,Nirbhayarāma,,90813,Subodhinī on the Bhāgavata Purāṇa,,
@@ -7412,6 +7486,7 @@ Work,92873,Kārikās on Śaṃkara's Ātmapañcaka,,,86300,Sadāśiva Brahmendra
 Work,93519,Kārikāvivaraṇa,,,86499,Gopeśvara,Śuddhādvaita Vedānta,,,,
 Work,110633,Kārīrīṣṭihautraprayoga,,,,,Veda,,,,
 Work,111639,Karkabhāṣya,,,,,Dharmaśāstra,,,,
+Work,116807,Karkaṭīvrata,,,,,Hinduism (general),,,,
 Work,89413,Karmagrantha,,,85402,Jinavallabha Sūri,Jainism (general),,,,
 Work,95054,Karmagrantha,,,87359,Jayatilaka Sūri,,,,,
 Work,89909,Karmagrantha and autocommentary,,,85559,Devendra Sūri,Jainism (general),,,,
@@ -7424,6 +7499,7 @@ Work,96648,Karmānuṣṭhānapaddhati,"Daśakarmapaddhati, Daśakarmadīpikā",
 Work,94849,Karmapaddhati,,,87196,Cidghanānanda,Yoga,,,,
 Work,95854,Karmapradīpa,"Chandogyapariśiṣṭa, Chāndogyapariśiṣṭa, Chandogapariśiṣṭa, Gobhilasmṛti",,87268,Gobhila,,,,,
 Work,41461,Karmaprakāśa,,,40511,Nārāyaṇa Bhiṣaj,Vaidyaśāstra,,,,
+Work,116814,Karmaprakāśikāvṛtti,,,116813,Nārāyaṇa Sāmudrikā,,116812,Manuṣyajātaka,,
 Work,89061,Karmaprakṛti,,,85325,Kanakanandin,Jainism (general),,,,
 Work,89137,Karmaprakṛti,,,85347,Śivaśarman,Jainism (general),,,,
 Work,89987,Karmaprakṛti,,,85575,Abhayacandra,Jainism (general),,,,
@@ -7500,7 +7576,7 @@ Work,89499,Kāśikā on Kumārila's Tantravārttika,,,85423,Sucarita Miśra,,885
 Work,89438,Kāśikā on Vasugupta's Śivasūtras,,,85408,Upamanyu,,88905,Śivasūtras,,
 Person,86961,Kāśikānanda Svāmī,Jayamaṅgalācārya,,,,,,,1967,1967
 Work,89437,Kāśikāstava,"Tattvavimarśinī, Ādisūtranandikeśvarakārikāyāstavavimarśinī, Tattvavimarśinī on Nandikeśvara's Kārikās",,85408,Upamanyu,,92153,Kāśikā,,
-Work,109741,Kāśikāvivaraṇapañjikā,Nyāsa,,85247,Jinendrabuddhi,Vyākaraṇa,41544,Kāśikāvṛtti,,
+Work,109741,Kāśikāvivaraṇapañjikā,"Nyāsa, Kāśikānyāsa, Jinendranyāsa",,85247,Jinendrabuddhi,Vyākaraṇa,41544,Kāśikāvṛtti,,
 Work,41544,Kāśikāvṛtti,Kāśikā,,"40608, 40607","Jayāditya, Vāmana",Vyākaraṇa,41541,Aṣṭādhyāyī,,
 Work,112272,Kāśīkhaṇḍa-Pūrvārdha,,,,,Purāṇa,,,,
 Work,112273,Kāśīkhaṇḍa-Uttarārdha,,,,,Purāṇa,,,,
@@ -7609,6 +7685,7 @@ Work,88655,Kaupīnapañcaka,Yatipañcaka,,85218,Śaṃkara,Advaita Vedānta,,,,
 Person,40437,Kauśalyā,,,,,,,,,
 Work,105722,Kauśalyakusumāvalī,,,,,Jyotiḥśāstra,,,,
 Work,115170,Kauśīdyavīryotsāhanāvadāna,,,,,Buddhism (general),,,,
+Person,116780,Kauśikarāma,,,,,,,,,
 Work,88941,Kauśikasūtra,,,,,,,,900,900
 Work,113067,Kauṣītaki Brāhmaṇa,,,,,Veda,,,,
 Work,96022,Kauṣītakībrāhmaṇopaniṣad,,,,,,,,,
@@ -7750,7 +7827,7 @@ Person,86105,Khaṇḍadeva,,,,,,,,1640,1640
 Work,106029,Khaṇḍakhādya,,,,,Jyotiḥśāstra,,,,
 Work,93207,Khaṇḍana,,,86412,Bhīṣma Miśra,Advaita Vedānta,,,,
 Work,95410,Khaṇḍanabhūṣaṇasamalanivāraka on Advaitānanda Tīrtha's  Brahmavidyābharaṇa,,,87661,Rāmakṛṣṇa Yajvan Śāstrin,,93165,Brahmavidyābharaṇa,,
-Work,93600,Khaṇḍanajhañjhāmāruta on Gadādhara's Gādādharī,,,86522,Kiriti Veṅkatācārya,,92258,Gādādharī,,
+Work,93600,Khaṇḍanajhañjhāmāruta on Gadādhara's Gādādharī,,,86522,Kiriti Veṅkatācārya,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,89538,Khaṇḍanakhaṇḍakhādya,,,85443,Śrīharṣa,Advaita Vedānta,,,,
 Work,90275,Khaṇḍanamaṇḍana on Śrīharṣa's Khaṇḍanakhaṇḍanakhādya,,,85631,Paramānanda Tīrtha,,89538,Khaṇḍanakhaṇḍakhādya,,
 Work,95689,Khaṇḍanamaṇḍana on Śrīharṣa's Khaṇḍanakhaṇḍakhādya,,,87915,Varada Paṇḍita,,89538,Khaṇḍanakhaṇḍakhādya,,
@@ -7840,6 +7917,7 @@ Person,40803,Koṇḍaguṇṭa chinna veṅkaṭeśvara,,Śāstrin,,,,,,,
 Work,96716,Koṅkaṇābhyudaya,,,96497,Sāgara Rāmācārya,Dvaita Vedānta,,,,
 Work,104762,Kośakaumudī,,,,,Vaidyaśāstra,,,,
 Work,107038,Koṭacakra,,,,,Jyotiḥśāstra,,,,
+Person,116350,kōṭagiri Veṅkaṇṇagāru,,,,,,,,,
 Person,86776,Koṭi Liṅgapuragoda Varmarāja,Godavarman Bhaṭṭan Tampuram,,,,,,,1920,1920
 Work,90128,Koṭikavi,,,85600,Umāpati Śivacariyār,Śaiva Siddhānta,,,,
 Person,85222,Kotyācārya,Śīlaṅka,,,,,,,725,725
@@ -7866,7 +7944,7 @@ Work,90463,Kriyāsāra,,,85681,Śrīkaṇṭha,Vīraśaiva,,,,
 Work,93198,Kriyāyoga,,,86408,Veṅkaṭa Yogin,,,,,
 Work,95782,Kriyāyoga,,,87993,Viṭṭhalācārya,Yoga,,,,
 Work,93425,Kroḍa,Nyāyakusumāñjalikroḍa,,86470,Kāli Śaṃkara,,89093,Nyāyakusumāñjali,,
-Work,93446,Kroḍa,Ṭippaṇī on Gadādhara's Gādādharī,,86483,Paṭṭābhirāma,,92258,Gādādharī,,
+Work,93446,Kroḍa,Ṭippaṇī on Gadādhara's Gādādharī,,86483,Paṭṭābhirāma,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,93419,Kroḍa on Gadādhara's Muktivāda,,,86470,Kāli Śaṃkara,,92255,Muktivāda,,
 Work,93422,Kroḍa on Gadādhara's Śaktivāda,,,86470,Kāli Śaṃkara,,92257,Śaktivādavicāra,,
 Work,93546,Kroḍa on Gadādhara's Sāmānyanirukti,,,86504,Timmana,Nyāya,96113,Sāmānyanirukti (Gadādhara),,
@@ -7879,13 +7957,14 @@ Work,93420,Kroḍa on Jagadīśa's Śabdaśaktiprakāśikā,,,86470,Kāli Śaṃ
 Work,93418,Kroḍa on Mathurānātha's Māthurī,,,86470,Kāli Śaṃkara,,92045,Tattvacintāmaṇidīdhitirahasya,,
 Work,93273,Kroḍapatra,,,86430,Candranārāyaṇa Bhaṭṭa,Nyāya,,,,
 Work,91733,Kroḍapatra on Gadadhara’s Gādādharī,,,86097,Dinakara,Nyāya,,,,
-Work,93416,Kroḍapatra on Gadādhara's Gādādhari,,,86470,Kāli Śaṃkara,,92258,Gādādharī,,
+Work,93416,Kroḍapatra on Gadādhara's Gādādhari,,,86470,Kāli Śaṃkara,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,92627,Kroḍapatra on Gadādhara's Sāmānyanirukti,,,86262,Hanumad Bhaṭṭa,,96113,Sāmānyanirukti (Gadādhara),,
 Work,95010,Krodapatra on Gangesa's Tattvacintamani,,,87317,Harihara,,90147,Tattvacintāmaṇi,,
 Work,93569,Krodapātra on Jagadīśa’s Jāgadīśī,,,86511,Golokanātha Nyāyaratna,,,,,
-Work,93750,Kroḍapatras on Gadādhara's Gādādharī,,,86586,Kṛṣṇa Tātācārya,,92258,Gādādharī,,
+Work,93750,Kroḍapatras on Gadādhara's Gādādharī,,,86586,Kṛṣṇa Tātācārya,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,94746,Kroṣapatrāṇi,,,87101,Anantārya,Viśiṣṭādvaita Vedānta,,,,
 Person,102836,Kṛpārāma,,Śāṇḍilyagotra,,,,,,,
+Person,116705,Kṛpāśaṅkara,,,,,,,,,
 Person,40247,Kṛṣṇa,Devarakoṇḍaubhalāryakṛṣṇabudha,Aubhalārya,,,,,,,
 Person,87411,Kṛṣṇa,,Kṛṣṇa,,,,,,,
 Person,87412,Kṛṣṇa,,Kṛṣṇa,,,,,,,
@@ -7927,6 +8006,7 @@ Person,86586,Kṛṣṇa Tātācārya,Kṛṣṇa Tātācārya (Tirupputkuzki),"
 Person,87439,Kṛṣṇa Tirumalācārya,,Kṛṣṇa,,,,,,,
 Person,86699,Kṛṣṇa Vallabhācārya,,Kṛṣṇa,,,,,,1908,1908
 Person,87441,Kṛṣṇa Vidvān,,Kṛṣṇa,,,,,,,
+Work,116568,Kṛṣṇa Yajurveda (Taittirīya Saṃhitā),,,,,Veda,,,,
 Person,86350,Kṛṣṇa Yajvan,,Kṛṣṇa,,,,,,1750,1750
 Work,93850,Kṛṣṇabhaktirahasya,,,86623,Rādhāmohana Vidyāvācaspati Gosvāmin,,,,,
 Work,91210,Kṛṣṇabhaktiratnaprakāśa,,,85942,Rāghava Paṇḍita,Acintyabhedhābheda Vedānta,,,,
@@ -8056,7 +8136,7 @@ Work,90452,Kṣetrasamāsa and autocommentary,,,85674,Devānanda Ācārya,Jainis
 Work,89520,Kṣetrasamāsavṛtti,,,85433,Haribhadra,Jainism (general),96028,Kṣetrasamāsa,,
 Person,85689,Kṣīrasamudravāsin,Kṣīrasāgaramiśra,,,,,,,1400,1400
 Person,109922,Kṣīrasvāmin,,,,,,,,1140,1100
-Work,109923,Kṣīrataraṅgiṇī,,,109922,Kṣīrasvāmin,Vyākaraṇa,42448,Dhātupāṭha,,
+Work,109923,Kṣīrataraṅgiṇī,,,109922,Kṣīrasvāmin,Vyākaraṇa,42448,Pāṇinīya Dhātupāṭha,,
 Work,41678,Kṣīrodara,,,40699,Viṣṇumitra,,,,,
 Work,88267,Kṣudrakasūtra,,,,,,,,365,365
 Work,105013,Kṣudrarogacikitsā,,,,,Vaidyaśāstra,,,,
@@ -8090,6 +8170,7 @@ Person,87447,Kullūkabhaṭṭa,Kullūka,Varendra brāhmaṇa,,,,,,1300,1150
 Person,87448,Kuloka,,,,,,,,,
 Person,87449,Kumāra Deva,,Deva,,,,,,,
 Person,87450,Kumāra Kavi,,,,,,,,,
+Person,116810,Kumāra Siṃha,,,,,,,,,
 Person,85637,Kumāra Vedānta Deśika,"Nainācārya, Varadadeśika, Varadanātha, Ācārya Kumāra Śrī Varadācārya",Vedānta,,,,,,1401,1360
 Person,86035,Kumārabhāva Svāmin,,,,,,,,1610,1610
 Person,109915,Kumāradāsa,,,,,,,,500,500
@@ -8145,6 +8226,7 @@ Person,114253,Kuravi Rāmakavi,,,,,,,,,
 Person,87453,Kureśa,Kusīśa,,,,,,,,
 Person,96811,Kureśa,Kūranātha,,,,,,,,
 Person,87454,Kūrma,,,,,,,,,
+Work,116476,Kūrmalakṣaṇa,,,,,Veda,,,,
 Work,113066,Kūrmapurāṇa,,,40974,Vyāsadeva,Purāṇa,,,,
 Person,40551,Kūrmasūri,,,,,,,,,
 Person,86664,Kurucci Raṅgācārya,,,,,,,,1900,1900
@@ -8170,6 +8252,7 @@ Work,93098,Kutūhalavṛtti on Jaimini's Mīmāṃsāsūtras,,,86373,Vāsudeva D
 Work,41631,Kuvalayānanda,,,85954,Appayya Dīkṣita,Alaṃkāraśāstra,,,1585,1585
 Work,110253,Kuvalayānandakhaṇḍana,"Alaṃkārasthiti, Ekaṣaṣṭyalaṃkāraprakāśa",,110250,Bhīmasena Dīkṣita,Alaṃkāraśāstra,41631,Kuvalayānanda,1690,1690
 Work,114244,Kuvalayānandālaṃkāranābhi,,,,,Alaṃkāraśāstra,41631,Kuvalayānanda,,
+Work,116895,Kuvalayānandālaṅkāranāni,,,116894,anonymous,,41631,Kuvalayānanda,,
 Work,93761,Kuvalayollāsa on Mukunda Bhaṭṭa's Tarkasaṃgrahacandrikā,,,86586,Kṛṣṇa Tātācārya,,93500,Candrikā,,
 Work,42210,Kvāthādhikāra,,,,,,,,,
 Work,42184,Kvāthakalpanā,,,,,Vaidyaśāstra,,,,
@@ -8290,6 +8373,7 @@ Work,89092,Lakṣaṇāvalī,,,85333,Udayana,Nyāya,,,,
 Work,94326,Lakṣaṇavivaraṇavyākhyā on Keśava Miśra's Tarkabhāṣā,,,86839,Kāśinātha Śāstrin,,89886,Tarkabhāṣā,,
 Work,88457,Lakṣānusāriniṭīkā,,,85166,Guṇamati,,,,,
 Work,111623,Lakṣavatī Māhātmya,,,,,,,,,
+Person,116698,Lakṣmaṇa,,,,,,,,,
 Person,40365,Lakṣmaṇa,,,,,,,,,
 Person,40427,Lakṣmaṇa,,Rāḍhā,,,,,,,
 Person,87455,Lakṣmaṇa,,,,,,,,,
@@ -8306,10 +8390,12 @@ Person,40382,Lakṣmaṇa Paṇḍita,,Brahmajñānin,,,,,,1500,1500
 Person,86191,Lakṣmaṇa Paṇḍita,,Paṇḍita,,,,,,1663,1663
 Person,86289,Lakṣmaṇa Paṇḍita,,Paṇḍita,,,,,,1710,1710
 Person,110441,Lakṣmaṇa Śāstrin,Mallari Laksmana Sastri,,,,,,,,
+Person,116742,Lakṣmaṇa Vināya Bāpurche,,,,,,,,,
 Person,97105,Lakṣmaṇabhaṭṭa,,,,,,,,,
 Person,114746,Lakṣmaṇabhaṭṭa Karve,,,,,,,,,
 Person,86798,Lakṣmaṇācārya,(T.) Lakṣmaṇācārya,,,,,,,1924,1924
 Person,102715,Lakṣmaṇācārya,Vedācārya,,,,,,,,
+Person,116600,Lakṣmaṇācārya Bhaṭṭa,"Bhaṭṭalakṣmaṇācārya, Sāraṅgasādhuvacanāmṛta",,,,,,,,
 Person,109658,Lakṣmaṇadeva,,,,,,,,,
 Person,102865,Lakṣṃaṇadīkṣita,,,,,,,,,
 Person,85318,Lakṣmaṇagupta,"Lakṣmaṇācārya, Lakṣmaṇadeśika, Lakṣmaṇadeśikendra","Brāhmaṇa, Kaula, Krama, Śaiva, Śākta, Trika",,,,,,950,950
@@ -8365,6 +8451,7 @@ Person,87464,Lakṣmīvallabha,,,,,,,,,
 Person,86696,Lakṣmīvijaya,,,,,,,,1907,1907
 Person,108622,Lakṣmīvilāsa,,,,,,,,,
 Work,93638,Lakṣmyupāyatattvasamārtha,,,86548,Raghunāthācārya,,,,,
+Person,116538,Lāla,,,,,,,,,
 Person,109181,Lālaka,Biḍālalālaka,,,,,,,1873,1840
 Person,111347,Lalidhara,,,,,,,,,
 Person,40375,Lalitā,,,,,,,,,
@@ -8381,6 +8468,7 @@ Work,95537,Lalitavyākhyā on Nemicandra's Trilokasāra,,,87777,Somadeva,,89081,
 Person,106610,Lalla,,,,,,,,850,750
 Work,96033,Lalleśvarī,,,,,,,,,
 Person,86728,J. Lallū Rāma,,,,,,,,1912,1912
+Person,116910,Lallubhāī,Lalludāsa,,,,,,,1799,1740
 Person,99179,Lālūbhaṭṭa,,Vallabha,,,,,,,
 Person,112639,Lambodara,,"Bhaṭṭa, Paṇḍita",,,,,,,
 Work,105571,Lampakavidhā,,,,,Jyotiḥśāstra,,,,
@@ -8526,8 +8614,9 @@ Person,99711,Mādhavatīrtha,,,,,,,,,
 Person,40362,Mādhavavara,,,,,,,,,
 Person,110147,Mādhavayajvan,,,,,,,,,
 Person,87473,Mādhavendriya,,,,,,,,,
-Work,41743,Mādhavīyadhātuvṛtti,,,,,Vyākaraṇa,42448,Dhātupāṭha,1387,1387
+Work,41743,Mādhavīyadhātuvṛtti,,,,,Vyākaraṇa,42448,Pāṇinīya Dhātupāṭha,1387,1387
 Work,115770,Mādhavīyakālanirṇayaśloka with Vikaraṇa commentary,,,40966,Mādhava,"Dharmaśāstra, Jyotiḥśāstra",,,,
+Person,116782,Madhubhaṭṭa Cāturdhāra,,,,,,,,,
 Work,104564,Madhukośa,Vyākhyāmadhukośa,,"108604, 108603","Vijayarakṣita, Śrīkaṇṭhadatta",Vaidyaśāstra,41314,Mādhavanidāna,,
 Work,90973,Madhumañjarī on Śaṃkara's Manīṣapañcaka,,,85902,Nṛsiṃhāśrama,,88660,Manīṣāpañcaka,,
 Work,92546,Madhumañjarī on Śaṃkara's Manīṣāpañcaka,,,86227,Bāla Gopāla,,88660,Manīṣāpañcaka,,
@@ -8593,6 +8682,7 @@ Person,87478,Madhyārjuna,,,,,,,,,
 Work,42064,Madhyasiddhāntakaumudī,,,40877,Varadarāja,Vyākaraṇa,,,,
 Person,111543,Madotrālasena deva,,,,,,,,,
 Person,87479,Madurai Śivaprakāśar,,,,,,,,,
+Person,116463,Madyājñika Devakṛṣṇa,,,,,,,,,
 Work,104632,Māgadhakaliṅgaparibhāṣā,,,,,Vaidyaśāstra,,,,
 Person,115128,Māgha,,,,,,,,,
 Person,96394,Māgha,Ghaṇṭākavi,,,,,,,680,600
@@ -8603,6 +8693,7 @@ Work,116234,Mahābhairava dhāraṇī,,,,,Buddhism (general),,,,
 Work,116241,Mahābhairavasya dhāraṇī,,,,,Buddhism (general),,,,
 Work,42078,Mahābhārata,Śatasāhasrī,,108876,Vyāsa,,,,,
 Work,111493,Mahābhārata Droṇaparva,,,,,,,,,
+Work,116375,Mahābhārata Śāntiparva,,,102598,Vedavyāsa,Kāvya,,,,
 Work,111602,Mahābhārata Virāṭa Parva,,,,,,,,,
 Work,41914,Mahābhāratamañjarī,,,85469,Kṣemendra,Kāvya,,,,
 Work,112158,Mahābhāratasāra,,,,,Kāvya,,,,
@@ -8631,6 +8722,7 @@ Work,101641,Mahābhūtavivekatātparyadīpikā,,,85655,Rāmakṛṣṇa,,101640,
 Person,85493,Mahābodhi,,,,,,,,1190,1190
 Person,85975,Mahācārya,"Doddayācārya, Rāmānujadāsa",,,,,,,1590,1590
 Person,102432,Mahācārya,,,,,,,,,
+Person,116653,Mahādeva,,,,,,,,,
 Person,40528,Mahādeva,,,,,,,,,
 Person,41002,Mahādeva,,,,,,,,,
 Person,41014,Mahādeva,,,,,,,,,
@@ -8644,6 +8736,7 @@ Person,110833,Mahādeva,,,,,,,,,
 Person,112536,Mahādeva,,Mahārāja,,,,,,1270,1260
 Person,114371,Māhādeva bhaṭṭa,,,,,,,,1800,1800
 Person,114728,Mahādeva Bhaṭṭa,,,,,,,,,
+Person,116817,Mahadeva Bhaṭṭa,,,,,,,,1800,1800
 Person,86179,Mahādeva Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1660,1660
 Person,114362,Mahādeva Dāḍekara,,,,,,,,,
 Person,98645,Mahādeva Joyaśī,,,,,,,,,
@@ -8888,6 +8981,7 @@ Work,106085,Makarandīyapañcāṅgopapatti,,,,,Jyotiḥśāstra,,,,
 Work,106049,Makarandodāharaṇa,,,,,Jyotiḥśāstra,,,,
 Work,105091,Mākṣikasattvapātanavidhi,,,,,Vaidyaśāstra,,,,
 Person,112208,Maku,,,,,,,,,
+Work,116687,Mālā Mantra,,,,,Tantra,,,,
 Work,92396,Mālādhāraṇavāda,,,86205,Puruṣottama Pītāmbara,Śuddhādvaita Vedānta,,,,
 Work,93699,Māladhāranirṇayaprakāśa,,,86565,Rāmakṛṣṇa Bhaṭṭa,Śuddhādvaita Vedānta,,,,
 Person,85421,Maladhāri Hemacandra,,Maladhāri,,,,,,1120,1120
@@ -8926,6 +9020,7 @@ Person,113941,Manabharī Devī,,,,,,,,1922,1922
 Person,87495,Mānadāsa,,,,,,,,,
 Work,90960,Manahśikṣā,,,85896,Raghunātha Dāsa,,,,,
 Work,94169,Manaḥśikṣā,,,86765,Giridhara Dāsa,Śuddhādvaita Vedānta,,,,
+Person,116484,Mānajīva,,,,,,,,1882,1882
 Person,40447,Mānakavi,"Kavimāna, Mānamuni",,,,,,,1688,1688
 Work,92464,Manamālā,,,86207,Kṛṣṇānanda Sarasvatī,Advaita Vedānta,,,,
 Work,89299,Mānamanohara,,,85376,Vādi Vāgīśvara,Nyāya,,,,
@@ -9085,6 +9180,7 @@ Work,88922,Manubhāṣya,,,85274,Medhātithi,Dharmaśāstra,102278,Manusmṛti,,
 Person,40770,Manudeva,,Gopāladeva,,,,,,,
 Work,102280,Manuśāstravivaraṇa,,,102279,Bhāruci,Dharmaśāstra,102278,Manusmṛti,,
 Work,102278,Manusmṛti,Mānava Dharmaśāstra,,,,Dharmaśāstra,,,450,450
+Work,116812,Manuṣyajātaka,"Karmaprakāśikā , Tājikatantra",,116809,Samara siṃha,,,,,
 Work,106101,Manuṣyajātaka,,,,,Jyotiḥśāstra,,,,
 Work,114911,Manuṣya-kathā-durlabha,,,,,Buddhism (general),,,,
 Work,102283,Manuṭīkā,Manusmṛtiṭīkā,,102282,Govindarāja,Dharmaśāstra,102278,Manusmṛti,,
@@ -9177,6 +9273,7 @@ Work,106221,Mayūracitraka,,,,,Jyotiḥśāstra,,,,
 Person,41167,Mayūram gOpālāchārya,,,,,,,,,
 Person,40524,Mayūrapāda bhikṣu,,,,,,,,1700,1700
 Person,114867,Mayūreśvara,,,,,,,,,
+Person,116660,Mayureśvara Maraṭe,,,,,,,,,
 Person,85274,Medhātithi,,,,,,,,850,850
 Work,115648,Megha dhāraṇī,,,,,Buddhism (general),,,,
 Person,108902,Mēghacandra,"Mēghacandra Traividya, Kukkuṭāsana Maladhāridēva",Bhaṭṭāraka,,,,,,1115,1115
@@ -9238,7 +9335,7 @@ Work,89731,Mīmāṃsāśāstrasarvasva,,,85488,Halāyudha Bhatṭa,Mīmāṃsā
 Work,91579,Mīmāṃsāstavaka,,,41134,Veṅkateśvarādhvarin,Bhāṭṭa Mīmāṃsā + Mīmāṃsā,,,,
 Work,93057,Mīmāṃsāstavaka,,,86354,Rāghavānanda Sarasvatī,Mīmāṃsā,,,,
 Work,94369,Mīmāṃsāsudhāsvāda on Āpadeva's Mīmāṃsānyāyaprakāśa,,,86865,T. Vīrarāghavācārya,,92367,Mīmāṃsānyāyaprakāśa,,
-Work,88036,Mīmāṃsāsūtras,"Pūrvamīmāṃsāsūtra, Karmamīmāṃsāsūtra",,85087,Jaimini,,,,,
+Work,88036,Mīmāṃsāsūtras,"Pūrvamīmāṃsāsūtra, Karmamīmāṃsāsūtra, Jaiminisūtra",,85087,Jaimini,,,,,
 Work,92119,Mīmāṃsātattvacandrikā,,,86151,Gopāla Bhaṭṭa,Bhāṭṭa Mīmāṃsā + Mīmāṃsā,,,,
 Work,92118,Mīmāṃsāvidhibhūṣaṇa,,,86151,Gopāla Bhaṭṭa,Bhāṭṭa Mīmāṃsā + Mīmāṃsā,,,,
 Person,87503,Mīnākṣīśvara,,,,,,,,,
@@ -9246,6 +9343,7 @@ Person,85783,Misaru Miśra,,,,,,,,1490,1490
 Person,87504,Misaruka,,,,,,,,,
 Person,100172,Miśrabhavānīsaṃkaradatta,,,,,,,,,
 Person,40353,Miśralaṭakana,,,,,,,,,
+Person,116493,Miśranātha Rāma,,,,,,,,,
 Person,97974,Miśravīrajalāla,,,,,,,,,
 Person,87010,Miśrīmala Mahārāja,,Mahārāja,,,,,,1980,1980
 Work,92222,Mitabhāṣiṇī,Nyāyasūtramitabhāṣiṇī,,86179,Mahādeva Bhaṭṭācārya,,88091,Nyāyasūtra,,
@@ -9285,7 +9383,7 @@ Person,101520,Mohanadāsa,,,,,,,,,
 Work,89603,Mohavicchedanī,,,85455,Kassapa,Abhidharma / Theravāda,,,,
 Work,106631,Mohinīphala,,,,,Jyotiḥśāstra,,,,
 Person,108193,Moka,,,,,,,,1407,1407
-Work,44743,Mokṣadharma section of Mahābhārata,,,,,,,,,
+Work,44743,Mokṣadharma section of Mahābhārata,Mokṣadharmaparva,,108876,Vyāsa,,,,,
 Work,93250,Mokṣadharmasāroddhāra,,,86423,Sadānanda Vyāsa,Advaita Vedānta,44743,Mokṣadharma section of Mahābhārata,,
 Work,90269,Mokṣadharmavyākhyā,,,85630,Ānandapūrṇa Vidyāsāgara,Advaita Vedānta,44743,Mokṣadharma section of Mahābhārata,,
 Work,90632,Mokṣāgama,,,85760,Toṇṭāda Siddhaliṅga,Vīraśaiva,,,,
@@ -9309,6 +9407,7 @@ Work,99171,Mokṣopāya,,,,,Vedānta (general),,,950,950
 Work,94040,Mokṣopāyapradīpikā,,,86685,Raghupati Bhaṭṭācārya,Viśiṣṭādvaita Vedānta,,,,
 Work,93213,Mokṣopāyaṭīkā,,,86415,Bhāskara Kaṇṭha,,99171,Mokṣopāya,,
 Person,108614,N. S. Mooss,Vayaskara N. S. Mooss,,,,,,,1986,1912
+Person,116589,Moreśvara,,,,,,,,,
 Person,40397,Moreśvara,,,,,,,,1546,1546
 Person,103857,Moreśvara,,,,,,,,,
 Person,111948,Moreśvara Bhaṭṭa Paṭavardhana,,,,,,,,1831,1831
@@ -9365,7 +9464,7 @@ Work,106452,Muhūrtavicāra,,,,,Jyotiḥśāstra,,,,
 Work,115778,Mukhākhyāna,,,,,Buddhism (general),,,,
 Work,94942,Mukhyārthaprakāśikā on Bṛhadāraṇyaka Upaniṣad,,,87260,Gaṅgā Dvivedin,,95965,Bṛhadāraṇyakopaniṣad,,
 Person,85343,Muktākalaśa,,,,,,,,1000,1000
-Work,93564,Muktāmālā,Golokanyāyaratnīya on Gadādhara's Gādādharī,,86511,Golokanātha Nyāyaratna,,92258,Gādādharī,,
+Work,93564,Muktāmālā,Golokanyāyaratnīya on Gadādhara's Gādādharī,,86511,Golokanātha Nyāyaratna,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,42117,Muktāphala,,,40812,Vopadeva,,,,,
 Work,89667,Muktāślokas,,,85478,Parāśarabhaṭṭa,,,,,
 Work,90847,Muktāvabodha on the Jñātadharmakathāsūtra,,,85848,Lakṣmīkallola Gaṇi,,96007,Jñātādharmakathāsūtra,,
@@ -9498,6 +9597,7 @@ Person,87516,Nāgacandra Muni,,Muni,,,,,,,
 Person,107024,Nāgadeva,Nāmadeva,,,,,,,1050,1000
 Person,40616,Nāgadevi,,,,,,,,,
 Person,87517,Nāgaliṅgaśiva,,,,,,,,,
+Person,116426,Nāgamalla,,,,,,,,,
 Person,113194,Nāgamāmbā,,,,,,,,,
 Person,110244,Nāgammā,,,,,,,,1220,1220
 Work,97231,Nāgānanda,,,97232,Harṣa,,,,,
@@ -9652,6 +9752,7 @@ Person,87526,Nandī Guru,,,,,,,,,
 Person,114521,Nandikeśvara,,,,,,,,,
 Person,40819,Nandikeśvara,,,,,,,,,
 Person,86160,Nandikeśvara,,,,,,,,,
+Work,116722,Nandikeśvarapurāṇa,,,,,Purāṇa,,,,
 Person,87528,Nandillagopaprabhu,,,,,,,,,
 Work,88566,Nandīmitrāvadānasūtra,(Ārya)Nandīmitrāvadānasūtra,,,,,,,610,610
 Work,110692,Nāndīmukha,,,,,Dharmaśāstra,,,,
@@ -9737,6 +9838,9 @@ Work,92566,Naravṛddhāṣṭāntopanaya,,,86235,Jñānavimala,,,,,
 Person,114413,Narāyaṇa,Toro Narasiṃha,,,,,,,1800,1800
 Person,114743,Nārāyaṇa,,,,,,,,1050,1000
 Person,114822,Nārayāṇa,,,,,,,,,
+Person,116576,Nārāyaṇā,,,,,,,,,
+Person,116591,Nārāyaṇa,,,,,,,,,
+Person,116821,Nārāyaṇa,,,,,,,,,
 Person,40254,Nārāyaṇa,,,,,,,,,
 Person,40295,Nārāyaṇa,,"Brāhmaṇa, Parāśara",,,,,,,
 Person,40363,Nārāyaṇa,,,,,,,,,
@@ -9756,6 +9860,7 @@ Person,87548,Nārāyaṇa,,Bhaṭṭa,,,,,,,
 Person,96765,Nārāyaṇa,,,,,,,,,
 Person,112094,Nārāyaṇa,,Paṇḍita,,,,,,1637,1400
 Person,86769,Nārāyaṇa Aiyaṅgar,Ātreya Nārāyaṇa Sūri,"Ātreya, Sūri",,,,,,1919,1919
+Person,116878,Nārāyaṇa Bākare,,,,,,,,,
 Person,114481,Nārāyaṇa Bhaṭṭa,,,,,,,,1513,1513
 Person,114824,Nārāyaṇa Bhaṭṭa,,Upādhyāya,,,,,,,
 Person,85847,Nārāyaṇa Bhaṭṭa,,Bhaṭṭa,,,,,,1525,1525
@@ -9766,6 +9871,7 @@ Person,40511,Nārāyaṇa Bhiṣaj,,,,,,,,1800,1700
 Person,86806,Nārāyaṇa Candra Gosvāmin Tarkatīrtha,,Gosvāmin,,,,,,1925,1925
 Person,110432,Nārāyaṇa Dīkṣita,,,,,,,,1670,1670
 Person,87549,Nārāyaṇa Gajapatirāja,,,,,,,,,
+Person,116569,Nārāyaṇa Gālane,,,,,,,,,
 Person,102161,Nārāyaṇa Gode,,,,,,,,,
 Person,86753,Nārāyaṇa Guru,(Śrī) Nārāyaṇa Guru,Śrī,,,,,,1928,1856
 Person,85395,Nārāyaṇa Kaṇṭha,,,,,,,,1090,1090
@@ -9781,6 +9887,8 @@ Person,111761,Nārāyaṇa Paṇḍita,,Paṇḍita,,,,,,950,800
 Person,113309,Nārāyaṇa Paṇḍita,,,,,,,,,
 Person,85620,Nārāyaṇa Paṇḍitācārya,,,,,,,,1335,1335
 Person,101574,Nārāyaṇa Paṇḍitācārya,,,,,,,,,
+Person,116813,Nārāyaṇa Sāmudrikā,,,,,,,,,
+Person,116659,Nārāyaṅa Sāne,,,,,,,,,
 Person,86287,Nārāyaṇa Sarasvatī,(Abhinava) Nārāyaṇa Sarasvatī,"Abhinava, Sarasvatī",,,,,,1710,1710
 Person,86345,Nārāyaṇa Sārvabhauma Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1750,1750
 Person,85456,Nārāyaṇa Sarvajña,,,,,,,,1150,1150
@@ -9793,6 +9901,7 @@ Person,86268,Nārāyaṇa Tīrtha,"Govinda Śāstrin, Nārāyaṇa Yati",,,,,,,1
 Person,40888,Nārāyaṇa Vidyāvinoda,,Vidyāvinoda,,,,,,1500,1500
 Person,87555,Nārāyaṇa Yajñeśvara,,,,,,,,,
 Person,41050,Nārāyaṇa-bhāratī,,,,,,,,,
+Person,116842,Nārāyaṇabhaṭṭa,,,,,,,,,
 Person,40627,Nārāyaṇabhaṭṭa,,"Bhaṭṭa, Brāhmaṇa, Jagadguru, Viśvāmitra",,,,,,1570,1513
 Person,41155,Nārāyaṇabhaṭṭa,,,,,,,,,
 Person,41171,Nārāyaṇabhaṭṭa,,,,,,,,1580,1546
@@ -10270,7 +10379,7 @@ Work,92502,Nyāyāloka,,,86219,Yaśovijaya,Jainism (general),,,,
 Work,89617,Nyayāmakaranda,,,85461,Ānandabodha,Advaita Vedānta,,,,
 Work,89613,Nyāyamālā,,,85460,Śivāditya,Nyāya,,,,
 Work,111637,Nyāyamālā,,,,,Mīmāṃsā,,,,
-Work,90298,Nyāyamālāvistara,"(Jaiminīya)Nyāyamālāvistara, Bhāṭṭasāra and Vistara thereon",,85636,Vidyāraṇya,Bhāṭṭa Mīmāṃsā + Mīmāṃsā,,,,
+Work,90298,Nyāyamālāvistara,"(Jaiminīya)Nyāyamālāvistara, Bhāṭṭasāra and Vistara thereon, Adhikaraṇamālā, Jaiminīyanyāyaratnamālā",,85636,Vidyāraṇya,Bhāṭṭa Mīmāṃsā + Mīmāṃsā,88036,Mīmāṃsāsūtras,,
 Work,89518,Nyāyamaṇidīpikā on Māṇikyanandin's Parīkṣāmukha,,,85432,Ajitasena,Jainism (general),,,,
 Work,88926,Nyāyamañjarī,Nyāyasūtranyāyamañjarī,,85277,Jayanta Bhaṭṭa,Nyāya,88091,Nyāyasūtra,880,880
 Work,88984,Nyāyamañjarī,,,85298,Trilocana,Nyāya,,,,
@@ -10320,7 +10429,7 @@ Work,91646,Nyāyarahasya and Nyāyasaṃkṣepa thereon,,,86077,Govinda Bhaṭ�
 Work,91258,Nyāyarakṣāmaṇi,,,85954,Appayya Dīkṣita,Advaita Vedānta,88037,Brahmasūtra,,
 Work,94285,Nyāyarakṣāmaṇibhāṣyoktivirodhagrantha,,,86820,Rāma Subrahmaṇya,Advaita Vedānta,,,,
 Work,90100,Nyāyaratna,,,85592,Maṇikaṇṭha Miśra,Nyāya,,,,
-Work,93630,Nyāyaratna on Gadādhara's Gādādharī,,,86542,Raghunātha Parvate Śāstrin,,92258,Gādādharī,,
+Work,93630,Nyāyaratna on Gadādhara's Gādādharī,,,86542,Raghunātha Parvate Śāstrin,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,94657,Nyāyaratna on Gaṅgeśa's Tattvacintāmaṇi,,,87026,N.Santāna Aiyar,,90147,Tattvacintāmaṇi,,
 Work,93565,Nyāyaratna on Mathurānātha's Māthurī,,,86511,Golokanātha Nyāyaratna,,92045,Tattvacintāmaṇidīdhitirahasya,,
 Work,91545,Nyāyaratna on Śaśadhara's Nyāyasiddhāntadīpa,,,86047,Dharmarājādhvarīndra,,90107,Nyāyasiddhāntadīpa,,
@@ -10404,7 +10513,7 @@ Person,86733,Nyāyavijaya,,,,,,,,1913,1913
 Work,91623,Nyāyavilāsa on Annambhaṭṭa's Tarkabhāṣātattvaprabodhinī,,,86064,Viśvanātha Bhaṭṭa,,91050,Tattvaprabodhinī on Keśava Miśra's Tarkabhāṣā,,
 Work,88823,Nyāyaviniścaya,,,85245,Akalaṅka,Jainism (general),,,,
 Work,89956,Nyāyavivaraṇa,Nyāyavivaraṇam,,85566,Madhva,Dvaita Vedānta,88037,Brahmasūtra,,
-Work,95045,Nyāyavivaraṇa on Gadādhara's Gādādharī,,,87350,Jātavadādhvarin,,92258,Gādādharī,,
+Work,95045,Nyāyavivaraṇa on Gadādhara's Gādādharī,,,87350,Jātavadādhvarin,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,96073,Nyāyavivaraṇa (Vidyānanda),,,,,,,,,
 Work,93549,Nyāyavivaraṇa on Vyāsatīrtha's Tātparyacandrikā,,,86504,Timmana,,90894,Tātparyacandrikā,,
 Work,90231,Nyāyaviveka on Ānandabodha's Nyāyadīpāvalī,,,85617,Amṛtānanda,,89616,Nyayadīpāvalī and Pramāṇamālā thereon,,
@@ -10520,7 +10629,7 @@ Person,86852,Padmanandin,,,,,,,,1930,1930
 Person,85227,Padmapāda,,,,,,,,740,740
 Person,85483,Padmaprabhā Maladhārideva,,,,,,,,1175,1175
 Person,40989,Padmaprabhasūri,,,,,,,,,
-Work,42408,Padmapurāṇa,,,,,,,,,
+Work,42408,Padmapurāṇa,,,102598,Vedavyāsa,Purāṇa,,,,
 Work,111840,"Padmapurāṇa, Pātālakhaṇḍa",,,,,Purāṇa,,,,
 Person,40457,Padmaraṅgagaṇi,,,,,,,,,
 Person,85970,Padmasāgara,,,,,,,,1600,1590
@@ -10724,7 +10833,6 @@ Person,99969,Paṇḍita Ghāse Rāma,,,,,,,,,
 Person,40709,Paṇḍita Jagannātha,,,,,,,,,
 Work,95295,Paṇḍitajanamanaścamatkāra,,,87570,Nīlakaṇṭha,Dvaita Vedānta,,,,
 Work,92430,Paṇḍitakārabhinduipada,,,86205,Puruṣottama Pītāmbara,,,,,
-Person,40757,Paṇḍitarāja jagannātha,,,,,,,,,
 Person,112250,Pāṇḍu,,Mahārāja,,,,,,,
 Person,86490,Pāṇḍuraṅga,,,,,,,,1827,1827
 Person,87592,Pāṇḍurāṅga Keśava Bhaṭṭāraka,,Bhaṭṭāraka,,,,,,,
@@ -10732,6 +10840,7 @@ Person,97800,Pānduraṅgabhaṭṭa Hastākṣa Kāḷela,,,,,,,,,
 Person,87114,Panduraṅgī Śāstri Athavale,,,,,,,,,
 Person,86039,Paṇḍuraṅgī Śrīnivāsa,,,,,,,,1610,1610
 Person,40604,Pāṇini,"Śālāturīya, Dākṣīputra",,,,,,,-500,-500
+Work,42448,Pāṇinīya Dhātupāṭha,,,40604,Pāṇini,Vyākaraṇa,,,,
 Work,41683,Pāṇinīyadīpikā,,,40703,Nīlakaṇṭha vājapeyī,Vyākaraṇa,,,,
 Work,42516,Pāṇinīyaśikṣā,,,"40604, 96449","Pāṇini, Piṅgala",Śikṣā,,,,
 Work,114066,Pāṇinīyaśikṣāpradīpa,,,114064,Rudraprasāda Śarman Avasthī,Śikṣā,42516,Pāṇinīyaśikṣā,1937,1937
@@ -10880,8 +10989,8 @@ Work,96082,Parāśikanāmamālā,,,,,,,,,
 Work,106734,Pārasīprakāśa,,,,,Jyotiḥśāstra,,,,
 Work,111512,Pāraskara Gṛhyasūtra,,,,,"Dharmaśāstra, Other discipline",,,,
 Work,92343,Paraśu on Madhva's Upādhikhaṇḍana,,,86199,Satyanātha Yati,,89966,Upādhikhaṇḍana,,
-Person,114363,Paraśurāma,,,,,,,,,
 Person,87600,Paraśurāma,,,,,,,,,
+Person,114363,Paraśurāma Dāḍekara,,,,,,,,,
 Work,41417,Paraśurāmapratāpa,,,,,Vaidyaśāstra,,,,
 Person,40660,Paraśūrarāmapaṇḍita,,,,,,,,1600,1600
 Work,94133,Paratattvanirṇaya,,,86739,Prativādibhayaṅkar Anantācārya,,,,,
@@ -10906,7 +11015,6 @@ Work,112064,Paribhāṣāsūtra,,,,,"Pāṇinīya, Vyākaraṇa",,,,
 Work,112122,Paribhāṣāsūtrapāṭha,,,40604,Pāṇini,Vyākaraṇa,,,,
 Work,41555,Paribhāṣāvritti,,,40621,Puruṣottamadeva,,,,,
 Work,41685,Paribhāṣāvṛitti,,,40703,Nīlakaṇṭha vājapeyī,Vyākaraṇa,,,,
-Work,42449,Paribhāṣāvṛtti,,,41031,Sīradeva,Vyākaraṇa,,,,
 Work,99350,Paribhāṣavṛttivyākhyāna,,,96709,Rāmabhadra Dīkṣita,Advaita + Vyākaraṇa,,,,
 Work,41663,Paribhāṣenduśekhara,,,40667,Nāgeśabhaṭṭa,Vyākaraṇa,,,1650,1650
 Work,94321,Paribhāṣikīpadārthasaṃgraha,,,86838,Kuruganti Śrīrāma Śāstrin,,,,,
@@ -10983,6 +11091,7 @@ Person,85108,Patañjali,,,,,,,,300,300
 Person,87602,Patañjali,,,,,,,,,
 Person,99335,Patañjali,,,,,,,,1610,1610
 Work,96711,Patāñjalicaritam,,,96709,Rāmabhadra Dīkṣita,,,,,
+Work,116352,Patañjalistotra,"Śivapañcacāmarastotra, Sadāśivāṣṭaka",,85108,Patañjali,,,,,
 Work,106646,Pātasādhanavivṛti,,,,,Jyotiḥśāstra,,,,
 Work,108345,Pātasāraṇikā,,,,,Jyotiḥśāstra,,,,
 Person,97146,Pāṭhakaśaṅkara,,,,,,,,,
@@ -11066,6 +11175,7 @@ Work,96087,Piṇḍopaniṣad,,,,,,,,,
 Person,41185,Piṅgala,,,,,,,,,
 Person,85112,Piṅgala,,,,,,,,325,325
 Person,96449,Piṅgala,"Piṅgalācārya, Piṅgalanāga",,,,,,,100,100
+Work,116846,Piṅgalāmata,,,,,Tantra,,,,
 Person,96543,Piṉ̱paḻ̱akiya Perumāḷ Jīyar,,"Śrī, Vaiṣṇava",,,,,,1300,1300
 Person,101127,Piśāca,,,,,,,,,
 Work,108584,Piśācādigrahākrāntacikitsā,Grahaśānti,,,,Vaidyaśāstra,,,,
@@ -11104,7 +11214,7 @@ Work,94510,Prabhā,Mayūkha on Viśvanātha Nyāyasiddhānta Pañcānana's  Bhā
 Work,94290,Prabhā on Baladeva Vidyābhūṣaṇa's Prameyaratnāvalī,,,86822,Akṣaya Kumāra Dīkṣita Śāstrin,,93227,Prameyaratnāvalī,,
 Work,95609,Prabhā on Bhavānanda Siddhāntavāgīśa's Kārakacakra,,,87843,Taranatha Govindacandra,,91411,Kārakacakra,,
 Work,94006,Prabha on Citsukha's Citsukhi,,,86661,Nrsimhadeva Sastri,,89827,Citsukhī,,
-Work,93093,Prabhā on Gadādhara's Gādādharī,,,86370,Venimādhava,,92258,Gādādharī,,
+Work,93093,Prabhā on Gadādhara's Gādādharī,,,86370,Venimādhava,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,90617,Prabhā on Gaṅgeśa's Tattvacintāmaṇi,,,85752,Yajñapati,Nyāya,90147,Tattvacintāmaṇi,,
 Work,94641,Prabhā on Gaṅgeśa's Tattvacintāmaṇi,,,87012,Gaurīnātha Śāstrin,,90147,Tattvacintāmaṇi,,
 Work,94578,Prabhā on Haridāsa Bhaṭṭācārya's Nyāyakusumāñjalivyāsa,,,86971,Nārāyaṇa Miśra,,90859,Vyākhyā,,
@@ -11220,6 +11330,7 @@ Work,89222,Prajñāpāramitopadeśa,,,85363,Ratnākara Śānti,Yogācāra / Vij�
 Work,109671,Prajñāparitrāṇa,,,109294,Varada Nārāyaṇa Bhaṭṭāraka,Viśiṣṭādvaita Vedānta,,,,
 Work,88484,Prajñāpradīpa,Madhyamakaratnapradīpa on Nāgārjuna's Madhyamakakārikās,,85168,Bhavya,,88078,Madhyamakakārikās,,
 Work,88019,Prajñaptiśāstra,,,85080,Maudgalyāyana,Sarvāstivāda and Vaibhāṣika,,,,
+Work,116677,Prajñāvardhanastotra,,,,,,,,,
 Person,87612,Prajñāvarman,,,,,,,,,
 Work,115546,Prajñyāpāramitā-hṛdaya,,,,,Buddhism (general),,,,
 Work,88028,Prakaraṇapāda,,,85083,Vasumitra,Sarvāstivāda and Vaibhāṣika,,,,
@@ -11234,7 +11345,7 @@ Work,90983,Prakāśa,Dīpikā on Jayadeva Pakṣadhara Miśra's Tattvacintāma�
 Work,91433,Prakāśa,Nyāyavivaraṇaprakāśa,,86001,Ānandatīrtha,,89956,Nyāyavivaraṇa,,
 Work,92401,Prakāśa,Ṭīkā on Vallabha's Nirodhalakṣaṇa,,86205,Puruṣottama Pītāmbara,,90824,Nirodhalakṣaṇa,,
 Work,92474,Prakāśa,Praveśa on Pārthasārathi Miśra's Śāstradīpikā,,86212,Campakanātha Miśra,,89357,Śāstradīpikā,,
-Work,93014,Prakāśa,Bhāvasaṃgraha on Gadādhara's Gādādharī,,86335,Aśvatthabudha,,92258,Gādādharī,,
+Work,93014,Prakāśa,Bhāvasaṃgraha on Gadādhara's Gādādharī,,86335,Aśvatthabudha,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,95258,Prakāśa,,,87533,Narain Datta Tripāṭhī,Vyākaraṇa,88354,Vākyapadīya,,
 Work,95293,Prakāśa,Bhāṣya on the Bhagavadgītā,,87568,Nīlakaṇṭha,Advaita Vedānta,42214,Bhagavadgītā,,
 Work,97202,Prakāśa,Sevāphalavivaraṇaprakāśa,,86205,Puruṣottama Pītāmbara,,92437,Vivaraṇa,,
@@ -11410,7 +11521,7 @@ Work,94495,Prāmāṇyapārijāta,,,86919,Giridhara Śarman Caturvedī,Nyāya,,,
 Work,88854,Prāmāṇyaparīkṣā,(Laghvī)Prāmāṇyaparīkṣā,,85248,Dharmottara,,,,,
 Work,88855,Prāmāṇyaparīkṣā,(Brhat)Prāmāṇyaparīkṣā,,85248,Dharmottara,,,,,
 Work,91767,Prāmāṇyavāda,,,86103,Harirāma Tarkavāgīśa,Nyāya,,,,
-Work,92284,Prāmāṇyavāda(artha),,,86189,Gadādhara Bhaṭṭācārya,,,,,
+Work,92284,Prāmāṇyavāda(artha),,,86189,Gadādhara Bhaṭṭācārya,Navya Nyāya,116543,Pratyakṣakhaṇḍa,,
 Work,93601,Prāmāṇyavādakhaṇḍaṇa,,,86522,Kiriti Veṅkatācārya,,,,,
 Work,93208,Prāmāṇyavādavicāra,,,86412,Bhīṣma Miśra,Nyāya and Vaiśeṣika,,,,
 Person,86653,Pramathanātha Tarkabhūṣaṇa,,,,,,,,1944,1865
@@ -11623,6 +11734,7 @@ Work,92950,Pratiyogyāropavicāra,,,86321,Citradhara,,,,,
 Work,89254,Pratyabhijñāhṛdaya,,,85365,Kṣemarāja,Kashmir Śaivism,,,,
 Person,87616,Pratyagviṣṇu,,,,,,,,,
 Work,90582,Pratyākhyānasthānavivaraṇa,,,85730,Jayacandra Sūri,,89457,Prayākhyānasūtra,,
+Work,116543,Pratyakṣakhaṇḍa,,,86189,Gadādhara Bhaṭṭācārya,Navya Nyāya,,,,
 Work,95125,Pratyakṣaprakāśatvavāda,,,87422,Kṛṣṇa Guru,Advaita Vedānta,,,,
 Work,41973,Pratyakṣaśārīra,,,86772,Gaṇanātha Sena Kavirāja,Vaidyaśāstra,,,,
 Person,85683,Pratyaksvarūpa,Pratyagrupa,,,,,,,1400,1400
@@ -11698,6 +11810,8 @@ Work,112305,Pṛthivīstotra,,,,,Purāṇa,,,,
 Person,40952,Pṛthuyaśas,,,,,,,,,
 Work,106905,Pṛthuyaśobhidhāna,,,,,Jyotiḥśāstra,,,,
 Person,85207,Pṛthvībandhu,,,,,,,,670,670
+Person,116427,Pṛthvīcandra,,Mahārāja,,,,,,,
+Person,116428,Pṛthvīcandra,,Mahārāja,,,,,,,
 Person,87617,Pṛthvīdhara,,,,,,,,,
 Person,40950,Pṛthvīmalla,,,,,,,,,
 Work,93672,Pucchabrahmavādanirāsa,,,86561,Anantācārya,,,,,
@@ -11881,6 +11995,7 @@ Person,85901,Raghunātha Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1555,1555
 Person,102739,Raghunātha Cakravartin,,,,,,,,,
 Person,85896,Raghunātha Dāsa,,,,,,,,1550,1550
 Person,86310,Raghunātha Dāsa,,,,,,,,1735,1735
+Person,116636,Raghunātha Gadre,,,,,,,,,
 Person,86709,Raghunātha Gopāla Kokaje,,,,,,,,1910,1910
 Person,114353,Raghunātha Jyotiṣa,,,,,,,,,
 Person,86977,Raghunātha Mādhava Bhagare,,,,,,,,1971,1971
@@ -11892,71 +12007,6 @@ Person,87637,Raghunātha Sarasvatī,,Sarasvatī,,,,,,,
 Person,86953,Raghunātha Śarman,,Śarman,,,,,,1963,1963
 Person,86190,Raghunātha Sārvabhauma Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1661,1661
 Person,114611,Raghunātha śāstrī gorehinduḷekara,,,,,,,,,
-Person,85826,Raghunātha Śiromaṇi,,"Bhaṭṭācārya, Other social identifier",,,,,,1510,1510
-Person,86746,Raghunātha Sūri,,Sūri,,,,,,1916,1916
-Person,86318,Raghunātha Tīrtha,Śeṣacandrikācārya,,,,,,,1740,1740
-Person,110766,Raghunātha Vājapeyin,,,,,,,,,
-Person,86527,Raghunātha Varman,,,,,,,,1850,1850
-Person,85923,Raghunātha Vidyālaṃkāra,,,,,,,,1570,1570
-Person,87638,Raghunātha Yatīndra,,Yatīndra,,,,,,,
-Person,41018,Raghunāthabhaṭṭa,,,,,,,,,
-Person,114478,Raghunāthabhaṭṭa Joglekara,,,,,,,,,
-Person,86548,Raghunāthācārya,,,,,,,,1855,1855
-Person,103049,Raghunāthadāsa,,,,,,,,,
-Person,98861,Raghunāthāśrama,,,,,,,,,
-Person,87639,Raghunāthendra,,,,,,,,,
-Work,96592,Raghupañcikā,,,96590,Vallabhadeva,Kāvya,41500,Raghuvaṃśa,950,950
-Person,86685,Raghupati Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1905,1905
-Person,87640,Raghupati Mahopādhyāya,,Mahopādhyāya,,,,,,,
-Person,85858,Raghupati Miśra,,,,,,,,1535,1535
-Person,112727,Raghurājasiṃharāju,Raghurājasiṃharāju Deva,,,,,,,,
-Person,86525,Raghūttama,,,,,,,,1850,1850
-Person,87641,Raghūttama,,,,,,,,,
-Person,85972,Raghūttama Yati,"Śrīnivāsa, Tīrtha",Yati,,,,,,1590,1590
-Work,41500,Raghuvaṃśa,,,40377,Kālidāsa,,,,,
-Work,41510,Raghuvaṃśa - commentary,,,40418,Bharatamallika,,41500,Raghuvaṃśa,,
-Work,110780,Raghuvaṃśasañjivanī,"Raghuvaṃśa Sañjivanī, Sañjivanī, Raghuvaṃśaṭīkā",,96393,Mallinātha,,41500,Raghuvaṃśa,1400,1400
-Person,86836,Raghuvaradāsa Vedāntin,,,,,,,,1929,1929
-Person,115007,Raghuviraśarman,,,,,,,,,
-Person,87632,Rāghvānanda,(Mahopādhyāya) Rāghvānanda,Mahopādhyāya,,,,,,,
-Work,91229,Rahasya,,,85950,Rāmabhadra Sārvabhauma,,"89096, 96173","Kiraṇāvalī, Uttarādhyāyanasūtra",,
-Work,91233,Rahasya,Nyāyasūtrarahasya,,85950,Rāmabhadra Sārvabhauma,,88091,Nyāyasūtra,,
-Work,91361,Rahasya,Bhūṣaṇa on Jayadeva Pakṣadhara Miśra's Tattvacintāmaṇyāloka,,85982,Gopinātha Ṭhakkura,,90652,Tattvacintāmaṇyāloka,,
-Work,92048,Rahasya,Phakkikā on Vallabha's Nyāyalīlāvatī,,86129,Mathurānātha,,,,,
-Work,92347,Rahasya,Prakāṣikā on Īśā Upaniṣad,,86200,Bālakṛṣṇānanda Sarasvatī,Advaita Vedānta,95999,Īśā(vāsya)upaniṣad,,
-Work,92508,Rahasya on Haribhadra Suri's Upadesapada with autocommentary,,,86219,Yaśovijaya,Jainism (general),,,,
-Work,91334,Rahasya on the Bhagavad Gītā,,,85976,Raghunātha,,42214,Bhagavadgītā,,
-Work,94047,Rahasyadīpikā on Patañjali's Yogasūtras,,,86689,Nāthū Rāma Śarman,,88183,Yogasūtra,,
-Work,93307,Rahasyamañjarī,,,86441,Prāṇārthihrācārya,,,,,
-Work,90191,Rahasyamātṛkā,,,85613,Vedāntadeśika,Viśiṣṭādvaita Vedānta,,,,
-Work,90193,Rahasyanavanīta,,,85613,Vedāntadeśika,Viśiṣṭādvaita Vedānta,,,,
-Work,90192,Rahasyapadavī,,,85613,Vedāntadeśika,Viśiṣṭādvaita Vedānta,,,,
-Work,89172,Rahasyapañcadaśikā,,,85352,Abhinavagupta,Kashmir Śaivism,,,,
-Work,90032,Rahasyaprabandha,,,85582,Śrīnivāsa,,,,,
-Work,95032,Rahasyaprakāśa on the Bhagavadgītā,,,87338,Jagadīśa,,42214,Bhagavadgītā,,
-Work,110513,Rahasyaprakāśikā,,,85822,Ratnākara Vidyāvācaspati,Alaṃkāraśāstra,41242,Kāvyaprakāśa,1600,1600
-Work,90172,Rahasyarakṣā on Yāmuna's Bhagavadgītārthasaṃgraha,,,85613,Vedāntadeśika,,89143,Gītārthasaṃgraha,,
-Work,90173,Rahasyarakṣā on Yāmuna's Catuḥślokī,,,85613,Vedāntadeśika,,89144,Catuḥślokī,,
-Work,90215,Rahasyarakṣā on Yāmuna's Stotraratna,,,85613,Vedāntadeśika,,109053,Stotraratna,,
-Work,90195,Rahasyaratnāvalī,,,85613,Vedāntadeśika,Viśiṣṭādvaita Vedānta,,,,
-Work,90196,Rahasyaratnāvalīhṛdaya,,,85613,Vedāntadeśika,Viśiṣṭādvaita Vedānta,,,,
-Work,94801,Rahasyasaṃgraha on Bādarāyaṇa's Brahmasūtras,,,87151,Bhāskara Bhānu Śarman,,88037,Brahmasūtra,,
-Work,90194,Rahasyasandeśavivaraṇa,,,85613,Vedāntadeśika,Viśiṣṭādvaita Vedānta,,,,
-Work,96100,Rahasyatraya,,,,,,,,,
-Work,90197,Rahasyatrayaculūka,,,85613,Vedāntadeśika,Viśiṣṭādvaita Vedānta,,,,
-Work,109585,Rahasyatrayadīpikā,,,85562,Periyavacchan Pillai,Viśiṣṭādvaita Vedānta,,,,
-Work,89994,Rahasyatrayakārikāvalī,,,85578,Alāgīya Maṇavāla Jiyār,,,,,
-Work,91326,Rahasyatrayamīmāṃsā,,,85975,Mahācārya,Viśiṣṭādvaita Vedānta,,,,
-Work,90198,Rahasyatrayasāra,,,85613,Vedāntadeśika,Viśiṣṭādvaita Vedānta,,,14,14
-Work,109584,Rahasyatrayavivaraṇa,,,85562,Periyavacchan Pillai,Viśiṣṭādvaita Vedānta,,,,
-Work,102178,Rahasyatrayavivaraṇaṭīkā,Tātparyadīpikā,,102177,Vīrarāghavasūri,,,,,
-Work,93306,Rahasyatṛtayārthakārikā,,,86440,Devarāja,,,,,
-Work,94563,Rahasyavivaraṇa on Īśā Upaniṣad,,,86961,Kāśikānanda Svāmī,,95999,Īśā(vāsya)upaniṣad,,
-Work,92967,Rahasyavivṛti on Īśā Upaniṣad,,,86323,Upaniṣad Brahmayogin,Advaita Vedānta,95999,Īśā(vāsya)upaniṣad,,
-Work,115618,Rāhavagrahaśānta dhāraṇī,,,,,Buddhism (general),,,,
-Work,111148,Rāhu Stotram,,,,,Purāṇa,,,,
-Work,106394,Rāhugocara,,,,,Jyotiḥśāstra,,,,
-Person,86857,Rāhula Sāṅkṛtyāyana,,,,,,,,1932,1932
 Person,85826,Raghunātha Śiromaṇi,,"Bhaṭṭācārya, Other social identifier",,,,,,1510,1510
 Person,86746,Raghunātha Sūri,,Sūri,,,,,,1916,1916
 Person,86318,Raghunātha Tīrtha,Śeṣacandrikācārya,,,,,,,1740,1740
@@ -12058,6 +12108,7 @@ Person,40743,Rājansiṃha,,,,,,,,,
 Work,88428,Rājaparikathāratnamālāsūtra,,,,,,,,515,515
 Work,96101,Rājapraśnīyasūtra,,,,,,,,,
 Person,115852,Rājarājendrakavi,,,,,,,,,
+Person,116784,Rājārāmabhaṭṭa,,,,,,,,,
 Person,40788,Rājarudra,,,,,,,,,
 Person,40643,Rājaśekhara,,"Jaina, Sūri",,,,,,1304,1304
 Person,96322,Rājaśekhara,Yāyāvarīya,Yāyāvarīya,,,,,,970,930
@@ -12118,6 +12169,7 @@ Person,114756,Rāma Charan,"Rāmacaraṇa, Rāma Caraṇa",,,,,,,1890,1870
 Person,111782,Rāma Daivajña,,,,,,,,,
 Person,86760,Rāma Gopālācārya,,,,,,,,1918,1918
 Work,111261,Rāma Kavacam,,,,,Tantra,,,,
+Person,116824,Rāma Kṛṣṇa,,,,,,,,,
 Person,87663,Rāma Maṇi Dāsa,,,,,,,,,
 Person,86607,Rāma Miśra,,,,,,,,1885,1885
 Person,86424,Rāma Nārāyaṇa,,,,,,,,1780,1780
@@ -12132,6 +12184,7 @@ Person,86820,Rāma Subrahmaṇya,Subba Śāstrin,,,,,,,1927,1927
 Person,86552,Rāma Sūri,,Sūri,,,,,,1855,1855
 Person,86057,Rāma Tarkālaṃkāra,,,,,,,,1620,1620
 Person,87675,Rāma Varma,,,,,,,,,
+Person,116532,Rāmabala,,,,,,,,,
 Work,42171,Rāmabāṇa,,,,,,,,,
 Person,87644,Rāmabhadra,,,,,,,,,
 Person,112628,Rāmabhadra,Rūpanārāyaṇa,Rāja,,,,,,1526,1525
@@ -12173,6 +12226,7 @@ Person,111721,Rāmacandra,,,,,,,,,
 Person,87651,Rāmacandra Bhaṭṭa,,Bhaṭṭa,,,,,,,
 Person,87652,Rāmacandra Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,,
 Person,87654,Rāmacandra Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,,
+Person,116699,Rāmacandra Cāpekara,,,,,,,,,
 Person,87653,Rāmacandra Gaṇi,,Gaṇi,,,,,,,
 Person,112118,Rāmacandra Kavi,,Kavi,,,,,,,
 Person,40455,Rāmacandra paṇḍita,,Kharataragaccha,,,,,,1669,1663
@@ -12202,7 +12256,7 @@ Work,112341,Rāmacaritamānasa - Āraṇyakāṇḍa,,,112334,Tulsidās,Kāvya,,
 Work,112337,Rāmacaritamānasa -  Bālakāṇḍa,,,112334,Tulsidās,Kāvya,,,,
 Work,112344,Rāmacaritamānasa - Laṅkakāṇḍa,,,112334,Tulsidās,Kāvya,,,,
 Work,112342,Rāmacaritamānasa- Sundarakāṇḍa,,,112334,Tulsidās,Kāvya,,,,
-Work,112343,: Rāmacaritamānasa - Uttarakāṇḍa,,,112334,Tulsidās,Kāvya,,,,
+Work,112343,Rāmacaritamānasa - Uttarakāṇḍa,,,112334,Tulsidās,Kāvya,,,,
 Person,85997,Rāmācārya,Rāmācārya (Vyāsa),Vyāsa,,,,,,1600,1600
 Person,114205,T.K. Ramachandra Aiyar,,,,,,,,,
 Person,87655,Rāmadāsa,,,,,,,,,
@@ -12251,6 +12305,7 @@ Person,85925,Rāmakṛṣṇa Bhaṭṭācārya Cakravartin,,Bhaṭṭācārya,,
 Person,87660,Rāmakṛṣṇa Paṇḍita,,Paṇḍita,,,,,,,
 Person,40480,Rāmakṛṣṇa Vaidyarāja,,,,,,,,1500,1500
 Person,87661,Rāmakṛṣṇa Yajvan Śāstrin,,,,,,,,,
+Person,116843,Rāmakṛṣṇabhaṭṭa,,,,,,,,,
 Person,40587,Rāmakṛṣṇabhaṭṭa,,,,,,,,,
 Person,41173,Rāmakṛṣṇabhaṭṭa,,,,,,,,,
 Person,41174,Rāmakṛṣṇabhaṭṭa,,,,,,,,,
@@ -12298,6 +12353,7 @@ Person,111227,Ramānātha,,,,,,,,,
 Person,86458,Rāmanātha Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1800,1800
 Person,109914,Ramānātha Śarman Cakravartin,,"Cakravartin, Śarman",,,,,,1536,1536
 Person,40433,Rāmanātha vaidya,,,,,,,,,
+Work,114396,Rāmanavamī vrata,Agastipurāṇa rāmanavamī vrata,,,,Hinduism (general),,,,
 Work,111683,Rāmanavamīvratapujāvidhi,,,,,Purāṇa,,,,
 Person,112794,Rāmanirañjana Dvijarāja,,,,,,,,,
 Person,113886,Rāmanivāsa Pāthaka,,,,,,,,1944,1944
@@ -12370,7 +12426,7 @@ Work,111272,Rāmāyaṇa Ādi Kāṇḍa,,,108861,Vālmīki,Kāvya,,,,
 Work,111356,Rāmāyaṇa Āraṇyakāṇḍa,,,108861,Vālmīki,Kāvya,,,,
 Work,111286,Rāmāyaṇa Sundarakāṇḍa,,,108861,Vālmīki,Kāvya,,,,
 Work,114229,Rāmāyaṇatātparyasaṃgraha,"Rāmāyaṇatātparyasaṃgrahastotra, Rāmāyaṇasārasaṃgraha",,85954,Appayya Dīkṣita,,96104,Rāmāyaṇa,,
-Work,114541,Rāmāyaṇatattvadīpikā,,,114540,Maheśvara Tīrtha,Advaita Vedānta,111356,Rāmāyaṇa Āraṇyakāṇḍa,,
+Work,114541,Rāmāyaṇatattvadīpikā,,,114540,Maheśvara Tīrtha,Advaita Vedānta,"111356, 111295","Rāmāyaṇa Āraṇyakāṇḍa, Vālmīki Rāmāyaṇa Kiṣkindhākāṇḍa",,
 Work,112086,Rāmāyaṇavidhi,,,,,Kāvya,,,,
 Work,112106,Rāmāyaṇvidhi,,,87061,Ādinātha Pārvatīputra,Tantra,,,,
 Work,113103,Rāmcaritamānasa,,,113062,Tulsidāsa,Purāṇa,,,,
@@ -12405,6 +12461,7 @@ Person,40889,Rānapāṇivāda,,,,,,,,,
 Person,109180,Ranbir Singh,"Raṇavīra, Raṇavīra Siṃha",Mahārāja,,,,,,1885,1830
 Person,87682,Rañchhoḍadāsa,,,,,,,,,
 Person,41090,Raṅga,,,,,,,,,
+Person,116661,Raṅga Dikṣita Vasaīkara,,,,,,,,,
 Person,87683,Raṅgācārya,,,,,,,,,
 Person,112728,Raṅgācārya,,,,,,,,,
 Person,87684,Raṅgācārya of Kauśikagotra,(Chellur) Raṅgācārya of Kauśikagotra,Chellur,,,,,,,
@@ -12415,6 +12472,7 @@ Person,87686,Raṅganātha,,,,,,,,,
 Person,108596,Raṅganātha,,,,,,,,1650,1630
 Person,113144,Raṅganātha,,,,,,,,,
 Person,114868,Raṅganātha Marāṭhe,,,,,,,,,
+Person,116590,Raṅganātha Marāṭhe  Dīkṣita,,,,,,,,,
 Person,86249,Raṅganātha Sūri,(Ātreya) Raṅganātha Sūri,"Ātreya, Sūri",,,,,,1690,1690
 Person,86403,Raṅgarāja,,,,,,,,1770,1770
 Person,85818,Raṅgarāja Dīkṣita,,Dīkṣita,,,,,,1505,1505
@@ -12436,7 +12494,7 @@ Work,42237,Rasacikitsāgrantha,,,,,Vaidyaśāstra,,,,
 Work,42002,Rasacintāmaṇi,,,,,Vaidyaśāstra,,,,
 Work,41308,Rasadarpaṇa,,,40347,Trimallabhaṭṭa,,,,,
 Work,41827,Rasadīpikā,,,40825,Ānandānubhava,Vaidyaśāstra,,,,
-Work,41668,Rasagaṅgādhara,,,,,Alaṃkāraśāstra,,,1600,1600
+Work,41668,Rasagaṅgādhara,,,40757,Jagannātha,Alaṃkāraśāstra,,,1600,1600
 Work,41667,Rasagaṅgādharamarmaprakāśa,,,40667,Nāgeśabhaṭṭa,Alaṃkāraśāstra,41668,Rasagaṅgādhara,1650,1650
 Work,42387,Rasahṛdaya,Rasahṛdayatantra,,40984,Govinda Bhikṣu,Vaidyaśāstra,,,,
 Work,104832,Rasajāraṇavidhi,,,,,Vaidyaśāstra,,,,
@@ -12515,6 +12573,7 @@ Work,106750,Rāśidoṣa,,,,,Jyotiḥśāstra,,,,
 Work,106748,Rāśijanmajñānaphala,,,,,Jyotiḥśāstra,,,,
 Work,106747,Rāśijñāna,,,,,Jyotiḥśāstra,,,,
 Work,91213,Rasikahlādini,,,85943,Nārāyaṇa Bhaṭṭa,,,,,
+Work,116899,Rasikānanda,,,96829,Āśādharakavi,Alaṃkāraśāstra,,,,
 Work,93788,Rasikaraṅgadā on Rūpa Gosvāmin's Padyāvalī,,,86599,Vīracandra Gosvāmin,,90874,Padyāvalī,,
 Work,94345,Rasikaraṅgadā on Rūpa Gosvāmin's Saṃkṣepabhāgavatāmṛta,,,86848,Vṛndāvana Tarkālaṃkāra,,90872,Saṃkṣepabhāgavatāmṛta,,
 Work,97056,Rasikarañjanī,,,86258,Gaṅgādhara Vājapeyin,,41631,Kuvalayānanda,,
@@ -12672,6 +12731,7 @@ Person,85895,Revanacittār,,,,,,,,1550,1550
 Work,93043,Revision of Raṅgarāmānuja's Pañcamatabhañjana,,,86347,Śrīnivāsa Parikala Yati,,91690,Pañcamatabhañjana,,
 Work,109614,Ṛgveda,Ṛksaṁhitā,,,,,,,,
 Work,113209,Ṛgveda Prathamāṣṭaka,,,,,Veda,,,,
+Work,116584,Ṛgveda Śākala Saṁhitā,,,,,Veda,,,,
 Work,113082,Ṛgvidhāna,,,100028,Śaunaka,Veda,,,,
 Person,86680,R.Halasyanātha Śāstrin,,,,,,,,1904,1904
 Work,110415,Rju Vṛtti,,,110414,Narasiṃha Sūri,Alaṃkāraśāstra,41242,Kāvyaprakāśa,,
@@ -12695,6 +12755,7 @@ Person,87694,Ṛṣabhyānandyācārya,,,,,,,,,
 Person,87695,Ṛṣidivājī,,,,,,,,,
 Work,111094,Ṛṣipañcamīvrata,,,,,Purāṇa,,,,
 Work,111095,Ṛṣipañcamīvratakathā,,,,,Purāṇa,,,,
+Person,116670,Ṛṣiśarman,,Ācārya,,,,,,,
 Person,86855,R.S.Śarmā,,,,,,,,1931,1931
 Person,86756,R.S.Senday,,,,,,,,1917,1917
 Work,41944,Ṛtucaryā,,,,,Vaidyaśāstra,,,,
@@ -12704,6 +12765,7 @@ Person,85819,Rucidatta,Bhaktū,,,,,,,1505,1505
 Person,40331,Rucikara,Śrīharṣa,Ravikara,,,,,,1475,1475
 Work,89022,Ruciṭīkā,,,85312,Adhyāyana,,88353,Nyāyabhāṣya,,
 Person,40639,Rudra,,Tarkavāgīśa,,,,,,1660,1660
+Person,116763,Rudra Bhaṭa,Rudra Bhaṭṭa,,,,,,,,
 Person,86749,Rudra Bhaṭṭa Śarman,,"Bhaṭṭa, Śarman",,,,,,1916,1916
 Person,86092,Rudra Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1630,1630
 Person,86079,Rudra Nyāyavācaspati Bhaṭṭācārya,,Bhaṭṭācārya,,,,,,1630,1630
@@ -12729,7 +12791,7 @@ Person,114064,Rudraprasāda Śarman Avasthī,,Śarman,,,,,,1937,1937
 Person,41148,Rudrārya,,Kauṇḍinya,,,,,,,
 Person,108968,Rudraṭa,Śatānanda,Bhaṭṭa,,,,,,875,875
 Work,92027,Rudravyakhyarahasya,,,86123,Gokulanātha Upādhyāya,,,,,
-Work,41775,Rudrayāmalatantra,"Rudrajāmala, Rudrayāmala",,,,Tantra,,,,
+Work,41775,Rudrayāmalatantra,"Rudrajāmala, Rudrayāmala",,,,"Tantra, Śuddhādvaita Vedānta, Śaiva Advaita",,,,
 Work,115966,Rudrāyanāvadāna,,,,,Buddhism (general),,,,
 Work,108600,Rugviniścayārthaprakāśikā,Arthaprakāśikā,,40808,Gaṇeśabhiṣak,Vaidyaśāstra,41314,Mādhavanidāna,,
 Work,96403,Rukmiṇīkalyāṇa,,,40250,Rājacūḍāmaṇi,,,,,
@@ -12830,6 +12892,7 @@ Person,96567,Sadāśiva,,,,,,,,1572,1542
 Person,86300,Sadāśiva Brahmendra,Sarasvatī,Sarasvatī,,,,,,1720,1720
 Person,87704,Sadāśiva Śivācārya,,,,,,,,,
 Person,41107,Sadāśivabrahmendra,"Sadāśiva Brahmendra, Śivarāmakṛṣṇa",Śrīvatsa,,,,,,,
+Person,116667,Sadāśivendra Śaivayati,,,,,,,,,
 Person,87705,Sadāsukha,,,,,,,,,
 Work,90654,Ṣaḍāvaśtakavidhi,,,85770,Mahīsāgara,,,,,
 Work,96108,Sadāvaśyakasūtras,,,,,,,,,
@@ -12937,7 +13000,10 @@ Work,89203,Sākārasiddhiśāstra,,,85358,Jñānaśrīmitra,Yogācāra / Vijñā
 Work,93869,Sākāropāsana,,,86627,Rākhaladāsa Nyāyaratna Bhaṭṭācārya,,,,,
 Person,41189,Śākatāyana,Pālyakīrti,,,,,,,800,800
 Person,113985,Śākaṭāyana,,,,,,,,,
+Person,116708,Sakhārām Bhāṭavaḍekara,,,,,,,,,
+Person,116467,Sakhārāma,,,,,,,,,
 Person,97390,Sakhārāma,,,,,,,,,
+Person,116881,Sakhārāma Mukunda,,,,,,,,,
 Work,106913,Saknoti,,,,,Jyotiḥśāstra,,,,
 Work,88981,Śakrapraśnasūtra,,,,,,,,935,935
 Work,88944,Sakṛtavijnana,,,85285,Somānanda,,,,,
@@ -12956,6 +13022,7 @@ Work,93296,Śaktivādamañjūṣā,,,86438,Kṛṣṇa Bhaṭṭa Ārḍe,,92257
 Work,92435,Śaktivādapariccheda,,,86205,Puruṣottama Pītāmbara,,,,,
 Work,96112,Śaktivādarahasya,,,,,,,,,
 Work,92257,Śaktivādavicāra,,,86189,Gadādhara Bhaṭṭācārya,Nyāya,,,,
+Person,116716,Śaktiyukta Vināyaka Sahasrabudhi,,,,,,,,,
 Work,107006,Śakunanirṇaya,,,,,Jyotiḥśāstra,,,,
 Work,106926,Śakunaparīkṣā,,,,,Jyotiḥśāstra,,,,
 Work,106925,Śakunasāra,,,,,Jyotiḥśāstra,,,,
@@ -12985,6 +13052,7 @@ Work,88094,Śālistambasūtra,,,,,,,,175,175
 Person,87713,Śālmalīkāṇḍa Lakṣmaṇa,,,,,,,,,
 Person,96564,Sāḷuva Narasimha,,,,,,,,1490,1485
 Work,107008,Śalyoddhāra,,,,,Jyotiḥśāstra,,,,
+Person,116434,Śāmabhaṭṭa Phaḍake,,,,,,,,,
 Work,90558,Samādhimaraṇotsahadīpikā,,,85718,Sakalakīrti,,,,,
 Work,116263,Samādhirāja dhāraṇi,,,,,Buddhism (general),,,,
 Work,115414,Samādhirāja-nāma-dhāraṇī,,,,,Buddhism (general),,,,
@@ -13016,16 +13084,19 @@ Work,94204,Samanvaya,,,86782,Ambikā Prasāda,,91900,Bhāṣāpariccheda,,
 Work,94389,Samanvaya Sāmrājyasamarthana,,,86868,Hariharānanda Sarasvatī,Advaita Vedānta,,,,
 Work,109882,Samanvayamuṣṭi,,,99927,Jogarāja,"Samanvaya, Vyākaraṇa",,,,
 Work,109883,Samanvayasāra,,,99927,Jogarāja,"Samanvaya, Vyākaraṇa",,,,
+Work,116596,Sāmāṇyabhāvagrantha,,,86065,Jagadīśa Tarkālaṃkāra,Navya Nyāya,,,,
 Work,89132,Sāmānyadūṣaṇa(ādiprasārita),,,85342,Aśoka,,,,,
 Work,91790,Sāmānyalakṣaṇavicāra,,,86103,Harirāma Tarkavāgīśa,,,,,
 Work,96113,Sāmānyanirukti (Gadādhara),,,,,,,,,
 Work,93464,Sāmānyaniruktikroḍapatra,(Hetvābhāsa)Sāmānyaniruktikroḍapatra,,86486,Tryambaka,Nyāya,,,,
 Work,94051,Sāmānyaniruktikroḍapatra,,,86690,Pañcānana Tarkaratna Bhaṭṭācārya,,,,,
-Work,94011,Sāmānyaniruktiṭippaṇī,Nakṣatramālikā on Gadādhara's Gādādharī,,86664,Kurucci Raṅgācārya,,92258,Gādādharī,,
+Work,116552,Sāmānyanirukti-prakaraṇa on Hetvābhāsa,,,86189,Gadādhara Bhaṭṭācārya,Nyāya,90767,Tattvacintāmaṇidīdhiti,,
+Work,94011,Sāmānyaniruktiṭippaṇī,Nakṣatramālikā on Gadādhara's Gādādharī,,86664,Kurucci Raṅgācārya,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,92297,Sāmānyaniruktivicāra,,,86189,Gadādhara Bhaṭṭācārya,,,,,
 Work,104256,Sāmānyaprayogacikitsā,,,,,Vaidyaśāstra,,,1857,1857
 Work,116134,Sāmānyasiddhidūṣaṇa,,,85342,Aśoka,Buddhism (general),,,,
 Work,107011,Sāmānyayātrā,,,,,Jyotiḥśāstra,,,,
+Person,116809,Samara siṃha,,,,,,,,,
 Person,87715,Samaracandra,Pāyacanda Gacha,,,,,,,,
 Person,97059,Sāmarāja Dīkṣita,,,,,,,,1719,1681
 Work,99327,Samāraṅganasūtradhāra,,,85382,Bhojadeva,,,,,
@@ -13260,6 +13331,7 @@ Work,89248,Sañcodanasahitasvakṛtyakramavarṇasangra,,,85364,Atīśa,,,,,
 Work,90864,Sandarbha,,,85853,Balabhadra Miśra,,89614,Saptapadārthī,,
 Work,90660,Sandehapadapraśnottaraśata,,,85771,Merusundara Gaṇi,,,,,
 Work,90689,Sandehasamuccaya,,,85791,Jñānakulaśa,Jainism (general),,,,
+Work,116419,Sandehaviṣauṣadhi,Māghakāvyasāraṭīkā,,96590,Vallabhadeva,Kāvya,96133,Śiśupālavadha,,
 Work,41849,Sandehaviṣauṣadhi,,,40832,Jinaprabhasūri,,,,,
 Work,89560,Sandeholāvalī,,,85449,Jinadatta,,,,,
 Work,41483,Ṣaṇḍhacikitsā,,,,,,,,,
@@ -13438,7 +13510,7 @@ Work,95457,Sāracandrikā,,,87705,Sadāsukha,,91131,Advaitasiddhi,,
 Work,94418,Śāradā,,,86883,Śaṃkara Caitanya Bhāratī,,89538,Khaṇḍanakhaṇḍakhādya,,
 Person,86618,Śāradācaraṇa Mitra,,,,,,,,1887,1887
 Work,95350,Śāradārthaprabodhinī,,,87614,Prasannakumāra Śāstrin,,42214,Bhagavadgītā,,
-Work,114257,Śāradaśarvarī,,,114256,Virūpākṣa,Alaṃkāraśāstra,41631,Kuvalayānanda,,
+Work,114257,Śāradaśarvarī,,,114256,Virūpākṣa,Alaṃkāraśāstra,114173,Candrāloka,,
 Work,115696,Sāradā(s)tava stotra,,,,,Buddhism (general),,,,
 Person,109014,Śaradātanaya,,,,,,,,1250,1175
 Work,89035,Śāradātilakatantra,,,85318,Lakṣmaṇagupta,,,,,
@@ -13679,7 +13751,7 @@ Person,41022,Sarveśvara Somayājin,,,,,,,,,
 Person,97247,Sarveśvarācārya,,,,,,,,,
 Work,95891,Sarvopakāraṇīṭīkā,,,,,Sāṅkhya,90105,Tattvasamāsa,,
 Work,92605,Sarvopakariṇī,,,86250,Mahādeva Punataṃkara,,91409,Gūḍhārthaprakāśa,,
-Work,93403,Sarvopakāriṇī on Gadādhara's Gādādharī,,,86461,Śaṃkara Bhaṭṭa Miśra,,92258,Gādādharī,,
+Work,93403,Sarvopakāriṇī on Gadādhara's Gādādharī,,,86461,Śaṃkara Bhaṭṭa Miśra,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,114922,Sarvopaniṣad,,,,,,,,,
 Work,103604,Sarvopaniṣatsāra,,,85218,Śaṃkara,Advaita Vedānta,,,,
 Work,96123,Sarv(opaniṣatsār)opaniṣad,,,,,,,,,
@@ -13732,7 +13804,7 @@ Work,112072,Śatadūṣaṇī,,,112071,Śrīnivāsadāsa,Viśiṣṭādvaita Ved
 Work,88097,Śataka,Śataśāstra,,85099,Āryadeva,,,,,
 Work,42036,Śatakatraya,"Nītiśataka, Subhāṣitatriśatī",,40446,Bhartṛhari,,,,,
 Work,90560,Śatakatraya,,,85719,Dhanadarāja,,,,,
-Work,93610,Śatakoṭi on Gadādhara's Gādādharī,,,86530,Rāma Śāstrin,,92258,Gādādharī,,
+Work,93610,Śatakoṭi on Gadādhara's Gādādharī,,,86530,Rāma Śāstrin,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,93678,Śatakoṭikhaṇḍana,,,86561,Anantācārya,Viśiṣṭādvaita Vedānta,,,,
 Work,93758,Śatakoṭikhaṇḍana,,,86586,Kṛṣṇa Tātācārya,Viśiṣṭādvaita Vedānta,,,,
 Work,93857,Śatakoṭikhaṇḍanamaṇḍana,,,86625,Sokattur Vijayarāghavācārya,,,,,
@@ -13815,6 +13887,7 @@ Work,93576,Śattriṃśadadvaitatattvamālikā,,,86513,Ādinārāyaṇa Śāstri
 Work,42211,Ṣaṭtrimśallūtāsvarūpa,,,,,Vaidyaśāstra,,,,
 Work,89636,Ṣaṭtriṃśattattvasandoha,,,85466,Amṛtānandanātha,Kashmir Śaivism,,,,
 Work,95892,Sattvārādhanastava,,,,,,,,,
+Person,116423,Satyabhāmā Upāsani,,,,,,,,,
 Person,86266,Satyābhinava Tīrtha,,,,,,,,1700,1700
 Person,41064,Satyabodhabhaṭṭāraka,,,,,,,,,
 Person,87745,Satyabodhāśrama,,,,,,,,,
@@ -13955,6 +14028,7 @@ Work,42507,Siddhāntakaumudīvilāsa,Vilāsa,,41176,Bhāskararāya,Vyākaraṇa,
 Work,90516,Siddhāntakośa,,,85704,Jinabhadra Sūri,,,,,
 Person,40704,Siddhantakoumudī,,,,,,,,,
 Work,93154,Siddhāntakusumāñjalī on Nimbārka's Daśaślokī,,,86390,Harivyāsa Deva,,88744,Daśaślokī,,
+Work,114798,Siddhānta-lakṣaṇa and Avacchedakatva ṭippaṇī,,,86065,Jagadīśa Tarkālaṃkāra,Nyāya,114796,Avacchedakalakṣaṇa,,
 Work,103821,Siddhāntaleśa,,,85954,Appayya Dīkṣita,Advaita Vedānta,,,,
 Work,111740,Siddhāntaleśakaṇikā,,,,,Advaita Vedānta,,,,
 Work,91263,Siddhāntaleśasaṃgraha,"Śāstrasiddhāntalavasaṁgraha, Śāstrasiddhāntaleśasaṁgraha",,85954,Appayya Dīkṣita,Advaita Vedānta,,,,
@@ -14131,19 +14205,20 @@ Work,115987,Śiśubodhinī,Saṃjñāvivekavivṛti or Samāvivekaṭīkā,,1159
 Work,90768,Śiśubodhinī on Śivāditya's Saptapadārthī,,,85827,Bhairavendra,,89614,Saptapadārthī,,
 Work,42394,Śiśukāsacikitsā,,,,,Vaidyaśāstra,,,,
 Work,96133,Śiśupālavadha,,,96394,Māgha,Kāvya,,,650,650
-Work,41512,Śiśupālavadha - commentary,,,40418,Bharatamallika,,,,,
+Work,41512,Śiśupālavadha - commentary,,,40418,Bharatamallika,,96133,Śiśupālavadha,,
 Work,41992,Śiśurakṣāratna,,,,,,,,,
 Work,42123,Śiśurakṣāratna,,,,,Vaidyaśāstra,,,,
 Work,107357,Śiṣyadhīvṛddhidavyākhyā,,,,,Jyotiḥśāstra,106611,Śiṣyadhīvṛddhitantra,,
 Work,106611,Śiṣyadhīvṛddhitantra,,,106610,Lalla,Jyotiḥśāstra,,,,
 Work,106609,Śiṣyadhīvṛddhitantravivaraṇa,Vivaraṇa,,106561,Bhāskara  II,Jyotiḥśāstra,106611,Śiṣyadhīvṛddhitantra,,
-Work,110033,Śiṣyahitā,"Śiṣyahitā Vṛtti, Śiṣyāloka Nyāsa",,110030,Ugrabhūti,"Kātantra, Vyākaraṇa",108985,Kātantrasūtra,1005,1005
+Work,110033,Śiṣyahitā,Śiṣyahitā Vṛtti,,110030,Ugrabhūti,"Kātantra, Vyākaraṇa",108985,Kātantrasūtra,1005,1005
 Work,112081,Śiṣyahitā,,,112080,Bhaṭṭotpala,Jyotiḥśāstra,112078,Laghujātaka,,
 Work,89316,Śiṣyahitā on Haribhadra Sūri's Pañcāśakasūtra,,,85384,Abhayadeva Sūri,,88776,Pañcāśakasūtra,,
 Work,89490,Śiṣyahita on Jinabhadra's Viśeṣāvaśyakabhāṣya,,,85421,Maladhāri Hemacandra,,88536,Vṛtti on Bhadrabāhu's Āvaśyakalaghunirukti,,
 Work,89366,Śiṣyahita on the Uttarādhyāyanasūtra,,,85390,Śāntisūri,,96173,Uttarādhyāyanasūtra,,
 Work,89931,Śiṣyahitaiṣiṇī on Śrīharṣa's Khaṇḍanakhaṇḍakhādya,,,85564,Anubhūti Svarūpācārya,,89538,Khaṇḍanakhaṇḍakhādya,,
 Work,96134,Śiṣyalekha (Candragomin),,,,,,,,,
+Work,116876,Śiṣyāloka,Śiṣyahitānyāsa,,110030,Ugrabhūti,"Vyākaraṇa, Kātantra",110033,Śiṣyahitā,1005,1005
 Work,103383,Śiṣyaśikṣa,,,85218,Śaṃkara,Advaita Vedānta,,,,
 Person,40370,Sītā,,Nimbaśākhikula,,,,,,,
 Work,94474,Sītā on Annambhaṭṭa's Tarkasaṃgraha,,,86906,Ānanda Jhā,,91051,Tarkasaṃgraha,,
@@ -14167,6 +14242,7 @@ Person,87760,Śiva,,,,,,,,,
 Person,103300,Śiva,,,,,,,,,
 Person,110905,Śiva,,,,,,,,,
 Person,113185,Śiva,,,,,,,,,
+Person,116517,Śiva Bhaṭṭa Purandara,,,,,,,,,
 Person,86891,Śiva Nārāyaṇa Śāstrin,,,,,,,,1940,1940
 Person,87774,Śiva Śaṃkara Kāvyatīrtha,,,,,,,,,
 Person,111338,Śiva Śarmaṇa,,Śarman,,,,,,,
@@ -14195,6 +14271,7 @@ Work,103354,Śivagītā (with commentary),,,,,Śaivism (general),103293,Śivagī
 Work,103308,Śivagītāṭīkā,"Śivagītāsubodhinī, Śivagītātātparyadīpikā",,103307,Ayyājī Dīkṣita,Śaivism (general),103293,Śivagītā,,
 Person,86010,Śivāgra Yogī,,,,,,,,1600,1600
 Work,91458,Śivāgrabhāṣya on Meykāṇda's Śivajñānabodha,,,86010,Śivāgra Yogī,,89836,Śivajñānabodha and Vārttika thereon,,
+Work,116549,Śivahṛdayastotra,,,,,Hinduism (general),,,,
 Work,93064,Śivajīvadaśaka,,,86357,Ānandanātha,,,,,
 Work,95893,Śivajñāna Mapadiyam on Meykānta Tevār's Śivajñānabodha,,,,,,89836,Śivajñānabodha and Vārttika thereon,,
 Person,86364,Śivajñāna Svāmi,,Svāmi,,,,,,1750,1750
@@ -14256,6 +14333,7 @@ Person,97228,Śivarāma,,,,,,,,,
 Person,114081,Śivarāma,,,,,,,,,
 Person,87772,Śivarāma Bhaṭṭa,,Bhaṭṭa,,,,,,,
 Person,114403,Śivarāma Bhaṭṭaḍhekara,,,,,,,,,
+Person,116645,Śivarāma Cincaḷakar,,,,,,,,,
 Person,40849,Śivarāmabhūpati,,,,,,,,,
 Person,87773,Śivarāmāśrama,,,,,,,,,
 Person,40719,Śivarāmendra Sarasvatī,,,,,,,,1623,1548
@@ -14277,6 +14355,7 @@ Person,86968,Śivaśaṃkara Avasthī,,,,,,,,1970,1970
 Work,93076,Śivasaṃvādakhaṇḍanam,,,86364,Śivajñāna Svāmi,,,,,
 Work,93075,Śivasaṃvādavuraimaruppu,,,86364,Śivajñāna Svāmi,,,,,
 Work,90633,Śivasaṅjīvana,,,85760,Toṇṭāda Siddhaliṅga,Vīraśaiva,,,,
+Work,116351,Śivaśaṅkarāṣṭaka,Śaṅkarāṣṭaka,,,,,,,,
 Person,85347,Śivaśarman,,,,,,,,1000,1000
 Work,90531,Śivasiddhāntatantra,"Vātulāgama, Vātulottaratantra",,85711,Mayīdeva,Vīraśaiva,,,,
 Person,40569,Śivasiṃha,,,,,,,,,
@@ -14361,6 +14440,7 @@ Work,93889,Śodhanī,Dīpikā vs. Śaṃkara's Brahmasūtrabhāṣya,,86631,Appa
 Work,93732,Sodhanī on Udayana's Nyāyakusumāñjalī,,,86580,Gaṅgādhara Kaviratna Kavirāja,,89093,Nyāyakusumāñjali,,
 Person,86625,Sokattur Vijayarāghavācārya,,,,,,,,1890,1890
 Person,114038,Soma,,Ācārya,,,,,,1330,1330
+Person,116762,Soma Gaṇaka,Somadaivajña,,,,,,,,
 Person,85700,Somacandra,,,,,,,,1421,1421
 Person,87777,Somadeva,,,,,,,,,
 Person,109672,Somadeva,,,,,,,,1350,1100
@@ -14386,6 +14466,7 @@ Person,87780,Someśvara,,,,,,,,,
 Person,85542,Someśvara Bhaṭṭa,,Bhaṭṭa,,,,,,1250,1250
 Person,108880,Someśvara Bhaṭṭa,,"Bhāradvāja, Bhaṭṭa",,,,,,1150,1150
 Person,100985,Somnātha,,,,,,,,,
+Person,116421,Son of Vyaṅkaṭeśa Śarmaṇa,,,,,,,,,
 Person,85510,Sondāḍa,,,,,,,,1200,1200
 Person,40330,Sonodevī,,,,,,,,1450,1450
 Work,103892,Sopānapañcaratna,,,85218,Śaṃkara,Advaita Vedānta,,,,
@@ -14399,7 +14480,7 @@ Work,107362,Spaṣṭagrahanirūpaṇavyākhyā,,,,,Jyotiḥśāstra,,,,
 Work,95397,Spasṭārthadīpikā on Bāḍarāyaṇa’s Brahmasūtras,,,87648,Rāmabrahmendra Sarasvatī,,,,,
 Work,42446,Sphoṭacandrikā,,,41019,Śrīkṛṣṇa Mauni,Vyākaraṇa,91348,Śabdakaustubha,,
 Work,94666,Sphoṭamīmāṃsā,,,87032,Rāma Nārāyaṇa Miśra,,,,,
-Work,91897,Sphoṭanirṇaya,>Sphoṭavāda,,41099,Kauṇḍabhaṭṭa,Vyākaraṇa,,,,
+Work,91897,Sphoṭanirṇaya,Sphoṭavāda,,41099,Kauṇḍabhaṭṭa,Vyākaraṇa,,,,
 Work,92368,Sphoṭanirūpaṇa,,,86204,Āpadeva II,,,,,
 Work,93455,Sphoṭaprakāśa,,,41156,Bhairavamiśra,,,,,
 Work,95101,Sphoṭapratiṣṭhā,,,87399,Keśava,Vyākaraṇa,,,,
@@ -14500,6 +14581,7 @@ Person,85686,Śrīdhara Svāmin,,,,,,,,1400,1400
 Person,86761,Śrīdharācārya,,,,,,,,1918,1918
 Person,98171,Śrīdharācārya,Śrīdhar Ācārya,Ācārya,,,,,,,
 Person,87785,Śrīdharānanda,,,,,,,,,
+Work,116592,Śrīdharīyaṭīkāvyākhyā,,,40680,Kāśīnātha upādhyāya,Purāṇa,42357,Bhāgavatapurāṇa,,
 Person,113545,Śrīdhipa Vajrācārya,,,,,,,,,
 Person,113517,Śrīdhipati,,Vajrācārya,,,,,,,
 Person,116037,ŚrīGaṅgānanda,,,,,,,,,
@@ -14543,6 +14625,7 @@ Person,85118,Śrīlāta,,,,,,,,350,350
 Person,87790,Śrīmad Upādhyāya,,Upādhyāya,,,,,,,
 Work,112175,Śrīmahānārāyaṇamantrarājastotracintāmaṇi,Mahānārāyaṇamantrarājastotracintāmaṇi,,,,Tantra,,,,
 Work,88159,Śrīmāladevīsiṃhanādasūtra,,,,,,,,250,250
+Person,117005,Śrīmāna Śarman,,Śarman,,,,,,1500,1400
 Person,40453,Śrīmatī,,,,,,,,,
 Person,40779,Śrīmatī,,,,,,,,,
 Work,88160,Śrīmatibhadhamaniparipṛcchāsūtra,,,,,,,,250,250
@@ -14688,7 +14771,7 @@ Work,92418,Sṛṣṭibhedavāda,,,86205,Puruṣottama Pītāmbara,Śuddhādvait
 Work,110915,Sṛṣṭipraśaṃsā,,,,,Hinduism (general),,,,
 Work,89602,Sṛṣtitattvāmṛta,,,85454,Gorakṣanātha,,,,,
 Work,95334,Sṛṣṭitattvāmṛtarasa,,,87598,Parameśvara Yogin,Yoga,,,,
-Work,111635,Śrutabodha,,,40377,Kālidāsa,,,,,
+Work,111635,Śrutabodha,Chandograntha,,40377,Kālidāsa,,,,,
 Work,111672,Śrutabodha (Subodhinī),,,111671,Manohara Śarman,Kāvya,111635,Śrutabodha,,
 Person,85625,Śrutamuni,,,,,,,,1341,1341
 Person,40624,Śrutapāla,,,,,,,,,
@@ -14886,6 +14969,7 @@ Work,41363,Śuddhiprakāśa,,,40416,Bhāskara,,,,,
 Work,107413,Śuddhitilaka,,,,,Jyotiḥśāstra,,,,
 Work,88315,Śuddhodanarājaparinirvāṇasūtra,,,,,,,,405,405
 Work,114236,Sudhā,Rākāgama,,86210,Gāgā Bhaṭṭa,Alaṃkāraśāstra,114173,Candrāloka,,
+Work,116534,Sudhā,,,116533,Dharānanda,,96200,Citramīmāṃsā,,
 Work,90034,Sudhā on Bodhanidhi's Kaivalyadīpikā,,,85583,Durgāprasāda Yati,,89570,Commentary on padya portion of Śaṃkara's Upadeśasāhasrī,,
 Work,91600,Sudhā on Raghunātha Śiromaṇi's Ākhyātavāda,,,86059,Jayarāma Nyāyapañcānana,,90758,Ākhyāta(śakti)vāda,,
 Work,88311,Sudhadānarājaparinirvāṇasūtra,,,,,,,,400,400
@@ -14904,6 +14988,7 @@ Work,88082,Suhṛllekha,,,85097,Nāgārjuna,,,,,
 Person,87828,Śuka,,,,,,,,,
 Person,40804,Śukadeva,,,,,,,,,
 Person,87829,Śukadeva,,,,,,,,,
+Person,116640,Śukamahāmunikavi,Śrīśuka,,,,,,,,
 Work,96142,Śukarahasyopaniṣad,,,,,,,,,
 Work,116327,"Śukasaptati, Textus Ornatior",Śukasaptati,,116325,Cintāmaṇi Bhaṭṭa,,,,,
 Work,116326,"Śukasaptati, Textus Simplicior",Śukasaptati,,,,,,,,
@@ -15086,6 +15171,7 @@ Work,88321,Sūtra on the five  not returning again,,,,,,,,405,405
 Work,88464,Sūtra on the good qualities of rare comparison,,,,,,,,536,536
 Work,88398,Sūtra on the highest reliance,,,,,,,,492,492
 Work,88517,Sūtra on the original cause of raising the world,,,,,,,,565,565
+Work,114616,Sūtra uttaraṣaṭka,Āśvalāyanaśrautasūtra Uttaraṣaṭka,,,,Hinduism (general),,,,
 Work,116189,Sūtrakasiloka,,,,,Buddhism (general),,,,
 Work,88491,Sūtrakṛtāṅganiryukti,,,85169,Bhadrabāhu,,96143,Su(tra)kṛtaṅgasūtra,,
 Work,96143,Su(tra)kṛtaṅgasūtra,,,,,,,,,
@@ -15186,6 +15272,7 @@ Work,42483,Svaramanojñama~jarī,,,,,,,,,
 Work,114287,Svarāṅkuśa,,,114285,Jayantasvāmin,Vedalakṣaṇa,,,1100,1100
 Work,94717,Svaraśāstrasaṃgraha,,,87073,Amīracandra Paṇḍita,Yoga,,,,
 Work,114068,Svaravaidikapaṅktivivaraṇa,,,114064,Rudraprasāda Śarman Avasthī,Vedalakṣaṇa,,,1937,1937
+Work,116964,Svaravyañjana,,,,,"Śikṣā, Vyākaraṇa",,,,
 Work,92298,Svargalakṣaṇa,,,86189,Gadādhara Bhaṭṭācārya,,,,,
 Work,110933,Svarṇākarṣaṇabhairavamantra,,,110932,Rāmacandra,Hinduism (general),,,,
 Work,104943,Svarṇatantrakalpa,,,,,Vaidyaśāstra,,,,
@@ -15288,6 +15375,7 @@ Work,41898,Tailaparīkṣā,,,,,Vaidyaśāstra,,,,
 Work,41451,Tailārṇava,,,40508,Mukundadeva mahārāja,Vaidyaśāstra,,,1799,1799
 Work,42397,Tailayogāḥ,,,,,Vaidyaśāstra,,,,
 Work,42233,Tailopaveśanavidhi,,,,,Vaidyaśāstra,,,,
+Work,116587,Taittirīya Brāhmaṇa,,,,,,,,,
 Work,96149,Taittirīyopaniṣad,,,,,,,,,
 Work,107852,Tājakīyabhāvādhyāya,,,,,Jyotiḥśāstra,,,,
 Work,107854,Tājakīyāriṣṭavicāra,Tājikaratnamālā,,,,Jyotiḥśāstra,,,,
@@ -15881,10 +15969,10 @@ Work,96158,Tejobindūpaniṣad,,,,,,,,,
 Work,97017,Tĕnkailanāthodayam,,,97016,Nīlakaṇtha Kavi,Kāvya,,,1600,1600
 Person,86949,T.G.Siddapārādhya,,,,,,,,1962,1962
 Person,87848,Ṭhakkura Kavi,,Ṭhakkura,,,,,,,
+Person,116531,Ṭhākura,,,,,,,,,
 Person,115390,Ṭhākura Siṃha,Thākula Siṃha,,,,,,,,
 Work,88179,"""The Spitzer Manuscript""",,,,,,,,275,275
 Work,113392,Thiravākya,,,,,,,,,
-Work,91797,"This is an Introduction by K.T.Pandurangi, excerpts from which comprise the summary provided at EIP 16, 2014, pp. 518-523",,,86105,Khaṇḍadeva,,,,,
 Work,88733,Ṭīkā,Vivaraṇa on Dharmakīrti's Hetubindu,,85228,Ārcaṭa,,88574,Hetubindu,,
 Work,88777,Ṭīkā,Pañcasūtraṭīkā,,85238,Haribhadra Sūri,,88701,Pañcasūtra,,
 Work,88798,Ṭīkā,Vṛtti on Umāsvāti's Tattvārthasūtra,,85240,Siddhasena Gaṇi,,88308,Tattvārthādhigamasūtra and Bhāṣya,,
@@ -15963,8 +16051,8 @@ Work,88808,Ṭīkā on Dharmakīrti's Sambandhaparīkṣā,,,85242,Vinītadeva,,
 Work,88809,Ṭīkā on Dharmakīrti's Saṃtānāntarasiddhi,,,85242,Vinītadeva,,88580,Saṃtānāntarasiddhi,,
 Work,88913,Ṭīkā on Dharmottara's Pramāṇaviniścayavṛtti,,,85268,Ānandavardhana,,88856,Tika on Dharmakīrti's Pramāṇaviniścaya,,
 Work,88804,Ṭīkā on Dignāga's Ālambanaparīkṣā,,,85242,Vinītadeva,,88418,Ālambanaparīkṣā and Vṛtti thereon,,
-Work,93274,Ṭīkā on Gadādhara's Gādādharī,,,86431,Dulāra Bhaṭṭācārya,,92258,Gādādharī,,
-Work,93345,Ṭīkā on Gadādhara's Gādādharī,,,86449,Kṛṣṇamitrācārya,,92258,Gādādharī,,
+Work,93274,Ṭīkā on Gadādhara's Gādādharī,,,86431,Dulāra Bhaṭṭācārya,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,93345,Ṭīkā on Gadādhara's Gādādharī,,,86449,Kṛṣṇamitrācārya,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,95530,Ṭīkā on Gadādhara's Muktivāda,,,87771,Śivarāma,,92255,Muktivāda,,
 Work,93355,Ṭīkā on Gadādhara's Śaktivāda,,,86449,Kṛṣṇamitrācārya,,92257,Śaktivādavicāra,,
 Work,91496,Ṭīkā on Gajasāra's Vicāraṣaṭtriṃśikā,,,86028,Īśvarācārya,,91643,Vicāraṣaṭpañcāśikā,,
@@ -16167,6 +16255,7 @@ Work,93853,Tilaka on Bādarāyaṇa's Brahmasūtras,,,86624,Rādhāramaṇa Dās
 Work,90085,Tilaka on Vācaspati Miśra's Bhāmatī,,,85589,Allalasūri,,89036,Bhāmatī,,
 Person,85538,Tilakācārya,,Sūri,,,,,,1240,1240
 Work,99376,Tilakamañjarī,,,99374,Dhanapāla,Kāvya,,,1015,1015
+Person,116373,Timaṇabhaṭa,,,,,,,,,
 Person,85788,Timmabhūpāla,,,,,,,,1490,1490
 Person,41114,Timmājī bālājī,,Kauṇḍinya,,,,,,,
 Person,86504,Timmana,"(Kāśī) Timmana, Tirumala (Ācārya)",Ācārya,,,,,,1840,1840
@@ -16369,6 +16458,7 @@ Work,95026,Trilokasāradīpikā,,,87333,Indravāmadeva,Jainism (general),89081,T
 Person,40347,Trimallabhaṭṭa,Trimalla,Brāhmaṇa,,,,,,1650,1600
 Work,92070,Trimataikyaprakāśikā,,,86135,Appanācārya Sūnu,,,,,
 Work,93834,Trimatasamarthana,,,86621,Rāma,Advaita Vedānta,,,,
+Person,116764,Trimbakaja Veṅkaṭa pāṭhaka,,,,,,,,,
 Work,96160,Triṃśacchlokī,,,,,,,,,
 Work,88257,Triṃśikā,,,85127,Vasubandhu,Yogācāra / Vijñānavāda,,,,
 Work,42465,Tripadadyotinī,,,"41085, 41091, 41092","Er̥̄́r̥̄́amādhavārya, Mādhavabhaṭṭa, Mādhavārya",,,,,
@@ -16565,6 +16655,8 @@ Work,42390,Unmādalakṣaṇacikitsā,,,,,Vaidyaśāstra,,,,
 Work,96369,Unmādavāsavadatta,,,96261,Śaktibhadra,Nāṭya,,,,
 Work,89902,Unmai Vilakkam,,,85555,Mānavacakam Kāṭantar,Śaiva Siddhānta,,,,
 Work,90145,Unmainerivilakkam,,,85605,Tattvanātār,Śaiva Siddhānta,,,,
+Work,116956,Unmattarāghava,,,116958,Bhāskara,,,,,
+Work,116957,Unmattarāghava,,,116959,Virūpākṣa,,,,,
 Work,104072,Untitled,,,,,Vedānta (general),,,,
 Work,41449,Upacārasāra,,,40506,Mukunda,Vaidyaśāstra,,,,
 Work,88425,Upādāyaprajñaptiprakaraṇa,,,85154,Dignāga,,,,,
@@ -16634,6 +16726,7 @@ Work,98112,Upakramaśloka,,,,,Vedānta (general),,,,
 Work,98113,Upakramaślokaṭīka,,,,,Vedānta (general),98112,Upakramaśloka,,
 Work,113081,Upalekha,,,,,Vedalakṣaṇa,,,,
 Work,88206,Upāliparipṛcchāsūtra,,,,,,,,350,350
+Person,116633,Upamanyu,,,,,,,,,
 Person,85408,Upamanyu,Upamanya,,,,,,,1100,1100
 Work,113857,Upanayana,,,,,Dharmaśāstra,,,,
 Work,113241,Upanayanakarmapaddhati (Vājasaneya),Upanayanapaddhati,,113862,Rāmadatta,Dharmaśāstra,,,,
@@ -16730,7 +16823,6 @@ Work,112902,Uttaranārāyaṇopaniṣad,,,,,Hinduism (general),,,,
 Work,96655,Uttararāmacarita,,,96248,Bhavabhūti,Kāvya,,,,
 Work,102008,Uttarārddhaṭīkāyā,,,102007,Mummaḍideva,,42358,Yogavāsiṣṭha,,
 Work,95421,Uttarasārasvādinī,,,87672,Rāmānuja Svāmin,Viśiṣṭādvaita Vedānta,,,,
-Work,114616,Uttaraṣaṭka,Sūtra uttaraṣaṭkaprāraṃbhaḥ,,,,Hinduism (general),,,,
 Work,42007,Uttarasthāna,,,,,Vaidyaśāstra,,,,
 Work,112826,Uttartāpanīyopaniṣad,,,,,,,,,
 Person,97235,Uttuṅgodaya,,,,,,,,1400,1400
@@ -17410,7 +17502,7 @@ Work,113968,Veda potak,,,,,,,,,
 Work,113967,Veda potak: sarvāṅga veda potak,,,,,,,,,
 Work,94606,Vedabhāskara on Kaṇāda's Vaiśeṣikasūtras,,,86984,Kāśinātha Śarman,,88043,Vaiśeṣikasūtras,,
 Work,111624,Vedabhāṣya (Mādhyandinīya Paribhāṣāṅka),,,,,Veda,,,,
-Work,90938,Vedadīpa,Prakāśa on Īśāvāsyopaniṣad,,85881,Mahīdhara,,"95999, 89769","Īśā(vāsya)upaniṣad, Yogavāsiṣṭha(rāmāyaṇa)",,
+Work,90938,Vedadīpa,"Prakāśa on Īśāvāsyopaniṣad,  Īśāvāsyopaniṣadbhāṣya ,  Īśopaniṣadbhāṣya.",,85881,Mahīdhara,,"95999, 89769","Īśā(vāsya)upaniṣad, Yogavāsiṣṭha(rāmāyaṇa)",,
 Person,109910,Vedagarbha Tarkācārya,,Tarkācārya,,,,,,1480,1480
 Work,95390,Vedakaustubha on Keśava Miśra's Tarkabhāṣā,,,87643,Rāma,,89886,Tarkabhāṣā,,
 Person,40310,Vedakavi,,,,,,,,1730,1730
@@ -17638,6 +17730,7 @@ Person,40954,Veṅkaṭapatipaṇḍita,,,,,,,,,
 Person,41084,Veṅkaṭapatirāya,,,,,,,,1614,1585
 Person,96344,Veṅkaṭappa,"Veṅkatendra, Veṅkaṭappa Nāyaka, Keḷādi Veṅkaṭayya",Nāyaka,,,,,,1629,1550
 Person,41177,Veṅkatarāma śāstrī,,,,,,,,,
+Person,116417,Vēṅkaṭasubbayya,,,,,,,,,
 Person,114670,Veṅkaṭeśa,,,,,,,,,
 Person,40726,Veṅkaṭeśa,,,,,,,,,
 Person,40961,Veṅkaṭeśa,,,,,,,,,
@@ -17666,6 +17759,7 @@ Person,41087,Vibhudhendrayatīndra,,,,,,,,,
 Work,90765,Vibhūti on Vallabha's Nyāyalīlāvatī,,,85826,Raghunātha Śiromaṇi,,89537,Nyāyalīlāvatī,,
 Person,85524,Vibhūticandra,,,,,,,,1220,1220
 Work,115951,Vibhūtidhāraṇa,,,,,Dharmaśāstra,,,,
+Work,116725,Vibhūtidhāraṇamantra,,,,,Dharmaśāstra,,,,
 Work,96677,Vibudharatnāvalī,,,96676,Nānyadeva,Nāṭya,96249,Mālatīmādhava,,
 Person,86392,Vibudhavimala,Vijayavimala,,,,,,,1756,1756
 Person,85736,Vibudhendratīrtha,,,,,,,,1450,1450
@@ -17792,6 +17886,7 @@ Work,114907,Vihāradānakathā,,,,,Buddhism (general),,,,
 Work,114659,Vihārakārikā,Baudhāyanavihārakārikā,,,,Hinduism (general),,,,
 Person,96739,Viharidāsa,,,,,,,,1821,1821
 Person,40469,Vihārīlālamiśra,,Gauḍavaṃśa,,,,,,,
+Work,117007,Vijayā,,,117005,Śrīmāna Śarman,"Vyākaraṇa, Pāṇinīya",42449,Bṛhatparibhāṣāvṛtti,1450,1450
 Person,86764,Vijaya Darśana Sūri,Darśanavijaya,Sūri,,,,,,1918,1918
 Person,86914,Vijaya Lakṣmaṇa Sūri Īśvarajī,,Sūri,,,,,,1950,1950
 Person,112416,Vijaya Nanda Tripāṭhin,,Paṇḍita,,,,,,1955,1881
@@ -17862,9 +17957,9 @@ Work,93302,Vilakṣaṇamokṣādhikāra,,,86440,Devarāja,Viśiṣṭādvaita V
 Work,114263,Vilāsa,,,114262,Tolappācārya,Alaṃkāraśāstra,114173,Candrāloka,,
 Work,92537,Vilāsa on Keśava Bhaṭṭa's Saptapadārthīpadārthacandrikā,,,86224,Kṛṣṇa Bhaṭṭa,,91430,Padārthacandrikā,,
 Work,90747,Vilāsa on Śrīvallabha's Nyāyalīlāvati,,,85819,Rucidatta,,,,,
-Work,115236,Vilāsijanakairavacandrikā,,,87254,Gaṇapati,Kāvya,115237,Caurapañcāśikā and Ṭīkā,,
+Work,115236,Vilāsijanakairavacandrikā,,,87254,Gaṇapati,Kāvya,115237,Caurapañcāśikā,,
 Work,94616,Vilasini on Annambhatta's Tarkasamgraha,,,86992,Jvāla Prasāda Gaur,,91051,Tarkasaṃgraha,,
-Work,94615,Vilāsinī on Gadādhara's Gādādharī,,,86992,Jvāla Prasāda Gaur,,92258,Gādādharī,,
+Work,94615,Vilāsinī on Gadādhara's Gādādharī,,,86992,Jvāla Prasāda Gaur,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Person,87967,Vimala,,,,,,,,,
 Work,93872,Vimalā on Īśā Upaniṣad,,,86628,Tārācaraṇa Tarkaratna,,95999,Īśā(vāsya)upaniṣad,,
 Person,85424,Vimalabuddhi,(Nava)Vimalabuddhi,,,,,,,1120,1120
@@ -17877,7 +17972,7 @@ Person,85181,Vimalamitra,,,,,,,,580,580
 Work,88397,Vimala(nāna)upakāsikāparipṛcchāsūtra,,,,,,,,492,492
 Person,87968,Vimalānandatīrtha Svāmin,,,,,,,,,
 Work,115147,Vimalaprabhā,,,115145,Puṇḍarīka',Buddhism (general),115146,Laghukālacakratantrarāja,,
-Work,94504,Vimalaprabhā on Sāmānyanirukti section of Gādādharī,,,86927,Rūpanātha Jhā,,92258,Gādādharī,,
+Work,94504,Vimalaprabhā on Sāmānyanirukti section of Gādādharī,,,86927,Rūpanātha Jhā,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,89250,Vimalaratnalekha,,,85364,Atīśa,,,,,
 Person,110039,Vimalaśrī,Vimalasī,Śvetāmbara,,,,,,1621,1621
 Work,114286,Vimalodayamālā,,,114285,Jayantasvāmin,,,,1100,1100
@@ -17909,8 +18004,11 @@ Person,85951,Vinayahaṃsa,,,,,,,,1572,1572
 Work,89496,Vinayahitā on Śivaśarman's Bandhaśataka,,,85421,Maladhāri Hemacandra,,89138,Bandhaśataka(prakaraṇa),,
 Person,87969,Vināyaka,,,,,,,,1350,1350
 Person,114674,Vināyaka Āḍibrekara,,,,,,,,,
+Person,116458,Vināyaka Āḍiśekara,,,,,,,,,
 Person,87970,Vināyaka Bhaṭṭa,,Bhaṭṭa,,,,,,,
 Person,114042,Vināyaka Bhaṭṭa,,Bhaṭṭa,,,,,,,
+Person,116399,Vināyaka Moḍaka,,,,,,,,,
+Person,116384,Vināyaka Sahasrabuddhi,,,,,,,,,
 Person,114851,Vināyakabhaṭṭa Bāpaṭa,,,,,,,,,
 Person,85907,Vinayakuśala,,,,,,,,1558,1558
 Person,85989,Vinayakuśala,,,,,,,,1593,1593
@@ -17964,6 +18062,7 @@ Person,87043,Virendrakumara,,,,,,,,1997,1997
 Person,40466,Vīreśvara,,,,,,,,1668,1668
 Person,86372,Vīreśvara,,,,,,,,1750,1750
 Person,97602,Vīreśvara,,,,,,,,,
+Person,116433,Vireśvara Citala,,,,,,,,,
 Person,86632,Vīreśvara Śāstrin,,,,,,,,1890,1890
 Person,86773,Vīreśvara Tarkatīrtha,,,,,,,,1920,1920
 Person,41037,Vīreśvaradīkṣita,,,,,,,,,
@@ -17973,6 +18072,7 @@ Work,90218,Virodhaparihāra,,,85613,Vedāntadeśika,,,,,
 Work,95789,Virodhaparihāra,,,87996,Vrajābharaṇa,Śuddhādvaita Vedānta,,,,
 Work,92290,Virodha(viruddha)granthadīdhitivyākhyā,,,86189,Gadādhara Bhaṭṭācārya,,,,,
 Person,114256,Virūpākṣa,Virūpākṣayajvan,,,,,,,,
+Person,116959,Virūpākṣa,"Virūpākṣa Rāya, Virūpākṣa Rāya I, Virūpākṣadeva","Deva, Rāya",,,,,,1405,1404
 Person,96563,Virūpākṣa II,,,,,,,,1485,1465
 Person,101408,Virūpākṣa,,Kavi,,,,,,1832,1798
 Person,85796,Virūpākṣa Miśra,,,,,,,,1494,1494
@@ -18074,6 +18174,7 @@ Person,115321,Viṣṇudāśa,,,,,,,,,
 Person,86194,Viṣṇudāsa Gosvāmin,,Gosvāmin,,,,,,1670,1670
 Person,85712,Viṣṇudāsācārya,,,,,,,,1430,1430
 Person,114399,Viṣnudatta Dvijavara Lohan,,,,,,,,,
+Person,116724,Viṣṇudatta Lohatīka,,,,,,,,,
 Person,40951,Viṣṇudeva,,,,,,,,1400,1300
 Person,87980,Viṣṇudevānandagiri,,,,,,,,,
 Work,112177,Viṣṇudharmottarapurāṇa,,,,,Purāṇa,,,,
@@ -18136,7 +18237,7 @@ Person,86634,Viśvanātha Jhā,,,,,,,,1891,1891
 Person,109050,Viśvanātha Kavirāja,"Viśvanātha, Viśvanāthakavirāja",Kavirāja,,,,,,1325,1325
 Person,114350,Viśvanātha Navāthye,,,,,,,,,
 Person,114787,Viśvanātha Nyāyapañcānana Bhaṭṭācārya,,,,,,,,1700,1700
-Person,86116,Viśvanātha Nyāyasiddhānta Pañcānana,,,,,,,,1640,1640
+Person,86116,Viśvanātha Nyāyasiddhānta Pañcānana,Viśvanātha Nyāya pañcānana Bhaṭṭācārya,,,,,,,1640,1640
 Person,86923,Viśvanātha Śāstrin,,,,,,,,1953,1953
 Person,87988,Viśvanātha Siṃhadeva,,,,,,,,,
 Person,85937,Viśvanātha Tīrtha,,,,,,,,1575,1575
@@ -18389,9 +18490,9 @@ Work,95222,Vivṛti,Saropakāriṇī on Kapila's Sāṃkhyakārikās,,87499,Math
 Work,93436,Vivṛti on Abhinavagupta's Parātriṃśikālaghuvṛtti,,,86476,Lakṣmīrāma,,89169,Laghuvṛtti on Parātriṃśikā,,
 Work,89824,Vivṛti on Ānandabodha's Nyāyamakaranda,,,85525,Citsukha,,89617,Nyayāmakaranda,,
 Work,89825,Vivṛti on Ānandabodha's Pramāṇamālā,,,85525,Citsukha,,89616,Nyayadīpāvalī and Pramāṇamālā thereon,,
-Work,92809,Vivṛti on Gadādhara's Gādādharī,,,86288,Viśvanātha,,92258,Gādādharī,,
-Work,94079,Vivṛti on Gadādhara's Gādādharī,,,86704,Dharmadatta,,92258,Gādādharī,,
-Work,94243,Vivṛti on Gadādhara's Gādādharī,,,86806,Nārāyaṇa Candra Gosvāmin Tarkatīrtha,,92258,Gādādharī,,
+Work,92809,Vivṛti on Gadādhara's Gādādharī,,,86288,Viśvanātha,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,94079,Vivṛti on Gadādhara's Gādādharī,,,86704,Dharmadatta,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
+Work,94243,Vivṛti on Gadādhara's Gādādharī,,,86806,Nārāyaṇa Candra Gosvāmin Tarkatīrtha,,92258,Gādādharī (Commentary on Raghunātha Śiromaṇi's Tattvacintāmaṇidīdhiti),,
 Work,92810,Vivṛti on Gadādhara's Muktivāda,,,86288,Viśvanātha,,92255,Muktivāda,,
 Work,92582,Vivṛti on Gadādhara's Śaktivāda,,,86242,Mādhava Bhaṭṭa,,92257,Śaktivādavicāra,,
 Work,92811,Vivṛti on Gadādhara's Śaktivāda,,,86288,Viśvanātha,,92257,Śaktivādavicāra,,
@@ -18623,7 +18724,7 @@ Work,90146,Vṛtti on the Gautamapṛcchā,,,85606,Śrītilaka,,90686,Gautamap�
 Work,89550,Vṛtti on the Jīvājīvābhigamasūtra,,,85448,Vādideva Sūri,,"96004, 89549","Jīvājīvābhigamasūtra, Pramāṇanayatattvāloka/Syādvādaratnākara",,
 Work,89369,Vṛtti on the Laṅkāvatārasūtra,,,85391,Jñānaśrībhadra,,88191,Laṅkāvatārasūtra,,
 Work,89723,Vṛtti on the Niravalīyasūtras,,,85487,Candrasūri,,96067,Niravalīyasuṭra,,
-Work,95883,.Vṛtti on the Ratnagotravibhāga,,,,,,96105,Ratnagotravibhāga,,
+Work,95883,Vṛtti on the Ratnagotravibhāga,,,,,,96105,Ratnagotravibhāga,,
 Work,90662,Vṛtti on the Ṣaḍāvaśyakasūtra,,,85772,Rājavallabha,,96108,Sadāvaśyakasūtras,,
 Work,89312,Vṛtti on the Samavāyāṃgasūtra,,,85384,Abhayadeva Sūri,,96114,Samavāyāṃgrasūtra,,
 Work,91477,Vṛtti on the Samavāyaṃgasūtra,,,86021,Megharāja Muni,,96114,Samavāyāṃgrasūtra,,
@@ -18646,7 +18747,7 @@ Work,93563,Vṛttiratnavali on Niścala Dāsa's Vṛttiprabhakara,,,86510,Pītā
 Work,92002,Vṛtti(sāra) on Kapila's Sāṃkhyasūtras,,,86121,Mahādeva Sarasvatī Vedāntin,,90384,Sāṃkhya(pravacana)sūtras,,
 Work,114089,Vṛttitrayavārttika,,,,,Vyākaraṇa,,,,
 Work,96382,Vṛttivārttika,,,85954,Appayya Dīkṣita,Alaṃkāraśāstra,,,,
-Work,92293,Vyadhikaraṇa,,,86189,Gadādhara Bhaṭṭācārya,,,,,
+Work,92293,Vyadhikaraṇa,Vyadhikaraṇa-dharmāvacchinna-abhāva-prakaraṇa,,86189,Gadādhara Bhaṭṭācārya,Navya Nyāya,90767,Tattvacintāmaṇidīdhiti,,
 Work,93211,Vyadhikaraṇadharmāvacchinnābhāvapātrikā,,,86414,Kṛṣṇa Jīvan,Nyāya,,,,
 Work,41267,Vyādhinigraha,,,40323,Viśrāma,Vaidyaśāstra,,,1756,1756
 Work,41471,Vyādhiśaṃkara,,,40512,Nārāyaṇadāsa Kavirāja,,,,,
@@ -18810,6 +18911,8 @@ Work,95206,Vyaktapādaṭīkā on Nāgārjuna's Suhṛllekha,,,87486,Mahāmatī,
 Work,96378,Vyaktiviveka,,,96358,Mahima Bhaṭṭa,Alaṃkāraśāstra,,,,
 Work,108908,Vyaktivivekavicāra,,,108893,Ruyyaka,Alaṃkāraśāstra,96378,Vyaktiviveka,,
 Person,114842,Vyaṅkaṭarāva Mahājana,,,,,,,,,
+Person,116383,Vyaṅkaṭeśa Sahasrabuddhi,,,,,,,,,
+Person,116420,Vyaṅkaṭeśa Śarmaṇa,,,,,,,,,
 Person,86666,Vyaṅkatrau Rāmacandra,,,,,,,,1900,1900
 Work,89115,Vyāpakānulambha,,,85335,Jitāri,,,,,
 Work,95649,Vyāpticandrikā on Mathurānātha's Māthurī,,,87879,Umānātha Ārjyāla,,92045,Tattvacintāmaṇidīdhitirahasya,,
@@ -18846,7 +18949,6 @@ Work,93221,Vyutpattivāda,,,86419,Dāmodara,Nyāya,,,,
 Work,95095,Vyutpattivāda,,,87393,Kāśinātha,Nyāya,,,,
 Work,112392,Vyutpattivādavivecanā,,,,,Nyāya,92261,Vyutpattivāda,,
 Work,88061,Wenshushili wen pusa shu jing,,,,,,,,125,125
-Work,110162,Work Dummy placeholder - Mammaṭa project,,,,,,,,,
 Person,85996,Yādava,Yādava (Ācārya) Paṇḍita,"Ācārya, Paṇḍita",,,,,,1600,1600
 Person,114836,Yādava Dīkṣita,,,,,,,,,
 Person,85396,Yādava Prakāśa,"Yādavaprakāśa, Yādavamuni",,,,,,,1090,1090
@@ -18857,6 +18959,8 @@ Person,112830,Yadunandana,,,,,,,,,
 Person,40561,Yadunātha,,,,,,,,,
 Person,86089,Yadupati,,,,,,,,1630,1630
 Person,101416,Yadupati,,,,,,,,,
+Person,116908,Yadurāma bhaṭṭa,,,,,,,,,
+Person,116909,Yadurāma Bhaṭṭa,,,,,,,,,
 Person,112385,Yāgeśvara,Yajñeśvara,,,,,,,,
 Work,111349,Yajňa Rūdra Paddhati,,,,,Dharmaśāstra,,,,
 Work,113424,Yajña Vidhi,,,,,,,,,
@@ -18864,6 +18968,7 @@ Person,111358,Yajňadatta Śarmaṇa,,Śarman,,,,,,,
 Work,115393,Yajñādi-kṛtapuṇyakathā,,,,,Buddhism (general),,,,
 Person,41135,Yajñanārāyaṇa,,,,,,,,,
 Person,85994,Yajñanārāyaṇa,(Cerukuri) Yajñeśvara Dīkṣita,"Cerukuri, Dīkṣita",,,,,,1600,1600
+Work,116475,Yajñapārśvapariśiṣṭa,,,,,Veda,,,,
 Person,85752,Yajñapati,,,,,,,,1460,1460
 Work,113567,Yajñārcanavidhi,,,,,,,,,
 Work,111806,Yajñasūtra,,,40605,Kātyāyana,Hinduism (general),,,,

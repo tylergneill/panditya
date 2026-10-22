@@ -19,6 +19,11 @@ Resulting graphs are created in memory, (optionally) drawn to the screen with `n
 This makes it feasible to visualize the entire graph at once, among other things.
 For more details, see [offline_mode.md](https://github.com/tylergneill/panditya/tree/main/offline_mode.md).
 
+# Updating the data
+
+The Pandit snapshot lives in `data/`, dated by export, with the current date in `VERSION`.
+To bring in a new export, follow [data/manual_cleaning.md](data/manual_cleaning.md).
+
 # Feedback, License
 
 Get in touch! Let me know if this is useful, whether you'd like changes, etc.

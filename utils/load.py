@@ -30,3 +30,13 @@ def load_link_data():
     (count_data := data.copy()).pop('work_id_to_link_mapping')
 
     return data["work_id_to_link_mapping"], count_data
+
+def load_data_summary():
+    """Figures for the Data Notes page, written by utils.analyze."""
+    input_json_path = os.path.join(current_file_dir, relative_data_dir, "analysis_results", "summary.json")
+    with open(input_json_path, "r") as jsonfile:
+        summary = json.load(jsonfile)
+    if summary["pandit_data_version"] != PANDIT_DATA_VERSION:
+        print(f"Warning: analysis summary is for {summary['pandit_data_version']}, "
+              f"but the data is {PANDIT_DATA_VERSION}; run `make analyze`")
+    return summary
