@@ -9,7 +9,9 @@ bring in a new export:
    current `<date>-extracted-entities-raw.csv` and `<date>-entities.json`:
    they are rebuilt from the other two.
 2. **Copy in the new export** as `<date>-pandit-entities-export.csv`, dated
-   by the day it was exported.
+   by the day it was exported. `make pandit_export` starts one in the browser;
+   it takes 1.5-2 hours of babysitting, as the recipe's comment in
+   `../Makefile` explains.
 3. **Set the version.** Put that date in `__pandit_data_version__` in
    `../VERSION`. Every script finds its files by this date.
 4. **Extract.** `make extract` (or `python -m utils.extract`) keeps the
