@@ -45,3 +45,15 @@ construct_full_graph:
 
 run:
 	python flask_app.py
+
+# serve-lan: run the dev server where other devices can reach it (a phone on the
+# same Wi-Fi, or a Parallels VM), and print the addresses to open there.
+# It listens on every interface, so the interactive debugger is off: anyone on
+# the network could otherwise run code through it. Reload on save stays on.
+# Uses its own port so it can run alongside launch.sh (127.0.0.1:5042).
+# macOS may ask once whether Python may accept incoming connections: allow it.
+LAN_PORT ?= 5043
+serve-lan:
+	@echo "Open on a phone (same Wi-Fi):  http://$$(ipconfig getifaddr en0 || ipconfig getifaddr en1):$(LAN_PORT)/"
+	@echo "Open in a Parallels VM:        http://10.211.55.2:$(LAN_PORT)/"
+	FLASK_APP=flask_app.py python -m flask run --host=0.0.0.0 --port=$(LAN_PORT) --reload --no-debugger
