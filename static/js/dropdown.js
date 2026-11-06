@@ -90,4 +90,22 @@ function initializeSelect2(selector, placeholder) {
     'data-lpignore': 'true',
     'data-bwignore': ''
   });
+
+  // The sidebar caps the selection box's height (style.css), so it scrolls once
+  // it fills up. When an entry is added (typed, or from a graph node in graph.js,
+  // which only triggers 'change') or the box is opened, scroll it to the bottom so
+  // the inline search field after the last chip stays visible. Removing a chip
+  // leaves the scroll position alone.
+  const $selection = $(selector).next('.select2-container').find('.select2-selection--multiple');
+  const scrollToSearch = () => $selection.scrollTop($selection[0].scrollHeight);
+  let selectedCount = ($(selector).val() || []).length;
+  $(selector).on('change', function () {
+    const count = ($(this).val() || []).length;
+    if (count > selectedCount) scrollToSearch();
+    selectedCount = count;
+  });
+  $(selector).on('select2:open', scrollToSearch);
+  // A preloaded page (graph.js) may fill the box before this runs, which the
+  // 'change' handler above misses, so start at the bottom here too.
+  scrollToSearch();
 }

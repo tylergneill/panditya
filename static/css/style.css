@@ -572,9 +572,9 @@ button:hover { background: var(--red-hover); }
   color: #ffffff !important; /* White text */
   border: none;
   border-radius: 4px;
-  padding: 4px 8px;
+  padding: 3px 6px; /* Compact, so more chips fit per row */
   font-size: 13px;
-  margin: 2px 3px 2px 0;
+  margin: 2px 2px 2px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   max-width: calc(100% - 20px); /* Prevent chips from overflowing */
   overflow: hidden;
@@ -645,6 +645,15 @@ button:hover { background: var(--red-hover); }
 ============================= */
 #sidebar .select2-container {
   width: 100% !important;
+}
+
+/* Cap sidebar multi-selects at ~3 chip rows and scroll inside the box, so many
+   selections don't push Hops, Don't Expand and the Generate button off screen.
+   The results dropdown is positioned from the container's height, so it stays
+   right under the capped box. dropdown.js keeps the inline search scrolled into view. */
+#sidebar .select2-container .select2-selection--multiple {
+  max-height: 110px;
+  overflow-y: auto;
 }
 
 /* =============================
