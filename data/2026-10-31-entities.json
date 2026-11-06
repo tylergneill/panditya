@@ -61713,6 +61713,7 @@
             "114681",
             "114261",
             "111797",
+            "117015",
             "114174",
             "114257",
             "114236",
@@ -63150,6 +63151,18 @@
         ],
         "commentary_ids": [],
         "discipline": "Alaṃkāraśāstra"
+    },
+    "117015": {
+        "id": "117015",
+        "type": "work",
+        "name": "Candrālokavyākhyā",
+        "aka": "",
+        "author_ids": [],
+        "base_text_ids": [
+            "114173"
+        ],
+        "commentary_ids": [],
+        "discipline": ""
     },
     "113743": {
         "id": "113743",

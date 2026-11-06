@@ -1,23 +1,23 @@
 {
-    "pandit_data_version": "2026-10-08",
+    "pandit_data_version": "2026-10-31",
     "export": {
-        "rows": 70335,
+        "rows": 70249,
         "columns": 163,
         "content_types": 9
     },
     "extract": {
-        "rows": 19274,
-        "cleaned_rows": 19255
+        "rows": 19275,
+        "cleaned_rows": 19257
     },
     "entities": {
-        "total": 17714,
-        "works": 13800,
+        "total": 17715,
+        "works": 13801,
         "authors": 3914
     },
     "relationships": {
-        "total": 14064,
+        "total": 14065,
         "author_work": 9551,
-        "work_work": 4513
+        "work_work": 4514
     },
     "components": {
         "total": 5603,
@@ -49,7 +49,7 @@
         "extra_large": {
             "label": "Central community",
             "components": 1,
-            "entities": 9101
+            "entities": 9102
         }
     }
 }

@@ -1,6 +1,6 @@
 # To update the Pandit data: see data/manual_cleaning.md.
 # pandit_export: open the Pandit CSV export in the browser (babysat by hand, ~1.5-2 h).
-# extract: export -> raw extract. Clean by hand. transform: cleaned extract -> entities.json.
+# extract: export -> raw extract. `python -m utils.clean`: raw -> cleaned extract. transform: cleaned extract -> entities.json.
 # analyze: entities.json -> analysis_results/, including the Data Notes figures.
 
 # pandit_export opens the Pandit export link, the one behind the "Download CSV"

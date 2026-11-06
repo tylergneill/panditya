@@ -17,8 +17,9 @@ bring in a new export:
 4. **Extract.** `make extract` (or `python -m utils.extract`) keeps the
    Work and Person rows and the columns Pāṇḍitya uses, and writes
    `<date>-extracted-entities-raw.csv`.
-5. **Clean** the raw extract as below, into
-   `<date>-extracted-entities-cleaned.csv`.
+5. **Clean.** `python -m utils.clean` makes the fixes listed below and
+   writes `<date>-extracted-entities-cleaned.csv`, printing how many rows
+   each fix touched.
 6. **Transform.** `make transform` (or `python -m utils.transform`)
    writes `<date>-entities.json`, which the web app loads, and rebuilds
    `<seti date>-etext-link-data.json` from the SETI master, which fills the
@@ -53,7 +54,10 @@ uses a dated copy of it. To bring in a new one:
 
 Never edit the copy here: correct the master in seti and copy it again.
 
-## Manual cleaning to get from raw to clean
+## Cleaning to get from raw to clean
+
+`utils/clean.py` does all of this; its ID lists are where to add new
+cases.
 
 - delete `[^\w,\n'" \(\[-] ?` after `,` (stray punctuation at the start of a
   field, such as `. Commentary on ...` or `>Sphoṭavāda`)
@@ -66,7 +70,8 @@ Never edit the copy here: correct the master in seti and copy it again.
 - correct a title that carries a stray number
   - Work,92233: `73.2 Mānameyodaya` to `Mānameyodaya`
 - delete duplicate rows (the export repeats some rows: 99 in 2025-11-07,
-  one in 2026-10-08)
+  one in 2026-10-08, none in 2026-10-31)
 
 These are better fixed in Pandit itself, so that later exports need less
-of this. As of 2026-10-08 all of the above were still in the export.
+of this. As of 2026-10-31 all of the above except the duplicates were
+still in the export.
