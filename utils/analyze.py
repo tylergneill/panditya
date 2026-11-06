@@ -4,12 +4,14 @@ from collections import defaultdict
 import community.community_louvain as community_louvain
 import numpy as np
 import matplotlib.pyplot as plt
+import csv
+import json
 import os
 
 from utils.load import load_entities
 from data_models import Entity
 from grapher import construct_subgraph
-from utils.utils import time_execution
+from utils.utils import time_execution, get_pandit_data_version
 
 
 SIZE_CATEGORIES = {
@@ -17,7 +19,7 @@ SIZE_CATEGORIES = {
     "extra_small": (2, 4),
     "small": (5, 9),
     "medium": (10, 25),
-    "large": (25, 100),
+    "large": (26, 100),
     "extra_large": (101, 10_000),
 }
 
@@ -425,6 +427,71 @@ def plot_complete_histogram(
     plt.close()
 
 
+def count_csv(path: str):
+    """Return the number of data rows, the number of columns, and the values of the first column."""
+    with open(path, encoding="utf-8", newline="") as f:
+        reader = csv.reader(f)
+        header = next(reader)
+        first_column = [row[0] for row in reader]
+    return len(first_column), len(header), first_column
+
+
+def write_data_summary(G: nx.DiGraph, component_info: Dict, entities_by_id: Dict[str, Entity]):
+    """
+    Write the figures shown on the Data Notes page to summary.json:
+    the size of the Pandit export and of the extract taken from it,
+    the entities and relationships in the graph, and its components.
+    """
+    data_dir = os.path.dirname(DATA_ANALYSIS_RESULTS_DIR)
+    version = get_pandit_data_version()
+
+    export_rows, export_columns, content_types = count_csv(
+        os.path.join(data_dir, f"{version}-pandit-entities-export.csv"))
+    raw_rows, _, _ = count_csv(os.path.join(data_dir, f"{version}-extracted-entities-raw.csv"))
+    cleaned_rows, _, _ = count_csv(os.path.join(data_dir, f"{version}-extracted-entities-cleaned.csv"))
+
+    entity_types = defaultdict(int)
+    for node in G.nodes():
+        entity_types[entities_by_id[node].type] += 1
+    relationship_types = defaultdict(int)
+    for source, target in G.edges():
+        relationship_types[f"{entities_by_id[source].type}_{entities_by_id[target].type}"] += 1
+
+    # The two largest bands have so far each held a single component, and the page names them for it.
+    # When that stops being true, fall back to naming the band by its size.
+    labels = {"isolated": "Isolated nodes (no connections)"}
+    for category, (lower, upper) in SIZE_CATEGORIES.items():
+        if category != "isolated":
+            name = category.replace("_", "-").capitalize()
+            labels[category] = f"{name} communities ({lower}–{upper} entities)"
+    if component_info["extra_large"]["component_count"] == 1:
+        labels["extra_large"] = "Central community"
+        if component_info["large"]["component_count"] == 1:
+            labels["large"] = "Second-largest community"
+    for category in ("large", "extra_large"):
+        if component_info[category]["component_count"] != 1:
+            print(f"Note: {component_info[category]['component_count']} {category} components; "
+                  f"the Data Notes page will call them '{labels[category]}'")
+
+    summary = {
+        "pandit_data_version": version,
+        "export": {"rows": export_rows, "columns": export_columns, "content_types": len(set(content_types))},
+        "extract": {"rows": raw_rows, "cleaned_rows": cleaned_rows},
+        "entities": {"total": G.number_of_nodes(), "works": entity_types["work"], "authors": entity_types["author"]},
+        "relationships": {"total": G.number_of_edges(), "author_work": relationship_types["author_work"],
+                          "work_work": relationship_types["work_work"]},
+        "components": {
+            "total": component_info["total_components"],
+            **{category: {"label": labels[category],
+                          "components": component_info[category]["component_count"],
+                          "entities": component_info[category]["node_count"]}
+               for category in SIZE_CATEGORIES},
+        },
+    }
+    with open(os.path.join(DATA_ANALYSIS_RESULTS_DIR, "summary.json"), "w") as f:
+        json.dump(summary, f, indent=4)
+
+
 def write_all_metrics(metrics: Dict):
     """
     Write all network metrics to a file with clear formatting.
@@ -505,6 +572,7 @@ if __name__ == "__main__":
     plot_component_histograms(component_info)
     plot_complete_histogram(component_info, 'complete_component_distribution_3-23.png', include_small=False)
     plot_complete_histogram(component_info, 'complete_component_distribution.png', include_small=True)
+    write_data_summary(G, component_info, entities_by_id)
 
     compute_more_metrics = False
     if compute_more_metrics:

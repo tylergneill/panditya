@@ -240,7 +240,7 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/7_ayur/dhrasciu.htm"
             ]
         },
-        "41906": {
+        "42387": {
             "GRETIL": [
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/7_ayur/grasht_u.htm"
             ],
@@ -779,6 +779,340 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/vimkn_u.htm"
             ]
         },
+        "88094": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu023_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu031_u.htm"
+            ]
+        },
+        "88096": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa028_u.htm"
+            ]
+        },
+        "88100": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sspp2_1u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sspp2_2u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sspp2_3u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sspp2_4u.htm"
+            ]
+        },
+        "88101": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/pplg1__u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/pplg202u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_1u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_2-3u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_4u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_5u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_6-8u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/pspdut2u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/pvspl_u.htm"
+            ]
+        },
+        "88102": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/adsp55-u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/adsp70-u.htm"
+            ]
+        },
+        "88120": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/rahppspu.htm"
+            ]
+        },
+        "88121": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/kukalpmu.htm"
+            ]
+        },
+        "88132": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu014_u.htm"
+            ]
+        },
+        "88139": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/mpsu_w_u.htm"
+            ]
+        },
+        "88148": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu029_u.htm"
+            ]
+        },
+        "88153": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu036_u.htm"
+            ],
+            "DCS": {
+                "web HTML": [
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=532"
+                ],
+                "GitHub (1) CoNLL-U": [
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Saddharmapuṇḍarīkasūtra"
+                ],
+                "GitHub (2) TXT": [
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Saddharmapuṇḍarīkasūtra.txt"
+                ]
+            }
+        },
+        "88154": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu038_u.htm"
+            ]
+        },
+        "88176": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/hvsatssu.htm"
+            ]
+        },
+        "88183": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/patyog_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/yogasutu.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/yogsubhu.htm"
+            ],
+            "DCS": {
+                "web HTML": [
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=52"
+                ],
+                "GitHub (1) CoNLL-U": [
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Yogasūtra"
+                ],
+                "GitHub (2) TXT": [
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Yogasūtra.txt"
+                ]
+            },
+            "SARIT": {
+                "web HTML": [
+                    "https://sarit.indology.info/patanjalayogasastra.xml"
+                ],
+                "GitHub XML": [
+                    "https://github.com/sarit/SARIT-corpus/blob/master/patanjalayogasastra.xml"
+                ]
+            },
+            "Vātāyana and Pramāṇa NLP": {
+                "Vātāyana web HTML": [
+                    "https://www.vatayana.info/textView?text_abbrv=YSBh"
+                ],
+                "Pramāṇa NLP GitHub": [
+                    "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
+                ]
+            }
+        },
+        "88191": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu021_u.htm"
+            ],
+            "DCS": {
+                "web HTML": [
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=261"
+                ],
+                "GitHub (1) CoNLL-U": [
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Laṅkāvatārasūtra"
+                ],
+                "GitHub (2) TXT": [
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Laṅkāvatārasūtra.txt"
+                ]
+            },
+            "Sanskrit Library and TITUS": [
+                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/lankavat/lanka.htm"
+            ]
+        },
+        "88193": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/ekottaru.htm"
+            ]
+        },
+        "88201": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu009_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/maivy_pu.htm"
+            ]
+        },
+        "88212": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu051_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/vchedpgu.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/vchedppu.htm"
+            ]
+        },
+        "88213": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/iskamatu.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/iskar_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/iskgaudu.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/isvskaru.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/jaymangu.htm"
+            ],
+            "DCS": {
+                "web HTML": [
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=359"
+                ],
+                "GitHub (1) CoNLL-U": [
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Sāṃkhyakārikā"
+                ],
+                "GitHub (2) TXT": [
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Sāṃkhyakārikā.txt"
+                ]
+            },
+            "Vātāyana and Pramāṇa NLP": {
+                "Vātāyana web HTML": [
+                    "https://www.vatayana.info/textView?text_abbrv=SK"
+                ],
+                "Pramāṇa NLP GitHub": [
+                    "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt"
+                ]
+            }
+        },
+        "88230": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/asabhs_u.htm"
+            ]
+        },
+        "88236": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa030_u.htm"
+            ]
+        },
+        "88238": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/srabhu_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/srabhusu.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/asycsaru.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa034_u.htm"
+            ]
+        },
+        "88240": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vakobhau.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vakobhku.htm"
+            ],
+            "DCS": {
+                "web HTML": [
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=378"
+                ],
+                "GitHub (1) CoNLL-U": [
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Abhidharmakośa"
+                ],
+                "GitHub (2) TXT": [
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Abhidharmakośa.txt"
+                ]
+            }
+        },
+        "88243": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vasbocpu.htm"
+            ]
+        },
+        "88249": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/asmahsbu.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/asmahsuu.htm"
+            ]
+        },
+        "88250": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa065_u.htm"
+            ]
+        },
+        "88257": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa018_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vasvvmsu.htm"
+            ]
+        },
+        "88258": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa019_u.htm"
+            ]
+        },
+        "88262": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa022_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa023_u.htm"
+            ],
+            "DCS": {
+                "web HTML": [
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=304",
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=305"
+                ],
+                "GitHub (1) CoNLL-U": [
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Viṃśatikākārikā",
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Viṃśatikāvṛtti"
+                ],
+                "GitHub (2) TXT": [
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Viṃśatikākārikā.txt",
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Viṃśatikāvṛtti.txt"
+                ]
+            },
+            "Vātāyana and Pramāṇa NLP": {
+                "Vātāyana web HTML": [
+                    "https://www.vatayana.info/textView?text_abbrv=ViṃśV"
+                ],
+                "Pramāṇa NLP GitHub": [
+                    "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt"
+                ]
+            }
+        },
+        "88341": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa069_u.htm"
+            ]
+        },
+        "88353": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/nysvbh1u.htm"
+            ],
+            "DCS": {
+                "web HTML": [
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=384"
+                ],
+                "GitHub (1) CoNLL-U": [
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Nyāyabhāṣya"
+                ],
+                "GitHub (2) TXT": [
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nyāyabhāṣya.txt"
+                ]
+            },
+            "SARIT": {
+                "web HTML": [
+                    "https://sarit.indology.info/vatsyayana-nyayabhasya.xml"
+                ],
+                "GitHub XML": [
+                    "https://github.com/sarit/SARIT-corpus/blob/master/vatsyayana-nyayabhasya.xml"
+                ]
+            },
+            "Vātāyana and Pramāṇa NLP": {
+                "Vātāyana web HTML": [
+                    "https://www.vatayana.info/textView?text_abbrv=NBh"
+                ],
+                "Pramāṇa NLP GitHub": [
+                    "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vatsyayana_nyayabhasya.txt"
+                ]
+            }
+        },
+        "88354": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/1_gram/vakyp1pu.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/1_gram/vakyp_pu.htm"
+            ],
+            "SARIT": {
+                "web HTML": [
+                    "https://sarit.indology.info/bhartrhari-vakyapadiya.xml"
+                ],
+                "GitHub XML": [
+                    "https://github.com/sarit/SARIT-corpus/blob/master/bhartrhari-vakyapadiya.xml"
+                ]
+            }
+        },
+        "88356": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa073_u.htm"
+            ]
+        },
         "...": {
             "GRETIL": [
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/1_sam/1_rv/rvkhilau.htm",
@@ -816,7 +1150,6 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/3_purana/vamp__u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/3_purana/vampsm_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/abhisdhu.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/abhnispu.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/adbhutdu.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/ahovk1_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/ahovk2_u.htm",
@@ -834,7 +1167,6 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu012_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu017_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu026_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu031_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu037_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu039_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu041_u.htm",
@@ -1005,10 +1337,8 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/5_subhas/vidsripu.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/6_hist/kaulpradsam_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/1_gram/samanv_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/ajm_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa007_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa020_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa032_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa033_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa039_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa041_u.htm",
@@ -1530,7 +1860,6 @@
                     "https://sites.utexas.edu/sanskrit/resources/dharmasastra/sarasvativilasa/",
                     "https://sites.utexas.edu/sanskrit/resources/dharmasastra/sm%e1%b9%9bticandrika/",
                     "https://sites.utexas.edu/sanskrit/resources/dharmasastra/smrtyarthasara-sridhara/",
-                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/tirthacintamani-of-vacaspati-misra/",
                     "https://sites.utexas.edu/sanskrit/resources/dharmasastra/vyavaharacintamani/",
                     "https://sites.utexas.edu/sanskrit/resources/dharmasastra/vyavaharanirnaya/"
                 ],
@@ -1562,7 +1891,6 @@
                     "https://docs.google.com/document/d/1Vq4b8elUARcjscnbTKX90czk-0CUQoGmcE4QbjOuhd4",
                     "https://docs.google.com/document/d/1XI75UgiUUqG2_DJ4pFMX-VbDXN_5CuVXujH2fS7wJN8",
                     "https://docs.google.com/document/d/1YJJ6knQKd4KLRpBnTW4syCVzGQC7Mn9k_rgUdmsP_xA",
-                    "https://docs.google.com/document/d/1ZAg_Zl4fDpc8VB9vVWaKTckNbzTkFDzmcaB3_aTfD-A",
                     "https://docs.google.com/document/d/1aQO6Qr41FwEKMqJoXsqlnT2oN1rxiYh_MG2A0965dDk",
                     "https://docs.google.com/document/d/1aSTatFtFg3aqI-7pgfN4RWymC9Ky5LulG6b8KaTPGLc",
                     "https://docs.google.com/document/d/1eIGu1ACLqDwZm29oGUwNjg3fhFfG6yB5MUmj8uXdBXs",
@@ -1589,334 +1917,6 @@
                     "https://www.dipal.org/cgi-bin/dipal.cgi?nav=1009&subnav=1010&wor_id=2&wat_id=2&ter_id=1&tra_id=68&show_file_content=1"
                 ]
             }
-        },
-        "88096": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa028_u.htm"
-            ]
-        },
-        "88100": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sspp2_1u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sspp2_2u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sspp2_3u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sspp2_4u.htm"
-            ]
-        },
-        "88101": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/pplg1__u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/pplg202u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_1u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_2-3u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_4u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_5u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/psp_6-8u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/pspdut2u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/pvspl_u.htm"
-            ]
-        },
-        "88102": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/adsp55-u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/adsp70-u.htm"
-            ]
-        },
-        "88120": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/rahppspu.htm"
-            ]
-        },
-        "88121": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/kukalpmu.htm"
-            ]
-        },
-        "88132": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu014_u.htm"
-            ]
-        },
-        "88139": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/mpsu_w_u.htm"
-            ]
-        },
-        "88148": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu029_u.htm"
-            ]
-        },
-        "88153": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu036_u.htm"
-            ],
-            "DCS": {
-                "web HTML": [
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=532"
-                ],
-                "GitHub (1) CoNLL-U": [
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Saddharmapuṇḍarīkasūtra"
-                ],
-                "GitHub (2) TXT": [
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Saddharmapuṇḍarīkasūtra.txt"
-                ]
-            }
-        },
-        "88154": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu038_u.htm"
-            ]
-        },
-        "88176": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/hvsatssu.htm"
-            ]
-        },
-        "88183": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/patyog_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/yogasutu.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/yogsubhu.htm"
-            ],
-            "DCS": {
-                "web HTML": [
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=52"
-                ],
-                "GitHub (1) CoNLL-U": [
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Yogasūtra"
-                ],
-                "GitHub (2) TXT": [
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Yogasūtra.txt"
-                ]
-            },
-            "SARIT": {
-                "web HTML": [
-                    "https://sarit.indology.info/patanjalayogasastra.xml"
-                ],
-                "GitHub XML": [
-                    "https://github.com/sarit/SARIT-corpus/blob/master/patanjalayogasastra.xml"
-                ]
-            },
-            "Vātāyana and Pramāṇa NLP": {
-                "Vātāyana web HTML": [
-                    "https://www.vatayana.info/textView?text_abbrv=YSBh"
-                ],
-                "Pramāṇa NLP GitHub": [
-                    "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/patanjali_yogasutrabhasya.txt"
-                ]
-            }
-        },
-        "88191": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu021_u.htm"
-            ],
-            "DCS": {
-                "web HTML": [
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=261"
-                ],
-                "GitHub (1) CoNLL-U": [
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Laṅkāvatārasūtra"
-                ],
-                "GitHub (2) TXT": [
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Laṅkāvatārasūtra.txt"
-                ]
-            },
-            "Sanskrit Library and TITUS": [
-                "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/lankavat/lanka.htm"
-            ]
-        },
-        "88193": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/ekottaru.htm"
-            ]
-        },
-        "88201": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu009_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/maivy_pu.htm"
-            ]
-        },
-        "88212": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu051_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/vchedpgu.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/vchedppu.htm"
-            ]
-        },
-        "88213": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/iskamatu.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/iskar_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/iskgaudu.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/isvskaru.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/samkhya/jaymangu.htm"
-            ],
-            "DCS": {
-                "web HTML": [
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=359"
-                ],
-                "GitHub (1) CoNLL-U": [
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Sāṃkhyakārikā"
-                ],
-                "GitHub (2) TXT": [
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Sāṃkhyakārikā.txt"
-                ]
-            },
-            "Vātāyana and Pramāṇa NLP": {
-                "Vātāyana web HTML": [
-                    "https://www.vatayana.info/textView?text_abbrv=SK"
-                ],
-                "Pramāṇa NLP GitHub": [
-                    "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/isvarakrsna_samkhyakarika.txt"
-                ]
-            }
-        },
-        "88230": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/asabhs_u.htm"
-            ]
-        },
-        "88236": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa030_u.htm"
-            ]
-        },
-        "88238": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/srabhu_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/srabhusu.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/asycsaru.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa034_u.htm"
-            ]
-        },
-        "88240": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vakobhau.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vakobhku.htm"
-            ],
-            "DCS": {
-                "web HTML": [
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=378"
-                ],
-                "GitHub (1) CoNLL-U": [
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Abhidharmakośa"
-                ],
-                "GitHub (2) TXT": [
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Abhidharmakośa.txt"
-                ]
-            }
-        },
-        "88243": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vasbocpu.htm"
-            ]
-        },
-        "88249": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/asmahsbu.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/asmahsuu.htm"
-            ]
-        },
-        "88250": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa065_u.htm"
-            ]
-        },
-        "88257": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa018_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vasvvmsu.htm"
-            ]
-        },
-        "88258": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa019_u.htm"
-            ]
-        },
-        "88262": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa022_u.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa023_u.htm"
-            ],
-            "DCS": {
-                "web HTML": [
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=304",
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=305"
-                ],
-                "GitHub (1) CoNLL-U": [
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Viṃśatikākārikā",
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Viṃśatikāvṛtti"
-                ],
-                "GitHub (2) TXT": [
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Viṃśatikākārikā.txt",
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Viṃśatikāvṛtti.txt"
-                ]
-            },
-            "Vātāyana and Pramāṇa NLP": {
-                "Vātāyana web HTML": [
-                    "https://www.vatayana.info/textView?text_abbrv=ViṃśV"
-                ],
-                "Pramāṇa NLP GitHub": [
-                    "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vasubandhu_vimsikavrtti.txt"
-                ]
-            }
-        },
-        "88341": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa069_u.htm"
-            ]
-        },
-        "88353": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/nysvbh1u.htm"
-            ],
-            "DCS": {
-                "web HTML": [
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=384"
-                ],
-                "GitHub (1) CoNLL-U": [
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Nyāyabhāṣya"
-                ],
-                "GitHub (2) TXT": [
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Nyāyabhāṣya.txt"
-                ]
-            },
-            "SARIT": {
-                "web HTML": [
-                    "https://sarit.indology.info/vatsyayana-nyayabhasya.xml"
-                ],
-                "GitHub XML": [
-                    "https://github.com/sarit/SARIT-corpus/blob/master/vatsyayana-nyayabhasya.xml"
-                ]
-            },
-            "Vātāyana and Pramāṇa NLP": {
-                "Vātāyana web HTML": [
-                    "https://www.vatayana.info/textView?text_abbrv=NBh"
-                ],
-                "Pramāṇa NLP GitHub": [
-                    "https://github.com/tylergneill/pramana-nlp/blob/master/data_prep/3_etext_cleaned/vatsyayana_nyayabhasya.txt"
-                ]
-            }
-        },
-        "88354": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/1_gram/vakyp1pu.htm",
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/1_gram/vakyp_pu.htm"
-            ],
-            "SARIT": {
-                "web HTML": [
-                    "https://sarit.indology.info/bhartrhari-vakyapadiya.xml"
-                ],
-                "GitHub XML": [
-                    "https://github.com/sarit/SARIT-corpus/blob/master/bhartrhari-vakyapadiya.xml"
-                ]
-            }
-        },
-        "88356": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa073_u.htm"
-            ]
         },
         "88371": {
             "GRETIL": [
@@ -4276,6 +4276,17 @@
                 ]
             }
         },
+        "115242": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/ajm_u.htm",
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa032_u.htm"
+            ]
+        },
+        "115592": {
+            "GRETIL": [
+                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/abhnispu.htm"
+            ]
+        },
         "42078": {
             "GRETIL": [
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_01_u.htm",
@@ -5492,11 +5503,6 @@
                     "https://docs.google.com/document/d/1HQvSoksGTfEaB_2dLm-uRRhqWC-93zxFFkpZFGpS5I0"
                 ]
             }
-        },
-        "88094": {
-            "GRETIL": [
-                "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/bsu023_u.htm"
-            ]
         },
         "88355": {
             "GRETIL": [
@@ -7413,6 +7419,16 @@
                 ]
             }
         },
+        "115320": {
+            "UTA Dharmaśāstra": {
+                "web HTML": [
+                    "https://sites.utexas.edu/sanskrit/resources/dharmasastra/tirthacintamani-of-vacaspati-misra/"
+                ],
+                "Google Doc": [
+                    "https://docs.google.com/document/d/1ZAg_Zl4fDpc8VB9vVWaKTckNbzTkFDzmcaB3_aTfD-A"
+                ]
+            }
+        },
         "89381": {
             "UTA Dharmaśāstra": {
                 "web HTML": [
@@ -7554,12 +7570,12 @@
     },
     "collection_missing_work_id_counts": {
         "DCS": 93,
-        "GRETIL": 263,
+        "GRETIL": 259,
         "Muktabodha KSTS": 5,
         "SARIT": 10,
         "Sanskrit Library and TITUS": 68,
         "Vātāyana and Pramāṇa NLP": 0,
-        "UTA Dharmaśāstra": 40,
+        "UTA Dharmaśāstra": 39,
         "DiPAL DCV": 2,
         "HANSEL": 0
     }
