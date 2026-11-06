@@ -15,9 +15,9 @@ import os
 import re
 import sys
 
-from utils.utils import get_pandit_data_version
+from utils.utils import get_pandit_content_version, stamp_data_version
 
-PANDIT_DATA_VERSION = get_pandit_data_version()
+PANDIT_CONTENT_VERSION = get_pandit_content_version()
 
 current_file_dir = os.path.dirname(os.path.abspath(__file__))
 relative_data_dir = "../data"
@@ -74,6 +74,7 @@ if __name__ == "__main__":
         clean(sys.argv[1], sys.argv[2])
     else:
         data_dir = os.path.join(current_file_dir, relative_data_dir)
-        clean(os.path.join(data_dir, f"{PANDIT_DATA_VERSION}-extracted-entities-raw.csv"),
-              os.path.join(data_dir, f"{PANDIT_DATA_VERSION}-extracted-entities-cleaned.csv"))
-        print(f"Cleaned CSV saved as {PANDIT_DATA_VERSION}-extracted-entities-cleaned.csv")
+        clean(os.path.join(data_dir, f"{PANDIT_CONTENT_VERSION}-extracted-entities-raw.csv"),
+              os.path.join(data_dir, f"{PANDIT_CONTENT_VERSION}-extracted-entities-cleaned.csv"))
+        print(f"Cleaned CSV saved as {PANDIT_CONTENT_VERSION}-extracted-entities-cleaned.csv")
+        stamp_data_version()
