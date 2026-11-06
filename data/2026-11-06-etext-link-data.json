@@ -707,7 +707,18 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/nrat_1_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/nrat_2_u.htm",
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/nrat_4_u.htm"
-            ]
+            ],
+            "HANSEL": {
+                "GitHub TXT": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/txt/nAgArjuna_ratnAvalI.txt"
+                ],
+                "GitHub XML": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/nAgArjuna_ratnAvalI.xml"
+                ],
+                "web HTML": [
+                    "https://hansel-library.info/texts/transforms/html/rich/nAgArjuna_ratnAvalI.html"
+                ]
+            }
         },
         "88082": {
             "GRETIL": [
@@ -7555,6 +7566,71 @@
                     "https://hansel-library.info/texts/transforms/html/rich/zukasaptati_s.html"
                 ]
             }
+        },
+        "116956": {
+            "HANSEL": {
+                "GitHub TXT": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/txt/bhAskarabhaTTa_unmattarAghava.txt"
+                ],
+                "GitHub XML": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/bhAskarabhaTTa_unmattarAghava.xml"
+                ],
+                "web HTML": [
+                    "https://hansel-library.info/texts/transforms/html/rich/bhAskarabhaTTa_unmattarAghava.html"
+                ]
+            }
+        },
+        "89379": {
+            "HANSEL": {
+                "GitHub TXT": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/txt/kRSNamizra_prabodhacandrodaya.txt"
+                ],
+                "GitHub XML": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/kRSNamizra_prabodhacandrodaya.xml"
+                ],
+                "web HTML": [
+                    "https://hansel-library.info/texts/transforms/html/rich/kRSNamizra_prabodhacandrodaya.html"
+                ]
+            }
+        },
+        "108127": {
+            "HANSEL": {
+                "GitHub TXT": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/txt/bhagavadajjuka.txt"
+                ],
+                "GitHub XML": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/bhagavadajjuka.xml"
+                ],
+                "web HTML": [
+                    "https://hansel-library.info/texts/transforms/html/rich/bhagavadajjuka.html"
+                ]
+            }
+        },
+        "89140": {
+            "HANSEL": {
+                "GitHub TXT": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/txt/vAkyapadIyaprameyasaMgraha.txt"
+                ],
+                "GitHub XML": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/vAkyapadIyaprameyasaMgraha.xml"
+                ],
+                "web HTML": [
+                    "https://hansel-library.info/texts/transforms/html/rich/vAkyapadIyaprameyasaMgraha.html"
+                ]
+            }
+        },
+        "116957": {
+            "HANSEL": {
+                "GitHub TXT": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/txt/virUpAkSadeva_unmattarAghava.txt"
+                ],
+                "GitHub XML": [
+                    "https://github.com/tylergneill/hansel-data/blob/main/texts/project_editions/xml/virUpAkSadeva_unmattarAghava.xml"
+                ],
+                "web HTML": [
+                    "https://hansel-library.info/texts/transforms/html/rich/virUpAkSadeva_unmattarAghava.html"
+                ]
+            }
         }
     },
     "collection_total_link_counts": {
@@ -7566,7 +7642,7 @@
         "Vātāyana and Pramāṇa NLP": 45,
         "UTA Dharmaśāstra": 89,
         "DiPAL DCV": 17,
-        "HANSEL": 4
+        "HANSEL": 10
     },
     "collection_missing_work_id_counts": {
         "DCS": 93,
