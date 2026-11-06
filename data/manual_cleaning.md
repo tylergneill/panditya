@@ -12,7 +12,7 @@ bring in a new export:
    by the day it was exported. `make pandit_export` starts one in the browser;
    it takes 1.5-2 hours of babysitting, as the recipe's comment in
    `../Makefile` explains.
-3. **Set the version.** Put that date in `__pandit_data_version__` in
+3. **Set the version.** Put that date in `__pandit_content_version__` in
    `../VERSION`. Every script finds its files by this date.
 4. **Extract.** `make extract` (or `python -m utils.extract`) keeps the
    Work and Person rows and the columns Pāṇḍitya uses, and writes
@@ -48,7 +48,7 @@ uses a dated copy of it. To bring in a new one:
    masters in its own `data/archive/`.
 2. Copy `../seti/data/seti-master.csv` here as `<date>-seti-master.csv`,
    dated by the day of the copy.
-3. Put that date in `__seti_data_version__` in `../VERSION`.
+3. Put that date in `__seti_content_version__` in `../VERSION`.
 4. `make transform` writes `<date>-etext-link-data.json`, which fills the
    e-text links in the graph and the table on the SETI page.
 

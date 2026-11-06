@@ -1,7 +1,8 @@
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime
 from functools import wraps
 import json
+import re
 
 SUPPRESS_TIME_DECORATOR = True  # Set this to True to suppress the decorator, False to enable it
 
@@ -29,25 +30,48 @@ def time_execution(func):
     return wrapper
 
 
+# VERSION holds, as in the Atlases:
+#   __app_version__             the code
+#   __data_version__            when the pipeline last ran (clean, transform or analyze)
+#   __pandit_content_version__  when the Pandit data was sourced: the export's date
+#   __seti_content_version__    when the SETI master was sourced: the copy's date
+# Data filenames are keyed on the content versions.
+VERSION_FILEPATH = './VERSION'
+
+
+def _get_version(name):
+    with open(VERSION_FILEPATH, 'r', encoding='utf8') as file:
+        found = re.search(rf'^__{name}__\s*=\s*["\']([^"\']+)["\']', file.read(), re.M)
+    if not found:
+        raise SystemExit(f"No __{name}__ in {VERSION_FILEPATH}")
+    return found.group(1)
+
+
 def get_app_version():
-    app_version_filepath = './VERSION'
-    with open(app_version_filepath, 'r', encoding='utf8') as file:
-        # Assuming the __app_version__ line is the first line
-        return file.readline().strip().split('=')[1].strip().replace("'", "").replace('"', '')
+    return _get_version("app_version")
 
 
-def get_pandit_data_version():
-    data_version_filepath = './VERSION'
-    with open(data_version_filepath, 'r', encoding='utf8') as file:
-        # Assuming the __pandit_data_version__ line is the second line
-        return file.readlines()[1].strip().split('=')[1].strip().replace("'", "").replace('"', '')
+def get_data_version():
+    return _get_version("data_version")
 
 
-def get_seti_data_version():
-    data_version_filepath = './VERSION'
-    with open(data_version_filepath, 'r', encoding='utf8') as file:
-        # Assuming the __seti_data_version__ line is the third line
-        return file.readlines()[2].strip().split('=')[1].strip().replace("'", "").replace('"', '')
+def get_pandit_content_version():
+    return _get_version("pandit_content_version")
+
+
+def get_seti_content_version():
+    return _get_version("seti_content_version")
+
+
+def stamp_data_version():
+    """Set __data_version__ to today; each pipeline step calls this when it has written its output."""
+    today = date.today().isoformat()
+    with open(VERSION_FILEPATH, 'r', encoding='utf8') as file:
+        text = file.read()
+    text = re.sub(r'^__data_version__\s*=\s*["\'][^"\']*["\']', f'__data_version__ = "{today}"', text, flags=re.M)
+    with open(VERSION_FILEPATH, 'w', encoding='utf8') as file:
+        file.write(text)
+    print(f"__data_version__ = {today}")
 
 
 def summarize_etext_links(etext_links, additional_collection_count_data):

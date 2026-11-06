@@ -20,7 +20,7 @@ import os
 from typing import Dict, List
 
 from data_models import Entity
-from utils.utils import get_pandit_data_version, get_seti_data_version
+from utils.utils import get_pandit_content_version, get_seti_content_version
 
 current_file_dir = os.path.dirname(os.path.abspath(__file__))
 relative_data_dir = "../data"
@@ -87,8 +87,8 @@ def validate_data(entities_by_id: Dict[str, Entity], work_id_to_link_mapping: Di
 
 def validate_output_files() -> None:
     """Validate the committed JSON outputs of the transform step for the current data versions."""
-    entities_filename = f"{get_pandit_data_version()}-entities.json"
-    links_filename = f"{get_seti_data_version()}-etext-link-data.json"
+    entities_filename = f"{get_pandit_content_version()}-entities.json"
+    links_filename = f"{get_seti_content_version()}-etext-link-data.json"
     with open(os.path.join(current_file_dir, relative_data_dir, entities_filename), "r") as f:
         entities_by_id = {eid: Entity.create_from_dict(edict) for eid, edict in json.load(f).items()}
     with open(os.path.join(current_file_dir, relative_data_dir, links_filename), "r") as f:

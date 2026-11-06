@@ -9,7 +9,7 @@ from data_models import Entity
 from grapher import construct_subgraph, annotate_graph
 from utils.utils import (
     custom_sort_key,
-    get_app_version, get_pandit_data_version, get_seti_data_version,
+    get_app_version, get_data_version, get_pandit_content_version, get_seti_content_version,
     load_config_dict_from_json_file,
     summarize_etext_links,
 )
@@ -26,8 +26,9 @@ VALID_COLLECTIONS = list(ETEXT_DATA_SUMMARY.keys())
 DATA_SUMMARY = load_data_summary()
 
 APP_VERSION = get_app_version()
-PANDIT_DATA_VERSION = get_pandit_data_version()
-SETI_DATA_VERSION = get_seti_data_version()
+DATA_VERSION = get_data_version()
+PANDIT_CONTENT_VERSION = get_pandit_content_version()
+SETI_CONTENT_VERSION = get_seti_content_version()
 
 config_dict = load_config_dict_from_json_file()
 DEFAULT_HOPS = config_dict["hops"]
@@ -37,8 +38,8 @@ app = Flask(__name__)
 # --- Blueprint setup ---
 api_bp = Blueprint('api', __name__, url_prefix='/api')  # API Blueprint
 api = Api(api_bp, version=APP_VERSION, title='Pāṇḍitya API',
-          description=  f'API for exploring work and author relationships in Pandit database ({PANDIT_DATA_VERSION}) '
-                        f'and linking to online e-text repositories (last updated {SETI_DATA_VERSION})',
+          description=  f'API for exploring work and author relationships in Pandit database ({PANDIT_CONTENT_VERSION}) '
+                        f'and linking to online e-text repositories (last updated {SETI_CONTENT_VERSION})',
           doc='/docs')  # Swagger UI available at /api/docs
 
 # --- Define all namespaces ---
@@ -555,7 +556,7 @@ def author_notes():
 
 @app.route('/notes/data')
 def data_notes():
-    return render_template('notes/data.html', pandit_data_version=PANDIT_DATA_VERSION, seti_data_version=SETI_DATA_VERSION, summary=DATA_SUMMARY)
+    return render_template('notes/data.html', pandit_content_version=PANDIT_CONTENT_VERSION, seti_content_version=SETI_CONTENT_VERSION, summary=DATA_SUMMARY)
 
 
 @app.route('/notes/license')
@@ -565,7 +566,7 @@ def license_notes():
 
 @app.route('/notes/technical')
 def tech_notes():
-    return render_template('notes/technical.html', app_version=APP_VERSION, pandit_data_version=PANDIT_DATA_VERSION, seti_data_version=SETI_DATA_VERSION)
+    return render_template('notes/technical.html', app_version=APP_VERSION, data_version=DATA_VERSION, pandit_content_version=PANDIT_CONTENT_VERSION, seti_content_version=SETI_CONTENT_VERSION)
 
 
 @app.route('/notes/updates')
@@ -575,7 +576,7 @@ def update_notes():
 
 @app.route('/seti')
 def seti():
-    return render_template('seti.html', pandit_data_version=PANDIT_DATA_VERSION, seti_data_version=SETI_DATA_VERSION, etext_data_summary=ETEXT_DATA_SUMMARY)
+    return render_template('seti.html', pandit_content_version=PANDIT_CONTENT_VERSION, seti_content_version=SETI_CONTENT_VERSION, etext_data_summary=ETEXT_DATA_SUMMARY)
 
 @app.route('/tutorials')
 def tutorials():

@@ -28,16 +28,18 @@ each dated, with the current dates in `VERSION`. The steps for each are in
 ## Keeping Pāṇḍitya and SETI in step
 
 Each repo keeps a dated copy of the other's data: Pāṇḍitya a copy of the
-SETI master, SETI a copy of Pāṇḍitya's cleaned Pandit extract. Each
-records the Pandit date it uses as `__pandit_data_version__` in `VERSION`,
-and the two should match.
+SETI master, SETI a copy of Pāṇḍitya's cleaned Pandit extract. Pāṇḍitya's
+`VERSION` records when the Pandit data was sourced
+(`__pandit_content_version__`, the export's date) and when its pipeline
+last ran (`__data_version__`). SETI's `VERSION` records the same two dates
+for the copy it holds, and `make check` says if that copy is behind.
 
 **Every Pandit refresh: these three steps, in this order.**
 
 1. **Pāṇḍitya:** on a new branch, bring in the new Pandit export and clean
    it (`data/manual_cleaning.md`, "Updating the Pandit data", steps 1–5).
    Stop before `make transform`. Don't merge yet.
-2. **SETI:** `make pandit-copy DATE=<date>`, then `make check`. Fix every
+2. **SETI:** `make pandit-copy`, then `make check`. Fix every
    ID it reports (most likely deleted or merged in Pandit; look it up with
    `python3 scripts/lookup.py id <id>`), rerun `make check` until it
    passes, and merge.
