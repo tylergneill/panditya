@@ -165,12 +165,6 @@ def create_entities():
                         entity.author_lowest_year = author.lowest_year
                         break  # Use the first available author date
 
-    # Save to JSON for human-readability
-    output_filename = f"{PANDIT_DATA_VERSION}-entities.json"
-    output_json_path = os.path.join(current_file_dir, relative_data_dir, output_filename)
-    with open(output_json_path, 'w') as jsonfile:
-        json.dump({eid: e.to_dict() for eid, e in entities_by_id.items()}, jsonfile, indent=4, ensure_ascii=False)
-
     return entities_by_id
 
 
@@ -264,17 +258,21 @@ def create_etext_links():
         "collection_missing_work_id_counts": collection_missing_work_id_counts,
     }
 
-    # Save to JSON for human-readability
-    output_filename = f"{SETI_DATA_VERSION}-etext-link-data.json"
+    return convert_to_serializable(final_result)
+
+
+def write_json(output_filename, data):
+    """Save to JSON for human-readability."""
     output_json_path = os.path.join(current_file_dir, relative_data_dir, output_filename)
     with open(output_json_path, 'w') as jsonfile:
-        json.dump(convert_to_serializable(final_result), jsonfile, indent=4, ensure_ascii=False)
-
-    return final_result["work_id_to_link_mapping"]
+        json.dump(data, jsonfile, indent=4, ensure_ascii=False)
 
 
 if __name__ == "__main__":
     entities_by_id = create_entities()
-    work_id_to_link_mapping = create_etext_links()
-    # Fail the pipeline, rather than the app, if the two datasets disagree.
-    validate_data(entities_by_id, work_id_to_link_mapping)
+    etext_link_data = create_etext_links()
+    # Fail the pipeline, rather than the app, if the two datasets disagree,
+    # and before writing either output, so no inconsistent data reaches disk.
+    validate_data(entities_by_id, etext_link_data["work_id_to_link_mapping"])
+    write_json(f"{PANDIT_DATA_VERSION}-entities.json", {eid: e.to_dict() for eid, e in entities_by_id.items()})
+    write_json(f"{SETI_DATA_VERSION}-etext-link-data.json", etext_link_data)
