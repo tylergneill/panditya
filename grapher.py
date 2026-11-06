@@ -2,7 +2,6 @@ from copy import deepcopy
 from typing import Dict
 
 import networkx as nx
-import matplotlib.pyplot as plt
 
 from data_models import Work, Author
 from utils.load import load_entities, load_link_data
@@ -164,6 +163,8 @@ def export_to_gephi(subgraph, label_map, color_map, output_fn="pandit_grapher_ou
 
 
 def draw_nx_graph(subgraph, label_map, color_map):
+    # Offline mode only (requirements_offline.in); the web app never draws.
+    import matplotlib.pyplot as plt
     plt.figure(1, figsize=tuple(networkx_figure_size))
     nx.draw_spring(subgraph, labels=label_map, node_color=color_map, node_size=1000)
     plt.show()
