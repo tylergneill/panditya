@@ -631,6 +631,9 @@ button:hover { background: var(--red-hover); }
 /* Inline search inside multi-select */
 .select2-container--default .select2-search--inline .select2-search__field {
   font-size: 16px; /* Prevent iOS zoom on focus */
+  /* Select2 sizes this field to width: 100% and adds margin-left: 5px, so it
+     sticks out 5px past the box; keep it inside. */
+  max-width: calc(100% - 5px);
 }
 
 /* =============================
@@ -654,6 +657,9 @@ button:hover { background: var(--red-hover); }
 #sidebar .select2-container .select2-selection--multiple {
   max-height: 110px;
   overflow-y: auto;
+  /* overflow-y alone turns overflow-x to auto too, which shows a horizontal
+     scrollbar on Windows (classic scrollbars) for any sideways overflow. */
+  overflow-x: hidden;
 }
 
 /* =============================
