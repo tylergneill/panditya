@@ -82,4 +82,12 @@ function initializeSelect2(selector, placeholder) {
     tags: false,
     width: '100%'
   });
+  // Keep password managers (1Password, LastPass, Bitwarden) off the search box.
+  // Select2 creates this input once at init and reuses it, so tagging it here sticks.
+  $(selector).next('.select2-container').find('.select2-search__field').attr({
+    'autocomplete': 'off',
+    'data-1p-ignore': '',
+    'data-lpignore': 'true',
+    'data-bwignore': ''
+  });
 }
