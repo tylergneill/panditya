@@ -33,9 +33,9 @@ bring in a new export:
 The scripts need `pandas` (see `../requirements_etl.in`), e.g. in a local
 `venv/`.
 
-SETI reads the cleaned extract directly: its scripts take the newest
-`data/*-extracted-entities-cleaned.csv` in this directory (not in
-`archive/`), so step 1 matters there too.
+SETI takes its own copy of the cleaned extract (`make pandit-copy` in the
+seti repository). Do these steps as step 1 of "Keeping Pāṇḍitya and SETI
+in step" in `../README.md`, which says when to stop and when to merge.
 
 ## Updating the SETI data
 
