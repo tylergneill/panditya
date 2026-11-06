@@ -82,4 +82,30 @@ function initializeSelect2(selector, placeholder) {
     tags: false,
     width: '100%'
   });
+  // Keep password managers (1Password, LastPass, Bitwarden) off the search box.
+  // Select2 creates this input once at init and reuses it, so tagging it here sticks.
+  $(selector).next('.select2-container').find('.select2-search__field').attr({
+    'autocomplete': 'off',
+    'data-1p-ignore': '',
+    'data-lpignore': 'true',
+    'data-bwignore': ''
+  });
+
+  // The sidebar caps the selection box's height (style.css), so it scrolls once
+  // it fills up. When an entry is added (typed, or from a graph node in graph.js,
+  // which only triggers 'change') or the box is opened, scroll it to the bottom so
+  // the inline search field after the last chip stays visible. Removing a chip
+  // leaves the scroll position alone.
+  const $selection = $(selector).next('.select2-container').find('.select2-selection--multiple');
+  const scrollToSearch = () => $selection.scrollTop($selection[0].scrollHeight);
+  let selectedCount = ($(selector).val() || []).length;
+  $(selector).on('change', function () {
+    const count = ($(this).val() || []).length;
+    if (count > selectedCount) scrollToSearch();
+    selectedCount = count;
+  });
+  $(selector).on('select2:open', scrollToSearch);
+  // A preloaded page (graph.js) may fill the box before this runs, which the
+  // 'change' handler above misses, so start at the bottom here too.
+  scrollToSearch();
 }

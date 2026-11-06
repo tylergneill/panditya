@@ -50,7 +50,7 @@
 
       <!-- Input controls: what to generate -->
       <section id="input-controls">
-        <form id="parameter-form">
+        <form id="parameter-form" autocomplete="off">
           <div class="sidebar-field">
             <label for="authors-dropdown">Authors</label>
             <select id="authors-dropdown" class="select2-initial" multiple></select>
@@ -63,7 +63,9 @@
 
           <div class="sidebar-field">
             <label for="hops">Hops</label>
-            <input type="number" id="hops" name="hops" value="1" min="0" />
+            <!-- Not a credential: keep password managers' inline menus out of this field -->
+            <input type="number" id="hops" name="hops" value="1" min="0"
+                   autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore />
           </div>
 
           <div class="sidebar-field">
