@@ -21,8 +21,37 @@ For more details, see [offline_mode.md](https://github.com/tylergneill/panditya/
 
 # Updating the data
 
-The Pandit snapshot lives in `data/`, dated by export, with the current date in `VERSION`.
-To bring in a new export, follow [data/manual_cleaning.md](data/manual_cleaning.md).
+The Pandit snapshot and a copy of the [SETI](https://github.com/tylergneill/seti) master live in `data/`,
+each dated, with the current dates in `VERSION`. The steps for each are in
+[data/manual_cleaning.md](data/manual_cleaning.md).
+
+## Keeping Pāṇḍitya and SETI in step
+
+Each repo keeps a dated copy of the other's data: Pāṇḍitya a copy of the
+SETI master, SETI a copy of Pāṇḍitya's cleaned Pandit extract. Each
+records the Pandit date it uses as `__pandit_data_version__` in `VERSION`,
+and the two should match.
+
+**Every Pandit refresh: these three steps, in this order.**
+
+1. **Pāṇḍitya:** on a new branch, bring in the new Pandit export and clean
+   it (`data/manual_cleaning.md`, "Updating the Pandit data", steps 1–5).
+   Stop before `make transform`. Don't merge yet.
+2. **SETI:** `make pandit-copy DATE=<date>`, then `make check`. Fix every
+   ID it reports (most likely deleted or merged in Pandit; look it up with
+   `python3 scripts/lookup.py id <id>`), rerun `make check` until it
+   passes, and merge.
+3. **Pāṇḍitya, same branch:** copy the SETI master over
+   (`data/manual_cleaning.md`, "Updating the SETI data"), then
+   `make transform` and `make analyze`, and merge.
+
+Step 2 is where Pandit's deletions and merges are caught and fixed. If
+`make transform` fails in step 3, step 2 was skipped or incomplete: go back
+to it.
+
+**Anything else** (SETI matcher work or new rows, Pāṇḍitya code) touches
+one side only: merge it there, and the other side picks it up at its next
+update.
 
 # Feedback, License
 
