@@ -3,15 +3,15 @@
 import os
 import pandas as pd
 
-from utils.utils import get_pandit_content_version
+from utils.utils import get_pandit_source_version
 
-PANDIT_CONTENT_VERSION = get_pandit_content_version()
+PANDIT_SOURCE_VERSION = get_pandit_source_version()
 
 # Load the input CSV file
 
 current_file_dir = os.path.dirname(os.path.abspath(__file__))
 relative_data_dir = "../data"
-input_filename = f"{PANDIT_CONTENT_VERSION}-pandit-entities-export.csv"
+input_filename = f"{PANDIT_SOURCE_VERSION}-pandit-entities-export.csv"
 df = pd.read_csv(
     os.path.join(current_file_dir, relative_data_dir, input_filename),
     dtype=str,
@@ -71,7 +71,7 @@ df_filtered.rename(columns={
 df_filtered.fillna("", inplace=True)
 
 # Save the output to a new CSV file
-output_filename = f"{PANDIT_CONTENT_VERSION}-extracted-entities-raw.csv"
+output_filename = f"{PANDIT_SOURCE_VERSION}-extracted-entities-raw.csv"
 df_filtered.to_csv(os.path.join(current_file_dir, relative_data_dir, output_filename), index=False)
 
 print(f"Filtered CSV saved as {output_filename}")

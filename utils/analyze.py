@@ -11,7 +11,7 @@ import os
 from utils.load import load_entities
 from data_models import Entity
 from grapher import construct_subgraph
-from utils.utils import time_execution, get_pandit_content_version, stamp_data_version
+from utils.utils import time_execution, get_pandit_source_version, stamp_data_version
 
 
 SIZE_CATEGORIES = {
@@ -443,7 +443,7 @@ def write_data_summary(G: nx.DiGraph, component_info: Dict, entities_by_id: Dict
     the entities and relationships in the graph, and its components.
     """
     data_dir = os.path.dirname(DATA_ANALYSIS_RESULTS_DIR)
-    version = get_pandit_content_version()
+    version = get_pandit_source_version()
 
     export_rows, export_columns, content_types = count_csv(
         os.path.join(data_dir, f"{version}-pandit-entities-export.csv"))
@@ -474,7 +474,7 @@ def write_data_summary(G: nx.DiGraph, component_info: Dict, entities_by_id: Dict
                   f"the Data Notes page will call them '{labels[category]}'")
 
     summary = {
-        "pandit_content_version": version,
+        "pandit_source_version": version,
         "export": {"rows": export_rows, "columns": export_columns, "content_types": len(set(content_types))},
         "extract": {"rows": raw_rows, "cleaned_rows": cleaned_rows},
         "entities": {"total": G.number_of_nodes(), "works": entity_types["work"], "authors": entity_types["author"]},

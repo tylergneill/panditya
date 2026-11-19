@@ -30,30 +30,33 @@ each dated, with the current dates in `VERSION`. The steps for each are in
 Each repo keeps a dated copy of the other's data: Pāṇḍitya a copy of the
 SETI master, SETI a copy of Pāṇḍitya's cleaned Pandit extract. Pāṇḍitya's
 `VERSION` records when the Pandit data was sourced
-(`__pandit_content_version__`, the export's date) and when its pipeline
+(`__pandit_source_version__`, the export's date) and when its pipeline
 last ran (`__data_version__`). SETI's `VERSION` records the same two dates
 for the copy it holds, and `make check` says if that copy is behind.
 
 **Every Pandit refresh: these three steps, in this order.**
 
 1. **Pāṇḍitya:** on a new branch, bring in the new Pandit export and clean
-   it (`data/manual_cleaning.md`, "Updating the Pandit data", steps 1–5).
-   Stop before `make transform`. Don't merge yet.
+   it (`data/manual_cleaning.md`, "Updating the Pandit data", steps 1–3,
+   then `make pipeline`). Its transform checks the new Pandit data against
+   the SETI master: if it fails, the error lists the work IDs SETI must fix
+   in step 2, and nothing is written. Don't merge yet.
 2. **SETI:** `make pandit-copy`, then `make check`. Fix every
    ID it reports (most likely deleted or merged in Pandit; look it up with
    `python3 scripts/lookup.py id <id>`), rerun `make check` until it
    passes, and merge.
-3. **Pāṇḍitya, same branch:** copy the SETI master over
-   (`data/manual_cleaning.md`, "Updating the SETI data"), then
-   `make transform` and `make analyze`, and merge.
+3. **Pāṇḍitya, same branch:** `make seti-refresh` copies in the fixed
+   master under SETI's date for it and transforms, and `make analyze`
+   updates the Data Notes figures. Merge.
 
 Step 2 is where Pandit's deletions and merges are caught and fixed. If
-`make transform` fails in step 3, step 2 was skipped or incomplete: go back
+the transform fails in step 3, step 2 was skipped or incomplete: go back
 to it.
 
 **Anything else** (SETI matcher work or new rows, Pāṇḍitya code) touches
 one side only: merge it there, and the other side picks it up at its next
-update.
+update. To see a SETI change in Pāṇḍitya locally before then,
+`make seti-refresh` and restart the server.
 
 # Feedback, License
 
