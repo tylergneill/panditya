@@ -2824,7 +2824,18 @@
         "89573": {
             "GRETIL": [
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/goramaru.htm"
-            ]
+            ],
+            "DCS": {
+                "web HTML": [
+                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=59"
+                ],
+                "GitHub (1) CoNLL-U": [
+                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Amaraughaśāsana"
+                ],
+                "GitHub (2) TXT": [
+                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Amaraughaśāsana.txt"
+                ]
+            }
         },
         "89577": {
             "GRETIL": [
@@ -5905,19 +5916,6 @@
             "Muktabodha KSTS": [
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmrgendraHK.txt&miri_catalog_number=M00037"
             ]
-        },
-        "109616": {
-            "DCS": {
-                "web HTML": [
-                    "http://www.sanskrit-linguistics.org/dcs/index.php?contents=texte&IDTextDisplay=59"
-                ],
-                "GitHub (1) CoNLL-U": [
-                    "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu/files/Amaraughaśāsana"
-                ],
-                "GitHub (2) TXT": [
-                    "https://github.com/tylergneill/dcs_extract/tree/main/extracted/Amaraughaśāsana.txt"
-                ]
-            }
         },
         "109007": {
             "DCS": {
