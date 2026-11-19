@@ -39,7 +39,8 @@ The scripts need `pandas` (see `../requirements_etl.in`), e.g. in a local
 
 SETI takes its own copy of the cleaned extract (`make pandit-copy` in the
 seti repository). Do these steps as step 1 of "Keeping Pāṇḍitya and SETI
-in step" in `../README.md`, which says when to stop and when to merge.
+in step" in `../README.md`, which says what SETI does next and when to
+merge.
 
 ## Updating the SETI data
 
