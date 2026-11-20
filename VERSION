@@ -1,4 +1,4 @@
 __app_version__ = "2.6.6"
-__data_version__ = "2026-11-19"
+__data_version__ = "2026-11-20"
 __pandit_source_version__ = "2026-11-20"
-__seti_source_version__ = "2026-11-19"
+__seti_source_version__ = "2026-11-20"

@@ -1843,13 +1843,6 @@
                     "http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/yvw/katysbs/katys.htm"
                 ]
             },
-            "Muktabodha KSTS": [
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FLallesvarivakyaniHK.txt&miri_catalog_number=M00032",
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FPRASADAMANDANAM+-HK.txt&miri_catalog_number=M00170",
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FcarcastavaHK.txt&miri_catalog_number=M00307",
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmaliniivijayottaraHK.txt&miri_catalog_number=M00160",
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FparaatrisikaataatparyadiipikaaHK.txt&miri_catalog_number=M00043"
-            ],
             "UTA Dharmaśāstra": {
                 "web HTML": [
                     "https://sites.utexas.edu/sanskrit/resources/dharmasastra/",
@@ -5391,15 +5384,12 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/grahmdhu.htm"
             ]
         },
-        "88958": {
+        "117071": {
             "GRETIL": [
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/saiva/utajp_pu.htm"
             ],
             "Muktabodha KSTS": [
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FAJADAPRAMATRSIDDHIhk.txt&miri_catalog_number=M00658",
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FIISVARASIDDHI_hk.txt&miri_catalog_number=M00023",
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FISVARASIDDHIhk.txt&miri_catalog_number=M00660",
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FSAMBANDHASIDDHIHhk.txt&miri_catalog_number=M00080",
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FajapramatrisiddhiHK.txt&miri_catalog_number=M00502"
             ]
         },
@@ -5416,12 +5406,12 @@
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/manivdhu.htm"
             ]
         },
-        "89165": {
+        "116075": {
             "GRETIL": [
                 "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/malinivu.htm"
             ],
             "Muktabodha KSTS": [
-                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmaliniijayavartikaHK.txt&miri_catalog_number=M00158"
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmaliniivijayottaraHK.txt&miri_catalog_number=M00160"
             ]
         },
         "88625": {
@@ -7243,6 +7233,32 @@
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2Fmahanayaprakasa2HK.txt&miri_catalog_number=M00033"
             ]
         },
+        "117081": {
+            "Muktabodha KSTS": [
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FLallesvarivakyaniHK.txt&miri_catalog_number=M00032"
+            ]
+        },
+        "96033": {
+            "Muktabodha KSTS": [
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FLallesvarivakyaniHK.txt&miri_catalog_number=M00032"
+            ]
+        },
+        "89165": {
+            "Muktabodha KSTS": [
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FmaliniijayavartikaHK.txt&miri_catalog_number=M00158"
+            ]
+        },
+        "117069": {
+            "Muktabodha KSTS": [
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FIISVARASIDDHI_hk.txt&miri_catalog_number=M00023",
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FISVARASIDDHIhk.txt&miri_catalog_number=M00660"
+            ]
+        },
+        "117070": {
+            "Muktabodha KSTS": [
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FSAMBANDHASIDDHIHhk.txt&miri_catalog_number=M00080"
+            ]
+        },
         "89027": {
             "Muktabodha KSTS": [
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FnaresvarapariiksaaHK.txt&miri_catalog_number=M00039"
@@ -7285,9 +7301,24 @@
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FParaatrisikaavivrttiHK.txt&miri_catalog_number=M00044"
             ]
         },
+        "117074": {
+            "Muktabodha KSTS": [
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FPRASADAMANDANAM+-HK.txt&miri_catalog_number=M00170"
+            ]
+        },
+        "117075": {
+            "Muktabodha KSTS": [
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FparaatrisikaataatparyadiipikaaHK.txt&miri_catalog_number=M00043"
+            ]
+        },
         "41902": {
             "Muktabodha KSTS": [
                 "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FlaghustavaHK.txt&miri_catalog_number=M00306"
+            ]
+        },
+        "117076": {
+            "Muktabodha KSTS": [
+                "https://muktalib7.com/DL_CATALOG_ROOT/DL_CATALOG/DL_CATALOG_USER_INTERFACE/dl_user_interface_create_utf8_text.php?hk_file_url=..%2FTEXTS%2FETEXTS%2FcarcastavaHK.txt&miri_catalog_number=M00307"
             ]
         },
         "89768": {
@@ -7657,7 +7688,7 @@
     "collection_missing_work_id_counts": {
         "DCS": 92,
         "GRETIL": 258,
-        "Muktabodha KSTS": 5,
+        "Muktabodha KSTS": 0,
         "SARIT": 10,
         "Sanskrit Library and TITUS": 68,
         "Vātāyana and Pramāṇa NLP": 0,
