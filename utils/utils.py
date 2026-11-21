@@ -33,8 +33,8 @@ def time_execution(func):
 # VERSION holds, as in the Atlases:
 #   __app_version__             the code
 #   __data_version__            when the pipeline last ran (clean, transform or analyze)
-#   __pandit_content_version__  when the Pandit data was sourced: the export's date
-#   __seti_content_version__    when the SETI master was sourced: the copy's date
+#   __pandit_source_version__  when the Pandit data was sourced: the export's date
+#   __seti_source_version__    when the SETI master last changed: seti's own date for it
 # Data filenames are keyed on the content versions.
 VERSION_FILEPATH = './VERSION'
 
@@ -55,12 +55,12 @@ def get_data_version():
     return _get_version("data_version")
 
 
-def get_pandit_content_version():
-    return _get_version("pandit_content_version")
+def get_pandit_source_version():
+    return _get_version("pandit_source_version")
 
 
-def get_seti_content_version():
-    return _get_version("seti_content_version")
+def get_seti_source_version():
+    return _get_version("seti_source_version")
 
 
 def stamp_data_version():

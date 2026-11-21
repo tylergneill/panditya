@@ -1,7 +1,10 @@
 # To update the Pandit data: see data/manual_cleaning.md.
 # pandit_export: open the Pandit CSV export in the browser (babysat by hand, ~1.5-2 h).
-# extract: export -> raw extract. `python -m utils.clean`: raw -> cleaned extract. transform: cleaned extract -> entities.json.
-# analyze: entities.json -> analysis_results/, including the Data Notes figures.
+# extract: export -> raw extract. clean: raw -> cleaned extract. transform: cleaned extract -> entities.json.
+# validate: check the transformed data. analyze: entities.json -> analysis_results/, including the Data Notes figures.
+# seti-import: copy in ../seti's master, dated as SETI dates it. seti-refresh: seti-import, then transform.
+# pipeline: seti-import, extract, clean and transform, in that order (transform already validates). Run analyze after it.
+# pipeline-analyze: pipeline, then analyze.
 
 # pandit_export opens the Pandit export link, the one behind the "Download CSV"
 # button on https://panditproject.org/search. Cloudflare demands a human check
@@ -31,6 +34,9 @@ pandit_export:
 extract:
 	python -m utils.extract
 
+clean:
+	python -m utils.clean
+
 transform:
 	python -m utils.transform
 
@@ -39,6 +45,30 @@ validate:
 
 analyze:
 	python -m utils.analyze
+
+# seti-import: copy in ../seti's master as it is on disk, under the date
+# SETI's VERSION gives it (see utils/seti_import.py). seti-refresh
+# then transforms it; restart the server to see the result.
+# It refuses a master with uncommitted changes, or whose date seti hasn't
+# updated (make master-date there), since the date would be wrong;
+# FORCE=1 copies it anyway (also through seti-refresh and pipeline).
+seti-import:
+	python -m utils.seti_import $(if $(FORCE),--force)
+
+# Each step as its own make call, so they run in order even under make -j.
+seti-refresh:
+	$(MAKE) seti-import
+	$(MAKE) transform
+
+pipeline:
+	$(MAKE) seti-import
+	$(MAKE) extract
+	$(MAKE) clean
+	$(MAKE) transform
+
+pipeline-analyze:
+	$(MAKE) pipeline
+	$(MAKE) analyze
 
 construct_full_graph:
 	python -m utils.construct_full_graph
