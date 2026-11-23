@@ -337,6 +337,39 @@ test('freezing stops movement; unfreezing lets go of pinned nodes', t => {
   assert.equal(node.fy, null);
 });
 
+test('resetLayout lays everything out afresh with the given forces', t => {
+  const { view } = setup(t);
+  view.setGraph(sampleGraph(), { random: seededRandom(1) });
+  settle(view);
+  view.setForces({ charge: 700, distance: 500, collide: 40 });
+  view.setFrozen(true);
+  const node = view.getNode('w1');
+  node.fx = 5000;
+  node.fy = 5000;
+  node.x = 5000;
+  node.y = 5000;
+  view.setTransform({ x: 0, y: 0, k: 6 }, false);
+
+  view.resetLayout({ charge: 80 });
+  view.simulation.stop();
+  assert.deepEqual(view.forces, { ...DEFAULT_FORCES, charge: 80 });
+  assert.equal(view.simulation.force('charge').strength()({}), -80);
+  assert.equal(view.frozen, false);
+  assert.ok(view.nodes.every(n => n.fx === null && n.fy === null), 'nothing pinned');
+  assert.ok(view.nodes.every(n => Number.isFinite(n.x) && Number.isFinite(n.y)), 'placed again');
+  assert.ok(Math.hypot(node.x, node.y) < 1000, 'the far-off node came back');
+  assert.equal(view.getNode('w1'), node, 'same node objects');
+  assert.equal(view.pendingFit, 'full');
+});
+
+test('resetLayout with no arguments uses the defaults, and works on an empty graph', t => {
+  const { view } = setup(t);
+  view.setForces({ charge: 10 });
+  view.resetLayout();
+  view.simulation.stop();
+  assert.deepEqual(view.forces, DEFAULT_FORCES);
+});
+
 test('drag handlers pin the node while dragging and release it after', t => {
   const { view } = setup(t);
   view.setGraph(sampleGraph(), { random: seededRandom(1) });

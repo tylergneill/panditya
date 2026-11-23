@@ -65,6 +65,10 @@
       </p>
     </main>
 
+    <!-- Drag to resize the sidebar (←/→ when focused; double-click for the default width) -->
+    <div id="sidebar-resizer" role="separator" aria-orientation="vertical" aria-controls="sidebar"
+         aria-label="Resize sidebar" tabindex="0" title="Drag to resize · double-click to reset"></div>
+
     <!-- Right sidebar with all controls -->
     <aside id="sidebar">
 
@@ -113,7 +117,10 @@
           <label class="freeze-field" title="Stop all movement. Dragged nodes stay where you put them.">
             <input type="checkbox" id="freezeSwitch"> Freeze
           </label>
-          <button type="button" id="fit-button" title="Zoom to show the whole graph (F)">Fit to screen</button>
+          <div class="layout-buttons">
+            <button type="button" id="reset-layout-button" title="Sliders back to their starting values, unfreeze, and lay the graph out again">Reset</button>
+            <button type="button" id="fit-button" title="Zoom to show the whole graph (F)">Fit to screen</button>
+          </div>
         </div>
       </details>
 

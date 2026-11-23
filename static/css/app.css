@@ -128,8 +128,11 @@ body.app-page {
 
 /* --- Sidebar ------------------------------------------------------------------ */
 #sidebar {
-  width: 320px;
-  min-width: 320px;
+  /* --sidebar-width is set by the resize handle (sidebar-resize.js). */
+  width: var(--sidebar-width, 320px);
+  min-width: 240px;
+  max-width: 60%;
+  flex-shrink: 0;
   background: var(--sidebar-bg);
   color: var(--sidebar-text);
   border-left: 2px solid var(--sidebar-border);
@@ -139,6 +142,35 @@ body.app-page {
   padding: 18px 16px;
   box-sizing: border-box;
   gap: 4px;
+}
+
+/* The handle between graph and sidebar: a thin bar that lights up on hover. */
+#sidebar-resizer {
+  flex: 0 0 6px;
+  margin-right: -6px; /* overlaps the sidebar's border instead of adding width */
+  z-index: 2;
+  cursor: col-resize;
+  touch-action: none;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+#sidebar-resizer:hover,
+#sidebar-resizer:focus-visible,
+#sidebar-resizer.dragging {
+  background: var(--purple-accent);
+  outline: none;
+}
+
+/* No text selection or canvas pointer events while dragging the handle. */
+#app-layout.resizing-sidebar {
+  cursor: col-resize;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#app-layout.resizing-sidebar #graph-canvas {
+  pointer-events: none;
 }
 
 body.loading #sidebar > * {
@@ -439,6 +471,34 @@ kbd {
   background: var(--red-primary);
 }
 
+/* The fifth segment: type any number of hops. */
+.segmented #hop-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0;
+  background: transparent;
+  color: var(--sidebar-text);
+  font: inherit;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 6px 0;
+}
+
+.segmented #hop-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.segmented #hop-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.segmented #hop-input.active {
+  background: var(--red-primary);
+}
+
 /* --- Layout controls ----------------------------------------------------------------- */
 #layout-controls {
   margin-top: 8px;
@@ -492,7 +552,13 @@ kbd {
   font-size: 0.9rem;
 }
 
-.app-page #fit-button {
+.layout-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.app-page #fit-button,
+.app-page #reset-layout-button {
   padding: 6px 12px;
   font-size: 0.85rem;
 }
@@ -911,10 +977,15 @@ kbd {
     flex-direction: column;
   }
 
+  #sidebar-resizer {
+    display: none;
+  }
+
   #sidebar {
     order: -1; /* controls drop down above the graph */
     width: 100%;
     min-width: 100%;
+    max-width: none;
     border-left: none;
     border-bottom: 2px solid var(--sidebar-border);
     max-height: 0;

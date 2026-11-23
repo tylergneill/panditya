@@ -216,6 +216,32 @@ export class GraphView {
     this.simulation.alpha(0.3).restart();
   }
 
+  /**
+   * Start the layout over: the given forces (default: DEFAULT_FORCES), nothing
+   * frozen or pinned, every node placed afresh, and the view fitted to the result.
+   * @param {{charge?: number, distance?: number, collide?: number}} [forces]
+   */
+  resetLayout(forces = DEFAULT_FORCES) {
+    this.forces = { ...DEFAULT_FORCES, ...forces };
+    this.applyForces();
+    this.frozen = false;
+    for (const node of this.nodes) {
+      // d3 places nodes without a position anew (in a spiral around the centre).
+      delete node.x;
+      delete node.y;
+      delete node.vx;
+      delete node.vy;
+      node.fx = null;
+      node.fy = null;
+    }
+    this.simulation.nodes(this.nodes);
+    this.presettle();
+    this.fit({ animate: true });
+    this.pendingFit = 'full';
+    this.simulation.alpha(0.3).restart();
+    this.requestRender();
+  }
+
   onTick() {
     this.requestRender();
     if (this.pendingFit && this.simulation.alpha() < 0.1) {

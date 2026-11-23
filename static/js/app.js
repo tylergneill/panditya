@@ -20,6 +20,7 @@ import { searchEntities, fetchLabels, fetchGraph } from './api.js';
 import { ChipSearch } from './chip-search.js';
 import { DetailPanel } from './panel.js';
 import { GraphView, DEFAULT_FORCES } from './graph-view.js';
+import { setUpSidebarResizer } from './sidebar-resize.js';
 
 /** Wait this long before showing "Loading…", so quick answers don't flash it. */
 const LOADING_DELAY_MS = 250;
@@ -133,19 +134,66 @@ function syncControls() {
   renderHopButtons();
 }
 
+/**
+ * The hop control: buttons for 0..HOP_BUTTONS, then a box for any other number.
+ * Built once (so typing in the box isn't interrupted); this only updates it.
+ */
 function renderHopButtons() {
+  const { hops } = app.state;
+  for (const b of $('hop-buttons').querySelectorAll('button[data-hops]')) {
+    b.setAttribute('aria-pressed', String(Number(b.dataset.hops) === hops));
+  }
+  const input = $('hop-input');
+  const custom = hops > HOP_BUTTONS;
+  if (input !== document.activeElement) input.value = custom ? String(hops) : '';
+  input.classList.toggle('active', custom);
+}
+
+function buildHopControl() {
   const box = $('hop-buttons');
-  const values = [...Array(HOP_BUTTONS + 1).keys()];
-  if (!values.includes(app.state.hops)) values.push(app.state.hops);
-  box.replaceChildren(...values.map(h => {
+  const buttons = [...Array(HOP_BUTTONS + 1).keys()].map(h => {
     const b = document.createElement('button');
     b.type = 'button';
     b.textContent = String(h);
     b.dataset.hops = String(h);
-    b.setAttribute('aria-pressed', String(h === app.state.hops));
     b.title = h === 0 ? 'Only what you searched for' : `${h} step${h > 1 ? 's' : ''} out from what you searched for`;
     return b;
-  }));
+  });
+  const input = document.createElement('input');
+  Object.assign(input, {
+    id: 'hop-input', type: 'text', inputMode: 'numeric', autocomplete: 'off',
+    placeholder: `${HOP_BUTTONS + 1}+`, title: 'Any number of steps out (Enter to apply)',
+  });
+  input.setAttribute('aria-label', 'Hops, any number');
+  input.setAttribute('data-1p-ignore', '');
+  box.replaceChildren(...buttons, input);
+
+  box.addEventListener('click', e => {
+    const b = e.target.closest('button[data-hops]');
+    if (b) commit(setHops(app.state, b.dataset.hops));
+  });
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      applyTypedHops();
+    } else if (e.key === 'Escape') {
+      e.stopPropagation(); // don't also close the details panel
+      // Put back the value in use first, so blurring doesn't apply what was typed.
+      input.value = app.state.hops > HOP_BUTTONS ? String(app.state.hops) : '';
+      input.blur();
+    }
+  });
+  input.addEventListener('change', applyTypedHops);
+  input.addEventListener('blur', () => renderHopButtons());
+}
+
+/** Apply what's typed in the hops box: a whole number of 0 or more; anything else is undone. */
+function applyTypedHops() {
+  const input = $('hop-input');
+  const text = input.value.trim();
+  if (/^\d+$/.test(text)) commit(setHops(app.state, Number(text)));
+  input.blur();
+  renderHopButtons();
 }
 
 // --- Loading -------------------------------------------------------------------
@@ -280,9 +328,12 @@ function setUpLayoutControls(initialRepulsion) {
   view.setForces(defaults);
   $('freezeSwitch').addEventListener('change', e => view.setFrozen(e.target.checked));
   $('fit-button').addEventListener('click', () => view.fit());
-  $('hop-buttons').addEventListener('click', e => {
-    const b = e.target.closest('button[data-hops]');
-    if (b) commit(setHops(app.state, b.dataset.hops));
+  // Reset: the sliders back to this page's starting values, nothing frozen,
+  // and the layout run again from scratch.
+  $('reset-layout-button').addEventListener('click', () => {
+    for (const [elementId, force] of Object.entries(sliders)) $(elementId).value = defaults[force];
+    $('freezeSwitch').checked = false;
+    view.resetLayout(defaults);
   });
 }
 
@@ -355,7 +406,9 @@ async function init() {
   });
 
   const params = window.initialParams || null;
+  buildHopControl();
   setUpLayoutControls(params?.repulsion);
+  setUpSidebarResizer({ handle: $('sidebar-resizer'), layout: $('app-layout'), storage: window.localStorage });
   setUpKeyboard();
 
   $('sidebar-toggle')?.addEventListener('click', () => $('sidebar').classList.toggle('open'));

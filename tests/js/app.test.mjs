@@ -152,7 +152,17 @@ async function until(predicate, message = 'condition', timeout = 2000) {
 
 const graphIds = page => page.window.panditya.graph.nodes.map(n => n.id).sort();
 const chipIds = (page, rootId) => [...page.$(rootId).querySelectorAll('li.chip')].map(li => li.dataset.id);
-const pressedHop = page => page.$('hop-buttons').querySelector('[aria-pressed="true"]').dataset.hops;
+/** The hops value the control shows: a pressed button, or the number in the box. */
+const pressedHop = page => {
+  const pressed = [...page.$('hop-buttons').querySelectorAll('button[aria-pressed="true"]')];
+  const input = page.$('hop-input');
+  if (input.classList.contains('active')) {
+    assert.equal(pressed.length, 0, 'no button pressed while the box is in use');
+    return input.value;
+  }
+  assert.equal(pressed.length, 1, 'exactly one hop button pressed');
+  return pressed[0].dataset.hops;
+};
 const path = page => page.window.location.pathname + page.window.location.search;
 const loaded = page => !page.$('app-layout').classList.contains('busy') && page.fetch.graphCalls().length > 0;
 
@@ -173,7 +183,9 @@ test('empty page: examples to start from, nothing loaded', async t => {
   assert.equal(status.className, 'status-empty');
   assert.deepEqual([...status.querySelectorAll('button.example')].map(b => b.textContent), ['Kālidāsa', 'Abhinavagupta', 'Nyāyasāra']);
   assert.equal(page.fetch.calls.length, 0);
-  assert.deepEqual([...page.$('hop-buttons').children].map(b => b.textContent), ['0', '1', '2', '3']);
+  assert.deepEqual([...page.$('hop-buttons').querySelectorAll('button')].map(b => b.textContent), ['0', '1', '2', '3']);
+  assert.equal(page.$('hop-input').placeholder, '4+');
+  assert.equal(page.$('hop-input').value, '');
   assert.equal(pressedHop(page), '1');
   assert.ok(!page.document.body.classList.contains('loading'));
 });
@@ -204,10 +216,74 @@ test('a shared link: names looked up for the chips, graph loaded, URL left alone
   assert.deepEqual(page.pushes, []);
 });
 
-test('hops beyond the buttons still show as pressed', async t => {
+test('hops beyond the buttons show in the box', async t => {
   const page = await openWith(t, 'works=89000&hops=5', params({ hops: 5 }));
-  assert.deepEqual([...page.$('hop-buttons').children].map(b => b.textContent), ['0', '1', '2', '3', '5']);
+  assert.equal(page.$('hop-input').value, '5');
   assert.equal(pressedHop(page), '5');
+});
+
+/** Type `text` in the hops box and press `keyName` there. */
+function typeHops(page, text, keyName = 'Enter') {
+  const input = page.$('hop-input');
+  input.focus();
+  input.value = text;
+  return key(page.window, input, keyName);
+}
+
+test('typing a number of hops and pressing Enter applies it', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  typeHops(page, ' 7 ');
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph');
+  assert.equal(page.fetch.lastGraphRequest().hops, 7);
+  assert.deepEqual(page.pushes, ['/view?works=89000&hops=7']);
+  assert.equal(pressedHop(page), '7');
+  assert.notEqual(page.document.activeElement, page.$('hop-input'), 'box let go of focus');
+
+  // Back to a button: the box empties.
+  page.$('hop-buttons').querySelector('[data-hops="2"]').click();
+  await until(() => page.fetch.graphCalls().length === 3 && loaded(page), 'graph');
+  assert.equal(page.$('hop-input').value, '');
+  assert.equal(pressedHop(page), '2');
+});
+
+test('a small number typed in the box presses its button', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  typeHops(page, '0');
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph');
+  assert.equal(pressedHop(page), '0');
+  assert.equal(page.$('hop-input').value, '');
+});
+
+test('anything but a whole number in the hops box is undone', async t => {
+  const page = await openWith(t, 'works=89000&hops=5', params({ hops: 5 }));
+  for (const bad of ['abc', '-1', '2.5', '', '1e3']) {
+    typeHops(page, bad);
+    assert.equal(page.$('hop-input').value, '5', `"${bad}" undone`);
+  }
+  await sleep(20);
+  assert.equal(page.fetch.graphCalls().length, 1, 'no requests');
+});
+
+test('the hops box also applies when it loses focus (change)', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  const input = page.$('hop-input');
+  input.focus();
+  input.value = '4';
+  input.dispatchEvent(new page.window.Event('change'));
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph');
+  assert.equal(page.fetch.lastGraphRequest().hops, 4);
+});
+
+test('Escape in the hops box undoes the typing and leaves the panel open', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  const { view } = page.window.panditya;
+  view.onSelect(view.getNode('85303'));
+  const esc = typeHops(page, '9', 'Escape');
+  assert.equal(page.$('hop-input').value, '');
+  assert.equal(page.$('detail-panel').hidden, false);
+  await sleep(20);
+  assert.equal(page.fetch.graphCalls().length, 1);
+  assert.equal(pressedHop(page), '1');
 });
 
 test('SETI collection view: starts with its own repulsion, URL kept', async t => {
@@ -436,6 +512,51 @@ test('layout sliders, Freeze and Fit reach the graph', async t => {
   page.$('fit-button').click();
   key(page.window, page.document.body, 'f');
   assert.equal(fits, 2);
+});
+
+test('Reset puts the sliders and Freeze back and lays the graph out again', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  const { view } = page.window.panditya;
+  const calls = [];
+  const real = view.resetLayout.bind(view);
+  view.resetLayout = forces => { calls.push(forces); real(forces); };
+
+  for (const [id, value] of [['chargeStrength', '600'], ['linkDistance', '400'], ['collisionRadius', '40']]) {
+    page.$(id).value = value;
+    page.$(id).dispatchEvent(new page.window.Event('input'));
+  }
+  page.$('freezeSwitch').checked = true;
+  page.$('freezeSwitch').dispatchEvent(new page.window.Event('change'));
+  view.getNode('89000').fx = 123; // as if dragged while frozen
+
+  page.$('reset-layout-button').click();
+  assert.deepEqual(calls, [{ charge: 250, distance: 100, collide: 15 }]);
+  assert.deepEqual(['chargeStrength', 'linkDistance', 'collisionRadius'].map(id => page.$(id).value), ['250', '100', '15']);
+  assert.equal(page.$('freezeSwitch').checked, false);
+  assert.equal(view.frozen, false);
+  assert.equal(view.getNode('89000').fx, null);
+  assert.deepEqual(view.forces, { charge: 250, distance: 100, collide: 15 });
+});
+
+test('Reset on a SETI collection view goes back to its own repulsion', async t => {
+  const page = await openPage(t, {
+    url: 'http://localhost/seti/by_collection/GRETIL/visualize',
+    initialParams: { authors: ['40377'], works: ['40378'], hops: 0, exclude_list: [], expand: [], repulsion: 50 },
+  });
+  await until(() => loaded(page), 'graph');
+  page.$('chargeStrength').value = '700';
+  page.$('chargeStrength').dispatchEvent(new page.window.Event('input'));
+  page.$('reset-layout-button').click();
+  assert.equal(page.$('chargeStrength').value, '50');
+  assert.equal(page.window.panditya.view.forces.charge, 50);
+});
+
+test('the sidebar starts at its remembered width', async t => {
+  const page = await openPage(t, { storage: { 'panditya-sidebar-width': '400' } });
+  const handle = page.$('sidebar-resizer');
+  assert.equal(handle.getAttribute('role'), 'separator');
+  assert.equal(page.$('app-layout').style.getPropertyValue('--sidebar-width'), '400px');
+  assert.equal(handle.getAttribute('aria-valuenow'), '400');
 });
 
 test('keyboard: "/" jumps to search; typing "f" in a box does not fit', async t => {
