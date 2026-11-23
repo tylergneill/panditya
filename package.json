@@ -1,0 +1,13 @@
+{
+  "name": "panditya-frontend-tests",
+  "private": true,
+  "description": "Test tooling for Pāṇḍitya's browser code (static/js). Not needed to run the app.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/js/*.test.mjs"
+  },
+  "devDependencies": {
+    "d3": "7.9.0",
+    "jsdom": "^26.1.0"
+  }
+}

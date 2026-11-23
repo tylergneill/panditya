@@ -1,0 +1,2 @@
+# Test-only requirements (make test-py). Install alongside requirements.txt.
+pytest

@@ -87,3 +87,13 @@ serve-lan:
 	@echo "Open on a phone (same Wi-Fi):  http://$$(ipconfig getifaddr en0 || ipconfig getifaddr en1):$(LAN_PORT)/"
 	@echo "Open in a Parallels VM:        http://10.211.55.2:$(LAN_PORT)/"
 	FLASK_APP=flask_app.py python -m flask run --host=0.0.0.0 --port=$(LAN_PORT) --reload --no-debugger
+
+# Tests. Python: pip install -r requirements.txt -r requirements_test.in.
+# JavaScript (static/js, run in Node with jsdom; Node 20+): npm install, once.
+test: test-py test-js
+
+test-py:
+	python -m pytest tests
+
+test-js:
+	npm test
