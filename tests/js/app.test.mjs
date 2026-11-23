@@ -741,9 +741,13 @@ test('dark mode toggles, is remembered, and recolours the graph', async t => {
   let refreshed = 0;
   view.refreshPalette = () => { refreshed += 1; };
   const toggle = page.document.querySelector('.dark-toggle');
+  const labels = () => [...page.document.querySelectorAll('.dark-toggle')].map(b => [b.title, b.getAttribute('aria-label')]);
+  assert.ok(toggle.querySelector('.icon-moon') && toggle.querySelector('.icon-sun'), 'CSS picks the icon from data-theme');
+  assert.deepEqual(labels(), [['Switch to dark mode', 'Switch to dark mode'], ['Switch to dark mode', 'Switch to dark mode']]);
   toggle.click();
   assert.equal(page.document.documentElement.getAttribute('data-theme'), 'dark');
   assert.equal(page.window.localStorage.getItem('panditya-theme'), 'dark');
+  assert.deepEqual(labels(), [['Switch to light mode', 'Switch to light mode'], ['Switch to light mode', 'Switch to light mode']]);
   toggle.click();
   assert.equal(page.document.documentElement.getAttribute('data-theme'), null);
   assert.equal(page.window.localStorage.getItem('panditya-theme'), null);
@@ -753,4 +757,5 @@ test('dark mode toggles, is remembered, and recolours the graph', async t => {
 test('a saved dark theme is applied on load', async t => {
   const page = await openPage(t, { storage: { 'panditya-theme': 'dark' } });
   assert.equal(page.document.documentElement.getAttribute('data-theme'), 'dark');
+  assert.equal(page.document.querySelector('.dark-toggle').title, 'Switch to light mode');
 });

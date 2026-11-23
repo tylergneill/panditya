@@ -403,10 +403,25 @@ function setUpLayoutControls(initialRepulsion) {
   });
 }
 
+/**
+ * The dark mode button shows what it will do: a moon in light mode, a sun in
+ * dark mode. The icon follows data-theme in CSS (set in <head> before the page
+ * draws, so it never flickers); the tooltip and label are kept in step here.
+ */
+function labelThemeButtons() {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const text = dark ? 'Switch to light mode' : 'Switch to dark mode';
+  document.querySelectorAll('.dark-toggle').forEach(b => {
+    b.title = text;
+    b.setAttribute('aria-label', text);
+  });
+}
+
 function setUpTheme() {
   if (localStorage.getItem('panditya-theme') === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
   }
+  labelThemeButtons();
   const toggle = () => {
     const dark = document.documentElement.getAttribute('data-theme') === 'dark';
     if (dark) {
@@ -416,6 +431,7 @@ function setUpTheme() {
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('panditya-theme', 'dark');
     }
+    labelThemeButtons();
     view?.refreshPalette();
   };
   document.querySelectorAll('.dark-toggle').forEach(b => b.addEventListener('click', toggle));

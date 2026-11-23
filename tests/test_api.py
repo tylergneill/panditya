@@ -292,3 +292,11 @@ def test_search_box_chips_are_capped():
     css = open("static/css/app.css", encoding="utf8").read()
     block = re.search(r"\.chip-search \.chips \{(.*?)\}", css, re.S).group(1)
     assert "max-height" in block and "overflow-y: auto" in block
+
+
+def test_dark_toggle_icon_follows_the_theme():
+    """Moon in light mode, sun in dark mode, chosen by CSS from data-theme (no flicker)."""
+    css = open("static/css/app.css", encoding="utf8").read()
+    assert ".dark-toggle .icon-sun," in css
+    assert '[data-theme="dark"] .dark-toggle .icon-moon' in css
+    assert '[data-theme="dark"] .dark-toggle .icon-sun' in css

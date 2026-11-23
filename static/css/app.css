@@ -264,6 +264,17 @@ body.loading #sidebar > * {
   line-height: 1;
 }
 
+/* Moon in light mode, sun in dark mode: the icon shows what the button does. */
+.dark-toggle .icon-sun,
+[data-theme="dark"] .dark-toggle .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .dark-toggle .icon-sun {
+  display: inline-block;
+  vertical-align: -2px;
+}
+
 .app-page button.dark-toggle:hover,
 .app-page #sidebar-toggle:hover {
   background: rgba(255, 255, 255, 0.1);
