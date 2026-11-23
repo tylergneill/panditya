@@ -78,6 +78,15 @@ function markExamplesSeen() {
   }
 }
 
+/** Starting over from the name (setUpHomeLink) shows the examples again. */
+function forgetExamplesSeen() {
+  try {
+    localStorage.removeItem(EXAMPLES_SEEN_KEY);
+  } catch {
+    // Nothing stored to forget.
+  }
+}
+
 function setStatus(kind, message = '') {
   const box = $('graph-status');
   clearTimeout(loadingTimer);
@@ -470,6 +479,7 @@ function setUpTapOutsideToClose() {
 /**
  * Clicking the name (top left) starts over: no search, default hops, nothing
  * excluded or removed, as a new history entry, so Back returns to the graph.
+ * The example buttons come back too, as on a first visit.
  * Off the main page (a SETI collection view) it is an ordinary link to "/".
  * Layout settings (sliders, text size, theme) are left as they are.
  */
@@ -482,7 +492,15 @@ function setUpHomeLink() {
       box.input.value = '';
       box.setResults([]);
     }
-    commit(emptyState());
+    forgetExamplesSeen();
+    const blank = emptyState();
+    if (sameGraph(app.state, blank)) {
+      app.state = blank;
+      syncControls();
+      setStatus('empty'); // already blank: just bring the examples back
+    } else {
+      commit(blank);
+    }
   }));
 }
 

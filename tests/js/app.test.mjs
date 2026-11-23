@@ -401,10 +401,22 @@ test('clicking the name starts over with a blank page; Back returns to the graph
   assert.equal(page.$('search').querySelector('input').value, '');
   assert.equal(pressedHop(page), '1');
   assert.deepEqual(page.pushes, ['/']);
+  assert.equal(page.$('graph-status').hidden, false, 'the examples are back');
+  assert.equal(page.$('graph-status').querySelectorAll('button.example').length, 3);
 
   page.window.history.back();
   await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph again');
   assert.deepEqual(chipIds(page, 'search'), ['89000']);
+});
+
+test('clicking the name on an already blank page brings the examples back', async t => {
+  const page = await openPage(t, { storage: { 'panditya-examples-seen': '1' } });
+  await until(() => page.$('graph-status').className === 'status-empty', 'empty status');
+  assert.equal(page.$('graph-status').hidden, true);
+  page.$('sidebar-header').querySelector('.home-link').click();
+  assert.equal(page.$('graph-status').hidden, false);
+  assert.equal(page.$('graph-status').querySelectorAll('button.example').length, 3);
+  assert.deepEqual(page.pushes, [], 'no new history entry for the same blank page');
 });
 
 test('a modified click on the name is left to the browser (new tab)', async t => {
