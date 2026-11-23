@@ -421,6 +421,36 @@ function setUpTheme() {
   document.querySelectorAll('.dark-toggle').forEach(b => b.addEventListener('click', toggle));
 }
 
+/**
+ * On a phone the controls drop down over the graph, leaving a strip of it
+ * showing below. A tap on that strip closes the controls (and the keyboard)
+ * and does nothing else: no selecting, dragging or panning on the way.
+ */
+function setUpTapOutsideToClose() {
+  const area = $('graph-area');
+  let swallowClick = false;
+  const isOpenOnPhone = () => $('sidebar').classList.contains('open') && window.matchMedia?.(NARROW_SCREEN).matches;
+  area.addEventListener('pointerdown', e => {
+    if (!isOpenOnPhone()) return;
+    e.preventDefault();
+    e.stopPropagation(); // capture phase: the graph never sees it
+    $('sidebar').classList.remove('open');
+    if (document.activeElement?.matches?.('input, textarea')) document.activeElement.blur();
+    swallowClick = true;
+  }, true);
+  // The rest of that tap: touch events (d3's zoom and drag listen to these on
+  // phones, and they come after pointerdown) and the click at the end.
+  for (const type of ['touchstart', 'touchmove', 'touchend', 'click', 'dblclick']) {
+    area.addEventListener(type, e => {
+      if (!swallowClick) return;
+      e.stopPropagation();
+      if (type === 'click') swallowClick = false;
+    }, true);
+  }
+  // A tap that ends without a click (moved too far) mustn't swallow the next one.
+  area.addEventListener('pointerup', () => setTimeout(() => { swallowClick = false; }, 400), true);
+}
+
 function setUpKeyboard() {
   document.addEventListener('keydown', e => {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName);
@@ -506,6 +536,7 @@ async function init() {
   setUpKeyboard();
 
   $('sidebar-toggle')?.addEventListener('click', () => $('sidebar').classList.toggle('open'));
+  setUpTapOutsideToClose();
   window.addEventListener('popstate', async () => {
     if (!/^\/(view)?$/.test(window.location.pathname)) {
       window.location.reload();

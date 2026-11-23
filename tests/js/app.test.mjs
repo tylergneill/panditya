@@ -628,6 +628,41 @@ test('Layout stays closed on the next visit if it was closed', async t => {
   assert.equal(page.$('layout-controls').open, false);
 });
 
+test('on a phone, a tap on the graph below the open controls closes them and does nothing else', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  const { view } = page.window.panditya;
+  let narrow = true;
+  page.window.matchMedia = () => ({ matches: narrow });
+  const canvas = page.$('graph-canvas');
+  const input = page.$('search').querySelector('input');
+  const seen = [];
+  canvas.addEventListener('pointerdown', () => seen.push('pointerdown'));
+  canvas.addEventListener('click', () => seen.push('click'));
+
+  page.$('sidebar').classList.add('open');
+  input.focus();
+  const down = new page.window.MouseEvent('pointerdown', { bubbles: true, cancelable: true });
+  canvas.addEventListener('touchstart', () => seen.push('touchstart'));
+  canvas.dispatchEvent(down);
+  canvas.dispatchEvent(new page.window.Event('touchstart', { bubbles: true, cancelable: true }));
+  canvas.dispatchEvent(new page.window.MouseEvent('click', { bubbles: true, cancelable: true }));
+  assert.ok(!page.$('sidebar').classList.contains('open'));
+  assert.notEqual(page.document.activeElement, input, 'keyboard dismissed');
+  assert.ok(down.defaultPrevented);
+  assert.deepEqual(seen, [], 'the graph never saw the tap');
+  assert.equal(view.selectedId, null);
+
+  // Controls closed: taps reach the graph again.
+  canvas.dispatchEvent(new page.window.MouseEvent('click', { bubbles: true, cancelable: true }));
+  assert.deepEqual(seen, ['click']);
+
+  // Wide screen: an open sidebar doesn't get in the way.
+  narrow = false;
+  page.$('sidebar').classList.add('open');
+  canvas.dispatchEvent(new page.window.MouseEvent('pointerdown', { bubbles: true, cancelable: true }));
+  assert.ok(page.$('sidebar').classList.contains('open'));
+});
+
 test('Reset puts the sliders and Freeze back and lays the graph out again', async t => {
   const page = await openWith(t, 'works=89000&hops=1', params());
   const { view } = page.window.panditya;
