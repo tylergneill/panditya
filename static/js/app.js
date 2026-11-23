@@ -53,6 +53,29 @@ let removedSearch;
 
 let loadingTimer = null;
 
+/**
+ * The example buttons on an empty page are for a first visit only: once any
+ * graph has been shown, an empty page (say, after clearing the search) stays
+ * empty. Kept in localStorage.
+ */
+const EXAMPLES_SEEN_KEY = 'panditya-examples-seen';
+
+function examplesSeen() {
+  try {
+    return localStorage.getItem(EXAMPLES_SEEN_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function markExamplesSeen() {
+  try {
+    localStorage.setItem(EXAMPLES_SEEN_KEY, '1');
+  } catch {
+    // Not remembered: the examples just come back next time.
+  }
+}
+
 function setStatus(kind, message = '') {
   const box = $('graph-status');
   clearTimeout(loadingTimer);
@@ -70,6 +93,10 @@ function setStatus(kind, message = '') {
       box.append(Object.assign(document.createElement('span'), { className: 'spinner' }),
         document.createTextNode(' Loading graph…'));
     }, LOADING_DELAY_MS);
+    return;
+  }
+  if (kind === 'empty' && examplesSeen()) {
+    box.hidden = true;
     return;
   }
   box.hidden = false;
@@ -227,6 +254,7 @@ async function load({ history = 'push' } = {}) {
     return;
   }
 
+  markExamplesSeen();
   const controller = new AbortController();
   app.controller = controller;
   setStatus('loading');

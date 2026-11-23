@@ -193,6 +193,13 @@ test('empty page: examples to start from, nothing loaded', async t => {
   assert.ok(!page.document.body.classList.contains('loading'));
 });
 
+test('a later visit to the empty page shows no examples', async t => {
+  const page = await openPage(t, { storage: { 'panditya-examples-seen': '1' } });
+  await until(() => page.$('graph-status').className === 'status-empty', 'empty status');
+  assert.equal(page.$('graph-status').hidden, true);
+  assert.equal(page.$('graph-status').querySelectorAll('button.example').length, 0);
+});
+
 test('clicking an example loads its graph and records it in the URL', async t => {
   const page = await openPage(t);
   await until(() => !page.$('graph-status').hidden, 'empty status');
@@ -346,10 +353,13 @@ test('adding a node to "Don\'t expand" sends it as excluded', async t => {
   assert.deepEqual(graphIds(page), ['85303', '89000']);
 });
 
-test('removing the last chip goes back to the empty page', async t => {
+test('removing the last chip goes back to an empty page, without the examples this time', async t => {
   const page = await openWith(t, 'works=89000&hops=1', params());
+  assert.equal(page.window.localStorage.getItem('panditya-examples-seen'), '1');
   page.$('search').querySelector('.chip-remove').click();
   await until(() => page.$('graph-status').className === 'status-empty', 'empty status');
+  assert.equal(page.$('graph-status').hidden, true);
+  assert.equal(page.$('graph-status').querySelectorAll('button.example').length, 0);
   assert.equal(page.window.panditya.view.nodes.length, 0);
   assert.deepEqual(page.pushes, ['/']);
   assert.equal(page.fetch.graphCalls().length, 1, 'no request for nothing');
