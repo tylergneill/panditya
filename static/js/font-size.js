@@ -4,7 +4,8 @@
  *
  * The size is a scale factor on the graph's label font (draw.js), stepped
  * through LABEL_SCALES and remembered in localStorage. Every copy of the
- * control on the page (sidebar header, phone header) stays in step.
+ * control on the page stays in step: one in the sidebar header, and one in the
+ * Layout section that only phones show (their header has no room).
  *
  * Tested in tests/js/font-size.test.mjs (jsdom).
  */

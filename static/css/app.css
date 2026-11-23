@@ -226,6 +226,15 @@ body.loading #sidebar > * {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* The Layout section's copy is for phones; wider screens have it in the header. */
+.text-size-field {
+  display: none;
+}
+
+.text-size-label {
+  flex: 0 0 80px;
+}
+
 .font-size-control button:disabled {
   opacity: 0.35;
   cursor: default;
@@ -1026,7 +1035,11 @@ kbd {
   #mobile-header-actions {
     display: flex;
     align-items: center;
-    gap: 6px; /* room for the − A + buttons on small phones */
+    gap: 10px;
+  }
+
+  .text-size-field {
+    display: flex;
   }
 
   .app-page #sidebar-toggle {

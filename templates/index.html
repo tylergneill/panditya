@@ -24,7 +24,6 @@
     <h1>Pāṇḍitya</h1>
     <div id="mobile-header-actions">
       <a href="/about">About</a>
-      <div class="font-size-slot"></div>
       <button type="button" class="dark-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">&#9790;</button>
       <button type="button" id="sidebar-toggle" aria-label="Show search and controls">&#9776;</button>
     </div>
@@ -119,6 +118,11 @@
         <div class="slider-field">
           <label for="collisionRadius" title="How much room each node keeps around itself.">Radius</label>
           <input type="range" id="collisionRadius" min="0" max="50" step="5" value="15">
+        </div>
+        <!-- Phones only: the header has no room for it there (font-size.js). -->
+        <div class="slider-field text-size-field">
+          <span class="text-size-label">Text size</span>
+          <div class="font-size-slot"></div>
         </div>
         <div class="layout-row">
           <label class="freeze-field" title="Stop all movement. Dragged nodes stay where you put them.">
