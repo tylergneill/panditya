@@ -192,6 +192,16 @@ body.loading #sidebar > * {
   gap: 6px;
 }
 
+/* The name is a link back to a blank page (app.js setUpHomeLink). */
+.app-page h1 .home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-page h1 .home-link:hover {
+  opacity: 0.85;
+}
+
 #sidebar-header h1 {
   font-family: var(--name-font);
   font-size: 1.6rem;

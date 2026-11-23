@@ -467,6 +467,25 @@ function setUpTapOutsideToClose() {
   area.addEventListener('pointerup', () => setTimeout(() => { swallowClick = false; }, 400), true);
 }
 
+/**
+ * Clicking the name (top left) starts over: no search, default hops, nothing
+ * excluded or removed, as a new history entry, so Back returns to the graph.
+ * Off the main page (a SETI collection view) it is an ordinary link to "/".
+ * Layout settings (sliders, text size, theme) are left as they are.
+ */
+function setUpHomeLink() {
+  document.querySelectorAll('.home-link').forEach(link => link.addEventListener('click', e => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // new tab etc.
+    if (!/^\/(view)?$/.test(window.location.pathname)) return;
+    e.preventDefault();
+    for (const box of [mainSearch, excludeSearch, removedSearch]) {
+      box.input.value = '';
+      box.setResults([]);
+    }
+    commit(emptyState());
+  }));
+}
+
 function setUpKeyboard() {
   document.addEventListener('keydown', e => {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName);
@@ -553,6 +572,7 @@ async function init() {
 
   $('sidebar-toggle')?.addEventListener('click', () => $('sidebar').classList.toggle('open'));
   setUpTapOutsideToClose();
+  setUpHomeLink();
   window.addEventListener('popstate', async () => {
     if (!/^\/(view)?$/.test(window.location.pathname)) {
       window.location.reload();

@@ -386,6 +386,35 @@ test('removing the last chip goes back to an empty page, without the examples th
   assert.equal(page.fetch.graphCalls().length, 1, 'no request for nothing');
 });
 
+test('clicking the name starts over with a blank page; Back returns to the graph', async t => {
+  const page = await openWith(t, 'works=89000&hops=2&remove=89001', params({ hops: 2, remove: ['89001'] }));
+  const link = page.$('sidebar-header').querySelector('.home-link');
+  assert.equal(link.getAttribute('href'), '/');
+  page.$('search').querySelector('input').value = 'half-typed';
+  const click = new page.window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 });
+  link.dispatchEvent(click);
+  assert.ok(click.defaultPrevented, 'no page reload');
+  await until(() => page.$('graph-status').className === 'status-empty', 'blank page');
+  assert.equal(page.window.panditya.view.nodes.length, 0);
+  assert.deepEqual(chipIds(page, 'search'), []);
+  assert.deepEqual(chipIds(page, 'removed-search'), []);
+  assert.equal(page.$('search').querySelector('input').value, '');
+  assert.equal(pressedHop(page), '1');
+  assert.deepEqual(page.pushes, ['/']);
+
+  page.window.history.back();
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph again');
+  assert.deepEqual(chipIds(page, 'search'), ['89000']);
+});
+
+test('a modified click on the name is left to the browser (new tab)', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  const click = new page.window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0, metaKey: true });
+  page.$('mobile-header').querySelector('.home-link').dispatchEvent(click);
+  assert.ok(!click.defaultPrevented);
+  assert.deepEqual(chipIds(page, 'search'), ['89000']);
+});
+
 test('selecting a node opens its details; Escape closes them', async t => {
   const page = await openWith(t, 'works=89000&hops=1', params());
   const { view } = page.window.panditya;
