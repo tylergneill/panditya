@@ -254,14 +254,22 @@ export class GraphView {
 
   // --- View -----------------------------------------------------------------
 
-  /** Match the canvas's pixel size to its CSS size (call when the layout changes). */
+  /**
+   * Match the canvas's pixel size to its CSS size (call when the layout changes).
+   * If the size changed and the user hasn't panned or zoomed since the last fit,
+   * fit again, so the graph stays whole on screen when, say, the sidebar is
+   * resized or the controls on a phone are closed.
+   */
   resize() {
     const win = this.canvas.ownerDocument.defaultView;
+    const before = [this.width, this.height];
     this.dpr = Math.max(1, win?.devicePixelRatio || 1);
     this.width = this.canvas.clientWidth || this.canvas.width || 300;
     this.height = this.canvas.clientHeight || this.canvas.height || 150;
     this.canvas.width = Math.round(this.width * this.dpr);
     this.canvas.height = Math.round(this.height * this.dpr);
+    const changed = before[0] !== this.width || before[1] !== this.height;
+    if (changed && this.nodes?.length && !this.userMovedView) this.fit({ animate: false });
     this.render();
   }
 

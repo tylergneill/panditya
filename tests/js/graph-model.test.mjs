@@ -125,6 +125,13 @@ test('fitTransform centres the bounds and fits them inside the padding', () => {
   assert.equal(t.y + 50 * t.k, 300, 'centre y maps to middle of view');
 });
 
+test('fitTransform on a small area (phone, controls open) still fits instead of zooming right out', () => {
+  const b = { x0: 0, y0: 0, x1: 400, y1: 400 };
+  const t = fitTransform(b, 390, 90, { padding: 48, minScale: 0.05 });
+  assert.ok(t.k > 0.15, `zoom ${t.k}`);
+  assert.ok(400 * t.k <= 90, 'and the graph fits the height');
+});
+
 test('fitTransform caps the zoom for tiny graphs and handles bad input', () => {
   assert.equal(fitTransform({ x0: 0, y0: 0, x1: 1, y1: 1 }, 800, 600, { maxScale: 1.5 }).k, 1.5);
   assert.deepEqual(fitTransform(null, 800, 600), { x: 0, y: 0, k: 1 });

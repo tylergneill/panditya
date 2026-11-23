@@ -274,6 +274,31 @@ test('fit, centerOn and isOverflowing', t => {
   view.centerOn('nope', { animate: false }); // no error
 });
 
+test('a fitted view stays fitted when the canvas changes size, unless the user moved it', t => {
+  const { view, canvas } = setup(t);
+  view.setGraph(sampleGraph(), { random: seededRandom(1) });
+  settle(view);
+  view.fit({ animate: false });
+  const fits = [];
+  const realFit = view.fit.bind(view);
+  view.fit = options => { fits.push(options); realFit(options); };
+
+  view.resize(); // same size
+  assert.deepEqual(fits, []);
+
+  canvas.width = 400; // jsdom has no layout; the view reads the canvas size
+  canvas.height = 300;
+  view.resize();
+  assert.deepEqual(fits, [{ animate: false }]);
+  assert.ok(!view.isOverflowing());
+
+  view.userMovedView = true;
+  canvas.width = 800;
+  canvas.height = 600;
+  view.resize();
+  assert.equal(fits.length, 1, 'the user panned or zoomed: leave it');
+});
+
 test('after an update, the view refits only if the graph overflows and the user has not moved it', t => {
   const { view } = setup(t);
   view.setGraph(sampleGraph(), { random: seededRandom(1) });

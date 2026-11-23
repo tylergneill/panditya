@@ -322,6 +322,31 @@ function onPanelAction(action, { node, id, hops }) {
 
 // --- Setup -----------------------------------------------------------------------
 
+/** Same breakpoint as the mobile layout in app.css. */
+const NARROW_SCREEN = '(max-width: 768px)';
+const LAYOUT_CLOSED_KEY = 'panditya-layout-closed';
+
+/**
+ * The Layout section starts open; if the user closes it, it stays closed on
+ * later visits until they open it again (kept in localStorage).
+ */
+function setUpLayoutDisclosure() {
+  const details = $('layout-controls');
+  try {
+    if (localStorage.getItem(LAYOUT_CLOSED_KEY) === '1') details.open = false;
+  } catch {
+    // Storage blocked: just start open.
+  }
+  details.addEventListener('toggle', () => {
+    try {
+      if (details.open) localStorage.removeItem(LAYOUT_CLOSED_KEY);
+      else localStorage.setItem(LAYOUT_CLOSED_KEY, '1');
+    } catch {
+      // Not remembered; fine for this visit.
+    }
+  });
+}
+
 function setUpLayoutControls(initialRepulsion) {
   const sliders = { chargeStrength: 'charge', linkDistance: 'distance', collisionRadius: 'collide' };
   const defaults = { ...DEFAULT_FORCES };
@@ -333,7 +358,12 @@ function setUpLayoutControls(initialRepulsion) {
   }
   view.setForces(defaults);
   $('freezeSwitch').addEventListener('change', e => view.setFrozen(e.target.checked));
-  $('fit-button').addEventListener('click', () => view.fit());
+  $('fit-button').addEventListener('click', () => {
+    view.fit();
+    // On a phone the controls drop down over most of the graph, so close them to
+    // show it; the graph keeps fitting itself as its area grows (GraphView.resize).
+    if (window.matchMedia?.(NARROW_SCREEN).matches) $('sidebar').classList.remove('open');
+  });
   // Reset: the sliders back to this page's starting values, nothing frozen,
   // and the layout run again from scratch.
   $('reset-layout-button').addEventListener('click', () => {
@@ -428,6 +458,7 @@ async function init() {
   const params = window.initialParams || null;
   buildHopControl();
   setUpLayoutControls(params?.repulsion);
+  setUpLayoutDisclosure();
   setUpSidebarResizer({ handle: $('sidebar-resizer'), layout: $('app-layout'), storage: window.localStorage });
   setUpKeyboard();
 

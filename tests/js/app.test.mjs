@@ -568,6 +568,35 @@ test('layout sliders, Freeze and Fit reach the graph', async t => {
   assert.equal(fits, 2);
 });
 
+test('on a phone, Fit closes the controls so the graph can be seen', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  let narrow = false;
+  page.window.matchMedia = () => ({ matches: narrow });
+  page.$('sidebar').classList.add('open');
+  page.$('fit-button').click();
+  assert.ok(page.$('sidebar').classList.contains('open'), 'wide screen: sidebar stays');
+  narrow = true;
+  page.$('fit-button').click();
+  assert.ok(!page.$('sidebar').classList.contains('open'));
+});
+
+test('Layout starts open; closing it is remembered', async t => {
+  const page = await openPage(t);
+  const details = page.$('layout-controls');
+  assert.equal(details.open, true);
+  details.open = false;
+  details.dispatchEvent(new page.window.Event('toggle'));
+  assert.equal(page.window.localStorage.getItem('panditya-layout-closed'), '1');
+  details.open = true;
+  details.dispatchEvent(new page.window.Event('toggle'));
+  assert.equal(page.window.localStorage.getItem('panditya-layout-closed'), null);
+});
+
+test('Layout stays closed on the next visit if it was closed', async t => {
+  const page = await openPage(t, { storage: { 'panditya-layout-closed': '1' } });
+  assert.equal(page.$('layout-controls').open, false);
+});
+
 test('Reset puts the sliders and Freeze back and lays the graph out again', async t => {
   const page = await openWith(t, 'works=89000&hops=1', params());
   const { view } = page.window.panditya;

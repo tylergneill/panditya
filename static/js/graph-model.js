@@ -174,6 +174,9 @@ export function graphBounds(nodes) {
  */
 export function fitTransform(bounds, width, height, { padding = 48, maxScale = 1.5, minScale = 0.05 } = {}) {
   if (!bounds || width <= 0 || height <= 0) return { x: 0, y: 0, k: 1 };
+  // On a small area (a phone with the controls open) a fixed padding can eat the
+  // whole height and force the minimum zoom; keep it to a share of the area.
+  padding = Math.min(padding, width / 8, height / 8);
   const w = Math.max(bounds.x1 - bounds.x0, 1);
   const h = Math.max(bounds.y1 - bounds.y0, 1);
   const k = Math.min(
