@@ -808,6 +808,11 @@ kbd {
   display: none;
 }
 
+/* Keyboard shortcut hints mean nothing on a phone or tablet. */
+@media (hover: none), (max-width: 768px) {
+  .key-hint { display: none; }
+}
+
 @media (hover: none) {
   .hint-pointer { display: none; }
   .hint-touch { display: inline; }

@@ -309,3 +309,9 @@ def test_hint_and_legend_do_not_overlap():
     phone = css[css.index("@media (max-width: 768px)"):]
     block = re.search(r"\n  #hint-text \{(.*?)\}", phone, re.S).group(1)
     assert "top: 8px" in block and "bottom: auto" in block
+
+
+def test_slash_hint_hidden_on_phones():
+    css = open("static/css/app.css", encoding="utf8").read()
+    assert re.search(r"@media \(hover: none\), \(max-width: 768px\) \{\s*\.key-hint \{ display: none; \}", css)
+    assert 'class="key-hint"' in open("templates/index.html", encoding="utf8").read()
