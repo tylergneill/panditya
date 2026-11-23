@@ -137,3 +137,47 @@ def test_count_hidden_neighbors(entities):
 def test_count_hidden_neighbors_on_zero_hops(entities):
     g = construct_subgraph(["A3"], 0, [], entities)
     assert count_hidden_neighbors(g, "A3", entities) == 2
+
+
+# --- remove_list: taking nodes off the graph --------------------------------------
+
+def test_remove_takes_a_node_and_its_branch_off(entities):
+    full = construct_graph(["W1"], 3, [], entities_by_id=entities)
+    assert {"W2", "A2", "W3"} <= set(full.nodes)
+    g = construct_graph(["W1"], 3, [], entities_by_id=entities, remove_list=["W2"])
+    # Everything past W2 was only reachable through it.
+    assert set(g.nodes) == {"W1", "A1"}
+
+
+def test_remove_keeps_what_is_reachable_another_way(entities):
+    g = construct_graph(["W2"], 2, [], entities_by_id=entities, remove_list=["W1"])
+    assert set(g.nodes) == {"W2", "A2", "W3", "A3"}  # A1 was only there through W1
+    assert not any("W1" in edge for edge in g.edges)
+
+
+def test_remove_ignores_searched_for_nodes(entities):
+    g = construct_graph(["W2"], 1, [], entities_by_id=entities, remove_list=["W2"])
+    assert "W2" in g.nodes
+
+
+def test_expanding_a_neighbour_does_not_bring_a_removed_node_back(entities):
+    g = construct_graph(["W1"], 1, [], ["W2"], entities_by_id=entities, remove_list=["W3"])
+    assert "W3" not in g.nodes
+    assert "A2" in g.nodes  # the rest of the expansion still happens
+
+
+def test_expanding_a_removed_node_does_nothing(entities):
+    g = construct_graph(["W1"], 1, [], ["W2"], entities_by_id=entities, remove_list=["W2"])
+    assert set(g.nodes) == {"W1", "A1"}
+
+
+def test_remove_does_not_change_the_callers_lists(entities):
+    exclude, remove = ["A1"], ["W2", "W2"]
+    construct_graph(["W1"], 2, exclude, entities_by_id=entities, remove_list=remove)
+    assert exclude == ["A1"] and remove == ["W2", "W2"]
+
+
+def test_hidden_neighbors_skip_removed_nodes(entities):
+    g = construct_graph(["W2"], 0, [], entities_by_id=entities)
+    assert count_hidden_neighbors(g, "W2", entities) == 3  # A2, W1, W3
+    assert count_hidden_neighbors(g, "W2", entities, removed=["W1"]) == 2

@@ -34,22 +34,25 @@ const EDGES = [
 const neighbours = id => EDGES.flatMap(([s, t]) => (s === id ? [t] : t === id ? [s] : []));
 
 /** What the real /api/graph/subgraph would answer, for this tiny data set. */
-function subgraph({ authors, works, hops, exclude_list: exclude, expand }) {
-  for (const id of [...authors, ...works, ...exclude, ...expand]) {
+function subgraph({ authors, works, hops, exclude_list: exclude, expand, remove = [] }) {
+  for (const id of [...authors, ...works, ...exclude, ...expand, ...remove]) {
     if (!ENTITIES[id]) return { status: 400, body: { error: `Invalid ID: ${id}` } };
   }
   const centers = [...authors, ...works];
+  const removed = remove.filter(id => !centers.includes(id)); // as grapher.construct_graph
+  const stop = [...exclude, ...removed];
   const ids = new Set(centers);
   let frontier = [...centers];
   for (let h = 0; h < hops; h++) {
     const next = [];
     for (const id of frontier) {
-      if (exclude.includes(id) && !centers.includes(id)) continue;
+      if (stop.includes(id) && !centers.includes(id)) continue;
       for (const n of neighbours(id)) if (!ids.has(n)) { ids.add(n); next.push(n); }
     }
     frontier = next;
   }
-  for (const id of expand) for (const n of neighbours(id)) ids.add(n);
+  for (const id of expand) if (!removed.includes(id)) for (const n of neighbours(id)) ids.add(n);
+  for (const id of removed) ids.delete(id);
   const nodes = [...ids].map(id => ({
     id,
     type: ENTITIES[id].type,
@@ -58,7 +61,7 @@ function subgraph({ authors, works, hops, exclude_list: exclude, expand }) {
     is_central: centers.includes(id),
     is_excluded: exclude.includes(id) && !expand.includes(id),
     is_expanded: expand.includes(id),
-    hidden_neighbors: neighbours(id).filter(n => !ids.has(n)).length,
+    hidden_neighbors: neighbours(id).filter(n => !ids.has(n) && !removed.includes(n)).length,
     etext_links: false,
   }));
   const edges = EDGES.filter(([s, t]) => ids.has(s) && ids.has(t)).map(([source, target, relationship]) => ({ source, target, relationship }));
@@ -195,7 +198,7 @@ test('clicking an example loads its graph and records it in the URL', async t =>
   await until(() => !page.$('graph-status').hidden, 'empty status');
   [...page.$('graph-status').querySelectorAll('button')].find(b => b.textContent === 'Nyāyasāra').click();
   await until(() => loaded(page), 'graph');
-  assert.deepEqual(page.fetch.lastGraphRequest(), { authors: [], works: ['89000'], hops: 1, exclude_list: [], expand: [] });
+  assert.deepEqual(page.fetch.lastGraphRequest(), { authors: [], works: ['89000'], hops: 1, exclude_list: [], expand: [], remove: [] });
   assert.deepEqual(graphIds(page), ['85303', '89000']);
   assert.deepEqual(chipIds(page, 'search'), ['89000']);
   assert.deepEqual(page.pushes, ['/view?works=89000&hops=1']);
@@ -411,7 +414,7 @@ test('Recenter starts over from the node', async t => {
   view.onSelect(view.getNode('85303'));
   page.$('detail-panel').querySelector('[data-action="recenter"][data-hops="2"]').click();
   await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'recentred');
-  assert.deepEqual(page.fetch.lastGraphRequest(), { authors: ['85303'], works: [], hops: 2, exclude_list: [], expand: [] });
+  assert.deepEqual(page.fetch.lastGraphRequest(), { authors: ['85303'], works: [], hops: 2, exclude_list: [], expand: [], remove: [] });
   assert.deepEqual(chipIds(page, 'search'), ['85303']);
   assert.deepEqual(chipIds(page, 'exclude-search'), []);
   assert.equal(pressedHop(page), '2');
@@ -425,6 +428,57 @@ test('Add to search adds the node as another search term', async t => {
   await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph');
   assert.deepEqual(chipIds(page, 'search'), ['89000', '85303']);
   assert.deepEqual(page.fetch.lastGraphRequest().authors, ['85303']);
+});
+
+test('Remove takes a node off the graph and puts it in the Removed box', async t => {
+  const page = await openWith(t, 'works=89000&hops=2', params({ hops: 2 }));
+  assert.deepEqual(graphIds(page), ['85303', '89000', '89001']);
+  const { view } = page.window.panditya;
+  view.onSelect(view.getNode('85303'));
+  page.$('detail-panel').querySelector('[data-action="remove"]').click();
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph without it');
+  assert.deepEqual(page.fetch.lastGraphRequest().remove, ['85303']);
+  assert.deepEqual(graphIds(page), ['89000'], 'and 89001, only there through it');
+  assert.deepEqual(page.pushes, ['/view?works=89000&hops=2&remove=85303']);
+  assert.deepEqual(chipIds(page, 'removed-search'), ['85303']);
+  assert.equal(page.$('removed-search').querySelector('.chip .entity-name').textContent, 'Bhāsarvajña');
+  assert.equal(page.$('detail-panel').hidden, true, 'its panel closes');
+
+  // × in the Removed box brings it back.
+  page.$('removed-search').querySelector('.chip-remove').click();
+  await until(() => page.fetch.graphCalls().length === 3 && loaded(page), 'graph with it again');
+  assert.deepEqual(page.fetch.lastGraphRequest().remove, []);
+  assert.deepEqual(graphIds(page), ['85303', '89000', '89001']);
+});
+
+test('Delete removes the selected node; removing a searched-for node takes it out of the search', async t => {
+  const page = await openWith(t, 'works=89000&authors=40377&hops=1', params({ authors: ['40377'] }));
+  const { view } = page.window.panditya;
+  view.onSelect(view.getNode('40377'));
+  assert.match(page.$('detail-panel').querySelector('[data-action="remove"]').title, /out of the search/);
+  const del = key(page.window, page.document.body, 'Delete');
+  assert.ok(del.defaultPrevented);
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph');
+  assert.deepEqual(page.fetch.lastGraphRequest().authors, []);
+  assert.deepEqual(page.fetch.lastGraphRequest().remove, []);
+  assert.deepEqual(chipIds(page, 'search'), ['89000']);
+  assert.deepEqual(chipIds(page, 'removed-search'), []);
+});
+
+test('Delete while typing in a box does nothing to the graph', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  const { view } = page.window.panditya;
+  view.onSelect(view.getNode('85303'));
+  key(page.window, page.$('search').querySelector('input'), 'Delete');
+  await sleep(20);
+  assert.equal(page.fetch.graphCalls().length, 1);
+});
+
+test('a shared link with removed nodes shows their names in the Removed box', async t => {
+  const page = await openWith(t, 'works=89000&hops=2&remove=85303', params({ hops: 2, remove: ['85303'] }));
+  assert.deepEqual(page.fetch.lastGraphRequest().remove, ['85303']);
+  assert.equal(page.$('removed-search').querySelector('.chip .entity-name').textContent, 'Bhāsarvajña');
+  assert.deepEqual(graphIds(page), ['89000']);
 });
 
 test('a connection in the panel selects that node', async t => {

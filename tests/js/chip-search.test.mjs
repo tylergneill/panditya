@@ -255,3 +255,14 @@ test('typeMark', () => {
   assert.equal(author.getAttribute('aria-hidden'), 'true');
   assert.equal(typeMark(document, 'work').title, 'Work');
 });
+
+test('a long list keeps its scroll position on refresh, and scrolls to a new chip', () => {
+  const s = setup();
+  s.chips.setItems([KALIDASA, RAGHU]);
+  Object.defineProperty(s.chips.chipList, 'scrollHeight', { configurable: true, value: 300 });
+  s.chips.chipList.scrollTop = 50;
+  s.chips.setItems([KALIDASA, RAGHU]);
+  assert.equal(s.chips.chipList.scrollTop, 50, 'refreshing from the page state does not jump');
+  s.chips.add(KUMARA);
+  assert.equal(s.chips.chipList.scrollTop, 300, 'the new chip is in view');
+});

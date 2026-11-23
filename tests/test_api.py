@@ -175,6 +175,25 @@ class TestSubgraph:
         assert flags[BHASARVAJNA]["is_excluded"] is False
         assert flags[BHASARVAJNA]["is_expanded"] is True
 
+    def test_remove_takes_a_node_off_with_what_only_it_brought(self, client):
+        full = node_ids(post_graph(client, works=[NYAYASARA], hops=2))
+        r = post_graph(client, works=[NYAYASARA], hops=2, remove=[BHASARVAJNA])
+        assert r.status_code == 200
+        trimmed = node_ids(r)
+        assert BHASARVAJNA in full and BHASARVAJNA not in trimmed
+        assert trimmed < full
+        body = r.get_json()
+        assert body["parameters"]["remove"] == [BHASARVAJNA]
+        # Nothing left on screen still points at the removed node...
+        assert all(BHASARVAJNA not in (e["source"], e["target"]) for e in body["graph"]["edges"])
+        # ...or counts it as a connection waiting to be expanded.
+        center = next(n for n in body["graph"]["nodes"] if n["id"] == NYAYASARA)
+        assert center["hidden_neighbors"] == 0
+
+    def test_remove_ignores_what_was_searched_for(self, client):
+        r = post_graph(client, works=[NYAYASARA], hops=1, remove=[NYAYASARA])
+        assert NYAYASARA in node_ids(r)
+
     def test_duplicate_ids_are_harmless(self, client):
         a = node_ids(post_graph(client, works=[NYAYASARA, NYAYASARA], hops=1))
         b = node_ids(post_graph(client, works=[NYAYASARA], hops=1))
@@ -188,6 +207,8 @@ class TestSubgraph:
         ({"works": [NYAYASARA], "hops": 1, "expand": "89000"}, "expand"),
         ({"works": ["not-an-id"], "hops": 1}, "Invalid ID"),
         ({"works": [NYAYASARA], "hops": 1, "expand": ["999999999"]}, "Invalid ID"),
+        ({"works": [NYAYASARA], "hops": 1, "remove": "89000"}, "remove"),
+        ({"works": [NYAYASARA], "hops": 1, "remove": ["999999999"]}, "Invalid ID"),
     ])
     def test_bad_requests_are_400_with_a_message(self, client, body, message):
         r = client.post("/api/graph/subgraph", json=body)
@@ -229,21 +250,22 @@ class TestPages:
 
     def test_view_passes_parameters_through(self, client):
         html = client.get(f"/view?works={NYAYASARA}&authors={BHASARVAJNA}&hops=2"
-                          f"&exclude_list={KALIDASA}&expand={ABHINAVAGUPTA}").get_data(as_text=True)
+                          f"&exclude_list={KALIDASA}&expand={ABHINAVAGUPTA}&remove={KALIDASA}").get_data(as_text=True)
         assert initial_params(html) == {
             "authors": [BHASARVAJNA],
             "works": [NYAYASARA],
             "hops": 2,
             "exclude_list": [KALIDASA],
             "expand": [ABHINAVAGUPTA],
+            "remove": [KALIDASA],
         }
 
     def test_view_defaults(self, client, flask_module):
         params = initial_params(client.get(f"/view?works={NYAYASARA}").get_data(as_text=True))
         assert params["hops"] == flask_module.DEFAULT_HOPS
-        assert params["expand"] == [] and params["exclude_list"] == []
+        assert params["expand"] == [] and params["exclude_list"] == [] and params["remove"] == []
 
-    @pytest.mark.parametrize("query", ["hops=two", "authors=85303;x", "expand=a,b"])
+    @pytest.mark.parametrize("query", ["hops=two", "authors=85303;x", "expand=a,b", "remove=a;b"])
     def test_view_rejects_bad_parameters(self, client, query):
         assert client.get(f"/view?works={NYAYASARA}&{query}").status_code == 400
 
@@ -252,7 +274,7 @@ class TestPages:
         r = client.get(f"/seti/by_collection/{collection}/visualize")
         assert r.status_code == 200
         params = initial_params(r.get_data(as_text=True))
-        assert params["works"] and params["hops"] == 0 and params["expand"] == []
+        assert params["works"] and params["hops"] == 0 and params["expand"] == [] and params["remove"] == []
         assert params["repulsion"] == 50
 
     def test_seti_page_describes_the_new_panel(self, client):
@@ -263,3 +285,10 @@ class TestPages:
     @pytest.mark.parametrize("path", ["/about", "/tutorials", "/notes/data", "/notes/technical"])
     def test_other_pages_still_render(self, client, path):
         assert client.get(path).status_code == 200
+
+
+def test_search_box_chips_are_capped():
+    """The chip list scrolls inside the box instead of growing without limit (the old Select2 fix)."""
+    css = open("static/css/app.css", encoding="utf8").read()
+    block = re.search(r"\.chip-search \.chips \{(.*?)\}", css, re.S).group(1)
+    assert "max-height" in block and "overflow-y: auto" in block

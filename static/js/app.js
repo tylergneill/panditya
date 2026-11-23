@@ -14,6 +14,7 @@
 import {
   emptyState, stateFromParams, stateFromQuery, stateToUrl, stateToRequest, sameGraph,
   setCenters, addCenter, setHops, setExclude, expandNode, collapseNode, recenter, withNames,
+  removeNode, setRemoved,
   HOP_BUTTONS,
 } from './state.js';
 import { searchEntities, fetchLabels, fetchGraph } from './api.js';
@@ -46,6 +47,7 @@ let view;
 let panel;
 let mainSearch;
 let excludeSearch;
+let removedSearch;
 
 // --- Status overlay (loading / error / empty) ---------------------------------
 
@@ -131,6 +133,7 @@ function syncControls() {
   const { state } = app;
   mainSearch.setItems(state.centers.map(c => ({ ...chipFor(c.id, c.type), ...c, name: c.name || chipFor(c.id).name })));
   excludeSearch.setItems(state.exclude.map(id => chipFor(id)));
+  removedSearch.setItems((state.remove || []).map(id => chipFor(id)));
   renderHopButtons();
 }
 
@@ -306,6 +309,9 @@ function onPanelAction(action, { node, id, hops }) {
     case 'recenter':
       commit(recenter(app.state, node, hops));
       break;
+    case 'remove':
+      commit(removeNode(app.state, node.id));
+      break;
     case 'add-to-search':
       commit(addCenter(app.state, { id: node.id, type: node.type, name: node.label }));
       break;
@@ -366,6 +372,9 @@ function setUpKeyboard() {
       mainSearch.focus();
     } else if (!typing && (e.key === 'f' || e.key === 'F') && !e.metaKey && !e.ctrlKey) {
       view.fit();
+    } else if (!typing && e.key === 'Delete' && panel.isOpen && panel.node) {
+      e.preventDefault();
+      commit(removeNode(app.state, panel.node.id));
     }
   });
 }
@@ -405,6 +414,17 @@ async function init() {
     },
   });
 
+  removedSearch = new ChipSearch({
+    root: $('removed-search'),
+    search: search('all'),
+    label: 'Removed',
+    placeholder: 'Nodes to leave out…',
+    onChange: items => {
+      remember(items);
+      commit(setRemoved(app.state, items.map(i => i.id)));
+    },
+  });
+
   const params = window.initialParams || null;
   buildHopControl();
   setUpLayoutControls(params?.repulsion);
@@ -418,7 +438,7 @@ async function init() {
       return;
     }
     const next = stateFromQuery(window.location.search);
-    await learnNames([...next.centers.map(c => c.id), ...next.exclude]);
+    await learnNames([...next.centers.map(c => c.id), ...next.exclude, ...next.remove]);
     app.state = withNames(next, [...app.names.values()]);
     syncControls();
     load({ history: 'none' });
@@ -430,7 +450,7 @@ async function init() {
   document.body.classList.remove('loading');
   if (params) {
     const start = stateFromParams(params);
-    await learnNames([...start.centers.map(c => c.id), ...start.exclude]);
+    await learnNames([...start.centers.map(c => c.id), ...start.exclude, ...start.remove]);
     app.state = withNames(start, [...app.names.values()]);
     syncControls();
     await load({ history: 'none' });

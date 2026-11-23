@@ -3,8 +3,8 @@
  *
  * It shows what the old "More info" and "View on" submenus held (dates,
  * aka, social identifiers, discipline, links to Pandit and to e-texts), the
- * node's connections on screen, and the actions that used to be in the
- * "Recenter" and "Exclusions" submenus.
+ * node's connections on screen, the actions that used to be in the
+ * "Recenter" and "Exclusions" submenus, and Remove.
  *
  * All text goes in through textContent and every link is checked to be
  * http(s), so names or links in the data can't inject markup.
@@ -24,7 +24,8 @@ export class DetailPanel {
    * @param {HTMLElement} options.root  the (initially hidden) panel element
    * @param {(action: string, payload: object) => void} options.onAction
    *        called with one of: 'close'; 'select' {id}; 'expand' {node};
-   *        'collapse' {node}; 'recenter' {node, hops}; 'add-to-search' {node}
+   *        'collapse' {node}; 'recenter' {node, hops}; 'add-to-search' {node};
+   *        'remove' {node}
    */
   constructor({ root, onAction }) {
     this.root = root;
@@ -117,6 +118,12 @@ export class DetailPanel {
     if (!isCenter) {
       actions.append(button('Add to search', 'add-to-search', { title: 'Add it to the search box' }));
     }
+    actions.append(button('Remove', 'remove', {
+      className: 'danger',
+      title: isCenter
+        ? 'Take it out of the search (Delete)'
+        : 'Take it off the graph, with whatever only it brought in (Delete). It goes in the Removed box, where × brings it back.',
+    }));
     const recenter = el('div', 'panel-recenter');
     recenter.append(el('span', 'panel-recenter-label', 'Recenter here:'));
     for (const hops of [1, 2, 3]) {

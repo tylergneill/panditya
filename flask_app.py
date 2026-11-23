@@ -211,10 +211,14 @@ subgraph_model = api.model('SubgraphRequest', {
     'expand': fields.List(fields.String, required=False,
                           description='List of node IDs to expand by one extra hop (overrides exclude_list for them)',
                           example=[]),
+    'remove': fields.List(fields.String, required=False,
+                          description='List of node IDs to take off the graph, with whatever is only reached '
+                                      'through them (ignored for authors and works searched for)',
+                          example=[]),
 })
 
 
-def validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list=()):
+def validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list=(), remove_list=()):
     if not authors and not works:
         return {"error": "require either one or both of authors or works"}
     if not isinstance(hops, int) or isinstance(hops, bool) or hops < 0:
@@ -223,13 +227,17 @@ def validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list=())
         return {"error": "exclude_list must be a list"}
     if not isinstance(expand_list, list):
         return {"error": "expand must be a list"}
-    unknown = sorted(str(x) for x in set(authors) | set(works) | set(expand_list) if x not in ENTITIES_BY_ID)
+    if not isinstance(remove_list, list):
+        return {"error": "remove must be a list"}
+    unknown = sorted(
+        str(x) for x in set(authors) | set(works) | set(expand_list) | set(remove_list) if x not in ENTITIES_BY_ID
+    )
     if unknown:
         return {"error": f"Invalid ID: {', '.join(unknown)}"}
     return None
 
 
-def build_graph_response(authors, works, hops, exclude_list, expand_list=()):
+def build_graph_response(authors, works, hops, exclude_list, expand_list=(), remove_list=()):
     """
     Build the JSON body for /api/graph/subgraph.
 
@@ -239,7 +247,7 @@ def build_graph_response(authors, works, hops, exclude_list, expand_list=()):
     (so the interface can show which nodes have more to expand).
     """
     subgraph_center = list(dict.fromkeys(list(authors) + list(works)))
-    graph = construct_graph(subgraph_center, hops, exclude_list, expand_list)
+    graph = construct_graph(subgraph_center, hops, exclude_list, expand_list, remove_list=remove_list)
     annotated = annotate_graph(graph, subgraph_center, exclude_list, expand_list)
 
     nodes = []
@@ -259,7 +267,7 @@ def build_graph_response(authors, works, hops, exclude_list, expand_list=()):
             "is_excluded": flags.get('is_excluded', False),
             "is_expanded": flags.get('is_expanded', False),
             "etext_links": flags.get('etext_links', False),
-            "hidden_neighbors": count_hidden_neighbors(annotated, node),
+            "hidden_neighbors": count_hidden_neighbors(annotated, node, removed=remove_list),
         })
     edges = [
         {"source": source, "target": target, "relationship": get_edge_relationship(source, target)}
@@ -272,6 +280,7 @@ def build_graph_response(authors, works, hops, exclude_list, expand_list=()):
             "hops": hops,
             "exclude_list": list(exclude_list),
             "expand": list(expand_list),
+            "remove": list(remove_list),
         },
         "graph": {"nodes": nodes, "edges": edges},
     }
@@ -304,13 +313,16 @@ class Subgraph(Resource):
             expand_list = data.get('expand') or []
             if isinstance(expand_list, list):
                 expand_list = list(dict.fromkeys(expand_list))
+            remove_list = data.get('remove') or []
+            if isinstance(remove_list, list):
+                remove_list = list(dict.fromkeys(remove_list))
 
             # validate_inputs
-            err = validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list)
+            err = validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list, remove_list)
             if err is not None:
                 return err, 400
 
-            return jsonify(build_graph_response(authors, works, hops, exclude_list, expand_list))
+            return jsonify(build_graph_response(authors, works, hops, exclude_list, expand_list, remove_list))
 
         except KeyError as e:
             app.logger.error('Error: %s', str(e))
@@ -553,6 +565,7 @@ def visualize_collection(collection: str):
         "hops": 0,
         "exclude_list": [],
         "expand": [],
+        "remove": [],
         "repulsion": 50,
     }
 
@@ -586,8 +599,9 @@ def render_graph_from_URL_params():
         works_str = request.args.get('works', None)
         exclude_list_str = request.args.get('exclude_list', None)
         expand_str = request.args.get('expand', None)
+        remove_str = request.args.get('remove', None)
 
-        for var in [authors_str, works_str, exclude_list_str, expand_str]:
+        for var in [authors_str, works_str, exclude_list_str, expand_str, remove_str]:
             err = validate_comma_separated_list_input(var, allow_empty=True)
             if err is not None:
                 return err, 400
@@ -596,6 +610,7 @@ def render_graph_from_URL_params():
         works = works_str.strip().split(',') if works_str else []
         exclude_list = exclude_list_str.strip().split(',') if exclude_list_str else []
         expand = expand_str.strip().split(',') if expand_str else []
+        remove = remove_str.strip().split(',') if remove_str else []
 
         try:
             hops = int(request.args.get('hops', default=DEFAULT_HOPS))
@@ -609,6 +624,7 @@ def render_graph_from_URL_params():
             "hops": hops,
             "exclude_list": [x for x in exclude_list if x],
             "expand": [x for x in expand if x],
+            "remove": [x for x in remove if x],
         }
 
         # Serve the template with initialization variables

@@ -108,6 +108,14 @@ test('ordinary node: collapse, add to search, recenter; no expand', () => {
   assert.equal(s.root.querySelector('.panel-status'), null);
 });
 
+test('every node can be removed; a searched-for one is taken out of the search', () => {
+  const s = setup();
+  s.panel.show(work, { nodes, edges });
+  assert.match(byAction(s.root, 'remove')[0].title, /off the graph/);
+  s.panel.show(work, { nodes, edges, isCenter: true });
+  assert.match(byAction(s.root, 'remove')[0].title, /out of the search/);
+});
+
 test('searched-for node: no "Add to search", status says so', () => {
   const s = setup();
   s.panel.show(work, { nodes, edges, isCenter: true });
@@ -141,12 +149,14 @@ test('buttons report their action with the node', () => {
   byAction(s.root, 'collapse')[0].click();
   byAction(s.root, 'add-to-search')[0].click();
   byAction(s.root, 'recenter')[1].click();
+  byAction(s.root, 'remove')[0].click();
   byAction(s.root, 'close')[0].click();
   assert.deepEqual(s.actions, [
     ['expand', { node }],
     ['collapse', { node }],
     ['add-to-search', { node }],
     ['recenter', { node, hops: 2 }],
+    ['remove', { node }],
     ['close', { node }],
   ]);
 });

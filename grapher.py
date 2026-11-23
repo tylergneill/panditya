@@ -111,27 +111,47 @@ def construct_graph(
     exclude_list: list,
     expand_list: list = (),
     entities_by_id: Dict[str, Author | Work] = ENTITIES_BY_ID,
+    remove_list: list = (),
 ) -> nx.DiGraph:
     """
     The graph the interface shows: the usual subgraph around ``subgraph_center``,
-    plus one extra hop around each node in ``expand_list``.
+    plus one extra hop around each node in ``expand_list``, minus the nodes in
+    ``remove_list``.
 
     ``expand_list`` is what lets the interface grow a graph in place: when the user
     expands a node, the browser asks again with that node added to the list, and
     the URL can carry the list so the same graph can be rebuilt later. Expanding a
     node overrides "don't expand" for that node only.
+
+    ``remove_list`` takes nodes off the graph, together with whatever was only
+    reached through them: a removed node is treated as "don't expand" while the
+    graph is built (so the walk stops there), and then deleted. A node can't be
+    both searched for and removed; the search wins.
     """
-    graph = construct_subgraph(subgraph_center, hops, exclude_list, entities_by_id)
+    removed = [x for x in dict.fromkeys(remove_list) if x not in subgraph_center]
+    walk_exclude = list(exclude_list) + [x for x in removed if x not in exclude_list]
+    graph = construct_subgraph(subgraph_center, hops, walk_exclude, entities_by_id)
     for node_id in expand_list:
-        others_excluded = [x for x in exclude_list if x != node_id]
+        if node_id in removed:
+            continue
+        others_excluded = [x for x in walk_exclude if x != node_id]
         graph = nx.compose(graph, construct_subgraph([node_id], 1, others_excluded, entities_by_id))
+    graph.remove_nodes_from(removed)
     return graph
 
 
-def count_hidden_neighbors(graph: nx.DiGraph, node_id: str, entities_by_id: Dict[str, Author | Work] = ENTITIES_BY_ID) -> int:
-    """How many of ``node_id``'s neighbours in the full data are not in ``graph``."""
+def count_hidden_neighbors(
+    graph: nx.DiGraph,
+    node_id: str,
+    entities_by_id: Dict[str, Author | Work] = ENTITIES_BY_ID,
+    removed=(),
+) -> int:
+    """
+    How many of ``node_id``'s neighbours in the full data are not in ``graph``.
+    Neighbours the user removed don't count: expanding wouldn't bring them back.
+    """
     shown = set(graph.predecessors(node_id)) | set(graph.successors(node_id))
-    return len(set(neighbor_ids(entities_by_id[node_id])) - shown - {node_id})
+    return len(set(neighbor_ids(entities_by_id[node_id])) - shown - {node_id} - set(removed))
 
 
 def assign_node_labels_and_colors(subgraph):

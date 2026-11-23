@@ -8,6 +8,7 @@
  *     hops:    1,                   // how far out from the centers to go
  *     exclude: ["85201", ...],      // "don't expand" nodes
  *     expand:  ["88590", ...],      // nodes expanded by one extra hop in place
+ *     remove:  ["85212", ...],      // nodes taken off the graph (with what only they brought in)
  *   }
  *
  * Every user action is a pure function from one state to the next (below), the
@@ -24,8 +25,11 @@ export const HOP_BUTTONS = 3;
 
 /** A fresh, empty state. */
 export function emptyState(hops = 1) {
-  return { centers: [], hops, exclude: [], expand: [] };
+  return { centers: [], hops, exclude: [], expand: [], remove: [] };
 }
+
+/** The removed IDs of a state (states made before `remove` existed have none). */
+const removedIn = state => state.remove || [];
 
 /** Coerce anything hop-like to a non-negative integer, or `fallback`. */
 export function normalizeHops(value, fallback = 1) {
@@ -40,7 +44,7 @@ function uniqueIds(ids) {
 
 /**
  * Build a state from the parameters the server renders into the page
- * (`window.initialParams`: {authors, works, hops, exclude_list, expand}).
+ * (`window.initialParams`: {authors, works, hops, exclude_list, expand, remove}).
  * Names are unknown at this point; the caller fills them in from /api/entities/labels.
  */
 export function stateFromParams(params) {
@@ -54,6 +58,7 @@ export function stateFromParams(params) {
     hops: normalizeHops(params.hops),
     exclude: uniqueIds(params.exclude_list),
     expand: uniqueIds(params.expand),
+    remove: uniqueIds(params.remove),
   };
 }
 
@@ -68,6 +73,7 @@ export function stateFromQuery(search) {
     hops: q.get('hops') ?? 1,
     exclude_list: list('exclude_list'),
     expand: list('expand'),
+    remove: list('remove'),
   });
 }
 
@@ -81,6 +87,7 @@ export function stateToUrl(state) {
   parts.push(`hops=${state.hops}`);
   if (state.exclude.length) parts.push(`exclude_list=${state.exclude.join(',')}`);
   if (state.expand.length) parts.push(`expand=${state.expand.join(',')}`);
+  if (removedIn(state).length) parts.push(`remove=${removedIn(state).join(',')}`);
   return `/view?${parts.join('&')}`;
 }
 
@@ -92,6 +99,7 @@ export function stateToRequest(state) {
     hops: state.hops,
     exclude_list: [...state.exclude],
     expand: [...state.expand],
+    remove: [...removedIn(state)],
   };
 }
 
@@ -104,15 +112,22 @@ export function sameGraph(a, b) {
 // Each returns a new state and never modifies its input.
 //
 // Rule of thumb: changing the search (centers) or the hops starts a new
-// exploration, so in-place expansions are dropped; "don't expand" choices are
-// kept, as the old Don't Expand box kept them.
+// exploration, so in-place expansions are dropped; "don't expand" and
+// "removed" choices are kept, as the old Don't Expand box kept them.
 
 /** Replace the searched-for entities (from the search box). */
 export function setCenters(state, centers) {
   const seen = new Set();
   const unique = centers.filter(c => !seen.has(c.id) && seen.add(c.id));
   const changed = unique.map(c => c.id).join() !== state.centers.map(c => c.id).join();
-  return { ...state, centers: unique, expand: changed ? [] : state.expand };
+  const ids = new Set(unique.map(c => c.id));
+  return {
+    ...state,
+    centers: unique,
+    expand: changed ? [] : state.expand,
+    // Searching for a node brings it back if it was removed.
+    remove: removedIn(state).filter(id => !ids.has(id)),
+  };
 }
 
 /** Add one entity to the search, unless it is already there. */
@@ -151,6 +166,35 @@ export function collapseNode(state, id) {
   };
 }
 
+/**
+ * Take `id` off the graph, with whatever only it brought in. A searched-for
+ * node is taken out of the search instead.
+ */
+export function removeNode(state, id) {
+  if (state.centers.some(c => c.id === id)) {
+    return setCenters(state, state.centers.filter(c => c.id !== id));
+  }
+  const remove = removedIn(state);
+  return {
+    ...state,
+    exclude: state.exclude.filter(x => x !== id),
+    expand: state.expand.filter(x => x !== id),
+    remove: remove.includes(id) ? remove : [...remove, id],
+  };
+}
+
+/** Replace the removed list (from the Removed box, where × brings a node back). */
+export function setRemoved(state, ids) {
+  const centers = new Set(state.centers.map(c => c.id));
+  const remove = uniqueIds(ids).filter(id => !centers.has(id));
+  return {
+    ...state,
+    remove,
+    exclude: state.exclude.filter(id => !remove.includes(id)),
+    expand: state.expand.filter(id => !remove.includes(id)),
+  };
+}
+
 /** Start over around a single node (the old "Recenter" menu). */
 export function recenter(state, node, hops = state.hops) {
   return {
@@ -158,6 +202,7 @@ export function recenter(state, node, hops = state.hops) {
     hops: normalizeHops(hops, state.hops),
     exclude: [],
     expand: [],
+    remove: [],
   };
 }
 

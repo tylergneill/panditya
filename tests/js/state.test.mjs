@@ -5,13 +5,14 @@ import assert from 'node:assert/strict';
 import {
   emptyState, normalizeHops, stateFromParams, stateFromQuery, stateToUrl, stateToRequest, sameGraph,
   setCenters, addCenter, setHops, setExclude, expandNode, collapseNode, recenter, withNames,
+  removeNode, setRemoved,
 } from '../../static/js/state.js';
 
 const A = { id: '85303', type: 'author', name: 'Bhāsarvajña' };
 const W = { id: '89000', type: 'work', name: 'Nyāyasāra' };
 
 test('emptyState has nothing to show', () => {
-  assert.deepEqual(emptyState(), { centers: [], hops: 1, exclude: [], expand: [] });
+  assert.deepEqual(emptyState(), { centers: [], hops: 1, exclude: [], expand: [], remove: [] });
   assert.equal(stateToUrl(emptyState()), '/');
 });
 
@@ -46,6 +47,13 @@ test('URL round trip', () => {
   assert.ok(sameGraph(s, back));
 });
 
+test('URL round trip with removed nodes', () => {
+  const s = { centers: [W], hops: 2, exclude: [], expand: [], remove: ['7', '8'] };
+  assert.equal(stateToUrl(s), '/view?works=89000&hops=2&remove=7,8');
+  assert.deepEqual(stateFromQuery('works=89000&hops=2&remove=7,8').remove, ['7', '8']);
+  assert.deepEqual(stateFromParams({ works: ['1'], hops: 1, remove: ['9', '9'] }).remove, ['9']);
+});
+
 test('URL omits empty lists', () => {
   assert.equal(stateToUrl({ centers: [W], hops: 1, exclude: [], expand: [] }), '/view?works=89000&hops=1');
 });
@@ -55,9 +63,11 @@ test('stateFromQuery with no query is empty', () => {
 });
 
 test('stateToRequest matches the API body', () => {
-  assert.deepEqual(stateToRequest({ centers: [A, W], hops: 3, exclude: ['1'], expand: ['2'] }), {
-    authors: ['85303'], works: ['89000'], hops: 3, exclude_list: ['1'], expand: ['2'],
+  assert.deepEqual(stateToRequest({ centers: [A, W], hops: 3, exclude: ['1'], expand: ['2'], remove: ['3'] }), {
+    authors: ['85303'], works: ['89000'], hops: 3, exclude_list: ['1'], expand: ['2'], remove: ['3'],
   });
+  // A state from before `remove` existed still makes a valid request.
+  assert.deepEqual(stateToRequest({ centers: [W], hops: 1, exclude: [], expand: [] }).remove, []);
 });
 
 test('sameGraph ignores names', () => {
@@ -123,7 +133,7 @@ test('setExclude also cancels expansion of newly excluded nodes', () => {
 
 test('recenter starts over around one node', () => {
   const s = recenter({ centers: [W, A], hops: 1, exclude: ['x'], expand: ['y'] }, { id: '5', type: 'author', label: 'Five' }, 3);
-  assert.deepEqual(s, { centers: [{ id: '5', type: 'author', name: 'Five' }], hops: 3, exclude: [], expand: [] });
+  assert.deepEqual(s, { centers: [{ id: '5', type: 'author', name: 'Five' }], hops: 3, exclude: [], expand: [], remove: [] });
 });
 
 test('withNames fills names and corrects types from the server', () => {
@@ -133,4 +143,35 @@ test('withNames fills names and corrects types from the server', () => {
     { id: '85303', type: 'author', name: 'Bhāsarvajña' },
     { id: '1', type: 'work', name: '1' }, // unknown: falls back to its ID
   ]);
+});
+
+test('removeNode takes a node off and cancels its expand / "don\'t expand"', () => {
+  let s = { centers: [W], hops: 1, exclude: ['n'], expand: ['n', 'm'], remove: [] };
+  s = removeNode(s, 'n');
+  assert.deepEqual([s.exclude, s.expand, s.remove], [[], ['m'], ['n']]);
+  assert.deepEqual(removeNode(s, 'n').remove, ['n'], 'no duplicate');
+  assert.deepEqual(removeNode({ centers: [W], hops: 1, exclude: [], expand: [] }, 'x').remove, ['x'], 'old state');
+});
+
+test('removing a searched-for node takes it out of the search instead', () => {
+  const s = removeNode({ centers: [W, A], hops: 1, exclude: [], expand: ['e'], remove: [] }, W.id);
+  assert.deepEqual(s.centers.map(c => c.id), [A.id]);
+  assert.deepEqual(s.remove, []);
+  assert.deepEqual(s.expand, [], 'a new search starts a new exploration');
+});
+
+test('setRemoved (the Removed box) brings nodes back and never removes a searched-for one', () => {
+  const s = setRemoved({ centers: [W], hops: 1, exclude: ['a', 'b'], expand: ['a', 'c'], remove: ['x'] }, ['a', W.id, 'a', '']);
+  assert.deepEqual(s.remove, ['a']);
+  assert.deepEqual(s.exclude, ['b']);
+  assert.deepEqual(s.expand, ['c']);
+});
+
+test('searching for a removed node brings it back', () => {
+  const s = addCenter({ centers: [W], hops: 1, exclude: [], expand: [], remove: ['85303', 'z'] }, A);
+  assert.deepEqual(s.remove, ['z']);
+});
+
+test('changing hops keeps removed nodes removed', () => {
+  assert.deepEqual(setHops({ centers: [W], hops: 1, exclude: [], expand: [], remove: ['z'] }, 2).remove, ['z']);
 });

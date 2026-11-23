@@ -99,8 +99,10 @@ export class ChipSearch {
 
   /** Replace the chips without calling onChange (used when state comes from elsewhere). */
   setItems(items) {
+    const top = this.chipList.scrollTop; // keep the scroll position of a long list
     this.items = [...items];
     this.renderChips();
+    this.chipList.scrollTop = top;
   }
 
   /** Add an entity as a chip (no-op if already there) and notify. */
@@ -109,6 +111,8 @@ export class ChipSearch {
       this.items.push(entity);
       this.renderChips();
       this.onChange(this.getItems());
+      // Show the new chip, at the bottom of a list that may be scrolled.
+      this.chipList.scrollTop = this.chipList.scrollHeight;
     }
   }
 

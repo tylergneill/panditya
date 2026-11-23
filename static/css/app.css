@@ -285,8 +285,26 @@ kbd {
 }
 
 .chip-search .chips {
-  display: contents;
+  /* Cap the chips at about three rows and scroll inside the box, so a long
+     search doesn't push Hops and the other controls off screen (same fix as the
+     old Select2 boxes had). The typing box sits on its own row underneath and
+     the results list stays right under the box. */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 1 1 100%;
+  max-height: 110px;
+  overflow-y: auto;
+  /* overflow-y alone turns overflow-x to auto too, which shows a horizontal
+     scrollbar on Windows (classic scrollbars) for any sideways overflow. */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.chip-search .chips:empty {
+  display: none;
 }
 
 .chip {
@@ -841,6 +859,18 @@ kbd {
 
 .app-page #detail-panel .panel-button.primary:hover {
   background: var(--red-hover);
+}
+
+/* Remove: outlined, at the end of the row, so it isn't hit by accident. */
+.app-page #detail-panel .panel-button.danger {
+  margin-left: auto;
+  color: var(--red-primary);
+  border-color: var(--red-primary);
+}
+
+.app-page #detail-panel .panel-button.danger:hover {
+  background: var(--red-primary);
+  color: #fff;
 }
 
 .panel-recenter {
