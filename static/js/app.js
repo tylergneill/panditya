@@ -238,13 +238,28 @@ function applyTypedHops() {
 }
 
 /**
- * Use `hops` from now on. On a phone, a new choice also closes the controls to
- * show the graph (unless there's no search yet, so nothing to show).
+ * Use `hops` from now on. Choosing the hops already in use starts that graph
+ * over clean: expansions are dropped (as with any hops change; "Don't expand"
+ * and Removed stay) and the graph is asked for again. On a phone, a choice also
+ * closes the controls to show the graph (unless there's no search yet).
  */
 function changeHops(hops) {
-  const before = app.state.hops;
-  commit(setHops(app.state, hops));
-  if (app.state.hops !== before && app.state.centers.length) closeControlsOnPhone();
+  if (!app.state.centers.length) {
+    commit(setHops(app.state, hops));
+    return;
+  }
+  const next = setHops(app.state, hops);
+  if (next === app.state) {
+    const clean = { ...app.state, expand: [] };
+    if (sameGraph(app.state, clean)) {
+      load({ history: 'none' }); // nothing to drop: just ask again
+    } else {
+      commit(clean);
+    }
+  } else {
+    commit(next);
+  }
+  closeControlsOnPhone();
 }
 
 /** On a phone, fold the controls away (and the keyboard) so the graph is in view. */

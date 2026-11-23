@@ -329,8 +329,9 @@ test('on a phone, a new hops choice closes the controls', async t => {
   const hop = h => page.$('hop-buttons').querySelector(`button[data-hops="${h}"]`);
 
   sidebar.classList.add('open');
-  hop(1).click(); // already on
-  assert.ok(sidebar.classList.contains('open'), 'same choice: stays open');
+  hop(1).click(); // already on: asks again, and closes too
+  assert.ok(!sidebar.classList.contains('open'));
+  sidebar.classList.add('open');
   hop(2).click();
   assert.ok(!sidebar.classList.contains('open'));
 
@@ -352,11 +353,18 @@ test('on a phone with nothing searched yet, changing hops leaves the controls op
   assert.ok(page.$('sidebar').classList.contains('open'));
 });
 
-test('pressing the hop that is already on does nothing', async t => {
-  const page = await openWith(t, 'works=89000&hops=1', params());
+test('pressing the hop that is already on asks for the graph again, without expansions', async t => {
+  const page = await openWith(t, 'works=89000&hops=1&expand=85303&remove=40377', params({ expand: ['85303'], remove: ['40377'] }));
   page.$('hop-buttons').querySelector('[data-hops="1"]').click();
-  await sleep(20);
-  assert.equal(page.fetch.graphCalls().length, 1);
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'clean graph');
+  assert.deepEqual(page.fetch.lastGraphRequest().expand, []);
+  assert.deepEqual(page.fetch.lastGraphRequest().remove, ['40377'], 'Removed stays');
+  assert.deepEqual(page.pushes, ['/view?works=89000&hops=1&remove=40377']);
+
+  // Already clean: asks again, no new history entry.
+  page.$('hop-buttons').querySelector('[data-hops="1"]').click();
+  await until(() => page.fetch.graphCalls().length === 3 && loaded(page), 'graph again');
+  assert.equal(page.pushes.length, 1);
 });
 
 test('typing in the search box and picking a result adds it to the graph', async t => {
