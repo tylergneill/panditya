@@ -211,6 +211,19 @@ export class ChipSearch {
     this.input.setAttribute('aria-expanded', 'true');
   }
 
+  /**
+   * Scroll the results list (only the list) so `li` is visible. Not
+   * li.scrollIntoView(): that also scrolls the page, and on a phone with the
+   * keyboard up it pans the whole app off the top of the screen.
+   */
+  scrollResultIntoView(li) {
+    const list = this.resultList;
+    const top = li.offsetTop;
+    const bottom = top + li.offsetHeight;
+    if (top < list.scrollTop) list.scrollTop = top;
+    else if (bottom > list.scrollTop + list.clientHeight) list.scrollTop = bottom - list.clientHeight;
+  }
+
   closeResults() {
     this.resultList.hidden = true;
     this.input.setAttribute('aria-expanded', 'false');
@@ -221,7 +234,7 @@ export class ChipSearch {
       const on = i === this.active;
       li.classList.toggle('active', on);
       li.setAttribute('aria-selected', on ? 'true' : 'false');
-      if (on && typeof li.scrollIntoView === 'function') li.scrollIntoView({ block: 'nearest' });
+      if (on) this.scrollResultIntoView(li);
     });
     if (this.active >= 0) this.input.setAttribute('aria-activedescendant', `${this.id}-option-${this.active}`);
     else this.input.removeAttribute('aria-activedescendant');

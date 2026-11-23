@@ -69,6 +69,8 @@
 body.app-page {
   height: 100vh;
   height: 100dvh;
+  /* What's visible above an on-screen keyboard (set by viewport.js). */
+  height: var(--app-height, 100dvh);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -380,6 +382,8 @@ kbd {
   padding: 4px;
   list-style: none;
   max-height: 320px;
+  /* Keep the list above an on-screen keyboard (--app-height: viewport.js). */
+  max-height: min(320px, calc(var(--app-height, 100dvh) * 0.5));
   overflow-y: auto;
   background: var(--results-bg);
   color: var(--results-text);
@@ -1026,6 +1030,7 @@ kbd {
 
   #sidebar.open {
     max-height: 80vh;
+    max-height: calc(var(--app-height, 100dvh) * 0.8);
     overflow-y: auto;
     padding: 16px;
   }

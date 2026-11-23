@@ -266,3 +266,22 @@ test('a long list keeps its scroll position on refresh, and scrolls to a new chi
   s.chips.add(KUMARA);
   assert.equal(s.chips.chipList.scrollTop, 300, 'the new chip is in view');
 });
+
+test('arrowing through results scrolls only the list, never the page', async () => {
+  const s = setup({ answers: { k: [KALIDASA, RAGHU, KUMARA] } });
+  s.window.HTMLElement.prototype.scrollIntoView = () => assert.fail('scrollIntoView pans the page on phones');
+  type(s.window, s.input, 'k');
+  await sleep(5);
+  const list = s.chips.resultList;
+  Object.defineProperty(list, 'clientHeight', { configurable: true, value: 60 });
+  options(s).forEach((li, i) => {
+    Object.defineProperty(li, 'offsetTop', { configurable: true, value: i * 40 });
+    Object.defineProperty(li, 'offsetHeight', { configurable: true, value: 40 });
+  });
+  key(s.window, s.input, 'ArrowDown');
+  key(s.window, s.input, 'ArrowDown'); // third result: 80..120, list shows 0..60
+  assert.equal(list.scrollTop, 60);
+  key(s.window, s.input, 'ArrowUp');
+  key(s.window, s.input, 'ArrowUp'); // first result: 0..40
+  assert.equal(list.scrollTop, 0);
+});

@@ -22,6 +22,7 @@ import { ChipSearch } from './chip-search.js';
 import { DetailPanel } from './panel.js';
 import { GraphView, DEFAULT_FORCES } from './graph-view.js';
 import { setUpSidebarResizer } from './sidebar-resize.js';
+import { fitPageToVisibleArea } from './viewport.js';
 
 /** Wait this long before showing "Loading…", so quick answers don't flash it. */
 const LOADING_DELAY_MS = 250;
@@ -439,6 +440,7 @@ function setUpKeyboard() {
 
 async function init() {
   setUpTheme();
+  fitPageToVisibleArea(window);
 
   const canvas = $('graph-canvas');
   view = new GraphView({
