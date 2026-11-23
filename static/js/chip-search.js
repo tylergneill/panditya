@@ -26,14 +26,20 @@ export class ChipSearch {
    * @param {(query: string, signal: AbortSignal) => Promise<Array>} options.search
    *        returns entities {id, type, name, dates?, aka?, has_etexts?}
    * @param {(items: Array) => void} [options.onChange]  called with the chips after each change
+   * @param {() => void} [options.onSubmit]  called when Enter is done with the box: it
+   *        picked a result, or the box was empty and there are chips (the page uses
+   *        this on phones to close the controls and show the graph)
    * @param {string} [options.placeholder]
    * @param {string} [options.label]  accessible name for the input
    * @param {number} [options.debounceMs]
    */
-  constructor({ root, search, onChange = () => {}, placeholder = '', label = '', debounceMs = 150 }) {
+  constructor({ root, search, onChange = () => {}, onSubmit = () => {}, placeholder = '', label = '', debounceMs = 150 }) {
     this.root = root;
     this.search = search;
     this.onChange = onChange;
+    this.onSubmit = onSubmit;
+    /** A query whose first result Enter should pick as soon as it arrives. */
+    this.pickWhenReady = null;
     this.debounceMs = debounceMs;
     this.items = [];
     this.results = [];
@@ -132,6 +138,7 @@ export class ChipSearch {
 
   scheduleSearch() {
     clearTimeout(this.timer);
+    this.pickWhenReady = null; // typing again cancels a pending Enter
     const query = this.input.value.trim();
     if (!query) {
       this.controller?.abort();
@@ -163,6 +170,7 @@ export class ChipSearch {
     const doc = this.root.ownerDocument;
     const chosen = new Set(this.items.map(item => item.id));
     this.results = results.filter(r => !chosen.has(r.id));
+    this.resultsQuery = query;
     this.active = this.results.length ? 0 : -1;
     this.resultList.replaceChildren();
 
@@ -204,6 +212,16 @@ export class ChipSearch {
     this.highlight();
     if (this.resultList.children.length && this.input === doc.activeElement) this.openResults();
     else if (!this.resultList.children.length) this.closeResults();
+
+    // Enter was pressed before these results came: take the first one. (With
+    // no matches, the "no matches" line stays up and nothing is submitted.)
+    if (query && this.pickWhenReady === query) {
+      this.pickWhenReady = null;
+      if (this.results.length) {
+        this.pick(0);
+        this.onSubmit();
+      }
+    }
   }
 
   openResults() {
@@ -261,9 +279,23 @@ export class ChipSearch {
       this.active = (this.active - 1 + count) % count;
       this.highlight();
     } else if (e.key === 'Enter') {
-      if (count && this.active >= 0 && !this.resultList.hidden) {
+      const query = this.input.value.trim();
+      if (count && this.active >= 0 && !this.resultList.hidden && this.resultsQuery === query) {
         e.preventDefault();
         this.pick(this.active);
+        this.onSubmit();
+      } else if (query && this.resultsQuery !== query) {
+        // Typed and pressed Enter before the results came (common on a phone
+        // keyboard): search now and take the first result when it arrives.
+        // (If this query's results are in but the list was closed with Escape,
+        // Enter does nothing.)
+        e.preventDefault();
+        this.pickWhenReady = query;
+        clearTimeout(this.timer);
+        this.runSearch(query);
+      } else if (this.items.length) {
+        e.preventDefault();
+        this.onSubmit();
       }
     } else if (e.key === 'Escape') {
       if (!this.resultList.hidden) {

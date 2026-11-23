@@ -342,6 +342,27 @@ test('typing in the search box and picking a result adds it to the graph', async
   assert.deepEqual(chipIds(page, 'search'), ['89000', '40377']);
 });
 
+test('on a phone, Enter in the search box closes the controls and the keyboard', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  let narrow = false;
+  page.window.matchMedia = () => ({ matches: narrow });
+  const input = page.$('search').querySelector('input');
+  page.$('sidebar').classList.add('open');
+
+  type(page.window, input, 'Kāli');
+  await until(() => page.$('search').querySelectorAll('li[role=option]').length === 1, 'search results');
+  key(page.window, input, 'Enter');
+  assert.ok(page.$('sidebar').classList.contains('open'), 'wide screen: controls stay');
+
+  narrow = true;
+  type(page.window, input, 'Bhāsa');
+  key(page.window, input, 'Enter'); // before the results come back
+  await until(() => !page.$('sidebar').classList.contains('open'), 'controls closed');
+  assert.notEqual(page.document.activeElement, input, 'keyboard dismissed');
+  await until(() => page.fetch.graphCalls().length === 3 && loaded(page), 'graph with the new search');
+  assert.deepEqual(chipIds(page, 'search'), ['89000', '40377', '85303']);
+});
+
 test('adding a node to "Don\'t expand" sends it as excluded', async t => {
   const page = await openWith(t, 'works=89000&hops=2', params({ hops: 2 }));
   const input = page.$('exclude-search').querySelector('input');

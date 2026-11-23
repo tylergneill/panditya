@@ -285,3 +285,63 @@ test('arrowing through results scrolls only the list, never the page', async () 
   key(s.window, s.input, 'ArrowUp'); // first result: 0..40
   assert.equal(list.scrollTop, 0);
 });
+
+test('Enter picks the highlighted result and reports a submit', async () => {
+  const submits = [];
+  const s = setup({ answers: { kali: [KALIDASA, RAGHU] } });
+  s.chips.onSubmit = () => submits.push(chipIds(s));
+  s.input.focus();
+  type(s.window, s.input, 'kali');
+  await sleep(5);
+  key(s.window, s.input, 'Enter');
+  assert.deepEqual(submits, [['40377']]);
+});
+
+test('Enter before the results arrive picks the first one when they do', async () => {
+  const submits = [];
+  const s = setup({ answers: { kali: [KALIDASA, RAGHU] }, debounceMs: 1000 });
+  s.chips.onSubmit = () => submits.push(chipIds(s));
+  s.input.focus();
+  type(s.window, s.input, 'kali');
+  const enter = key(s.window, s.input, 'Enter'); // the debounced search hasn't run
+  assert.ok(enter.defaultPrevented);
+  await sleep(5);
+  assert.deepEqual(chipIds(s), ['40377']);
+  assert.deepEqual(submits, [['40377']]);
+  assert.equal(s.input.value, '');
+});
+
+test('Enter with no matches leaves "no matches" up and submits nothing', async () => {
+  const submits = [];
+  const s = setup({ answers: {}, debounceMs: 1000 });
+  s.chips.onSubmit = () => submits.push(true);
+  s.input.focus();
+  type(s.window, s.input, 'zzz');
+  key(s.window, s.input, 'Enter');
+  await sleep(5);
+  assert.deepEqual(submits, []);
+  assert.match(s.chips.resultList.textContent, /No authors or works match/);
+});
+
+test('typing after Enter cancels the pending pick', async () => {
+  let resolve;
+  const s = setup({ search: q => (q === 'ka' ? new Promise(r => { resolve = r; }) : Promise.resolve([])), debounceMs: 1000 });
+  s.input.focus();
+  type(s.window, s.input, 'ka');
+  key(s.window, s.input, 'Enter');
+  type(s.window, s.input, 'kal');
+  resolve([KALIDASA]);
+  await sleep(5);
+  assert.deepEqual(chipIds(s), []);
+});
+
+test('Enter in an empty box with chips is a submit; with nothing, it is not', () => {
+  const submits = [];
+  const s = setup();
+  s.chips.onSubmit = () => submits.push(true);
+  key(s.window, s.input, 'Enter');
+  assert.deepEqual(submits, []);
+  s.chips.setItems([KALIDASA]);
+  key(s.window, s.input, 'Enter');
+  assert.deepEqual(submits, [true]);
+});

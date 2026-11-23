@@ -462,6 +462,13 @@ async function init() {
       remember(items);
       commit(setCenters(app.state, items.map(i => ({ id: i.id, type: i.type, name: i.name }))));
     },
+    // On a phone, Enter in the search box closes the controls and the keyboard
+    // so the graph can be seen.
+    onSubmit: () => {
+      if (!window.matchMedia?.(NARROW_SCREEN).matches) return;
+      $('sidebar').classList.remove('open');
+      mainSearch.input.blur();
+    },
   });
   excludeSearch = new ChipSearch({
     root: $('exclude-search'),
