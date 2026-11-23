@@ -797,6 +797,8 @@ kbd {
   bottom: 12px;
   left: 0;
   right: 0;
+  /* Centred, but clear of the closed legend in the bottom-left corner. */
+  padding: 0 130px;
   text-align: center;
   margin: 0;
   font-size: 12.5px;
@@ -805,6 +807,11 @@ kbd {
 }
 
 .hint-touch { display: none; }
+
+/* The open legend is big enough to run into the hint: hide the hint meanwhile. */
+#legend[open] ~ #hint-text {
+  display: none;
+}
 
 @media (hover: none) {
   .hint-pointer { display: none; }
@@ -1119,6 +1126,13 @@ kbd {
   body.panel-open #legend,
   body.panel-open #hint-text {
     display: none;
+  }
+
+  /* Phones: no room beside the legend, so the hint goes to the top. */
+  #hint-text {
+    top: 8px;
+    bottom: auto;
+    padding: 0 12px;
   }
 
   #legend ul {

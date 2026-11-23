@@ -300,3 +300,12 @@ def test_dark_toggle_icon_follows_the_theme():
     assert ".dark-toggle .icon-sun," in css
     assert '[data-theme="dark"] .dark-toggle .icon-moon' in css
     assert '[data-theme="dark"] .dark-toggle .icon-sun' in css
+
+
+def test_hint_and_legend_do_not_overlap():
+    """Hint clear of the closed legend, hidden while it's open, and at the top on phones."""
+    css = open("static/css/app.css", encoding="utf8").read()
+    assert "#legend[open] ~ #hint-text" in css
+    phone = css[css.index("@media (max-width: 768px)"):]
+    block = re.search(r"\n  #hint-text \{(.*?)\}", phone, re.S).group(1)
+    assert "top: 8px" in block and "bottom: auto" in block
