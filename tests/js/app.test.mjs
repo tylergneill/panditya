@@ -321,6 +321,37 @@ test('changing hops reloads in place and adds a history entry', async t => {
   assert.deepEqual(graphIds(page), ['85303', '89000', '89001']);
 });
 
+test('on a phone, a new hops choice closes the controls', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  let narrow = true;
+  page.window.matchMedia = () => ({ matches: narrow });
+  const sidebar = page.$('sidebar');
+  const hop = h => page.$('hop-buttons').querySelector(`button[data-hops="${h}"]`);
+
+  sidebar.classList.add('open');
+  hop(1).click(); // already on
+  assert.ok(sidebar.classList.contains('open'), 'same choice: stays open');
+  hop(2).click();
+  assert.ok(!sidebar.classList.contains('open'));
+
+  sidebar.classList.add('open');
+  typeHops(page, '5');
+  assert.ok(!sidebar.classList.contains('open'), 'typed number too');
+
+  narrow = false;
+  sidebar.classList.add('open');
+  hop(0).click();
+  assert.ok(sidebar.classList.contains('open'), 'wide screen: no change');
+});
+
+test('on a phone with nothing searched yet, changing hops leaves the controls open', async t => {
+  const page = await openPage(t);
+  page.window.matchMedia = () => ({ matches: true });
+  page.$('sidebar').classList.add('open');
+  page.$('hop-buttons').querySelector('button[data-hops="2"]').click();
+  assert.ok(page.$('sidebar').classList.contains('open'));
+});
+
 test('pressing the hop that is already on does nothing', async t => {
   const page = await openWith(t, 'works=89000&hops=1', params());
   page.$('hop-buttons').querySelector('[data-hops="1"]').click();

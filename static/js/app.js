@@ -211,7 +211,7 @@ function buildHopControl() {
 
   box.addEventListener('click', e => {
     const b = e.target.closest('button[data-hops]');
-    if (b) commit(setHops(app.state, b.dataset.hops));
+    if (b) changeHops(b.dataset.hops);
   });
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
@@ -232,9 +232,26 @@ function buildHopControl() {
 function applyTypedHops() {
   const input = $('hop-input');
   const text = input.value.trim();
-  if (/^\d+$/.test(text)) commit(setHops(app.state, Number(text)));
+  if (/^\d+$/.test(text)) changeHops(Number(text));
   input.blur();
   renderHopButtons();
+}
+
+/**
+ * Use `hops` from now on. On a phone, a new choice also closes the controls to
+ * show the graph (unless there's no search yet, so nothing to show).
+ */
+function changeHops(hops) {
+  const before = app.state.hops;
+  commit(setHops(app.state, hops));
+  if (app.state.hops !== before && app.state.centers.length) closeControlsOnPhone();
+}
+
+/** On a phone, fold the controls away (and the keyboard) so the graph is in view. */
+function closeControlsOnPhone() {
+  if (!window.matchMedia?.(NARROW_SCREEN).matches) return;
+  $('sidebar').classList.remove('open');
+  if (document.activeElement?.matches?.('input, textarea')) document.activeElement.blur();
 }
 
 // --- Loading -------------------------------------------------------------------
@@ -401,7 +418,7 @@ function setUpLayoutControls(initialRepulsion) {
     view.fit();
     // On a phone the controls drop down over most of the graph, so close them to
     // show it; the graph keeps fitting itself as its area grows (GraphView.resize).
-    if (window.matchMedia?.(NARROW_SCREEN).matches) $('sidebar').classList.remove('open');
+    closeControlsOnPhone();
   });
   // Reset: the sliders back to this page's starting values, nothing frozen,
   // and the layout run again from scratch.
@@ -548,11 +565,7 @@ async function init() {
     },
     // On a phone, Enter in the search box closes the controls and the keyboard
     // so the graph can be seen.
-    onSubmit: () => {
-      if (!window.matchMedia?.(NARROW_SCREEN).matches) return;
-      $('sidebar').classList.remove('open');
-      mainSearch.input.blur();
-    },
+    onSubmit: () => closeControlsOnPhone(),
   });
   excludeSearch = new ChipSearch({
     root: $('exclude-search'),
