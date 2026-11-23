@@ -744,10 +744,10 @@ test('Reset on a SETI collection view goes back to its own repulsion', async t =
 test('the − A + buttons size the names on the graph, and are remembered', async t => {
   const page = await openWith(t, 'works=89000&hops=1', params());
   const { view } = page.window.panditya;
-  assert.equal(page.document.querySelectorAll('.font-size-control').length, 2, 'sidebar header, and Layout for phones');
-  assert.equal(page.document.querySelectorAll('#mobile-header .font-size-control').length, 0, 'phone header has no room');
+  assert.equal(page.document.querySelectorAll('.font-size-control').length, 1, 'in Layout only');
+  assert.ok(page.$('layout-controls').querySelector('.font-size-control'));
   assert.equal(view.labelScale, 1);
-  page.document.querySelector('#sidebar-header [data-font="up"]').click();
+  page.document.querySelector('#layout-controls [data-font="up"]').click();
   assert.equal(view.labelScale, 1.15);
   assert.equal(page.window.localStorage.getItem('panditya-label-scale'), '1.15');
   page.document.querySelector('#layout-controls [data-font="reset"]').click();

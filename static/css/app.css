@@ -215,7 +215,7 @@ body.loading #sidebar > * {
   gap: 10px;
 }
 
-/* The − A + text size buttons (font-size.js), in both headers. */
+/* The − A + text size buttons (font-size.js), in the Layout section. */
 .font-size-control {
   display: flex;
   gap: 3px;
@@ -234,11 +234,6 @@ body.loading #sidebar > * {
 
 .font-size-control button:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.1);
-}
-
-/* The Layout section's copy is for phones; wider screens have it in the header. */
-.text-size-field {
-  display: none;
 }
 
 .text-size-label {
@@ -1066,9 +1061,6 @@ kbd {
     gap: 10px;
   }
 
-  .text-size-field {
-    display: flex;
-  }
 
   .app-page #sidebar-toggle {
     font-size: 20px;

@@ -3,9 +3,8 @@
  * them back to normal (A). Like HANSEL's text size control.
  *
  * The size is a scale factor on the graph's label font (draw.js), stepped
- * through LABEL_SCALES and remembered in localStorage. Every copy of the
- * control on the page stays in step: one in the sidebar header, and one in the
- * Layout section that only phones show (their header has no room).
+ * through LABEL_SCALES and remembered in localStorage. The control sits in the
+ * Layout section; any further copies would stay in step with it.
  *
  * Tested in tests/js/font-size.test.mjs (jsdom).
  */
