@@ -665,6 +665,18 @@ test('Reset on a SETI collection view goes back to its own repulsion', async t =
   assert.equal(page.window.panditya.view.forces.charge, 50);
 });
 
+test('the − A + buttons size the names on the graph, and are remembered', async t => {
+  const page = await openWith(t, 'works=89000&hops=1', params());
+  const { view } = page.window.panditya;
+  assert.equal(page.document.querySelectorAll('.font-size-control').length, 2, 'sidebar and phone headers');
+  assert.equal(view.labelScale, 1);
+  page.document.querySelector('#sidebar-header [data-font="up"]').click();
+  assert.equal(view.labelScale, 1.15);
+  assert.equal(page.window.localStorage.getItem('panditya-label-scale'), '1.15');
+  page.document.querySelector('#mobile-header [data-font="reset"]').click();
+  assert.equal(view.labelScale, 1);
+});
+
 test('the sidebar starts at its remembered width', async t => {
   const page = await openPage(t, { storage: { 'panditya-sidebar-width': '400' } });
   const handle = page.$('sidebar-resizer');

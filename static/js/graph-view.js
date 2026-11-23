@@ -63,6 +63,7 @@ export class GraphView {
     this.dpr = 1;
     this.pendingFit = null; // null | 'full' | 'overflow'
     this.userMovedView = false;
+    this.labelScale = 1;
     this.frame = null;
     this.lastStats = null;
 
@@ -306,6 +307,12 @@ export class GraphView {
     }
   }
 
+  /** Size of the names on the graph, as a factor of normal (the − A + control). */
+  setLabelScale(scale) {
+    this.labelScale = scale > 0 ? scale : 1;
+    this.render();
+  }
+
   /** Re-read colours from CSS (after switching light/dark). */
   refreshPalette() {
     this.palette = readPalette(this.safeStyle());
@@ -428,6 +435,7 @@ export class GraphView {
       selectedId: this.selectedId,
       focus: this.neighborhood(this.selectedId),
       labelFocus: this.neighborhood(this.hoverId),
+      labelScale: this.labelScale,
     });
   }
 

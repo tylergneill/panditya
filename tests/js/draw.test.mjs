@@ -104,6 +104,16 @@ test('labels: all shown for a small graph, with a halo first', () => {
   assert.ok(strokeText > -1 && strokeText < fillText, 'halo drawn under the text');
 });
 
+test('labelScale (the − A + control) sizes the names', () => {
+  const fonts = scale => {
+    const ctx = recordingContext();
+    drawScene(ctx, scene([{ id: 'a', type: 'work', label: 'A', x: 0, y: 0 }], [], scale ? { labelScale: scale } : {}));
+    return sets(ctx, 'font');
+  };
+  assert.match(fonts()[0], /^13px /);
+  assert.match(fonts(1.5)[0], /^19.5px /);
+});
+
 test('labels: big graph zoomed out shows only searched-for and focused ones', () => {
   const nodes = Array.from({ length: ALL_LABELS_MAX_NODES + 10 }, (_, i) => ({
     id: String(i), type: 'work', label: `Label ${i}`, x: (i % 10) * 300, y: Math.floor(i / 10) * 300,

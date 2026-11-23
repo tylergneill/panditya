@@ -185,6 +185,7 @@ body.loading #sidebar > * {
 
 #sidebar-header {
   display: flex;
+  flex-wrap: wrap; /* a narrow sidebar puts the buttons under the name */
   align-items: center;
   justify-content: space-between;
   margin-bottom: 14px;
@@ -202,6 +203,32 @@ body.loading #sidebar > * {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+/* The − A + text size buttons (font-size.js), in both headers. */
+.font-size-control {
+  display: flex;
+  gap: 3px;
+}
+
+.font-size-control button {
+  min-width: 24px;
+  padding: 3px 5px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--sidebar-text);
+  border-radius: 4px;
+  font: 600 13px/1 var(--ui-font);
+  cursor: pointer;
+}
+
+.font-size-control button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.font-size-control button:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 
 #sidebar-header-links a,
@@ -999,7 +1026,7 @@ kbd {
   #mobile-header-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px; /* room for the − A + buttons on small phones */
   }
 
   .app-page #sidebar-toggle {

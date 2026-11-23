@@ -120,6 +120,7 @@ export function drawScene(ctx, scene) {
   const {
     width, height, dpr = 1, transform, nodes, edges, palette,
     hoverId = null, selectedId = null, focus = null, labelFocus = null,
+    labelScale = 1, // the − A + text size control (font-size.js)
   } = scene;
   const k = transform.k;
   const dim = focus && focus.size > 0;
@@ -238,7 +239,7 @@ export function drawScene(ctx, scene) {
   ctx.textBaseline = 'bottom';
   ctx.lineJoin = 'round';
   for (const node of candidates) {
-    const px = node.is_central ? CENTRAL_LABEL_PX : LABEL_PX;
+    const px = (node.is_central ? CENTRAL_LABEL_PX : LABEL_PX) * labelScale;
     ctx.font = `${node.is_central ? 'bold ' : ''}${px / k}px ${LABEL_FONT_FAMILY}`;
     const textWidth = ctx.measureText(node.label).width * k; // in screen px
     const sx = node.x * k + transform.x;

@@ -23,6 +23,7 @@ import { DetailPanel } from './panel.js';
 import { GraphView, DEFAULT_FORCES } from './graph-view.js';
 import { setUpSidebarResizer } from './sidebar-resize.js';
 import { fitPageToVisibleArea } from './viewport.js';
+import { setUpFontSize } from './font-size.js';
 
 /** Wait this long before showing "Loading…", so quick answers don't flash it. */
 const LOADING_DELAY_MS = 250;
@@ -496,6 +497,11 @@ async function init() {
   buildHopControl();
   setUpLayoutControls(params?.repulsion);
   setUpLayoutDisclosure();
+  setUpFontSize({
+    roots: [...document.querySelectorAll('.font-size-slot')],
+    storage: window.localStorage,
+    onChange: scale => view.setLabelScale(scale),
+  });
   setUpSidebarResizer({ handle: $('sidebar-resizer'), layout: $('app-layout'), storage: window.localStorage });
   setUpKeyboard();
 
