@@ -1,0 +1,395 @@
+/* =============================
+   Info pages: About, SETI, Tutorials and the notes pages
+   (templates/info_base.html). Light and dark follow data-theme, like the
+   graph page; colours come from style.css where they are shared.
+============================= */
+
+.info-page {
+  --info-bg: var(--graph-bg);           /* the same paper as the graph */
+  --info-surface: #ffffff;
+  --info-text: #2b2233;
+  --info-muted: #6f6578;
+  --info-heading: var(--purple-medium);
+  --info-link: #7a2a8c;
+  --info-link-hover: var(--red-primary);
+  --info-rule: rgba(90, 11, 115, 0.14);
+  --info-tint: #f3e8fa;                 /* table headers, code, hovered cards */
+  --info-shadow: 0 1px 3px rgba(47, 23, 70, 0.08), 0 4px 14px rgba(47, 23, 70, 0.06);
+  --info-font: "Gentium Plus", "Gentium Book Plus", Georgia, serif;
+  --info-ui-font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+[data-theme="dark"] .info-page {
+  --info-surface: #232338;
+  --info-text: #e6e1ec;
+  --info-muted: #a39cb0;
+  --info-heading: var(--lavender);
+  --info-link: var(--lavender);
+  --info-link-hover: var(--yellow-link);
+  --info-rule: rgba(224, 175, 255, 0.16);
+  --info-tint: rgba(224, 175, 255, 0.09);
+  --info-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+body.info-page {
+  /* style.css centres a purple column for the graph page; undo that here. */
+  display: block;
+  min-height: 100vh;
+  background: var(--info-bg);
+  color: var(--info-text);
+  font-family: var(--info-font);
+  font-size: 1.125rem;   /* Gentium runs small, so the prose is a step up */
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+[lang="sa"] {
+  font-family: "Noto Serif Devanagari", var(--info-font);
+}
+
+/* ---------- Header: the same deep purple bar as the graph's sidebar ---------- */
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 8px 20px;
+  padding: 10px max(20px, calc((100% - 760px) / 2));
+  background: var(--purple-deep);
+  color: #ffffff;
+  border-bottom: 2px solid var(--purple-medium);
+}
+
+.info-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--info-font);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.info-name:hover { opacity: 0.85; }
+
+.info-nav {
+  display: flex;
+  gap: 4px 16px;
+  margin-left: auto;
+  font-family: var(--info-ui-font);
+  font-size: 0.9rem;
+}
+
+.info-nav a {
+  color: var(--yellow-link);
+  text-decoration: none;
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.info-nav a:hover { color: var(--yellow-link-hover); }
+
+.info-nav a[aria-current="page"] {
+  color: #ffffff;
+  border-bottom-color: var(--red-primary);
+}
+
+/* The moon/sun button, as on the graph page (icon picked by data-theme). */
+.info-header .dark-toggle {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.info-header .dark-toggle:hover { background: rgba(255, 255, 255, 0.1); }
+
+.dark-toggle .icon-sun,
+[data-theme="dark"] .dark-toggle .icon-moon { display: none; }
+
+[data-theme="dark"] .dark-toggle .icon-sun {
+  display: inline-block;
+  vertical-align: -2px;
+}
+
+/* ---------- Page body ---------- */
+
+.info-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 36px 20px 56px;
+}
+
+.info-main h1 {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  margin: 0 0 22px;
+  color: var(--info-heading);
+  letter-spacing: 0.01em;
+}
+
+.info-main h2 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin: 36px 0 12px;
+  color: var(--info-heading);
+}
+
+.info-main p { margin: 0 0 18px; }
+
+.info-main a {
+  color: var(--info-link);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.info-main a:hover {
+  color: var(--info-link-hover);
+  text-decoration-color: currentColor;
+}
+
+.info-main code {
+  font-family: "SF Mono", Consolas, "Liberation Mono", monospace;
+  font-size: 0.85em;
+  background: var(--info-tint);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* Lists: a small purple ▸ instead of a bullet, as before. */
+.info-main ul {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+}
+
+.info-main li {
+  position: relative;
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.info-main li::before {
+  content: "\25B8";
+  position: absolute;
+  left: 2px;
+  color: var(--purple-node);
+  font-size: 0.8em;
+  top: 0.25em;
+}
+
+.info-main ul ul { margin: 6px 0 4px; font-size: 0.95em; }
+.info-main ul ul li::before { content: "\25E6"; top: 0.1em; }
+
+/* "About ›" above a notes page's title. */
+.crumbs {
+  font-family: var(--info-ui-font);
+  font-size: 0.85rem;
+  color: var(--info-muted);
+  margin-bottom: 6px;
+}
+
+.info-main .crumbs a { color: var(--info-muted); text-decoration: none; }
+.info-main .crumbs a:hover { color: var(--info-link-hover); }
+
+/* ---------- About ---------- */
+
+.about .hero {
+  text-align: center;
+  margin: 8px 0 34px;
+}
+
+.about .hero img { display: block; margin: 0 auto 10px; }
+
+.about .hero h1 {
+  font-size: 3rem;
+  margin-bottom: 6px;
+}
+
+/* The dictionary-entry line under the name. */
+.about .lexicon {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 16px;
+  border-top: 1px solid var(--info-rule);
+  border-bottom: 1px solid var(--info-rule);
+  color: var(--info-muted);
+  font-size: 1.05rem;
+}
+
+.about .lexicon b { color: var(--info-text); }
+
+/* The links to the other pages, as a grid of cards. */
+.page-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.info-main .page-cards a {
+  position: relative;
+  display: block;
+  padding: 14px 36px 14px 16px;
+  background: var(--info-surface);
+  border: 1px solid var(--info-rule);
+  border-left: 3px solid var(--purple-node);
+  border-radius: 8px;
+  box-shadow: var(--info-shadow);
+  color: var(--info-text);
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.info-main .page-cards a::after {
+  content: "\2192";
+  position: absolute;
+  right: 14px;
+  color: var(--purple-node);
+}
+
+.info-main .page-cards a:hover {
+  border-left-color: var(--red-primary);
+  background: var(--info-tint);
+  color: var(--info-text);
+  transform: translateY(-1px);
+}
+
+/* ---------- Technical notes ---------- */
+
+.facts {
+  margin: 0 0 18px;
+  padding: 6px 18px;
+  background: var(--info-surface);
+  border: 1px solid var(--info-rule);
+  border-radius: 8px;
+  box-shadow: var(--info-shadow);
+}
+
+.facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--info-rule);
+}
+
+.facts div:last-child { border-bottom: none; }
+.facts dt { color: var(--info-muted); }
+.facts dd { margin: 0; font-variant-numeric: tabular-nums; text-align: right; }
+
+.link-row { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+
+/* ---------- Updates: the "(Nov '26)" lines read as date labels ---------- */
+
+.notes-updates > p {
+  margin: 30px 0 4px;
+  font-family: var(--info-ui-font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--info-muted);
+}
+
+/* ---------- Tables (SETI collections, data notes) ---------- */
+
+.table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 24px 0;
+  border: 1px solid var(--info-rule);
+  border-radius: 8px;
+  box-shadow: var(--info-shadow);
+  background: var(--info-surface);
+}
+
+.data-table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--info-rule);
+  text-align: right;
+}
+
+.data-table th:first-child,
+.data-table td:first-child { text-align: left; }
+
+.data-table thead th {
+  background: var(--info-tint);
+  color: var(--info-heading);
+  font-family: var(--info-ui-font);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+
+.data-table tbody tr:hover { background: var(--info-tint); }
+
+.data-table tfoot th {
+  border-bottom: none;
+  border-top: 2px solid var(--info-rule);
+}
+
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+/* ---------- Tutorials ---------- */
+
+.info-main video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  border-radius: 8px;
+  box-shadow: var(--info-shadow);
+}
+
+/* ---------- Footer ---------- */
+
+.info-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 22px;
+  padding: 22px 20px 32px;
+  border-top: 1px solid var(--info-rule);
+  font-family: var(--info-ui-font);
+  font-size: 0.85rem;
+}
+
+.info-footer a { color: var(--info-muted); text-decoration: none; }
+.info-footer a:hover { color: var(--info-link-hover); }
+
+/* ---------- Phones ---------- */
+
+@media (max-width: 600px) {
+  body.info-page { font-size: 1.06rem; }
+
+  /* Name and moon on the first row, the page links under them. */
+  .info-header { flex-wrap: wrap; padding: 10px 16px; }
+  .info-nav { order: 3; width: 100%; margin-left: 0; }
+  .info-header .dark-toggle { margin-left: auto; }
+
+  .info-main { padding: 26px 16px 44px; }
+  .info-main h1 { font-size: 1.9rem; }
+  .about .hero h1 { font-size: 2.4rem; }
+  .info-main h2 { font-size: 1.25rem; }
+  .facts div { flex-direction: column; gap: 0; }
+  .facts dd { text-align: left; }
+}

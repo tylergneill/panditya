@@ -1,40 +1,29 @@
+{% extends 'info_base.html' %}
 {% from 'macros.html' import ext_link_icon %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technical Notes - Pāṇḍitya</title>
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <div id="technical-notes-container" class="shared-container">
-
+{% set nav = 'about' %}
+{% block title %}Technical Notes{% endblock %}
+{% block main_class %}notes notes-technical{% endblock %}
+{% block crumbs %}{% include '_crumb_about.html' %}{% endblock %}
+{% block content %}
     <h1>Technical Notes</h1>
 
-    <p>App version: {{ app_version }}</p>
-    <p>Pandit data sourced: {{ pandit_source_version }}</p>
-    <p>SETI data sourced: {{ seti_source_version }}</p>
-    <p>Data pipeline last run: {{ data_version }}</p>
-    <p><a href="https://github.com/tylergneill/pandit_grapher" target="_blank">Code on GitHub{{ ext_link_icon() }}</a></p>
-    <p><a href="/notes/updates">Updates</a></p>
-    <p>Key Aspects:
-      <ul>
+    <dl class="facts">
+      <div><dt>App version</dt><dd>{{ app_version }}</dd></div>
+      <div><dt>Pandit data sourced</dt><dd>{{ pandit_source_version }}</dd></div>
+      <div><dt>SETI data sourced</dt><dd>{{ seti_source_version }}</dd></div>
+      <div><dt>Data pipeline last run</dt><dd>{{ data_version }}</dd></div>
+    </dl>
+    <p class="link-row">
+      <a href="https://github.com/tylergneill/pandit_grapher" target="_blank">Code on GitHub{{ ext_link_icon() }}</a>
+      <a href="/notes/updates">Updates</a>
+    </p>
+    <h2>Key Aspects</h2>
+    <ul>
         <li>Pāṇḍitya is coded in Python using the libraries NetworkX and Flask</li>
         <li>The backend is structured as an ETL pipeline (see <a href="https://github.com/tylergneill/pandit_grapher/tree/main/utils" target="_blank">utils{{ ext_link_icon() }}</a>) and a REST API (<a href="/api/docs" target="_blank">Swagger doc</a>)</li>
-        <li>A special `view` route takes Pandit IDs in the URL to render the corresponding interactive graph,
+        <li>A special <code>view</code> route takes Pandit IDs in the URL to render the corresponding interactive graph,
           allowing other sites to link into Pāṇḍitya
           (<a href="/view?works=89000&hops=2" target="_blank">example</a>) </li>
         <li>Graph visuals are created using the D3 JavaScript library</li>
       </ul>
-      </p>
-
-    <div class="footer">
-      <p>Back to <a href="/about">About</a></p>
-      <p>Back to <a href="/">Home</a></p>
-    </div>
-
-  </div>
-</body>
-</html>
+{% endblock %}

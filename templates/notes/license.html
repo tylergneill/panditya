@@ -1,33 +1,18 @@
+{% extends 'info_base.html' %}
 {% from 'macros.html' import ext_link_icon %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>License Notes - Pāṇḍitya</title>
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <div id="license-notes-container" class="shared-container">
-
+{% set nav = 'about' %}
+{% block title %}License Notes{% endblock %}
+{% block main_class %}notes notes-license{% endblock %}
+{% block crumbs %}{% include '_crumb_about.html' %}{% endblock %}
+{% block content %}
     <h1>License Notes</h1>
 
     <p>Pāṇḍitya derives from Pandit, but it is not officially affiliated with it.</p>
 
-    <p>Pandit uses the Creative Commons BY-NC-SA 4.0 license. In compliance with that, Pāṇḍitya does the following:
-      <ul>
+    <p>Pandit uses the Creative Commons BY-NC-SA 4.0 license. In compliance with that, Pāṇḍitya does the following:</p>
+    <ul>
         <li>(BY) gratefully acknowledges Pandit as its source</li>
         <li>(NC) promises to remain a strictly non-commercial undertaking</li>
         <li>(SA) also carries the same <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank">CC BY-NC-SA 4.0 license{{ ext_link_icon() }}</a></li>
       </ul>
-    </p>
-
-    <div class="footer">
-      <p>Back to <a href="/about">About</a></p>
-      <p>Back to <a href="/">Home</a></p>
-    </div>
-
-  </div>
-</body>
-</html>
+{% endblock %}

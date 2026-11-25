@@ -24,6 +24,7 @@ import { GraphView, DEFAULT_FORCES } from './graph-view.js';
 import { setUpSidebarResizer } from './sidebar-resize.js';
 import { fitPageToVisibleArea } from './viewport.js';
 import { setUpFontSize } from './font-size.js';
+import { setUpThemeToggle } from './theme.js';
 
 /** Wait this long before showing "Loading…", so quick answers don't flash it. */
 const LOADING_DELAY_MS = 250;
@@ -444,38 +445,9 @@ function setUpLayoutControls(initialRepulsion) {
   });
 }
 
-/**
- * The dark mode button shows what it will do: a moon in light mode, a sun in
- * dark mode. The icon follows data-theme in CSS (set in <head> before the page
- * draws, so it never flickers); the tooltip and label are kept in step here.
- */
-function labelThemeButtons() {
-  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  const text = dark ? 'Switch to light mode' : 'Switch to dark mode';
-  document.querySelectorAll('.dark-toggle').forEach(b => {
-    b.title = text;
-    b.setAttribute('aria-label', text);
-  });
-}
-
+/** Dark mode (theme.js); the graph is redrawn in the new colours. */
 function setUpTheme() {
-  if (localStorage.getItem('panditya-theme') === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
-  labelThemeButtons();
-  const toggle = () => {
-    const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-    if (dark) {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.removeItem('panditya-theme');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('panditya-theme', 'dark');
-    }
-    labelThemeButtons();
-    view?.refreshPalette();
-  };
-  document.querySelectorAll('.dark-toggle').forEach(b => b.addEventListener('click', toggle));
+  setUpThemeToggle({ onChange: () => view?.refreshPalette() });
 }
 
 /**

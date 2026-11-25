@@ -1,15 +1,8 @@
+{% extends 'info_base.html' %}
 {% from 'macros.html' import ext_link_icon %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SETI - Pāṇḍitya</title>
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <div id="seti-container" class="shared-container">
+{% set nav = 'seti' %}
+{% block title %}SETI{% endblock %}
+{% block content %}
     <h1>SETI</h1>
     <p>
       The Sanskrit E-Text Inventory (SETI)—or "Search for E-Textual Intelligence"—
@@ -36,7 +29,7 @@
       Click on the below links to see an interactive visualization of each.
     </p>
     <div class="table-scroll-wrapper">
-    <table id="fancy-table">
+    <table class="data-table">
       <thead>
         <tr>
           <th>Collection</th>
@@ -49,7 +42,7 @@
         {% for collection, stats in etext_data_summary.items() %}
         <tr>
           <td>
-            <a href="seti/by_collection/{{ collection }}/visualize">{{ collection }}</a>
+            <a href="/seti/by_collection/{{ collection }}/visualize">{{ collection }}</a>
           </td>
           <td>{{ stats.etexts }}</td>
           <td>{{ stats.etexts - stats.etexts_missing_works }} ({{ stats.etext_coverage }}%)</td>
@@ -65,10 +58,4 @@
       see the API <code>/seti</code> routes
       (<a href="/api/docs" target="_blank">Swagger doc</a>).
     </p>
-    <div class="footer">
-      <p>Back to <a href="/about">About</a></p>
-      <p>Back to <a href="/">Home</a></p>
-    </div>
-  </div>
-</body>
-</html>
+{% endblock %}

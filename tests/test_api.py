@@ -18,6 +18,10 @@ NYAYASARA = "89000"
 ABHINAVAGUPTA = "85352"
 
 
+INFO_PAGES = ["/about", "/seti", "/tutorials", "/notes/author", "/notes/data",
+              "/notes/license", "/notes/technical", "/notes/updates"]
+
+
 def post_graph(client, **body):
     body.setdefault("hops", 1)
     return client.post("/api/graph/subgraph", json=body)
@@ -282,9 +286,29 @@ class TestPages:
         assert "right-click" not in html
         assert "details panel" in html
 
-    @pytest.mark.parametrize("path", ["/about", "/tutorials", "/notes/data", "/notes/technical"])
+    @pytest.mark.parametrize("path", INFO_PAGES)
     def test_other_pages_still_render(self, client, path):
         assert client.get(path).status_code == 200
+
+    @pytest.mark.parametrize("path", INFO_PAGES)
+    def test_info_pages_share_one_layout(self, client, path):
+        """Every info page has the shared header: name back to the graph, page links, dark mode."""
+        html = client.get(path).get_data(as_text=True)
+        assert "css/info.css" in html and "js/info.js" in html
+        assert 'class="info-name"' in html and 'class="dark-toggle"' in html
+        # The saved theme is applied in <head>, before the page draws.
+        assert html.index("panditya-theme") < html.index("<body")
+        # The header marks the section the page belongs to.
+        expected = {"/seti": "/seti", "/tutorials": "/tutorials"}.get(path, "/about")
+        assert re.findall(r'<a href="([^"]+)" aria-current="page">', html) == [expected]
+        # Notes pages lead back to About.
+        assert ('class="crumbs"' in html) == path.startswith("/notes/")
+
+    @pytest.mark.parametrize("path", INFO_PAGES)
+    def test_info_pages_put_no_list_inside_a_paragraph(self, client, path):
+        """A <ul> can't sit in a <p>: browsers close the <p> early and the spacing goes wrong."""
+        html = client.get(path).get_data(as_text=True)
+        assert not re.search(r"<p>(?:(?!</p>).)*<ul", html, re.S)
 
 
 def test_search_box_chips_are_capped():
