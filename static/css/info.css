@@ -393,3 +393,30 @@ body.info-page {
   .facts div { flex-direction: column; gap: 0; }
   .facts dd { text-align: left; }
 }
+
+/* ---------- Widget demo (/widget/demo) ---------- */
+
+.info-main pre {
+  overflow-x: auto;
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  background: var(--info-surface);
+  border: 1px solid var(--info-rule);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.info-main pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Names marked for the widget look clickable. */
+[data-panditya-work],
+[data-panditya-author],
+[data-panditya-search] {
+  cursor: pointer;
+  color: var(--info-link);
+  border-bottom: 1px dashed currentColor;
+}

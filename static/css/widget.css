@@ -1,0 +1,105 @@
+/* =============================================================================
+   The small view of the Pāṇḍitya widget (templates/widget.html), shown in an
+   iframe by widget-loader.js. The search box and graph colours come from
+   app.css; this file only lays the page out: search on top, graph filling the
+   rest, a one-line footer.
+============================================================================= */
+
+html, body.widget-page {
+  height: 100%;
+}
+
+body.widget-page {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+  background: var(--graph-bg);
+  color: var(--panel-text);
+  font-family: var(--ui-font);
+  overflow: hidden;
+}
+
+#widget-search {
+  padding: 8px;
+  background: var(--purple-deep);
+  position: relative;
+  z-index: 2; /* the results list opens over the graph */
+}
+
+/* The chip's × (styled for .app-page in app.css). */
+.widget-page .chip-remove {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 5px;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.widget-page .chip-remove:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.widget-page .chip-search .results {
+  max-height: min(320px, 70vh);
+}
+
+#widget-graph {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+#widget-graph canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#widget-status {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  color: var(--panel-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+#widget-status[hidden] {
+  display: none;
+}
+
+#widget-footer {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 6px 10px;
+  min-height: 1.4em;
+  border-top: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  font-size: 0.8rem;
+}
+
+#widget-current {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--name-font);
+  font-size: 0.95rem;
+}
+
+#widget-pandit {
+  color: var(--panel-link);
+  white-space: nowrap;
+}

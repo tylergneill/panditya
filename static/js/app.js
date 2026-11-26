@@ -26,6 +26,7 @@ import { setUpSidebarResizer } from './sidebar-resize.js';
 import { fitPageToVisibleArea } from './viewport.js';
 import { setUpFontSize } from './font-size.js';
 import { setUpThemeToggle } from './theme.js';
+import { tellEmbedder } from './embed.js';
 
 /** Wait this long before showing "Loading…", so quick answers don't flash it. */
 const LOADING_DELAY_MS = 250;
@@ -326,8 +327,9 @@ async function load({ history = 'push' } = {}) {
 }
 
 function updateUrl(mode) {
-  if (mode === 'none') return;
   const url = stateToUrl(app.state);
+  tellEmbedder(url); // the widget, when the app runs inside it (embed.js)
+  if (mode === 'none') return;
   if (url === window.location.pathname + window.location.search) return;
   if (mode === 'replace') window.history.replaceState({ panditya: true }, '', url);
   else window.history.pushState({ panditya: true }, '', url);

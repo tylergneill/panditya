@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pāṇḍitya widget</title>
+  {#
+    The small view of the Pāṇḍitya widget: one search and a 1-hop graph, shown
+    in an iframe by static/js/widget-loader.js on other people's sites. The
+    expanded view is the full app (/view); see templates/widget_demo.html.
+  #}
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/widget.css') }}">
+  <script>
+    try { if (localStorage.getItem('panditya-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
+    window.widgetParams = {{ widget_params|tojson }};
+  </script>
+</head>
+<body class="widget-page">
+  <div id="widget-search"></div>
+
+  <main id="widget-graph">
+    <canvas id="graph-canvas" role="img"
+            aria-label="Graph of the chosen author or work and its direct connections. Click a name to move there."></canvas>
+    <div id="widget-status" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer id="widget-footer">
+    <span id="widget-current"></span>
+    <a id="widget-pandit" target="_blank" rel="noopener" hidden>Pandit record</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script type="module" src="{{ url_for('static', filename='js/widget.js') }}"></script>
+</body>
+</html>

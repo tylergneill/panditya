@@ -713,6 +713,49 @@ def tutorials():
     return render_template('tutorials.html')
 
 
+# --- embeddable widget ---
+#
+# Other sites add the widget with one tag:
+#     <script src="https://panditya.info/widget.js" async></script>
+# The loader (static/js/widget-loader.js) puts a Pāṇḍitya button on their page
+# and opens /widget (small) or /view (expanded, the full app) in an iframe over
+# it. See /widget/demo for the options. These pages must stay frameable: don't
+# send X-Frame-Options or a frame-ancestors CSP for them.
+
+WIDGET_QUERY_MAX = 200
+
+
+@app.route('/widget')
+def widget():
+    """
+    The widget's small view: one search and a 1-hop graph.
+    Starts from ?works=, ?authors= or ?ids= (Pandit IDs of either kind), or ?q= (a search).
+    """
+    lists = {}
+    for key in ('works', 'authors', 'ids'):
+        value = request.args.get(key, None)
+        err = validate_comma_separated_list_input(value, allow_empty=True)
+        if err is not None:
+            return err, 400
+        lists[key] = [x for x in (value or '').strip().split(',') if x]
+    query = request.args.get('q', '').strip()[:WIDGET_QUERY_MAX]
+    return render_template('widget.html', widget_params={**lists, 'q': query})
+
+
+@app.route('/widget.js')
+def widget_loader():
+    """The script other sites include (a stable address for static/js/widget-loader.js)."""
+    response = send_from_directory('static/js', 'widget-loader.js', mimetype='text/javascript')
+    response.cache_control.max_age = 3600  # sites pick up a new version within the hour
+    return response
+
+
+@app.route('/widget/demo')
+def widget_demo():
+    """How to install the widget, with the widget running on the page."""
+    return render_template('widget_demo.html')
+
+
 # --- data serving route ---
 
 @app.route('/data/<path:filepath>')

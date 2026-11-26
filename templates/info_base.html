@@ -3,7 +3,8 @@
 
   A page sets `nav` to the header link it belongs under ('about', 'seti' or
   'tutorials'), fills `title` (the browser tab) and `content`, and may fill
-  `crumbs` with a link back to its parent page (the notes pages point to About).
+  `crumbs` with a link back to its parent page (the notes pages point to About),
+  and `page_scripts` with scripts for the end of the body.
 #}
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +53,7 @@
     <a href="/tutorials">Tutorials</a>
     <a href="/notes/license">License</a>
   </footer>
+  {% block page_scripts %}{% endblock %}
 
 </body>
 </html>

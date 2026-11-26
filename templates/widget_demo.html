@@ -1,0 +1,57 @@
+{% extends 'info_base.html' %}
+{% set nav = 'about' %}
+{% block title %}Widget{% endblock %}
+{% block main_class %}notes widget-demo{% endblock %}
+{% block crumbs %}{% include '_crumb_about.html' %}{% endblock %}
+{% block content %}
+    <h1>Pāṇḍitya on your site</h1>
+
+    <p>
+      Any website can offer Pāṇḍitya to its readers with one line of HTML.
+      It adds a small Pāṇḍitya button in the corner of the page
+      (there's one on this page). The button opens a search and a graph over the page,
+      without leaving it:
+    </p>
+    <ul>
+      <li><b>Small</b>: search for an author or work and see its direct connections.</li>
+      <li><b>Expanded</b>: the full Pāṇḍitya, with every feature, over the page.</li>
+      <li><b>Open at panditya.info</b>: the same graph in a new tab.</li>
+    </ul>
+
+    <h2>Install</h2>
+    <p>Add this anywhere in your page:</p>
+    <pre><code>&lt;script src="https://panditya.info/widget.js" async&gt;&lt;/script&gt;</code></pre>
+
+    <h2>Point to authors and works</h2>
+    <p>
+      Mark names with their Pandit ID, and a click opens the widget on them.
+      Try it: the Nyāyasāra of Bhāsarvajña,
+      <span data-panditya-work="89000">Nyāyasāra</span>;
+      the author <span data-panditya-author="85352">Abhinavagupta</span>;
+      or a search for <span data-panditya-search="Kālidāsa">Kālidāsa</span>.
+    </p>
+    <pre><code>&lt;span data-panditya-work="89000"&gt;Nyāyasāra&lt;/span&gt;
+&lt;span data-panditya-author="85352"&gt;Abhinavagupta&lt;/span&gt;
+&lt;span data-panditya-search="Kālidāsa"&gt;Kālidāsa&lt;/span&gt;</code></pre>
+    <p>
+      Pages that already link to Pandit records can have those links open the widget instead,
+      by adding <code>data-pandit-links="true"</code> to the script tag.
+      Ctrl- or Cmd-click still follows the link.
+      This page does that: <a href="https://www.panditproject.org/node/89000">Nyāyasāra on Pandit</a>.
+    </p>
+
+    <h2>Options</h2>
+    <p>Set these on the script tag:</p>
+    <ul>
+      <li><code>data-position="left"</code>: the button sits bottom left instead of bottom right.</li>
+      <li><code>data-launcher="false"</code>: no button; the widget opens only from marked names, Pandit links or script.</li>
+      <li><code>data-pandit-links="true"</code>: links to Pandit records open the widget.</li>
+    </ul>
+    <p>From your own script:</p>
+    <pre><code>Panditya.open({ works: '89000' })        // or authors, ids (either kind), search
+Panditya.open({ authors: '85352', size: 'large' })
+Panditya.expand(); Panditya.shrink(); Panditya.close();</code></pre>
+{% endblock %}
+{% block page_scripts %}
+  <script src="{{ url_for('widget_loader') }}" data-pandit-links="true" async></script>
+{% endblock %}

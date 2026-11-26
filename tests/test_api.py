@@ -390,3 +390,53 @@ def test_slash_hint_hidden_on_phones():
     css = open("static/css/app.css", encoding="utf8").read()
     assert re.search(r"@media \(hover: none\), \(max-width: 768px\) \{\s*\.key-hint \{ display: none; \}", css)
     assert 'class="key-hint"' in open("templates/index.html", encoding="utf8").read()
+
+
+class TestWidget:
+    """The embeddable widget: /widget (small view), /widget.js (loader), /widget/demo."""
+
+    @staticmethod
+    def widget_params(html):
+        return json.loads(re.search(r"window\.widgetParams = (.*?);\n", html).group(1))
+
+    def test_small_view_takes_its_start_from_the_url(self, client):
+        r = client.get("/widget?works=89000&ids=&q=K%C4%81lid%C4%81sa")
+        assert r.status_code == 200
+        assert self.widget_params(r.get_data(as_text=True)) == {
+            "works": ["89000"], "authors": [], "ids": [], "q": "Kālidāsa"}
+
+    def test_small_view_with_nothing_asked(self, client):
+        params = self.widget_params(client.get("/widget").get_data(as_text=True))
+        assert params == {"works": [], "authors": [], "ids": [], "q": ""}
+
+    @pytest.mark.parametrize("query", ["works=89000x", "authors=1;2", "ids=%3Cscript%3E"])
+    def test_small_view_rejects_ids_that_are_not_numbers(self, client, query):
+        assert client.get(f"/widget?{query}").status_code == 400
+
+    def test_a_long_search_is_cut_short(self, client):
+        params = self.widget_params(client.get("/widget?q=" + "a" * 500).get_data(as_text=True))
+        assert len(params["q"]) == 200
+
+    def test_a_search_cannot_break_out_of_the_page_script(self, client):
+        html = client.get("/widget?q=%3C/script%3E%3Cscript%3Ealert(1)").get_data(as_text=True)
+        assert "</script><script>alert(1)" not in html
+        assert self.widget_params(html)["q"] == "</script><script>alert(1)"
+
+    def test_loader_is_served_as_javascript(self, client):
+        r = client.get("/widget.js")
+        assert r.status_code == 200
+        assert r.mimetype == "text/javascript"
+        assert "window.Panditya" in r.get_data(as_text=True)
+        assert r.cache_control.max_age == 3600
+
+    @pytest.mark.parametrize("path", ["/widget", "/view?works=89000&hops=1", "/widget.js"])
+    def test_widget_pages_can_be_framed_by_other_sites(self, client, path):
+        r = client.get(path)
+        assert "X-Frame-Options" not in r.headers
+        assert "frame-ancestors" not in r.headers.get("Content-Security-Policy", "")
+
+    def test_demo_page_runs_the_widget_and_shows_how_to_install_it(self, client):
+        html = client.get("/widget/demo").get_data(as_text=True)
+        assert 'src="/widget.js" data-pandit-links="true"' in html
+        assert '&lt;script src="https://panditya.info/widget.js" async&gt;' in html
+        assert 'data-panditya-work="89000"' in html
