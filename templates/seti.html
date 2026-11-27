@@ -42,7 +42,7 @@
         {% for collection, stats in etext_data_summary.items() %}
         <tr>
           <td>
-            <a href="/seti/by_collection/{{ collection }}/visualize">{{ collection }}</a>
+            <a href="/view?collection={{ collection|urlencode }}&hops=0">{{ collection }}</a>
           </td>
           <td>{{ stats.etexts }}</td>
           <td>{{ stats.etexts - stats.etexts_missing_works }} ({{ stats.etext_coverage }}%)</td>

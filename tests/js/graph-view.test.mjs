@@ -498,3 +498,13 @@ test('destroy removes the listeners', t => {
   mouse(window, canvas, 'click', pos);
   assert.deepEqual(events.select, []);
 });
+
+test('chargeFor: the usual Repulsion for small graphs, less for big ones, never too little', async () => {
+  const { chargeFor, DEFAULT_FORCES } = await import('../../static/js/graph-view.js');
+  assert.equal(chargeFor(0), DEFAULT_FORCES.charge);
+  assert.equal(chargeFor(100), DEFAULT_FORCES.charge);
+  assert.equal(chargeFor(400), 130);  // 250 * sqrt(100/400) = 125, to the slider's step of 10
+  assert.equal(chargeFor(625), 100);
+  assert.equal(chargeFor(100000), 60);
+  for (const n of [150, 300, 600, 1200]) assert.ok(chargeFor(n) >= chargeFor(n * 2), 'never grows with size');
+});

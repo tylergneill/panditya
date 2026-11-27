@@ -21,6 +21,26 @@ import { drawScene, readPalette } from './draw.js';
 /** Starting values for the Layout sliders (same as the old interface). */
 export const DEFAULT_FORCES = { charge: 250, distance: 100, collide: 15 };
 
+/**
+ * The Repulsion that suits a graph of `nodeCount` nodes, used until the user
+ * moves the Repulsion slider themselves.
+ *
+ * The layout also pulls every node gently toward the middle, and with that
+ * pull the area each node gets grows with the repulsion, whatever the number
+ * of nodes. So a big graph at the usual repulsion spreads far beyond the screen
+ * and its labels shrink to nothing when fitted. Up to SMALL_GRAPH nodes this
+ * keeps the usual value; above that it eases off as 1/sqrt(n), which keeps the
+ * whole graph's width about the same as for SMALL_GRAPH nodes, but never below
+ * MIN_AUTO_CHARGE, so nodes still stand apart.
+ */
+const SMALL_GRAPH = 100;
+const MIN_AUTO_CHARGE = 60;
+export function chargeFor(nodeCount) {
+  if (nodeCount <= SMALL_GRAPH) return DEFAULT_FORCES.charge;
+  const scaled = DEFAULT_FORCES.charge * Math.sqrt(SMALL_GRAPH / nodeCount);
+  return Math.max(MIN_AUTO_CHARGE, Math.round(scaled / 10) * 10);  // the slider's step is 10
+}
+
 /** Small graphs settle faster, as before. */
 export function alphaDecayFor(nodeCount) {
   return nodeCount <= 5 ? 0.08 : nodeCount <= 20 ? 0.05 : 0.0228;
@@ -189,11 +209,15 @@ export class GraphView {
 
   // --- Forces ---------------------------------------------------------------
 
-  /** Update the Layout sliders' forces: {charge, distance, collide} (any subset). */
-  setForces(forces) {
+  /**
+   * Update the Layout sliders' forces: {charge, distance, collide} (any subset).
+   * With `{restart: false}` the layout isn't woken up: for setting the forces
+   * just before setGraph, which runs the layout itself.
+   */
+  setForces(forces, { restart = true } = {}) {
     Object.assign(this.forces, forces);
     this.applyForces();
-    if (!this.frozen) this.simulation.alpha(Math.max(this.simulation.alpha(), 0.3)).restart();
+    if (restart && !this.frozen) this.simulation.alpha(Math.max(this.simulation.alpha(), 0.3)).restart();
   }
 
   applyForces() {

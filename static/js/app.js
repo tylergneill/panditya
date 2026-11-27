@@ -14,13 +14,13 @@
 import {
   emptyState, stateFromParams, stateFromQuery, stateToUrl, stateToRequest, sameGraph,
   setCenters, addCenter, setHops, setExclude, expandNode, collapseNode, recenter, withNames,
-  removeNode, setRemoved,
+  removeNode, setRemoved, isCollectionId,
   HOP_BUTTONS,
 } from './state.js';
 import { searchEntities, fetchLabels, fetchGraph } from './api.js';
 import { ChipSearch } from './chip-search.js';
 import { DetailPanel } from './panel.js';
-import { GraphView, DEFAULT_FORCES } from './graph-view.js';
+import { GraphView, DEFAULT_FORCES, chargeFor } from './graph-view.js';
 import { setUpSidebarResizer } from './sidebar-resize.js';
 import { fitPageToVisibleArea } from './viewport.js';
 import { setUpFontSize } from './font-size.js';
@@ -44,6 +44,7 @@ const app = {
   seq: 0,
   controller: null,
   names: new Map(), // id → {id, type, name, dates}: names for chips, from any source
+  autoCharge: true, // Repulsion follows the graph's size until the user moves its slider
 };
 
 let view;
@@ -157,7 +158,8 @@ function chipFor(id, fallbackType = 'work') {
 
 /** Look up names for IDs we don't know yet (e.g. from a shared URL). */
 async function learnNames(ids) {
-  const unknown = ids.filter(id => !app.names.has(id));
+  // Collection centers carry their own names and have no Pandit record.
+  const unknown = ids.filter(id => !app.names.has(id) && !isCollectionId(id));
   if (!unknown.length) return;
   try {
     remember(await fetchLabels(unknown));
@@ -308,6 +310,7 @@ async function load({ history = 'push' } = {}) {
     if (seq !== app.seq) return;
     app.graph = graph;
     remember(graph.nodes);
+    applyAutoCharge(graph.nodes.length);
     view.setGraph(graph);
     refreshPanel();
     updateUrl(history);
@@ -419,14 +422,27 @@ function setUpLayoutDisclosure() {
   });
 }
 
-function setUpLayoutControls(initialRepulsion) {
+/**
+ * Repulsion follows the graph's size (chargeFor) until the user moves its
+ * slider; from then on their value stays, until Reset hands it back.
+ */
+function applyAutoCharge(nodeCount) {
+  if (!app.autoCharge) return;
+  const charge = chargeFor(nodeCount);
+  $('chargeStrength').value = charge;
+  view.setForces({ charge }, { restart: false });
+}
+
+function setUpLayoutControls() {
   const sliders = { chargeStrength: 'charge', linkDistance: 'distance', collisionRadius: 'collide' };
   const defaults = { ...DEFAULT_FORCES };
-  if (initialRepulsion !== undefined) defaults.charge = Number(initialRepulsion);
   for (const [elementId, force] of Object.entries(sliders)) {
     const input = $(elementId);
     input.value = defaults[force];
-    input.addEventListener('input', () => view.setForces({ [force]: Number(input.value) }));
+    input.addEventListener('input', () => {
+      if (force === 'charge') app.autoCharge = false;
+      view.setForces({ [force]: Number(input.value) });
+    });
   }
   view.setForces(defaults);
   $('freezeSwitch').addEventListener('change', e => view.setFrozen(e.target.checked));
@@ -436,12 +452,14 @@ function setUpLayoutControls(initialRepulsion) {
     // show it; the graph keeps fitting itself as its area grows (GraphView.resize).
     closeControlsOnPhone();
   });
-  // Reset: the sliders back to this page's starting values, nothing frozen,
-  // and the layout run again from scratch.
+  // Reset: the sliders back to their starting values (Repulsion to the one for
+  // this graph's size), nothing frozen, and the layout run again from scratch.
   $('reset-layout-button').addEventListener('click', () => {
-    for (const [elementId, force] of Object.entries(sliders)) $(elementId).value = defaults[force];
+    app.autoCharge = true;
+    const forces = { ...defaults, charge: chargeFor(app.graph.nodes.length) };
+    for (const [elementId, force] of Object.entries(sliders)) $(elementId).value = forces[force];
     $('freezeSwitch').checked = false;
-    view.resetLayout(defaults);
+    view.resetLayout(forces);
   });
 }
 
@@ -578,7 +596,7 @@ async function init() {
 
   const params = window.initialParams || null;
   buildHopControl();
-  setUpLayoutControls(params?.repulsion);
+  setUpLayoutControls();
   setUpLayoutDisclosure();
   setUpFontSize({
     roots: [...document.querySelectorAll('.font-size-slot')],

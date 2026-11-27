@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import {
   emptyState, normalizeHops, stateFromParams, stateFromQuery, stateToUrl, stateToRequest, sameGraph,
   setCenters, addCenter, setHops, setExclude, expandNode, collapseNode, recenter, withNames,
-  removeNode, setRemoved,
+  removeNode, setRemoved, collectionCenter, isCollectionId,
 } from '../../static/js/state.js';
 
 const A = { id: '85303', type: 'author', name: 'Bhāsarvajña' };
@@ -64,7 +64,7 @@ test('stateFromQuery with no query is empty', () => {
 
 test('stateToRequest matches the API body', () => {
   assert.deepEqual(stateToRequest({ centers: [A, W], hops: 3, exclude: ['1'], expand: ['2'], remove: ['3'] }), {
-    authors: ['85303'], works: ['89000'], hops: 3, exclude_list: ['1'], expand: ['2'], remove: ['3'],
+    authors: ['85303'], works: ['89000'], hops: 3, exclude_list: ['1'], expand: ['2'], remove: ['3'], collections: [],
   });
   // A state from before `remove` existed still makes a valid request.
   assert.deepEqual(stateToRequest({ centers: [W], hops: 1, exclude: [], expand: [] }).remove, []);
@@ -174,4 +174,43 @@ test('searching for a removed node brings it back', () => {
 
 test('changing hops keeps removed nodes removed', () => {
   assert.deepEqual(setHops({ centers: [W], hops: 1, exclude: [], expand: [], remove: ['z'] }, 2).remove, ['z']);
+});
+
+// --- SETI collections ----------------------------------------------------------
+
+test('a collection is one center, carried by name in a short URL', () => {
+  const C = collectionCenter('GRETIL');
+  assert.deepEqual(C, { id: 'collection:GRETIL', type: 'collection', name: 'GRETIL' });
+  assert.ok(isCollectionId(C.id) && !isCollectionId('89000'));
+  const s = { centers: [C], hops: 0, exclude: [], expand: [], remove: ['89001'] };
+  assert.equal(stateToUrl(s), '/view?collection=GRETIL&hops=0&remove=89001');
+  assert.deepEqual(stateToRequest(s), {
+    authors: [], works: [], hops: 0, exclude_list: [], expand: [], remove: ['89001'], collections: ['GRETIL'],
+  });
+  // Names with characters that need escaping survive the round trip.
+  const odd = { ...s, centers: [collectionCenter('A&B C')], remove: [] };
+  assert.equal(stateToUrl(odd), '/view?collection=A%26B%20C&hops=0');
+  assert.deepEqual(stateFromQuery(stateToUrl(odd).slice('/view'.length)).centers, [collectionCenter('A&B C')]);
+});
+
+test('stateFromParams and stateFromQuery read collections, alongside other centers', () => {
+  const fromParams = stateFromParams({ collections: ['GRETIL', 'GRETIL'], works: ['89000'], hops: 0 });
+  assert.deepEqual(fromParams.centers.map(c => c.id), ['collection:GRETIL', '89000']);
+  assert.equal(fromParams.centers[0].name, 'GRETIL');
+  const fromQuery = stateFromQuery('?collection=GRETIL&works=89000&hops=0');
+  assert.deepEqual(fromQuery, fromParams);
+});
+
+test("removing a collection's work keeps the collection; removing the chip drops it", () => {
+  const s = { centers: [collectionCenter('GRETIL')], hops: 0, exclude: [], expand: [], remove: [] };
+  const lessOne = removeNode(s, '89001');
+  assert.deepEqual(lessOne.centers, s.centers);
+  assert.deepEqual(lessOne.remove, ['89001']);
+  assert.deepEqual(removeNode(s, 'collection:GRETIL').centers, []);
+});
+
+test('withNames leaves a collection named as it is', () => {
+  const s = withNames({ centers: [collectionCenter('GRETIL')], hops: 0, exclude: [], expand: [], remove: [] }, []);
+  assert.equal(s.centers[0].name, 'GRETIL');
+  assert.equal(s.centers[0].type, 'collection');
 });

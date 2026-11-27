@@ -2,7 +2,7 @@ import re
 from collections import defaultdict
 from typing import Dict, List
 
-from flask import Flask, render_template, Blueprint, jsonify, request, send_from_directory
+from flask import Flask, render_template, Blueprint, jsonify, request, send_from_directory, redirect, url_for
 from flask_restx import Api, Resource, fields
 
 from data_models import Entity
@@ -215,12 +215,22 @@ subgraph_model = api.model('SubgraphRequest', {
                           description='List of node IDs to take off the graph, with whatever is only reached '
                                       'through them (ignored for authors and works searched for)',
                           example=[]),
+    'collections': fields.List(fields.String, required=False,
+                               description='SETI collections whose works to search for (see /api/seti); '
+                                           'their authors are shown too, as ordinary nodes',
+                               example=[]),
 })
 
 
-def validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list=(), remove_list=()):
-    if not authors and not works:
-        return {"error": "require either one or both of authors or works"}
+def validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list=(), remove_list=(), collections=()):
+    if not authors and not works and not collections:
+        return {"error": "require at least one of authors, works or collections"}
+    if not isinstance(collections, list):
+        return {"error": "collections must be a list"}
+    unknown_collections = [c for c in collections if c not in VALID_COLLECTIONS]
+    if unknown_collections:
+        return {"error": f"Invalid collection: {', '.join(map(str, unknown_collections))}. "
+                         f"Valid options: {sorted(VALID_COLLECTIONS)}"}
     if not isinstance(hops, int) or isinstance(hops, bool) or hops < 0:
         return {"error": "hops must be a non-negative integer"}
     if not isinstance(exclude_list, list):
@@ -237,7 +247,15 @@ def validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list=(),
     return None
 
 
-def build_graph_response(authors, works, hops, exclude_list, expand_list=(), remove_list=()):
+def collection_work_ids(collection: str) -> list:
+    """The Pandit work IDs with e-texts in a SETI collection (only IDs Pāṇḍitya knows)."""
+    works, error, _ = get_works_by_collection(collection)
+    if error:
+        return []
+    return [work_id for work_id in works if work_id in ENTITIES_BY_ID]
+
+
+def build_graph_response(authors, works, hops, exclude_list, expand_list=(), remove_list=(), collections=()):
     """
     Build the JSON body for /api/graph/subgraph.
 
@@ -245,9 +263,24 @@ def build_graph_response(authors, works, hops, exclude_list, expand_list=(), rem
     name, type, dates, flags (central / not expanded / expanded), e-text links,
     and ``hidden_neighbors``, the number of its connections not in this graph
     (so the interface can show which nodes have more to expand).
+
+    ``collections`` (SETI collection names) adds each collection's works to the
+    search, except any the user removed. Their authors are always shown too, even
+    at 0 hops, but as ordinary nodes rather than centers: the collection is about
+    its works.
     """
-    subgraph_center = list(dict.fromkeys(list(authors) + list(works)))
+    removed = set(remove_list)
+    collection_works = [
+        work_id for name in collections for work_id in collection_work_ids(name) if work_id not in removed
+    ]
+    subgraph_center = list(dict.fromkeys(list(authors) + list(works) + collection_works))
     graph = construct_graph(subgraph_center, hops, exclude_list, expand_list, remove_list=remove_list)
+    for work_id in dict.fromkeys(collection_works):
+        if work_id in exclude_list and work_id not in expand_list:
+            continue  # "don't expand" hides its authors too, as for any other node
+        for author_id in ENTITIES_BY_ID[work_id].author_ids:
+            if author_id in ENTITIES_BY_ID and author_id not in removed:
+                graph.add_edge(author_id, work_id)
     annotated = annotate_graph(graph, subgraph_center, exclude_list, expand_list)
 
     nodes = []
@@ -281,6 +314,7 @@ def build_graph_response(authors, works, hops, exclude_list, expand_list=(), rem
             "exclude_list": list(exclude_list),
             "expand": list(expand_list),
             "remove": list(remove_list),
+            "collections": list(collections),
         },
         "graph": {"nodes": nodes, "edges": edges},
     }
@@ -316,13 +350,17 @@ class Subgraph(Resource):
             remove_list = data.get('remove') or []
             if isinstance(remove_list, list):
                 remove_list = list(dict.fromkeys(remove_list))
+            collections = data.get('collections') or []
+            if isinstance(collections, list):
+                collections = list(dict.fromkeys(collections))
 
             # validate_inputs
-            err = validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list, remove_list)
+            err = validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list, remove_list, collections)
             if err is not None:
                 return err, 400
 
-            return jsonify(build_graph_response(authors, works, hops, exclude_list, expand_list, remove_list))
+            return jsonify(build_graph_response(
+                authors, works, hops, exclude_list, expand_list, remove_list, collections))
 
         except KeyError as e:
             app.logger.error('Error: %s', str(e))
@@ -547,29 +585,14 @@ def get_author_ids_for_work_ids(work_ids: List[str]):
 @app.route("/seti/by_collection/<string:collection>/visualize")
 def visualize_collection(collection: str):
     """
-    Prepare full graph data for all works implicated by a given collection
-    and render 'index.html' with initial_params.
-    Example: /by_collection/GRETIL/visualize
+    The graph of a SETI collection's works (and their authors).
+    Kept for old links: it now lives at /view?collection=<name>&hops=0, which
+    keeps a short address as the user changes the graph.
+    Example: /seti/by_collection/GRETIL/visualize
     """
-    works_data, error_response, status_code = get_works_by_collection(collection)
-
-    if error_response:
-        return error_response, status_code
-
-    works = list(works_data.keys())
-    authors = get_author_ids_for_work_ids(works)
-
-    initial_params = {
-        "works": works,
-        "authors": authors,
-        "hops": 0,
-        "exclude_list": [],
-        "expand": [],
-        "remove": [],
-        "repulsion": 50,
-    }
-
-    return render_template("index.html", initial_params=initial_params)
+    if collection not in VALID_COLLECTIONS:
+        return {"error": f"Invalid collection: {collection}. Valid options: {sorted(VALID_COLLECTIONS)}"}, 400
+    return redirect(url_for('render_graph_from_URL_params', collection=collection, hops=0))
 
 
 # TODO: Also include file size info!
@@ -617,6 +640,12 @@ def render_graph_from_URL_params():
         except ValueError:
             return {"error": "hops must be a non-negative integer"}, 400
 
+        # SETI collections by name (?collection=GRETIL), several separated by commas.
+        collections = [c for c in request.args.get('collection', '').split(',') if c]
+        unknown = [c for c in collections if c not in VALID_COLLECTIONS]
+        if unknown:
+            return {"error": f"Invalid collection: {', '.join(unknown)}. Valid options: {sorted(VALID_COLLECTIONS)}"}, 400
+
         # Parse URL parameters
         initial_params = {
             "authors": [x for x in authors if x],
@@ -625,6 +654,7 @@ def render_graph_from_URL_params():
             "exclude_list": [x for x in exclude_list if x],
             "expand": [x for x in expand if x],
             "remove": [x for x in remove if x],
+            "collections": list(dict.fromkeys(collections)),
         }
 
         # Serve the template with initialization variables

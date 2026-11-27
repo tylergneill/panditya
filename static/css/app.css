@@ -374,7 +374,8 @@ kbd {
   line-height: 1.5;
 }
 
-.chip.work {
+.chip.work,
+.chip.collection {
   background: #7d2620;
 }
 
@@ -514,6 +515,14 @@ kbd {
 .type-mark.work {
   border-radius: 2px;
   background: var(--work-node);
+}
+
+/* A collection: a small stack of work squares. */
+.type-mark.collection {
+  border-radius: 2px;
+  background: var(--work-node);
+  margin-right: 3px;
+  box-shadow: 2px -2px 0 -1px var(--work-node), 4px -4px 0 -2px var(--work-node);
 }
 
 /* --- Hop buttons ------------------------------------------------------------------ */

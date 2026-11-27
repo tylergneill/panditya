@@ -120,6 +120,39 @@ class TestEntities:
 # --- /api/graph/subgraph --------------------------------------------------------
 
 class TestSubgraph:
+    def test_a_collection_centers_its_works_only(self, client, flask_module):
+        """Collection works are the centers; their authors are there too (even at 0 hops) but not central."""
+        collection = flask_module.VALID_COLLECTIONS[0]
+        works = flask_module.collection_work_ids(collection)
+        r = post_graph(client, collections=[collection], hops=0)
+        assert r.status_code == 200
+        body = r.get_json()
+        assert body["parameters"]["collections"] == [collection]
+        nodes = {n["id"]: n for n in body["graph"]["nodes"]}
+        assert set(works) <= set(nodes)
+        assert all(nodes[w]["is_central"] for w in works)
+        authors = {a for w in works for a in flask_module.ENTITIES_BY_ID[w].author_ids
+                   if a in flask_module.ENTITIES_BY_ID}
+        assert authors and authors <= set(nodes)
+        assert not any(nodes[a]["is_central"] for a in authors)
+        assert set(nodes) == set(works) | authors, "nothing else at 0 hops"
+        edges = {(e["source"], e["target"]) for e in body["graph"]["edges"]}
+        some_work = next(w for w in works if flask_module.ENTITIES_BY_ID[w].author_ids)
+        assert (flask_module.ENTITIES_BY_ID[some_work].author_ids[0], some_work) in edges
+
+    def test_removing_from_a_collection(self, client, flask_module):
+        collection = flask_module.VALID_COLLECTIONS[0]
+        works = flask_module.collection_work_ids(collection)
+        work = next(w for w in works if flask_module.ENTITIES_BY_ID[w].author_ids)
+        author = flask_module.ENTITIES_BY_ID[work].author_ids[0]
+        ids = node_ids(post_graph(client, collections=[collection], hops=0, remove=[work, author]))
+        assert work not in ids and author not in ids
+
+    def test_collections_are_checked(self, client):
+        assert post_graph(client, collections=["NoSuchCollection"]).status_code == 400
+        assert post_graph(client, collections="GRETIL").status_code == 400
+        assert post_graph(client).status_code == 400, "still needs something to search for"
+
     def test_basic_graph(self, client):
         r = post_graph(client, works=[NYAYASARA], hops=1)
         assert r.status_code == 200
@@ -204,7 +237,7 @@ class TestSubgraph:
         assert a == b
 
     @pytest.mark.parametrize("body, message", [
-        ({"hops": 1}, "require either"),
+        ({"hops": 1}, "require at least one"),
         ({"works": [NYAYASARA], "hops": -1}, "hops"),
         ({"works": [NYAYASARA], "hops": "2"}, "hops"),
         ({"works": [NYAYASARA], "hops": True}, "hops"),
@@ -262,6 +295,7 @@ class TestPages:
             "exclude_list": [KALIDASA],
             "expand": [ABHINAVAGUPTA],
             "remove": [KALIDASA],
+            "collections": [],
         }
 
     def test_view_defaults(self, client, flask_module):
@@ -273,13 +307,25 @@ class TestPages:
     def test_view_rejects_bad_parameters(self, client, query):
         assert client.get(f"/view?works={NYAYASARA}&{query}").status_code == 400
 
-    def test_seti_collection_view_still_renders(self, client, flask_module):
+    def test_old_seti_collection_links_redirect_to_a_short_view(self, client, flask_module):
         collection = flask_module.VALID_COLLECTIONS[0]
         r = client.get(f"/seti/by_collection/{collection}/visualize")
-        assert r.status_code == 200
-        params = initial_params(r.get_data(as_text=True))
-        assert params["works"] and params["hops"] == 0 and params["expand"] == [] and params["remove"] == []
-        assert params["repulsion"] == 50
+        assert r.status_code == 302
+        assert r.headers["Location"].endswith(f"/view?collection={collection}&hops=0")
+        assert client.get("/seti/by_collection/NoSuchCollection/visualize").status_code == 400
+
+    def test_view_with_a_collection(self, client, flask_module):
+        collection = flask_module.VALID_COLLECTIONS[0]
+        params = initial_params(client.get(f"/view?collection={collection}&hops=0").get_data(as_text=True))
+        assert params["collections"] == [collection]
+        assert params["works"] == [] and params["authors"] == [] and params["hops"] == 0
+        assert "repulsion" not in params
+        assert client.get("/view?collection=NoSuchCollection").status_code == 400
+
+    def test_seti_page_links_to_short_collection_views(self, client):
+        html = client.get("/seti").get_data(as_text=True)
+        assert "/visualize" not in html
+        assert "/view?collection=" in html
 
     def test_seti_page_describes_the_new_panel(self, client):
         html = client.get("/seti").get_data(as_text=True)

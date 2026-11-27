@@ -333,11 +333,17 @@ export class ChipSearch {
   }
 }
 
-/** The little circle (author) or square (work) used throughout the interface. */
+/** What each type mark stands for (its tooltip). */
+const TYPE_TITLES = { author: 'Author', work: 'Work', collection: 'SETI collection (all its works)' };
+
+/**
+ * The little circle (author), square (work) or stack of squares (SETI
+ * collection) used throughout the interface.
+ */
 export function typeMark(doc, type) {
   const mark = doc.createElement('span');
   mark.className = `type-mark ${type}`;
   mark.setAttribute('aria-hidden', 'true');
-  mark.title = type === 'author' ? 'Author' : 'Work';
+  mark.title = TYPE_TITLES[type] || 'Work';
   return mark;
 }

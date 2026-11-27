@@ -32,13 +32,20 @@ const EDGES = [
   ['40377', '40378', 'source author wrote target work'],
 ];
 const neighbours = id => EDGES.flatMap(([s, t]) => (s === id ? [t] : t === id ? [s] : []));
+/** SETI collections: name → work IDs. */
+const COLLECTIONS = { GRETIL: ['89000', '89001'] };
 
 /** What the real /api/graph/subgraph would answer, for this tiny data set. */
-function subgraph({ authors, works, hops, exclude_list: exclude, expand, remove = [] }) {
+function subgraph({ authors, works, hops, exclude_list: exclude, expand, remove = [], collections = [] }) {
   for (const id of [...authors, ...works, ...exclude, ...expand, ...remove]) {
     if (!ENTITIES[id]) return { status: 400, body: { error: `Invalid ID: ${id}` } };
   }
-  const centers = [...authors, ...works];
+  for (const name of collections) {
+    if (!COLLECTIONS[name]) return { status: 400, body: { error: `Invalid collection: ${name}` } };
+  }
+  // A collection's works are searched for (less any removed); their authors come along as ordinary nodes.
+  const collectionWorks = collections.flatMap(name => COLLECTIONS[name]).filter(id => !remove.includes(id));
+  const centers = [...new Set([...authors, ...works, ...collectionWorks])];
   const removed = remove.filter(id => !centers.includes(id)); // as grapher.construct_graph
   const stop = [...exclude, ...removed];
   const ids = new Set(centers);
@@ -53,6 +60,9 @@ function subgraph({ authors, works, hops, exclude_list: exclude, expand, remove 
   }
   for (const id of expand) if (!removed.includes(id)) for (const n of neighbours(id)) ids.add(n);
   for (const id of removed) ids.delete(id);
+  for (const id of collectionWorks) {
+    for (const n of neighbours(id)) if (ENTITIES[n].type === 'author' && !removed.includes(n)) ids.add(n);
+  }
   const nodes = [...ids].map(id => ({
     id,
     type: ENTITIES[id].type,
@@ -205,7 +215,7 @@ test('clicking an example loads its graph and records it in the URL', async t =>
   await until(() => !page.$('graph-status').hidden, 'empty status');
   [...page.$('graph-status').querySelectorAll('button')].find(b => b.textContent === 'Nyāyasāra').click();
   await until(() => loaded(page), 'graph');
-  assert.deepEqual(page.fetch.lastGraphRequest(), { authors: [], works: ['89000'], hops: 1, exclude_list: [], expand: [], remove: [] });
+  assert.deepEqual(page.fetch.lastGraphRequest(), { authors: [], works: ['89000'], hops: 1, exclude_list: [], expand: [], remove: [], collections: [] });
   assert.deepEqual(graphIds(page), ['85303', '89000']);
   assert.deepEqual(chipIds(page, 'search'), ['89000']);
   assert.deepEqual(page.pushes, ['/view?works=89000&hops=1']);
@@ -296,16 +306,28 @@ test('Escape in the hops box undoes the typing and leaves the panel open', async
   assert.equal(pressedHop(page), '1');
 });
 
-test('SETI collection view: starts with its own repulsion, URL kept', async t => {
-  const page = await openPage(t, {
-    url: 'http://localhost/seti/by_collection/GRETIL/visualize',
-    initialParams: { authors: ['40377'], works: ['40378'], hops: 0, exclude_list: [], expand: [], repulsion: 50 },
+test('SETI collection view: one chip, a short URL, only its works central', async t => {
+  const page = await openWith(t, 'collection=GRETIL&hops=0', params({ works: [], collections: ['GRETIL'], hops: 0 }));
+  assert.deepEqual(page.fetch.lastGraphRequest(), {
+    authors: [], works: [], hops: 0, exclude_list: [], expand: [], remove: [], collections: ['GRETIL'],
   });
-  await until(() => loaded(page), 'graph');
-  assert.equal(page.$('chargeStrength').value, '50');
-  assert.equal(page.window.panditya.view.forces.charge, 50);
-  assert.equal(path(page), '/seti/by_collection/GRETIL/visualize');
-  assert.deepEqual(graphIds(page), ['40377', '40378']);
+  assert.deepEqual(graphIds(page), ['85303', '89000', '89001']);
+  const central = page.window.panditya.graph.nodes.filter(n => n.is_central).map(n => n.id).sort();
+  assert.deepEqual(central, ['89000', '89001'], 'the author comes along, but not as a center');
+  const chips = [...page.$('search').querySelectorAll('li.chip')];
+  assert.deepEqual(chips.map(c => c.textContent.replace('×', '').trim()), ['GRETIL']);
+  assert.ok(chips[0].classList.contains('collection'));
+  assert.ok(!page.fetch.calls.some(c => c.url.includes('/labels') && c.url.includes('collection')), 'no label lookup');
+
+  // Removing one of its works keeps the collection and the short URL.
+  const { view } = page.window.panditya;
+  view.onSelect(view.getNode('89001'));
+  page.$('detail-panel').querySelector('[data-action="remove"]').click();
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph without the work');
+  assert.deepEqual(page.fetch.lastGraphRequest().remove, ['89001']);
+  assert.deepEqual(page.fetch.lastGraphRequest().collections, ['GRETIL']);
+  assert.deepEqual(page.pushes, ['/view?collection=GRETIL&hops=0&remove=89001']);
+  assert.deepEqual(graphIds(page), ['85303', '89000']);
 });
 
 test('changing hops reloads in place and adds a history entry', async t => {
@@ -525,7 +547,7 @@ test('Recenter starts over from the node', async t => {
   view.onSelect(view.getNode('85303'));
   page.$('detail-panel').querySelector('[data-action="recenter"][data-hops="2"]').click();
   await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'recentred');
-  assert.deepEqual(page.fetch.lastGraphRequest(), { authors: ['85303'], works: [], hops: 2, exclude_list: [], expand: [], remove: [] });
+  assert.deepEqual(page.fetch.lastGraphRequest(), { authors: ['85303'], works: [], hops: 2, exclude_list: [], expand: [], remove: [], collections: [] });
   assert.deepEqual(chipIds(page, 'search'), ['85303']);
   assert.deepEqual(chipIds(page, 'exclude-search'), []);
   assert.equal(pressedHop(page), '2');
@@ -767,17 +789,40 @@ test('Reset puts the sliders and Freeze back and lays the graph out again', asyn
   assert.deepEqual(view.forces, { charge: 250, distance: 100, collide: 15 });
 });
 
-test('Reset on a SETI collection view goes back to its own repulsion', async t => {
+test('Repulsion follows the graph size until the user moves it; Reset hands it back', async t => {
+  // A made-up 400-node answer: chargeFor(400) = 250 * sqrt(100/400) = 125, shown as 130 (step 10).
+  const big = {
+    nodes: Array.from({ length: 400 }, (_, i) => ({
+      id: String(100000 + i), type: 'work', label: `W${i}`, dates: '', is_central: true,
+      is_excluded: false, is_expanded: false, hidden_neighbors: 0, etext_links: false,
+    })),
+    edges: [],
+  };
   const page = await openPage(t, {
-    url: 'http://localhost/seti/by_collection/GRETIL/visualize',
-    initialParams: { authors: ['40377'], works: ['40378'], hops: 0, exclude_list: [], expand: [], repulsion: 50 },
+    url: 'http://localhost/view?works=89000&hops=1',
+    initialParams: params(),
   });
   await until(() => loaded(page), 'graph');
+  const { view } = page.window.panditya;
+  assert.equal(view.forces.charge, 250, 'small graph: the usual value');
+
+  page.fetch.override = call => (call.url.includes('/subgraph') ? { status: 200, body: { parameters: {}, graph: big } } : null);
+  page.$('hop-buttons').querySelector('[data-hops="2"]').click();
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'big graph');
+  assert.equal(view.forces.charge, 130);
+  assert.equal(page.$('chargeStrength').value, '130', 'the slider shows the same value');
+
   page.$('chargeStrength').value = '700';
   page.$('chargeStrength').dispatchEvent(new page.window.Event('input'));
+  page.$('hop-buttons').querySelector('[data-hops="3"]').click();
+  await until(() => page.fetch.graphCalls().length === 3 && loaded(page), 'big graph again');
+  assert.equal(view.forces.charge, 700, "the user's own value stays");
+
   page.$('reset-layout-button').click();
-  assert.equal(page.$('chargeStrength').value, '50');
-  assert.equal(page.window.panditya.view.forces.charge, 50);
+  assert.equal(view.forces.charge, 130);
+  page.$('hop-buttons').querySelector('[data-hops="1"]').click();
+  await until(() => page.fetch.graphCalls().length === 4 && loaded(page), 'big graph once more');
+  assert.equal(view.forces.charge, 130, 'automatic again after Reset');
 });
 
 test('the − A + buttons size the names on the graph, and are remembered', async t => {
