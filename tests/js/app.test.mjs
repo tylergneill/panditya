@@ -33,7 +33,7 @@ const EDGES = [
 ];
 const neighbours = id => EDGES.flatMap(([s, t]) => (s === id ? [t] : t === id ? [s] : []));
 /** SETI collections: name → work IDs. */
-const COLLECTIONS = { GRETIL: ['89000', '89001'] };
+const COLLECTIONS = { GRETIL: ['89000', '89001'], DCS: ['40378'] };
 
 /** What the real /api/graph/subgraph would answer, for this tiny data set. */
 function subgraph({ authors, works, hops, exclude_list: exclude, expand, remove = [], collections = [] }) {
@@ -124,13 +124,18 @@ function fakeFetch() {
 let run = 0;
 
 /** Load the page at `url` with `initialParams` (what Flask renders), and start app.js. */
+const SETI_COLLECTIONS = Object.entries(COLLECTIONS).map(([name, works]) => ({ name, works: works.length }));
+
 async function openPage(t, { url = 'http://localhost/', initialParams = null, storage = {} } = {}) {
   const html = TEMPLATE
     .replace(/\{\{\s*url_for\([^}]*\)\s*\}\}/g, '#')
-    .replace(/\{\{\s*initial_params\|tojson\s*\}\}/, JSON.stringify(initialParams));
+    .replace(/\{\{\s*initial_params\|tojson\s*\}\}/, JSON.stringify(initialParams))
+    .replace(/\{\{\s*seti_collections\|tojson\s*\}\}/, JSON.stringify(SETI_COLLECTIONS));
   const dom = makeDom(html, { url });
   const { window } = dom;
-  window.initialParams = initialParams; // the inline script that sets it doesn't run in jsdom
+  // The inline script that sets these doesn't run in jsdom.
+  window.initialParams = initialParams;
+  window.setiCollections = SETI_COLLECTIONS;
   for (const [k, v] of Object.entries(storage)) window.localStorage.setItem(k, v);
   window.HTMLCanvasElement.prototype.getContext = () => recordingContext();
   const fetch = fakeFetch();
@@ -401,6 +406,33 @@ test('typing in the search box and picking a result adds it to the graph', async
   assert.deepEqual(page.fetch.lastGraphRequest().authors, ['40377']);
   assert.deepEqual(graphIds(page), ['40377', '40378', '85303', '89000']);
   assert.deepEqual(chipIds(page, 'search'), ['89000', '40377']);
+});
+
+test('SETI collections can be searched for, and several combined', async t => {
+  const page = await openWith(t, 'authors=85352&hops=0', params({ authors: ['85352'], works: [], hops: 0 }));
+  const input = page.$('search').querySelector('input');
+  type(page.window, input, 'gre');
+  await until(() => page.$('search').querySelectorAll('li[role=option]').length === 1, 'search results');
+  const result = page.$('search').querySelector('li[role=option]');
+  assert.ok(result.classList.contains('collection'));
+  assert.match(result.textContent, /GRETIL.*SETI collection · 2 works/);
+  key(page.window, input, 'Enter');
+  await until(() => page.fetch.graphCalls().length === 2 && loaded(page), 'graph with GRETIL');
+  assert.deepEqual(page.fetch.lastGraphRequest().collections, ['GRETIL']);
+
+  type(page.window, input, 'dc');
+  await until(() => page.$('search').querySelectorAll('li[role=option]').length === 1, 'DCS result');
+  key(page.window, input, 'Enter');
+  await until(() => page.fetch.graphCalls().length === 3 && loaded(page), 'graph with both collections');
+  assert.deepEqual(page.fetch.lastGraphRequest().collections, ['GRETIL', 'DCS']);
+  assert.equal(page.pushes.at(-1), '/view?collection=GRETIL,DCS&authors=85352&hops=0');
+  assert.deepEqual(graphIds(page), ['40377', '40378', '85303', '85352', '89000', '89001']);
+
+  // Don't expand and Removed are for nodes, so they don't offer collections.
+  const exclude = page.$('exclude-search').querySelector('input');
+  type(page.window, exclude, 'gre');
+  await sleep(250);
+  assert.equal(page.$('exclude-search').querySelectorAll('li[role=option]').length, 0);
 });
 
 test('on a phone, Enter in the search box closes the controls and the keyboard', async t => {

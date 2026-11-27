@@ -322,6 +322,11 @@ class TestPages:
         assert "repulsion" not in params
         assert client.get("/view?collection=NoSuchCollection").status_code == 400
 
+    def test_graph_page_knows_the_collections_for_search(self, client, flask_module):
+        html = client.get("/").get_data(as_text=True)
+        names = [c["name"] for c in json.loads(re.search(r"window\.setiCollections = (.*);", html).group(1))]
+        assert names == flask_module.VALID_COLLECTIONS
+
     def test_seti_page_links_to_short_collection_views(self, client):
         html = client.get("/seti").get_data(as_text=True)
         assert "/visualize" not in html

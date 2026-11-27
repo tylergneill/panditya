@@ -604,6 +604,16 @@ api.add_namespace(seti_ns)
 
 # --- frontend routes ---
 
+@app.context_processor
+def seti_collections_for_search():
+    """
+    The SETI collections' names and work counts, largest first, for the graph
+    page's search box (index.html puts them in window.setiCollections).
+    """
+    return {"seti_collections": [{"name": name, "works": summary["works"]}
+                                 for name, summary in ETEXT_DATA_SUMMARY.items()]}
+
+
 @app.route('/')
 def index():
     """

@@ -15,6 +15,7 @@
     // Apply the saved theme before anything paints, so dark mode doesn't flash.
     try { if (localStorage.getItem('panditya-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
     window.initialParams = {{ initial_params|tojson }};
+    window.setiCollections = {{ seti_collections|tojson }};
   </script>
 </head>
 <body class="app-page loading">

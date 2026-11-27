@@ -187,7 +187,8 @@ export class ChipSearch {
       name.className = 'entity-name';
       name.textContent = entity.name;
       text.append(name);
-      const meta = [entity.dates, entity.aka && `aka ${entity.aka}`, `#${entity.id}`].filter(Boolean).join(' · ');
+      // `detail` (e.g. a collection's "SETI collection · 312 works") replaces the usual dates, aka and ID.
+      const meta = entity.detail ?? [entity.dates, entity.aka && `aka ${entity.aka}`, `#${entity.id}`].filter(Boolean).join(' · ');
       const metaEl = doc.createElement('span');
       metaEl.className = 'result-meta';
       metaEl.textContent = meta;

@@ -18,6 +18,7 @@ import {
   HOP_BUTTONS,
 } from './state.js';
 import { searchEntities, fetchLabels, fetchGraph } from './api.js';
+import { withCollections } from './collections.js';
 import { ChipSearch } from './chip-search.js';
 import { DetailPanel } from './panel.js';
 import { GraphView, DEFAULT_FORCES, chargeFor } from './graph-view.js';
@@ -561,9 +562,10 @@ async function init() {
   const search = type => (query, signal) => searchEntities(query, { type, signal });
   mainSearch = new ChipSearch({
     root: $('search'),
-    search: search('all'),
-    label: 'Search authors and works',
-    placeholder: 'Search authors and works…',
+    // SETI collections can be searched for here too (not in Don't expand or Removed).
+    search: withCollections(search('all'), window.setiCollections || []),
+    label: 'Search authors, works and SETI collections',
+    placeholder: 'Search authors, works, collections…',
     onChange: items => {
       remember(items);
       commit(setCenters(app.state, items.map(i => ({ id: i.id, type: i.type, name: i.name }))));
