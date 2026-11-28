@@ -1,18 +1,14 @@
+{% extends 'info_base.html' %}
 {% from 'macros.html' import ext_link_icon %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Pāṇḍitya</title>
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <div id="about-container" class="shared-container">
-    <h1>Pāṇḍitya</h1>
-
-    <p><i>pāṇḍitya n. (fr. paṇḍita) scholarship, erudition, learning</i></p>
+{% set nav = 'about' %}
+{% block title %}About{% endblock %}
+{% block main_class %}about{% endblock %}
+{% block content %}
+    <div class="hero">
+      <img src="{{ url_for('static', filename='imgs/panditya.png') }}" alt="" width="70" height="70">
+      <h1>Pāṇḍitya</h1>
+      <p class="lexicon"><b>pāṇḍitya</b> <i>n.</i> (fr. <i>paṇḍita</i>) scholarship, erudition, learning</p>
+    </div>
 
     <p>
       Pāṇḍitya provides a visual way to explore relationships between the (mostly Sanskrit) works and authors in the
@@ -22,7 +18,7 @@
     </p>
 
     <p>
-      The project's full name is <b>Pāṇḍityatāraka</b> (पाण्डित्यतारक),
+      The project's full name is <b>Pāṇḍityatāraka</b> (<span lang="sa">पाण्डित्यतारक</span>),
       meaning "that which helps one cross to the far shore of scholarship."
       Like a guiding star, a raft, or a ferryman, it assists scholars
       in navigating Pandit's rich and complex data.
@@ -30,20 +26,15 @@
 
     <p>
       For more information,
-      check out <a href="https://www.tylerneill.info/blog-kalpataru-diaries/panditya" target="_blank">this blog post{{ ext_link_icon() }}</a>
+      check out <a href="https://www.tylerneill.info/blog/panditya" target="_blank">this blog post{{ ext_link_icon() }}</a>
       and the following pages.
     </p>
 
-    <p><a href="/tutorials">Tutorials</a></p>
-    <p><a href="/notes/technical">Technical details</a></p>
-    <p><a href="/notes/data">Notes on data used</a></p>
-    <p><a href="/notes/license">License details</a></p>
-    <p><a href="/notes/author">About the author</a></p>
-
-    <div class="footer">
-      <p>Back to <a href="/">Home</a></p>
-    </div>
-
-  </div>
-</body>
-</html>
+    <nav class="page-cards" aria-label="More about Pāṇḍitya">
+      <a href="/tutorials">Tutorials</a>
+      <a href="/notes/technical">Technical details</a>
+      <a href="/notes/data">Notes on data used</a>
+      <a href="/notes/license">License details</a>
+      <a href="/notes/author">About the author</a>
+    </nav>
+{% endblock %}

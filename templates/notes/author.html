@@ -1,32 +1,16 @@
+{% extends 'info_base.html' %}
 {% from 'macros.html' import ext_link_icon %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Author Notes - Pāṇḍitya</title>
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <div id="author-notes-container" class="shared-container">
-
+{% set nav = 'about' %}
+{% block title %}Author Notes{% endblock %}
+{% block main_class %}notes notes-author{% endblock %}
+{% block crumbs %}{% include '_crumb_about.html' %}{% endblock %}
+{% block content %}
     <h1>Author Notes</h1>
 
-    <p>
-      <ul>
+    <ul>
         <li><a href="https://www.tylerneill.info" target="_blank">Personal website{{ ext_link_icon() }}</a></li>
         <li><a href="https://uni-leipzig1.academia.edu/TylerNeill" target="_blank">On Academia.edu{{ ext_link_icon() }}</a></li>
         <li><a href="https://www.linkedin.com/in/tyler-g-neill/" target="_blank">On LinkedIn{{ ext_link_icon() }}</a></li>
         <li><a href="https://github.com/tylergneill" target="_blank">On GitHub{{ ext_link_icon() }}</a></li>
       </ul>
-    </p>
-
-    <div class="footer">
-      <p>Back to <a href="/about">About</a></p>
-      <p>Back to <a href="/">Home</a></p>
-    </div>
-
-  </div>
-</body>
-</html>
+{% endblock %}

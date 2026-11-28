@@ -2,11 +2,12 @@ import re
 from collections import defaultdict
 from typing import Dict, List
 
-from flask import Flask, render_template, Blueprint, jsonify, request, send_from_directory
+from flask import Flask, render_template, Blueprint, jsonify, request, send_from_directory, redirect, url_for
 from flask_restx import Api, Resource, fields
 
 from data_models import Entity
-from grapher import construct_subgraph, annotate_graph
+from grapher import construct_graph, annotate_graph, count_hidden_neighbors
+from search_index import SearchIndex
 from utils.utils import (
     custom_sort_key,
     get_app_version, get_data_version, get_pandit_source_version, get_seti_source_version,
@@ -76,6 +77,24 @@ for key in ['works', 'authors', 'all']:
     entity_dropdown_options[key] = sorted(entity_dropdown_options[key], key=lambda x: custom_sort_key(x['label']))
 
 
+def describe_entity(entity: Entity) -> dict:
+    """The short description of an entity used by search results and labels."""
+    return {
+        "id": entity.id,
+        "type": entity.type,
+        "name": entity.name,
+        "aka": entity.aka or "",
+        "dates": get_date_info(entity),
+        "has_etexts": entity.id in ETEXT_LINKS,
+    }
+
+
+# --- Search index for the search box (see search_index.py) ---
+SEARCH_INDEX = SearchIndex.from_entities(ENTITIES_BY_ID, describe_entity, custom_sort_key)
+SEARCH_LIMIT_DEFAULT = 20
+SEARCH_LIMIT_MAX = 100
+
+
 # --- entities namespace routes ---
 
 def validate_comma_separated_list_input(string_input, allow_empty=False):
@@ -93,6 +112,35 @@ def validate_comma_separated_list_input(string_input, allow_empty=False):
         }
     else:
         return None
+
+
+@entities_ns.route('/search')
+class Search(Resource):
+    @api.doc(
+        params={
+            'q': 'What to search for: part of a name (diacritics optional, e.g. "kalidasa"), or a Pandit ID',
+            'type': "Restrict to 'authors' or 'works' (default: 'all')",
+            'limit': f'Maximum number of results (default {SEARCH_LIMIT_DEFAULT}, at most {SEARCH_LIMIT_MAX})',
+        },
+        responses={200: 'Matches returned, best first (possibly none)', 400: 'Invalid parameter'},
+    )
+    def get(self):
+        """
+        Search authors and works by name, "aka" name or ID.
+        Example: /api/entities/search?q=kalidasa
+        """
+        query = request.args.get('q', '')
+        entity_type = request.args.get('type', 'all')
+        if entity_type not in ['authors', 'works', 'all']:
+            return {"error": "Invalid type. Choose from 'authors', 'works', or 'all'."}, 400
+        try:
+            limit = int(request.args.get('limit', SEARCH_LIMIT_DEFAULT))
+        except ValueError:
+            return {"error": "limit must be an integer"}, 400
+        if not 1 <= limit <= SEARCH_LIMIT_MAX:
+            return {"error": f"limit must be between 1 and {SEARCH_LIMIT_MAX}"}, 400
+
+        return jsonify(SEARCH_INDEX.search(query, entity_type, limit))
 
 
 @entities_ns.route('/<string:entity_type>')
@@ -123,7 +171,7 @@ class Labels(Resource):
     )
     def get(self):
         """
-        Fetch labels for a list of node IDs.
+        Fetch labels (and types) for a list of node IDs. Unknown IDs are skipped.
         Example: /api/entities/labels?ids=89000,12345
         """
         ids_param = request.args.get('ids')  # Get all IDs as a list
@@ -142,8 +190,8 @@ class Labels(Resource):
             return {"error": "No valid entity IDs provided"}, 400
 
         label_data = [
-            {"id": node_id, "label": ENTITIES_BY_ID[node_id].name}
-            for node_id in ids
+            {**describe_entity(ENTITIES_BY_ID[node_id]), "label": ENTITIES_BY_ID[node_id].name}
+            for node_id in valid_entity_ids
         ]
 
         return jsonify(label_data)
@@ -159,18 +207,117 @@ subgraph_model = api.model('SubgraphRequest', {
     'authors': fields.List(fields.String, required=False, description='List of author node IDs', example=[]),
     'works': fields.List(fields.String, required=False, description='List of work node IDs', example=["89000"]),
     'hops': fields.Integer(required=True, description='Number of hops outward from center', example=DEFAULT_HOPS),
-    'exclude_list': fields.List(fields.String, required=False, description='List of node IDs to exclude', example=[])
+    'exclude_list': fields.List(fields.String, required=False, description='List of node IDs to exclude', example=[]),
+    'expand': fields.List(fields.String, required=False,
+                          description='List of node IDs to expand by one extra hop (overrides exclude_list for them)',
+                          example=[]),
+    'remove': fields.List(fields.String, required=False,
+                          description='List of node IDs to take off the graph, with whatever is only reached '
+                                      'through them (ignored for authors and works searched for)',
+                          example=[]),
+    'collections': fields.List(fields.String, required=False,
+                               description='SETI collections whose works to search for (see /api/seti); '
+                                           'their authors are shown too, as ordinary nodes',
+                               example=[]),
 })
 
 
-def validate_subgraph_inputs(authors, works, hops, exclude_list):
-    if not authors and not works:
-        return {"error": "require either one or both of authors or works"}
-    if not isinstance(hops, int) or hops < 0:
+def validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list=(), remove_list=(), collections=()):
+    if not authors and not works and not collections:
+        return {"error": "require at least one of authors, works or collections"}
+    if not isinstance(collections, list):
+        return {"error": "collections must be a list"}
+    unknown_collections = [c for c in collections if c not in VALID_COLLECTIONS]
+    if unknown_collections:
+        return {"error": f"Invalid collection: {', '.join(map(str, unknown_collections))}. "
+                         f"Valid options: {sorted(VALID_COLLECTIONS)}"}
+    if not isinstance(hops, int) or isinstance(hops, bool) or hops < 0:
         return {"error": "hops must be a non-negative integer"}
     if not isinstance(exclude_list, list):
         return {"error": "exclude_list must be a list"}
+    if not isinstance(expand_list, list):
+        return {"error": "expand must be a list"}
+    if not isinstance(remove_list, list):
+        return {"error": "remove must be a list"}
+    unknown = sorted(
+        str(x) for x in set(authors) | set(works) | set(expand_list) | set(remove_list) if x not in ENTITIES_BY_ID
+    )
+    if unknown:
+        return {"error": f"Invalid ID: {', '.join(unknown)}"}
     return None
+
+
+def collection_work_ids(collection: str) -> list:
+    """The Pandit work IDs with e-texts in a SETI collection (only IDs Pāṇḍitya knows)."""
+    works, error, _ = get_works_by_collection(collection)
+    if error:
+        return []
+    return [work_id for work_id in works if work_id in ENTITIES_BY_ID]
+
+
+def build_graph_response(authors, works, hops, exclude_list, expand_list=(), remove_list=(), collections=()):
+    """
+    Build the JSON body for /api/graph/subgraph.
+
+    Each node carries what the interface draws and shows in its details panel:
+    name, type, dates, flags (central / not expanded / expanded), e-text links,
+    and ``hidden_neighbors``, the number of its connections not in this graph
+    (so the interface can show which nodes have more to expand).
+
+    ``collections`` (SETI collection names) adds each collection's works to the
+    search, except any the user removed. Their authors are always shown too, even
+    at 0 hops, but as ordinary nodes rather than centers: the collection is about
+    its works.
+    """
+    removed = set(remove_list)
+    collection_works = [
+        work_id for name in collections for work_id in collection_work_ids(name) if work_id not in removed
+    ]
+    subgraph_center = list(dict.fromkeys(list(authors) + list(works) + collection_works))
+    graph = construct_graph(subgraph_center, hops, exclude_list, expand_list, remove_list=remove_list)
+    for work_id in dict.fromkeys(collection_works):
+        if work_id in exclude_list and work_id not in expand_list:
+            continue  # "don't expand" hides its authors too, as for any other node
+        for author_id in ENTITIES_BY_ID[work_id].author_ids:
+            if author_id in ENTITIES_BY_ID and author_id not in removed:
+                graph.add_edge(author_id, work_id)
+    annotated = annotate_graph(graph, subgraph_center, exclude_list, expand_list)
+
+    nodes = []
+    for node in annotated.nodes:
+        entity = ENTITIES_BY_ID[node]
+        flags = annotated.nodes[node]
+        nodes.append({
+            "id": node,
+            "label": entity.name,
+            "type": entity.type,
+            "aka": entity.aka,
+            "social_ids": entity.social_identifiers if entity.type == 'author' else None,
+            "dates": get_date_info(entity),
+            "discipline": entity.discipline if entity.type == 'work' else None,
+            "disciplines": entity.disciplines if entity.type == 'author' else None,
+            "is_central": flags.get('is_central', False),
+            "is_excluded": flags.get('is_excluded', False),
+            "is_expanded": flags.get('is_expanded', False),
+            "etext_links": flags.get('etext_links', False),
+            "hidden_neighbors": count_hidden_neighbors(annotated, node, removed=remove_list),
+        })
+    edges = [
+        {"source": source, "target": target, "relationship": get_edge_relationship(source, target)}
+        for source, target in annotated.edges
+    ]
+    return {
+        "parameters": {
+            "authors": list(authors),
+            "works": list(works),
+            "hops": hops,
+            "exclude_list": list(exclude_list),
+            "expand": list(expand_list),
+            "remove": list(remove_list),
+            "collections": list(collections),
+        },
+        "graph": {"nodes": nodes, "edges": edges},
+    }
 
 
 def get_edge_relationship(source_node_id, target_node_id):
@@ -192,60 +339,28 @@ class Subgraph(Resource):
         """
         try:
             # Parse request data
-            data = request.json
-            authors = set(data.get('authors', []))
-            works = set(data.get('works', []))
-            subgraph_center = list(authors | works)  # union
+            data = request.json or {}
+            authors = list(dict.fromkeys(data.get('authors') or []))
+            works = list(dict.fromkeys(data.get('works') or []))
             hops = data.get('hops', DEFAULT_HOPS)
-            exclude_list = list(set(data.get('exclude_list', [])))
+            exclude_list = list(dict.fromkeys(data.get('exclude_list') or []))
+            expand_list = data.get('expand') or []
+            if isinstance(expand_list, list):
+                expand_list = list(dict.fromkeys(expand_list))
+            remove_list = data.get('remove') or []
+            if isinstance(remove_list, list):
+                remove_list = list(dict.fromkeys(remove_list))
+            collections = data.get('collections') or []
+            if isinstance(collections, list):
+                collections = list(dict.fromkeys(collections))
 
             # validate_inputs
-            err = validate_subgraph_inputs(authors, works, hops, exclude_list)
+            err = validate_subgraph_inputs(authors, works, hops, exclude_list, expand_list, remove_list, collections)
             if err is not None:
                 return err, 400
 
-            # Call the actual construct_subgraph function
-            subgraph = construct_subgraph(subgraph_center, hops, exclude_list)
-
-            # Annotate graph data for visual emphasis and e-text links
-            annotated_subgraph = annotate_graph(subgraph, subgraph_center, exclude_list)
-
-            # Extract nodes and edges
-            filtered_nodes = [
-                {
-                    "id": node,
-                    "label": ENTITIES_BY_ID[node].name,
-                    "type": ENTITIES_BY_ID[node].type,
-                    "aka": ENTITIES_BY_ID[node].aka,
-                    "social_ids": ENTITIES_BY_ID[node].social_identifiers if ENTITIES_BY_ID[node].type == 'author' else None,
-                    "dates": get_date_info(ENTITIES_BY_ID[node]),
-                    "discipline": ENTITIES_BY_ID[node].discipline if ENTITIES_BY_ID[node].type == 'work' else None,
-                    "disciplines": ENTITIES_BY_ID[node].disciplines if ENTITIES_BY_ID[node].type == 'author' else None,
-                    "is_central": annotated_subgraph.nodes[node].get('is_central', False),
-                    "is_excluded": annotated_subgraph.nodes[node].get('is_excluded', False),
-                    "etext_links": annotated_subgraph.nodes[node].get('etext_links', False),
-                }
-                for node in annotated_subgraph.nodes
-            ]
-            filtered_edges = [
-                {"source": edge[0], "target": edge[1], "relationship": get_edge_relationship(edge[0], edge[1])}
-                for edge in subgraph.edges
-            ]
-
-            # Construct the response
-            response = {
-                "parameters": {
-                    "authors": list(authors),
-                    "works": list(works),
-                    "hops": hops,
-                    "exclude_list": list(exclude_list),
-                },
-                "graph": {
-                    "nodes": filtered_nodes,
-                    "edges": filtered_edges,
-                }
-            }
-            return jsonify(response)
+            return jsonify(build_graph_response(
+                authors, works, hops, exclude_list, expand_list, remove_list, collections))
 
         except KeyError as e:
             app.logger.error('Error: %s', str(e))
@@ -470,27 +585,14 @@ def get_author_ids_for_work_ids(work_ids: List[str]):
 @app.route("/seti/by_collection/<string:collection>/visualize")
 def visualize_collection(collection: str):
     """
-    Prepare full graph data for all works implicated by a given collection
-    and render 'index.html' with initial_params.
-    Example: /by_collection/GRETIL/visualize
+    The graph of a SETI collection's works (and their authors).
+    Kept for old links: it now lives at /view?collection=<name>&hops=0, which
+    keeps a short address as the user changes the graph.
+    Example: /seti/by_collection/GRETIL/visualize
     """
-    works_data, error_response, status_code = get_works_by_collection(collection)
-
-    if error_response:
-        return error_response, status_code
-
-    works = list(works_data.keys())
-    authors = get_author_ids_for_work_ids(works)
-
-    initial_params = {
-        "works": works,
-        "authors": authors,
-        "hops": 0,
-        "exclude_list": [],
-        "repulsion": 50,
-    }
-
-    return render_template("index.html", initial_params=initial_params)
+    if collection not in VALID_COLLECTIONS:
+        return {"error": f"Invalid collection: {collection}. Valid options: {sorted(VALID_COLLECTIONS)}"}, 400
+    return redirect(url_for('render_graph_from_URL_params', collection=collection, hops=0))
 
 
 # TODO: Also include file size info!
@@ -501,6 +603,16 @@ api.add_namespace(seti_ns)
 
 
 # --- frontend routes ---
+
+@app.context_processor
+def seti_collections_for_search():
+    """
+    The SETI collections' names and work counts, largest first, for the graph
+    page's search box (index.html puts them in window.setiCollections).
+    """
+    return {"seti_collections": [{"name": name, "works": summary["works"]}
+                                 for name, summary in ETEXT_DATA_SUMMARY.items()]}
+
 
 @app.route('/')
 def index():
@@ -519,8 +631,10 @@ def render_graph_from_URL_params():
         authors_str = request.args.get('authors', None)
         works_str = request.args.get('works', None)
         exclude_list_str = request.args.get('exclude_list', None)
+        expand_str = request.args.get('expand', None)
+        remove_str = request.args.get('remove', None)
 
-        for var in [authors_str, works_str, exclude_list_str]:
+        for var in [authors_str, works_str, exclude_list_str, expand_str, remove_str]:
             err = validate_comma_separated_list_input(var, allow_empty=True)
             if err is not None:
                 return err, 400
@@ -528,13 +642,29 @@ def render_graph_from_URL_params():
         authors = authors_str.strip().split(',') if authors_str else []
         works = works_str.strip().split(',') if works_str else []
         exclude_list = exclude_list_str.strip().split(',') if exclude_list_str else []
+        expand = expand_str.strip().split(',') if expand_str else []
+        remove = remove_str.strip().split(',') if remove_str else []
+
+        try:
+            hops = int(request.args.get('hops', default=DEFAULT_HOPS))
+        except ValueError:
+            return {"error": "hops must be a non-negative integer"}, 400
+
+        # SETI collections by name (?collection=GRETIL), several separated by commas.
+        collections = [c for c in request.args.get('collection', '').split(',') if c]
+        unknown = [c for c in collections if c not in VALID_COLLECTIONS]
+        if unknown:
+            return {"error": f"Invalid collection: {', '.join(unknown)}. Valid options: {sorted(VALID_COLLECTIONS)}"}, 400
 
         # Parse URL parameters
         initial_params = {
-            "authors": authors,
-            "works": works,
-            "hops": request.args.get('hops', default=DEFAULT_HOPS),
-            "exclude_list": exclude_list,
+            "authors": [x for x in authors if x],
+            "works": [x for x in works if x],
+            "hops": hops,
+            "exclude_list": [x for x in exclude_list if x],
+            "expand": [x for x in expand if x],
+            "remove": [x for x in remove if x],
+            "collections": list(dict.fromkeys(collections)),
         }
 
         # Serve the template with initialization variables

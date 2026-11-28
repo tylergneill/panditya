@@ -76,13 +76,15 @@ def construct_subgraph(
                 if not entity.work_ids:
                     subgraph.add_node(entity.id)
 
-        # de-dupe, first list-internally, then against previous
-        node_ids_to_append_next_time = list(set(node_ids_to_append_next_time))
-        for node_id in node_ids_to_append_next_time:
-            if node_id in subgraph_node_ids:
-                node_ids_to_append_next_time.remove(node_id)
-
-        node_ids_to_append_this_time = node_ids_to_append_next_time
+        # de-dupe, first list-internally (keeping first-seen order, so results
+        # are deterministic), then against nodes already in the subgraph.
+        # (This used to remove items from the list while looping over it, which
+        # skips elements and let already-visited nodes be expanded again.)
+        already_in = set(subgraph_node_ids)
+        node_ids_to_append_this_time = [
+            node_id for node_id in dict.fromkeys(node_ids_to_append_next_time)
+            if node_id not in already_in
+        ]
 
     # trim queued-up but unestablished periphery nodes
 
@@ -91,6 +93,65 @@ def construct_subgraph(
             subgraph.remove_node(n)
 
     return subgraph
+
+
+def neighbor_ids(entity: Work | Author) -> list:
+    """
+    Every entity directly connected to ``entity`` in the full Pandit data:
+    a work's authors, base texts and commentaries, or an author's works.
+    """
+    if entity.type == 'work':
+        return list(entity.author_ids) + list(entity.base_text_ids) + list(entity.commentary_ids)
+    return list(entity.work_ids)
+
+
+def construct_graph(
+    subgraph_center: list,
+    hops: int,
+    exclude_list: list,
+    expand_list: list = (),
+    entities_by_id: Dict[str, Author | Work] = ENTITIES_BY_ID,
+    remove_list: list = (),
+) -> nx.DiGraph:
+    """
+    The graph the interface shows: the usual subgraph around ``subgraph_center``,
+    plus one extra hop around each node in ``expand_list``, minus the nodes in
+    ``remove_list``.
+
+    ``expand_list`` is what lets the interface grow a graph in place: when the user
+    expands a node, the browser asks again with that node added to the list, and
+    the URL can carry the list so the same graph can be rebuilt later. Expanding a
+    node overrides "don't expand" for that node only.
+
+    ``remove_list`` takes nodes off the graph, together with whatever was only
+    reached through them: a removed node is treated as "don't expand" while the
+    graph is built (so the walk stops there), and then deleted. A node can't be
+    both searched for and removed; the search wins.
+    """
+    removed = [x for x in dict.fromkeys(remove_list) if x not in subgraph_center]
+    walk_exclude = list(exclude_list) + [x for x in removed if x not in exclude_list]
+    graph = construct_subgraph(subgraph_center, hops, walk_exclude, entities_by_id)
+    for node_id in expand_list:
+        if node_id in removed:
+            continue
+        others_excluded = [x for x in walk_exclude if x != node_id]
+        graph = nx.compose(graph, construct_subgraph([node_id], 1, others_excluded, entities_by_id))
+    graph.remove_nodes_from(removed)
+    return graph
+
+
+def count_hidden_neighbors(
+    graph: nx.DiGraph,
+    node_id: str,
+    entities_by_id: Dict[str, Author | Work] = ENTITIES_BY_ID,
+    removed=(),
+) -> int:
+    """
+    How many of ``node_id``'s neighbours in the full data are not in ``graph``.
+    Neighbours the user removed don't count: expanding wouldn't bring them back.
+    """
+    shown = set(graph.predecessors(node_id)) | set(graph.successors(node_id))
+    return len(set(neighbor_ids(entities_by_id[node_id])) - shown - {node_id} - set(removed))
 
 
 def assign_node_labels_and_colors(subgraph):
@@ -114,23 +175,26 @@ def assign_node_labels_and_colors(subgraph):
     return label_map, color_map
 
 
-def annotate_graph(graph: nx.DiGraph, selected_entities, exclude_list) -> nx.DiGraph:
+def annotate_graph(graph: nx.DiGraph, selected_entities, exclude_list, expand_list=()) -> nx.DiGraph:
     """
-    Annotate graph nodes with `isCentral` and `isExcluded` flags, and also e-text link data.
+    Annotate graph nodes with `is_central`, `is_excluded` and `is_expanded` flags,
+    and also e-text link data.
 
     Args:
-        graph (dict): Graph data containing nodes and edges.
-        selected_entities (list): List of work/author IDs selected as central.
-        exclude_list (list): List of IDs to exclude.
+        graph (nx.DiGraph): the graph to annotate (modified in place).
+        selected_entities (list): work/author IDs selected as central.
+        exclude_list (list): IDs not to expand.
+        expand_list (list): IDs expanded by one extra hop (see construct_graph).
 
     Returns:
-        dict: Annotated graph data.
+        nx.DiGraph: the same graph, annotated.
     """
     etext_link_data = {wid: ETEXT_LINKS[wid] for wid in graph.nodes if wid in ETEXT_LINKS}
 
     for node in graph.nodes:
         graph.nodes[node]['is_central'] = node in selected_entities
-        graph.nodes[node]['is_excluded'] = node in exclude_list
+        graph.nodes[node]['is_excluded'] = node in exclude_list and node not in expand_list
+        graph.nodes[node]['is_expanded'] = node in expand_list
         if node in etext_link_data:
             graph.nodes[node]['etext_links'] = etext_link_data[node]
     return graph

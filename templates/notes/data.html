@@ -1,22 +1,17 @@
+{% extends 'info_base.html' %}
 {% from 'macros.html' import ext_link_icon %}
 {% set n = "{:,}".format %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Notes - Pāṇḍitya</title>
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <div id="data-notes-container" class="shared-container">
+{% set nav = 'about' %}
+{% block title %}Data Notes{% endblock %}
+{% block main_class %}notes notes-data{% endblock %}
+{% block crumbs %}{% include '_crumb_about.html' %}{% endblock %}
+{% block content %}
     <h1>Data Notes</h1>
     <p>
       Pāṇḍitya uses a <a href="https://github.com/tylergneill/panditya/blob/main/data/{{ pandit_source_version }}-pandit-entities-export.csv" target="_blank">static snapshot of the Pandit database from {{ pandit_source_version }}{{ ext_link_icon() }}</a>.
       This export had {{ n(summary.export.rows) }} rows (= entities) and {{ summary.export.columns }} columns (= fields).
-      Only a subset of this is used:
-      <ul>
+      Only a subset of this is used:</p>
+    <ul>
         <li>14 fields (columns): Content type, ID, Title, Aka, Social identifiers, Author (person IDs), Authors (person), Attributed author (person ID), Attributed author (person), Discipline, Commentary on (work ID), Commentary on (work), Highest Year, Lowest Year</li>
         <li>
           2 out of {{ summary.export.content_types }} Content types (= row types): Person, Work
@@ -27,7 +22,6 @@
           </ul>
         </li>
       </ul>
-    </p>
     <p>
       Below are some summary statistics on the overall network and on sub-communities:</p>
     <ul>
@@ -35,7 +29,7 @@
       <li><strong>Total relationships:</strong> {{ n(summary.relationships.total) }} ({{ n(summary.relationships.author_work) }} author → work, {{ n(summary.relationships.work_work) }} work → work)</li>
     </ul>
     <div class="table-scroll-wrapper">
-    <table id="fancy-table">
+    <table class="data-table">
       <thead>
         <tr>
           <th>Community Type</th>
@@ -65,10 +59,4 @@
       In addition, e-text links were sourced in a mostly manual collation process, last updated {{ seti_source_version }}.
       See the <a href="/seti">SETI page</a> for more info.
     </p>
-    <div class="footer">
-      <p>Back to <a href="/about">About</a></p>
-      <p>Back to <a href="/">Home</a></p>
-    </div>
-  </div>
-</body>
-</html>
+{% endblock %}

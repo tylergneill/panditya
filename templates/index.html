@@ -5,166 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pāṇḍitya</title>
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/panditya.png') }}">
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  <!-- Gentium Plus: a serif with complete, well-drawn IAST diacritics, for entity names. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
   <script>
+    // Apply the saved theme before anything paints, so dark mode doesn't flash.
+    try { if (localStorage.getItem('panditya-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
     window.initialParams = {{ initial_params|tojson }};
+    window.setiCollections = {{ seti_collections|tojson }};
   </script>
 </head>
-<body class="app-page">
+<body class="app-page loading">
 
   <!-- Mobile header (hidden on desktop, shown < 768px) -->
   <header id="mobile-header">
-    <h1>Pāṇḍitya</h1>
+    <h1><a href="/" class="home-link" title="Start over">Pāṇḍitya</a></h1>
     <div id="mobile-header-actions">
       <a href="/about">About</a>
-      <button class="dark-toggle" id="dark-toggle-mobile" title="Toggle dark mode">&#9790;</button>
-      <button id="sidebar-toggle">&#9776;</button>
+      <button type="button" class="dark-toggle" title="Switch to dark mode" aria-label="Switch to dark mode"><span class="icon-moon" aria-hidden="true">&#9790;</span><svg class="icon-sun" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.4 1.4M11.55 11.55l1.4 1.4M3.05 12.95l1.4-1.4M11.55 4.45l1.4-1.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+      <button type="button" id="sidebar-toggle" aria-label="Show search and controls">&#9776;</button>
     </div>
   </header>
 
   <div id="app-layout">
 
-    <!-- Graph fills remaining viewport -->
+    <!-- Graph fills the remaining space -->
     <main id="graph-area">
       <div id="graph-container">
-        <svg id="graph-svg"></svg>
+        <canvas id="graph-canvas" role="img"
+                aria-label="Graph of authors and works. Click a node for its details; the details panel lists its connections."></canvas>
       </div>
-      <p id="hint-text">(Right-click on nodes for more options)</p>
+
+      <!-- Loading / error / empty-state messages -->
+      <div id="graph-status" hidden role="status" aria-live="polite"></div>
+
+      <!-- Details for the selected node -->
+      <aside id="detail-panel" hidden aria-label="Selected node"></aside>
+
+      <!-- What the shapes and marks mean -->
+      <details id="legend">
+        <summary>Legend</summary>
+        <ul>
+          <li><span class="legend-mark author"></span> Author</li>
+          <li><span class="legend-mark work"></span> Work</li>
+          <li><span class="legend-mark work central"></span> In your search</li>
+          <li><span class="legend-mark work etext"></span> E-texts available</li>
+          <li><span class="legend-mark work excluded"></span> Not expanded</li>
+          <li><span class="legend-mark author more"></span> More connections</li>
+          <li><span class="legend-line wrote"></span> wrote</li>
+          <li><span class="legend-line commentary"></span> commentary on</li>
+        </ul>
+      </details>
+
+      <p id="hint-text">
+        <span class="hint-pointer">Click a node for details · double-click to expand · drag to move · scroll to zoom</span>
+        <span class="hint-touch">Tap a node for details · pinch to zoom</span>
+      </p>
     </main>
 
+    <!-- Drag to resize the sidebar (←/→ when focused; double-click for the default width) -->
+    <div id="sidebar-resizer" role="separator" aria-orientation="vertical" aria-controls="sidebar"
+         aria-label="Resize sidebar" tabindex="0" title="Drag to resize · double-click to reset"></div>
+
     <!-- Right sidebar with all controls -->
-    <aside id="sidebar" class="loading">
+    <aside id="sidebar">
 
       <div id="sidebar-header">
-        <h1>Pāṇḍitya</h1>
+        <h1><a href="/" class="home-link" title="Start over">Pāṇḍitya</a></h1>
         <div id="sidebar-header-links">
           <a href="/about">About</a>
-          <button class="dark-toggle" id="dark-toggle" title="Toggle dark mode">&#9790;</button>
+          <button type="button" class="dark-toggle" title="Switch to dark mode" aria-label="Switch to dark mode"><span class="icon-moon" aria-hidden="true">&#9790;</span><svg class="icon-sun" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.4 1.4M11.55 11.55l1.4 1.4M3.05 12.95l1.4-1.4M11.55 4.45l1.4-1.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
         </div>
       </div>
 
-      <p id="sidebar-loading-msg">Loading controls...</p>
-
-      <!-- Input controls: what to generate -->
       <section id="input-controls">
-        <form id="parameter-form" autocomplete="off">
-          <div class="sidebar-field">
-            <label for="authors-dropdown">Authors</label>
-            <select id="authors-dropdown" class="select2-initial" multiple></select>
-          </div>
+        <div class="sidebar-field">
+          <span class="field-label" id="search-label">Search <kbd class="key-hint" title="Press / to jump here">/</kbd></span>
+          <div id="search"></div>
+        </div>
 
-          <div class="sidebar-field">
-            <label for="works-dropdown">Works</label>
-            <select id="works-dropdown" class="select2-initial" multiple></select>
-          </div>
+        <div class="sidebar-field">
+          <span class="field-label" id="hops-label">Hops</span>
+          <div id="hop-buttons" class="segmented" role="group" aria-labelledby="hops-label"></div>
+        </div>
 
-          <div class="sidebar-field">
-            <label for="hops">Hops</label>
-            <!-- Not a credential: keep password managers' inline menus out of this field -->
-            <input type="number" id="hops" name="hops" value="1" min="0"
-                   autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore />
-          </div>
+        <div class="sidebar-field">
+          <span class="field-label" id="exclude-label">Don't expand</span>
+          <div id="exclude-search"></div>
+        </div>
 
-          <div class="sidebar-field">
-            <label for="exclude-list-dropdown">Don't Expand</label>
-            <select id="exclude-list-dropdown" class="select2-initial" multiple></select>
-          </div>
+        <div class="sidebar-field">
+          <span class="field-label" id="removed-label" title="Taken off the graph. × brings one back.">Removed</span>
+          <div id="removed-search"></div>
+        </div>
 
-          <button type="button" id="fetch-button">Generate Graph</button>
-        </form>
+        <p id="graph-summary" aria-live="polite"></p>
       </section>
 
-      <hr class="sidebar-divider">
-
-      <!-- Post-generation tweaks -->
-      <section id="tweak-controls">
+      <details id="layout-controls" open>
+        <summary>Layout</summary>
         <div class="slider-field">
-          <label for="chargeStrength" title="Controls how nodes repel each other globally. Higher values increase repulsion.">Repulsion</label>
+          <label for="chargeStrength" title="How strongly nodes push each other apart.">Repulsion</label>
           <input type="range" id="chargeStrength" min="0" max="750" step="10" value="250">
         </div>
         <div class="slider-field">
-          <label for="linkDistance" title="Controls how far apart connected nodes can spread. Higher values increase distance.">Distance</label>
+          <label for="linkDistance" title="How long the links between connected nodes are.">Distance</label>
           <input type="range" id="linkDistance" min="10" max="600" step="20" value="100">
         </div>
         <div class="slider-field">
-          <label for="collisionRadius" title="Controls how strongly nodes refuse to overlap with local neighbors. Higher values increase virtual size.">Radius</label>
+          <label for="collisionRadius" title="How much room each node keeps around itself.">Radius</label>
           <input type="range" id="collisionRadius" min="0" max="50" step="5" value="15">
         </div>
-        <div class="freeze-field">
-          <label for="freezeSwitch" title="Temporarily disables all forces.">Freeze</label>
-          <input type="checkbox" id="freezeSwitch">
+        <!-- Size of the names on the graph (font-size.js). -->
+        <div class="slider-field text-size-field">
+          <span class="text-size-label">Text size</span>
+          <div class="font-size-slot"></div>
         </div>
-      </section>
+        <div class="layout-row">
+          <label class="freeze-field" title="Stop all movement. Dragged nodes stay where you put them.">
+            <input type="checkbox" id="freezeSwitch"> Freeze
+          </label>
+          <div class="layout-buttons">
+            <button type="button" id="reset-layout-button" title="Sliders back to their starting values, unfreeze, and lay the graph out again">Reset</button>
+            <button type="button" id="fit-button" title="Zoom to show the whole graph (F)">Fit to screen</button>
+          </div>
+        </div>
+      </details>
 
     </aside>
   </div>
 
-  <!-- Dropdown Logic -->
-  <script type="module" src="{{ url_for('static', filename='js/dropdown.js') }}"></script>
-
-  <!-- D3 Library -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-
-  <!-- Graph Logic -->
-  <script type="module" src="{{ url_for('static', filename='js/graph.js') }}"></script>
-
-  <script>
-  // Utility function to fetch labels and populate dropdowns
-  async function fetchLabelsAndPopulateDropdown(ids, dropdown) {
-      if (ids.length === 0) return;
-
-      try {
-          const query = `ids=${encodeURIComponent(ids.join(","))}`
-          const response = await fetch(`/api/entities/labels?${query}`); // Adjusted endpoint
-          const data = await response.json();
-
-          data.forEach(item => {
-              const displayText = `${item.label} (${item.id})`; // Include ID in parentheses
-              dropdown.append(new Option(displayText, item.id, true, true));
-          });
-
-          dropdown.trigger('change'); // Refresh Select2
-      } catch (error) {
-          console.error("Error fetching labels:", error);
-      }
-  }
-  </script>
-
-  <!-- Dark mode toggle + mobile sidebar toggle -->
-  <script>
-  (function() {
-    // Dark mode: persist via localStorage
-    const saved = localStorage.getItem('panditya-theme');
-    if (saved === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-
-    function toggleDarkMode() {
-      const current = document.documentElement.getAttribute('data-theme');
-      if (current === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.removeItem('panditya-theme');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('panditya-theme', 'dark');
-      }
-    }
-
-    document.getElementById('dark-toggle').addEventListener('click', toggleDarkMode);
-    document.getElementById('dark-toggle-mobile').addEventListener('click', toggleDarkMode);
-
-    // Mobile sidebar toggle
-    var toggleBtn = document.getElementById('sidebar-toggle');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', function() {
-        document.getElementById('sidebar').classList.toggle('open');
-      });
-    }
-  })();
-  </script>
+  <!-- D3 (force layout, zoom, drag) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <!-- Graph page logic (ES modules; see static/js/app.js) -->
+  <script type="module" src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 </body>
 </html>

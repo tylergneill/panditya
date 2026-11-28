@@ -53,3 +53,5 @@ venv*/
 
 # macOS
 .DS_Store
+# Front-end test tooling (npm install)
+node_modules/
